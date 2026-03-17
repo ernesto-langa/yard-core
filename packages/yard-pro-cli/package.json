@@ -1,0 +1,36 @@
+{
+  "name": "yard-pro",
+  "version": "0.1.0",
+  "description": "CLI for Yard Pro — install, activate and manage your license",
+  "bin": {
+    "yard-pro": "bin/yard-pro.js"
+  },
+  "files": [
+    "bin/",
+    "src/"
+  ],
+  "dependencies": {
+    "open": "^10.0.0"
+  },
+  "keywords": [
+    "yard",
+    "yard-core",
+    "pro",
+    "license",
+    "cli"
+  ],
+  "author": "ernesto-langa",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ernesto-langa/yard-core.git",
+    "directory": "packages/yard-pro-cli"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

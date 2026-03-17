@@ -1,0 +1,147 @@
+{
+  "$schema": "https://geminicli.com/schemas/extension.json",
+  "name": "yard",
+  "displayName": "Synkra Yard",
+  "version": "1.0.0",
+  "description": "Multi-agent orchestration system for CLI-first development. Brings Yard agents, hooks, and workflows to Gemini CLI.",
+  "author": "Synkra",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/synkra/yard-core"
+  },
+  "engines": {
+    "gemini-cli": ">=0.26.0"
+  },
+  "capabilities": {
+    "hooks": true,
+    "skills": true,
+    "commands": true,
+    "mcp": false
+  },
+  "activation": {
+    "onStartup": true,
+    "conditions": [
+      {
+        "type": "fileExists",
+        "path": ".yard-core"
+      }
+    ]
+  },
+  "commands": [
+    {
+      "name": "yard-status",
+      "description": "Show Yard system status and provider info",
+      "script": "commands/yard-status.js"
+    },
+    {
+      "name": "yard-agents",
+      "description": "List available Yard agents",
+      "script": "commands/yard-agents.js"
+    },
+    {
+      "name": "yard-validate",
+      "description": "Validate Yard installation and skills",
+      "script": "commands/yard-validate.js"
+    },
+    {
+      "name": "yard-menu",
+      "description": "Show Yard quick agent menu for Gemini",
+      "script": "commands/yard-menu.js"
+    },
+    {
+      "name": "yard-agent",
+      "description": "Prepare activation prompt for a specific Yard agent (/yard-agent <id>)",
+      "script": "commands/yard-agent.js"
+    },
+    {
+      "name": "yard-master",
+      "description": "Quick launch yard-master agent",
+      "script": "commands/yard-master.js"
+    },
+    {
+      "name": "yard-analyst",
+      "description": "Quick launch analyst agent",
+      "script": "commands/yard-analyst.js"
+    },
+    {
+      "name": "yard-architect",
+      "description": "Quick launch architect agent",
+      "script": "commands/yard-architect.js"
+    },
+    {
+      "name": "yard-data-engineer",
+      "description": "Quick launch data-engineer agent",
+      "script": "commands/yard-data-engineer.js"
+    },
+    {
+      "name": "yard-dev",
+      "description": "Quick launch dev agent",
+      "script": "commands/yard-dev.js"
+    },
+    {
+      "name": "yard-devops",
+      "description": "Quick launch devops agent",
+      "script": "commands/yard-devops.js"
+    },
+    {
+      "name": "yard-pm",
+      "description": "Quick launch pm agent",
+      "script": "commands/yard-pm.js"
+    },
+    {
+      "name": "yard-po",
+      "description": "Quick launch po agent",
+      "script": "commands/yard-po.js"
+    },
+    {
+      "name": "yard-qa",
+      "description": "Quick launch qa agent",
+      "script": "commands/yard-qa.js"
+    },
+    {
+      "name": "yard-sm",
+      "description": "Quick launch sm agent",
+      "script": "commands/yard-sm.js"
+    },
+    {
+      "name": "yard-squad-creator",
+      "description": "Quick launch squad-creator agent",
+      "script": "commands/yard-squad-creator.js"
+    },
+    {
+      "name": "yard-ux-design-expert",
+      "description": "Quick launch ux-design-expert agent",
+      "script": "commands/yard-ux-design-expert.js"
+    }
+  ],
+  "skills": [
+    {
+      "name": "dev",
+      "path": "skills/dev.md",
+      "description": "Developer agent - code implementation"
+    },
+    {
+      "name": "architect",
+      "path": "skills/architect.md",
+      "description": "Architect agent - system design"
+    },
+    {
+      "name": "qa",
+      "path": "skills/qa.md",
+      "description": "QA agent - testing and quality"
+    }
+  ],
+  "hooks": {
+    "configPath": "hooks/hooks.json"
+  },
+  "keywords": [
+    "yard",
+    "agents",
+    "orchestration",
+    "development",
+    "ai",
+    "claude",
+    "multi-agent"
+  ]
+}

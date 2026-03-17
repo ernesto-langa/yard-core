@@ -1,0 +1,108 @@
+# AIOX Code Owners
+# Issue: #99 (Governance)
+# Last Updated: 2026-02-21
+#
+# Format: <pattern> <owners>
+# Later patterns take precedence over earlier ones
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# Owners:
+#   @ernesto-langa (lead maintainer)
+#   @ernesto-langa (maintainer)
+#
+# All PRs require approval from a maintainer before merge.
+# Note: Org handles (e.g. @SynkraAI) cannot approve PRs — only user accounts can.
+
+# ============================================
+# Default Owner (fallback)
+# ============================================
+* @ernesto-langa @ernesto-langa
+
+# ============================================
+# Critical Paths (requires lead maintainer review)
+# ============================================
+# Orchestration layer (MasterOrchestrator, BobOrchestrator, GateEvaluator)
+.yard-core/core/orchestration/ @ernesto-langa @ernesto-langa
+
+# Execution engine (WaveExecutor, ParallelExecutor)
+.yard-core/core/execution/ @ernesto-langa @ernesto-langa
+
+# Packages (installer, CLI, shared libraries)
+packages/ @ernesto-langa @ernesto-langa
+
+# CI/CD configurations
+.github/ @ernesto-langa @ernesto-langa
+
+# ============================================
+# Framework Core (requires senior review)
+# ============================================
+# Agent definitions
+.yard-core/development/agents/ @ernesto-langa @ernesto-langa
+
+# Task definitions
+.yard-core/development/tasks/ @ernesto-langa @ernesto-langa
+
+# Workflow definitions
+.yard-core/development/workflows/ @ernesto-langa @ernesto-langa
+
+# Templates
+.yard-core/product/templates/ @ernesto-langa @ernesto-langa
+templates/ @ernesto-langa @ernesto-langa
+
+# CLI utilities
+.yard-core/cli/ @ernesto-langa @ernesto-langa
+
+# ============================================
+# Infrastructure
+# ============================================
+# Docker configurations
+.docker/ @ernesto-langa @ernesto-langa
+
+# Framework configuration
+.yard-core/core-config.yaml @ernesto-langa @ernesto-langa
+
+# Package management
+package.json @ernesto-langa @ernesto-langa
+package-lock.json @ernesto-langa @ernesto-langa
+
+# ============================================
+# Documentation (more permissive)
+# ============================================
+# General docs
+docs/ @ernesto-langa @ernesto-langa
+
+# Architecture decisions
+docs/architecture/ @ernesto-langa @ernesto-langa
+
+# Framework standards
+docs/framework/ @ernesto-langa @ernesto-langa
+
+# User guides
+docs/guides/ @ernesto-langa @ernesto-langa
+
+# ============================================
+# Security-Sensitive Files
+# ============================================
+# This file
+.github/CODEOWNERS @ernesto-langa @ernesto-langa
+
+# Release workflows
+.github/workflows/semantic-release.yml @ernesto-langa @ernesto-langa
+.github/workflows/npm-publish.yml @ernesto-langa @ernesto-langa
+.github/workflows/release.yml @ernesto-langa @ernesto-langa
+
+# Pro submodule workflows
+.github/workflows/pro-integration.yml @ernesto-langa @ernesto-langa
+.github/workflows/publish-pro.yml @ernesto-langa @ernesto-langa
+
+# Security configurations
+security/ @ernesto-langa @ernesto-langa
+
+# Environment files (should not be committed, but protect pattern)
+.env* @ernesto-langa @ernesto-langa
+
+# Configuration files
+*.config.js @ernesto-langa @ernesto-langa
+*.config.ts @ernesto-langa @ernesto-langa
+tsconfig.json @ernesto-langa @ernesto-langa
+eslint.config.* @ernesto-langa @ernesto-langa

@@ -1,0 +1,5 @@
+pid: 999999
+owner: dead-module
+created_at: '2026-03-16T18:05:47.246Z'
+ttl_seconds: 300
+resource: dead-pid-resource
