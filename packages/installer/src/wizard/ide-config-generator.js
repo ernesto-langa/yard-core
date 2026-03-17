@@ -1117,15 +1117,15 @@ async function copyExtraCommandFiles(projectRoot, _sourceRoot) {
   // Squad commands (cohort-squad/, design-system/, squad-creator-pro/, etc.)
   // are private and must NOT be copied to installed projects.
   const DISTRIBUTABLE_ENTRIES = new Set([
-    'AIOX',       // Core agent/script commands (agents/ sub-dir excluded below)
+    'YARD',       // Core agent/script commands (agents/ sub-dir excluded below)
     'synapse',    // SYNAPSE context engine commands
     'greet.md',   // Greeting skill
   ]);
 
-  // Within AIOX/, these sub-dirs are excluded (private or handled separately)
+  // Within YARD/, these sub-dirs are excluded (private or handled separately)
   const AIOX_EXCLUDED = new Set([
-    'AIOX/agents',   // Already handled by copyAgentFiles()
-    'AIOX/stories',  // Project-specific story skills, not distributable
+    'YARD/agents',   // Already handled by copyAgentFiles()
+    'YARD/stories',  // Project-specific story skills, not distributable
   ]);
 
   await fs.ensureDir(targetDir);

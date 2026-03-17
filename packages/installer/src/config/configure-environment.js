@@ -108,12 +108,12 @@ async function configureEnvironment(options = {}) {
       }
     }
 
-    // Step 2: API keys are configured later via .env or aiox-master
+    // Step 2: API keys are configured later via .env or yard-master
     // Skipping prompts during installation for better UX
     const apiKeys = {};
 
     if (!skipPrompts) {
-      console.log('\n💡 API keys can be configured later in .env file or via aiox-master');
+      console.log('\n💡 API keys can be configured later in .env file or via yard-master');
     }
 
     // Step 3: Generate .env content

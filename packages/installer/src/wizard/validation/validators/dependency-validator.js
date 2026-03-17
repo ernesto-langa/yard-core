@@ -178,11 +178,13 @@ async function checkCriticalDependencies(results) {
   ];
 
   const nodeModulesPath = path.join(process.cwd(), 'node_modules');
+  const yardNodeModulesPath = path.join(process.cwd(), '.yard-core', 'node_modules');
   const missingDeps = [];
 
   for (const dep of criticalDeps) {
-    const depPath = path.join(nodeModulesPath, dep);
-    if (!fs.existsSync(depPath)) {
+    const inProject = fs.existsSync(path.join(nodeModulesPath, dep));
+    const inYardCore = fs.existsSync(path.join(yardNodeModulesPath, dep));
+    if (!inProject && !inYardCore) {
       missingDeps.push(dep);
     }
   }

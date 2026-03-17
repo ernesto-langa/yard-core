@@ -602,6 +602,7 @@ function populate(options = {}) {
   });
 
   try {
+    fs.mkdirSync(path.dirname(REGISTRY_PATH), { recursive: true });
     fs.writeFileSync(REGISTRY_PATH, yamlContent, 'utf8');
   } catch (err) {
     throw new Error(`[IDS] Failed to write registry to ${REGISTRY_PATH}: ${err.message}`);

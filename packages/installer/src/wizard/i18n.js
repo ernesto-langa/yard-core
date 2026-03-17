@@ -8,6 +8,10 @@
 
 const TRANSLATIONS = {
   en: {
+    // Banner (welcome screen)
+    bannerTagline: 'Universal AI Agent Framework for Any Domain',
+    bannerInstallerVersion: 'Installer v{version}',
+
     // Language selection
     selectLanguage: 'Select language:',
 
@@ -54,7 +58,7 @@ const TRANSLATIONS = {
     quickStart: 'Quick Start:',
     quickStartAgents: 'Talk to your AI agents: @dev, @qa, @architect',
     quickStartStory: 'Create a story: @pm *create-story',
-    quickStartHelp: 'Get help: @aiox-master *help',
+    quickStartHelp: 'Get help: @yard-master *help',
 
     // Cancellation
     cancelConfirm: 'Cancel installation?',
@@ -165,6 +169,10 @@ const TRANSLATIONS = {
   },
 
   pt: {
+    // Banner (tela de boas-vindas)
+    bannerTagline: 'Framework universal de agentes IA para qualquer domínio',
+    bannerInstallerVersion: 'Instalador v{version}',
+
     // Language selection
     selectLanguage: 'Selecione o idioma:',
 
@@ -212,7 +220,7 @@ const TRANSLATIONS = {
     quickStart: 'Início Rápido:',
     quickStartAgents: 'Converse com seus agentes IA: @dev, @qa, @architect',
     quickStartStory: 'Crie uma story: @pm *create-story',
-    quickStartHelp: 'Obtenha ajuda: @aiox-master *help',
+    quickStartHelp: 'Obtenha ajuda: @yard-master *help',
 
     // Cancellation
     cancelConfirm: 'Cancelar instalação?',
@@ -369,7 +377,7 @@ const TRANSLATIONS = {
     quickStart: 'Inicio Rápido:',
     quickStartAgents: 'Habla con tus agentes IA: @dev, @qa, @architect',
     quickStartStory: 'Crea una story: @pm *create-story',
-    quickStartHelp: 'Obtén ayuda: @aiox-master *help',
+    quickStartHelp: 'Obtén ayuda: @yard-master *help',
 
     // Cancellation
     cancelConfirm: '¿Cancelar instalación?',

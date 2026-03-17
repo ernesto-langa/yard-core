@@ -42,7 +42,7 @@ const IDE_CONFIGS = {
     requiresDirectory: true,
     format: 'text',
     recommended: true,
-    agentFolder: path.join('.claude', 'commands', 'AIOX', 'agents'),
+    agentFolder: path.join('.claude', 'commands', 'YARD', 'agents'),
   },
   codex: {
     name: 'Codex CLI',
@@ -61,7 +61,7 @@ const IDE_CONFIGS = {
     template: 'ide-rules/gemini-rules.md',
     requiresDirectory: true,
     format: 'text',
-    agentFolder: path.join('.gemini', 'rules', 'AIOX', 'agents'),
+    agentFolder: path.join('.gemini', 'rules', 'YARD', 'agents'),
   },
   cursor: {
     name: 'Cursor',
