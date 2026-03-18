@@ -493,7 +493,7 @@
             "type": "directory",
             "purpose": "Utility functions",
             "files": [
-              "aiox-colors.js"
+              "yard-colors.js"
             ]
           },
           "wizard": {

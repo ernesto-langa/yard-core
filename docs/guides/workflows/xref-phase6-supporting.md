@@ -434,8 +434,8 @@ There appears to be **duplication** between `core/elicitation/` (3 domain files)
 | `TASK-FORMAT-SPECIFICATION-V1.md` | Task-First architecture format specification | All agents creating tasks | Referenced by task templates | No |
 | `EXECUTOR-DECISION-TREE.md` | Decision tree for Human/Worker/Agent/Clone routing | Orchestration engine | Referenced by workflow patterns | No |
 | `AGENT-PERSONALIZATION-STANDARD-V1.md` | Agent personality and personalization system | Agent creation tasks | Referenced by agent templates | No |
-| `AIOX-COLOR-PALETTE-V2.1.md` | Complete color system for AIOX branding | Dashboard, UI components | Referenced by UX agent | No |
-| `AIOX-COLOR-PALETTE-QUICK-REFERENCE.md` | Quick reference for color palette | Developers, designers | Subset of full palette doc | No |
+| `YARD-COLOR-PALETTE-V2.1.md` | Complete color system for YARD branding | Dashboard, UI components | Referenced by UX agent | No |
+| `YARD-COLOR-PALETTE-QUICK-REFERENCE.md` | Quick reference for color palette | Developers, designers | Subset of full palette doc | No |
 | `OPEN-SOURCE-VS-SERVICE-DIFFERENCES.md` | Business model documentation (OSS vs service) | Product decisions | Needs update per index | No |
 | `V3-ARCHITECTURAL-DECISIONS.md` | Old architectural decisions (archive candidate) | Historical reference | Superseded by ADR system | Yes (Archive) |
 | `AIOX-LIVRO-DE-OURO.md` | v2.0 base document (DEPRECATED) | Historical reference | Superseded by V2.1-COMPLETE | Yes (Legacy) |

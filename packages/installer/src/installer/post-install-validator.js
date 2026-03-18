@@ -992,7 +992,7 @@ class PostInstallValidator {
       this.issues.push({
         type: IssueType.MISSING_FILE,
         severity: Severity.CRITICAL,
-        message: 'AIOX-Core directory not found',
+        message: 'Yard Core directory not found',
         details: `Expected at: ${this.aioxCoreTarget}`,
         remediation: 'Run `npx yard-core install`',
         relativePath: null,
@@ -1413,7 +1413,7 @@ function formatReport(report, options = {}) {
   const lines = [];
 
   lines.push('');
-  lines.push(`${c.bold}AIOX-Core Installation Validation Report${c.reset}`);
+  lines.push(`${c.bold}Yard Installation Validation Report${c.reset}`);
   lines.push(`${c.gray}${'─'.repeat(50)}${c.reset}`);
 
   // Signature status

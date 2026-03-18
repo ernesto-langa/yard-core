@@ -371,7 +371,7 @@ function updateInstalledManifest(targetDir, sourceManifest, sourcePackage) {
     noRefs: true,
   });
 
-  const header = `# AIOX-Core Installed Manifest
+  const header = `# Yard Installed Manifest
 # This file tracks what was installed from the npm package
 # Used for brownfield upgrades to detect changes
 # DO NOT EDIT MANUALLY
@@ -426,7 +426,7 @@ function formatUpgradeReport(report) {
   const lines = [];
 
   lines.push('═'.repeat(60));
-  lines.push('AIOX-Core Upgrade Report');
+  lines.push('Yard Upgrade Report');
   lines.push('═'.repeat(60));
   lines.push('');
   lines.push(`Current Version: ${report.installedVersion}`);

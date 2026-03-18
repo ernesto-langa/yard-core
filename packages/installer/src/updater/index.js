@@ -707,7 +707,7 @@ function formatCheckResult(result, options = {}) {
   const lines = [];
 
   lines.push('');
-  lines.push(`${c.bold}🔍 AIOX Update Check${c.reset}`);
+  lines.push(`${c.bold}🔍 Yard Update Check${c.reset}`);
   lines.push('');
 
   if (result.installed) {

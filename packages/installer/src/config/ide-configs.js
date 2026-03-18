@@ -129,7 +129,7 @@ function isValidIDE(ideKey) {
  * @returns {Array<{name: string, value: string, checked?: boolean}>} Inquirer-compatible choices
  */
 function getIDEChoices() {
-  const { colors } = require('../utils/aiox-colors');
+  const { colors } = require('../utils/yard-colors');
   const { t } = require('../wizard/i18n');
 
   return getIDEKeys().map((key) => {
