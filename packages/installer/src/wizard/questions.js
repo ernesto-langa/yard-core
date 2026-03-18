@@ -7,7 +7,7 @@
  * @module wizard/questions
  */
 
-const { colors } = require('../utils/aiox-colors');
+const { colors } = require('../utils/yard-colors');
 const { createInquirerValidator, validateProjectType } = require('./validators');
 const { t, getLanguageChoices, setLanguage: _setLanguage } = require('./i18n');
 
@@ -268,7 +268,7 @@ function getTechPresetQuestion() {
           value: 'php',
         },
         {
-          name: 'None' + colors.dim(' - Let AIOX decide based on project'),
+          name: 'None' + colors.dim(' - Let Yard decide based on project'),
           value: 'none',
         },
       ],

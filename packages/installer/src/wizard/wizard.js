@@ -32,7 +32,7 @@ async function runWizard(options = {}) {
 
   try {
     // Step 1: Welcome screen
-    console.log('🚀 Welcome to AIOX Installer\n');
+    console.log('🚀 Welcome to Yard Installer\n');
 
     // Step 2: Detect installation mode (Story 6.9)
     console.log('📊 Analyzing project directory...');
@@ -209,9 +209,9 @@ async function elicitDeploymentConfig() {
 async function confirmProjectType(detectedType) {
   // Kept for backward compatibility
   const typeDescriptions = {
-    GREENFIELD: 'New project - AIOX will create complete structure',
-    BROWNFIELD: 'Existing project - AIOX will integrate with current setup',
-    EXISTING_AIOX: 'AIOX already installed - Would you like to update or reinstall?',
+    GREENFIELD: 'New project - Yard will create complete structure',
+    BROWNFIELD: 'Existing project - Yard will integrate with current setup',
+    EXISTING_AIOX: 'Yard already installed - Would you like to update or reinstall?',
     UNKNOWN: 'Unknown project type - Manual selection required',
   };
 

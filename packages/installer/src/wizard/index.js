@@ -11,7 +11,7 @@ const inquirer = require('inquirer');
 const path = require('path');
 const fse = require('fs-extra');
 const { execSync } = require('child_process');
-const { colors } = require('../utils/aiox-colors');
+const { colors } = require('../utils/yard-colors');
 const {
   getLanguageQuestion,
   getUserProfileQuestion,

@@ -16,7 +16,7 @@
 'use strict';
 
 const { createSpinner, showSuccess, showError, showWarning, showInfo } = require('./feedback');
-const { colors, status } = require('../utils/aiox-colors');
+const { colors, status } = require('../utils/yard-colors');
 const { t, tf } = require('./i18n');
 
 /**

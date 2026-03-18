@@ -8,7 +8,7 @@
 
 const ora = require('ora');
 const cliProgress = require('cli-progress');
-const { colors, status, headings } = require('../utils/aiox-colors');
+const { colors, status, headings } = require('../utils/yard-colors');
 const { t } = require('./i18n');
 
 /**

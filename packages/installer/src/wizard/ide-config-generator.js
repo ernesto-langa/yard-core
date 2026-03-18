@@ -574,12 +574,12 @@ async function generateIDEConfigs(selectedIDEs, wizardState, options = {}) {
           const settingsFile = await createGeminiSettings(projectRoot);
           if (settingsFile) {
             createdFiles.push(settingsFile);
-            spinner.succeed('Created .gemini/settings.json with AIOX hooks');
+            spinner.succeed('Created .gemini/settings.json with Yard hooks');
           } else {
             spinner.info('Skipped .gemini/settings.json (no hooks to register)');
           }
 
-          spinner.start('Linking Gemini AIOX extension...');
+          spinner.start('Linking Gemini Yard extension...');
           const extensionResult = await linkGeminiExtension(projectRoot);
           if (extensionResult.status === 'linked') {
             spinner.succeed('Gemini extension "aiox" linked and enabled');
@@ -647,7 +647,7 @@ function showSuccessSummary(result) {
 
   console.log('\n📋 Next Steps:');
   console.log('  1. Open your project in your selected IDE(s)');
-  console.log('  2. The IDE should automatically recognize AIOX configuration');
+  console.log('  2. The IDE should automatically recognize Yard configuration');
   console.log('  3. Try activating an agent with @agent-name');
   console.log('  4. Use * commands to interact with agents\n');
 }
