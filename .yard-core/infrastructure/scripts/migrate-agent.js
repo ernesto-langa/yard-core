@@ -94,7 +94,7 @@ const AGENT_CAPABILITIES = {
   sm: {
     // Scrum Master doesn't have specific Auto-Claude capabilities
   },
-  'aiox-master': {
+  'yard-master': {
     specPipeline: {
       canGather: true,
       canAssess: true,

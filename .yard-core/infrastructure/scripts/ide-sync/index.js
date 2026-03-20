@@ -89,8 +89,8 @@ function loadConfig(projectRoot) {
       },
     },
     redirects: {
-      'aiox-developer': 'aiox-master',
-      'aiox-orchestrator': 'aiox-master',
+      'aiox-developer': 'yard-master',
+      'aiox-orchestrator': 'yard-master',
       'db-sage': 'data-engineer',
       'github-devops': 'devops',
     },

@@ -11,8 +11,8 @@ const path = require('path');
  * Maps deprecated agent IDs to their new target IDs
  */
 const DEFAULT_REDIRECTS = {
-  'aiox-developer': 'aiox-master',
-  'aiox-orchestrator': 'aiox-master',
+  'aiox-developer': 'yard-master',
+  'aiox-orchestrator': 'yard-master',
   'db-sage': 'data-engineer',
   'github-devops': 'devops',
 };

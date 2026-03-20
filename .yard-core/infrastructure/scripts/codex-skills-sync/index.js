@@ -39,7 +39,7 @@ function trimText(text, max = 220) {
 
 function getSkillId(agentId) {
   const id = String(agentId || '').trim();
-  if (id.startsWith('aiox-')) return id;
+  if (id.startsWith('aiox-') || id.startsWith('yard-')) return id;
   return `aiox-${id}`;
 }
 

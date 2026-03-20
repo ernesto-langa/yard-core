@@ -7,7 +7,7 @@ const FALLBACK_DESCRIPTION = 'Agente especializado AIOX';
 const MAX_DESCRIPTION_CONTEXT = 120;
 
 const MENU_ORDER = [
-  'aiox-master',
+  'yard-master',
   'analyst',
   'architect',
   'data-engineer',
@@ -24,6 +24,9 @@ const MENU_ORDER = [
 function commandSlugForAgent(agentId) {
   if (agentId.startsWith('aiox-')) {
     return agentId.replace(/^aiox-/, '');
+  }
+  if (agentId.startsWith('yard-')) {
+    return agentId.replace(/^yard-/, '');
   }
   return agentId;
 }
