@@ -74,7 +74,7 @@ describe('WorktreeManager', () => {
   describe('getWorktreePath', () => {
     it('should return correct path for story', () => {
       const wtPath = manager.getWorktreePath('STORY-42');
-      expect(wtPath).toBe(path.join(process.cwd(), '.yard', 'worktrees'), 'STORY-42');
+      expect(wtPath).toBe(path.join(testRoot, '.yard', 'worktrees', 'STORY-42'));
     });
   });
 

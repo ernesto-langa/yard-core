@@ -7,11 +7,139 @@
 # - SHA256 hashes for change detection
 # - File types for categorization
 #
-version: 5.0.3
-generated_at: "2026-03-17T15:41:35.980Z"
+version: 1.0.0
+generated_at: "2026-03-20T14:04:42.575Z"
 generator: scripts/generate-install-manifest.js
-file_count: 960
+file_count: 1003
 files:
+  - path: cli/commands/config/index.js
+    hash: sha256:c509d50def3dcaa9eaaab496d4b3659e76704ef91116ef2ae3ae0b0c737ce0a8
+    type: cli
+    size: 10946
+  - path: cli/commands/generate/index.js
+    hash: sha256:61f9a7464d6645ad9ed7035a7e4787ac271c7287947d4602d0c8e37b6b848ac0
+    type: cli
+    size: 207
+  - path: cli/commands/manifest/index.js
+    hash: sha256:96544ccef41c8e3304e2791eae4294268be461601413bc3d9e773b692d9e6c6b
+    type: cli
+    size: 211
+  - path: cli/commands/mcp/add.js
+    hash: sha256:8ef58a9c543ebe29c7b4939eac686164f53690421059c8c31c52ed5ce49f74b7
+    type: cli
+    size: 5186
+  - path: cli/commands/mcp/index.js
+    hash: sha256:d0c268a32b8986ac78a2542ec485ad586395a7e92027ddcc2f9cba2d5b43a731
+    type: cli
+    size: 2147
+  - path: cli/commands/mcp/link.js
+    hash: sha256:5c584a9849b248d9754be20a617b30e2042caf0823b41b5dd8d7362e5f2f3995
+    type: cli
+    size: 4032
+  - path: cli/commands/mcp/setup.js
+    hash: sha256:1e70d006f5b642a6a43cfa6b2422c8a825d0666116327283bae3ad4c22a9b076
+    type: cli
+    size: 4434
+  - path: cli/commands/mcp/status.js
+    hash: sha256:92095c28b3d85e1601ecb1d75d758860df7ac9072490267b35b88d1b9de37b46
+    type: cli
+    size: 4105
+  - path: cli/commands/metrics/index.js
+    hash: sha256:a0218f890fe09af92bb0d7bd292250f8b886aa8ebc4fbc8ccaa74aedfb74c119
+    type: cli
+    size: 203
+  - path: cli/commands/migrate/analyze.js
+    hash: sha256:415bd3172a59a99701cec20bee9a07b02a0bf845e07ed6bea4cf616d3220b253
+    type: cli
+    size: 9398
+  - path: cli/commands/migrate/backup.js
+    hash: sha256:7549daf1505015e980c98396a1649181d1bf04860e1898e6e4a9d518c929946f
+    type: cli
+    size: 9586
+  - path: cli/commands/migrate/execute.js
+    hash: sha256:6c1f08a41c1da91e3e0a7db3a34ba13ee951f61d8566b5ccb8bb959e48c105f6
+    type: cli
+    size: 7827
+  - path: cli/commands/migrate/index.js
+    hash: sha256:f9d3ac781ead578539b38cc4358b9d6b2ae59ccd444f0e9f5b883773bec1938c
+    type: cli
+    size: 1701
+  - path: cli/commands/migrate/rollback.js
+    hash: sha256:0883166df6cc57f51b6d108f379d6be6ee24eef051445d2d9eba7aae563795b5
+    type: cli
+    size: 5170
+  - path: cli/commands/migrate/update-imports.js
+    hash: sha256:3fb70e72bcde50c89de8bb985a239d51eefe9648dacfca3d575e8858fc1e9a86
+    type: cli
+    size: 11154
+  - path: cli/commands/migrate/validate.js
+    hash: sha256:75c1c151a6a462156c745454368580aadd5afe8986bf25b6af202db3954f2da4
+    type: cli
+    size: 12326
+  - path: cli/commands/pro/index.js
+    hash: sha256:e99e3a14f3f98a8e6c25e59546cc49fc4847573996be79e5fd7a692203f6a443
+    type: cli
+    size: 195
+  - path: cli/commands/qa/index.js
+    hash: sha256:e427d33f7f72e2f1de90c6dc36abe1fcb944335af105d5d0914178a23b2fcb45
+    type: cli
+    size: 195
+  - path: cli/commands/workers/formatters/info-formatter.js
+    hash: sha256:cf5310c21355fa9ec4cfc001fd3b1a2969f78acb7698bb1825d380866fc08877
+    type: cli
+    size: 7486
+  - path: cli/commands/workers/formatters/list-table.js
+    hash: sha256:178440de6ff85068a73de1f544b47c1dc1520f985836c43aaa1c726b4e6a7f34
+    type: cli
+    size: 7476
+  - path: cli/commands/workers/formatters/list-tree.js
+    hash: sha256:dd8bc8711e615cea76aca53f50e0a09c36465ffb0448f3b5fc6908c833303131
+    type: cli
+    size: 4683
+  - path: cli/commands/workers/index.js
+    hash: sha256:5f463449af4baa61bb656b8c1e1ac7dc89818b3bb365877210005c5458b21917
+    type: cli
+    size: 1556
+  - path: cli/commands/workers/info.js
+    hash: sha256:8742a68afbc237a897c7b5a72f666b23a6bbf277e11c81ababdecb8bcbf3aa60
+    type: cli
+    size: 5630
+  - path: cli/commands/workers/list.js
+    hash: sha256:60de1bd64b7e3c6a49e2e8b48aa7a3449966ae737e31adcab59902e92dca58b5
+    type: cli
+    size: 2118
+  - path: cli/commands/workers/search-filters.js
+    hash: sha256:c619df7a992ba4cebf572f4d6980d2b200608baa145c7ed35924d2453ef4cd50
+    type: cli
+    size: 5225
+  - path: cli/commands/workers/search-keyword.js
+    hash: sha256:eb4fbcbcbb366cf16137297789f81d7a9fa98aadadb0317ffc555372bcf7a6f5
+    type: cli
+    size: 5777
+  - path: cli/commands/workers/search-semantic.js
+    hash: sha256:605e2b189515abe5bcb01ae1548bb0dbb04ca51e4bf6b1ea2c40885fede85b26
+    type: cli
+    size: 8383
+  - path: cli/commands/workers/search.js
+    hash: sha256:5d26069fe4e2682aeb2559e31cfd36832107f562be3e7cfe5cc1bb08c0bb7081
+    type: cli
+    size: 2241
+  - path: cli/commands/workers/utils/pagination.js
+    hash: sha256:9246ec001dea6c249ec05a56c776686bfdc057b80094a0b3e2284d00770aff98
+    type: cli
+    size: 2439
+  - path: cli/index.js
+    hash: sha256:2e2d0a5e4b063f1bef92c14b63662b31023f1dfdfc3f6e63ea70114be572352c
+    type: cli
+    size: 4387
+  - path: cli/utils/output-formatter-cli.js
+    hash: sha256:e4f234b43ed0aa38bc0a7d452c876351aac0177ad9e840683320836139368ce5
+    type: cli
+    size: 6816
+  - path: cli/utils/score-calculator.js
+    hash: sha256:39e35395961404bdb255522b6fc8f9742f7b39e6f168ae68e9a165c2f057b158
+    type: cli
+    size: 5907
   - path: core-config.yaml
     hash: sha256:575e5870ba9272fa2579a6191c45a760d421aa05cf9b81a61377b77275b412c8
     type: config
@@ -77,13 +205,17 @@ files:
     type: core
     size: 4928
   - path: core/config/config-loader.js
-    hash: sha256:a526864825948f55ad4b2152bb39c2cf98f5d3adcdc028154cf7a8171105d242
+    hash: sha256:26fec445d26702089a83bf7952dbcc95dbe41a954eaa3ca34b800dea2285130a
     type: core
     size: 8534
   - path: core/config/config-resolver.js
-    hash: sha256:2152b4585251e36b2b81674919878973fb988dc5e7397f503055814796ee3746
+    hash: sha256:142f1fc50c407f41bfda0bec677eb0c544d744b3f0850ff370d49fe33263b7f8
     type: core
-    size: 18920
+    size: 19029
+  - path: core/config/config-utils.js
+    hash: sha256:03172b3ba67b225ea5fe56280ec69ceb9bf5b957308f98ea5f7d16881fbaaf39
+    type: core
+    size: 5236
   - path: core/config/env-interpolator.js
     hash: sha256:d9d9782d1c685fc1734034f656903ff35ac71665c0bedb3fc479544c89d1ece1
     type: core
@@ -1044,6 +1176,30 @@ files:
     hash: sha256:05084596198634dd2a670a752d5c451edfe268e16e3bae511db52184f895366f
     type: core
     size: 10934
+  - path: data/agent-config-requirements.yaml
+    hash: sha256:3cba47d3e2734bda343b8219fe9b65a1ee2698668f9c0a00d66fbfba40308252
+    type: data
+    size: 2881
+  - path: data/entity-registry.yaml
+    hash: sha256:bb6751205a8608300edf6494a5124c76ef5feb0cdea54fc628c18a99a074372a
+    type: data
+    size: 516563
+  - path: data/technical-preferences.md
+    hash: sha256:c48bb1e621b13bb53ab2b4b26bf7e9f093a7b9527f2ac0eb7a29d2832e7a649c
+    type: data
+    size: 1455
+  - path: data/tool-registry.yaml
+    hash: sha256:7c9d7500d97039a64848d8503c42903c8d9f0acfa677829ffc521ba5a4a50139
+    type: data
+    size: 15178
+  - path: data/workflow-chains.yaml
+    hash: sha256:a0f4c57fda688b772fed69e612769bf195a7cb1bceef76a20772d5f41eb5d434
+    type: data
+    size: 4860
+  - path: data/workflow-patterns.yaml
+    hash: sha256:5a698d9b0d34bb20120083dd9d8e3ca689f5d14ba959de5421fda9a4d5cc7219
+    type: data
+    size: 28054
   - path: development/agent-teams/team-all.yaml
     hash: sha256:3b641ef048b79c0f9c212620d5f09257bab7e4185fc706fe3731ec788f027c01
     type: development
@@ -3101,7 +3257,7 @@ files:
     type: template
     size: 6595
   - path: infrastructure/templates/gitignore/gitignore-aiox-base.tmpl
-    hash: sha256:9088975ee2bf4d88e23db6ac3ea5d27cccdc72b03db44450300e2f872b02e935
+    hash: sha256:b3b82d48dd126d07569028f9f8a06a26790fd56e9b0417f01a74247ed2baf2bd
     type: template
     size: 788
   - path: infrastructure/templates/gitignore/gitignore-brownfield-merge.tmpl
@@ -3141,9 +3297,9 @@ files:
     type: infrastructure
     size: 4172
   - path: infrastructure/tests/worktree-manager.test.js
-    hash: sha256:2ccf7b4d180c5da7f395106739f97c0e969f93e21cee75e7ab35ce6f2d7f587b
+    hash: sha256:88dc77ee7d2451b6902840f53d7b02bb00fdfba5c99af4374981e5e6491d17e1
     type: infrastructure
-    size: 21456
+    size: 21451
   - path: infrastructure/tools/cli/github-cli.yaml
     hash: sha256:222ca6016e9487d2da13bead0af5cee6099885ea438b359ff5fa5a73c7cd4820
     type: tool
@@ -3768,6 +3924,22 @@ files:
     hash: sha256:7185fbc069702ef6c4444c2c0cbf3d95f692435406ab3cad811768de4b7d4a28
     type: template
     size: 4043
+  - path: scripts/migrate-framework-docs.sh
+    hash: sha256:bde2ea9982b25929605a5f5296a3b0cda733bad8569dfab693fc2a64fe24e880
+    type: script
+    size: 9488
+  - path: scripts/pm.sh
+    hash: sha256:31584e5c8e0e45d62bf8ee10fa1979d11fc7798e06f4c957b5877081c92d6156
+    type: script
+    size: 11995
+  - path: scripts/session-context-loader.js
+    hash: sha256:5d41c1a49e5eff2019ac5e1022b6739041e6059f34c0d689db2f91937dd6c86d
+    type: script
+    size: 1330
+  - path: scripts/update-yard.sh
+    hash: sha256:f9df1e06cb6aa844854b99037a4a93ba9d1d45a971c42291fb1545f6bef4361f
+    type: script
+    size: 6083
   - path: user-guide.md
     hash: sha256:a271da80ad3529ce295b2c6a99089186c50770ec2a90f1cf83a4a4a6b7661781
     type: documentation

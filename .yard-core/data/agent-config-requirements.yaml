@@ -1,0 +1,107 @@
+agents:
+  aiox-master:
+    performance_target: "<50ms"
+    config_sections: []
+    files_loaded: []
+  dev:
+    performance_target: "<100ms"
+    config_sections: []
+    files_loaded:
+      - path: "docs/framework/coding-standards.md"
+  qa:
+    performance_target: "<100ms"
+    config_sections: []
+    files_loaded:
+      - path: ".yard-core/product/data/test-levels-framework.md"
+      - path: ".yard-core/product/data/test-priorities-matrix.md"
+  devops:
+    performance_target: "<100ms"
+    config_sections: []
+    files_loaded: []
+  github-devops:
+    performance_target: "<100ms"
+    config_sections: []
+    files_loaded: []
+  architect:
+    performance_target: "<100ms"
+    config_sections: []
+    files_loaded:
+      - path: "docs/framework/tech-stack.md"
+      - path: ".yard-core/data/technical-preferences.md"
+  po:
+    performance_target: "<100ms"
+    config_sections: []
+    files_loaded:
+      - path: ".yard-core/product/data/elicitation-methods.md"
+  sm:
+    performance_target: "<75ms"
+    config_sections: []
+    files_loaded:
+      - path: ".yard-core/product/data/mode-selection-best-practices.md"
+      - path: ".yard-core/data/workflow-patterns.yaml"
+      - path: "docs/framework/coding-standards.md"
+  data-engineer:
+    performance_target: "<100ms"
+    config_sections: []
+    files_loaded: []
+  db-sage:
+    performance_target: "<100ms"
+    config_sections: []
+    files_loaded: []
+  pm:
+    performance_target: "<100ms"
+    config_sections: []
+    files_loaded:
+      - path: "docs/framework/coding-standards.md"
+      - path: "docs/framework/tech-stack.md"
+  analyst:
+    performance_target: "<100ms"
+    config_sections: []
+    files_loaded:
+      - path: ".yard-core/product/data/brainstorming-techniques.md"
+      - path: "docs/framework/tech-stack.md"
+      - path: "docs/framework/source-tree.md"
+  ux-design-expert:
+    performance_target: "<100ms"
+    config_sections: []
+    files_loaded:
+      - path: "docs/framework/tech-stack.md"
+      - path: "docs/framework/coding-standards.md"
+  squad-creator:
+    performance_target: "<150ms"
+    config_sections:
+      - squadsTemplateLocation
+    files_loaded: []
+    lazy_loading:
+      agent_registry: true
+      squad_manifest: true
+  aiox-developer:
+    performance_target: "<100ms"
+    config_sections: []
+    files_loaded: []
+  aiox-orchestrator:
+    performance_target: "<100ms"
+    config_sections: []
+    files_loaded: []
+  default:
+    performance_target: "<100ms"
+    config_sections: []
+    files_loaded: []
+
+lazy_loading_strategy:
+  shared_files:
+    - path: "docs/framework/coding-standards.md"
+      used_by:
+        - dev
+        - pm
+        - ux-design-expert
+        - sm
+    - path: "docs/framework/tech-stack.md"
+      used_by:
+        - architect
+        - pm
+        - ux-design-expert
+        - analyst
+    - path: "docs/framework/source-tree.md"
+      used_by:
+        - analyst
