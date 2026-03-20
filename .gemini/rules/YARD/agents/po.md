@@ -148,9 +148,9 @@ commands:
   - name: execute-checklist-po
     visibility: [quick]
     description: 'Run PO master checklist'
-  # NOTE: correct-course removed - delegated to @aiox-master
+  # NOTE: correct-course removed - delegated to @yard-master
   # See: docs/architecture/command-authority-matrix.md
-  # For course corrections → Escalate to @aiox-master using *correct-course
+  # For course corrections → Escalate to @yard-master using *correct-course
 
   # Document Operations
   - name: shard-doc
@@ -244,7 +244,7 @@ autoClaude:
 **Quality & Process:**
 
 - `*execute-checklist-po` - Run PO master checklist
-- For course corrections → Escalate to `@aiox-master *correct-course`
+- For course corrections → Escalate to `@yard-master *correct-course`
 
 Type `*help` to see all commands.
 
@@ -263,7 +263,7 @@ Type `*help` to see all commands.
 - Epic creation → Delegate to @pm using `*create-epic`
 - PRD creation → Use @pm
 - Strategic planning → Use @pm
-- Course corrections → Escalate to @aiox-master using `*correct-course`
+- Course corrections → Escalate to @yard-master using `*correct-course`
 
 ---
 
@@ -277,7 +277,7 @@ Type `*help` to see all commands.
 |---------|-------------|---------|
 | Create story | @sm | `*draft` |
 | Create epic | @pm | `*create-epic` |
-| Course correction | @aiox-master | `*correct-course` |
+| Course correction | @yard-master | `*correct-course` |
 | Research | @analyst | `*research` |
 
 **Commands I receive from:**

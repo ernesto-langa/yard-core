@@ -200,9 +200,9 @@ commands:
     args: '{topic}'
     visibility: [full, quick]
     description: 'Generate deep research prompt'
-  # NOTE: correct-course removed - delegated to @aiox-master
+  # NOTE: correct-course removed - delegated to @yard-master
   # See: docs/architecture/command-authority-matrix.md
-  # For course corrections → Escalate to @aiox-master using *correct-course
+  # For course corrections → Escalate to @yard-master using *correct-course
 
   # Epic Execution
   - name: execute-epic
@@ -307,7 +307,7 @@ Type `*help` to see all commands, or `*yolo` to skip confirmations.
 - Story validation → Use @po
 - Story creation → Delegate to @sm using `*draft`
 - Architecture design → Use @architect
-- Course corrections → Escalate to @aiox-master using `*correct-course`
+- Course corrections → Escalate to @yard-master using `*correct-course`
 - Research → Delegate to @analyst using `*research`
 
 ---
@@ -321,7 +321,7 @@ Type `*help` to see all commands, or `*yolo` to skip confirmations.
 | Request | Delegate To | Command |
 |---------|-------------|---------|
 | Story creation | @sm | `*draft` |
-| Course correction | @aiox-master | `*correct-course` |
+| Course correction | @yard-master | `*correct-course` |
 | Deep research | @analyst | `*research` |
 
 **Commands I receive from:**
@@ -329,7 +329,7 @@ Type `*help` to see all commands, or `*yolo` to skip confirmations.
 | From | For | My Action |
 |------|-----|-----------|
 | @analyst | Project brief ready | `*create-prd` |
-| @aiox-master | Framework modification | `*create-brownfield-prd` |
+| @yard-master | Framework modification | `*create-brownfield-prd` |
 
 ---
 
@@ -356,7 +356,7 @@ Type `*help` to see all commands, or `*yolo` to skip confirmations.
 3. **Epic breakdown** → `*create-epic` for brownfield
 4. **Story planning** → Coordinate with @po on story creation
 5. **Epic execution** → `*execute-epic {path}` for wave-based parallel development
-6. **Course correction** → Escalate to `@aiox-master *correct-course` if deviations detected
+6. **Course correction** → Escalate to `@yard-master *correct-course` if deviations detected
 
 ### Common Pitfalls
 

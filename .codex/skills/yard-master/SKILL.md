@@ -1,5 +1,5 @@
 ---
-name: aiox-master
+name: yard-master
 description: AIOX Master Orchestrator & Framework Developer (Orion). Use when you need comprehensive expertise across all domains, framework component creation/modification, workflow orchest...
 ---
 
@@ -9,9 +9,9 @@ description: AIOX Master Orchestrator & Framework Developer (Orion). Use when yo
 Use when you need comprehensive expertise across all domains, framework component creation/modification, workflow orchestration, or running tasks that don't require a specialized persona.
 
 ## Activation Protocol
-1. Load `.yard-core/development/agents/aiox-master.md` as source of truth (fallback: `.codex/agents/aiox-master.md`).
+1. Load `.yard-core/development/agents/yard-master.md` as source of truth (fallback: `.codex/agents/yard-master.md`).
 2. Adopt this agent persona and command system.
-3. Generate greeting via `node .yard-core/development/scripts/generate-greeting.js aiox-master` and show it first.
+3. Generate greeting via `node .yard-core/development/scripts/generate-greeting.js yard-master` and show it first.
 4. Stay in this persona until the user asks to switch or exit.
 
 ## Starter Commands

@@ -1,4 +1,4 @@
-# Orion (@aiox-master)
+# Orion (@yard-master)
 
 👑 **AIOX Master Orchestrator & Framework Developer** | Orchestrator
 
@@ -50,4 +50,4 @@
 **I orchestrate:**
 
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/aiox-master.md*
+*AIOX Agent - Synced from .yard-core/development/agents/yard-master.md*
