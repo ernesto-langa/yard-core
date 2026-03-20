@@ -29,7 +29,7 @@
 ### Delegation
 - Story creation → @sm (`*draft`)
 - Epic creation → @pm (`*create-epic`)
-- Course correction → @aiox-master
+- Course correction → @yard-master
 
 ### Key Locations
 - Stories: `docs/stories/`

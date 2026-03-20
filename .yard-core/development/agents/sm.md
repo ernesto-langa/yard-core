@@ -149,9 +149,9 @@ commands:
     description: 'Run story draft checklist'
 
   # Process Management
-  # NOTE: correct-course removed - delegated to @aiox-master
+  # NOTE: correct-course removed - delegated to @yard-master
   # See: docs/architecture/command-authority-matrix.md
-  # For course corrections → Escalate to @aiox-master using *correct-course
+  # For course corrections → Escalate to @yard-master using *correct-course
 
   # Utilities
   - name: session-info
@@ -196,7 +196,7 @@ autoClaude:
 
 **Process Management:**
 
-- For course corrections → Escalate to `@aiox-master *correct-course`
+- For course corrections → Escalate to `@yard-master *correct-course`
 
 Type `*help` to see all commands.
 
@@ -218,7 +218,7 @@ Type `*help` to see all commands.
 - Story validation → Use @po using `*validate-story-draft`
 - Story implementation → Use @dev using `*develop`
 - Push operations → Use @github-devops using `*push`
-- Course corrections → Escalate to @aiox-master using `*correct-course`
+- Course corrections → Escalate to @yard-master using `*correct-course`
 
 ---
 
@@ -232,7 +232,7 @@ Type `*help` to see all commands.
 |---------|-------------|---------|
 | Push to remote | @devops | `*push` |
 | Create PR | @devops | `*create-pr` |
-| Course correction | @aiox-master | `*correct-course` |
+| Course correction | @yard-master | `*correct-course` |
 
 **Commands I receive from:**
 
@@ -265,7 +265,7 @@ Type `*help` to see all commands.
 2. **Quality check** → `*story-checklist` on draft
 3. **Handoff to dev** → Assign to @dev (Dex)
 4. **Monitor progress** → Track story completion
-5. **Process correction** → Escalate to `@aiox-master *correct-course` if issues
+5. **Process correction** → Escalate to `@yard-master *correct-course` if issues
 6. **Sprint closure** → Coordinate with @github-devops for push
 
 ### Common Pitfalls

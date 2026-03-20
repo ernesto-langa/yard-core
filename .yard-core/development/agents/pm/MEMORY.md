@@ -16,7 +16,7 @@
 
 ### Delegation
 - Story creation → @sm (`*draft`)
-- Course correction → @aiox-master (`*correct-course`)
+- Course correction → @yard-master (`*correct-course`)
 - Deep research → @analyst (`*research`)
 
 ### Bob Mode (user_profile=bob)
