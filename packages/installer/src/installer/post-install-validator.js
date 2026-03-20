@@ -373,7 +373,7 @@ class PostInstallValidator {
   _getRealTargetDir() {
     if (this._realTargetDirCache === null) {
       try {
-        this._realTargetDirCache = fs.realpathSync(path.join(process.cwd(), '.yard-core'));
+        this._realTargetDirCache = fs.realpathSync(this.aioxCoreTarget);
       } catch {
         // Will be handled by caller
         return null;
@@ -391,9 +391,9 @@ class PostInstallValidator {
   async loadManifest() {
     // Determine manifest path
     const sourceManifestPath = this.aioxCoreSource
-      ? path.join(process.cwd(), '.yard-core', 'install-manifest.yaml')
+      ? path.join(this.aioxCoreSource, 'install-manifest.yaml')
       : null;
-    const targetManifestPath = path.join(process.cwd(), '.yard-core', 'install-manifest.yaml');
+    const targetManifestPath = path.join(this.aioxCoreTarget, 'install-manifest.yaml');
 
     let manifestPath = targetManifestPath;
 
@@ -601,7 +601,7 @@ class PostInstallValidator {
    */
   async validateFile(entry) {
     const relativePath = entry.path;
-    const absolutePath = path.join(process.cwd(), '.yard-core', relativePath);
+    const absolutePath = path.join(this.aioxCoreTarget, relativePath);
     const category = categorizeFile(relativePath);
 
     const result = {
@@ -745,7 +745,7 @@ class PostInstallValidator {
       // SECURITY: Detect symlinks in the RELATIVE portion of the path
       // Compare the relative path from target to file with the relative path
       // from realTarget to realPath. If they differ, there's a symlink attack.
-      const expectedRelative = path.join(process.cwd(), '.yard-core', absolutePath);
+      const expectedRelative = relativePath.replace(/\\/g, path.sep);
       const actualRelative = path.relative(realTargetDir, realPath);
 
       // Platform-aware comparison (case-insensitive on Windows)
@@ -1232,8 +1232,8 @@ class PostInstallValidator {
         continue;
       }
 
-      const sourcePath = path.join(process.cwd(), '.yard-core', relativePath);
-      const targetPath = path.join(process.cwd(), '.yard-core', relativePath);
+      const sourcePath = path.join(this.aioxCoreSource, relativePath);
+      const targetPath = path.join(this.aioxCoreTarget, relativePath);
 
       onProgress(i + 1, repairableIssues.length, relativePath);
 
@@ -1312,7 +1312,7 @@ class PostInstallValidator {
         // Walk each path component from aioxCoreTarget to targetDir
         // and verify none are symlinks
         let currentPath = this.aioxCoreTarget;
-        const relativeParts = path.join(process.cwd(), '.yard-core', targetDir).split(path.sep);
+        const relativeParts = path.relative(this.aioxCoreTarget, targetDir).split(path.sep);
 
         for (const part of relativeParts) {
           if (!part || part === '.') continue;
@@ -1324,7 +1324,7 @@ class PostInstallValidator {
             if (componentStat.isSymbolicLink()) {
               result.skipped.push({
                 path: relativePath,
-                reason: `Symlink detected in ${path.join(process.cwd(), '.yard-core', currentPath)}`,
+                reason: `Symlink detected in ${currentPath}`,
               });
               continue;
             }
@@ -1339,7 +1339,7 @@ class PostInstallValidator {
         // This catches any symlinks that might have been missed or created during the check
         if (fs.existsSync(targetDir)) {
           const realTargetDir = fs.realpathSync(targetDir);
-          const realAioxCoreTarget = fs.realpathSync(path.join(process.cwd(), '.yard-core'));
+          const realAioxCoreTarget = fs.realpathSync(this.aioxCoreTarget);
 
           if (!isPathContained(realTargetDir, realAioxCoreTarget)) {
             result.skipped.push({

@@ -1,6 +1,6 @@
 {
   "name": "yard-core",
-  "version": "5.0.3",
+  "version": "1.0.0",
   "description": "Yard: AI-Orchestrated System for Full Stack Development - Core Framework",
   "bin": {
     "yard-core": "bin/yard.js",

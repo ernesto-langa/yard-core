@@ -1,6 +1,6 @@
 /**
- * AIOX Updater
- * Intelligent update system for AIOX-Core installations
+ * YARD Updater
+ * Intelligent update system for YARD-Core installations
  *
  * @module packages/installer/src/updater
  * @story Epic 7 - CLI Update Command
@@ -47,12 +47,12 @@ const FileAction = {
 };
 
 /**
- * AIOX Updater Class
+ * YARD Updater Class
  * Handles intelligent updates while preserving user customizations
  */
-class AIOXUpdater {
+class YARDUpdater {
   /**
-   * Create a new AIOXUpdater instance
+   * Create a new YARDUpdater instance
    *
    * @param {string} projectRoot - Project root directory
    * @param {Object} [options] - Update options
@@ -63,8 +63,8 @@ class AIOXUpdater {
    */
   constructor(projectRoot, options = {}) {
     this.projectRoot = path.resolve(projectRoot);
-    this.aioxCoreDir = path.join(this.projectRoot, '.yard-core');
-    this.aioxConfigDir = path.join(this.projectRoot, '.yard');
+    this.yardCoreDir = path.join(this.projectRoot, '.yard-core');
+    this.yardConfigDir = path.join(this.projectRoot, '.yard');
 
     this.options = {
       verbose: options.verbose === true,
@@ -104,7 +104,7 @@ class AIOXUpdater {
       result.installedAt = this.installedVersion?.installedAt || null;
 
       if (!result.installed) {
-        result.error = 'AIOX not installed or version info not found';
+        result.error = 'YARD not installed or version info not found';
         return result;
       }
 
@@ -153,7 +153,7 @@ class AIOXUpdater {
    */
   async getInstalledVersion() {
     // Try version.json first (new format)
-    const versionJsonPath = path.join(process.cwd(), '.yard-core', 'version.json');
+    const versionJsonPath = path.join(this.yardCoreDir, 'version.json');
     if (fs.existsSync(versionJsonPath)) {
       try {
         const versionInfo = await fs.readJson(versionJsonPath);
@@ -306,7 +306,7 @@ class AIOXUpdater {
     // Need version.json with fileHashes
     if (!this.versionInfo?.fileHashes) {
       // Try to load it
-      const versionJsonPath = path.join(process.cwd(), '.yard-core', 'version.json');
+      const versionJsonPath = path.join(this.yardCoreDir, 'version.json');
       if (fs.existsSync(versionJsonPath)) {
         try {
           this.versionInfo = await fs.readJson(versionJsonPath);
@@ -327,7 +327,7 @@ class AIOXUpdater {
 
     // Compare each file
     for (const [relativePath, originalHash] of Object.entries(this.versionInfo.fileHashes)) {
-      const absolutePath = path.join(process.cwd(), '.yard-core', relativePath);
+      const absolutePath = path.join(this.yardCoreDir, relativePath);
 
       if (!fs.existsSync(absolutePath)) {
         result.missing.push(relativePath);
@@ -518,7 +518,7 @@ class AIOXUpdater {
    * @returns {Promise<void>}
    */
   async createBackup() {
-    this.backupDir = path.join(process.cwd(), '.yard-core', 'backup', `pre-update-${Date.now()}`);
+    this.backupDir = path.join(this.yardConfigDir, 'backup', `pre-update-${Date.now()}`);
     await fs.ensureDir(this.backupDir);
 
     // Copy critical files
@@ -528,7 +528,7 @@ class AIOXUpdater {
     ];
 
     for (const file of filesToBackup) {
-      const src = path.join(process.cwd(), '.yard-core', file);
+      const src = path.join(this.yardCoreDir, file);
       const dest = path.join(this.backupDir, file);
       if (fs.existsSync(src)) {
         await fs.copy(src, dest);
@@ -552,7 +552,7 @@ class AIOXUpdater {
     const backupFiles = await fs.readdir(this.backupDir);
     for (const file of backupFiles) {
       const src = path.join(this.backupDir, file);
-      const dest = path.join(process.cwd(), '.yard-core', file);
+      const dest = path.join(this.yardCoreDir, file);
       await fs.copy(src, dest, { overwrite: true });
     }
 
@@ -616,7 +616,7 @@ class AIOXUpdater {
    * @returns {Promise<void>}
    */
   async updateVersionInfo(newVersion) {
-    const versionJsonPath = path.join(process.cwd(), '.yard-core', 'version.json');
+    const versionJsonPath = path.join(this.yardCoreDir, 'version.json');
 
     const versionInfo = {
       version: newVersion,
@@ -679,7 +679,7 @@ class AIOXUpdater {
    */
   log(message) {
     if (this.options.verbose) {
-      console.log(`[AIOXUpdater] ${message}`);
+      console.log(`[YARDUpdater] ${message}`);
     }
   }
 }
@@ -707,7 +707,7 @@ function formatCheckResult(result, options = {}) {
   const lines = [];
 
   lines.push('');
-  lines.push(`${c.bold}🔍 Yard Update Check${c.reset}`);
+  lines.push(`${c.bold}🔍 YARD Update Check${c.reset}`);
   lines.push('');
 
   if (result.installed) {
@@ -804,7 +804,8 @@ function formatUpdateResult(result, options = {}) {
 }
 
 module.exports = {
-  AIOXUpdater,
+  YARDUpdater,
+  AIOXUpdater: YARDUpdater, // backward-compat alias
   UpdateStatus,
   FileAction,
   formatCheckResult,

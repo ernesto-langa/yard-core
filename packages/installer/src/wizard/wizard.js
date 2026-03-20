@@ -32,7 +32,7 @@ async function runWizard(options = {}) {
 
   try {
     // Step 1: Welcome screen
-    console.log('🚀 Welcome to Yard Installer\n');
+    console.log('🚀 Welcome to AIOX Installer\n');
 
     // Step 2: Detect installation mode (Story 6.9)
     console.log('📊 Analyzing project directory...');

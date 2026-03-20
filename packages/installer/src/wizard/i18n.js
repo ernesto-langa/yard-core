@@ -67,7 +67,7 @@ const TRANSLATIONS = {
     continuing: 'Continuing installation...',
 
     // Pro Installation Wizard (pro-setup.js)
-    proWizardTitle: 'Yard Pro Installation Wizard',
+    proWizardTitle: 'AIOX Pro Installation Wizard',
     proWizardSubtitle: 'Premium Content & Features',
     proLicenseActivation: 'License Activation',
     proContentInstallation: 'Pro Content Installation',
