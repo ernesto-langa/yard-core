@@ -190,7 +190,7 @@ describe('IDE Config Generator', () => {
 
       // Agent folders should also exist
       expect(await fs.pathExists(path.join(testDir, '.cursor', 'rules'))).toBe(true);
-      expect(await fs.pathExists(path.join(testDir, '.gemini', 'rules', 'AIOX', 'agents'))).toBe(true);
+      expect(await fs.pathExists(path.join(testDir, '.gemini', 'rules', 'YARD', 'agents'))).toBe(true);
     });
 
     it('should create directory for IDEs that require it', async () => {

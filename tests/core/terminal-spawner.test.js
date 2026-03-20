@@ -357,7 +357,7 @@ describe('pm.sh Script', () => {
 
   test('should display help with --help flag', () => {
     const result = execSync(`bash "${scriptPath}" --help`, { encoding: 'utf8' });
-    expect(result).toContain('AIOX Multi-Modal Orchestration Script');
+    expect(result).toContain('YARD Multi-Modal Orchestration Script');
     expect(result).toContain('Usage:');
     expect(result).toContain('Arguments:');
     expect(result).toContain('Options:');

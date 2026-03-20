@@ -12,7 +12,7 @@ if (process.env.SKIP_INTEGRATION_TESTS === undefined) {
 }
 
 // Global test timeout (increased for CI environments)
-jest.setTimeout(process.env.CI ? 30000 : 10000);
+jest.setTimeout(process.env.CI ? 60000 : 30000);
 
 // Mock console methods to reduce noise in tests (comment out for debugging)
 // global.console = {

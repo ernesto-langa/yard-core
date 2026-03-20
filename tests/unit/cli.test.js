@@ -1,6 +1,6 @@
 /**
  * STORY-1.1: CLI Entry Point Unit Tests
- * Tests for bin/aiox.js command routing and version checking
+ * Tests for bin/yard.js command routing and version checking
  */
 
 const fs = require('fs');
@@ -8,7 +8,7 @@ const path = require('path');
 const { spawn } = require('child_process');
 
 describe('CLI Entry Point', () => {
-  const cliPath = path.join(__dirname, '../../bin/aiox.js');
+  const cliPath = path.join(__dirname, '../../bin/yard.js');
 
   describe('Node.js Version Check', () => {
     it('should have engines field in package.json requiring Node 18+', () => {
@@ -21,7 +21,7 @@ describe('CLI Entry Point', () => {
     });
 
     it('should have proper module structure', () => {
-      const cliPath = path.join(__dirname, '../../bin/aiox.js');
+      const cliPath = path.join(__dirname, '../../bin/yard.js');
       const cliContent = fs.readFileSync(cliPath, 'utf8');
 
       // Verify CLI has proper structure
@@ -118,7 +118,7 @@ describe('CLI Entry Point', () => {
 
   describe('Shebang', () => {
     it('should have proper shebang for cross-platform compatibility', () => {
-      const cliPath = path.join(__dirname, '../../bin/aiox.js');
+      const cliPath = path.join(__dirname, '../../bin/yard.js');
       const cliContent = fs.readFileSync(cliPath, 'utf8');
       
       expect(cliContent.startsWith('#!/usr/bin/env node')).toBe(true);

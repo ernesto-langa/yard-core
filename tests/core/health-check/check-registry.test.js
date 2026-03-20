@@ -50,6 +50,7 @@ describe('check-registry', () => {
 
   beforeEach(() => {
     registry = new CheckRegistry();
+    registry.clear(); // Clear auto-registered built-in checks for test isolation
   });
 
   // ============================================================

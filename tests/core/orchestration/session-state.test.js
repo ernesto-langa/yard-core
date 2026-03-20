@@ -677,7 +677,7 @@ describe('SessionState', () => {
 
 describe('SessionState Migration (ADR-011)', () => {
   const TEST_PROJECT_ROOT = path.join(__dirname, '../../fixtures/test-migration-project');
-  const LEGACY_STATE_PATH = path.join(process.cwd(), '.yard', 'workflow-state');
+  const LEGACY_STATE_PATH = path.join(TEST_PROJECT_ROOT, '.yard', 'workflow-state');
 
   beforeEach(async () => {
     await fs.rm(TEST_PROJECT_ROOT, { recursive: true, force: true });

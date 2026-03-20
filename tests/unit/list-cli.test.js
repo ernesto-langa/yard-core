@@ -114,8 +114,8 @@ describe('Tree Formatter', () => {
 
   test('formatTree includes usage hints', () => {
     const output = formatTree(mockWorkers, {});
-    expect(output).toContain('aiox workers info <id>');
-    expect(output).toContain('aiox workers search <query>');
+    expect(output).toContain('yard workers info <id>');
+    expect(output).toContain('yard workers search <query>');
   });
 
   test('formatTree shows verbose debug when enabled', () => {

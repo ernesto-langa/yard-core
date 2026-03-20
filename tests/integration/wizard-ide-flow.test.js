@@ -81,7 +81,7 @@ describe('Wizard IDE Flow Integration', () => {
 
       // Verify agent folders were created
       expect(await fs.pathExists(path.join(testDir, '.cursor', 'rules'))).toBe(true);
-      expect(await fs.pathExists(path.join(testDir, '.gemini', 'rules', 'AIOX', 'agents'))).toBe(true);
+      expect(await fs.pathExists(path.join(testDir, '.gemini', 'rules', 'YARD', 'agents'))).toBe(true);
       expect(await fs.pathExists(path.join(testDir, '.github', 'agents'))).toBe(true);
     });
 

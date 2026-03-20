@@ -89,7 +89,7 @@ describe('Info Formatter - Pretty Output', () => {
   test('formatInfoPretty includes usage example', () => {
     const output = formatInfoPretty(mockWorker, {});
     expect(output).toContain('Usage Example');
-    expect(output).toContain('aiox task run json-csv-transformer');
+    expect(output).toContain('yard task run json-csv-transformer');
   });
 
   test('formatInfoPretty includes related workers when provided', () => {
@@ -189,7 +189,7 @@ describe('Not Found Error Formatter', () => {
 
   test('formatNotFoundError includes search hint', () => {
     const output = formatNotFoundError('invalid', []);
-    expect(output).toContain('aiox workers search invalid');
+    expect(output).toContain('yard workers search invalid');
   });
 });
 

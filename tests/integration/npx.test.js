@@ -17,8 +17,8 @@ describeIntegration('npx Execution', () => {
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
       expect(packageJson.bin).toBeDefined();
-      expect(packageJson.bin['aiox']).toBe('./bin/aiox.js');
-      expect(packageJson.bin['yard-core']).toBe('./bin/aiox.js');
+      expect(packageJson.bin['yard']).toBe('bin/yard.js');
+      expect(packageJson.bin['yard-core']).toBe('bin/yard.js');
     });
 
     it('should have preferGlobal set to false', () => {
@@ -52,7 +52,7 @@ describeIntegration('npx Execution', () => {
 
   describeIntegration('CLI Execution', () => {
     it('should execute aiox command with --version', (done) => {
-      const cliPath = path.join(__dirname, '../../bin/aiox.js');
+      const cliPath = path.join(__dirname, '../../bin/yard.js');
       const child = spawn('node', [cliPath, '--version']);
 
       let output = '';
@@ -68,7 +68,7 @@ describeIntegration('npx Execution', () => {
     }, timeout);
 
     it('should execute aiox command with --help', (done) => {
-      const cliPath = path.join(__dirname, '../../bin/aiox.js');
+      const cliPath = path.join(__dirname, '../../bin/yard.js');
       const child = spawn('node', [cliPath, '--help']);
 
       let output = '';
@@ -85,7 +85,7 @@ describeIntegration('npx Execution', () => {
     }, timeout);
 
     it('should execute aiox info command', (done) => {
-      const cliPath = path.join(__dirname, '../../bin/aiox.js');
+      const cliPath = path.join(__dirname, '../../bin/yard.js');
       const child = spawn('node', [cliPath, 'info']);
 
       let output = '';
@@ -101,7 +101,7 @@ describeIntegration('npx Execution', () => {
     }, timeout);
 
     it('should fail with unknown command', (done) => {
-      const cliPath = path.join(__dirname, '../../bin/aiox.js');
+      const cliPath = path.join(__dirname, '../../bin/yard.js');
       const child = spawn('node', [cliPath, 'invalid-command']);
 
       let stderr = '';
@@ -151,7 +151,7 @@ describeIntegration('npx Execution', () => {
 
   describeIntegration('Cross-Platform Compatibility', () => {
     it('should work on current platform', () => {
-      const cliPath = path.join(__dirname, '../../bin/aiox.js');
+      const cliPath = path.join(__dirname, '../../bin/yard.js');
       
       // Verify file exists
       expect(fs.existsSync(cliPath)).toBe(true);
@@ -162,7 +162,7 @@ describeIntegration('npx Execution', () => {
     });
 
     it('should report current platform in info command', (done) => {
-      const cliPath = path.join(__dirname, '../../bin/aiox.js');
+      const cliPath = path.join(__dirname, '../../bin/yard.js');
       const child = spawn('node', [cliPath, 'info']);
 
       let output = '';
@@ -182,7 +182,7 @@ describeIntegration('npx Execution', () => {
   describeIntegration('Performance', () => {
     it('should execute --version in under 5 seconds', (done) => {
       const startTime = Date.now();
-      const cliPath = path.join(__dirname, '../../bin/aiox.js');
+      const cliPath = path.join(__dirname, '../../bin/yard.js');
       const child = spawn('node', [cliPath, '--version']);
 
       child.on('close', () => {
@@ -194,7 +194,7 @@ describeIntegration('npx Execution', () => {
 
     it('should execute info command in under 5 seconds', (done) => {
       const startTime = Date.now();
-      const cliPath = path.join(__dirname, '../../bin/aiox.js');
+      const cliPath = path.join(__dirname, '../../bin/yard.js');
       const child = spawn('node', [cliPath, 'info']);
 
       child.on('close', () => {

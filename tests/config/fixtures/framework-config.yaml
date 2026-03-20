@@ -1,6 +1,6 @@
 # Test fixture: L1 Framework config
 metadata:
-  framework_name: "Yard"
+  framework_name: "AIOX-FullStack"
   framework_version: "3.12.0"
 
 resource_locations:

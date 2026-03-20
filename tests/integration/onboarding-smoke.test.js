@@ -15,7 +15,7 @@ const { execFileSync } = require('child_process');
 
 describe('Onboarding smoke flow (AIOX-DIFF-4.0.5)', () => {
   const repoRoot = path.resolve(__dirname, '..', '..');
-  const cliBin = path.join(repoRoot, 'bin', 'aiox.js');
+  const cliBin = path.join(repoRoot, 'bin', 'yard.js');
   const greetingScript = path.join(
     repoRoot,
     '.yard-core',
