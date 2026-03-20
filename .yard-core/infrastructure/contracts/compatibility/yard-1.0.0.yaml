@@ -1,5 +1,5 @@
-release: "AIOX 4.0.4"
-updated_at: "2026-02-16"
+release: "YARD 1.0.0"
+updated_at: "2026-03-21"
 source_of_truth:
   docs_matrix: "docs/ide-integration.md"
   validator: ".yard-core/infrastructure/scripts/validate-parity.js"

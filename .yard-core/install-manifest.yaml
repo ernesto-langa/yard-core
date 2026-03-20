@@ -8,7 +8,7 @@
 # - File types for categorization
 #
 version: 1.0.0
-generated_at: "2026-03-20T14:04:42.575Z"
+generated_at: "2026-03-20T22:19:52.632Z"
 generator: scripts/generate-install-manifest.js
 file_count: 1003
 files:
@@ -141,7 +141,7 @@ files:
     type: cli
     size: 5907
   - path: core-config.yaml
-    hash: sha256:575e5870ba9272fa2579a6191c45a760d421aa05cf9b81a61377b77275b412c8
+    hash: sha256:da1f85339d648f4a71cfb85a28e9d180d6dee47d5af43f35d5e6e3b3001fbc8d
     type: config
     size: 10999
   - path: core/code-intel/code-intel-client.js
@@ -2664,8 +2664,8 @@ files:
     hash: sha256:cbf09333fc4b6fb2cf9f1f5321c9d0f69f542f93a76c9254e85604e4115bb26e
     type: code
     size: 745
-  - path: infrastructure/contracts/compatibility/aiox-4.0.4.yaml
-    hash: sha256:66ec7bbee948fc5e31e6ab0a6fc53ca42fc0021039150a85602aa00e8ebaf318
+  - path: infrastructure/contracts/compatibility/yard-1.0.0.yaml
+    hash: sha256:b738f0f33989f3352b66e6886b32b42d9a57aeece2d4149796016a5826d4f95d
     type: infrastructure
     size: 1074
   - path: infrastructure/index.js
@@ -2937,11 +2937,11 @@ files:
     type: script
     size: 8846
   - path: infrastructure/scripts/ide-sync/gemini-commands.js
-    hash: sha256:05ee25a31f22c872c84ec8e93f3d166a3c2fd5cff0a6ea0a8ba89f8ba147be85
+    hash: sha256:3e1196b0744491a09f142bb61cb181e6c8e67e860a3f8831072e5ae56bfc50f0
     type: script
     size: 5534
   - path: infrastructure/scripts/ide-sync/index.js
-    hash: sha256:0fabc291b5fab4d92d7a2c5fdc9b0c347728bfd43d16fc5a35900e6b1b7d60e1
+    hash: sha256:c4b897e9bb12bbe033f1d7835d0e41840cda569a7fdda4b1a055f6700127d2fb
     type: script
     size: 14906
   - path: infrastructure/scripts/ide-sync/README.md
@@ -3185,7 +3185,7 @@ files:
     type: script
     size: 14900
   - path: infrastructure/scripts/validate-claude-integration.js
-    hash: sha256:459513328ef110953ec7c7f747880f002d27a56e8522e488753d669d4c7af350
+    hash: sha256:1c079f9572b4ddce7c8611bcc61d0da109c45b798deca37a5bbad48f4ae44eee
     type: script
     size: 2834
   - path: infrastructure/scripts/validate-codex-integration.js
@@ -3193,7 +3193,7 @@ files:
     type: script
     size: 4122
   - path: infrastructure/scripts/validate-gemini-integration.js
-    hash: sha256:99698c6bf6f4b2a3f6b7c35902c6a3247520f45cc4b8f1fe892b2c71536131d1
+    hash: sha256:887c99919cba3c53619cf57af1ed2d24640e2f7cbc8196f6557907a19313ef44
     type: script
     size: 4826
   - path: infrastructure/scripts/validate-output-pattern.js
@@ -3201,7 +3201,7 @@ files:
     type: script
     size: 6692
   - path: infrastructure/scripts/validate-parity.js
-    hash: sha256:2c28c03089e774b882a62ca428b7abcc6e165217c654afa1c0413375a156c1d4
+    hash: sha256:a682c0195211dd54bd6b446c983a29d21e99dbadb3319f28120251d520191e60
     type: script
     size: 12683
   - path: infrastructure/scripts/validate-paths.js

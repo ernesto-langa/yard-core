@@ -46,7 +46,7 @@ function getDefaultContractPath(projectRoot = process.cwd()) {
     'infrastructure',
     'contracts',
     'compatibility',
-    'aiox-4.0.4.yaml',
+    'yard-1.0.0.yaml',
   );
 }
 
