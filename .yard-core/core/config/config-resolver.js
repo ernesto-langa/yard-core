@@ -305,7 +305,7 @@ function loadLayeredConfig(projectRoot, options = {}) {
 
   // L3: App (optional — only when appDir is specified)
   if (options.appDir) {
-    const appConfigPath = path.join(options.appDir, 'aiox-app.config.yaml');
+    const appConfigPath = path.join(options.appDir, 'yard-app.config.yaml');
     const l3 = loadYaml(projectRoot, appConfigPath);
     if (l3.data) {
       config = deepMerge(config, l3.data);
@@ -362,15 +362,17 @@ function loadLegacyConfig(projectRoot) {
     throw new Error(`Legacy config file not found: ${CONFIG_FILES.legacy}`);
   }
 
-  const suppressDeprecation = process.env.AIOX_SUPPRESS_DEPRECATION === 'true'
+  const suppressDeprecation = process.env.YARD_SUPPRESS_DEPRECATION === 'true'
+    || process.env.YARD_SUPPRESS_DEPRECATION === '1'
+    || process.env.AIOX_SUPPRESS_DEPRECATION === 'true'
     || process.env.AIOX_SUPPRESS_DEPRECATION === '1';
 
   if (!suppressDeprecation) {
     warnings.push(
       '[DEPRECATION] Monolithic core-config.yaml detected. '
-      + 'Run `aiox config migrate` to split into layered config files. '
+      + 'Run `yard config migrate` to split into layered config files. '
       + 'Monolithic format will be removed in v4.0.0. '
-      + 'Set AIOX_SUPPRESS_DEPRECATION=true to silence this warning.',
+      + 'Set YARD_SUPPRESS_DEPRECATION=true to silence this warning.',
     );
   }
 
@@ -486,7 +488,7 @@ function getConfigAtLevel(projectRoot, level, options = {}) {
       break;
     case 'app': case '3': case 'L3':
       if (!options.appDir) return null;
-      relativePath = path.join(options.appDir, 'aiox-app.config.yaml');
+      relativePath = path.join(options.appDir, 'yard-app.config.yaml');
       break;
     case 'local': case '4': case 'L4':
       relativePath = CONFIG_FILES.local;
