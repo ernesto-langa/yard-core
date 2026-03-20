@@ -311,7 +311,7 @@ ideSync:
   targets:
     claude-code:
       enabled: true
-      path: .claude/commands/AIOX/agents
+      path: .claude/commands/YARD/agents
       format: full-markdown-yaml
     codex:
       enabled: true
@@ -319,7 +319,7 @@ ideSync:
       format: full-markdown-yaml
     gemini:
       enabled: true
-      path: .gemini/rules/AIOX/agents
+      path: .gemini/rules/YARD/agents
       format: full-markdown-yaml
     github-copilot:
       enabled: true

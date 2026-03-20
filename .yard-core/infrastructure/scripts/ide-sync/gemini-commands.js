@@ -29,7 +29,7 @@ function commandSlugForAgent(agentId) {
 }
 
 function menuCommandName(agentId) {
-  return `/aiox-${commandSlugForAgent(agentId)}`;
+  return `/yard-${commandSlugForAgent(agentId)}`;
 }
 
 function normalizeText(text) {
@@ -79,7 +79,7 @@ function buildAgentDescription(agent) {
 function buildAgentCommandPrompt(agentId) {
   return [
     `Ative o agente ${agentId}:`,
-    `1. Leia a definição completa em .gemini/rules/AIOX/agents/${agentId}.md`,
+    `1. Leia a definição completa em .gemini/rules/YARD/agents/${agentId}.md`,
     '2. Siga as activation-instructions do bloco YAML',
     `3. Renderize o greeting via: node .yard-core/development/scripts/generate-greeting.js ${agentId}`,
     '   Se shell nao disponivel, exiba o greeting de persona_profile.communication.greeting_levels.named',
@@ -101,7 +101,7 @@ function buildAgentCommandFile(agentId, description = FALLBACK_DESCRIPTION) {
   ].join('\n');
 
   return {
-    filename: `aiox-${slug}.toml`,
+    filename: `yard-${slug}.toml`,
     content,
     agentId,
     description,
@@ -136,7 +136,7 @@ function buildMenuCommandFile(commandFiles) {
   ].join('\n');
 
   return {
-    filename: 'aiox-menu.toml',
+    filename: 'yard-menu.toml',
     content,
   };
 }

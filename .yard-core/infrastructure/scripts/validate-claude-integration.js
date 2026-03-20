@@ -20,7 +20,7 @@ function countMarkdownFiles(dirPath) {
 function validateClaudeIntegration(options = {}) {
   const projectRoot = options.projectRoot || process.cwd();
   const rulesFile = options.rulesFile || path.join(projectRoot, '.claude', 'CLAUDE.md');
-  const agentsDir = options.agentsDir || path.join(projectRoot, '.claude', 'commands', 'AIOX', 'agents');
+  const agentsDir = options.agentsDir || path.join(projectRoot, '.claude', 'commands', 'YARD', 'agents');
   const hooksDir = options.hooksDir || path.join(projectRoot, '.claude', 'hooks');
   const sourceAgentsDir =
     options.sourceAgentsDir || path.join(projectRoot, '.yard-core', 'development', 'agents');

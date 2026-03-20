@@ -59,7 +59,7 @@ function loadConfig(projectRoot) {
     targets: {
       'claude-code': {
         enabled: true,
-        path: '.claude/commands/AIOX/agents',
+        path: '.claude/commands/YARD/agents',
         format: 'full-markdown-yaml',
       },
       codex: {
@@ -69,7 +69,7 @@ function loadConfig(projectRoot) {
       },
       gemini: {
         enabled: true,
-        path: '.gemini/rules/AIOX/agents',
+        path: '.gemini/rules/YARD/agents',
         format: 'full-markdown-yaml',
       },
       'github-copilot': {

@@ -9,7 +9,7 @@ function getDefaultOptions() {
   return {
     projectRoot,
     rulesFile: path.join(projectRoot, '.gemini', 'rules.md'),
-    agentsDir: path.join(projectRoot, '.gemini', 'rules', 'AIOX', 'agents'),
+    agentsDir: path.join(projectRoot, '.gemini', 'rules', 'YARD', 'agents'),
     commandsDir: path.join(projectRoot, '.gemini', 'commands'),
     extensionDir: path.join(projectRoot, 'packages', 'gemini-yard-extension'),
     sourceAgentsDir: path.join(projectRoot, '.yard-core', 'development', 'agents'),
@@ -38,7 +38,7 @@ function validateGeminiIntegration(options = {}) {
     ...options,
     projectRoot,
     rulesFile: options.rulesFile || path.join(projectRoot, '.gemini', 'rules.md'),
-    agentsDir: options.agentsDir || path.join(projectRoot, '.gemini', 'rules', 'AIOX', 'agents'),
+    agentsDir: options.agentsDir || path.join(projectRoot, '.gemini', 'rules', 'YARD', 'agents'),
     commandsDir: options.commandsDir || path.join(projectRoot, '.gemini', 'commands'),
     extensionDir: options.extensionDir || path.join(projectRoot, 'packages', 'gemini-yard-extension'),
     sourceAgentsDir: options.sourceAgentsDir || path.join(projectRoot, '.yard-core', 'development', 'agents'),
