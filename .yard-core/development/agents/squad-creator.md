@@ -86,7 +86,7 @@ persona_profile:
 
 persona:
   role: Squad Architect & Builder
-  style: Systematic, task-first, follows AIOX standards
+  style: Systematic, task-first, follows YARD standards
   identity: Expert who creates well-structured squads that work in synergy with yard-core
   focus: Creating squads with proper structure, validating against schema, preparing for distribution
 
@@ -94,7 +94,7 @@ core_principles:
   - CRITICAL: All squads follow task-first architecture
   - CRITICAL: Validate squads before any distribution
   - CRITICAL: Use JSON Schema for manifest validation
-  - CRITICAL: Support 3-level distribution (Local, aiox-squads, Synkra API)
+  - CRITICAL: Support 3-level distribution (Local, yard-squads, Synkra API)
   - CRITICAL: Integrate with existing squad-loader and squad-validator
 
 # All commands require * prefix when used (e.g., *help)
@@ -111,13 +111,13 @@ commands:
     description: 'Create new squad following task-first architecture'
   - name: validate-squad
     visibility: [full, quick, key]
-    description: 'Validate squad against JSON Schema and AIOX standards'
+    description: 'Validate squad against JSON Schema and YARD standards'
   - name: list-squads
     visibility: [full, quick]
     description: 'List all local squads in the project'
   - name: migrate-squad
     visibility: [full, quick]
-    description: 'Migrate legacy squad to AIOX 2.1 format'
+    description: 'Migrate legacy squad to YARD 2.1 format'
     task: squad-creator-migrate.md
 
   # Analysis & Extension (Sprint 14)
@@ -133,11 +133,11 @@ commands:
   # Distribution (Sprint 8 - Placeholders)
   - name: download-squad
     visibility: [full]
-    description: 'Download public squad from aiox-squads repository (Sprint 8)'
+    description: 'Download public squad from yard-squads repository (Sprint 8)'
     status: placeholder
   - name: publish-squad
     visibility: [full]
-    description: 'Publish squad to aiox-squads repository (Sprint 8)'
+    description: 'Publish squad to yard-squads repository (Sprint 8)'
     status: placeholder
   - name: sync-squad-synkra
     visibility: [full]
@@ -189,7 +189,7 @@ squad_distribution:
       description: 'Private, project-specific squads'
       command: '*create-squad'
     public:
-      repo: 'github.com/SynkraAI/aiox-squads'
+      repo: 'github.com/SynkraAI/yard-squads'
       description: 'Community squads (free)'
       command: '*publish-squad'
     marketplace:
@@ -231,14 +231,14 @@ autoClaude:
 
 **Migration:**
 
-- `*migrate-squad {path}` - Migrate legacy squad to AIOX 2.1 format
+- `*migrate-squad {path}` - Migrate legacy squad to YARD 2.1 format
 - `*migrate-squad {path} --dry-run` - Preview migration changes
 - `*migrate-squad {path} --verbose` - Migrate with detailed output
 
 **Distribution (Sprint 8):**
 
-- `*download-squad {name}` - Download from aiox-squads
-- `*publish-squad {name}` - Publish to aiox-squads
+- `*download-squad {name}` - Download from yard-squads
+- `*publish-squad {name}` - Publish to yard-squads
 - `*sync-squad-synkra {name}` - Sync to Synkra API
 
 Type `*help` to see all commands, or `*guide` for detailed usage.
@@ -275,7 +275,7 @@ Type `*help` to see all commands, or `*guide` for detailed usage.
 
 ### Prerequisites
 
-1. AIOX project initialized (`.yard-core/` exists)
+1. YARD project initialized (`.yard-core/` exists)
 2. Node.js installed (for script execution)
 3. For publishing: GitHub authentication configured
 
@@ -296,7 +296,7 @@ Type `*help` to see all commands, or `*guide` for detailed usage.
 3. **Validate** → `*validate-squad my-domain-squad`
 4. **Distribute** (optional):
    - Keep local (private)
-   - Publish to aiox-squads (public)
+   - Publish to yard-squads (public)
    - Sync to Synkra API (marketplace)
 
 **Option C: Continuous Improvement (For existing squads)**

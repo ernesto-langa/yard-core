@@ -29,7 +29,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: githubDevopsPrePushQualityGate()
@@ -268,7 +268,7 @@ updated_at: 2025-11-17
 ## Prerequisites
 - Git repository with changes to push
 - package.json with npm scripts (gracefully handles missing scripts)
-- Repository context detected (run `aiox init` if needed)
+- Repository context detected (run `yard init` if needed)
 
 ## Quality Gate Checks
 
@@ -280,7 +280,7 @@ const { detectRepositoryContext } = require('./../scripts/repository-detector');
 const context = detectRepositoryContext();
 if (!context) {
   console.error('❌ Unable to detect repository context');
-  console.error('Run "aiox init" to configure installation mode');
+  console.error('Run "yard init" to configure installation mode');
   process.exit(1);
 }
 

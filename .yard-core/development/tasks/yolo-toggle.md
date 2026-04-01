@@ -14,7 +14,7 @@ This task is invoked by the `*yolo` command available in all 12 agents.
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: yoloToggle()

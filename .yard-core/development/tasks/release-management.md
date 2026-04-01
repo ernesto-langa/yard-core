@@ -407,7 +407,7 @@ pip install {package_name}=={new_version}
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: releaseManagement()
@@ -648,8 +648,8 @@ Release notes: {release_url}
 ### Example 1: Automatic Semantic Release
 
 ```bash
-aiox activate Otto  # github-devops agent
-aiox release create --repo="." --type="auto"
+yard activate Otto  # github-devops agent
+yard release create --repo="." --type="auto"
 ````
 
 **Output**: Analyzes commits, determines version bump, creates release
@@ -657,7 +657,7 @@ aiox release create --repo="." --type="auto"
 ### Example 2: Major Release (Breaking Changes)
 
 ```bash
-aiox release create \
+yard release create \
   --repo="." \
   --type="major" \
   --publish="npm,docker-hub"
@@ -668,7 +668,7 @@ aiox release create \
 ### Example 3: Prerelease (Beta)
 
 ```bash
-aiox release create \
+yard release create \
   --repo="." \
   --type="prerelease" \
   --prerelease-tag="beta" \
@@ -680,7 +680,7 @@ aiox release create \
 ### Example 4: Dry Run (Test Release Process)
 
 ```bash
-aiox release create \
+yard release create \
   --repo="." \
   --type="minor" \
   --dry-run=true

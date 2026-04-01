@@ -270,4 +270,4 @@ When `--skip-critique` is passed:
 
 ---
 
-_Self-Critique Checklist v1.0 - Synkra AIOX Development Framework_
+_Self-Critique Checklist v1.0 - Synkra YARD Development Framework_

@@ -26,7 +26,7 @@ Checklist:
 
 # *download-squad
 
-Downloads public squads from the aiox-squads GitHub repository to use in your project.
+Downloads public squads from the yard-squads GitHub repository to use in your project.
 
 ## Usage
 
@@ -53,7 +53,7 @@ Downloads public squads from the aiox-squads GitHub repository to use in your pr
 ```
 *download-squad --list
 
-Available Squads (from aiox-squads):
+Available Squads (from yard-squads):
 
 Official:
   ├── etl-squad@1.0.0 - ETL pipeline automation
@@ -71,7 +71,7 @@ Community:
 *download-squad etl-squad
 
 Downloading: etl-squad@1.0.0
-  Source: github.com/SynkraAI/aiox-squads/packages/etl-squad
+  Source: github.com/SynkraAI/yard-squads/packages/etl-squad
   Target: ./squads/etl-squad/
 
 ✓ Downloaded 12 files
@@ -94,7 +94,7 @@ Squad installed! Next steps:
 ## How It Works
 
 ```
-1. Fetch registry.json from aiox-squads
+1. Fetch registry.json from yard-squads
    ├── Contains official and community squads
    └── Includes version and metadata
 
@@ -116,7 +116,7 @@ Squad installed! Next steps:
 
 ## Registry Structure
 
-The registry.json in aiox-squads contains:
+The registry.json in yard-squads contains:
 
 ```json
 {

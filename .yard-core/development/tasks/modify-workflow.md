@@ -39,7 +39,7 @@ Before proceeding, check the Entity Registry for impact of this modification:
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: modifyWorkflow()
@@ -349,7 +349,7 @@ Create comprehensive diff:
   name: {workflow-name}
   description: {description}
 + last_modified: {timestamp}
-+ modified_by: aiox-developer
++ modified_by: yard-developer
 
 @@ Phases @@
   planning:

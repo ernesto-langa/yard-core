@@ -1,7 +1,7 @@
 # Task: Project Status — Full Panorama
 
 > **Command:** `*status`
-> **Agent:** @aiox-master, @po, @sm
+> **Agent:** @yard-master, @po, @sm
 > **Purpose:** Display accurate, real-time panorama of all epics and stories
 > **Created:** 2026-03-05
 
@@ -257,7 +257,7 @@ tags:
   - status
   - panorama
 updated_at: 2026-03-05
-agents: [aiox-master, po, sm]
+agents: [yard-master, po, sm]
 ```
 
 ---

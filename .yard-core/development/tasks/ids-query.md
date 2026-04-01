@@ -1,6 +1,6 @@
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: idsQuery()
@@ -69,16 +69,16 @@ Query the IDS (Incremental Development System) Entity Registry to find existing 
 
 ```bash
 # Basic query
-node bin/aiox-ids.js ids:query "validate story drafts"
+node bin/yard-ids.js ids:query "validate story drafts"
 
 # With JSON output
-node bin/aiox-ids.js ids:query "template rendering engine" --json
+node bin/yard-ids.js ids:query "template rendering engine" --json
 
 # Filter by type
-node bin/aiox-ids.js ids:query "database migration" --type script
+node bin/yard-ids.js ids:query "database migration" --type script
 
 # Filter by category
-node bin/aiox-ids.js ids:query "agent persona" --category agents
+node bin/yard-ids.js ids:query "agent persona" --category agents
 ```
 
 ### Programmatic Usage (Agent Context)
@@ -133,7 +133,7 @@ rationale: "Found 3 matches above threshold..."
 
 ## Related Commands
 
-- `aiox ids:create-review` — Review CREATE decisions for 30-day assessment
+- `yard ids:create-review` — Review CREATE decisions for 30-day assessment
 - `*develop` — Development workflow (uses IDS recommendations at G4 gate)
 
 ---

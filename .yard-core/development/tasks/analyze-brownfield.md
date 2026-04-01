@@ -23,7 +23,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: analyzeBrownfield()
@@ -241,7 +241,7 @@ tools:
 
 ## Purpose
 
-Analyze an existing project to understand its structure, tech stack, coding standards, and CI/CD workflows before AIOX integration. This task provides recommendations for safe integration and identifies potential conflicts.
+Analyze an existing project to understand its structure, tech stack, coding standards, and CI/CD workflows before YARD integration. This task provides recommendations for safe integration and identifies potential conflicts.
 
 ## Task Instructions
 
@@ -334,10 +334,10 @@ console.log(report);
 ║  RECOMMENDATIONS                                                     ║
 ╠══════════════════════════════════════════════════════════════════════╣
 ║                                                                      ║
-║  • Preserve existing ESLint configuration - AIOX will adapt          ║
-║  • Keep existing Prettier settings - AIOX coding-standards.md will d ║
-║  • Review existing CI/CD before adding AIOX workflows                ║
-║  • AIOX will use existing tsconfig.json settings                     ║
+║  • Preserve existing ESLint configuration - YARD will adapt          ║
+║  • Keep existing Prettier settings - YARD coding-standards.md will d ║
+║  • Review existing CI/CD before adding YARD workflows                ║
+║  • YARD will use existing tsconfig.json settings                     ║
 ║  • Next.js detected - use pages/ or app/ structure                   ║
 ╠══════════════════════════════════════════════════════════════════════╣
 ║  📋 MANUAL REVIEW REQUIRED                                           ║
@@ -353,7 +353,7 @@ Based on the analysis, follow the recommended merge strategy:
 
 | Strategy | Meaning | Actions |
 |----------|---------|---------|
-| `parallel` | Safe to proceed with standard AIOX setup | Use `*setup-project-docs` directly |
+| `parallel` | Safe to proceed with standard YARD setup | Use `*setup-project-docs` directly |
 | `manual` | Existing CI/CD requires careful review | Review workflows, then proceed |
 
 ### 5. Address Manual Review Items
@@ -365,7 +365,7 @@ For each item in `analysis.manualReviewItems`:
    # List existing workflows
    ls -la .github/workflows/
 
-   # Check for potential conflicts with AIOX workflows
+   # Check for potential conflicts with YARD workflows
    # Look for: quality-gate.yml, release.yml, staging.yml
    ```
 
@@ -386,9 +386,9 @@ For each item in `analysis.manualReviewItems`:
 For each item in `analysis.conflicts`:
 
 1. **docs/architecture/ exists:**
-   - Decide: Keep existing or merge with AIOX docs
+   - Decide: Keep existing or merge with YARD docs
    - Option A: Rename existing to `docs/legacy-architecture/`
-   - Option B: Configure AIOX to use alternate path
+   - Option B: Configure YARD to use alternate path
 
 2. **Other conflicts:**
    - Document decision in story or task
@@ -450,7 +450,7 @@ This task is typically followed by:
 ## Notes
 
 - Analysis is read-only; no files are modified
-- Run this task BEFORE any AIOX integration
+- Run this task BEFORE any YARD integration
 - For large projects, analysis may take 1-2 minutes
 - Recommendations are suggestions, not requirements
 - Use manual review items to plan integration work

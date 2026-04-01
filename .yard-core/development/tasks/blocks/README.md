@@ -1,11 +1,11 @@
-# AIOX Task Blocks System
+# YARD Task Blocks System
 
 > **Version:** 1.0.0
 > **Purpose:** Atomic, reusable components for task workflows
 
 ## Overview
 
-Blocks are small, focused units of functionality that can be included in multiple tasks. They follow the DRY (Don't Repeat Yourself) principle and provide consistent behavior across the AIOX framework.
+Blocks are small, focused units of functionality that can be included in multiple tasks. They follow the DRY (Don't Repeat Yourself) principle and provide consistent behavior across the YARD framework.
 
 ## Directory Structure
 
@@ -138,7 +138,7 @@ Every block must define:
 |-------|---------|---------|
 | `context-loading` | Load git state, gotchas, preferences, config | dev-develop-story, create-next-story, qa-review-story |
 | `execution-pattern` | Task blocking patterns (sequential/parallel/mixed) + anti-patterns | enhance-workflow, execute-epic, deep-strategic-planning, refactor-workflow, clone-mind, mind-research, squad-creator, bob-orchestrator |
-| `agent-prompt-template` | Standardized template for spawning AIOX agents | Any skill/task that invokes agents via Task tool |
+| `agent-prompt-template` | Standardized template for spawning YARD agents | Any skill/task that invokes agents via Task tool |
 
 ## Lines Saved (ROI)
 
@@ -174,5 +174,5 @@ Based on task analysis, these patterns appear frequently:
 
 ---
 
-*AIOX Task Blocks System v1.1.0*
+*YARD Task Blocks System v1.1.0*
 *Blocks: context-loading, execution-pattern, agent-prompt-template (extracted from observed patterns)*

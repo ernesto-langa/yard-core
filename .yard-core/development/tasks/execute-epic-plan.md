@@ -23,7 +23,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: executeEpicPlan()
@@ -541,7 +541,7 @@ PROCEDURE execute_wave(wave, stories, state):
       # Spawn subagent for this story
       Task tool call:
         description: "EPIC:{epicId} Wave:{wave.number} Story:{story_id}"
-        subagent_type: "aiox-dev"
+        subagent_type: "yard-dev"
         prompt: |
           You are executing story {story_id} as part of epic {epicId}, Wave {wave.number}.
 
@@ -619,7 +619,7 @@ PROCEDURE execute_wave(wave, stories, state):
   # Spawn gate agent for integration review
   Task tool call:
     description: "EPIC:{epicId} Wave:{wave.number} GATE"
-    subagent_type: "aiox-architect"  # or whatever the gate agent is
+    subagent_type: "yard-architect"  # or whatever the gate agent is
     prompt: |
       You are reviewing Wave {wave.number} ("{wave.name}") of epic {epicId}.
 
@@ -656,7 +656,7 @@ PROCEDURE execute_wave(wave, stories, state):
 
     Task tool call:
       description: "EPIC:{epicId} Wave:{wave.number} MERGE"
-      subagent_type: "aiox-devops"
+      subagent_type: "yard-devops"
       prompt: |
         Merge Wave {wave.number} branches to main in this order:
         {wave.merge.order}
@@ -723,7 +723,7 @@ PROCEDURE final_gate(execution, state):
   # Spawn final gate agent
   Task tool call:
     description: "EPIC:{epicId} FINAL GATE"
-    subagent_type: "aiox-architect"
+    subagent_type: "yard-architect"
     prompt: |
       Epic-level sign-off for {epicId}.
 

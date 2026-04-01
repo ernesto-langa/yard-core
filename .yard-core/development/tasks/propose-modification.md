@@ -23,7 +23,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: proposeModification()
@@ -205,10 +205,10 @@ checklists:
   - change-checklist.md
 ---
 
-# Propose Modification - AIOX Developer Task
+# Propose Modification - YARD Developer Task
 
 ## Purpose
-Create and submit modification proposals for collaborative review and approval within the Synkra AIOX framework.
+Create and submit modification proposals for collaborative review and approval within the Synkra YARD framework.
 
 ## Command Pattern
 ```
@@ -263,7 +263,7 @@ class ProposeModificationTask {
 
   async execute(params) {
     try {
-      console.log(chalk.blue('📝 AIOX Modification Proposal'));
+      console.log(chalk.blue('📝 YARD Modification Proposal'));
       console.log(chalk.gray('Creating collaborative modification proposal\n'));
 
       // Parse and validate parameters
@@ -447,7 +447,7 @@ class ProposeModificationTask {
       assignees: config.assignees,
       linkedIssues: config.linkedIssues,
       metadata: {
-        createdBy: process.env.USER || 'aiox-developer',
+        createdBy: process.env.USER || 'yard-developer',
         createdAt: new Date().toISOString(),
         lastModified: new Date().toISOString(),
         version: 1
@@ -787,7 +787,7 @@ class ProposeModificationTask {
 
   generateProposalUrl(proposalId) {
     // In a real implementation, this would generate actual web URLs
-    return `http://aiox-framework.local/proposals/${proposalId}`;
+    return `http://yard-framework.local/proposals/${proposalId}`;
   }
 }
 

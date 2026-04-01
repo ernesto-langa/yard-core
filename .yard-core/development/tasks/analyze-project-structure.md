@@ -1,6 +1,6 @@
 # Analyze Project Structure
 
-**Purpose:** Analyze an existing AIOX project to understand its structure, services, patterns, and provide recommendations for implementing new features. This is Phase 1 of the Incremental Feature Workflow.
+**Purpose:** Analyze an existing YARD project to understand its structure, services, patterns, and provide recommendations for implementing new features. This is Phase 1 of the Incremental Feature Workflow.
 
 ---
 
@@ -27,7 +27,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: analyzeProjectStructure()
@@ -87,7 +87,7 @@ pre-conditions:
     blocker: true
     validation: |
       Check .yard-core/ directory exists in project root
-    error_message: "Pre-condition failed: Not an AIOX project (.yard-core/ not found)"
+    error_message: "Pre-condition failed: Not an YARD project (.yard-core/ not found)"
 
   - [ ] Project path is accessible
     type: pre-condition
@@ -192,8 +192,8 @@ acceptance-criteria:
 **Common Errors:**
 
 1. **Error:** No .yard-core/ Directory
-   - **Cause:** Not an AIOX project
-   - **Resolution:** Initialize AIOX first or check directory
+   - **Cause:** Not an YARD project
+   - **Resolution:** Initialize YARD first or check directory
    - **Recovery:** Exit with clear message
 
 2. **Error:** No Services Found
@@ -273,9 +273,9 @@ Present these prompts to the user:
 **Scan the following locations:**
 
 ```javascript
-// Core AIOX structure
+// Core YARD structure
 const scanLocations = {
-  aioxCore: '.yard-core/',
+  yardCore: '.yard-core/',
   services: '.yard-core/infrastructure/services/',
   squads: '.yard-core/squads/',
   agents: '.yard-core/development/agents/',
@@ -347,7 +347,7 @@ const docPatterns = {
 // Check configuration approaches
 const configPatterns = {
   envVars: exists('.env.example') || exists('.env.local'),
-  configFile: exists('aiox.config.js') || exists('.yard-core/core-config.yaml'),
+  configFile: exists('yard.config.js') || exists('.yard-core/core-config.yaml'),
   envPrefix: grep('process.env', '**/*.{ts,js}').length > 0
 };
 ```

@@ -1,4 +1,4 @@
-# AIOX Documentation Template
+# YARD Documentation Template
 
 **Version:** 1.0.0
 **Last Updated:** 2026-01-28
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This document provides the standard template structure for AIOX documentation. All documentation in the AIOX framework should follow this template to ensure consistency and ease of navigation.
+This document provides the standard template structure for YARD documentation. All documentation in the YARD framework should follow this template to ensure consistency and ease of navigation.
 
 ---
 
@@ -57,7 +57,7 @@ Main content goes here.
 
 ---
 
-_Last Updated: {{DATE}} | AIOX Framework Team_
+_Last Updated: {{DATE}} | YARD Framework Team_
 ```
 
 ### Full Template with i18n
@@ -86,7 +86,7 @@ _Last Updated: {{DATE}} | AIOX Framework Team_
 
 ## Overview
 
-Brief description of what this document covers and its purpose within the AIOX framework.
+Brief description of what this document covers and its purpose within the YARD framework.
 
 ### Key Points
 
@@ -157,7 +157,7 @@ Content with diagrams:
 
 ---
 
-_Last Updated: {{DATE}} | AIOX Framework Team_
+_Last Updated: {{DATE}} | YARD Framework Team_
 ```
 
 ---
@@ -249,7 +249,7 @@ Before starting, ensure you have:
 
 # Quick start command
 
-aiox command --flag
+yard command --flag
 \`\`\`
 
 ---
@@ -303,7 +303,7 @@ Description of step 2.
 
 ---
 
-_Last Updated: {{DATE}} | AIOX Framework Team_
+_Last Updated: {{DATE}} | YARD Framework Team_
 ```
 
 ### API/Reference Template
@@ -369,7 +369,7 @@ property2?: number;
 
 ---
 
-_Last Updated: {{DATE}} | AIOX Framework Team_
+_Last Updated: {{DATE}} | YARD Framework Team_
 ```
 
 ---
@@ -451,13 +451,13 @@ Always include the language navigation header:
 
 **Version:** 1.0.0
 **Last Updated:** 2026-01-28
-**Audience:** Developers extending AIOX
+**Audience:** Developers extending YARD
 
 ---
 
 ## Overview
 
-This guide explains how to create custom agents for the AIOX framework.
+This guide explains how to create custom agents for the YARD framework.
 
 ## Prerequisites
 
@@ -478,17 +478,17 @@ persona: Expert in specific domain
 
 ---
 
-_Last Updated: 2026-01-28 | AIOX Framework Team_
+_Last Updated: 2026-01-28 | YARD Framework Team_
 ```
 
 ---
 
 ## Related Documents
 
-- [AIOX Framework Documentation](/docs/README.md)
+- [YARD Framework Documentation](/docs/README.md)
 - [Contributing Guide](/CONTRIBUTING.md)
 - [Style Guide](/docs/guides/style-guide.md)
 
 ---
 
-_Last Updated: 2026-01-28 | AIOX Framework Team_
+_Last Updated: 2026-01-28 | YARD Framework Team_

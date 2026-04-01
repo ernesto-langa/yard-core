@@ -22,7 +22,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: architectAnalyzeImpact()
@@ -200,10 +200,10 @@ updated_at: 2025-11-17
 
 ---
 
-alyze Impact - AIOX Developer Task
+alyze Impact - YARD Developer Task
 
 ## Purpose
-Analyze the potential impact of proposed component modifications on the broader Synkra AIOX framework.
+Analyze the potential impact of proposed component modifications on the broader Synkra YARD framework.
 
 ## Command Pattern
 ```
@@ -261,7 +261,7 @@ class AnalyzeImpactTask {
 
   async execute(params) {
     try {
-      console.log(chalk.blue('🔍 AIOX Impact Analysis'));
+      console.log(chalk.blue('🔍 YARD Impact Analysis'));
       console.log(chalk.gray('Analyzing potential impact of component modifications\\n'));
 
       // Parse and validate parameters

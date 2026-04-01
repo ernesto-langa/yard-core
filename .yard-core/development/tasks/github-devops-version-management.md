@@ -2,7 +2,7 @@
 
 **Task**: Semantic Version Management (Repository-Agnostic)
 
-**Purpose**: Analyze changes, recommend version bumps, and manage semantic versioning for ANY repository using AIOX.
+**Purpose**: Analyze changes, recommend version bumps, and manage semantic versioning for ANY repository using YARD.
 
 **When to use**: Before creating a release, to determine appropriate version number based on changes.
 
@@ -29,7 +29,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: githubDevopsVersionManagement()
@@ -250,7 +250,7 @@ const { detectRepositoryContext } = require('./../scripts/repository-detector');
 const context = detectRepositoryContext();
 
 if (!context) {
-  throw new Error('Unable to detect repository context. Run "aiox init" first.');
+  throw new Error('Unable to detect repository context. Run "yard init" first.');
 }
 
 console.log(`📦 Analyzing version for: ${context.packageName}`);

@@ -85,7 +85,7 @@ source: core-config
 location: .yard-core/core-config.yaml
 
 extract:
-  - project.type # EXISTING_AIOX, GREENFIELD, etc.
+  - project.type # EXISTING_YARD, GREENFIELD, etc.
   - project.version # Framework version
   - ide.selected # Active IDEs
   - github.semantic_release.enabled
@@ -589,7 +589,7 @@ command:
   examples:
     - '*create-context 4.2'
     - '*create-context STORY-42 --force'
-    - '*create-context aiox-migration/story-6.1.2.5'
+    - '*create-context yard-migration/story-6.1.2.5'
 
   options:
     - name: --force
@@ -714,7 +714,7 @@ errors:
 project:
   name: 'yard-core'
   version: '2.3.0'
-  type: EXISTING_AIOX
+  type: EXISTING_YARD
 
   stack:
     runtime: 'Node.js 18+'
@@ -741,7 +741,7 @@ project:
     test: 'jest'
     lint: 'eslint . --fix'
     build: 'npm run build'
-    dev: 'node bin/aiox.js'
+    dev: 'node bin/yard.js'
 
   directories:
     source: '.yard-core/'

@@ -8,7 +8,7 @@ For guided automation (persona-switching), use `run-workflow.md` directly.
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: runWorkflowEngine()
@@ -821,7 +821,7 @@ engine_state:
 The state file persists on disk. To resume in a new Claude Code session:
 
 ```
-@aiox-master
+@yard-master
 *run-workflow {name} continue --mode=engine
 ```
 

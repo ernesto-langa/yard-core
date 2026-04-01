@@ -1,15 +1,15 @@
-# Task: Update AIOX Framework
+# Task: Update YARD Framework
 
 > **Version:** 4.0.0
 > **Created:** 2026-01-29
 > **Updated:** 2026-01-31
 > **Type:** SYNC (git-native framework synchronization)
-> **Agent:** @devops (Gage) or @aiox (Orion)
+> **Agent:** @devops (Gage) or @yard (Orion)
 > **Execution:** Simple bash script (~15 lines)
 
 ## Purpose
 
-Git-native sync of AIOX framework from upstream repository. Uses sparse clone + file comparison for safe review before applying changes. All local customizations preserved automatically by backup/restore.
+Git-native sync of YARD framework from upstream repository. Uses sparse clone + file comparison for safe review before applying changes. All local customizations preserved automatically by backup/restore.
 
 ---
 
@@ -17,10 +17,10 @@ Git-native sync of AIOX framework from upstream repository. Uses sparse clone + 
 
 ```bash
 # Run the update script
-bash .yard-core/scripts/update-aiox.sh
+bash .yard-core/scripts/update-yard.sh
 
 # Review changes shown by the script, then:
-git add .yard-core && git commit -m "chore: sync AIOX framework"   # Apply changes
+git add .yard-core && git commit -m "chore: sync YARD framework"   # Apply changes
 # OR
 git checkout -- .yard-core/                                         # Cancel changes
 ```
@@ -74,19 +74,19 @@ These paths are automatically preserved (local-only files are backed up and rest
 ## Task Definition
 
 ```yaml
-task: updateAIOXFramework
+task: updateYARDFramework
 agent: devops
 mode: simple
 timeout: 60  # 1 minute max
 
 execution:
-  script: .yard-core/scripts/update-aiox.sh
+  script: .yard-core/scripts/update-yard.sh
 
 workflow:
   1. If dirty working tree: git add -A && git commit -m "chore: pre-update commit"
-  2. bash .yard-core/scripts/update-aiox.sh
+  2. bash .yard-core/scripts/update-yard.sh
   3. Review changes displayed
-  4. git add .yard-core && git commit -m "chore: sync AIOX framework"  # to apply
+  4. git add .yard-core && git commit -m "chore: sync YARD framework"  # to apply
   5. git checkout -- .yard-core/                                        # to cancel
 
 pre-conditions:

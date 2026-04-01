@@ -23,7 +23,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: devOptimizePerformance()
@@ -205,7 +205,7 @@ checklists:
   - dev-master-checklist.md
 ---
 
-# Optimize Performance - AIOX Developer Task
+# Optimize Performance - YARD Developer Task
 
 ## Purpose
 Analyze code for performance bottlenecks and suggest optimizations to improve runtime performance, memory usage, and scalability.
@@ -280,7 +280,7 @@ class OptimizePerformanceTask {
 
   async execute(params) {
     try {
-      console.log(chalk.blue('⚡ AIOX Performance Optimization'));
+      console.log(chalk.blue('⚡ YARD Performance Optimization'));
       console.log(chalk.gray('Analyzing code for performance improvements\n'));
 
       // Parse parameters

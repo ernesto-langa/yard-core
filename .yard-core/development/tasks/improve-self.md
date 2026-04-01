@@ -39,7 +39,7 @@ Enable the meta-agent to improve its own capabilities with comprehensive safegua
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: improveSelf()
@@ -581,7 +581,7 @@ rollback_info:
 ### Safe Mode Fallback
 ```javascript
 // Always maintain safe mode entry point
-if (process.env.AIOX_SAFE_MODE === 'true') {
+if (process.env.YARD_SAFE_MODE === 'true') {
   console.log('Running in safe mode - self-modification disabled');
   process.exit(0);
 }

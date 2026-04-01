@@ -13,7 +13,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: listWorktrees()
@@ -71,11 +71,11 @@ pre-conditions:
 
 ## Description
 
-Lists all AIOX-managed worktrees with their current status, uncommitted changes, and age. Provides visibility into parallel development activities.
+Lists all YARD-managed worktrees with their current status, uncommitted changes, and age. Provides visibility into parallel development activities.
 
 **Features:**
 
-- Shows all active worktrees managed by AIOX
+- Shows all active worktrees managed by YARD
 - Displays uncommitted changes count
 - Highlights stale worktrees (> 30 days)
 - Multiple output formats (table, json, minimal)
@@ -121,7 +121,7 @@ git rev-parse --is-inside-work-tree 2>/dev/null
 
 ### Step 2: Load Worktrees
 
-**Action:** Get all AIOX-managed worktrees
+**Action:** Get all YARD-managed worktrees
 
 ```javascript
 const WorktreeManager = require('./.yard-core/infrastructure/scripts/worktree-manager.js');
@@ -230,7 +230,7 @@ Total: 3  │  Active: 2  │  Stale: 1  │  Limit: 10
 ```
 📁 No Active Worktrees
 
-No AIOX-managed worktrees found.
+No YARD-managed worktrees found.
 
 Create one with:
   *create-worktree {storyId}
@@ -289,10 +289,10 @@ Formatted list based on `format` parameter.
 
 ```
 ❌ WorktreeManager not found.
-   Ensure AIOX is properly installed.
+   Ensure YARD is properly installed.
 ```
 
-**Resolution:** Check AIOX installation.
+**Resolution:** Check YARD installation.
 
 ---
 

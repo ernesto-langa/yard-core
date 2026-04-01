@@ -23,7 +23,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: qaReviewProposal()
@@ -205,7 +205,7 @@ checklists:
   - change-checklist.md
 ---
 
-# Review Proposal - AIOX Developer Task
+# Review Proposal - YARD Developer Task
 
 ## Purpose
 Review and provide feedback on modification proposals submitted through the collaborative modification system.
@@ -261,7 +261,7 @@ class ReviewProposalTask {
 
   async execute(params) {
     try {
-      console.log(chalk.blue('📋 AIOX Proposal Review'));
+      console.log(chalk.blue('📋 YARD Proposal Review'));
       console.log(chalk.gray('Reviewing modification proposal\n'));
 
       // Parse and validate parameters
@@ -655,7 +655,7 @@ class ReviewProposalTask {
     }
 
     // Set reviewer info
-    details.reviewer = process.env.USER || 'aiox-reviewer';
+    details.reviewer = process.env.USER || 'yard-reviewer';
     details.reviewTimestamp = new Date().toISOString();
 
     return details;

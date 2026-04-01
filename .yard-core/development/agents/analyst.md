@@ -179,7 +179,7 @@ dependencies:
     - competitor-analysis-tmpl.yaml
     - brainstorming-output-tmpl.yaml
   data:
-    - aiox-kb.md
+    - yard-kb.md
     - brainstorming-techniques.md
   tools:
     - google-workspace # Research documentation (Drive, Docs, Sheets)

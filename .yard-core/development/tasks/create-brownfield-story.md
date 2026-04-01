@@ -23,7 +23,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: createBrownfieldStory()
@@ -220,7 +220,7 @@ Create detailed, implementation-ready stories for brownfield projects where trad
 - Working on brownfield projects with non-standard documentation
 - Stories need to be created from document-project output
 - Working from brownfield epics without full PRD/architecture
-- Existing project documentation doesn't follow AIOX v4+ structure
+- Existing project documentation doesn't follow YARD v4+ structure
 - Need to gather additional context from user during story creation
 
 **Use create-next-story when:**

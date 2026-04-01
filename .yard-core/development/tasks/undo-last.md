@@ -5,7 +5,7 @@
 # Task: Undo Last Component Operation
 
 **Task ID:** undo-last  
-**Agent:** aiox-developer  
+**Agent:** yard-developer  
 **Version:** 1.0
 
 ## Execution Modes
@@ -31,7 +31,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: undoLast()
@@ -196,7 +196,7 @@ updated_at: 2025-11-17
 
 ## Description
 
-Rollback the last component creation or modification operation. This task allows undoing recent changes made by the aiox-developer agent, including single component creation, batch creation, or component updates.
+Rollback the last component creation or modification operation. This task allows undoing recent changes made by the yard-developer agent, including single component creation, batch creation, or component updates.
 
 ## Context Required
 - Access to transaction history

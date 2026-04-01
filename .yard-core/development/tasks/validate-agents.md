@@ -26,7 +26,7 @@ Story ACT-6: Framework integrity checking via `*validate-agents` command.
 ### Step 1: Discover Agent Files
 
 Scan `.yard-core/development/agents/` for all `.md` files.
-Expected agents: dev, qa, architect, pm, po, sm, analyst, data-engineer, ux-design-expert, devops, aiox-master, squad-creator
+Expected agents: dev, qa, architect, pm, po, sm, analyst, data-engineer, ux-design-expert, devops, yard-master, squad-creator
 
 ### Step 2: Parse YAML Block
 

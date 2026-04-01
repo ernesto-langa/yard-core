@@ -11,7 +11,7 @@
 
 ## Purpose
 
-Configure complete GitHub DevOps infrastructure for user projects created with AIOX. This task copies GitHub Actions workflows, configures CodeRabbit, sets up branch protection, and manages secrets.
+Configure complete GitHub DevOps infrastructure for user projects created with YARD. This task copies GitHub Actions workflows, configures CodeRabbit, sets up branch protection, and manages secrets.
 
 **This task should be executed AFTER `*environment-bootstrap`**, when the Git repository is already initialized and pushed to GitHub.
 
@@ -40,7 +40,7 @@ Configure complete GitHub DevOps infrastructure for user projects created with A
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: setupGitHub()
@@ -698,7 +698,7 @@ Write-Host "Secrets configured: $($secretsConfigured.Count)"
 echo "=== Generating DevOps Setup Report ==="
 
 $report = @"
-# AIOX DevOps Setup Report
+# YARD DevOps Setup Report
 # Generated: $(Get-Date -Format "yyyy-MM-ddTHH:mm:ss")
 
 setup:
@@ -748,7 +748,7 @@ validation_checklist:
   - "[$(if($secretsConfigured.Count -gt 0){'x'}else{' '})] Repository secrets configured"
 "@
 
-# Ensure .aiox directory exists
+# Ensure .yard directory exists
 New-Item -ItemType Directory -Path ".yard" -Force | Out-Null
 
 $report | Out-File -FilePath ".yard/devops-setup-report.yaml" -Encoding utf8

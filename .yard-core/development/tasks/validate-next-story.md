@@ -23,7 +23,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: validateNextStory()
@@ -237,7 +237,7 @@ To comprehensively validate a story draft before implementation begins, ensuring
 
 ### 1.1 Executor Assignment Validation (Story 11.1 - Projeto Bob)
 
-**PRD Reference:** AIOX v2.0 "Projeto Bob" - Section 5 (Dynamic Executor Assignment)
+**PRD Reference:** YARD v2.0 "Projeto Bob" - Section 5 (Dynamic Executor Assignment)
 
 **Required Fields Check:**
 - [ ] **executor** field present and not empty

@@ -546,7 +546,7 @@ Every PR is automatically reviewed by [CodeRabbit](https://github.com/apps/coder
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: ciCdConfiguration()
@@ -701,8 +701,8 @@ token_usage: ~3,000-10,000 tokens
 ### Example 1: Node.js Project with CodeRabbit
 
 ```bash
-aiox activate Otto  # github-devops agent
-aiox ci-cd setup \
+yard activate Otto  # github-devops agent
+yard ci-cd setup \
   --repo="." \
   --provider="github-actions" \
   --type="nodejs" \
@@ -715,7 +715,7 @@ aiox ci-cd setup \
 ### Example 2: Python Project (GitLab CI)
 
 ```bash
-aiox ci-cd setup \
+yard ci-cd setup \
   --repo="/path/to/python-project" \
   --provider="gitlab-ci" \
   --type="python" \
@@ -727,7 +727,7 @@ aiox ci-cd setup \
 ### Example 3: Monorepo with Turborepo
 
 ```bash
-aiox ci-cd setup \
+yard ci-cd setup \
   --repo="." \
   --provider="github-actions" \
   --type="monorepo" \

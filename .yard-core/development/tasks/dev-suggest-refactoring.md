@@ -23,7 +23,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: devSuggestRefactoring()
@@ -205,7 +205,7 @@ checklists:
   - dev-master-checklist.md
 ---
 
-# Suggest Refactoring - AIOX Developer Task
+# Suggest Refactoring - YARD Developer Task
 
 ## Purpose
 Analyze code and suggest automated refactoring opportunities to improve code quality, maintainability, and performance.
@@ -281,7 +281,7 @@ class SuggestRefactoringTask {
 
   async execute(params) {
     try {
-      console.log(chalk.blue('🔧 AIOX Refactoring Analysis'));
+      console.log(chalk.blue('🔧 YARD Refactoring Analysis'));
       console.log(chalk.gray('Analyzing code for refactoring opportunities\n'));
 
       // Parse parameters

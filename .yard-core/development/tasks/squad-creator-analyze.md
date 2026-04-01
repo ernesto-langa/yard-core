@@ -130,7 +130,7 @@ const overview = {
   version: manifest.version,
   author: manifest.author,
   license: manifest.license,
-  aioxMinVersion: manifest.aiox?.minVersion || 'N/A',
+  yardMinVersion: manifest.yard?.minVersion || 'N/A',
   description: manifest.description
 };
 ```
@@ -214,7 +214,7 @@ Overview
   Version: {version}
   Author: {author}
   License: {license}
-  AIOX Min Version: {aioxMinVersion}
+  YARD Min Version: {yardMinVersion}
 
 Components
   Agents ({count})

@@ -23,7 +23,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: deprecateComponent()
@@ -208,7 +208,7 @@ tools:
 #   - deprecation-checklist.md
 ---
 
-# Deprecate Component - AIOX Developer Task
+# Deprecate Component - YARD Developer Task
 
 ## Purpose
 Mark framework components as deprecated with timeline management and migration path generation.
@@ -238,7 +238,7 @@ Mark framework components as deprecated with timeline management and migration p
 *deprecate-component agent weather-fetcher --replacement weather-service --reason "Performance optimization" --timeline 3
 
 # Deprecate a utility with migration guide
-*deprecate-component util old-logger --replacement @aiox/logger --migration-guide docs/migration/logger.md --severity high
+*deprecate-component util old-logger --replacement @yard/logger --migration-guide docs/migration/logger.md --severity high
 
 # Immediate deprecation for security issue
 *deprecate-component task insecure-parser --immediate --reason "Security vulnerability" --severity critical
@@ -267,7 +267,7 @@ class DeprecateComponentTask {
 
   async execute(params) {
     try {
-      console.log(chalk.blue('🚫 AIOX Component Deprecation'));
+      console.log(chalk.blue('🚫 YARD Component Deprecation'));
       console.log(chalk.gray('Marking component as deprecated with timeline management\n'));
 
       // Parse and validate parameters

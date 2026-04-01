@@ -37,7 +37,7 @@ Automatically synchronize documentation with code changes to ensure documentatio
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: syncDocumentation()
@@ -342,7 +342,7 @@ class SyncDocumentationTask {
 
   async execute(params) {
     try {
-      console.log(chalk.blue('📚 AIOX Documentation Synchronization'));
+      console.log(chalk.blue('📚 YARD Documentation Synchronization'));
       console.log(chalk.gray('Keeping documentation in sync with code\n'));
 
       // Parse parameters

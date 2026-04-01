@@ -50,7 +50,7 @@ This task closes the PO story lifecycle that begins with `*validate-story-draft`
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: poCloseStory()
@@ -187,7 +187,7 @@ questions:
   - Story path (relative to docs/stories/):
     input: text
     validation: File must exist
-    example: "epics/epic-pro-aiox-pro-architecture/story-pro-5-repo-bootstrap.md"
+    example: "epics/epic-pro-yard-pro-architecture/story-pro-5-repo-bootstrap.md"
 
   - PR number (optional):
     input: text
@@ -365,7 +365,7 @@ ${nextStorySuggestion}
 
 ```bash
 # Interactive mode (recommended)
-*close-story epics/epic-pro-aiox-pro-architecture/story-pro-5-repo-bootstrap.md
+*close-story epics/epic-pro-yard-pro-architecture/story-pro-5-repo-bootstrap.md
 
 # With PR info
 *close-story story-pro-5-repo-bootstrap.md --pr 84 --commit ce19c81a

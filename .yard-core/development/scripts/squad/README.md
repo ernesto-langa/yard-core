@@ -1,6 +1,6 @@
 # Squad Scripts Module
 
-Utilities for the squad-creator agent to manage squads in AIOX projects.
+Utilities for the squad-creator agent to manage squads in YARD projects.
 
 ## Overview
 

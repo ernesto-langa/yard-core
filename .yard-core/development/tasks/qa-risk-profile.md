@@ -22,7 +22,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: qaRiskProfile()
@@ -200,7 +200,7 @@ updated_at: 2025-11-17
 
 ---
 
- Powered by AIOX™ Core -->
+ Powered by YARD™ Core -->
 
 ---
 tools:

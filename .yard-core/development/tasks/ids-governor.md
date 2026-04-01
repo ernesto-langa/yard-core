@@ -3,8 +3,8 @@
 **Task ID:** ids-governor
 **Version:** 1.0
 **Purpose:** Execute IDS Framework Governor commands (*ids query, *ids health, *ids stats, *ids impact)
-**Agent:** @aiox-master
-**Story:** IDS-7 (aiox-master IDS Governor Integration)
+**Agent:** @yard-master
+**Story:** IDS-7 (yard-master IDS Governor Integration)
 
 ---
 
@@ -63,10 +63,10 @@ This task handles the execution of IDS (Incremental Development System) commands
 All commands are also available via CLI:
 
 ```bash
-node bin/aiox-ids.js ids:check "your intent" --type task
-node bin/aiox-ids.js ids:impact create-doc
-node bin/aiox-ids.js ids:stats --json
-node bin/aiox-ids.js ids:register path/to/file.md
+node bin/yard-ids.js ids:check "your intent" --type task
+node bin/yard-ids.js ids:impact create-doc
+node bin/yard-ids.js ids:stats --json
+node bin/yard-ids.js ids:register path/to/file.md
 ```
 
 ---

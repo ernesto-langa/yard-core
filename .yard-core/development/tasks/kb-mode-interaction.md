@@ -22,7 +22,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: kbModeInteraction()
@@ -200,7 +200,7 @@ updated_at: 2025-11-17
 
 ---
 
- Powered by AIOX™ Core -->
+ Powered by YARD™ Core -->
 
 ---
 # No checklists needed - interactive KB mode facilitation task, no validation workflow required
@@ -210,7 +210,7 @@ updated_at: 2025-11-17
 
 ## Purpose
 
-Provide a user-friendly interface to the AIOX knowledge base without overwhelming users with information upfront.
+Provide a user-friendly interface to the YARD knowledge base without overwhelming users with information upfront.
 
 ## Instructions
 
@@ -226,14 +226,14 @@ Offer a concise list of main topic areas the user might want to explore:
 
 **What would you like to know more about?**
 
-1. **Setup & Installation** - Getting started with AIOX
+1. **Setup & Installation** - Getting started with YARD
 2. **Workflows** - Choosing the right workflow for your project
 3. **Web vs IDE** - When to use each environment
 4. **Agents** - Understanding specialized agents and their roles
 5. **Documents** - PRDs, Architecture, Stories, and more
-6. **Agile Process** - How AIOX implements Agile methodologies
-7. **Configuration** - Customizing AIOX for your needs
-8. **Best Practices** - Tips for effective AIOX usage
+6. **Agile Process** - How YARD implements Agile methodologies
+7. **Configuration** - Customizing YARD for your needs
+8. **Best Practices** - Tips for effective YARD usage
 
 Or ask me about anything else related to yard-core!
 
@@ -263,18 +263,18 @@ When user is done or wants to exit KB mode:
 
 **User**: *kb-mode
 
-**Assistant**: I've entered KB mode and have access to the full AIOX knowledge base. I can help you with detailed information about any aspect of yard-core.
+**Assistant**: I've entered KB mode and have access to the full YARD knowledge base. I can help you with detailed information about any aspect of yard-core.
 
 **What would you like to know more about?**
 
-1. **Setup & Installation** - Getting started with AIOX
+1. **Setup & Installation** - Getting started with YARD
 2. **Workflows** - Choosing the right workflow for your project
 3. **Web vs IDE** - When to use each environment
 4. **Agents** - Understanding specialized agents and their roles
 5. **Documents** - PRDs, Architecture, Stories, and more
-6. **Agile Process** - How AIOX implements Agile methodologies
-7. **Configuration** - Customizing AIOX for your needs
-8. **Best Practices** - Tips for effective AIOX usage
+6. **Agile Process** - How YARD implements Agile methodologies
+7. **Configuration** - Customizing YARD for your needs
+8. **Best Practices** - Tips for effective YARD usage
 
 Or ask me about anything else related to yard-core!
 

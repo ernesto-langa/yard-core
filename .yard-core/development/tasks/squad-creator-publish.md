@@ -27,7 +27,7 @@ Checklist:
 
 # *publish-squad
 
-Publishes a local squad to the aiox-squads GitHub repository via Pull Request.
+Publishes a local squad to the yard-squads GitHub repository via Pull Request.
 
 ## Prerequisites
 
@@ -66,7 +66,7 @@ Author: developer-name
 PR Preview:
   Title: Add squad: my-squad
   Branch: squad/my-squad
-  Target: SynkraAI/aiox-squads
+  Target: SynkraAI/yard-squads
 
 Components:
   - Tasks: 5
@@ -86,7 +86,7 @@ Run without --dry-run to create the actual PR.
 
 Publishing: my-squad@1.0.0
   Source: ./squads/my-squad/
-  Target: github.com/SynkraAI/aiox-squads
+  Target: github.com/SynkraAI/yard-squads
 
 ✓ Validated successfully
 ✓ GitHub auth verified (user: your-username)
@@ -97,7 +97,7 @@ Publishing: my-squad@1.0.0
 ✓ Pushed to fork
 
 Pull Request Created!
-  URL: https://github.com/SynkraAI/aiox-squads/pull/42
+  URL: https://github.com/SynkraAI/yard-squads/pull/42
   Branch: squad/my-squad
 
 Next steps:
@@ -129,7 +129,7 @@ Next steps:
    └── Verify gh auth status
 
 4. Create/check fork
-   └── Fork SynkraAI/aiox-squads if needed
+   └── Fork SynkraAI/yard-squads if needed
 
 5. Clone fork to temp directory
    └── Shallow clone for speed
@@ -177,7 +177,7 @@ The generated PR body includes:
 
 ### Pre-submission Checklist
 
-- [x] Squad follows AIOX task-first architecture
+- [x] Squad follows YARD task-first architecture
 - [x] Documentation is complete
 - [x] Squad validated locally
 - [ ] No sensitive data included

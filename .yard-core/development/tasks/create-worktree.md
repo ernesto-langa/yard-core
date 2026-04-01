@@ -27,7 +27,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: createWorktree()
@@ -78,7 +78,7 @@ pre-conditions:
     tipo: pre-condition
     blocker: true
     validação: Script exists at .yard-core/infrastructure/scripts/worktree-manager.js
-    error_message: "WorktreeManager not found. Ensure AIOX is properly installed."
+    error_message: "WorktreeManager not found. Ensure YARD is properly installed."
 
   - [ ] Max worktrees limit not reached
     tipo: pre-condition

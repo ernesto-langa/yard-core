@@ -8,7 +8,7 @@ tools:
 
 # Task: Create Component Suite
 
-**Agent:** aiox-developer  
+**Agent:** yard-developer  
 **Version:** 1.0  
 **Command:** *create-suite
 
@@ -35,7 +35,7 @@ tools:
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: createSuite()
@@ -223,7 +223,7 @@ Creates multiple related components in a single batch operation with dependency 
 - Existing components for dependency resolution
 
 ## Prerequisites
-- aiox-developer agent is active
+- yard-developer agent is active
 - Template system is configured
 - team-manifest.yaml exists
 

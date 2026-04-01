@@ -18,7 +18,7 @@ Run a self-healing health check on the IDS entity registry to detect and auto-fi
 ### Step 1: Run Health Check
 
 ```bash
-node bin/aiox-ids.js ids:health
+node bin/yard-ids.js ids:health
 ```
 
 Review the output for any detected issues.
@@ -28,7 +28,7 @@ Review the output for any detected issues.
 If auto-fixable issues are detected, run with `--fix`:
 
 ```bash
-node bin/aiox-ids.js ids:health --fix
+node bin/yard-ids.js ids:health --fix
 ```
 
 This will:
@@ -40,8 +40,8 @@ This will:
 ### Step 3: JSON Output (Machine-Readable)
 
 ```bash
-node bin/aiox-ids.js ids:health --json
-node bin/aiox-ids.js ids:health --fix --json
+node bin/yard-ids.js ids:health --json
+node bin/yard-ids.js ids:health --fix --json
 ```
 
 ### Step 4: Review Warnings

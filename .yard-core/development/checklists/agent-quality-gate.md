@@ -552,7 +552,7 @@ research-then-create-agent workflow
 **Version:** 4.0.0
 **Created:** 2026-01-30
 **Updated:** 2026-02-04
-**Standard:** AIOX Agent Quality Level + Operational Completeness
+**Standard:** YARD Agent Quality Level + Operational Completeness
 **Changelog:**
 - v4.0: Added SC_AGT_004 (Operational Completeness), maturity scoring, task/template/checklist validation
 - v3.0: Added Level 0 loader checks

@@ -30,7 +30,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: initProjectStatus()
@@ -270,12 +270,12 @@ projectStatus:
 
 ---
 
-### Step 4: Create .aiox Directory
+### Step 4: Create .yard Directory
 
 **Action:** Ensure `.yard/` directory exists
 
 ```bash
-mkdir -p .aiox
+mkdir -p .yard
 ```
 
 **Note:** Directory is created if missing, no error if exists.
@@ -344,7 +344,7 @@ console.log('\nType *help to see available commands!');
 **If missing:** Add entry to `.gitignore`
 
 ```gitignore
-# AIOX Project Status Cache (auto-generated)
+# YARD Project Status Cache (auto-generated)
 .yard/project-status.yaml
 ```
 
@@ -433,11 +433,11 @@ git init
 
 **Resolution:** Navigate to project root before running task.
 
-### Permission Denied on .aiox Directory
+### Permission Denied on .yard Directory
 
 **Error:**
 ```
-❌ Cannot create .aiox directory: Permission denied
+❌ Cannot create .yard directory: Permission denied
 ```
 
 **Resolution:** Check file system permissions for project directory.

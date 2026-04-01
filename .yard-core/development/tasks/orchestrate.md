@@ -1,7 +1,7 @@
 ---
 title: Orchestrate Pipeline
 description: Start full ADE pipeline for a story
-agent: aiox-master
+agent: yard-master
 version: 1.0.0
 story: '0.9'
 epic: '0'

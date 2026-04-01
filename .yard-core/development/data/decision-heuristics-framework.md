@@ -1,7 +1,7 @@
 # Decision Heuristics Framework
 
 > **Version:** 1.0.0
-> **Source:** AIOX Quality Standards
+> **Source:** YARD Quality Standards
 
 Framework for creating decision heuristics that validate choices at workflow checkpoints.
 
@@ -617,5 +617,5 @@ anti_patterns:
 
 ---
 
-_AIOX Decision Heuristics Framework v1.1_
+_YARD Decision Heuristics Framework v1.1_
 _Updated: Specialist Selection Heuristic added_

@@ -1,6 +1,6 @@
 # Brownfield Compatibility Checklist
 
-> Story AIOX-DIFF-4.3.2: Checklist formal de compatibilidade retroativa
+> Story YARD-DIFF-4.3.2: Checklist formal de compatibilidade retroativa
 
 ## Pre-Migration Compatibility Check
 
@@ -10,7 +10,7 @@
 - [ ] Remote backup verified (push before migration)
 
 ### 2. Existing Configuration Preservation
-- [ ] `.env` files backed up (never overwritten by AIOX)
+- [ ] `.env` files backed up (never overwritten by YARD)
 - [ ] `package.json` scripts preserved
 - [ ] Existing linting config (.eslintrc, .prettierrc) detected
 - [ ] CI/CD workflows (.github/workflows) inventoried
@@ -23,23 +23,23 @@
 ### 4. Directory Structure Analysis
 - [ ] `docs/` directory status checked (empty/existing)
 - [ ] `.yard-core/` not present (fresh install)
-- [ ] No naming conflicts with AIOX directories
+- [ ] No naming conflicts with YARD directories
 
 ## During Migration Checks
 
 ### 5. Non-Destructive Operations
-- [ ] AIOX creates new files, never overwrites existing
+- [ ] YARD creates new files, never overwrites existing
 - [ ] Merge conflicts surfaced for user decision
 - [ ] Original files preserved with `.backup` if conflict
 
 ### 6. Configuration Merge Strategy
-- [ ] Existing `.gitignore` entries preserved + AIOX entries added
+- [ ] Existing `.gitignore` entries preserved + YARD entries added
 - [ ] TypeScript config extended (not replaced) if existing
 - [ ] ESLint rules merged (not overwritten)
 
 ### 7. Rollback Points
 - [ ] Pre-migration commit hash recorded
-- [ ] AIOX files clearly identified (can be removed cleanly)
+- [ ] YARD files clearly identified (can be removed cleanly)
 - [ ] No modifications to existing source code during install
 
 ## Post-Migration Validation
@@ -49,21 +49,21 @@
 - [ ] `npm run build` succeeds (if build existed)
 - [ ] Application starts normally
 
-### 9. AIOX Integration
+### 9. YARD Integration
 - [ ] `npx yard-core doctor` reports healthy
 - [ ] Agent activation works (@dev, @architect, etc.)
 - [ ] Existing docs not duplicated
 
 ### 10. Rollback Verification
-- [ ] `git diff HEAD~1` shows only AIOX additions
-- [ ] `git checkout HEAD~1 -- .` would restore pre-AIOX state
-- [ ] No orphaned AIOX processes or files
+- [ ] `git diff HEAD~1` shows only YARD additions
+- [ ] `git checkout HEAD~1 -- .` would restore pre-YARD state
+- [ ] No orphaned YARD processes or files
 
 ---
 
 ## Compatibility Matrix
 
-| Existing Config | AIOX Behavior | User Action Required |
+| Existing Config | YARD Behavior | User Action Required |
 |-----------------|---------------|---------------------|
 | `.eslintrc.*` | Detect + preserve | None |
 | `.prettierrc.*` | Detect + preserve | None |
@@ -81,10 +81,10 @@ If migration fails or is unwanted:
 # Option 1: Full rollback to pre-migration state
 git checkout HEAD~1 -- .
 
-# Option 2: Remove only AIOX files
+# Option 2: Remove only YARD files
 rm -rf .yard-core/
 rm -rf docs/architecture/ docs/prd/ docs/stories/
-# Review and revert .gitignore AIOX entries
+# Review and revert .gitignore YARD entries
 
 # Option 3: Soft rollback (keep docs, remove runtime)
 rm -rf .yard-core/
@@ -110,5 +110,5 @@ npm run build  # if build exists
 
 ---
 
-*AIOX Brownfield Compatibility Checklist v1.0*
-*Story AIOX-DIFF-4.3.2*
+*YARD Brownfield Compatibility Checklist v1.0*
+*Story YARD-DIFF-4.3.2*

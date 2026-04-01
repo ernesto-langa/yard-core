@@ -1,7 +1,7 @@
 ---
 title: Orchestrate Status
 description: Show orchestrator status for a story
-agent: aiox-master
+agent: yard-master
 version: 1.0.0
 story: '0.9'
 epic: '0'

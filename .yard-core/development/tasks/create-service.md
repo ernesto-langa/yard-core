@@ -4,7 +4,7 @@
 
 Create a new service using standardized Handlebars templates from WIS-10. Generates consistent TypeScript service structures with proper configuration, testing, and documentation.
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: createService()
@@ -104,7 +104,7 @@ What type of service is this?
 
 1. api-integration - External API client with rate limiting and auth
 2. utility - Internal helper/utility service
-3. agent-tool - Tool for AIOX agents
+3. agent-tool - Tool for YARD agents
 
 → Default: utility
 → If api-integration: Enable client.ts generation

@@ -16,7 +16,7 @@ checklists:
 
 ## Purpose
 
-To help users contribute to the AIOX open-source project (`yard-core`) by automating the PR creation process, ensuring contributions follow project standards, pass quality checks, and have proper formatting before submission.
+To help users contribute to the YARD open-source project (`yard-core`) by automating the PR creation process, ensuring contributions follow project standards, pass quality checks, and have proper formatting before submission.
 
 **Target Repository**: `yard-core` (open-source framework)
 
@@ -246,7 +246,7 @@ To help users contribute to the AIOX open-source project (`yard-core`) by automa
       
       ---
       
-      **First-time contributor?** Welcome! 🎉 This PR was created using AIOX PR Automation.
+      **First-time contributor?** Welcome! 🎉 This PR was created using YARD PR Automation.
       ```
 
 15. **Create Pull Request**
@@ -292,7 +292,7 @@ To help users contribute to the AIOX open-source project (`yard-core`) by automa
       - Maintainer review: 24-48 hours
       - Merge (if approved): Immediate
       
-      Thank you for contributing to AIOX! 🚀
+      Thank you for contributing to YARD! 🚀
       ```
 
 ## Checklist
@@ -356,7 +356,7 @@ To help users contribute to the AIOX open-source project (`yard-core`) by automa
 ### Contribution Guidelines Reference
 
 ```markdown
-## Contributing to AIOX
+## Contributing to YARD
 
 Thank you for your interest in contributing! 🎉
 
@@ -465,7 +465,7 @@ Thank you for your interest in contributing! 🎉
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: prAutomation()
@@ -635,8 +635,8 @@ updated_at: 2025-11-17
 ### Example 1: Submit New Squad
 
 ```bash
-aiox activate Otto  # github-devops agent
-aiox pr create \
+yard activate Otto  # github-devops agent
+yard pr create \
   --type="Squad" \
   --path="Squads/content-creator/" \
   --issue=42
@@ -647,7 +647,7 @@ aiox pr create \
 ### Example 2: Submit Agent Improvement
 
 ```bash
-aiox pr create \
+yard pr create \
   --type="agent" \
   --path="yard-core/agents/improved-po.md" \
   --title="feat(agent): enhance PO agent with story validation"
@@ -658,7 +658,7 @@ aiox pr create \
 ### Example 3: Submit Bug Fix
 
 ```bash
-aiox pr create \
+yard pr create \
   --type="bug-fix" \
   --path="yard-core/tasks/create-next-story.md" \
   --title="fix(task): correct file path validation in create-next-story"

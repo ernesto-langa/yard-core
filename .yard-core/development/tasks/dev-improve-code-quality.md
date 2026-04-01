@@ -23,7 +23,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: devImproveCodeQuality()
@@ -206,7 +206,7 @@ tools:
   - github-cli
 ---
 
-# Improve Code Quality - AIOX Developer Task
+# Improve Code Quality - YARD Developer Task
 
 ## Purpose
 Automatically improve code quality across multiple dimensions including formatting, linting, modern syntax, and best practices.
@@ -282,7 +282,7 @@ class ImproveCodeQualityTask {
 
   async execute(params) {
     try {
-      console.log(chalk.blue('🎨 AIOX Code Quality Improvement'));
+      console.log(chalk.blue('🎨 YARD Code Quality Improvement'));
       console.log(chalk.gray('Analyzing and improving code quality\n'));
 
       // Parse parameters

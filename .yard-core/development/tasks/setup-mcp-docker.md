@@ -10,7 +10,7 @@
 
 ## Purpose
 
-Configure Docker MCP Toolkit as the primary MCP infrastructure for AIOX, using **HTTP transport** instead of stdio to avoid timeout issues during gateway initialization.
+Configure Docker MCP Toolkit as the primary MCP infrastructure for YARD, using **HTTP transport** instead of stdio to avoid timeout issues during gateway initialization.
 
 **Key Changes in v2.0:**
 - Uses HTTP/SSE transport (fixes 30s timeout issue)
@@ -19,7 +19,7 @@ Configure Docker MCP Toolkit as the primary MCP infrastructure for AIOX, using *
 
 ---
 
-## AIOX Default MCPs
+## YARD Default MCPs
 
 | Preset | MCPs | API Key Required | Tokens |
 |--------|------|------------------|--------|
@@ -59,7 +59,7 @@ Configure Docker MCP Toolkit as the primary MCP infrastructure for AIOX, using *
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: setupMcpDocker()
@@ -187,7 +187,7 @@ acceptance-criteria:
 
 ## Purpose
 
-Configure Docker MCP Toolkit as the primary MCP infrastructure for AIOX, replacing 1MCP with the containerized gateway approach. This enables:
+Configure Docker MCP Toolkit as the primary MCP infrastructure for YARD, replacing 1MCP with the containerized gateway approach. This enables:
 - **98.7% token reduction** via Code Mode
 - **Dynamic MCP loading** (mcp-find, mcp-add, mcp-remove)
 - **Sandbox execution** for workflows
@@ -286,17 +286,17 @@ ELICIT: Preset Configuration
 
 Presets allow loading only needed MCPs for specific workflows.
 
-1. Create 'aiox-dev' preset?
+1. Create 'yard-dev' preset?
    → Recommended MCPs: filesystem, github
    → Use case: Story implementation, PRs, code changes
    → Token budget: ~5-10k
 
-2. Create 'aiox-research' preset?
+2. Create 'yard-research' preset?
    → Recommended MCPs: filesystem, fetch
    → Use case: Documentation, web research
    → Token budget: ~8-15k
 
-3. Create 'aiox-full' preset?
+3. Create 'yard-full' preset?
    → All enabled MCPs
    → Use case: Complex multi-domain tasks
    → Token budget: Varies by MCPs
@@ -351,7 +351,7 @@ docker mcp gateway run --port 8080 --transport sse --watch
 curl -s http://localhost:8080/health || echo "Gateway starting..."
 ```
 
-### 3. Enable AIOX Default MCPs
+### 3. Enable YARD Default MCPs
 
 ```bash
 # Minimal preset (no API keys required)

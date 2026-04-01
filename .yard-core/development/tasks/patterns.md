@@ -4,7 +4,7 @@
 
 View, manage, and review learned workflow patterns captured by the Workflow Intelligence System (WIS). Patterns are learned from successful workflow executions and boost suggestion confidence.
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: patterns()

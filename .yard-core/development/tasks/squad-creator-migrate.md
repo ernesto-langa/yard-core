@@ -21,7 +21,7 @@ Checklist:
 
 # *migrate-squad
 
-Migrates legacy squad formats to AIOX 2.1 standard.
+Migrates legacy squad formats to YARD 2.1 standard.
 
 ## Usage
 
@@ -57,8 +57,8 @@ The migrator detects the following legacy patterns:
 |---------|-----------|------------------|
 | `config.yaml` | Legacy manifest name | Rename to `squad.yaml` |
 | Flat structure | No `tasks/`, `agents/` dirs | Create directory structure |
-| Missing `aiox.type` | Field not present | Add `aiox.type: squad` |
-| Missing `aiox.minVersion` | Field not present | Add `aiox.minVersion: 2.1.0` |
+| Missing `yard.type` | Field not present | Add `yard.type: squad` |
+| Missing `yard.minVersion` | Field not present | Add `yard.minVersion: 2.1.0` |
 | Missing `name` | Field not present | Infer from directory name |
 | Missing `version` | Field not present | Add `version: 1.0.0` |
 
@@ -112,16 +112,16 @@ ISSUES FOUND:
 ───────────────────────────────────────────────────────────
   ⚠️ [WARNING] Uses deprecated config.yaml manifest
   ⚠️ [WARNING] Missing task-first directories: tasks, agents
-  ❌ [ERROR] Missing required field: aiox.type
-  ❌ [ERROR] Missing required field: aiox.minVersion
+  ❌ [ERROR] Missing required field: yard.type
+  ❌ [ERROR] Missing required field: yard.minVersion
 
 ───────────────────────────────────────────────────────────
 PLANNED ACTIONS:
 ───────────────────────────────────────────────────────────
   1. Rename config.yaml → squad.yaml
   2. Create directories: tasks, agents
-  3. Add field: aiox.type = "squad"
-  4. Add field: aiox.minVersion = "2.1.0"
+  3. Add field: yard.type = "squad"
+  4. Add field: yard.minVersion = "2.1.0"
 
 ═══════════════════════════════════════════════════════════
 ```
@@ -139,8 +139,8 @@ MIGRATION RESULT:
   Executed Actions:
     ✅ Rename config.yaml → squad.yaml [success]
     ✅ Create directories: tasks, agents [success]
-    ✅ Add field: aiox.type = "squad" [success]
-    ✅ Add field: aiox.minVersion = "2.1.0" [success]
+    ✅ Add field: yard.type = "squad" [success]
+    ✅ Add field: yard.minVersion = "2.1.0" [success]
 
   Post-Migration Validation:
     Valid: Yes
@@ -160,8 +160,8 @@ MIGRATION RESULT:
   Executed Actions:
     🔍 Rename config.yaml → squad.yaml [dry-run]
     🔍 Create directories: tasks, agents [dry-run]
-    🔍 Add field: aiox.type = "squad" [dry-run]
-    🔍 Add field: aiox.minVersion = "2.1.0" [dry-run]
+    🔍 Add field: yard.type = "squad" [dry-run]
+    🔍 Add field: yard.minVersion = "2.1.0" [dry-run]
 
 ═══════════════════════════════════════════════════════════
 ```

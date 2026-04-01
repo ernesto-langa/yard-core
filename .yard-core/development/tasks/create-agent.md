@@ -7,7 +7,7 @@
 **DNA Specialist:** @ernesto-langa
 **Process Specialist:** @pedro-valerio
 **Mode:** Research-first (never create without research)
-**Quality Standard:** AIOX Level (300+ lines, voice_dna, output_examples, command_loader, task files)
+**Quality Standard:** YARD Level (300+ lines, voice_dna, output_examples, command_loader, task files)
 
 **Specialists:**
 
@@ -488,7 +488,7 @@ generate_agent:
 
   required_sections:
     # Level 1: Identity
-    activation_notice: 'Standard AIOX header'
+    activation_notice: 'Standard YARD header'
     ide_file_resolution: 'Dependency mapping'
     activation_instructions: 'Step-by-step activation'
     agent_metadata: 'name, id, title, icon, whenToUse'
@@ -1179,11 +1179,11 @@ error_handling:
 
 ---
 
-## Integration with AIOX
+## Integration with YARD
 
 This task creates agents that:
 
-- Follow AIOX agent definition standards (6 levels)
+- Follow YARD agent definition standards (6 levels)
 - Can be activated with @pack:agent-id syntax
 - Integrate with memory layer
 - Support standard command patterns (`*help`, `*exit`, etc.)

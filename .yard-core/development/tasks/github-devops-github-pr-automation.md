@@ -29,7 +29,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: githubDevopsGithubPrAutomation()
@@ -223,7 +223,7 @@ const { detectRepositoryContext } = require('./../scripts/repository-detector');
 
 const context = detectRepositoryContext();
 if (!context) {
-  throw new Error('Unable to detect repository. Run "aiox init" first.');
+  throw new Error('Unable to detect repository. Run "yard init" first.');
 }
 ```
 

@@ -1,7 +1,7 @@
 # Quality Dimensions Framework
 
 > **Version:** 1.0.0
-> **Source:** AIOX Quality Standards
+> **Source:** YARD Quality Standards
 
 Framework for evaluating squad outputs using multi-dimensional quality scoring.
 
@@ -423,4 +423,4 @@ tracking:
 
 ---
 
-_AIOX Quality Dimensions Framework v1.0_
+_YARD Quality Dimensions Framework v1.0_

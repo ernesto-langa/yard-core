@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Standardized template for spawning AIOX agents with consistent structure. Ensures all agent invocations follow the same persona loading, context, mission, and output pattern.
+Standardized template for spawning YARD agents with consistent structure. Ensures all agent invocations follow the same persona loading, context, mission, and output pattern.
 
 ## Input
 
@@ -29,7 +29,7 @@ Standardized template for spawning AIOX agents with consistent structure. Ensure
 ## Core Template
 
 ```markdown
-You are {agent_name}, the AIOX {agent_role}. Read your complete agent file at:
+You are {agent_name}, the YARD {agent_role}. Read your complete agent file at:
 {agent_file_path}
 
 Adopt {agent_name}'s persona, voice, and expertise.
@@ -63,7 +63,7 @@ After saving, send a message to the team lead with a summary.
 <!-- Parameters:
   agent_name=Aria,
   agent_role=Architect,
-  agent_file_path=.claude/commands/AIOX/agents/architect.md,
+  agent_file_path=.claude/commands/YARD/agents/architect.md,
   context_category=Architecture,
   mission_description=Design the authentication module,
   output_path=docs/architecture/auth-design.md,
@@ -80,7 +80,7 @@ const template = await loadBlock('agent-prompt-template');
 const prompt = await renderTemplate(template, {
   agent_name: 'Aria',
   agent_role: 'Architect',
-  agent_file_path: '.claude/commands/AIOX/agents/architect.md',
+  agent_file_path: '.claude/commands/YARD/agents/architect.md',
   context_category: 'Architecture',
   context_from_user: 'We need to design auth for a multi-tenant SaaS.',
   mission_description: 'Create detailed authentication architecture document.',

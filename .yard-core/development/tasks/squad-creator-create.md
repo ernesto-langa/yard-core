@@ -28,7 +28,7 @@ Checklist:
 
 # *create-squad
 
-Cria um novo squad seguindo a arquitetura task-first do AIOX.
+Cria um novo squad seguindo a arquitetura task-first do YARD.
 
 ## Uso
 
@@ -79,7 +79,7 @@ Cria um novo squad seguindo a arquitetura task-first do AIOX.
   > extend (adiciona as regras do core)
     override (substitui regras do core)
     none (sem heranca)
-? Minimum AIOX version: (2.1.0)
+? Minimum YARD version: (2.1.0)
 ```
 
 ## Templates Disponiveis
@@ -150,7 +150,7 @@ author: Meu Nome
 license: MIT
 slashPrefix: meu-dominio
 
-aiox:
+yard:
   minVersion: "2.1.0"
   type: squad
 
@@ -263,7 +263,7 @@ async function createSquad(options) {
     skipValidation,
     includeAgent,
     includeTask,
-    aioxMinVersion
+    yardMinVersion
   } = options;
 
   // Validate name
@@ -282,7 +282,7 @@ async function createSquad(options) {
     configMode,
     includeAgent,
     includeTask,
-    aioxMinVersion
+    yardMinVersion
   });
 
   // Validate (unless skipped)

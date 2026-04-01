@@ -25,7 +25,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: learnPatterns()
@@ -206,7 +206,7 @@ updated_at: 2025-11-17
 # No checklists needed - analytical pattern learning task, no deliverables requiring validation
 ---
 
-# Learn Patterns - AIOX Developer Task
+# Learn Patterns - YARD Developer Task
 
 ## Purpose
 Learn patterns from successful modifications to improve future meta-agent suggestions and automation.
@@ -269,7 +269,7 @@ class LearnPatternsTask {
 
   async execute(params) {
     try {
-      console.log(chalk.blue('🧠 AIOX Pattern Learning'));
+      console.log(chalk.blue('🧠 YARD Pattern Learning'));
       console.log(chalk.gray('Learning from successful modifications\n'));
 
       // Parse parameters

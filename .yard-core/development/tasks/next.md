@@ -4,10 +4,10 @@
 
 Suggest next commands based on current workflow context using the Workflow Intelligence System (WIS). Helps users navigate workflows efficiently without memorizing command sequences.
 
-AIOX 4.0.4 runtime-first mode adds deterministic next-step recommendation from
+YARD 4.0.4 runtime-first mode adds deterministic next-step recommendation from
 execution signals (story/qa/ci/diff) via `workflow-state-manager`.
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: next()

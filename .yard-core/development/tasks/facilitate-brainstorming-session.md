@@ -1,14 +1,14 @@
 ---
 id: facilitate-brainstorming-session
 name: Facilitate Brainstorming Session
-agent: aiox-master
+agent: yard-master
 category: collaboration
 complexity: medium
 tools:
   - clickup        # Capture ideas and organize them
   - mcp            # Call specialized agents for domain expertise
 checklists:
-  - aiox-master-checklist.md
+  - yard-master-checklist.md
 ---
 
 # Facilitate Brainstorming Session
@@ -23,7 +23,7 @@ To conduct a structured brainstorming session with multiple AI agents (and optio
 
 - **topic**: `string`
   - **Description**: The challenge, opportunity, or question to brainstorm about
-  - **Example**: "How can we improve user onboarding for AIOX?"
+  - **Example**: "How can we improve user onboarding for YARD?"
   - **Validation**: Must be at least 20 characters
 
 - **session_goal**: `string`
@@ -312,7 +312,7 @@ ${rec.next_steps.map(step => `- ${step}`).join('\n')}
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: facilitateBrainstormingSession()
@@ -482,8 +482,8 @@ updated_at: 2025-11-17
 ### Example 1: Feature Ideation
 
 ```bash
-aiox activate Maestro
-aiox brainstorm "How can we improve AIOX user onboarding for non-technical users?"
+yard activate Maestro
+yard brainstorm "How can we improve YARD user onboarding for non-technical users?"
 ```
 
 **Output**: 25 ideas across 5 categories, top 10 prioritized with next steps
@@ -491,7 +491,7 @@ aiox brainstorm "How can we improve AIOX user onboarding for non-technical users
 ### Example 2: Problem Solving with Specific Agents
 
 ```bash
-aiox brainstorm "How to reduce API latency in database queries?" \
+yard brainstorm "How to reduce API latency in database queries?" \
   --agents="db-sage,architect,github-devops" \
   --goal="solution" \
   --format="actionable"
@@ -502,7 +502,7 @@ aiox brainstorm "How to reduce API latency in database queries?" \
 ### Example 3: Strategic Planning
 
 ```bash
-aiox brainstorm "What should be our open-source expansion strategy for Q1 2026?" \
+yard brainstorm "What should be our open-source expansion strategy for Q1 2026?" \
   --agents="po,architect,github-devops" \
   --goal="strategy" \
   --context="docs/prd.md,docs/open-source-roadmap.md"

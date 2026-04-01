@@ -23,7 +23,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: setupProjectDocs()
@@ -144,7 +144,7 @@ acceptance-criteria:
     type: acceptance-criterion
     blocker: true
     validation: |
-      Assert .gitignore includes AIOX ignores and tech stack ignores
+      Assert .gitignore includes YARD ignores and tech stack ignores
     error_message: "Acceptance criterion not met: .gitignore incomplete"
 
   - [ ] Configuration-Driven Architecture pattern applied
@@ -371,7 +371,7 @@ const configResult = generateConfig(targetDir, mode, configContext);
 Handle .gitignore based on project state:
 
 ```javascript
-const { generateGitignoreFile, hasAioxIntegration } = require('./.yard-core/infrastructure/scripts/documentation-integrity');
+const { generateGitignoreFile, hasYardIntegration } = require('./.yard-core/infrastructure/scripts/documentation-integrity');
 
 const gitignoreResult = generateGitignoreFile(targetDir, markers, {
   projectName,

@@ -1,7 +1,7 @@
 # Tier System Framework
 
 > **Version:** 1.0.0
-> **Source:** AIOX Quality Standards
+> **Source:** YARD Quality Standards
 
 Framework for organizing agents by expertise level and orchestrating their collaboration.
 
@@ -472,4 +472,4 @@ tier_quality_gates:
 
 ---
 
-_AIOX Tier System Framework v1.0_
+_YARD Tier System Framework v1.0_

@@ -244,7 +244,7 @@ docker mcp preset update {preset-name} --add-server {mcp-name}
 docker mcp preset create {new-preset} --servers fs,github,{mcp-name}
 ```
 
-### 7. Update AIOX Documentation (REQUIRED)
+### 7. Update YARD Documentation (REQUIRED)
 
 Add the new MCP to `.claude/rules/mcp-usage.md`:
 
@@ -306,7 +306,7 @@ post-conditions:
     validacao: docker mcp tools ls shows MCP tools
     error_message: "MCP tools not available - check credentials"
 
-  - [ ] AIOX documentation updated
+  - [ ] YARD documentation updated
     tipo: post-condition
     blocker: true
     validacao: .claude/rules/mcp-usage.md includes new MCP
@@ -319,7 +319,7 @@ post-conditions:
     error_message: "Notify user: tools only available after session restart"
 ```
 
-**CRITICAL NOTE:** Tools added to Docker MCP Toolkit are NOT immediately available to AIOX agents. The docker-gateway caches tools at Claude Code startup. User MUST restart their Claude Code session for new tools to appear.
+**CRITICAL NOTE:** Tools added to Docker MCP Toolkit are NOT immediately available to YARD agents. The docker-gateway caches tools at Claude Code startup. User MUST restart their Claude Code session for new tools to appear.
 
 ---
 
@@ -373,12 +373,12 @@ Resolution:
    • {name}.tool3 - Description
 
 🔗 Status: Running
-📋 Preset: Added to 'aiox-full'
+📋 Preset: Added to 'yard-full'
 
 Next steps:
 1. Test tools: docker mcp tools call {name}.tool1 --param value
 2. Use in workflow: *mcp-workflow with {name} tools
-3. Add to other presets: docker mcp preset update aiox-dev --add-server {name}
+3. Add to other presets: docker mcp preset update yard-dev --add-server {name}
 ```
 
 ---
@@ -424,10 +424,10 @@ changelog:
     - Fixed: Apify MCP now working with 7 tools
     - Note: Bug affects all MCPs requiring authentication
   1.2.0:
-    - Added: Steps 7-9 for AIOX documentation and session restart
+    - Added: Steps 7-9 for YARD documentation and session restart
     - Added: Post-conditions for documentation update and user notification
     - Added: Critical note about docker-gateway tool caching
-    - Fixed: Tools not appearing in AIOX agents after MCP addition
+    - Fixed: Tools not appearing in YARD agents after MCP addition
   1.1.0:
     - Changed: DevOps Agent now exclusive responsible (Story 6.14)
     - Removed: Dev Agent from agents list

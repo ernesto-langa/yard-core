@@ -32,7 +32,7 @@ Automated security vulnerability scanning for common security anti-patterns.
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: qaSecurityChecklist()
@@ -548,4 +548,4 @@ This task is complete when:
 ---
 
 _Absorbed from Auto-Claude PR Review System - Phase 6.1_
-_AIOX QA Enhancement v1.0_
+_YARD QA Enhancement v1.0_

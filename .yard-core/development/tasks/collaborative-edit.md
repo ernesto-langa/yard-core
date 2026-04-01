@@ -25,7 +25,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: collaborativeEdit()
@@ -208,7 +208,7 @@ tools:
   - github-cli
 ---
 
-# Collaborative Edit - AIOX Developer Task
+# Collaborative Edit - YARD Developer Task
 
 ## Purpose
 Create and manage collaborative editing sessions for real-time component modification with multiple participants.
@@ -275,7 +275,7 @@ class CollaborativeEditTask extends EventEmitter {
 
   async execute(params) {
     try {
-      console.log(chalk.blue('👥 AIOX Collaborative Editing'));
+      console.log(chalk.blue('👥 YARD Collaborative Editing'));
       console.log(chalk.gray('Real-time collaborative modification system\n'));
 
       // Parse action and parameters

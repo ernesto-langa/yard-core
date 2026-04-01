@@ -2,7 +2,7 @@
 
 ## Metadata
 - **Task ID:** sync-registry-intel
-- **Agent:** @aiox-master
+- **Agent:** @yard-master
 - **Story:** NOG-2
 - **Type:** Command Task
 - **Elicit:** false

@@ -35,7 +35,7 @@ tools:
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: poPullStory()
@@ -226,7 +226,7 @@ optional:
 
 ## Prerequisites
 
-- PM tool configured in `.aiox-pm-config.yaml` (or will use local-only mode)
+- PM tool configured in `.yard-pm-config.yaml` (or will use local-only mode)
 
 ## Task Execution Steps
 

@@ -184,7 +184,7 @@ command_availability:
       - GitHub Projects: Syncs to GitHub issue
       - Jira: Syncs to Jira issue
       - Local-only: Validates YAML (no external sync)
-      If no PM tool configured, runs `aiox init` prompt
+      If no PM tool configured, runs `yard init` prompt
   pull-story:
     always_available: true
     description: |

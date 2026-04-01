@@ -30,7 +30,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: poStoriesIndex()
@@ -290,7 +290,7 @@ Total Stories: 70
 Output File: docs/stories/index.md
 
 Stories by Epic:
-- Epic 6.1 AIOX Migration: 45 stories
+- Epic 6.1 YARD Migration: 45 stories
 - Epic 3 Gap Remediation: 20 stories
 - Unassigned: 5 stories
 ```

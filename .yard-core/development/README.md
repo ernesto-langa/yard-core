@@ -17,7 +17,7 @@ development/
 
 | Agent | ID | Description |
 |-------|-----|------------|
-| AIOX Master | `aiox-master` | Framework orchestrator |
+| YARD Master | `yard-master` | Framework orchestrator |
 | Analyst | `analyst` | Business analyst |
 | Architect | `architect` | Technical architect |
 | Data Engineer | `data-engineer` | Data engineering |

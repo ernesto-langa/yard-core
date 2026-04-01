@@ -36,7 +36,7 @@ tools:
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: poSyncStory()
@@ -228,7 +228,7 @@ optional:
 ## Prerequisites
 
 - Story file must exist
-- PM tool configured in `.aiox-pm-config.yaml` (or will use local-only mode)
+- PM tool configured in `.yard-pm-config.yaml` (or will use local-only mode)
 
 ## Task Execution Steps
 
@@ -281,7 +281,7 @@ Display formatted summary:
 
 - **Story file not found**: Display error with correct path
 - **PM tool connection failed**: Show error message from adapter
-- **Configuration missing**: Inform user to run `aiox init`
+- **Configuration missing**: Inform user to run `yard init`
 - **Sync failed**: Display adapter-specific error message
 
 ## Notes

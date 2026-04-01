@@ -32,7 +32,7 @@ Validate database migrations are properly created and applied for schema changes
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: qaMigrationValidation()
@@ -580,4 +580,4 @@ This task is complete when:
 ---
 
 _Absorbed from Auto-Claude PR Review System - Phase 5_
-_AIOX QA Enhancement v1.0_
+_YARD QA Enhancement v1.0_

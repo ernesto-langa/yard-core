@@ -6,7 +6,7 @@ Extract and consolidate gotchas from session insights into a searchable knowledg
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: documentGotchas()
@@ -68,7 +68,7 @@ atomic_layer: Service
 
 ```yaml
 pre-conditions:
-  - [ ] Project has .aiox directory initialized
+  - [ ] Project has .yard directory initialized
     tipo: pre-condition
     blocker: false
     validação: |
@@ -363,7 +363,7 @@ const useStore = create<StoreType>()(
 
 ```json
 {
-  "schema": "aiox-gotchas-v1",
+  "schema": "yard-gotchas-v1",
   "version": "1.0.0",
   "generatedAt": "2026-01-28T14:00:00Z",
   "statistics": {
@@ -420,7 +420,7 @@ node .yard-core/infrastructure/scripts/gotchas-documenter.js list --format json
    - **Recovery:** Continue processing other files
 
 3. **Error:** Write permission denied
-   - **Cause:** Cannot write to .aiox directory
+   - **Cause:** Cannot write to .yard directory
    - **Resolution:** Check file permissions
    - **Recovery:** Output to stdout instead
 

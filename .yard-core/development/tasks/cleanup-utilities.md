@@ -246,7 +246,7 @@ cp .yard-core/utils-archive/specific-utility.js .yard-core/scripts/
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: cleanupUtilities()
@@ -438,7 +438,7 @@ For each utility in the deprecated list with 0 dependencies:
 git mv .yard-core/scripts/utility-name.js .yard-core/utils-archive/
 
 # Or for multiple files:
-git mv .yard-core/scripts/{aiox-validator-fixed.js,aiox-validator-refactored.js} .yard-core/utils-archive/
+git mv .yard-core/scripts/{yard-validator-fixed.js,yard-validator-refactored.js} .yard-core/utils-archive/
 ```
 
 **4.2 Move Misplaced Files** (Category D)
@@ -448,7 +448,7 @@ git mv .yard-core/scripts/{aiox-validator-fixed.js,aiox-validator-refactored.js}
 mkdir -p tests/utils
 
 # Move test files to proper location
-git mv .yard-core/scripts/aiox-validator.test.js tests/utils/
+git mv .yard-core/scripts/yard-validator.test.js tests/utils/
 ```
 
 **4.3 Update Archive README**
@@ -459,8 +459,8 @@ Add complete list of archived files to ARCHIVE-README.md:
 ## Archived Utilities
 
 ### Category A: Duplicate/Redundant (9 files)
-1. aiox-validator-fixed.js - Duplicate of aiox-validator.js
-2. aiox-validator-refactored.js - Duplicate of aiox-validator.js
+1. yard-validator-fixed.js - Duplicate of yard-validator.js
+2. yard-validator-refactored.js - Duplicate of yard-validator.js
 ...
 
 ### Category B: Incomplete Experiments (9 files)
@@ -521,7 +521,7 @@ If any developer guides reference archived utilities, update them:
 Run framework validator to ensure no broken references:
 
 ```bash
-node .yard-core/scripts/aiox-validator.js
+node .yard-core/scripts/yard-validator.js
 ```
 
 Expected: 0 errors related to missing utilities
@@ -589,7 +589,7 @@ cp .yard-core/utils-archive/utility-name.js .yard-core/scripts/
 
 **Verification**:
 ```bash
-node .yard-core/scripts/aiox-validator.js
+node .yard-core/scripts/yard-validator.js
 ```
 ```
 
@@ -614,7 +614,7 @@ node .yard-core/scripts/aiox-validator.js
 
 - ✅ All 30 deprecated utilities archived without deletion
 - ✅ Zero broken references (grep validation passes)
-- ✅ Framework validation (aiox-validator.js) passes
+- ✅ Framework validation (yard-validator.js) passes
 - ✅ All agents (@dev, @po, @qa) activate successfully
 - ✅ Backup created before changes
 - ✅ Archive README created with restoration instructions

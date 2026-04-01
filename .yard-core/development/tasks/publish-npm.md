@@ -62,7 +62,7 @@ Publishes a new version to npm under the `preview` dist-tag.
    - Verify critical files exist in node_modules/yard-core/:
      - .claude/hooks/synapse-engine.cjs
      - .yard-core/core-config.yaml
-     - bin/aiox.js
+     - bin/yard.js
    - Clean up temp directory
 
 7. PUSH VERSION COMMIT
@@ -164,8 +164,8 @@ Tests package installation from a specific dist-tag in a clean temporary directo
      - .claude/hooks/synapse-engine.cjs
      - .claude/hooks/precompact-session-digest.cjs
      - .claude/rules/ (non-empty)
-     - bin/aiox.js
-     - bin/aiox-minimal.js
+     - bin/yard.js
+     - bin/yard-minimal.js
    - Check node_modules/yard-core/ does NOT contain:
      - pro/
      - .env

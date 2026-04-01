@@ -35,7 +35,7 @@ Perform a comprehensive test architecture review with quality gate decision. Thi
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: qaReviewStory()
