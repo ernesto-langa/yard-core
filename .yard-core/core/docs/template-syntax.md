@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Synkra AIOX template system uses a simple yet powerful variable substitution syntax that allows for dynamic content generation in agents, tasks, and workflows.
+The Synkra YARD template system uses a simple yet powerful variable substitution syntax that allows for dynamic content generation in agents, tasks, and workflows.
 
 ## Basic Variable Substitution
 

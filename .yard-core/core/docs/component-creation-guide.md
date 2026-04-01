@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide walks you through creating components in Synkra AIOX using the meta-agent's enhanced template system and interactive workflows.
+This guide walks you through creating components in Synkra YARD using the meta-agent's enhanced template system and interactive workflows.
 
 ## Table of Contents
 
@@ -369,7 +369,7 @@ Generated content contains: {{AGENT_NAME}}
 
 Enable detailed logging:
 ```bash
-DEBUG=aiox:* *create-agent
+DEBUG=yard:* *create-agent
 ```
 
 This shows:

@@ -1,6 +1,6 @@
 # IDS: Entity Registry Foundation
 
-The Entity Registry is the central data store for the Incremental Development System (IDS). It tracks all AIOX framework artifacts — tasks, templates, scripts, modules, agents, checklists, and data files — with metadata, relationships, adaptability scores, and checksums.
+The Entity Registry is the central data store for the Incremental Development System (IDS). It tracks all YARD framework artifacts — tasks, templates, scripts, modules, agents, checklists, and data files — with metadata, relationships, adaptability scores, and checksums.
 
 ## Schema
 

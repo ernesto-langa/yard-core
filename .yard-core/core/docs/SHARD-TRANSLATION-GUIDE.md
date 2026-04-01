@@ -2,7 +2,7 @@
 
 ## Overview
 
-Synkra AIOX now automatically translates Portuguese documentation into English filenames when sharding documents. This ensures consistency across all projects and compatibility with hardcoded English filenames in configuration files.
+Synkra YARD now automatically translates Portuguese documentation into English filenames when sharding documents. This ensures consistency across all projects and compatibility with hardcoded English filenames in configuration files.
 
 ## Problem Solved
 
@@ -331,5 +331,5 @@ If you encounter issues:
 ---
 
 **Last Updated:** January 2025
-**Feature Version:** AIOX v4.x
+**Feature Version:** YARD v4.x
 **Related Stories:** Translation Enhancement Story 5.2

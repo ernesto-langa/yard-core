@@ -1,8 +1,8 @@
-# Synkra AIOX Meta-Agent Troubleshooting Guide
+# Synkra YARD Meta-Agent Troubleshooting Guide
 
 ## Overview
 
-This guide helps diagnose and resolve common issues when using the Synkra AIOX meta-agent for component creation and management.
+This guide helps diagnose and resolve common issues when using the Synkra YARD meta-agent for component creation and management.
 
 ## Table of Contents
 
@@ -538,7 +538,7 @@ FATAL ERROR: JavaScript heap out of memory
 DEBUG=* *create-agent
 
 # Specific modules
-DEBUG=aiox:template,aiox:elicitation *create-agent
+DEBUG=yard:template,yard:elicitation *create-agent
 
 # Performance timing
 DEBUG=perf:* *create-agent
@@ -548,7 +548,7 @@ DEBUG=perf:* *create-agent
 
 ```bash
 # Application logs
-tail -f yard-core/logs/aiox-developer.log
+tail -f yard-core/logs/yard-developer.log
 
 # Transaction logs
 ls -la yard-core/logs/transactions/

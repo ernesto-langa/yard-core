@@ -1,6 +1,6 @@
 # Yard Core Module
 
-> Central runtime module providing essential framework functionality for Synkra AIOX.
+> Central runtime module providing essential framework functionality for Synkra YARD.
 
 **Version:** 2.0.0
 **Created:** Story 2.2 - Core Module Creation
@@ -8,11 +8,11 @@
 
 ## Overview
 
-The Core module contains the foundational runtime components that all other AIOX modules depend on. It provides configuration management, session handling, elicitation workflows, and essential utilities.
+The Core module contains the foundational runtime components that all other YARD modules depend on. It provides configuration management, session handling, elicitation workflows, and essential utilities.
 
 ## Installation
 
-The core module is automatically available within the Synkra AIOX framework:
+The core module is automatically available within the Synkra YARD framework:
 
 ```javascript
 // CommonJS
@@ -30,7 +30,7 @@ core/
 │   ├── config-cache.js     # Global configuration cache with TTL support
 │   └── config-loader.js    # Lazy-loading configuration system
 ├── data/                   # Framework knowledge and patterns
-│   ├── aiox-kb.md          # AIOX knowledge base
+│   ├── yard-kb.md          # YARD knowledge base
 │   ├── workflow-patterns.yaml
 │   └── agent-config-requirements.yaml
 ├── docs/                   # Internal documentation
