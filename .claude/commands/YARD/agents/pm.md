@@ -374,4 +374,4 @@ Type `*help` to see all commands, or `*yolo` to skip confirmations.
 
 ---
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/pm.md*
+*YARD Agent - Synced from .yard-core/development/agents/pm.md*

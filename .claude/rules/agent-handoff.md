@@ -2,12 +2,12 @@
 
 ## Purpose
 
-Prevent context window accumulation when switching between AIOX agents (`@agent` commands). Each agent switch compacts the previous agent's full persona into a structured handoff artifact (~379 tokens) instead of retaining the full definition (~3-5K tokens).
+Prevent context window accumulation when switching between YARD agents (`@agent` commands). Each agent switch compacts the previous agent's full persona into a structured handoff artifact (~379 tokens) instead of retaining the full definition (~3-5K tokens).
 
 ## When This Applies
 
 This protocol activates whenever:
-1. A user invokes a new agent via `@agent-name` or `/AIOX:agents:agent-name`
+1. A user invokes a new agent via `@agent-name` or `/YARD:agents:agent-name`
 2. The current session already has a different agent active
 
 ## Handoff Protocol

@@ -36,7 +36,7 @@
 
 ## 🎯 Story
 
-**As a** AIOX framework user,  
+**As a** YARD framework user,  
 **I want** agents to use a unified greeting system that integrates session context, project status, agent personalization, and user preferences,  
 **So that** I have a consistent, fast, and contextually relevant experience when activating any agent.
 
@@ -675,7 +675,7 @@ module.exports = { generateGreeting };
 2. Find STEP 3 section (starts with `- STEP 3: |`)
 3. Replace entire STEP 3 block with new format above
 4. Save file
-5. Test activation: `/AIOX/agents/qa`
+5. Test activation: `/YARD/agents/qa`
 
 **Validation Checklist for QA Pilot:**
 - [ ] QA agent file updated correctly
@@ -698,7 +698,7 @@ module.exports = { generateGreeting };
    rm .yard/session-state.json
    
    # Activate QA agent
-   /AIOX/agents/qa
+   /YARD/agents/qa
    
    # Expected: "new" session type detected
    # Expected: Full greeting with role description
@@ -711,7 +711,7 @@ module.exports = { generateGreeting };
    node -e "const fs = require('fs'); const path = require('path'); const sessionPath = path.join(process.cwd(), '.yard', 'session-state.json'); fs.mkdirSync(path.dirname(sessionPath), { recursive: true }); fs.writeFileSync(sessionPath, JSON.stringify({ sessionId: 'test-123', startTime: new Date().toISOString(), lastActivity: new Date().toISOString(), agentSequence: [{ id: 'po', name: 'Pax' }], lastCommands: ['create-story'], workflowActive: null }), 'utf8');"
    
    # Activate QA agent
-   /AIOX/agents/qa
+   /YARD/agents/qa
    
    # Expected: "existing" session type detected
    # Expected: Quick greeting (no role description)
@@ -781,7 +781,7 @@ module.exports = { generateGreeting };
 6. `analyst.md`
 7. `data-engineer.md`
 8. `devops.md`
-9. `aiox-master.md`
+9. `yard-master.md`
 10. `ux-design-expert.md`
 
 **Implementation Script:**
@@ -795,7 +795,7 @@ const path = require('path');
 const AGENTS_DIR = path.join(process.cwd(), '.yard-core', 'agents');
 const REMAINING_AGENTS = [
   'dev', 'po', 'sm', 'pm', 'architect', 'analyst',
-  'data-engineer', 'devops', 'aiox-master', 'ux-design-expert'
+  'data-engineer', 'devops', 'yard-master', 'ux-design-expert'
 ];
 
 const NEW_STEP_3_TEMPLATE = `  - STEP 3: |
@@ -870,7 +870,7 @@ console.log(`📊 Total: ${updated + 1} agents (including QA pilot)`);
 **Quick Validation Test:**
 ```bash
 # Test each agent activation
-for agent in dev po sm pm architect analyst data-engineer devops aiox-master ux-design-expert; do
+for agent in dev po sm pm architect analyst data-engineer devops yard-master ux-design-expert; do
   echo "Testing $agent..."
   node .yard-core/scripts/generate-greeting.js $agent
   echo "---"
@@ -1327,7 +1327,7 @@ describe('Greeting System Integration', () => {
 
 **User activates agent:**
 ```bash
-/AIOX/agents/qa
+/YARD/agents/qa
 ```
 
 **Agent STEP 3 executes:**

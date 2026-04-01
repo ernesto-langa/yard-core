@@ -4,7 +4,7 @@ paths: .yard-core/development/agents/**
 
 # Agent Memory Imports
 
-Each AIOX agent has a canonical MEMORY.md containing persistent knowledge.
+Each YARD agent has a canonical MEMORY.md containing persistent knowledge.
 These are the canonical locations — agents should read their memory on activation.
 
 @import .yard-core/development/agents/dev/MEMORY.md

@@ -557,4 +557,4 @@ Type `*help` to see all commands, or `*explain` to learn more.
 
 ---
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/dev.md*
+*YARD Agent - Synced from .yard-core/development/agents/dev.md*
