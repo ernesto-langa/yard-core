@@ -1,4 +1,4 @@
-# Guia de Workflows do AIOX
+# Guia de Workflows do YARD
 
 **Versao:** 1.0.0
 **Ultima Atualizacao:** 2026-02-02
@@ -8,7 +8,7 @@
 
 ## Visao Geral
 
-Os Workflows do AIOX sao sequencias orquestradas de atividades de agents que automatizam processos de desenvolvimento complexos. Eles fornecem padroes estruturados e repetitivos para cenarios de desenvolvimento comuns.
+Os Workflows do YARD sao sequencias orquestradas de atividades de agents que automatizam processos de desenvolvimento complexos. Eles fornecem padroes estruturados e repetitivos para cenarios de desenvolvimento comuns.
 
 ### Conceitos Chave
 
@@ -284,7 +284,7 @@ steps:
 Workflows persistem entre sessoes do Claude Code:
 
 1. Usuario inicia nova sessao
-2. Ativa @aiox-master
+2. Ativa @yard-master
 3. Executa `*run-workflow {name} continue`
 4. Sistema carrega state, mostra step atual
 5. Usuario executa step
@@ -294,7 +294,7 @@ Workflows persistem entre sessoes do Claude Code:
 
 ## Padroes de Workflow
 
-O AIOX detecta padroes comuns de workflow baseados no historico de comandos:
+O YARD detecta padroes comuns de workflow baseados no historico de comandos:
 
 ### Padroes Detectados
 
@@ -397,4 +397,4 @@ cat .yard-core/development/workflows/{name}.yaml
 
 ---
 
-*Guia de Workflows do AIOX v1.0 - Orquestrando Colaboracao IA-Humano*
+*Guia de Workflows do YARD v1.0 - Orquestrando Colaboracao IA-Humano*

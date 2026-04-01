@@ -568,7 +568,7 @@ sequenceDiagram
 
 **描述:** 所有故事已实现和审阅。项目开发阶段完成。
 
-**参考:** `.yard-core/data/aiox-kb.md#IDE Development Workflow`
+**参考:** `.yard-core/data/yard-kb.md#IDE Development Workflow`
 
 ---
 
@@ -670,7 +670,7 @@ graph LR
    - 配置了 Git
    - 包管理器 (npm/yarn/pnpm)
 
-2. **AIOX-Core 可用**
+2. **YARD-Core 可用**
    - `.yard-core/development/templates/` 中的模板
    - `.yard-core/development/tasks/` 中的任务
    - `.yard-core/development/checklists/` 中的检查列表
@@ -871,7 +871,7 @@ flowchart TD
 | 文件 | 路径 |
 |------|------|
 | 工作流定义 | `.yard-core/development/workflows/greenfield-ui.yaml` |
-| 知识库 | `.yard-core/data/aiox-kb.md` |
+| 知识库 | `.yard-core/data/yard-kb.md` |
 
 ### 代理
 
@@ -906,7 +906,7 @@ flowchart TD
 
 ### 相关文档
 
-- [AIOX 知识库](.yard-core/data/aiox-kb.md) - 中央知识库
+- [YARD 知识库](.yard-core/data/yard-kb.md) - 中央知识库
 - [棕地工作流](./BROWNFIELD-WORKFLOW.md) - 现有项目工作流 (如可用)
 
 ---

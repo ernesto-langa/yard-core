@@ -1,10 +1,10 @@
-# Guia de Hardening de Segurança do AIOX
+# Guia de Hardening de Segurança do YARD
 
 > [EN](../../guides/security-hardening.md) | **PT** | [ES](../../es/guides/security-hardening.md)
 
 ---
 
-> Guia completo para fortalecer a segurança de implantações do Synkra AIOX - do desenvolvimento à produção.
+> Guia completo para fortalecer a segurança de implantações do Synkra YARD - do desenvolvimento à produção.
 
 **Versão:** 2.1.0
 **Última Atualização:** 2026-01-29
@@ -29,7 +29,7 @@
 
 ## Visão Geral de Segurança
 
-O Synkra AIOX opera em uma camada privilegiada entre modelos de IA e seu sistema. Este guia cobre estratégias de hardening específicas para ambientes de desenvolvimento orquestrados por IA.
+O Synkra YARD opera em uma camada privilegiada entre modelos de IA e seu sistema. Este guia cobre estratégias de hardening específicas para ambientes de desenvolvimento orquestrados por IA.
 
 ### Arquitetura de Segurança
 
@@ -49,7 +49,7 @@ O Synkra AIOX opera em uma camada privilegiada entre modelos de IA e seu sistema
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### Preocupações de Segurança Específicas do AIOX
+### Preocupações de Segurança Específicas do YARD
 
 | Preocupação                | Nível de Risco | Mitigação                         |
 | -------------------------- | -------------- | --------------------------------- |
@@ -62,7 +62,7 @@ O Synkra AIOX opera em uma camada privilegiada entre modelos de IA e seu sistema
 
 ### Defesa em Profundidade
 
-O AIOX implementa múltiplas camadas de proteção:
+O YARD implementa múltiplas camadas de proteção:
 
 1. **Permission Modes** - Controle da autonomia do agente (Explore/Ask/Auto)
 2. **Claude Hooks** - Validação pré-execução (read-protection, sql-governance)
@@ -74,7 +74,7 @@ O AIOX implementa múltiplas camadas de proteção:
 
 ## Gerenciamento de Chaves de API
 
-Chaves de API são os segredos mais críticos no AIOX. Chaves comprometidas podem levar a uso não autorizado, violações de dados e impacto financeiro significativo.
+Chaves de API são os segredos mais críticos no YARD. Chaves comprometidas podem levar a uso não autorizado, violações de dados e impacto financeiro significativo.
 
 ### Hierarquia de Armazenamento
 
@@ -124,7 +124,7 @@ JWT_SECRET=your-256-bit-cryptographically-secure-random-key
 // Carrega segredos do vault seguro
 const secrets = await SecretManager.loadSecrets({
   provider: 'aws-secrets-manager', // ou 'hashicorp-vault', 'gcp-secrets'
-  secretName: 'aiox/production/api-keys',
+  secretName: 'yard/production/api-keys',
   region: process.env.AWS_REGION,
 });
 
@@ -185,7 +185,7 @@ function validateApiKeys() {
 
 ```bash
 # ============================================================
-# CONFIGURAÇÃO DE AMBIENTE DO AIOX
+# CONFIGURAÇÃO DE AMBIENTE DO YARD
 # ============================================================
 # SEGURANÇA: Este arquivo NUNCA deve ser commitado no controle de versão
 # Adicione ao .gitignore: .env, .env.local, .env.*.local
@@ -195,7 +195,7 @@ function validateApiKeys() {
 # AMBIENTE
 # ------------------------------------------------------------
 NODE_ENV=development
-AIOX_DEBUG=false
+YARD_DEBUG=false
 LOG_LEVEL=info
 
 # ------------------------------------------------------------
@@ -256,7 +256,7 @@ CSP_ENABLED=true
 # AUDITORIA & LOGGING
 # ------------------------------------------------------------
 AUDIT_LOG_ENABLED=true
-AUDIT_LOG_PATH=/var/log/aiox/audit.log
+AUDIT_LOG_PATH=/var/log/yard/audit.log
 AUDIT_LOG_RETENTION_DAYS=90
 ```
 
@@ -294,7 +294,7 @@ function validateEnvironment() {
 
   // Garanta que modo debug está desligado em produção
   if (process.env.NODE_ENV === 'production') {
-    if (process.env.AIOX_DEBUG === 'true') {
+    if (process.env.YARD_DEBUG === 'true') {
       console.warn('AVISO: Modo debug habilitado em produção');
     }
   }
@@ -305,7 +305,7 @@ function validateEnvironment() {
 
 ## Permissões de Arquivos e Diretórios
 
-### Permissões da Estrutura de Diretórios do AIOX
+### Permissões da Estrutura de Diretórios do YARD
 
 ```bash
 # ============================================================
@@ -315,7 +315,7 @@ function validateEnvironment() {
 # Raiz do projeto (padrão)
 chmod 755 /path/to/project
 
-# Diretórios de configuração do AIOX
+# Diretórios de configuração do YARD
 chmod 700 .yard/              # Apenas o proprietário pode acessar
 chmod 700 .yard-core/         # Fonte do framework
 chmod 700 .claude/            # Configuração do Claude
@@ -347,7 +347,7 @@ security:
   allowedDirectories:
     read:
       - '${PROJECT_ROOT}'
-      - '${HOME}/.aiox'
+      - '${HOME}/.yard'
     write:
       - '${PROJECT_ROOT}/src'
       - '${PROJECT_ROOT}/docs'
@@ -371,7 +371,7 @@ security:
 #!/bin/bash
 # scripts/check-permissions.sh
 
-echo "Verificação de Permissões de Segurança do AIOX"
+echo "Verificação de Permissões de Segurança do YARD"
 echo "==============================================="
 
 # Verifica arquivos críticos
@@ -412,7 +412,7 @@ echo "Verificação de permissões concluída."
 
 ### Isolamento MCP via Docker
 
-O AIOX usa containers Docker para isolar servidores MCP do sistema host:
+O YARD usa containers Docker para isolar servidores MCP do sistema host:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -1047,7 +1047,7 @@ function loadSecurityConfig() {
 
 | Configuração         | Desenvolvimento       | Produção         |
 | -------------------- | --------------------- | ---------------- |
-| **AIOX_DEBUG**       | `true`                | `false`          |
+| **YARD_DEBUG**       | `true`                | `false`          |
 | **LOG_LEVEL**        | `debug`               | `info`           |
 | **Permission Mode**  | `auto`                | `ask`            |
 | **Rate Limiting**    | Relaxado              | Estrito          |
@@ -1159,8 +1159,8 @@ function validateProductionSecurity() {
   }
 
   // Debug deve estar desligado
-  if (process.env.AIOX_DEBUG === 'true') {
-    errors.push('AIOX_DEBUG deve ser false em produção');
+  if (process.env.YARD_DEBUG === 'true') {
+    errors.push('YARD_DEBUG deve ser false em produção');
   }
 
   // TLS deve estar habilitado (verifica arquivos de certificado)
@@ -1283,7 +1283,7 @@ function validateProductionSecurity() {
 
 ### Política de Divulgação Responsável
 
-Se você descobrir uma vulnerabilidade de segurança no Synkra AIOX, por favor siga práticas de divulgação responsável:
+Se você descobrir uma vulnerabilidade de segurança no Synkra YARD, por favor siga práticas de divulgação responsável:
 
 ### Processo de Relatório
 
@@ -1306,7 +1306,7 @@ Se você descobrir uma vulnerabilidade de segurança no Synkra AIOX, por favor s
 
 **Componente Afetado:** [ex: InputSanitizer, AuthSystem, MCP Gateway]
 
-**Versão do AIOX:** [ex: 2.1.0]
+**Versão do YARD:** [ex: 2.1.0]
 
 **Descrição:**
 [Descrição detalhada da vulnerabilidade]
@@ -1343,7 +1343,7 @@ Contribuidores que divulgam vulnerabilidades de forma responsável são reconhec
 
 ### Programa de Bug Bounty
 
-Atualmente, o Synkra AIOX não possui um programa formal de bug bounty. No entanto, contribuições significativas de segurança são reconhecidas e podem receber licenças AIOX Pro ou outro reconhecimento.
+Atualmente, o Synkra YARD não possui um programa formal de bug bounty. No entanto, contribuições significativas de segurança são reconhecidas e podem receber licenças YARD Pro ou outro reconhecimento.
 
 ---
 
@@ -1356,4 +1356,4 @@ Atualmente, o Synkra AIOX não possui um programa formal de bug bounty. No entan
 
 ---
 
-_Guia de Hardening de Segurança do Synkra AIOX v4.0_
+_Guia de Hardening de Segurança do Synkra YARD v4.0_

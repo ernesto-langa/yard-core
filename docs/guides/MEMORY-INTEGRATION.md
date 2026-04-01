@@ -22,9 +22,9 @@ This guide explains how the Memory Intelligence System integrates with the Unifi
 
 ### Extension Point Pattern
 
-The integration follows the AIOX Open Core model:
+The integration follows the YARD Open Core model:
 - **yard-core:** Extension point in UnifiedActivationPipeline (this guide)
-- **aiox-pro:** Memory intelligence implementation (retrieval, scoring, learning)
+- **yard-pro:** Memory intelligence implementation (retrieval, scoring, learning)
 
 ```
 UnifiedActivationPipeline (Tier 2 Enrich)

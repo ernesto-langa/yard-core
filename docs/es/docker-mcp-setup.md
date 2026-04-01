@@ -4,7 +4,7 @@
 
 ---
 
-Guía para configurar servidores MCP (Model Context Protocol) basados en Docker con AIOX.
+Guía para configurar servidores MCP (Model Context Protocol) basados en Docker con YARD.
 
 **Versión:** 2.1.0
 **Última Actualización:** 2026-01-28
@@ -17,7 +17,7 @@ Antes de configurar Docker MCP, asegúrate de tener:
 
 - **Docker Desktop** instalado y en ejecución
 - **Node.js** 18+ instalado
-- Proyecto **AIOX** inicializado
+- Proyecto **YARD** inicializado
 - Claves API para los servicios MCP deseados (EXA, Apify, etc.)
 
 ---
@@ -38,7 +38,7 @@ docker mcp --version
 
 ```bash
 # Crear estructura MCP global
-aiox mcp setup
+yard mcp setup
 ```
 
 Esto crea:
@@ -52,9 +52,9 @@ Esto crea:
 
 ```bash
 # Agregar servidores desde plantillas
-aiox mcp add context7
-aiox mcp add exa
-aiox mcp add github
+yard mcp add context7
+yard mcp add exa
+yard mcp add github
 ```
 
 ---
@@ -63,7 +63,7 @@ aiox mcp add github
 
 ### Arquitectura MCP
 
-AIOX usa Docker MCP Toolkit como infraestructura MCP principal:
+YARD usa Docker MCP Toolkit como infraestructura MCP principal:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -134,7 +134,7 @@ AIOX usa Docker MCP Toolkit como infraestructura MCP principal:
 
 ```bash
 # Agregar Context7
-aiox mcp add context7
+yard mcp add context7
 
 # Uso
 mcp__context7__resolve-library-id
@@ -151,7 +151,7 @@ mcp__context7__query-docs
 
 ```bash
 # Agregar EXA
-aiox mcp add exa
+yard mcp add exa
 
 # Configurar clave API
 export EXA_API_KEY="your-api-key"
@@ -172,7 +172,7 @@ mcp__exa__get_code_context_exa
 
 ```bash
 # Agregar Apify
-aiox mcp add apify
+yard mcp add apify
 
 # Configurar token API
 export APIFY_TOKEN="your-token"
@@ -193,7 +193,7 @@ mcp__docker-gateway__call-actor
 
 ```bash
 # Agregar GitHub
-aiox mcp add github
+yard mcp add github
 
 # Configurar token
 export GITHUB_TOKEN="your-token"
@@ -209,7 +209,7 @@ export GITHUB_TOKEN="your-token"
 
 ```bash
 # Agregar Playwright
-aiox mcp add puppeteer
+yard mcp add puppeteer
 ```
 
 **Usar para:**
@@ -227,40 +227,40 @@ aiox mcp add puppeteer
 
 ```bash
 # Inicializar configuración MCP global
-aiox mcp setup
+yard mcp setup
 
 # Forzar recreación (respaldar existente)
-aiox mcp setup --force
+yard mcp setup --force
 ```
 
 ### Gestión de Servidores
 
 ```bash
 # Agregar servidor desde plantilla
-aiox mcp add <server-name>
+yard mcp add <server-name>
 
 # Agregar con configuración personalizada
-aiox mcp add custom-server --config='{"command":"npx","args":["-y","package"]}'
+yard mcp add custom-server --config='{"command":"npx","args":["-y","package"]}'
 
 # Eliminar servidor
-aiox mcp remove <server-name>
+yard mcp remove <server-name>
 
 # Habilitar/deshabilitar servidores
-aiox mcp enable <server-name>
-aiox mcp disable <server-name>
+yard mcp enable <server-name>
+yard mcp disable <server-name>
 ```
 
 ### Estado y Listado
 
 ```bash
 # Listar servidores configurados
-aiox mcp list
+yard mcp list
 
 # Mostrar estado detallado
-aiox mcp status
+yard mcp status
 
 # Sincronizar al proyecto
-aiox mcp sync
+yard mcp sync
 ```
 
 ---
@@ -299,13 +299,13 @@ export APIFY_TOKEN="your-apify-token"
 
 ```bash
 # Agregar credencial
-aiox mcp credential set EXA_API_KEY "your-api-key"
+yard mcp credential set EXA_API_KEY "your-api-key"
 
 # Obtener credencial
-aiox mcp credential get EXA_API_KEY
+yard mcp credential get EXA_API_KEY
 
 # Listar credenciales (enmascaradas)
-aiox mcp credential list
+yard mcp credential list
 ```
 
 ---
@@ -358,13 +358,13 @@ apify-mcp-server:
 
 ```bash
 # Resetear configuración global
-aiox mcp setup --force
+yard mcp setup --force
 
 # Limpiar caché
 rm -rf ~/.yard/mcp/cache/*
 
 # Verificar configuración
-aiox mcp status --verbose
+yard mcp status --verbose
 
 # Probar servidor manualmente
 npx -y @modelcontextprotocol/server-github
@@ -423,4 +423,4 @@ Solo usar docker-gateway cuando:
 
 ---
 
-_Guía de Configuración de Docker MCP de Synkra AIOX v4.0_
+_Guía de Configuración de Docker MCP de Synkra YARD v4.0_

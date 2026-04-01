@@ -119,7 +119,7 @@ pm:
 
 | Task File | Used By | Status |
 |-----------|---------|--------|
-| `correct-course.md` | Delegated to @aiox-master | EXISTS |
+| `correct-course.md` | Delegated to @yard-master | EXISTS |
 | `execute-checklist.md` | Checklist execution | EXISTS |
 
 ---
@@ -459,10 +459,10 @@ graph TD
 | @pm -> @sm | Delegate | Story creation via `*draft` |
 | @pm -> @analyst | Delegate | Deep research via `*research` |
 | @pm -> @architect | Collaborate | Technical architecture decisions |
-| @pm -> @aiox-master | Escalate | Course corrections via `*correct-course` |
+| @pm -> @yard-master | Escalate | Course corrections via `*correct-course` |
 | @pm -> @devops | Delegate | Git push operations, PR creation |
 | @analyst -> @pm | Receives | Project brief for PRD creation |
-| @aiox-master -> @pm | Receives | Framework modification requests |
+| @yard-master -> @pm | Receives | Framework modification requests |
 
 ### Delegation Rules (from agent definition)
 
@@ -498,7 +498,7 @@ PM must NEVER emulate other agents within its context window. When a task requir
 - Technical architecture decisions
 - Technology selection
 
-**Escalates to @aiox-master when:**
+**Escalates to @yard-master when:**
 - Course corrections detected
 - Framework modifications needed
 
@@ -529,4 +529,4 @@ PM must NEVER emulate other agents within its context window. When a task requir
 
 ---
 
-*Traced from source on 2026-02-05 | Story AIOX-TRACE-001*
+*Traced from source on 2026-02-05 | Story YARD-TRACE-001*

@@ -4,7 +4,7 @@
   Última sincronização: 2026-01-26
 -->
 
-# Documentação do Framework AIOX
+# Documentação do Framework YARD
 
 > 🌐 [EN](../../framework/README.md) | **PT** | [ES](../../es/framework/README.md)
 
@@ -18,7 +18,7 @@
 
 ## Visão Geral
 
-Este diretório contém **documentação oficial do framework AIOX** que define padrões, patterns e estruturas aplicáveis em todos os projetos AIOX (greenfield e brownfield).
+Este diretório contém **documentação oficial do framework YARD** que define padrões, patterns e estruturas aplicáveis em todos os projetos YARD (greenfield e brownfield).
 
 **Propósito**: Separar documentação de nível de framework dos detalhes específicos de implementação do projeto.
 
@@ -36,7 +36,7 @@ Este diretório contém **documentação oficial do framework AIOX** que define 
 
 ## Aviso de Migração
 
-**IMPORTANTE**: Estes documentos agora estão no repositório `ernesto-langa/yard-core`. A migração do antigo org `aiox/yard-core` foi concluída em dezembro de 2024 como parte do OSR-9 (Rebranding).
+**IMPORTANTE**: Estes documentos agora estão no repositório `ernesto-langa/yard-core`. A migração do antigo org `yard/yard-core` foi concluída em dezembro de 2024 como parte do OSR-9 (Rebranding).
 
 ### Cronograma de Migração
 
@@ -59,7 +59,7 @@ Para compatibilidade retroativa, os docs do framework permanecem acessíveis em 
 
 ### Documentação do Framework (`docs/framework/`)
 
-- **Escopo**: Portável entre todos os projetos AIOX
+- **Escopo**: Portável entre todos os projetos YARD
 - **Exemplos**: Padrões de código, tech stack, estrutura de source tree
 - **Ciclo de vida**: Vive no repositório `ernesto-langa/yard-core`
 - **Alterações**: Requerem aprovação em nível de framework
@@ -77,7 +77,7 @@ Para compatibilidade retroativa, os docs do framework permanecem acessíveis em 
 
 ### Para Desenvolvedores
 
-1. **Leia os docs do framework durante o onboarding** - Entenda os padrões AIOX
+1. **Leia os docs do framework durante o onboarding** - Entenda os padrões YARD
 2. **Consulte durante o desenvolvimento** - Garanta conformidade com os patterns do framework
 3. **Proponha alterações via PRs** - Padrões do framework evoluem com input da comunidade
 
@@ -87,7 +87,7 @@ Para compatibilidade retroativa, os docs do framework permanecem acessíveis em 
 2. **Revise PRs para conformidade** - Garanta que o código segue os padrões documentados
 3. **Planeje a migração** - Prepare-se para a separação de repositórios em Q2 2026
 
-### Para Mantenedores do Framework AIOX
+### Para Mantenedores do Framework YARD
 
 1. **Controle de versão** - Acompanhe mudanças nos padrões do framework
 2. **Prontidão para migração** - Garanta que os docs estejam prontos para separação de repositórios
@@ -96,4 +96,4 @@ Para compatibilidade retroativa, os docs do framework permanecem acessíveis em 
 ---
 
 **Última Atualização**: 2025-12-14
-**Mantenedor**: Equipe do Framework AIOX
+**Mantenedor**: Equipe do Framework YARD

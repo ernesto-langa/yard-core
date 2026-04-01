@@ -9,7 +9,7 @@
 
 ## Visão Geral
 
-O agente **@data-engineer (Dara)** e o Database Architect & Operations Engineer do AIOX, responsavel pelo design de schemas, migracoes, seguranca (RLS), otimizacao de performance e operacoes de DBA. Este agente atua como um **Sage** que modela dominios de negocio, implementa migracoes seguras com snapshots e rollback, e garante integridade e seguranca dos dados.
+O agente **@data-engineer (Dara)** e o Database Architect & Operations Engineer do YARD, responsavel pelo design de schemas, migracoes, seguranca (RLS), otimizacao de performance e operacoes de DBA. Este agente atua como um **Sage** que modela dominios de negocio, implementa migracoes seguras com snapshots e rollback, e garante integridade e seguranca dos dados.
 
 ### Caracteristicas Principais
 
@@ -89,7 +89,7 @@ O agente **@data-engineer (Dara)** e o Database Architect & Operations Engineer 
 | Arquivo | Propósito |
 |---------|-----------|
 | `.yard-core/development/agents/data-engineer.md` | Definição core do agente @data-engineer (persona, comandos, workflows) |
-| `.claude/commands/AIOX/agents/data-engineer.md` | Comando Claude Code para ativar @data-engineer |
+| `.claude/commands/YARD/agents/data-engineer.md` | Comando Claude Code para ativar @data-engineer |
 
 ### Arquivos de Templates SQL
 

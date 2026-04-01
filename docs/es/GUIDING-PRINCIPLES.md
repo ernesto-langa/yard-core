@@ -4,13 +4,13 @@
   Última sincronización: 2026-01-26
 -->
 
-# Principios Rectores del Método AIOX
+# Principios Rectores del Método YARD
 
 > 🌐 [EN](../GUIDING-PRINCIPLES.md) | [PT](../pt/GUIDING-PRINCIPLES.md) | **ES**
 
 ---
 
-El Método AIOX es un framework de lenguaje natural para el desarrollo de software asistido por IA. Estos principios aseguran que las contribuciones mantengan la efectividad del método.
+El Método YARD es un framework de lenguaje natural para el desarrollo de software asistido por IA. Estos principios aseguran que las contribuciones mantengan la efectividad del método.
 
 ## Principios Fundamentales
 
@@ -75,7 +75,7 @@ Vea la [Visión General de Squads](../guides/squads-overview.md) para ejemplos d
 
 ### Reglas de Plantillas
 
-Las plantillas siguen la especificación de [Plantilla de Documento AIOX](../../common/utils/aiox-doc-template.md) usando formato YAML:
+Las plantillas siguen la especificación de [Plantilla de Documento YARD](../../common/utils/yard-doc-template.md) usando formato YAML:
 
 1. **Estructura**: Las plantillas se definen en YAML con metadatos claros, configuración de flujo de trabajo y jerarquía de secciones
 2. **Separación de Responsabilidades**: Las instrucciones para LLMs están en campos `instruction`, separadas del contenido

@@ -47,7 +47,7 @@
 | `*list-squads`     | squad-creator-list.md        | ✅ 就绪     | 列出本地 squads  |
 | `*migrate-squad`   | squad-creator-migrate.md     | ✅ 就绪     | 迁移旧格式       |
 | `*download-squad`  | squad-creator-download.md    | ⏳ 占位符   | 从注册表下载     |
-| `*publish-squad`   | squad-creator-publish.md     | ⏳ 占位符   | 发布到 aiox-squads |
+| `*publish-squad`   | squad-creator-publish.md     | ⏳ 占位符   | 发布到 yard-squads |
 | `*sync-squad-synkra` | squad-creator-sync-synkra.md | ⏳ 占位符  | 同步到市场       |
 
 ### 现有脚本
@@ -60,7 +60,7 @@
 | SquadDesigner   | squad-designer.js    | 从文档设计       |
 | SquadMigrator   | squad-migrator.js    | 迁移旧格式       |
 | SquadDownloader | squad-downloader.js  | 从注册表下载     |
-| SquadPublisher  | squad-publisher.js   | 发布到 aiox-squads |
+| SquadPublisher  | squad-publisher.js   | 发布到 yard-squads |
 
 ---
 

@@ -12,7 +12,7 @@
 
 ## Visão Geral
 
-Este guia explica como ferramentas são integradas com agentes AIOX. Ferramentas estendem as capacidades dos agentes fornecendo acesso a serviços externos, APIs e recursos do sistema.
+Este guia explica como ferramentas são integradas com agentes YARD. Ferramentas estendem as capacidades dos agentes fornecendo acesso a serviços externos, APIs e recursos do sistema.
 
 ---
 
@@ -200,7 +200,7 @@ Antes de marcar a story como "Pronto para Revisão":
 
 ## Arquitetura de Restrições de Git
 
-AIOX implementa governança rigorosa de operações git:
+YARD implementa governança rigorosa de operações git:
 
 ### Permissões do Agente @dev
 

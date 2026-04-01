@@ -1,21 +1,21 @@
-# @aiox-master 系统
+# @yard-master 系统
 
 > **版本:** 1.0.0
 > **创建:** 2026-02-04
-> **所有者:** @aiox-master (Orion)
+> **所有者:** @yard-master (Orion)
 > **状态:** 官方文档
 
 ---
 
 ## 概览
 
-**@aiox-master** (Orion - 协调器) 是 AIOX-FULLSTACK 框架的元代理。他充当通用协调器、框架开发者和 AIOX 方法专家。主要职责包括:
+**@yard-master** (Orion - 协调器) 是 YARD-FULLSTACK 框架的元代理。他充当通用协调器、框架开发者和 YARD 方法专家。主要职责包括:
 
 - **通用协调**: 直接执行任何代理的任何任务
 - **框架开发**: 创建和修改代理、任务、工作流和模板
 - **组件管理**: 验证、弃用和分析系统组件
 - **多代理协调**: 管理代理之间的复杂工作流
-- **知识库**: 访问完整的 AIOX 方法知识
+- **知识库**: 访问完整的 YARD 方法知识
 
 ### 何时使用
 
@@ -23,13 +23,13 @@
 - 协调复杂的多代理工作流
 - 直接执行任何任务而不改变角色
 - 元框架操作和跨代理协调
-- 访问 AIOX 知识库 (*kb)
+- 访问 YARD 知识库 (*kb)
 
 ---
 
 ## 完整文件列表
 
-### @aiox-master 的核心任务文件
+### @yard-master 的核心任务文件
 
 | 文件 | 命令 | 目的 |
 |---------|---------|-----------|
@@ -59,8 +59,8 @@
 
 | 文件 | 目的 |
 |---------|-----------|
-| `.yard-core/development/agents/aiox-master.md` | 完整代理定义(角色、命令、依赖) |
-| `.claude/commands/AIOX/agents/aiox-master.md` | Claude Code 命令用于激活 @aiox-master |
+| `.yard-core/development/agents/yard-master.md` | 完整代理定义(角色、命令、依赖) |
+| `.claude/commands/YARD/agents/yard-master.md` | Claude Code 命令用于激活 @yard-master |
 
 ---
 
@@ -68,7 +68,7 @@
 
 | 方面 | 详情 |
 |---------|----------|
-| **代理名称** | Orion (aiox-master) |
+| **代理名称** | Orion (yard-master) |
 | **原型** | 协调器 |
 | **直接任务总数** | 21 个任务 |
 | **模板总数** | 14 个模板 |

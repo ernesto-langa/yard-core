@@ -1,6 +1,6 @@
 <!-- 翻译：zh-CN 原文：/docs/framework/source-tree.md 最后同步：2026-02-22 -->
 
-# AIOX 源代码树结构
+# YARD 源代码树结构
 
 > [EN](../../framework/source-tree.md) | [PT](../../pt/framework/source-tree.md) | [ES](../../es/framework/source-tree.md) | **ZH**
 
@@ -27,7 +27,7 @@
 
 ## 概述
 
-AIOX 使用**模块化架构**，具有清晰的关注点分离：
+YARD 使用**模块化架构**，具有清晰的关注点分离：
 
 1. **框架核心** (`.yard-core/`) - 按领域组织的可移植框架组件
 2. **项目工作区** (root) - 项目特定的实现
@@ -69,7 +69,7 @@ yard-core/                             # 根项目
 │   └── squad/                         # Squad 模板（参见 docs/guides/squads-guide.md）
 │
 ├── bin/                               # CLI 可执行文件
-│   └── aiox.js                        # 主 CLI 入口点
+│   └── yard.js                        # 主 CLI 入口点
 │
 ├── tools/                             # 构建和实用工具
 │   ├── cli.js                         # CLI 构建器
@@ -125,14 +125,14 @@ yard-core/                             # 根项目
 │   └── utils/                         # 核心实用工具
 │
 ├── data/                              # 共享数据
-│   ├── aiox-kb.md                     # AIOX 知识库（@aiox-master，延迟加载）
+│   ├── yard-kb.md                     # YARD 知识库（@yard-master，延迟加载）
 │   ├── agent-config-requirements.yaml # 每个代理的配置加载规则（@architect，代理变更时更新）
 │   ├── technical-preferences.md       # 用户/团队技术偏好（@architect，偏好变更时更新）
 │   └── workflow-patterns.yaml         # 工作流检测模式（@sm，工作流变更时更新）
 │
 ├── development/                       # 开发资产
 │   ├── agents/                        # 代理定义（11个核心代理）
-│   │   ├── aiox-master.md             # 主编排器
+│   │   ├── yard-master.md             # 主编排器
 │   │   ├── dev.md                     # 开发者代理
 │   │   ├── qa.md                      # QA 工程师代理
 │   │   ├── architect.md               # 系统架构师代理
@@ -277,7 +277,7 @@ Infrastructure Scripts:
 
 | 文件 | 所有者 | 填充规则 | 更新触发器 | 使用者 |
 |------|--------|----------|------------|--------|
-| `aiox-kb.md` | @aiox-master | 框架重大变更时更新 | 手动编辑 | @aiox-master (延迟) |
+| `yard-kb.md` | @yard-master | 框架重大变更时更新 | 手动编辑 | @yard-master (延迟) |
 | `agent-config-requirements.yaml` | @architect | 代理配置需求变更时更新 | 故事驱动 | AgentConfigLoader |
 | `technical-preferences.md` | @architect | 偏好变更时更新 | 手动编辑或 `*add-tech-doc` | @dev, @qa, @devops, @architect, @data-engineer |
 | `workflow-patterns.yaml` | @sm | 工作流变更时更新 | 手动编辑 | @sm, WorkflowNavigator |
@@ -315,7 +315,7 @@ docs/
 │   └── README.md                      # 迁移通知
 │
 ├── stories/                           # 开发故事
-│   ├── aiox migration/                # AIOX 迁移故事
+│   ├── yard migration/                # YARD 迁移故事
 │   │   ├── story-6.1.2.1.md
 │   │   ├── story-6.1.2.2.md
 │   │   ├── story-6.1.2.3.md
@@ -390,7 +390,7 @@ docs/
 
 ### 概述
 
-Squads 是为 AIOX 添加专门功能的模块化扩展。与已弃用的 Squads 不同，Squads 遵循标准化的模板结构。
+Squads 是为 YARD 添加专门功能的模块化扩展。与已弃用的 Squads 不同，Squads 遵循标准化的模板结构。
 
 ### Squad 模板位置
 
@@ -417,7 +417,7 @@ templates/squad/                       # 用于创建扩展的 Squad 模板
 
 ```bash
 # 未来 CLI（计划中）：
-npx create-aiox-squad my-squad-name
+npx create-yard-squad my-squad-name
 
 # 当前方法：
 cp -r templates/squad/ squads/my-squad-name/
@@ -489,7 +489,7 @@ yard-core/
 │   └── ...
 │
 ├── bin/                               # CLI 入口点
-│   └── aiox.js                        # 主 CLI
+│   └── yard.js                        # 主 CLI
 │
 ├── tools/                             # 构建和实用工具
 │   ├── cli.js                         # CLI 构建器
@@ -519,7 +519,7 @@ yard-core/
 
 ```
 squads/
-├── verified/                          # AIOX 认证的 squads
+├── verified/                          # YARD 认证的 squads
 │   ├── github-devops/
 │   ├── db-sage/
 │   └── coderabbit-workflow/
@@ -534,7 +534,7 @@ squads/
 │   └── agent-squad/
 │
 └── tools/                             # Squad 开发工具
-    └── create-aiox-squad/
+    └── create-yard-squad/
 ```
 
 ### 仓库3: SynkraAI/mcp-ecosystem (Apache 2.0)
@@ -542,9 +542,9 @@ squads/
 ```
 mcp-ecosystem/
 ├── presets/                           # MCP 预设（Docker MCP Toolkit）
-│   ├── aiox-dev/
-│   ├── aiox-research/
-│   └── aiox-docker/
+│   ├── yard-dev/
+│   ├── yard-research/
+│   └── yard-docker/
 │
 ├── mcps/                              # 基础 MCP 配置
 │   ├── exa/
@@ -601,7 +601,7 @@ mmos/
 Directories: kebab-case (lowercase, hyphen-separated)
   ✅ .yard-core/
   ✅ Squads/
-  ❌ .AIOX-Core/
+  ❌ .YARD-Core/
   ❌ legacy-packs/
 
 Files (Code): kebab-case with extension
@@ -887,4 +887,4 @@ ade:
 
 ---
 
-_这是官方 AIOX 框架标准。所有文件放置必须遵循此结构。_
+_这是官方 YARD 框架标准。所有文件放置必须遵循此结构。_

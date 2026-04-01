@@ -4,7 +4,7 @@
 
 ---
 
-This guide provides comprehensive instructions for uninstalling Synkra AIOX from your system.
+This guide provides comprehensive instructions for uninstalling Synkra YARD from your system.
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ This guide provides comprehensive instructions for uninstalling Synkra AIOX from
 
 ### Important Considerations
 
-⚠️ **Warning**: Uninstalling Synkra AIOX will:
+⚠️ **Warning**: Uninstalling Synkra YARD will:
 
 - Remove all framework files
 - Delete agent configurations (unless preserved)
@@ -59,7 +59,7 @@ tar -czf yard-backup-$(date +%Y%m%d).tar.gz \
 
 ### Using Built-in Uninstaller
 
-The fastest way to uninstall Synkra AIOX:
+The fastest way to uninstall Synkra YARD:
 
 ```bash
 # Basic uninstall (preserves user data)
@@ -143,24 +143,24 @@ npm cache clean --force
 Remove-Item -Recurse -Force "$env:APPDATA\yard-core"
 
 # Remove temp files
-Remove-Item -Recurse -Force "$env:TEMP\aiox-*"
+Remove-Item -Recurse -Force "$env:TEMP\yard-*"
 
 # Remove registry entries (if any)
-Remove-Item -Path "HKCU:\Software\Synkra AIOX" -Recurse
+Remove-Item -Path "HKCU:\Software\Synkra YARD" -Recurse
 ```
 
 #### macOS/Linux
 
 ```bash
 # Remove config files
-rm -rf ~/.aiox
+rm -rf ~/.yard
 rm -rf ~/.config/yard-core
 
 # Remove cache
 rm -rf ~/.cache/yard-core
 
 # Remove temp files
-rm -rf /tmp/aiox-*
+rm -rf /tmp/yard-*
 ```
 
 ## Selective Uninstall
@@ -276,11 +276,11 @@ Create `clean-uninstall.sh`:
 
 ```bash
 #!/bin/bash
-echo "Synkra AIOX Complete Uninstall"
+echo "Synkra YARD Complete Uninstall"
 echo "================================="
 
 # Confirmation
-read -p "This will remove ALL Synkra AIOX data. Continue? (y/N) " -n 1 -r
+read -p "This will remove ALL Synkra YARD data. Continue? (y/N) " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     exit 1
@@ -289,7 +289,7 @@ fi
 # Stop all processes
 echo "Stopping all processes..."
 pkill -f "yard-core" || true
-pkill -f "aiox-developer" || true
+pkill -f "yard-developer" || true
 
 # Remove project files
 echo "Removing project files..."
@@ -307,7 +307,7 @@ npm uninstall -g yard-core
 
 # Remove user data
 echo "Removing user data..."
-rm -rf ~/.aiox
+rm -rf ~/.yard
 rm -rf ~/.config/yard-core
 rm -rf ~/.cache/yard-core
 
@@ -328,7 +328,7 @@ echo "Uninstall complete!"
 
 ```powershell
 # PowerShell script for Windows cleanup
-Write-Host "Cleaning Synkra AIOX from Windows Registry..."
+Write-Host "Cleaning Synkra YARD from Windows Registry..."
 
 # Remove from PATH
 $path = [Environment]::GetEnvironmentVariable("PATH", "User")
@@ -336,10 +336,10 @@ $newPath = ($path.Split(';') | Where-Object { $_ -notmatch 'yard-core' }) -join 
 [Environment]::SetEnvironmentVariable("PATH", $newPath, "User")
 
 # Remove registry keys
-Remove-ItemProperty -Path "HKCU:\Environment" -Name "AIOX_*" -ErrorAction SilentlyContinue
+Remove-ItemProperty -Path "HKCU:\Environment" -Name "YARD_*" -ErrorAction SilentlyContinue
 
 # Remove file associations
-Remove-Item -Path "HKCU:\Software\Classes\.aiox" -Recurse -ErrorAction SilentlyContinue
+Remove-Item -Path "HKCU:\Software\Classes\.yard" -Recurse -ErrorAction SilentlyContinue
 
 Write-Host "Registry cleanup complete!"
 ```
@@ -379,15 +379,15 @@ taskkill /F /IM yard-core.exe
 lsof | grep yard
 
 # Windows (PowerShell)
-Get-Process | Where-Object {$_.Path -like "*aiox*"}
+Get-Process | Where-Object {$_.Path -like "*yard*"}
 ```
 
 #### 4. Incomplete Removal
 
 ```bash
 # Manual cleanup
-find . -name "*aiox*" -type d -exec rm -rf {} +
-find . -name "*.aiox*" -type f -delete
+find . -name "*yard*" -type d -exec rm -rf {} +
+find . -name "*.yard*" -type f -delete
 ```
 
 ### Force Uninstall
@@ -397,16 +397,16 @@ If normal uninstall fails:
 ```bash
 #!/bin/bash
 # force-uninstall.sh
-echo "Force uninstalling Synkra AIOX..."
+echo "Force uninstalling Synkra YARD..."
 
 # Kill all related processes
-pkill -9 -f aiox || true
+pkill -9 -f yard || true
 
 # Remove all files
-rm -rf .aiox* aiox* *aiox*
+rm -rf .yard* yard* *yard*
 rm -rf agents workflows tasks templates
 rm -rf node_modules/yard-core
-rm -rf ~/.aiox* ~/.config/aiox* ~/.cache/aiox*
+rm -rf ~/.yard* ~/.config/yard* ~/.cache/yard*
 
 # Clean npm
 npm cache clean --force
@@ -421,8 +421,8 @@ echo "Force uninstall complete!"
 
 ```bash
 # Check for remaining files
-find . -name "*aiox*" 2>/dev/null
-find ~ -name "*aiox*" 2>/dev/null
+find . -name "*yard*" 2>/dev/null
+find ~ -name "*yard*" 2>/dev/null
 
 # Check npm packages
 npm list -g | grep yard
@@ -436,11 +436,11 @@ ps aux | grep yard
 
 ```bash
 # Remove from .bashrc/.zshrc
-sed -i '/AIOX_/d' ~/.bashrc
+sed -i '/YARD_/d' ~/.bashrc
 sed -i '/yard-core/d' ~/.bashrc
 
 # Remove from .env files
-find . -name ".env*" -exec sed -i '/AIOX_/d' {} \;
+find . -name ".env*" -exec sed -i '/YARD_/d' {} \;
 ```
 
 ### 3. Update Project Files
@@ -450,7 +450,7 @@ find . -name ".env*" -exec sed -i '/AIOX_/d' {} \;
 {
   "scripts": {
     // Remove these entries
-    "aiox": "yard-core",
+    "yard": "yard-core",
     "meta-agent": "yard-core meta-agent"
   }
 }
@@ -459,23 +459,23 @@ find . -name ".env*" -exec sed -i '/AIOX_/d' {} \;
 ### 4. Clean Git Repository
 
 ```bash
-# Remove AIOX-specific git hooks
-rm -f .git/hooks/*aiox*
+# Remove YARD-specific git hooks
+rm -f .git/hooks/*yard*
 
 # Update .gitignore
 sed -i '/.yard/d' .gitignore
-sed -i '/aiox-/d' .gitignore
+sed -i '/yard-/d' .gitignore
 
 # Commit removal
 git add -A
-git commit -m "Remove Synkra AIOX"
+git commit -m "Remove Synkra YARD"
 ```
 
 ## Reinstallation
 
 ### After Complete Uninstall
 
-If you want to reinstall Synkra AIOX:
+If you want to reinstall Synkra YARD:
 
 1. **Wait for cleanup**
 
@@ -516,7 +516,7 @@ cp -r ~/yard-backup/agents/* ./agents/
 
 ## Uninstall Verification Checklist
 
-- [ ] All AIOX processes stopped
+- [ ] All YARD processes stopped
 - [ ] Project files removed
 - [ ] Global npm package uninstalled
 - [ ] User configuration files deleted
@@ -524,7 +524,7 @@ cp -r ~/yard-backup/agents/* ./agents/
 - [ ] Environment variables removed
 - [ ] Registry entries cleaned (Windows)
 - [ ] Git repository updated
-- [ ] No remaining AIOX files found
+- [ ] No remaining YARD files found
 - [ ] System PATH updated
 
 ## Getting Help

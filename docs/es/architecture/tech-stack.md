@@ -8,7 +8,7 @@
 
 ---
 
-# Stack Tecnologico AIOX
+# Stack Tecnologico YARD
 
 > 🌐 [EN](../../architecture/tech-stack.md) | [PT](../../pt/architecture/tech-stack.md) | **ES**
 
@@ -37,7 +37,7 @@
 
 ## Descripcion General
 
-AIOX esta construido sobre JavaScript/TypeScript moderno con runtime Node.js, optimizado para desarrollo CLI multiplataforma con UX interactivo y capacidades de orquestacion de agentes.
+YARD esta construido sobre JavaScript/TypeScript moderno con runtime Node.js, optimizado para desarrollo CLI multiplataforma con UX interactivo y capacidades de orquestacion de agentes.
 
 **Filosofia:**
 
@@ -534,7 +534,7 @@ npm run publish:stable         # Publicar tag latest
 
 ### Servidores MCP
 
-AIOX se integra con servidores Model Context Protocol (MCP):
+YARD se integra con servidores Model Context Protocol (MCP):
 
 ```yaml
 Servidores MCP:
@@ -769,10 +769,10 @@ Node.js: nvm, apt, yum, o binarios oficiales
 ## Variables de Entorno
 
 ```bash
-# Configuracion AIOX
-AIOX_DEBUG=true                    # Habilitar logging de debug
-AIOX_CONFIG_PATH=/ruta/custom      # Ubicacion de config personalizada
-AIOX_YOLO_MODE=true               # Forzar modo yolo
+# Configuracion YARD
+YARD_DEBUG=true                    # Habilitar logging de debug
+YARD_CONFIG_PATH=/ruta/custom      # Ubicacion de config personalizada
+YARD_YOLO_MODE=true               # Forzar modo yolo
 
 # Node.js
 NODE_ENV=production                # Modo produccion
@@ -803,4 +803,4 @@ SUPABASE_ACCESS_TOKEN=xxx         # Auth Supabase CLI
 
 ---
 
-_Este es un estandar oficial del framework AIOX. Todas las elecciones de tecnologia deben alinearse con este stack._
+_Este es un estandar oficial del framework YARD. Todas las elecciones de tecnologia deben alinearse con este stack._

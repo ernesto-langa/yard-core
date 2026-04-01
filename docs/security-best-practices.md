@@ -1,10 +1,10 @@
-# Synkra AIOX Security Best Practices
+# Synkra YARD Security Best Practices
 
 > 🌐 **EN** | [PT](./pt/security-best-practices.md) | [ES](./es/security-best-practices.md)
 
 ---
 
-This guide provides comprehensive security recommendations for deploying and maintaining Synkra AIOX in production environments.
+This guide provides comprehensive security recommendations for deploying and maintaining Synkra YARD in production environments.
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ This guide provides comprehensive security recommendations for deploying and mai
 
 ## Security Architecture Overview
 
-Synkra AIOX implements a multi-layered security approach:
+Synkra YARD implements a multi-layered security approach:
 
 ```
 ┌─────────────────────────────────────────┐
@@ -217,7 +217,7 @@ CORS_ORIGIN=https://yourdomain.com
 # Audit logging
 AUDIT_LOG_ENABLED=true
 AUDIT_LOG_LEVEL=info
-AUDIT_LOG_FILE=/var/log/aiox/audit.log
+AUDIT_LOG_FILE=/var/log/yard/audit.log
 ```
 
 ### File Permissions

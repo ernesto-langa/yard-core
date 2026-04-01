@@ -1,10 +1,10 @@
 # Brownfield Discovery Workflow
 
-> **EN** | [PT](../../aiox-workflows/brownfield-discovery-workflow.md) | [ES](../../es/aiox-workflows/brownfield-discovery-workflow.md)
+> **EN** | [PT](../../yard-workflows/brownfield-discovery-workflow.md) | [ES](../../es/yard-workflows/brownfield-discovery-workflow.md)
 
 ---
 
-**Full documentation available in:** [Portuguese Version](../../aiox-workflows/brownfield-discovery-workflow.md)
+**Full documentation available in:** [Portuguese Version](../../yard-workflows/brownfield-discovery-workflow.md)
 
 ---
 
@@ -47,4 +47,4 @@ A comprehensive discovery document that enables informed decisions for subsequen
 
 ---
 
-*For complete details, diagrams, and step-by-step instructions, see the [Portuguese documentation](../../aiox-workflows/brownfield-discovery-workflow.md).*
+*For complete details, diagrams, and step-by-step instructions, see the [Portuguese documentation](../../yard-workflows/brownfield-discovery-workflow.md).*

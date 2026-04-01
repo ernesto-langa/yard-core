@@ -10,7 +10,7 @@ This PR implements comprehensive security hardening for the post-install validat
 | ------------------------------------------------ | ------------ | ---------------------------------------- |
 | `src/installer/post-install-validator.js`        | **Modified** | Complete rewrite with security hardening |
 | `src/installer/manifest-signature.js`            | **New**      | Ed25519 signature verification module    |
-| `bin/aiox-init.js`                               | **Modified** | Added `requireSignature` option          |
+| `bin/yard-init.js`                               | **Modified** | Added `requireSignature` option          |
 | `tests/installer/post-install-validator.test.js` | **New**      | Security test suite                      |
 | `docs/security/MANIFEST_SIGNING.md`              | **New**      | Signing workflow documentation           |
 
@@ -120,7 +120,7 @@ None. The validator maintains backward compatibility:
 
    ```javascript
    const PINNED_PUBLIC_KEY = {
-     keyId: 'AIOX0001',
+     keyId: 'YARD0001',
      publicKey: 'YOUR_BASE64_PUBLIC_KEY_HERE',
      algorithm: 'Ed25519',
    };

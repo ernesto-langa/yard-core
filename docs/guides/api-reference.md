@@ -1,10 +1,10 @@
-# AIOX API Reference
+# YARD API Reference
 
 > **EN** | [PT](../pt/guides/api-reference.md) | [ES](../es/guides/api-reference.md)
 
 ---
 
-Complete API reference for Synkra AIOX - the AI-Orchestrated System for Full Stack Development.
+Complete API reference for Synkra YARD - the AI-Orchestrated System for Full Stack Development.
 
 **Version:** 2.1.0
 **Last Updated:** 2026-01-29
@@ -29,14 +29,14 @@ Complete API reference for Synkra AIOX - the AI-Orchestrated System for Full Sta
 
 ### API Architecture
 
-AIOX provides a unified API for interacting with specialized AI agents through two primary mechanisms:
+YARD provides a unified API for interacting with specialized AI agents through two primary mechanisms:
 
 1. **Agent Activation** - Using `@` prefix to activate specialized agents
 2. **Command Execution** - Using `*` prefix to execute agent commands
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                      AIOX API Layer                          │
+│                      YARD API Layer                          │
 ├─────────────────────────────────────────────────────────────┤
 │  @agent         →  Activates agent persona                   │
 │  *command       →  Executes agent command                    │
@@ -87,7 +87,7 @@ AIOX provides a unified API for interacting with specialized AI agents through t
 | `@data-engineer` | Dara   | Architect    | Database schema, migrations, queries     |
 | `@devops`        | Gage   | Optimizer    | CI/CD, deployment, git operations        |
 | `@ux-expert`     | Uma    | Creator      | UI/UX design, wireframes                 |
-| `@aiox-master`   | Orion  | Orchestrator | Framework orchestration, meta-operations |
+| `@yard-master`   | Orion  | Orchestrator | Framework orchestration, meta-operations |
 
 ### Activation Behavior
 
@@ -391,13 +391,13 @@ Task execution with arguments: { story: "story-1.2.3" }
 
 ---
 
-### @aiox-master (Orchestrator)
+### @yard-master (Orchestrator)
 
 **Framework Development:**
 
 | Command                | Arguments       | Description                                 |
 | ---------------------- | --------------- | ------------------------------------------- |
-| `*create`              | `{type} {name}` | Create AIOX component (agent/task/workflow) |
+| `*create`              | `{type} {name}` | Create YARD component (agent/task/workflow) |
 | `*modify`              | `{type} {name}` | Modify existing component                   |
 | `*validate-component`  | `{name}`        | Validate component security                 |
 | `*deprecate-component` | `{name}`        | Deprecate with migration path               |
@@ -415,7 +415,7 @@ Task execution with arguments: { story: "story-1.2.3" }
 | Command | Arguments                  | Description                            |
 | ------- | -------------------------- | -------------------------------------- |
 | `*plan` | `[create\|status\|update]` | Workflow planning                      |
-| `*kb`   | -                          | Toggle KB mode (AIOX Method knowledge) |
+| `*kb`   | -                          | Toggle KB mode (YARD Method knowledge) |
 
 **Document Operations:**
 
@@ -445,7 +445,7 @@ Task execution with arguments: { story: "story-1.2.3" }
 
 ```bash
 # Start workflow
-@aiox-master *workflow greenfield-fullstack
+@yard-master *workflow greenfield-fullstack
 
 # With parameters
 *workflow brownfield-service --target=./services/auth
@@ -580,7 +580,7 @@ phases:
 ### IDE Configuration
 
 ```yaml
-# .aiox-sync.yaml
+# .yard-sync.yaml
 version: 1.0.0
 active_ides:
   - claude
@@ -624,7 +624,7 @@ Claude Code is the primary supported IDE with full integration:
 /dev          → Activates @dev agent
 /qa           → Activates @qa agent
 /architect    → Activates @architect agent
-/aiox-master  → Activates @aiox-master agent
+/yard-master  → Activates @yard-master agent
 ```
 
 **Directory Structure:**
@@ -632,7 +632,7 @@ Claude Code is the primary supported IDE with full integration:
 ```
 .claude/
 ├── commands/
-│   └── AIOX/
+│   └── YARD/
 │       └── agents/
 │           ├── dev.md
 │           ├── qa.md
@@ -782,7 +782,7 @@ alwaysApply: false
 
 ```bash
 # 1. Activate master orchestrator
-@aiox-master
+@yard-master
 
 # 2. Enable knowledge base
 *kb
@@ -833,7 +833,7 @@ What do you need?
 │  └─ @ux-expert
 │
 └─ Framework/Orchestration?
-   └─ @aiox-master
+   └─ @yard-master
 ```
 
 ---
@@ -887,13 +887,13 @@ For parallel development:
 
 ## Related Documentation
 
-- [User Guide](./user-guide.md) - Getting started with AIOX
+- [User Guide](./user-guide.md) - Getting started with YARD
 - [Agent Selection Guide](./agent-selection-guide.md) - Choosing the right agent
 - [ADE Guide](./ade-guide.md) - Autonomous Development Engine
 - [Quality Gates](./quality-gates.md) - Quality assurance workflows
 - [IDE Sync Guide](./ide-sync-guide.md) - Multi-IDE synchronization
-- [Squads Guide](./squads-guide.md) - Extending AIOX with squads
+- [Squads Guide](./squads-guide.md) - Extending YARD with squads
 
 ---
 
-_Synkra AIOX API Reference v4.0.4_
+_Synkra YARD API Reference v4.0.4_

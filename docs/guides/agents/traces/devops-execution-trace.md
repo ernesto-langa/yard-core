@@ -739,7 +739,7 @@ graph TD
 
 **Enforcement mechanism:**
 - Git pre-push hook at `.git/hooks/pre-push`
-- Checks `$AIOX_ACTIVE_AGENT` environment variable
+- Checks `$YARD_ACTIVE_AGENT` environment variable
 - Blocks push if agent != "github-devops"
 
 ---
@@ -761,4 +761,4 @@ graph TD
 
 ---
 
-*Traced from source on 2026-02-05 | Story AIOX-TRACE-001*
+*Traced from source on 2026-02-05 | Story YARD-TRACE-001*

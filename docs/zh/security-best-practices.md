@@ -1,10 +1,10 @@
-# Synkra AIOX 安全最佳实践
+# Synkra YARD 安全最佳实践
 
 > 🌐 [EN](../security-best-practices.md) | [PT](../pt/security-best-practices.md) | [ES](../es/security-best-practices.md)
 
 ---
 
-本指南为在生产环境中部署和维护 Synkra AIOX 提供了全面的安全建议。
+本指南为在生产环境中部署和维护 Synkra YARD 提供了全面的安全建议。
 
 ## 目录
 
@@ -21,7 +21,7 @@
 
 ## 安全架构概述
 
-Synkra AIOX 实现了多层安全方法：
+Synkra YARD 实现了多层安全方法：
 
 ```
 ┌─────────────────────────────────────────┐
@@ -217,7 +217,7 @@ CORS_ORIGIN=https://yourdomain.com
 # 审计日志
 AUDIT_LOG_ENABLED=true
 AUDIT_LOG_LEVEL=info
-AUDIT_LOG_FILE=/var/log/aiox/audit.log
+AUDIT_LOG_FILE=/var/log/yard/audit.log
 ```
 
 ### 文件权限

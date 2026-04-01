@@ -10,13 +10,13 @@
 
 ---
 
-Como contribuir squads para o ecossistema AIOX.
+Como contribuir squads para o ecossistema YARD.
 
 ## Visão Geral
 
 Existem duas formas de compartilhar seu squad com a comunidade:
 
-1. **Repositório aiox-squads** - Squads gratuitos e open-source no GitHub
+1. **Repositório yard-squads** - Squads gratuitos e open-source no GitHub
 2. **Synkra Marketplace** - Squads premium via API Synkra
 
 ## Padrões de Qualidade
@@ -30,7 +30,7 @@ Todos os squads contribuídos devem atender a estes padrões:
 | **Manifesto válido** | `squad.yaml` passa validação JSON Schema |
 | **Documentação** | README.md com instruções de uso |
 | **Licença** | Licença open source (MIT, Apache 2.0, etc.) |
-| **Compatibilidade AIOX** | `aiox.minVersion: "2.1.0"` ou superior |
+| **Compatibilidade YARD** | `yard.minVersion: "2.1.0"` ou superior |
 | **Arquitetura task-first** | Tasks como pontos de entrada principais |
 
 ### Recomendado
@@ -71,7 +71,7 @@ name: my-squad
 version: 1.0.0              # Versionamento semântico
 description: Descrição clara do que este squad faz
 
-aiox:
+yard:
   minVersion: "2.1.0"
   type: squad
 
@@ -139,7 +139,7 @@ Problemas comuns e soluções.
 Informações da licença.
 ```
 
-## Publicando no aiox-squads
+## Publicando no yard-squads
 
 ### Pré-requisitos
 
@@ -159,7 +159,7 @@ Informações da licença.
 ```
 
 Isso irá:
-1. Fazer fork de `SynkraAI/aiox-squads` (se necessário)
+1. Fazer fork de `SynkraAI/yard-squads` (se necessário)
 2. Criar branch com seu squad
 3. Abrir PR para revisão
 
@@ -229,7 +229,7 @@ Siga versionamento semântico:
 - Teste seu squad antes de publicar
 - Responda a issues e feedback
 - Mantenha dependências mínimas
-- Siga convenções do AIOX
+- Siga convenções do YARD
 
 ### Não Faça
 
@@ -249,7 +249,7 @@ Siga versionamento semântico:
 
 - [Guia de Desenvolvimento de Squad](./squads-guide.md)
 - [Guia de Migração de Squad](./squad-migration.md)
-- [Repositório aiox-squads](https://github.com/SynkraAI/aiox-squads)
+- [Repositório yard-squads](https://github.com/SynkraAI/yard-squads)
 
 ---
 

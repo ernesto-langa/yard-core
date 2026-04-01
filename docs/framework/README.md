@@ -1,4 +1,4 @@
-# AIOX Framework Documentation
+# YARD Framework Documentation
 
 > 🌐 **EN** | [PT](../pt/framework/README.md) | [ES](../es/framework/README.md)
 
@@ -10,7 +10,7 @@
 
 ## 📋 Overview
 
-This directory contains **official AIOX framework documentation** that defines standards, patterns, and structures applicable across all AIOX projects (greenfield and brownfield).
+This directory contains **official YARD framework documentation** that defines standards, patterns, and structures applicable across all YARD projects (greenfield and brownfield).
 
 **Purpose**: Separate framework-level documentation from project-specific implementation details.
 
@@ -28,7 +28,7 @@ This directory contains **official AIOX framework documentation** that defines s
 
 ## 🔄 Migration Notice
 
-**⚠️ IMPORTANT**: These documents are now in the `ernesto-langa/yard-core` repository. The migration from the old `aiox/yard-core` org was completed in December 2024 as part of OSR-9 (Rebranding).
+**⚠️ IMPORTANT**: These documents are now in the `ernesto-langa/yard-core` repository. The migration from the old `yard/yard-core` org was completed in December 2024 as part of OSR-9 (Rebranding).
 
 ### Migration Timeline
 
@@ -49,7 +49,7 @@ For backward compatibility, framework docs remain accessible at **both** locatio
 ## 🏗️ Framework vs. Project Documentation
 
 ### Framework Documentation (`docs/framework/`)
-- **Scope**: Portable across all AIOX projects
+- **Scope**: Portable across all YARD projects
 - **Examples**: Coding standards, tech stack, source tree structure
 - **Lifecycle**: Lives in `ernesto-langa/yard-core` repository
 - **Changes**: Require framework-level approval
@@ -65,7 +65,7 @@ For backward compatibility, framework docs remain accessible at **both** locatio
 ## 📖 Usage Guidelines
 
 ### For Developers
-1. **Read framework docs during onboarding** - Understand AIOX standards
+1. **Read framework docs during onboarding** - Understand YARD standards
 2. **Reference during development** - Ensure compliance with framework patterns
 3. **Propose changes via PRs** - Framework standards evolve with community input
 
@@ -74,7 +74,7 @@ For backward compatibility, framework docs remain accessible at **both** locatio
 2. **Review PRs for compliance** - Ensure code follows documented standards
 3. **Plan migration** - Prepare for Q2 2026 repository split
 
-### For AIOX Framework Maintainers
+### For YARD Framework Maintainers
 1. **Version control** - Track changes to framework standards
 2. **Migration readiness** - Ensure docs are ready for repository separation
 3. **Cross-project consistency** - Apply standards uniformly
@@ -92,4 +92,4 @@ For backward compatibility, framework docs remain accessible at **both** locatio
 ---
 
 **Last Updated**: 2026-01-28
-**Maintainer**: AIOX Framework Team
+**Maintainer**: YARD Framework Team

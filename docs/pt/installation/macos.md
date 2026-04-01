@@ -4,7 +4,7 @@
   Última sincronização: 2026-01-26
 -->
 
-# Guia de Instalação para macOS - Synkra AIOX
+# Guia de Instalação para macOS - Synkra YARD
 
 > 🌐 [EN](../../installation/macos.md) | **PT** | [ES](../../es/installation/macos.md)
 
@@ -97,7 +97,7 @@ O instalador automaticamente:
 
 ### Claude Code
 
-1. Os comandos são instalados em `.claude/commands/AIOX/`
+1. Os comandos são instalados em `.claude/commands/YARD/`
 2. Use `/agent-name` para ativar agentes
 
 
@@ -150,7 +150,7 @@ Os sistemas de arquivos do macOS podem ser case-insensitive por padrão. Se voc�
    diskutil info / | grep "File System"
    ```
 
-2. O Synkra AIOX lida automaticamente com sistemas de arquivos case-sensitive e case-insensitive
+2. O Synkra YARD lida automaticamente com sistemas de arquivos case-sensitive e case-insensitive
 
 ## Atualização
 

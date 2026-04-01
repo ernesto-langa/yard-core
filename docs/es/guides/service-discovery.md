@@ -4,13 +4,13 @@
   Última sincronización: 2026-01-26
 -->
 
-# Guía de Descubrimiento de Servicios de AIOX
+# Guía de Descubrimiento de Servicios de YARD
 
 > 🌐 [EN](../../guides/service-discovery.md) | [PT](../../pt/guides/service-discovery.md) | **ES**
 
 ---
 
-> Cómo descubrir, consultar y usar workers en el framework AIOX.
+> Cómo descubrir, consultar y usar workers en el framework YARD.
 
 **Versión:** 2.1.0
 **Última Actualización:** 2025-12-01
@@ -19,7 +19,7 @@
 
 ## Resumen
 
-El sistema de Descubrimiento de Servicios permite encontrar y usar workers (tareas, plantillas, scripts, workflows) en todo el framework AIOX. El **Registro de Servicios** es el catálogo central que contiene metadatos sobre todos los workers disponibles.
+El sistema de Descubrimiento de Servicios permite encontrar y usar workers (tareas, plantillas, scripts, workflows) en todo el framework YARD. El **Registro de Servicios** es el catálogo central que contiene metadatos sobre todos los workers disponibles.
 
 ### Conceptos Clave
 
@@ -137,25 +137,25 @@ const count = await registry.count();
 
 ## Comandos CLI
 
-### `aiox discover`
+### `yard discover`
 
 Buscar workers en el registro.
 
 ```bash
 # Buscar por texto
-aiox discover "create story"
+yard discover "create story"
 
 # Buscar por categoría
-aiox discover --category task
+yard discover --category task
 
 # Buscar por etiqueta
-aiox discover --tag testing
+yard discover --tag testing
 
 # Buscar para agente
-aiox discover --agent dev
+yard discover --agent dev
 
 # Combinar filtros
-aiox discover --category task --tag development --agent dev
+yard discover --category task --tag development --agent dev
 ```
 
 **Salida:**
@@ -176,16 +176,16 @@ Encontrados 5 workers que coinciden con "create story":
   ...
 ```
 
-### `aiox info`
+### `yard info`
 
 Obtener información detallada sobre un worker específico.
 
 ```bash
 # Obtener info del worker por ID
-aiox info create-story
+yard info create-story
 
 # Obtener info del worker con ruta completa
-aiox info --path .yard-core/development/tasks/po-create-story.md
+yard info --path .yard-core/development/tasks/po-create-story.md
 ```
 
 **Salida:**
@@ -221,22 +221,22 @@ Rendimiento:
   Paralelizable: No
 ```
 
-### `aiox list`
+### `yard list`
 
 Listar workers por categoría o agente.
 
 ```bash
 # Listar todas las tareas
-aiox list tasks
+yard list tasks
 
 # Listar todas las plantillas
-aiox list templates
+yard list templates
 
 # Listar workers para agente
-aiox list --agent dev
+yard list --agent dev
 
 # Listar con paginación
-aiox list tasks --page 1 --limit 20
+yard list tasks --page 1 --limit 20
 ```
 
 ---
@@ -521,4 +521,4 @@ await registry.load(true);
 
 ---
 
-_Guía de Descubrimiento de Servicios de Synkra AIOX v4_
+_Guía de Descubrimiento de Servicios de Synkra YARD v4_

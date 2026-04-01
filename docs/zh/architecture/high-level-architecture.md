@@ -1,6 +1,6 @@
 <!-- 翻译: ZH-CN | 原文: /docs/en/architecture/high-level-architecture.md | 同步时间: 2026-01-26 -->
 
-# AIOX v4 高级架构
+# YARD v4 高级架构
 
 > 🌐 [EN](../../architecture/high-level-architecture.md) | [PT](../../pt/architecture/high-level-architecture.md) | [ES](../../es/architecture/high-level-architecture.md) | **ZH-CN**
 
@@ -27,7 +27,7 @@
 
 ## 概览
 
-**AIOX（AI 操作系统）** 是用于 AI 代理、工作者和人类在复杂软件开发工作流中进行编排的精巧框架。v2.1 版本引入了具有 4 个模块的模块化架构、多仓库策略和 3 层质量门槛。
+**YARD（AI 操作系统）** 是用于 AI 代理、工作者和人类在复杂软件开发工作流中进行编排的精巧框架。v2.1 版本引入了具有 4 个模块的模块化架构、多仓库策略和 3 层质量门槛。
 
 ### v4.2 主要功能
 
@@ -49,12 +49,12 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                     AIOX v4 框架                                       │
+│                     YARD v4 框架                                       │
 │                     ═══════════════                                     │
 │                                                                         │
 │   ┌─────────────────────────────────────────────────────────────────┐   │
 │   │                        CLI / 工具                              │   │
-│   │  (aiox agents, aiox tasks, aiox squads, aiox workflow)          │   │
+│   │  (yard agents, yard tasks, yard squads, yard workflow)          │   │
 │   └─────────────────────────────────────────────────────────────────┘   │
 │                                │                                        │
 │          ┌────────────────────┼────────────────────┐                   │
@@ -149,7 +149,7 @@
 │                                                                         │
 │   ┌────────────────────┐     ┌────────────────────┐                    │
 │   │  SynkraAI/         │     │  SynkraAI/         │                    │
-│   │  yard-core         │     │  aiox-squads       │                    │
+│   │  yard-core         │     │  yard-squads       │                    │
 │   │  (MIT)  │◄────│  (MIT)             │                    │
 │   │                    │     │                    │                    │
 │   │  • 核心框架        │     │  • ETL Squad       │                    │
@@ -188,11 +188,11 @@
 
 | 包 | 注册表 | 许可证 |
 | --- | --- | --- |
-| `@aiox/core` | npm 公开 | MIT |
-| `@aiox/squad-etl` | npm 公开 | MIT |
-| `@aiox/squad-creator` | npm 公开 | MIT |
-| `@aiox/squad-mmos` | npm 公开 | MIT |
-| `@aiox/mcp-presets` | npm 公开 | Apache 2.0 |
+| `@yard/core` | npm 公开 | MIT |
+| `@yard/squad-etl` | npm 公开 | MIT |
+| `@yard/squad-creator` | npm 公开 | MIT |
+| `@yard/squad-mmos` | npm 公开 | MIT |
+| `@yard/mcp-presets` | npm 公开 | Apache 2.0 |
 
 ---
 
@@ -288,7 +288,7 @@ yard-core/
 | Dara | `data-engineer` | 架构师 | 数据工程 |
 | Felix | `devops` | 优化者 | CI/CD 和操作 |
 | Uma | `ux-expert` | 创造者 | 用户体验 |
-| Pax | `aiox-master` | 编排者 | 框架编排 |
+| Pax | `yard-master` | 编排者 | 框架编排 |
 
 ---
 
@@ -346,7 +346,7 @@ yard-core/
 
 - [模块系统](./module-system.md) - 模块详细架构
 - [ARCHITECTURE-INDEX.md](./ARCHITECTURE-INDEX.md) - 完整文档索引
-- [AIOX-LIVRO-DE-OURO-V2.1-COMPLETE.md](../../../.yard-core/docs/standards/AIOX-LIVRO-DE-OURO-V2.1-COMPLETE.md) - 框架完整指南
+- [YARD-LIVRO-DE-OURO-V2.1-COMPLETE.md](../../../.yard-core/docs/standards/YARD-LIVRO-DE-OURO-V2.1-COMPLETE.md) - 框架完整指南
 
 ---
 

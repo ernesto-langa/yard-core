@@ -1,8 +1,8 @@
-# Synkra AIOX 社区
+# Synkra YARD 社区
 
 > 🇧🇷 [葡萄牙語版本](../COMMUNITY-PT.md)
 
-欢迎来到 Synkra AIOX 社区！
+欢迎来到 Synkra YARD 社区！
 
 我们正在一起构建 AI 编排开发的未来。
 
@@ -32,15 +32,15 @@
 
 ### GitHub 讨论（主要）
 
-我们所有 AIOX 仓库的主要沟通中心：
+我们所有 YARD 仓库的主要沟通中心：
 
 - **公告** - 来自维护者的项目更新
-- **常规** - 关于 AIOX 的一般讨论
+- **常规** - 关于 YARD 的一般讨论
 - **想法** - 提议新功能和改进
 - **问答** - 获得技术问题的帮助
-- **展示和讲述** - 分享您使用 AIOX 创建的项目
+- **展示和讲述** - 分享您使用 YARD 创建的项目
 - **故障排除** - 获得解决问题的帮助
-- **小队** - 关于 AIOX Squads（模块化代理团队）的讨论
+- **小队** - 关于 YARD Squads（模块化代理团队）的讨论
 - **MCP 生态系统** - 关于 MCP 工具和集成的讨论
 
 [加入讨论](https://github.com/ernesto-langa/yard-core/discussions)
@@ -50,7 +50,7 @@
 用于错误报告和功能请求：
 
 - [yard-core Issues](https://github.com/ernesto-langa/yard-core/issues) - 核心框架
-- [aiox-squads Issues](https://github.com/SynkraAI/aiox-squads/issues) - AIOX Squads
+- [yard-squads Issues](https://github.com/SynkraAI/yard-squads/issues) - YARD Squads
 - [mcp-ecosystem Issues](https://github.com/SynkraAI/mcp-ecosystem/issues) - MCP 工具
 
 ## 如何贡献
@@ -90,7 +90,7 @@ Squads 是在特定领域协作工作的专业 AI 代理团队：
 
 ### 贡献者
 
-任何以任何方式对 AIOX 做出贡献的人。
+任何以任何方式对 YARD 做出贡献的人。
 - 在我们的 [贡献者页面](https://github.com/ernesto-langa/yard-core/graphs/contributors) 上列出
 - 在发布说明中提及重大贡献
 
@@ -162,7 +162,7 @@ Squads 是在特定领域协作工作的专业 AI 代理团队：
 
 ## 项目路线图
 
-想知道 AIOX 的发展方向吗？查看我们的公开路线图：
+想知道 YARD 的发展方向吗？查看我们的公开路线图：
 
 - [ROADMAP.md](../ROADMAP.md) - 高层愿景和计划功能
 - [GitHub 项目](https://github.com/orgs/SynkraAI/projects/1) - 详细跟踪板
@@ -188,7 +188,7 @@ Squads 是在特定领域协作工作的专业 AI 代理团队：
 
 ## 资源
 
-### 学习 AIOX
+### 学习 YARD
 
 - [入门指南](../docs/getting-started.md)
 - [架构概览](../docs/architecture.md)
@@ -196,7 +196,7 @@ Squads 是在特定领域协作工作的专业 AI 代理团队：
 
 ### 外部资源
 
-- [AIOX GitHub 组织](https://github.com/SynkraAI)
+- [YARD GitHub 组织](https://github.com/SynkraAI)
 - [变更日志](../CHANGELOG.md)
 
 ## 国际化
@@ -219,9 +219,9 @@ Squads 是在特定领域协作工作的专业 AI 代理团队：
 找不到您要找的东西？
 打开讨论或联系社区！
 
-**感谢您成为 AIOX 社区的一部分！**
+**感谢您成为 YARD 社区的一部分！**
 
 ---
 
-*本文档由 AIOX 社区维护。*
+*本文档由 YARD 社区维护。*
 *最后更新：2025-12-09*

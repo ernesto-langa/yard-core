@@ -1,16 +1,16 @@
 # @analyst (Atlas) - Documentacion del Sistema
 
-> [PT](../../aiox-agent-flows/analyst-system.md) | [EN](../../en/aiox-agent-flows/analyst-system.md) | **ES**
+> [PT](../../yard-agent-flows/analyst-system.md) | [EN](../../en/yard-agent-flows/analyst-system.md) | **ES**
 
 ---
 
-> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../aiox-agent-flows/analyst-system.md).
+> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../yard-agent-flows/analyst-system.md).
 
 ---
 
 ## Vision General
 
-**@analyst** (Atlas) es el agente de investigacion y analisis del AIOX, responsable por:
+**@analyst** (Atlas) es el agente de investigacion y analisis del YARD, responsable por:
 
 - Investigacion de mercado y competencia
 - Analisis de requisitos y viabilidad
@@ -29,7 +29,7 @@
 ## Ver Mas
 
 Para documentacion detallada incluyendo flowcharts, integraciones y troubleshooting, consulte:
-- **[Documentacion completa (PT)](../../aiox-agent-flows/analyst-system.md)**
+- **[Documentacion completa (PT)](../../yard-agent-flows/analyst-system.md)**
 
 ---
 

@@ -9,7 +9,7 @@
 
 ## Visão Geral
 
-O **Greenfield Full-Stack Workflow** e o fluxo de trabalho principal do AIOX para construcao de aplicacoes full-stack desde o conceito ate o desenvolvimento. Este workflow suporta tanto planejamento abrangente para projetos complexos quanto prototipagem rapida para projetos simples.
+O **Greenfield Full-Stack Workflow** e o fluxo de trabalho principal do YARD para construcao de aplicacoes full-stack desde o conceito ate o desenvolvimento. Este workflow suporta tanto planejamento abrangente para projetos complexos quanto prototipagem rapida para projetos simples.
 
 ### Tipos de Projeto Suportados
 
@@ -172,7 +172,7 @@ flowchart TD
 
 | Arquivo | Descricao |
 |---------|-----------|
-| `.yard/config.yaml` | Configuracao do projeto AIOX |
+| `.yard/config.yaml` | Configuracao do projeto YARD |
 | `.yard/environment-report.json` | Relatorio completo do ambiente |
 | `.gitignore` | Regras de ignore do Git |
 | `README.md` | Documentacao inicial do projeto |
@@ -637,7 +637,7 @@ flowchart LR
 
 | Fase | Entrada | Saida |
 |------|---------|-------|
-| 0 | Nome do projeto, organizacao GitHub | Config AIOX, repo Git, estrutura de pastas |
+| 0 | Nome do projeto, organizacao GitHub | Config YARD, repo Git, estrutura de pastas |
 | 1 | Requisitos, pesquisa | Brief, PRD, specs, arquitetura |
 | 2 | PRD, arquitetura | Documentos fragmentados, indexes |
 | 3 | Stories, docs fragmentados | Codigo, testes, aplicacao |
@@ -792,5 +792,5 @@ ls -la docs/
 
 ---
 
-**Mantido por:** AIOX Development Team
+**Mantido por:** YARD Development Team
 **Ultima Revisao:** 2026-02-04

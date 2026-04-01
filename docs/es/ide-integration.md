@@ -4,7 +4,7 @@
 
 ---
 
-Guía para integrar AIOX con IDEs compatibles y plataformas de desarrollo con IA.
+Guía para integrar YARD con IDEs compatibles y plataformas de desarrollo con IA.
 
 **Versión:** 2.1.0
 **Última Actualización:** 2026-01-28
@@ -13,7 +13,7 @@ Guía para integrar AIOX con IDEs compatibles y plataformas de desarrollo con IA
 
 ## IDEs Compatibles
 
-AIOX es compatible con 6 plataformas de desarrollo potenciadas por IA. Elige la que mejor se adapte a tu flujo de trabajo.
+YARD es compatible con 6 plataformas de desarrollo potenciadas por IA. Elige la que mejor se adapte a tu flujo de trabajo.
 
 ### Tabla de Comparación Rápida
 
@@ -29,9 +29,9 @@ AIOX es compatible con 6 plataformas de desarrollo potenciadas por IA. Elige la 
 
 ### Paridad de Hooks e Impacto Funcional
 
-| IDE | Paridad de Hooks vs Claude | Qué se degrada sin hooks completos | Mitigación en AIOX |
+| IDE | Paridad de Hooks vs Claude | Qué se degrada sin hooks completos | Mitigación en YARD |
 | --- | --- | --- | --- |
-| Claude Code | Completa | Ninguno (comportamiento de referencia) | Hooks nativos + pipeline completo de AIOX |
+| Claude Code | Completa | Ninguno (comportamiento de referencia) | Hooks nativos + pipeline completo de YARD |
 | Gemini CLI | Alta | Diferencias menores en el modelo de eventos | Hooks nativos de Gemini + mapeo unificado |
 | Codex CLI | Limitada/parcial | Menor automatización del ciclo de sesión y menor enforcement pre/post-tool | `AGENTS.md` + `/skills` + MCP + scripts de sync/validación |
 | Cursor | Sin hooks de ciclo equivalentes | Sin interceptación nativa pre/post-tool y trazabilidad automática más débil | Reglas sincronizadas + MCP + disciplina de workflow |
@@ -57,11 +57,11 @@ AIOX es compatible con 6 plataformas de desarrollo potenciadas por IA. Elige la 
 
 ### Claude Code
 
-**Nivel de Recomendación:** Mejor integración con AIOX
+**Nivel de Recomendación:** Mejor integración con YARD
 
 ```yaml
 config_file: .claude/CLAUDE.md
-agent_folder: .claude/commands/AIOX/agents
+agent_folder: .claude/commands/YARD/agents
 activation: /agent-name (slash commands)
 format: full-markdown-yaml
 mcp_support: native
@@ -75,7 +75,7 @@ special_features:
 
 **Configuración:**
 
-1. AIOX crea automáticamente el directorio `.claude/` al inicializar
+1. YARD crea automáticamente el directorio `.claude/` al inicializar
 2. Los agentes están disponibles como comandos slash: `/dev`, `/qa`, `/architect`
 3. Configura servidores MCP en `~/.claude.json`
 
@@ -86,7 +86,7 @@ special_features:
 npm run sync:ide
 
 # Verificar configuración
-ls -la .claude/commands/AIOX/agents/
+ls -la .claude/commands/YARD/agents/
 ```
 
 ---
@@ -114,7 +114,7 @@ special_features:
 1. Mantén `AGENTS.md` en la raíz del repositorio
 2. Ejecuta `npm run sync:ide:codex`
 3. Ejecuta `npm run sync:skills:codex`
-4. Usa `/skills` y selecciona `aiox-<agent-id>`
+4. Usa `/skills` y selecciona `yard-<agent-id>`
 5. Usa `sync:skills:codex:global` solo cuando quieras instalación global
 
 ```bash
@@ -146,7 +146,7 @@ special_features:
 
 **Configuración:**
 
-1. AIOX crea el directorio `.cursor/` al inicializar
+1. YARD crea el directorio `.cursor/` al inicializar
 2. Los agentes se activan con @mention: `@dev`, `@qa`
 3. Las reglas se sincronizan a `.cursor/rules/`
 
@@ -194,7 +194,7 @@ special_features:
 **Configuración:**
 
 1. Habilita GitHub Copilot en tu repositorio
-2. AIOX crea `.github/copilot-instructions.md`
+2. YARD crea `.github/copilot-instructions.md`
 3. Las instrucciones del agente se sincronizan
 
 **Configuración:**
@@ -228,7 +228,7 @@ special_features:
 
 **Configuración:**
 
-1. AIOX crea el directorio `.antigravity/`
+1. YARD crea el directorio `.antigravity/`
 2. Configura las credenciales de Google Cloud
 3. Los agentes se sincronizan como workflows
 
@@ -240,7 +240,7 @@ special_features:
 
 ```yaml
 config_file: .gemini/rules.md
-agent_folder: .gemini/rules/AIOX/agents
+agent_folder: .gemini/rules/YARD/agents
 activation: prompt mention
 format: text
 mcp_support: native
@@ -259,7 +259,7 @@ special_features:
 
 ### Cómo Funciona la Sincronización
 
-AIOX mantiene una única fuente de verdad para las definiciones de agentes y las sincroniza con todos los IDEs configurados:
+YARD mantiene una única fuente de verdad para las definiciones de agentes y las sincroniza con todos los IDEs configurados:
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -295,7 +295,7 @@ npm run sync:ide
 
 ### Sincronización Automática
 
-AIOX puede configurarse para sincronizar automáticamente cuando hay cambios en los agentes:
+YARD puede configurarse para sincronizar automáticamente cuando hay cambios en los agentes:
 
 ```yaml
 # .yard-core/core/config/sync.yaml
@@ -326,7 +326,7 @@ npm run sync:ide:check
 
 # Revisar directorio específico de la plataforma
 ls .cursor/rules/  # Para Cursor
-ls .claude/commands/AIOX/agents/  # Para Claude Code
+ls .claude/commands/YARD/agents/  # Para Claude Code
 ```
 
 ### Conflictos de Sincronización
@@ -344,7 +344,7 @@ npm run sync:ide
 
 ```bash
 # Revisar estado de MCP
-aiox mcp status
+yard mcp status
 
 # Verificar configuración de MCP para el IDE
 cat ~/.claude.json  # Para Claude Code
@@ -369,7 +369,7 @@ Usa esta guía para elegir la plataforma correcta:
 
 ```
 ¿Usas la API de Claude/Anthropic?
-├── Sí --> Claude Code (Mejor integración con AIOX)
+├── Sí --> Claude Code (Mejor integración con YARD)
 └── No
     └── ¿Prefieres VS Code?
         ├── Sí --> ¿Quieres una extensión?
@@ -397,7 +397,7 @@ cp -r .cursor/rules/ ./rules-backup/
 npm run sync:ide
 
 # Verificar migración
-diff -r ./rules-backup/ .claude/commands/AIOX/agents/
+diff -r ./rules-backup/ .claude/commands/YARD/agents/
 ```
 
 ### De Claude Code a Cursor
@@ -422,4 +422,4 @@ npm run sync:ide:cursor
 
 ---
 
-_Guía de Integración con IDEs de Synkra AIOX v4.0_
+_Guía de Integración con IDEs de Synkra YARD v4.0_

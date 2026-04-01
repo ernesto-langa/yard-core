@@ -1,4 +1,4 @@
-# AIOX-Core 安装和故障排除指南
+# YARD-Core 安装和故障排除指南
 
 > [EN](../../guides/installation-troubleshooting.md) | [PT](../../pt/guides/installation-troubleshooting.md) | [ES](../../es/guides/installation-troubleshooting.md) | **ZH**
 
@@ -10,7 +10,7 @@
 npx yard-core@latest
 ```
 
-此命令下载并运行最新版本的 AIOX-Core 安装程序。
+此命令下载并运行最新版本的 YARD-Core 安装程序。
 
 ## 系统要求
 
@@ -318,4 +318,4 @@ v22.x.x (或 v18+/v20+)
 
 ---
 
-*最后更新: 2025年12月 | AIOX-Core v2.2.0*
+*最后更新: 2025年12月 | YARD-Core v2.2.0*

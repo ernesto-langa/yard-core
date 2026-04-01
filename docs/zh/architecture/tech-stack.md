@@ -1,6 +1,6 @@
 <!-- 翻译: ZH-CN | 原文: /docs/en/architecture/tech-stack.md | 同步: 2026-02-22 -->
 
-# AIOX 技术栈
+# YARD 技术栈
 
 > 🌐 [EN](../../architecture/tech-stack.md) | [PT](../../pt/architecture/tech-stack.md) | **ZH** | [ES](../../es/architecture/tech-stack.md)
 
@@ -14,7 +14,7 @@
 
 ---
 
-# AIOX 技术栈
+# YARD 技术栈
 
 **版本:** 1.1
 **最后更新:** 2025-12-14
@@ -39,7 +39,7 @@
 
 ## 概述
 
-AIOX 构建在现代 JavaScript/TypeScript 和 Node.js 运行时上，优化用于开发具有交互式 UX 和代理编排功能的跨平台 CLI。
+YARD 构建在现代 JavaScript/TypeScript 和 Node.js 运行时上，优化用于开发具有交互式 UX 和代理编排功能的跨平台 CLI。
 
 **理念:**
 
@@ -536,7 +536,7 @@ npm run publish:stable         # 发布为 latest 标签
 
 ### MCP 服务器
 
-AIOX 与 Model Context Protocol (MCP) 服务器集成:
+YARD 与 Model Context Protocol (MCP) 服务器集成:
 
 ```yaml
 MCP 服务器:
@@ -771,10 +771,10 @@ Node.js: nvm、apt、yum 或官方二进制文件
 ## 环境变量
 
 ```bash
-# AIOX 配置
-AIOX_DEBUG=true                    # 启用调试日志
-AIOX_CONFIG_PATH=/custom/path      # 自定义配置位置
-AIOX_YOLO_MODE=true               # 强制 yolo 模式
+# YARD 配置
+YARD_DEBUG=true                    # 启用调试日志
+YARD_CONFIG_PATH=/custom/path      # 自定义配置位置
+YARD_YOLO_MODE=true               # 强制 yolo 模式
 
 # Node.js
 NODE_ENV=production                # 生产模式
@@ -805,4 +805,4 @@ SUPABASE_ACCESS_TOKEN=xxx         # Supabase CLI 身份验证
 
 ---
 
-_这是 AIOX 框架的官方模式。所有技术选择应与本栈保持一致。_
+_这是 YARD 框架的官方模式。所有技术选择应与本栈保持一致。_

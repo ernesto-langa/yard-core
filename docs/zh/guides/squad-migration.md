@@ -4,11 +4,11 @@
 
 ---
 
-如何将旧版Squad迁移到AIOX 2.1格式。
+如何将旧版Squad迁移到YARD 2.1格式。
 
 ## 概述
 
-AIOX 2.1引入了新的Squad格式，具有以下特性：
+YARD 2.1引入了新的Squad格式，具有以下特性：
 - 任务优先的架构
 - JSON Schema验证
 - 三层级分发
@@ -23,8 +23,8 @@ AIOX 2.1引入了新的Squad格式，具有以下特性：
 | 指示器 | 旧版 | 当前 (2.1+) |
 |--------|------|-------------|
 | 清单文件 | `config.yaml` | `squad.yaml` |
-| AIOX类型字段 | 缺失 | `aiox.type: squad` |
-| 最低版本 | 缺失 | `aiox.minVersion: "2.1.0"` |
+| YARD类型字段 | 缺失 | `yard.type: squad` |
+| 最低版本 | 缺失 | `yard.minVersion: "2.1.0"` |
 | 结构 | Agent优先 | Task优先 |
 
 ### 检查命令
@@ -78,7 +78,7 @@ config.yaml → squad.yaml
 
 ```yaml
 # 如果缺失，将添加这些字段
-aiox:
+yard:
   minVersion: "2.1.0"
   type: squad
 ```
@@ -192,7 +192,7 @@ my-squad/
 ```
 
 **结果：**
-- 将缺失的 `aiox` 字段添加到清单
+- 将缺失的 `yard` 字段添加到清单
 - 转换保留的YAML文件
 - 跳过已迁移的文件
 
@@ -245,7 +245,7 @@ name: my-squad
 version: 1.0.0
 description: 我的Squad
 
-aiox:
+yard:
   minVersion: "2.1.0"
   type: squad
 
@@ -292,8 +292,8 @@ components:
 迁移后，验证：
 
 - [ ] `squad.yaml` 存在且有效
-- [ ] `aiox.type` 是 `"squad"`
-- [ ] `aiox.minVersion` 是 `"2.1.0"` 或更高
+- [ ] `yard.type` 是 `"squad"`
+- [ ] `yard.minVersion` 是 `"2.1.0"` 或更高
 - [ ] 所有agent位于 `agents/` 文件夹中
 - [ ] 所有task位于 `tasks/` 文件夹中
 - [ ] Agent文件采用Markdown格式

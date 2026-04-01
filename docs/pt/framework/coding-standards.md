@@ -4,7 +4,7 @@
   Última sincronização: 2026-01-26
 -->
 
-# Padrões de Código AIOX
+# Padrões de Código YARD
 
 > 🌐 [EN](../../framework/coding-standards.md) | **PT** | [ES](../../es/framework/coding-standards.md)
 
@@ -33,7 +33,7 @@
 
 ## Visão Geral
 
-Este documento define os padrões de código oficiais para desenvolvimento do framework AIOX. Todas as contribuições de código devem aderir a estes padrões para garantir consistência, manutenibilidade e qualidade.
+Este documento define os padrões de código oficiais para desenvolvimento do framework YARD. Todas as contribuições de código devem aderir a estes padrões para garantir consistência, manutenibilidade e qualidade.
 
 **Aplicação:**
 
@@ -543,7 +543,7 @@ if (!taskSchema.validate(taskData)) {
 
 ```javascript
 /**
- * Carrega e executa um agente AIOX
+ * Carrega e executa um agente YARD
  *
  * @param {string} agentId - Identificador único do agente
  * @param {Object} args - Argumentos de execução do agente
@@ -593,7 +593,7 @@ Todo módulo/diretório deve ter um README.md:
 ```markdown
 # Agent Executor
 
-**Propósito:** Carrega e executa agentes AIOX com gerenciamento de configuração.
+**Propósito:** Carrega e executa agentes YARD com gerenciamento de configuração.
 
 ## Uso
 
@@ -889,4 +889,4 @@ Todos os PRs são automaticamente revisados pelo CodeRabbit para:
 
 ---
 
-_Este é um padrão oficial do framework AIOX. Todas as contribuições de código devem estar em conformidade._
+_Este é um padrão oficial do framework YARD. Todas as contribuições de código devem estar em conformidade._

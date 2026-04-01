@@ -1,6 +1,6 @@
-# AIOX Glossary
+# YARD Glossary
 
-Official terminology for AIOX 4.x differentiation.
+Official terminology for YARD 4.x differentiation.
 
 ## Official Terms
 

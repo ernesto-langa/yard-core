@@ -527,7 +527,7 @@ graph TB
 | 要求 | 描述 | 验证 |
 |------|------|------|
 | **现有应用程序** | 用于分析的活跃前端 | 代码库可访问 |
-| **AIOX模板** | 已安装的模板 | 检查 `.yard-core/development/templates/` |
+| **YARD模板** | 已安装的模板 | 检查 `.yard-core/development/templates/` |
 | **已配置的代理** | 工作流的所有代理 | 检查 `.yard-core/development/agents/` |
 | **Git已配置** | 版本控制 | `git status` 正常运行 |
 | **Node.js** | 脚本运行时 | `node --version` >= 18 |
@@ -724,7 +724,7 @@ ls .yard-core/development/templates/
 ```
 
 2. 检查工作流中的正确模板名称
-3. 如有必要，重新安装AIOX核心模板
+3. 如有必要，重新安装YARD核心模板
 
 ---
 
@@ -793,8 +793,8 @@ ls .yard-core/development/templates/
 #### 检查项目状态
 
 ```bash
-# 通过AIOX
-@aiox-master
+# 通过YARD
+@yard-master
 *status
 
 # 通过Git
@@ -829,8 +829,8 @@ ls docs/architecture/
 
 | 文档 | 位置 | 描述 |
 |------|------|------|
-| AIOX知识库 | `.yard-core/data/aiox-kb.md` | AIOX基础知识库 |
-| IDE开发工作流 | `.yard-core/data/aiox-kb.md#IDE Development Workflow` | IDE开发工作流 |
+| YARD知识库 | `.yard-core/data/yard-kb.md` | YARD基础知识库 |
+| IDE开发工作流 | `.yard-core/data/yard-kb.md#IDE Development Workflow` | IDE开发工作流 |
 | 棕地PRD模板 | `.yard-core/development/templates/brownfield-prd-tmpl.yaml` | 棕地PRD模板 |
 | 前端规范模板 | `.yard-core/development/templates/front-end-spec-tmpl.yaml` | 前端规范模板 |
 | 棕地架构模板 | `.yard-core/development/templates/brownfield-architecture-tmpl.yaml` | 棕地架构模板 |

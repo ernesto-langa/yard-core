@@ -1,14 +1,14 @@
-# Roadmap do AIOX
+# Roadmap do YARD
 
 > 🇺🇸 [English Version](ROADMAP.md)
 
-Este documento descreve a direção de desenvolvimento planejada para o AIOX.
+Este documento descreve a direção de desenvolvimento planejada para o YARD.
 
 > Para rastreamento detalhado, veja nosso [Projeto GitHub](https://github.com/orgs/SynkraAI/projects/1)
 
 ## Visão
 
-O AIOX visa ser o framework de agentes IA open-source mais abrangente, permitindo que desenvolvedores construam aplicações sofisticadas com equipes de agentes especializados (Squads) e integração perfeita com IDEs.
+O YARD visa ser o framework de agentes IA open-source mais abrangente, permitindo que desenvolvedores construam aplicações sofisticadas com equipes de agentes especializados (Squads) e integração perfeita com IDEs.
 
 ## Foco Atual (Q1 2026)
 

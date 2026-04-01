@@ -47,7 +47,7 @@ Este workflow executa ate um maximo de iteracoes configuravel (padrao: 5), rastr
 
 ### Tipos de Projeto Suportados
 
-- `aiox-development`
+- `yard-development`
 - `autonomous-development`
 - `qa-automation`
 

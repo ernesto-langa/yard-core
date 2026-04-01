@@ -1,10 +1,10 @@
 # Brownfield Service Workflow
 
-> **EN** | [PT](../../aiox-workflows/brownfield-service-workflow.md) | [ES](../../es/aiox-workflows/brownfield-service-workflow.md)
+> **EN** | [PT](../../yard-workflows/brownfield-service-workflow.md) | [ES](../../es/yard-workflows/brownfield-service-workflow.md)
 
 ---
 
-**Full documentation available in:** [Portuguese Version](../../aiox-workflows/brownfield-service-workflow.md)
+**Full documentation available in:** [Portuguese Version](../../yard-workflows/brownfield-service-workflow.md)
 
 ---
 
@@ -48,4 +48,4 @@ The **Brownfield Service Workflow** is designed for evolving existing backend se
 
 ---
 
-*For complete details, diagrams, and step-by-step instructions, see the [Portuguese documentation](../../aiox-workflows/brownfield-service-workflow.md).*
+*For complete details, diagrams, and step-by-step instructions, see the [Portuguese documentation](../../yard-workflows/brownfield-service-workflow.md).*

@@ -1,4 +1,4 @@
-# 🏛️ AIOX Dashboard - Arquitectura Completa
+# 🏛️ YARD Dashboard - Arquitectura Completa
 
 > **Versión:** 2.0.0
 > **Fecha:** 2026-01-29
@@ -32,7 +32,7 @@
 
 ## Visión General
 
-El AIOX Dashboard es una aplicación Next.js que proporciona una interfaz visual para monitorear y gestionar el sistema AIOX. Se comunica con el CLI/AIOX a través de archivos de estado en el sistema de archivos y Server-Sent Events (SSE).
+El YARD Dashboard es una aplicación Next.js que proporciona una interfaz visual para monitorear y gestionar el sistema YARD. Se comunica con el CLI/YARD a través de archivos de estado en el sistema de archivos y Server-Sent Events (SSE).
 
 ### Principios Arquitectónicos
 
@@ -46,7 +46,7 @@ El AIOX Dashboard es una aplicación Next.js que proporciona una interfaz visual
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                           AIOX DASHBOARD                                 │
+│                           YARD DASHBOARD                                 │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                          │
 │  ┌──────────────────────────────────────────────────────────────────┐   │
@@ -81,7 +81,7 @@ El AIOX Dashboard es una aplicación Next.js que proporciona una interfaz visual
 │  │                         DATA LAYER (SWR + Hooks)                  │   │
 │  │  ┌────────────────┐ ┌────────────────┐ ┌────────────────────────┐│   │
 │  │  │  useStories()  │ │  useAgents()   │ │  useRealtimeStatus()   ││   │
-│  │  │  useAioxStatus │ │                │ │  (SSE + Polling)       ││   │
+│  │  │  useYardStatus │ │                │ │  (SSE + Polling)       ││   │
 │  │  └────────────────┘ └────────────────┘ └────────────────────────┘│   │
 │  └──────────────────────────────────────────────────────────────────┘   │
 │                                                                          │
@@ -106,7 +106,7 @@ El AIOX Dashboard es una aplicación Next.js que proporciona una interfaz visual
                                      │ Write
                                      │
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                         CLI / AIOX AGENTS                                │
+│                         CLI / YARD AGENTS                                │
 │  @dev │ @qa │ @architect │ @pm │ @po │ @analyst │ @devops               │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
@@ -167,7 +167,7 @@ apps/dashboard/
 │   │   │   ├── github/route.ts       # Proxy de API GitHub
 │   │   │   ├── logs/route.ts         # Streaming de logs
 │   │   │   ├── qa/metrics/route.ts   # Métricas QA
-│   │   │   ├── status/route.ts       # Polling de estado AIOX
+│   │   │   ├── status/route.ts       # Polling de estado YARD
 │   │   │   └── stories/              # CRUD de stories
 │   │   │       ├── route.ts          # GET/POST /api/stories
 │   │   │       └── [id]/route.ts     # GET/PUT/DELETE /api/stories/:id
@@ -241,7 +241,7 @@ apps/dashboard/
 │   ├── hooks/                        # Custom React hooks
 │   │   ├── index.ts
 │   │   ├── use-agents.ts             # Datos de agentes + polling
-│   │   ├── use-aiox-status.ts        # Estado con SWR
+│   │   ├── use-yard-status.ts        # Estado con SWR
 │   │   ├── use-realtime-status.ts    # Conexión SSE
 │   │   └── use-stories.ts            # Obtención de datos de stories
 │   │
@@ -427,10 +427,10 @@ interface KanbanBoardProps {
 
 | Store            | Clave de localStorage          | Lo que persiste                   |
 | ---------------- | ----------------------------- | -------------------------------- |
-| `story-store`    | `aiox-stories`            | `storyOrder` (orden de las columnas) |
-| `ui-store`       | `aiox-ui`                 | `sidebarCollapsed`, `activeView` |
-| `projects-store` | `aiox-projects`           | `projects`, `activeProjectId`    |
-| `settings-store` | `aiox-dashboard-settings` | Todo el objeto `settings`         |
+| `story-store`    | `yard-stories`            | `storyOrder` (orden de las columnas) |
+| `ui-store`       | `yard-ui`                 | `sidebarCollapsed`, `activeView` |
+| `projects-store` | `yard-projects`           | `projects`, `activeProjectId`    |
+| `settings-store` | `yard-dashboard-settings` | Todo el objeto `settings`         |
 
 ### Patrón de Listeners
 
@@ -455,10 +455,10 @@ unsubscribe();
 #### GET /api/status
 
 ```typescript
-// Retorna estado actual de AIOX
+// Retorna estado actual de YARD
 // Lee de: .yard/dashboard/status.json
 
-interface AioxStatus {
+interface YardStatus {
   version: string;
   updatedAt: string;
   connected: boolean;
@@ -491,7 +491,7 @@ interface AioxStatus {
 ```typescript
 // Server-Sent Events para actualizaciones en tiempo real
 // Eventos:
-//   - status:update     → AioxStatus
+//   - status:update     → YardStatus
 //   - connection:status → { connected: boolean }
 //   - heartbeat         → { alive: true }
 //   - error             → { message: string }
@@ -536,7 +536,7 @@ interface CreateStoryRequest {
 
 ```
 ┌─────────────┐                              ┌──────────────────┐
-│   CLI/AIOX  │                              │    Dashboard     │
+│   CLI/YARD  │                              │    Dashboard     │
 │   (Claude)  │                              │    (Next.js)     │
 └──────┬──────┘                              └────────┬─────────┘
        │                                              │
@@ -568,11 +568,11 @@ interface CreateStoryRequest {
 
 ### Hooks de Obtención de Datos
 
-#### useAioxStatus
+#### useYardStatus
 
 ```typescript
 // Polling basado en SWR del estado
-const { status, isLoading, isConnected, statusError, mutate } = useAioxStatus({
+const { status, isLoading, isConnected, statusError, mutate } = useYardStatus({
   interval: 5000, // Poll cada 5s
   paused: false, // Pausar polling
 });

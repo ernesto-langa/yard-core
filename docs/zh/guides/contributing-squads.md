@@ -4,13 +4,13 @@
 
 ---
 
-如何向AIOX生态系统贡献Squad。
+如何向YARD生态系统贡献Squad。
 
 ## 概述
 
 有两种方式与社区共享你的Squad：
 
-1. **aiox-squads Repository** - GitHub上的免费开源Squad
+1. **yard-squads Repository** - GitHub上的免费开源Squad
 2. **Synkra Marketplace** - 通过Synkra API的高级Squad
 
 ## 质量标准
@@ -24,7 +24,7 @@
 | **有效的清单** | `squad.yaml` 通过JSON Schema验证 |
 | **文档** | README.md包含使用说明 |
 | **许可证** | 开源许可证（MIT、Apache 2.0等） |
-| **AIOX兼容性** | `aiox.minVersion: "2.1.0"` 或更高 |
+| **YARD兼容性** | `yard.minVersion: "2.1.0"` 或更高 |
 | **Task优先架构** | Task作为主要入口点 |
 
 ### 推荐
@@ -65,7 +65,7 @@ name: my-squad
 version: 1.0.0              # 语义版本控制
 description: 此Squad的功能说明
 
-aiox:
+yard:
   minVersion: "2.1.0"
   type: squad
 
@@ -133,7 +133,7 @@ dependencies:
 许可证信息。
 ```
 
-## 发布到aiox-squads
+## 发布到yard-squads
 
 ### 前提条件
 
@@ -153,7 +153,7 @@ dependencies:
 ```
 
 这将：
-1. Fork `SynkraAI/aiox-squads` （如需要）
+1. Fork `SynkraAI/yard-squads` （如需要）
 2. 用你的Squad创建分支
 3. 开启审查PR
 
@@ -223,7 +223,7 @@ export SYNKRA_API_TOKEN="your-token"
 - 发布前测试你的Squad
 - 对问题和反馈做出回应
 - 保持依赖项最少
-- 遵循AIOX约定
+- 遵循YARD约定
 
 ### 不应该做的
 
@@ -243,7 +243,7 @@ export SYNKRA_API_TOKEN="your-token"
 
 - [Squad开发指南](./squads-guide.md)
 - [Squad迁移指南](./squad-migration.md)
-- [aiox-squads Repository](https://github.com/SynkraAI/aiox-squads)
+- [yard-squads Repository](https://github.com/SynkraAI/yard-squads)
 
 ---
 

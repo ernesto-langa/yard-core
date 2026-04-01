@@ -1,6 +1,6 @@
 <!-- 翻译：zh-CN 原文：/docs/framework/tech-stack.md 最后同步：2026-02-22 -->
 
-# AIOX 技术栈
+# YARD 技术栈
 
 > [EN](../../framework/tech-stack.md) | [PT](../../pt/framework/tech-stack.md) | [ES](../../es/framework/tech-stack.md) | **ZH**
 
@@ -27,7 +27,7 @@
 
 ## 概述
 
-AIOX 基于现代 JavaScript/TypeScript 和 Node.js 运行时构建，针对跨平台 CLI 开发进行了优化，具有交互式用户体验和代理编排能力。
+YARD 基于现代 JavaScript/TypeScript 和 Node.js 运行时构建，针对跨平台 CLI 开发进行了优化，具有交互式用户体验和代理编排能力。
 
 **理念:**
 
@@ -524,7 +524,7 @@ npm run publish:stable         # 发布最新标签
 
 ### MCP 服务器
 
-AIOX 与 Model Context Protocol (MCP) 服务器集成：
+YARD 与 Model Context Protocol (MCP) 服务器集成：
 
 ```yaml
 MCP Servers:
@@ -759,10 +759,10 @@ Node.js: nvm, apt, yum, or official binaries
 ## 环境变量
 
 ```bash
-# AIOX 配置
-AIOX_DEBUG=true                    # 启用调试日志
-AIOX_CONFIG_PATH=/custom/path      # 自定义配置位置
-AIOX_YOLO_MODE=true               # 强制 yolo 模式
+# YARD 配置
+YARD_DEBUG=true                    # 启用调试日志
+YARD_CONFIG_PATH=/custom/path      # 自定义配置位置
+YARD_YOLO_MODE=true               # 强制 yolo 模式
 
 # Node.js
 NODE_ENV=production                # 生产模式
@@ -793,4 +793,4 @@ SUPABASE_ACCESS_TOKEN=xxx         # Supabase CLI 认证
 
 ---
 
-_这是官方 AIOX 框架标准。所有技术选型必须与此技术栈保持一致。_
+_这是官方 YARD 框架标准。所有技术选型必须与此技术栈保持一致。_

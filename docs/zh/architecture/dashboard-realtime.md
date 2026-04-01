@@ -1,4 +1,4 @@
-# AIOX Dashboard - 实时可观测性架构
+# YARD Dashboard - 实时可观测性架构
 
 > [EN](../../architecture/dashboard-realtime.md) | [PT](../../pt/architecture/dashboard-realtime.md) | [ES](../../es/architecture/dashboard-realtime.md) | **ZH**
 
@@ -27,7 +27,7 @@
 
 ## 概述
 
-本文档描述了 AIOX Dashboard **实时可观测性**的架构，允许用户以最大的视觉细节跟踪 CLI 中执行的命令。
+本文档描述了 YARD Dashboard **实时可观测性**的架构，允许用户以最大的视觉细节跟踪 CLI 中执行的命令。
 
 ### 主要用例
 
@@ -105,7 +105,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                         CLI / AIOX 代理                                  │
+│                         CLI / YARD 代理                                  │
 │  ┌─────────────────────────────────────────────────────────────────┐    │
 │  │                      Claude Code 会话                            │    │
 │  │  @architect → *create-architecture → [思考中...] → [文件操作]    │    │
@@ -240,7 +240,7 @@ JSON Lines (JSONL) - 每行一个 JSON 对象，仅追加。
   "timestamp": "...",
   "agentId": "architect",
   "data": {
-    "storyId": "AIOX-123",
+    "storyId": "YARD-123",
     "oldStatus": "in-progress",
     "newStatus": "review"
   }

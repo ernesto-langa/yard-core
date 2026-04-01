@@ -1,6 +1,6 @@
 <!-- 翻译: ZH-CN | 原始: /docs/pt/architecture/source-tree.md | 同步: 2026-02-22 -->
 
-# AIOX 代码树结构
+# YARD 代码树结构
 
 > 🌐 [EN](../../architecture/source-tree.md) | [PT](../../pt/architecture/source-tree.md) | **ZH**
 
@@ -14,7 +14,7 @@
 
 ---
 
-# AIOX 代码树结构
+# YARD 代码树结构
 
 **版本**: 1.1
 **最后更新**: 2025-12-14
@@ -38,7 +38,7 @@
 
 ## 概述
 
-AIOX 使用**双层架构**:
+YARD 使用**双层架构**:
 
 1. **框架核心** (`.yard-core/`) - 可移植框架组件
 2. **项目工作空间** (根目录) - 特定项目实现
@@ -89,7 +89,7 @@ yard-core/                             # 根目录 (brownfield 项目)
 │
 ├── bin/                               # CLI 可执行文件
 │   ├── yard-core.js              # 主 CLI 入口点
-│   └── aiox-minimal.js                # 最小 CLI
+│   └── yard-minimal.js                # 最小 CLI
 │
 ├── tools/                             # 构建和实用工具
 │   ├── cli.js                         # CLI 构建器
@@ -127,14 +127,14 @@ yard-core/                             # 根目录 (brownfield 项目)
 
 ## 框架核心 (.yard-core/)
 
-**目的**: 可在任何 AIOX 项目中工作的可移植框架组件。
+**目的**: 可在任何 YARD 项目中工作的可移植框架组件。
 
 ### 目录结构
 
 ```
 .yard-core/
 ├── agents/                            # 145 个代理定义
-│   ├── aiox-master.md                 # 主编排器
+│   ├── yard-master.md                 # 主编排器
 │   ├── dev.md                         # 开发代理
 │   ├── qa.md                          # QA 工程师代理
 │   ├── architect.md                   # 系统架构师代理
@@ -188,7 +188,7 @@ yard-core/                             # 根目录 (brownfield 项目)
 │   └── change-checklist.md            # 变更管理清单
 │
 ├── data/                              # 6 个知识库文件
-│   ├── aiox-kb.md                     # AIOX 知识库
+│   ├── yard-kb.md                     # YARD 知识库
 │   ├── technical-preferences.md       # 技术栈偏好
 │   ├── elicitation-methods.md         # 启发方法
 │   ├── brainstorming-techniques.md    # 头脑风暴方法
@@ -290,7 +290,7 @@ docs/
 │   └── README.md                      # 迁移通知
 │
 ├── stories/                           # 开发故事
-│   ├── aiox migration/                # AIOX 迁移故事
+│   ├── yard migration/                # YARD 迁移故事
 │   │   ├── story-6.1.2.1.md
 │   │   ├── story-6.1.2.2.md
 │   │   ├── story-6.1.2.3.md
@@ -365,7 +365,7 @@ docs/
 
 ### 概述
 
-Squad 是添加专用功能到 AIOX 的模块化扩展。不同于已弃用的 Squad，Squad 遵循标准化模板结构。
+Squad 是添加专用功能到 YARD 的模块化扩展。不同于已弃用的 Squad，Squad 遵循标准化模板结构。
 
 ### Squad 模板位置
 
@@ -392,7 +392,7 @@ templates/squad/                       # 创建扩展的 Squad 模板
 
 ```bash
 # 计划中的 CLI (未来):
-npx create-aiox-squad my-squad-name
+npx create-yard-squad my-squad-name
 
 # 当前方法:
 cp -r templates/squad/ squads/my-squad-name/
@@ -481,7 +481,7 @@ yard-core/
 
 ```
 squads/
-├── verified/                          # AIOX 审核的 Squad
+├── verified/                          # YARD 审核的 Squad
 │   ├── github-devops/
 │   ├── db-sage/
 │   └── coderabbit-workflow/
@@ -496,7 +496,7 @@ squads/
 │   └── agent-squad/
 │
 └── tools/                             # Squad 开发工具
-    └── create-aiox-squad/
+    └── create-yard-squad/
 ```
 
 ### 存储库 3: SynkraAI/mcp-ecosystem (Apache 2.0)
@@ -504,9 +504,9 @@ squads/
 ```
 mcp-ecosystem/
 ├── presets/                           # MCP 预设 (Docker MCP Toolkit)
-│   ├── aiox-dev/
-│   ├── aiox-research/
-│   └── aiox-docker/
+│   ├── yard-dev/
+│   ├── yard-research/
+│   └── yard-docker/
 │
 ├── mcps/                              # MCP 基础配置
 │   ├── exa/
@@ -563,7 +563,7 @@ mmos/
 目录: kebab-case (小写，用连字符分隔)
   ✅ .yard-core/
   ✅ Squads/
-  ❌ .AIOX-Core/
+  ❌ .YARD-Core/
   ❌ legacy-packs/
 
 文件 (代码): kebab-case + 扩展名
@@ -634,7 +634,7 @@ Epic:
 
 # 我在编写故事:
 位置: docs/stories/{epic-context}/{story-file}.md
-示例: docs/stories/aiox migration/story-6.1.2.6.md
+示例: docs/stories/yard migration/story-6.1.2.6.md
 
 # 我在记录架构决策:
 位置: docs/architecture/project-decisions/{decision-file}.md
@@ -709,4 +709,4 @@ outputs/                               # 运行时输出 (gitignored)
 
 ---
 
-_这是 AIOX 框架的官方模式。所有文件放置应遵循此结构。_
+_这是 YARD 框架的官方模式。所有文件放置应遵循此结构。_

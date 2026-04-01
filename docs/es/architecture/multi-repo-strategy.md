@@ -26,7 +26,7 @@
 
 ## Descripción General
 
-AIOX v4 adopta una **estrategia multi-repositorio** para permitir el desarrollo modular, las contribuciones de la comunidad y una clara separación entre el marco fundamental, las extensiones (squads) y los componentes propietarios.
+YARD v4 adopta una **estrategia multi-repositorio** para permitir el desarrollo modular, las contribuciones de la comunidad y una clara separación entre el marco fundamental, las extensiones (squads) y los componentes propietarios.
 
 ### Objetivos de Diseño
 
@@ -46,7 +46,7 @@ AIOX v4 adopta una **estrategia multi-repositorio** para permitir el desarrollo 
 Organización SynkraAI
 ├── REPOSITORIOS PÚBLICOS
 │   ├── yard-core          # Marco fundamental (MIT)
-│   ├── aiox-squads        # Squads comunitarios (MIT)
+│   ├── yard-squads        # Squads comunitarios (MIT)
 │   └── mcp-ecosystem      # Configuraciones MCP (Apache 2.0)
 │
 └── REPOSITORIOS PRIVADOS
@@ -65,7 +65,7 @@ Organización SynkraAI
 │                                                                          │
 │   ┌────────────────────┐     ┌────────────────────┐                     │
 │   │  SynkraAI/         │     │  SynkraAI/         │                     │
-│   │  yard-core         │     │  aiox-squads       │                     │
+│   │  yard-core         │     │  yard-squads       │                     │
 │   │  (MIT)  │◄────│  (MIT)             │                     │
 │   │                    │     │                    │                     │
 │   │  - Marco           │     │  - Squad ETL       │                     │
@@ -110,7 +110,7 @@ Organización SynkraAI
 
 ### Propósito
 
-El repositorio central contiene el marco AIOX fundamental del que todos los proyectos dependen.
+El repositorio central contiene el marco YARD fundamental del que todos los proyectos dependen.
 
 ### Contenidos
 
@@ -129,7 +129,7 @@ El repositorio central contiene el marco AIOX fundamental del que todos los proy
 ### Paquete npm
 
 ```bash
-npm install @aiox/core
+npm install @yard/core
 ```
 
 ---
@@ -138,12 +138,12 @@ npm install @aiox/core
 
 ### Descripción General
 
-Los squads son extensiones modulares que agregan capacidades especializadas a AIOX.
+Los squads son extensiones modulares que agregan capacidades especializadas a YARD.
 
-### Repositorio aiox-squads
+### Repositorio yard-squads
 
 ```
-aiox-squads/
+yard-squads/
 ├── etl/                    # Squad de procesamiento ETL
 │   ├── squad.yaml          # Manifiesto del squad
 │   ├── agents/             # Agentes específicos del squad
@@ -173,7 +173,7 @@ description: Squad de procesamiento ETL para tuberías de datos
 license: MIT
 
 peerDependencies:
-  '@aiox/core': '^2.1.0'
+  '@yard/core': '^2.1.0'
 
 agents:
   - id: data-engineer
@@ -196,9 +196,9 @@ exports:
 ### Paquetes npm
 
 ```bash
-npm install @aiox/squad-etl
-npm install @aiox/squad-creator
-npm install @aiox/squad-mmos
+npm install @yard/squad-etl
+npm install @yard/squad-creator
+npm install @yard/squad-mmos
 ```
 
 ---
@@ -235,7 +235,7 @@ mcp-ecosystem/
 ### Paquete npm
 
 ```bash
-npm install @aiox/mcp-presets
+npm install @yard/mcp-presets
 ```
 
 ---
@@ -255,7 +255,7 @@ Contiene componentes MMOS (Mental Model Operating System) propietarios:
 
 ### SynkraAI/certified-partners (Propietario)
 
-Recursos para socios certificados de AIOX:
+Recursos para socios certificados de YARD:
 
 - Implementaciones de squads premium
 - Acceso al portal de socios
@@ -272,7 +272,7 @@ Recursos para socios certificados de AIOX:
 
 ```
 ┌──────────────┐     depende de      ┌──────────────┐
-│  aiox-squads │ ──────────────────► │  yard-core   │
+│  yard-squads │ ──────────────────► │  yard-core   │
 └──────────────┘                     └──────────────┘
        │                                    │
        │                                    │
@@ -286,7 +286,7 @@ Recursos para socios certificados de AIOX:
 
 ### Compatibilidad de Versiones
 
-| yard-core | aiox-squads | mcp-ecosystem |
+| yard-core | yard-squads | mcp-ecosystem |
 | --------- | ----------- | ------------- |
 | ^2.1.0    | ^1.0.0      | ^1.0.0        |
 | ^3.0.0    | ^2.0.0      | ^1.x.x        |
@@ -297,7 +297,7 @@ Para proyectos que necesitan múltiples repositorios:
 
 ```bash
 # Agregar squads como submodule
-git submodule add https://github.com/SynkraAI/aiox-squads.git squads
+git submodule add https://github.com/SynkraAI/yard-squads.git squads
 
 # Agregar ecosistema MCP como submodule
 git submodule add https://github.com/SynkraAI/mcp-ecosystem.git mcp
@@ -308,9 +308,9 @@ git submodule add https://github.com/SynkraAI/mcp-ecosystem.git mcp
 ```json
 {
   "dependencies": {
-    "@aiox/core": "^2.1.0",
-    "@aiox/squad-etl": "^1.0.0",
-    "@aiox/mcp-presets": "^1.0.0"
+    "@yard/core": "^2.1.0",
+    "@yard/squad-etl": "^1.0.0",
+    "@yard/mcp-presets": "^1.0.0"
   }
 }
 ```
@@ -323,11 +323,11 @@ git submodule add https://github.com/SynkraAI/mcp-ecosystem.git mcp
 
 | Paquete               | Registro   | Licencia       | Repositorio    |
 | --------------------- | ---------- | -------------- | ------------- |
-| `@aiox/core`          | npm public | MIT            | yard-core     |
-| `@aiox/squad-etl`     | npm public | MIT            | aiox-squads   |
-| `@aiox/squad-creator` | npm public | MIT            | aiox-squads   |
-| `@aiox/squad-mmos`    | npm public | MIT            | aiox-squads   |
-| `@aiox/mcp-presets`   | npm public | Apache 2.0     | mcp-ecosystem |
+| `@yard/core`          | npm public | MIT            | yard-core     |
+| `@yard/squad-etl`     | npm public | MIT            | yard-squads   |
+| `@yard/squad-creator` | npm public | MIT            | yard-squads   |
+| `@yard/squad-mmos`    | npm public | MIT            | yard-squads   |
+| `@yard/mcp-presets`   | npm public | Apache 2.0     | mcp-ecosystem |
 
 ### Flujo de Publicación
 
@@ -335,7 +335,7 @@ git submodule add https://github.com/SynkraAI/mcp-ecosystem.git mcp
 # Desde yard-core
 npm publish --access public
 
-# Desde aiox-squads/etl
+# Desde yard-squads/etl
 cd etl && npm publish --access public
 
 # Desde mcp-ecosystem
@@ -387,4 +387,4 @@ npm publish --access public
 
 ---
 
-_Última actualización: 2026-01-28 | Equipo del Marco AIOX_
+_Última actualización: 2026-01-28 | Equipo del Marco YARD_

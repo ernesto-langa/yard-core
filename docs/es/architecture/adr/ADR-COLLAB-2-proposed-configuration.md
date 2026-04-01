@@ -11,7 +11,7 @@
 
 ## Contexto
 
-Siguiendo la [Auditoria de Estado Actual](./ADR-COLLAB-1-current-state-audit.md), este documento propone cambios de configuracion especificos para habilitar contribuciones externas seguras a AIOX.
+Siguiendo la [Auditoria de Estado Actual](./ADR-COLLAB-1-current-state-audit.md), este documento propone cambios de configuracion especificos para habilitar contribuciones externas seguras a YARD.
 
 ---
 
@@ -85,7 +85,7 @@ gh api repos/ernesto-langa/yard-core/branches/main/protection -X PUT \
 
 ```yaml
 # yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
-# Configuracion CodeRabbit para AIOX
+# Configuracion CodeRabbit para YARD
 # Historia: COLLAB-1
 
 language: 'en-US'
@@ -111,7 +111,7 @@ reviews:
   path_instructions:
     # Definiciones de agentes - validacion estricta
     '.yard-core/development/agents/**':
-      - 'Verificar que el agente sigue la estructura YAML de agentes AIOX (persona_profile, commands, dependencies)'
+      - 'Verificar que el agente sigue la estructura YAML de agentes YARD (persona_profile, commands, dependencies)'
       - 'Verificar que persona_profile incluye archetype, communication style, y greeting_levels'
       - 'Validar que todos los comandos listados tienen dependencias de tareas correspondientes'
       - 'Asegurar que el agente tiene metadatos de visibilidad apropiados para comandos'
@@ -119,7 +119,7 @@ reviews:
 
     # Definiciones de tareas
     '.yard-core/development/tasks/**':
-      - 'Verificar que la tarea sigue el formato de tareas AIOX con puntos de elicitacion claros'
+      - 'Verificar que la tarea sigue el formato de tareas YARD con puntos de elicitacion claros'
       - 'Verificar que los entregables estan bien definidos'
       - 'Validar que las dependencias referenciadas existen en el codebase'
       - 'Asegurar que la tarea tiene guia de manejo de errores apropiada'
@@ -132,7 +132,7 @@ reviews:
 
     # Archivos de plantilla
     '.yard-core/product/templates/**':
-      - 'Asegurar que la plantilla sigue las convenciones de plantillas AIOX'
+      - 'Asegurar que la plantilla sigue las convenciones de plantillas YARD'
       - 'Verificar que la sintaxis de placeholders es consistente'
       - 'Validar que la plantilla produce salida valida'
 
@@ -148,7 +148,7 @@ reviews:
       - 'Verificar mejores practicas de async/await'
       - 'Verificar que el manejo de errores es completo'
       - 'Buscar vulnerabilidades de seguridad potenciales'
-      - 'Asegurar que el codigo sigue los estandares de codigo AIOX'
+      - 'Asegurar que el codigo sigue los estandares de codigo YARD'
 
     '**/*.ts':
       - 'Verificar que los tipos TypeScript estan correctamente definidos'
@@ -197,7 +197,7 @@ abort_on_close: true
 **Archivo:** `.github/CODEOWNERS`
 
 ```codeowners
-# AIOX Code Owners
+# YARD Code Owners
 # Historia: COLLAB-1
 # Ultima Actualizacion: 2025-12-30
 #
@@ -324,7 +324,7 @@ docs/guides/ @SynkraAI/maintainers
 
 #### Requerido
 
-- [ ] El agente sigue la estructura YAML de agentes AIOX
+- [ ] El agente sigue la estructura YAML de agentes YARD
 - [ ] `persona_profile` esta completo (archetype, communication, greeting_levels)
 - [ ] Todos los comandos tienen dependencias de tareas correspondientes
 - [ ] Sin credenciales hardcodeadas o datos sensibles
@@ -370,7 +370,7 @@ _Al enviar este PR, confirmo que he leido las [Guias de Contribucion](../../../.
 
 #### Requerido
 
-- [ ] La tarea sigue el formato de tareas AIOX
+- [ ] La tarea sigue el formato de tareas YARD
 - [ ] Los puntos de elicitacion son claros y accionables
 - [ ] Los entregables estan bien definidos
 - [ ] Guia de manejo de errores incluida

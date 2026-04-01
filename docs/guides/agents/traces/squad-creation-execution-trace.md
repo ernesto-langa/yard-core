@@ -283,7 +283,7 @@ flowchart TD
 flowchart TD
     A["*migrate-squad {path}"] --> B[Load squad-creator-migrate.md task]
     B --> C[Analyze squad for legacy patterns]
-    C --> D["Detect: config.yaml, flat structure,<br/>missing aiox.type, missing aiox.minVersion"]
+    C --> D["Detect: config.yaml, flat structure,<br/>missing yard.type, missing yard.minVersion"]
     D --> E{Needs migration?}
     E -->|no| F[Report: already up to date]
     E -->|yes| G{--dry-run?}
@@ -294,7 +294,7 @@ flowchart TD
     K --> L[Generate migration report]
 ```
 
-**Migration detections:** config.yaml (rename to squad.yaml), flat structure (create dirs), missing fields (aiox.type, aiox.minVersion, name, version)
+**Migration detections:** config.yaml (rename to squad.yaml), flat structure (create dirs), missing fields (yard.type, yard.minVersion, name, version)
 
 ---
 
@@ -397,7 +397,7 @@ flowchart TD
 flowchart TD
     A["*download-squad {name}"] --> B[Load squad-creator-download.md task]
     B --> C{--list flag?}
-    C -->|yes| D[Fetch registry.json from aiox-squads]
+    C -->|yes| D[Fetch registry.json from yard-squads]
     C -->|no| E{Squad exists locally?}
     D --> F[Display available squads]
     E -->|yes and no --overwrite| G[Error: already exists]
@@ -410,7 +410,7 @@ flowchart TD
     M --> N[Display success + next steps]
 ```
 
-**Source:** `github.com/SynkraAI/aiox-squads`
+**Source:** `github.com/SynkraAI/yard-squads`
 
 ---
 
@@ -437,7 +437,7 @@ flowchart TD
     D -->|yes| F[Check gh auth status]
     F --> G{--dry-run?}
     G -->|yes| H[Preview PR details and exit]
-    G -->|no| I[Fork/clone aiox-squads]
+    G -->|no| I[Fork/clone yard-squads]
     I --> J["Create branch: squad/{name}"]
     J --> K["Copy files to packages/{name}/"]
     K --> L[Update registry.json]
@@ -446,7 +446,7 @@ flowchart TD
     N --> O[Display PR URL]
 ```
 
-**Target:** `github.com/SynkraAI/aiox-squads` via Pull Request
+**Target:** `github.com/SynkraAI/yard-squads` via Pull Request
 
 **Tools used:** github-cli (gh auth, gh pr create)
 
@@ -643,7 +643,7 @@ graph TD
 | @squad-creator -> @dev | Handoff | Squad created, needs code implementation |
 | @squad-creator -> @qa | Handoff | Squad created, needs quality review |
 | @squad-creator -> @devops | Delegate | Publishing, deployment, git push operations |
-| @aiox-master -> @squad-creator | Invokes | Component creation (agents, tasks, workflows) |
+| @yard-master -> @squad-creator | Invokes | Component creation (agents, tasks, workflows) |
 | @pm -> @squad-creator | Receives | Requirements for new squads |
 | @architect -> @squad-creator | Receives | Architecture decisions affecting squad structure |
 
@@ -738,4 +738,4 @@ graph TD
 
 ---
 
-*Traced from source on 2026-02-05 | Story AIOX-TRACE-001*
+*Traced from source on 2026-02-05 | Story YARD-TRACE-001*

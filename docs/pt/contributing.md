@@ -1,8 +1,8 @@
-# Contribuindo para o Synkra AIOX
+# Contribuindo para o Synkra YARD
 
 > **[English Version](CONTRIBUTING.md)**
 
-Bem-vindo ao AIOX! Obrigado pelo seu interesse em contribuir. Este guia vai ajuda-lo a entender nosso fluxo de trabalho, processo de contribuicao e como submeter suas alteracoes.
+Bem-vindo ao YARD! Obrigado pelo seu interesse em contribuir. Este guia vai ajuda-lo a entender nosso fluxo de trabalho, processo de contribuicao e como submeter suas alteracoes.
 
 ## Indice
 
@@ -343,7 +343,7 @@ Quando voce submete um PR, as seguintes verificacoes executam automaticamente:
 
 - Qualidade de codigo e boas praticas
 - Preocupacoes de seguranca
-- Padroes especificos do AIOX (agents, tasks, workflows)
+- Padroes especificos do YARD (agents, tasks, workflows)
 - Problemas de performance
 
 **Niveis de Severidade:**
@@ -382,7 +382,7 @@ Apos as verificacoes automaticas passarem, um maintainer ira:
 
 ## Sistema de Validacao
 
-AIOX implementa uma estrategia de **Defesa em Profundidade** com 3 camadas de validacao:
+YARD implementa uma estrategia de **Defesa em Profundidade** com 3 camadas de validacao:
 
 ### Camada 1: Pre-commit (Local)
 
@@ -538,4 +538,4 @@ Correcoes comuns:
 
 ---
 
-**Obrigado por contribuir para o Synkra AIOX!**
+**Obrigado por contribuir para o Synkra YARD!**

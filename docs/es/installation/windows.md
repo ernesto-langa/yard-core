@@ -4,7 +4,7 @@
   Última sincronización: 2026-01-29
 -->
 
-# Guía de Instalación Windows para Synkra AIOX
+# Guía de Instalación Windows para Synkra YARD
 
 > 🌐 [EN](../../installation/windows.md) | [PT](../../pt/installation/windows.md) | **ES**
 
@@ -167,7 +167,7 @@ El instalador automáticamente:
    npm install -g @anthropic-ai/claude-code
    ```
 
-2. Comandos se instalan en `.claude\commands\AIOX\`
+2. Comandos se instalan en `.claude\commands\YARD\`
 3. Use `/nombre-del-agente` para activar agentes
 
 
@@ -278,7 +278,7 @@ wsl --install -d Ubuntu
 # Reinicie el computador cuando se solicite
 ```
 
-### Configurar AIOX con WSL
+### Configurar YARD con WSL
 
 ```bash
 # Dentro de WSL, siga la guía de instalación Linux

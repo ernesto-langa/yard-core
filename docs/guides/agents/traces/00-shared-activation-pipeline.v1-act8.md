@@ -6,7 +6,7 @@
 
 ## Overview
 
-Every AIOX agent goes through a **single unified activation pipeline** before presenting its greeting. As of Story ACT-6, the previous two-path architecture (Path A: direct GreetingBuilder invocation, Path B: generate-greeting.js CLI wrapper) has been consolidated into one entry point.
+Every YARD agent goes through a **single unified activation pipeline** before presenting its greeting. As of Story ACT-6, the previous two-path architecture (Path A: direct GreetingBuilder invocation, Path B: generate-greeting.js CLI wrapper) has been consolidated into one entry point.
 
 | Component | Role |
 |-----------|------|
@@ -481,7 +481,7 @@ Each agent has specific config requirements defined in `.yard-core/data/agent-co
 
 | Agent | Config Sections | Files Loaded | Performance Target |
 |-------|----------------|--------------|-------------------|
-| `aiox-master` | dataLocation, registry | aiox-kb.md (lazy) | <30ms |
+| `yard-master` | dataLocation, registry | yard-kb.md (lazy) | <30ms |
 | `dev` | devLoadAlwaysFiles, devStoryLocation, dataLocation | coding-standards.md, tech-stack.md, source-tree.md, technical-preferences.md | <50ms |
 | `qa` | qaLocation, dataLocation, storyBacklog | technical-preferences.md, test-levels-framework.md, test-priorities-matrix.md | <50ms |
 | `devops` | dataLocation, cicdLocation | technical-preferences.md | <50ms |
@@ -595,7 +595,7 @@ graph TD
 
 ## 13. `user_profile` Impact Matrix (Story ACT-2)
 
-The `user_profile` setting (`bob` or `advanced`) affects behavior across the entire AIOX pipeline. This section documents every file that references `user_profile`/`userProfile` and the behavioral difference between modes.
+The `user_profile` setting (`bob` or `advanced`) affects behavior across the entire YARD pipeline. This section documents every file that references `user_profile`/`userProfile` and the behavioral difference between modes.
 
 ### 13.1 Bob Mode Flow
 
@@ -630,7 +630,7 @@ Activation → loadUserProfile() → validateUserProfile() → resolveConfig(L5 
 | 15 | `packages/installer/src/config/configure-environment.js` | Install | Passes `userProfile: 'bob'` to config generation | Passes `userProfile: 'advanced'` |
 | 16 | `packages/yard-install/src/installer.js` | Install | Sets `config.user_profile = 'bob'` in YAML | Sets `config.user_profile = 'advanced'` |
 | 17 | `.yard-core/development/tasks/environment-bootstrap.md` | Task | Documents bob selection flow | Documents advanced selection flow |
-| 18 | `docs/aiox-workflows/bob-orchestrator-workflow.md` | Docs | Full bob orchestrator workflow documentation | N/A (bob-specific doc) |
+| 18 | `docs/yard-workflows/bob-orchestrator-workflow.md` | Docs | Full bob orchestrator workflow documentation | N/A (bob-specific doc) |
 
 ### 13.3 Impact Matrix: Agent Command Visibility
 
@@ -649,9 +649,9 @@ In `bob` mode, non-PM agents return **empty command lists** (redirect to @pm sho
 | `@devops` | 0 (no visibility metadata) | Empty (redirect to @pm) | Fallback: first 12 commands |
 | `@ux-design-expert` | 0 (no visibility metadata) | Empty (redirect to @pm) | Fallback: first 12 commands |
 | `@squad-creator` | 7 (most have `key`) | Empty (redirect to @pm) | Full visibility commands |
-| `@aiox-master` | 0 (uses string visibility) | Empty (redirect to @pm) | Fallback: first 12 commands |
+| `@yard-master` | 0 (uses string visibility) | Empty (redirect to @pm) | Fallback: first 12 commands |
 
-**Note:** Agents with 0 `key` commands (`qa`, `data-engineer`, `devops`, `ux-design-expert`, `aiox-master`) lack `visibility` array metadata on their commands. In `advanced` mode `workflow` sessions, they fall back to showing first 12 commands. This is a known gap tracked for future improvement.
+**Note:** Agents with 0 `key` commands (`qa`, `data-engineer`, `devops`, `ux-design-expert`, `yard-master`) lack `visibility` array metadata on their commands. In `advanced` mode `workflow` sessions, they fall back to showing first 12 commands. This is a known gap tracked for future improvement.
 
 ### 13.4 Validation Pipeline Integration
 
@@ -685,7 +685,7 @@ In `bob` mode, non-PM agents return **empty command lists** (redirect to @pm sho
 
 ---
 
-*Traced from source on 2026-02-05 | Story AIOX-TRACE-001*
+*Traced from source on 2026-02-05 | Story YARD-TRACE-001*
 *Updated on 2026-02-06 | Story ACT-2 - user_profile impact matrix added*
 *Updated on 2026-02-06 | Story ACT-6 - Unified Activation Pipeline (Path A/B merged)*
 *Updated on 2026-02-06 | Story ACT-8 - Config governance: enriched pm, ux-design-expert, analyst, sm, squad-creator*

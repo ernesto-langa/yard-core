@@ -1,10 +1,10 @@
 <!--
   翻译：zh-CN（简体中文）
-  原文：/docs/aiox-agent-flows/analyst-system.md
+  原文：/docs/yard-agent-flows/analyst-system.md
   最后同步：2026-02-22
 -->
 
-# 分析师代理 (@analyst) 系统 - AIOX
+# 分析师代理 (@analyst) 系统 - YARD
 
 > **版本：** 1.0.0
 > **创建日期：** 2026-02-04
@@ -62,7 +62,7 @@
 | 文件 | 目的 |
 |---------|-----------|
 | `.yard-core/development/agents/analyst.md` | 分析师代理核心定义 |
-| `.claude/commands/AIOX/agents/analyst.md` | 用于激活 @analyst 的 Claude Code 命令 |
+| `.claude/commands/YARD/agents/analyst.md` | 用于激活 @analyst 的 Claude Code 命令 |
 
 ### 分析师任务
 
@@ -99,7 +99,7 @@
 
 | 文件 | 目的 |
 |---------|-----------|
-| `.yard-core/development/data/aiox-kb.md` | AIOX 知识库 |
+| `.yard-core/development/data/yard-kb.md` | YARD 知识库 |
 | `.yard-core/development/data/brainstorming-techniques.md` | 可用的头脑风暴技术 |
 
 ### 使用分析师的工作流

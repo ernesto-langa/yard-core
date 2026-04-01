@@ -993,4 +993,4 @@ workflow_type: greenfield | brownfield | complete
 
 ---
 
-*Traced from source on 2026-02-05 | Story AIOX-TRACE-001*
+*Traced from source on 2026-02-05 | Story YARD-TRACE-001*

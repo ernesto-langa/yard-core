@@ -1,10 +1,10 @@
-# AIOX Quality Gate System Guide
+# YARD Quality Gate System Guide
 
 > **EN** | [PT](../pt/guides/quality-gates.md) | [ES](../es/guides/quality-gates.md)
 
 ---
 
-> Comprehensive guide to the 3-layer quality gate system for Synkra AIOX.
+> Comprehensive guide to the 3-layer quality gate system for Synkra YARD.
 
 **Version:** 2.1.0
 **Last Updated:** 2025-12-01
@@ -13,7 +13,7 @@
 
 ## Overview
 
-The AIOX Quality Gate System provides automated quality assurance through three progressive layers of validation. Each layer catches different types of issues at the appropriate stage of development.
+The YARD Quality Gate System provides automated quality assurance through three progressive layers of validation. Each layer catches different types of issues at the appropriate stage of development.
 
 ### The 3-Layer Architecture
 
@@ -91,15 +91,15 @@ layer1:
 
 ```bash
 # Run all Layer 1 checks
-aiox qa run --layer=1
+yard qa run --layer=1
 
 # Run specific check
-aiox qa run --layer=1 --check=lint
-aiox qa run --layer=1 --check=test
-aiox qa run --layer=1 --check=typecheck
+yard qa run --layer=1 --check=lint
+yard qa run --layer=1 --check=test
+yard qa run --layer=1 --check=typecheck
 
 # Run with verbose output
-aiox qa run --layer=1 --verbose
+yard qa run --layer=1 --verbose
 ```
 
 ### Expected Output
@@ -162,7 +162,7 @@ layer2:
   quinn:
     enabled: true
     autoReview: true
-    agentPath: '.claude/commands/AIOX/agents/qa.md'
+    agentPath: '.claude/commands/YARD/agents/qa.md'
     severity:
       block: ['CRITICAL']
       warn: ['HIGH', 'MEDIUM']
@@ -172,13 +172,13 @@ layer2:
 
 ```bash
 # Run all Layer 2 checks
-aiox qa run --layer=2
+yard qa run --layer=2
 
 # Run CodeRabbit only
-aiox qa run --layer=2 --tool=coderabbit
+yard qa run --layer=2 --tool=coderabbit
 
 # Run Quinn (@qa) review
-aiox qa run --layer=2 --tool=quinn
+yard qa run --layer=2 --tool=quinn
 ```
 
 ### Severity Levels
@@ -294,51 +294,51 @@ The strategic review checklist ensures reviewers cover key areas:
 
 ```bash
 # Request human review
-aiox qa request-review --pr=123
+yard qa request-review --pr=123
 
 # Sign off on review
-aiox qa signoff --pr=123 --reviewer="@architect"
+yard qa signoff --pr=123 --reviewer="@architect"
 
 # Check sign-off status
-aiox qa signoff-status --pr=123
+yard qa signoff-status --pr=123
 ```
 
 ---
 
 ## CLI Commands
 
-### `aiox qa run`
+### `yard qa run`
 
 Run quality gate checks.
 
 ```bash
 # Run all layers sequentially
-aiox qa run
+yard qa run
 
 # Run specific layer
-aiox qa run --layer=1
-aiox qa run --layer=2
-aiox qa run --layer=3
+yard qa run --layer=1
+yard qa run --layer=2
+yard qa run --layer=3
 
 # Run with options
-aiox qa run --verbose          # Detailed output
-aiox qa run --fail-fast        # Stop on first failure
-aiox qa run --continue-on-fail # Continue despite failures
+yard qa run --verbose          # Detailed output
+yard qa run --fail-fast        # Stop on first failure
+yard qa run --continue-on-fail # Continue despite failures
 ```
 
-### `aiox qa status`
+### `yard qa status`
 
 Check current quality gate status.
 
 ```bash
 # Get overall status
-aiox qa status
+yard qa status
 
 # Get status for specific layer
-aiox qa status --layer=1
+yard qa status --layer=1
 
 # Get status for PR
-aiox qa status --pr=123
+yard qa status --pr=123
 ```
 
 **Output:**
@@ -364,31 +364,31 @@ Layer 3: Human Review
 Overall: PENDING REVIEW
 ```
 
-### `aiox qa report`
+### `yard qa report`
 
 Generate quality gate report.
 
 ```bash
 # Generate report
-aiox qa report
+yard qa report
 
 # Export to file
-aiox qa report --output=qa-report.json
-aiox qa report --format=markdown --output=qa-report.md
+yard qa report --output=qa-report.json
+yard qa report --format=markdown --output=qa-report.md
 ```
 
-### `aiox qa configure`
+### `yard qa configure`
 
 Configure quality gate settings.
 
 ```bash
 # Interactive configuration
-aiox qa configure
+yard qa configure
 
 # Set specific options
-aiox qa configure --layer1.coverage.minimum=90
-aiox qa configure --layer2.coderabbit.enabled=false
-aiox qa configure --layer3.requireSignoff=true
+yard qa configure --layer1.coverage.minimum=90
+yard qa configure --layer2.coderabbit.enabled=false
+yard qa configure --layer3.requireSignoff=true
 ```
 
 ---
@@ -415,7 +415,7 @@ jobs:
         with:
           node-version: '18'
       - run: npm ci
-      - run: aiox qa run --layer=1
+      - run: yard qa run --layer=1
 
   layer2:
     name: Layer 2 - PR Automation
@@ -427,7 +427,7 @@ jobs:
         with:
           node-version: '18'
       - run: npm ci
-      - run: aiox qa run --layer=2
+      - run: yard qa run --layer=2
         env:
           CODERABBIT_API_KEY: ${{ secrets.CODERABBIT_API_KEY }}
 
@@ -437,7 +437,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: aiox qa request-review --pr=${{ github.event.pull_request.number }}
+      - run: yard qa request-review --pr=${{ github.event.pull_request.number }}
 ```
 
 ### GitLab CI
@@ -453,20 +453,20 @@ layer1:
   stage: layer1
   script:
     - npm ci
-    - aiox qa run --layer=1
+    - yard qa run --layer=1
 
 layer2:
   stage: layer2
   script:
     - npm ci
-    - aiox qa run --layer=2
+    - yard qa run --layer=2
   needs:
     - layer1
 
 layer3:
   stage: layer3
   script:
-    - aiox qa request-review
+    - yard qa request-review
   needs:
     - layer2
   when: manual
@@ -479,7 +479,7 @@ layer3:
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-aiox qa run --layer=1 --fail-fast
+yard qa run --layer=1 --fail-fast
 ```
 
 ---
@@ -528,7 +528,7 @@ layer2:
   quinn:
     enabled: true
     autoReview: true
-    agentPath: '.claude/commands/AIOX/agents/qa.md'
+    agentPath: '.claude/commands/YARD/agents/qa.md'
     severity:
       block: [CRITICAL]
       warn: [HIGH, MEDIUM]
@@ -605,4 +605,4 @@ verbose:
 
 ---
 
-_Synkra AIOX v4 Quality Gate System Guide_
+_Synkra YARD v4 Quality Gate System Guide_

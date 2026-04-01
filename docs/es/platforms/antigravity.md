@@ -1,6 +1,6 @@
 <!-- Traducción: ES | Original: /docs/platforms/en/antigravity.md | Sincronización: 2026-01-26 -->
 
-# Guía AIOX para AntiGravity
+# Guía YARD para AntiGravity
 
 > 🌐 [EN](../../platforms/antigravity.md) | [PT](../../pt/platforms/antigravity.md) | **ES**
 
@@ -16,7 +16,7 @@
 
 AntiGravity es la plataforma de desarrollo agentic de Google que permite a los desarrolladores construir y orquestar flujos de trabajo impulsados por IA. Cuenta con un enfoque único basado en flujos de trabajo para la activación de agentes y una integración profunda con los servicios de Google Cloud.
 
-### ¿Por qué usar AIOX con AntiGravity?
+### ¿Por qué usar YARD con AntiGravity?
 
 AntiGravity ofrece capacidades distintivas:
 
@@ -77,11 +77,11 @@ antigravity auth login
 export GOOGLE_APPLICATION_CREDENTIALS="ruta/a/credenciales.json"
 ```
 
-### Paso 3: Instalar AIOX
+### Paso 3: Instalar YARD
 
 ```bash
 cd tu-proyecto
-npx @anthropic/aiox init
+npx @anthropic/yard init
 # Selecciona "AntiGravity" cuando se te solicite
 ```
 
@@ -137,7 +137,7 @@ proyecto/
 **Ubicación:** `.antigravity/rules.md`
 
 ```markdown
-# Reglas de Synkra AIOX para AntiGravity
+# Reglas de Synkra YARD para AntiGravity
 
 ## Sistema de Agentes
 - Usa @nombre-agente o flujos de trabajo para activación
@@ -487,13 +487,13 @@ R: Los agentes son personas con experiencia; los flujos de trabajo orquestan acc
 1. Tus agentes en `.yard-core/` son portables
 2. Inicializa AntiGravity:
    ```bash
-   npx @anthropic/aiox init --ide antigravity
+   npx @anthropic/yard init --ide antigravity
    ```
 3. Los archivos de flujo de trabajo se generan automáticamente
 
 ### De AntiGravity a Otros IDEs
 
-1. Los agentes de AIOX permanecen en `.yard-core/`
+1. Los agentes de YARD permanecen en `.yard-core/`
 2. Inicializa para el IDE destino
 3. Las configuraciones específicas de la plataforma se generan
 
@@ -507,4 +507,4 @@ R: Los agentes son personas con experiencia; los flujos de trabajo orquestan acc
 
 ---
 
-*Synkra AIOX - Guía de Plataforma AntiGravity v1.0*
+*Synkra YARD - Guía de Plataforma AntiGravity v1.0*

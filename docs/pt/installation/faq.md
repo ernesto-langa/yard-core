@@ -4,7 +4,7 @@
   Última sincronização: 2026-01-26
 -->
 
-# FAQ do Synkra AIOX
+# FAQ do Synkra YARD
 
 > 🌐 [EN](../../installation/faq.md) | **PT** | [ES](../../es/installation/faq.md)
 
@@ -69,9 +69,9 @@ npm --version   # Deve ser 9+
 
 ---
 
-### Q3: Posso instalar o AIOX em um projeto existente?
+### Q3: Posso instalar o YARD em um projeto existente?
 
-**Resposta:** Sim! O AIOX foi projetado tanto para projetos greenfield quanto brownfield.
+**Resposta:** Sim! O YARD foi projetado tanto para projetos greenfield quanto brownfield.
 
 **Para projetos existentes:**
 
@@ -110,9 +110,9 @@ Fatores que afetam o tempo de instalação:
 
 ---
 
-### Q5: Quais arquivos o AIOX cria no meu projeto?
+### Q5: Quais arquivos o YARD cria no meu projeto?
 
-**Resposta:** O AIOX cria a seguinte estrutura:
+**Resposta:** O YARD cria a seguinte estrutura:
 
 ```
 your-project/
@@ -125,7 +125,7 @@ your-project/
 │   └── core-config.yaml        # Configuração do framework
 │
 ├── .claude/                    # Claude Code (se selecionado)
-│   └── commands/AIOX/agents/   # Comandos slash de agentes
+│   └── commands/YARD/agents/   # Comandos slash de agentes
 │
 ├── .cursor/                    # Cursor (se selecionado)
 │   └── rules/                  # Regras de agentes
@@ -143,7 +143,7 @@ your-project/
 
 ## Atualizações e Manutenção
 
-### Q6: Como atualizo o AIOX para a versão mais recente?
+### Q6: Como atualizo o YARD para a versão mais recente?
 
 **Resposta:**
 
@@ -220,7 +220,7 @@ mv .yard-core.backup .yard-core
 
 ## Uso Offline e Air-Gapped
 
-### Q9: Posso usar o AIOX sem internet?
+### Q9: Posso usar o YARD sem internet?
 
 **Resposta:** Sim, com alguma preparação:
 
@@ -231,16 +231,16 @@ mv .yard-core.backup .yard-core
 npx yard-core install
 
 # Empacotar para uso offline
-tar -czvf aiox-offline.tar.gz .yard-core/ .claude/ .cursor/
+tar -czvf yard-offline.tar.gz .yard-core/ .claude/ .cursor/
 ```
 
 **Na máquina air-gapped:**
 
 ```bash
 # Extrair o pacote
-tar -xzvf aiox-offline.tar.gz
+tar -xzvf yard-offline.tar.gz
 
-# Os agentes AIOX funcionam sem internet
+# Os agentes YARD funcionam sem internet
 # (Eles não requerem chamadas de API externas)
 ```
 
@@ -252,7 +252,7 @@ tar -xzvf aiox-offline.tar.gz
 
 ---
 
-### Q10: Como transfiro o AIOX para um ambiente air-gapped?
+### Q10: Como transfiro o YARD para um ambiente air-gapped?
 
 **Resposta:**
 
@@ -262,7 +262,7 @@ tar -xzvf aiox-offline.tar.gz
    # Instalar e empacotar
    npx yard-core install
    cd your-project
-   tar -czvf aiox-transfer.tar.gz .yard-core/ .claude/ .cursor/ docs/
+   tar -czvf yard-transfer.tar.gz .yard-core/ .claude/ .cursor/ docs/
    ```
 
 2. **Transferir o arquivo** via USB, transferência segura, etc.
@@ -271,7 +271,7 @@ tar -xzvf aiox-offline.tar.gz
 
    ```bash
    cd your-project
-   tar -xzvf aiox-transfer.tar.gz
+   tar -xzvf yard-transfer.tar.gz
    ```
 
 4. **Configurar IDE manualmente** se necessário (os caminhos podem diferir)
@@ -280,7 +280,7 @@ tar -xzvf aiox-offline.tar.gz
 
 ## IDE e Configuração
 
-### Q11: Quais IDEs o AIOX suporta?
+### Q11: Quais IDEs o YARD suporta?
 
 **Resposta:**
 
@@ -295,7 +295,7 @@ tar -xzvf aiox-offline.tar.gz
 
 ---
 
-### Q12: Posso configurar o AIOX para múltiplas IDEs?
+### Q12: Posso configurar o YARD para múltiplas IDEs?
 
 **Resposta:** Sim! Selecione múltiplas IDEs durante a instalação:
 
@@ -319,7 +319,7 @@ Cada IDE recebe seu próprio diretório de configuração:
 
 ---
 
-### Q13: Como configuro o AIOX para um novo membro da equipe?
+### Q13: Como configuro o YARD para um novo membro da equipe?
 
 **Resposta:**
 
@@ -350,7 +350,7 @@ npx yard-core install
 
 ### Q14: Quais agentes estão incluídos?
 
-**Resposta:** O AIOX inclui 11+ agentes especializados:
+**Resposta:** O YARD inclui 11+ agentes especializados:
 
 | Agente          | Papel                    | Melhor Para                           |
 | --------------- | ------------------------ | ------------------------------------- |
@@ -436,7 +436,7 @@ npx yard-core install
 
 ### Q17: O que são Squads?
 
-**Resposta:** Squads são add-ons opcionais que estendem as capacidades do AIOX:
+**Resposta:** Squads são add-ons opcionais que estendem as capacidades do YARD:
 
 | Pack           | Funcionalidades                                                |
 | -------------- | -------------------------------------------------------------- |
@@ -492,14 +492,14 @@ tasks:
 
 ## Uso Avançado
 
-### Q19: Como integro o AIOX com CI/CD?
+### Q19: Como integro o YARD com CI/CD?
 
 **Resposta:**
 
 **Exemplo de GitHub Actions:**
 
 ```yaml
-name: CI with AIOX
+name: CI with YARD
 on: [push]
 jobs:
   test:
@@ -558,7 +558,7 @@ projectStatus:
 
 ---
 
-### Q21: Como contribuo para o AIOX?
+### Q21: Como contribuo para o YARD?
 
 **Resposta:**
 

@@ -9,13 +9,13 @@
 **Versión:** 1.0.0
 **Creado:** 2025-10-29
 **Autores:** Sarah (@po), Winston (@architect)
-**Propósito:** Definir patrones estándar para integrar scripts de utilidades en el framework AIOX
+**Propósito:** Definir patrones estándar para integrar scripts de utilidades en el framework YARD
 
 ---
 
 ## ¿Qué es la Integración de Utilidades?
 
-**Definición:** La integración de utilidades es el proceso de hacer que un script de utilidad huérfano sea **descubrible, documentado y utilizable** dentro del framework AIOX.
+**Definición:** La integración de utilidades es el proceso de hacer que un script de utilidad huérfano sea **descubrible, documentado y utilizable** dentro del framework YARD.
 
 Una utilidad se considera **completamente integrada** cuando:
 1. ✅ **Registrada** en core-config.yaml
@@ -108,7 +108,7 @@ execution:
 utils:
   framework:
     - elicitation-engine  # Usado por flujo de trabajo de creación de agentes
-    - aiox-validator
+    - yard-validator
 ```
 
 **Archivos Modificados:**
@@ -188,7 +188,7 @@ Las utilidades deberían categorizarse para integración más fácil:
 ### Categoría 1: Calidad de Código
 **Propósito:** Analizar, mejorar, validar código
 **Patrón:** Auxiliar de Agente (agentes dev, qa)
-**Ejemplos:** aiox-validator, code-quality-improver, coverage-analyzer
+**Ejemplos:** yard-validator, code-quality-improver, coverage-analyzer
 
 ### Categoría 2: Git/Flujo de Trabajo
 **Propósito:** Operaciones Git, automatización de flujo de trabajo
@@ -290,7 +290,7 @@ utils:
   # Utilidades de infraestructura del framework
   framework:
     - elicitation-engine
-    - aiox-validator
+    - yard-validator
 
   # Utilidades de análisis/documentación
   analyzers:

@@ -1,4 +1,4 @@
-# AIOX Git Workflow Guide
+# YARD Git Workflow Guide
 
 > 🌐 **EN** | [PT](./pt/git-workflow-guide.md) | [ES](./es/git-workflow-guide.md)
 
@@ -20,7 +20,7 @@ _Story: 2.2-git-workflow-implementation.yaml_
 
 ## Overview
 
-Synkra AIOX implements a **Defense in Depth** validation strategy with three progressive layers that catch issues early and ensure code quality before merge.
+Synkra YARD implements a **Defense in Depth** validation strategy with three progressive layers that catch issues early and ensure code quality before merge.
 
 ### Why Three Layers?
 
@@ -273,11 +273,11 @@ git commit --no-verify
 
 ```bash
 # Manual validation
-node .yard-core/utils/aiox-validator.js pre-push
-node .yard-core/utils/aiox-validator.js stories
+node .yard-core/utils/yard-validator.js pre-push
+node .yard-core/utils/yard-validator.js stories
 
 # Validate single story
-node .yard-core/utils/aiox-validator.js story docs/stories/1.1-story.yaml
+node .yard-core/utils/yard-validator.js story docs/stories/1.1-story.yaml
 
 # Skip hook (NOT recommended)
 git push --no-verify
@@ -285,7 +285,7 @@ git push --no-verify
 
 ### Story Validator
 
-**Location:** `.yard-core/utils/aiox-validator.js`
+**Location:** `.yard-core/utils/yard-validator.js`
 
 **Features:**
 
@@ -438,7 +438,7 @@ Warning if missing.
 
 ```yaml
 - name: Validate story checkboxes
-  run: node .yard-core/utils/aiox-validator.js stories
+  run: node .yard-core/utils/yard-validator.js stories
 ```
 
 - Runs on Ubuntu latest
@@ -632,13 +632,13 @@ git commit -m "fix: resolve type errors"
 
 ```bash
 # Check stories
-node .yard-core/utils/aiox-validator.js stories
+node .yard-core/utils/yard-validator.js stories
 
 # Fix story file
 code docs/stories/X.X-story.yaml
 
 # Verify fix
-node .yard-core/utils/aiox-validator.js story docs/stories/X.X-story.yaml
+node .yard-core/utils/yard-validator.js story docs/stories/X.X-story.yaml
 
 # Commit fix
 git add docs/stories/
@@ -944,7 +944,7 @@ module.exports = async function validateCustom() {
 
 ```bash
 # .husky/pre-commit
-node .yard-core/utils/aiox-validator.js pre-commit
+node .yard-core/utils/yard-validator.js pre-commit
 node .yard-core/utils/custom-validator.js
 ```
 
@@ -978,7 +978,7 @@ strategy:
 
 ## References
 
-- **AIOX Validator:** [.yard-core/utils/aiox-validator.js](../.yard-core/utils/aiox-validator.js)
+- **YARD Validator:** [.yard-core/utils/yard-validator.js](../.yard-core/utils/yard-validator.js)
 - **CI Workflow:** [.github/workflows/ci.yml](../.github/workflows/ci.yml)
 
 ---

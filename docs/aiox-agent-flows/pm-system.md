@@ -1,4 +1,4 @@
-# Sistema do Agente Product Manager (PM) - AIOX
+# Sistema do Agente Product Manager (PM) - YARD
 
 > **Versão:** 1.0.0
 > **Criado:** 2026-02-04
@@ -9,7 +9,7 @@
 
 ## Visão Geral
 
-Este documento descreve o sistema completo do agente Product Manager (PM) do AIOX, incluindo todos os arquivos envolvidos, fluxos de trabalho, comandos disponiveis e integracoes entre agentes.
+Este documento descreve o sistema completo do agente Product Manager (PM) do YARD, incluindo todos os arquivos envolvidos, fluxos de trabalho, comandos disponiveis e integracoes entre agentes.
 
 O agente PM e projetado para:
 - Criar e gerenciar Product Requirements Documents (PRDs) para projetos greenfield e brownfield
@@ -41,7 +41,7 @@ O agente PM e projetado para:
 | Arquivo | Propósito |
 |---------|-----------|
 | `.yard-core/development/agents/pm.md` | Definição core do agente PM |
-| `.claude/commands/AIOX/agents/pm.md` | Comando Claude Code para ativar @pm |
+| `.claude/commands/YARD/agents/pm.md` | Comando Claude Code para ativar @pm |
 
 ### Tasks do @pm
 

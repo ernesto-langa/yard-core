@@ -18,7 +18,7 @@
 
 ## Visão Geral
 
-O Sistema de Greeting Contextual é uma melhoria de UX que torna os greetings dos agentes AIOX inteligentes e adaptativos, mostrando informações e comandos relevantes baseados no contexto da sessão.
+O Sistema de Greeting Contextual é uma melhoria de UX que torna os greetings dos agentes YARD inteligentes e adaptativos, mostrando informações e comandos relevantes baseados no contexto da sessão.
 
 ## O Que Foi Implementado
 

@@ -4,7 +4,7 @@
   Última sincronización: 2026-01-26
 -->
 
-# Guía de Flujo de Trabajo Git de AIOX
+# Guía de Flujo de Trabajo Git de YARD
 
 > 🌐 [EN](../git-workflow-guide.md) | [PT](../pt/git-workflow-guide.md) | **ES**
 
@@ -26,7 +26,7 @@ _Story: 2.2-git-workflow-implementation.yaml_
 
 ## Descripción General
 
-Synkra AIOX implementa una estrategia de validación de **Defensa en Profundidad** con tres capas progresivas que detectan problemas tempranamente y aseguran la calidad del código antes del merge.
+Synkra YARD implementa una estrategia de validación de **Defensa en Profundidad** con tres capas progresivas que detectan problemas tempranamente y aseguran la calidad del código antes del merge.
 
 ### ¿Por Qué Tres Capas?
 
@@ -279,11 +279,11 @@ git commit --no-verify
 
 ```bash
 # Validación manual
-node .yard-core/utils/aiox-validator.js pre-push
-node .yard-core/utils/aiox-validator.js stories
+node .yard-core/utils/yard-validator.js pre-push
+node .yard-core/utils/yard-validator.js stories
 
 # Validar una sola story
-node .yard-core/utils/aiox-validator.js story docs/stories/1.1-story.yaml
+node .yard-core/utils/yard-validator.js story docs/stories/1.1-story.yaml
 
 # Saltar hook (NO recomendado)
 git push --no-verify
@@ -291,7 +291,7 @@ git push --no-verify
 
 ### Validador de Stories
 
-**Ubicación:** `.yard-core/utils/aiox-validator.js`
+**Ubicación:** `.yard-core/utils/yard-validator.js`
 
 **Características:**
 
@@ -444,7 +444,7 @@ Advertencia si falta.
 
 ```yaml
 - name: Validate story checkboxes
-  run: node .yard-core/utils/aiox-validator.js stories
+  run: node .yard-core/utils/yard-validator.js stories
 ```
 
 - Se ejecuta en Ubuntu latest
@@ -638,13 +638,13 @@ git commit -m "fix: resolve type errors"
 
 ```bash
 # Verificar stories
-node .yard-core/utils/aiox-validator.js stories
+node .yard-core/utils/yard-validator.js stories
 
 # Corregir archivo de story
 code docs/stories/X.X-story.yaml
 
 # Verificar corrección
-node .yard-core/utils/aiox-validator.js story docs/stories/X.X-story.yaml
+node .yard-core/utils/yard-validator.js story docs/stories/X.X-story.yaml
 
 # Commit de corrección
 git add docs/stories/
@@ -950,7 +950,7 @@ module.exports = async function validateCustom() {
 
 ```bash
 # .husky/pre-commit
-node .yard-core/utils/aiox-validator.js pre-commit
+node .yard-core/utils/yard-validator.js pre-commit
 node .yard-core/utils/custom-validator.js
 ```
 
@@ -984,7 +984,7 @@ strategy:
 
 ## Referencias
 
-- **AIOX Validator:** [.yard-core/utils/aiox-validator.js](../../.yard-core/utils/aiox-validator.js)
+- **YARD Validator:** [.yard-core/utils/yard-validator.js](../../.yard-core/utils/yard-validator.js)
 - **CI Workflow:** [.github/workflows/ci.yml](../../.github/workflows/ci.yml)
 
 ---

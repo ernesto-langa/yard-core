@@ -1,10 +1,10 @@
 <!--
   翻译：zh-CN（简体中文）
-  原文：/docs/aiox-agent-flows/pm-system.md
+  原文：/docs/yard-agent-flows/pm-system.md
   最后同步：2026-02-22
 -->
 
-# 产品经理 (PM) 代理系统 - AIOX
+# 产品经理 (PM) 代理系统 - YARD
 
 > **版本：** 1.0.0
 > **创建日期：** 2026-02-04
@@ -15,7 +15,7 @@
 
 ## 概述
 
-本文档描述 AIOX 产品经理 (PM) 代理的完整系统，包括所有涉及的文件、工作流程、可用命令和代理之间的集成。
+本文档描述 YARD 产品经理 (PM) 代理的完整系统，包括所有涉及的文件、工作流程、可用命令和代理之间的集成。
 
 PM 代理设计用于：
 - 为绿地和棕地项目创建和管理产品需求文档 (PRD)
@@ -47,7 +47,7 @@ PM 代理设计用于：
 | 文件 | 目的 |
 |---------|-----------|
 | `.yard-core/development/agents/pm.md` | PM 代理核心定义 |
-| `.claude/commands/AIOX/agents/pm.md` | 用于激活 @pm 的 Claude Code 命令 |
+| `.claude/commands/YARD/agents/pm.md` | 用于激活 @pm 的 Claude Code 命令 |
 
 ### @pm 任务
 

@@ -18,7 +18,7 @@
 
 ## Descripción General
 
-El Sistema de Saludo Contextual es una mejora de UX que hace que los saludos de los agentes AIOX sean inteligentes y adaptativos, mostrando información y comandos relevantes basados en el contexto de la sesión.
+El Sistema de Saludo Contextual es una mejora de UX que hace que los saludos de los agentes YARD sean inteligentes y adaptativos, mostrando información y comandos relevantes basados en el contexto de la sesión.
 
 ## Lo Que Se Ha Implementado
 

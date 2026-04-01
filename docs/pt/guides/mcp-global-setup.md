@@ -4,13 +4,13 @@
   Última sincronização: 2026-01-26
 -->
 
-# Guia de Configuração Global MCP do AIOX
+# Guia de Configuração Global MCP do YARD
 
 > 🌐 [EN](../../guides/mcp-global-setup.md) | **PT** | [ES](../../es/guides/mcp-global-setup.md)
 
 ---
 
-> Configure servidores MCP (Model Context Protocol) globais para Synkra AIOX.
+> Configure servidores MCP (Model Context Protocol) globais para Synkra YARD.
 
 **Versão:** 2.1.1
 **Última Atualização:** 2025-12-23
@@ -19,7 +19,7 @@
 
 ## Visão Geral
 
-O Sistema Global MCP permite que você configure servidores MCP uma única vez e os compartilhe entre todos os projetos AIOX. Isso elimina a necessidade de configurar os mesmos servidores em cada projeto.
+O Sistema Global MCP permite que você configure servidores MCP uma única vez e os compartilhe entre todos os projetos YARD. Isso elimina a necessidade de configurar os mesmos servidores em cada projeto.
 
 ### Benefícios
 
@@ -52,9 +52,9 @@ O Sistema Global MCP permite que você configure servidores MCP uma única vez e
 ### Windows
 
 ```
-C:\Users\<username>\.aiox\mcp\global-config.json
-C:\Users\<username>\.aiox\mcp\servers\
-C:\Users\<username>\.aiox\credentials\
+C:\Users\<username>\.yard\mcp\global-config.json
+C:\Users\<username>\.yard\mcp\servers\
+C:\Users\<username>\.yard\credentials\
 ```
 
 ### macOS
@@ -81,12 +81,12 @@ C:\Users\<username>\.aiox\credentials\
 
 ```bash
 # Create global directory and config
-aiox mcp setup
+yard mcp setup
 ```
 
 **Isso cria:**
 
-- `~/.yard/` - Diretório global do AIOX
+- `~/.yard/` - Diretório global do YARD
 - `~/.yard/mcp/` - Diretório de configuração MCP
 - `~/.yard/mcp/global-config.json` - Arquivo de configuração principal
 - `~/.yard/mcp/servers/` - Configurações individuais de servidores
@@ -97,7 +97,7 @@ aiox mcp setup
 
 ```bash
 # Check global config exists
-aiox mcp status
+yard mcp status
 ```
 
 **Saída Esperada:**
@@ -112,7 +112,7 @@ Status:   ✓ Configured
 Servers: 0 configured
 Cache:   Empty
 
-Run 'aiox mcp add <server>' to add servers.
+Run 'yard mcp add <server>' to add servers.
 ```
 
 ---
@@ -121,17 +121,17 @@ Run 'aiox mcp add <server>' to add servers.
 
 ### Usando Templates
 
-O AIOX inclui templates para servidores MCP populares:
+O YARD inclui templates para servidores MCP populares:
 
 ```bash
 # Add from template
-aiox mcp add context7
-aiox mcp add exa
-aiox mcp add github
-aiox mcp add puppeteer
-aiox mcp add filesystem
-aiox mcp add memory
-aiox mcp add desktop-commander
+yard mcp add context7
+yard mcp add exa
+yard mcp add github
+yard mcp add puppeteer
+yard mcp add filesystem
+yard mcp add memory
+yard mcp add desktop-commander
 ```
 
 ### Templates Disponíveis
@@ -150,71 +150,71 @@ aiox mcp add desktop-commander
 
 ```bash
 # Add custom server with JSON config
-aiox mcp add my-server --config='{"command":"npx","args":["-y","my-mcp-server"]}'
+yard mcp add my-server --config='{"command":"npx","args":["-y","my-mcp-server"]}'
 
 # Add from config file
-aiox mcp add my-server --config-file=./my-server-config.json
+yard mcp add my-server --config-file=./my-server-config.json
 ```
 
 ---
 
 ## Comandos CLI
 
-### `aiox mcp setup`
+### `yard mcp setup`
 
 Inicializa a configuração global MCP.
 
 ```bash
 # Create global structure
-aiox mcp setup
+yard mcp setup
 
 # Force recreate (backup existing)
-aiox mcp setup --force
+yard mcp setup --force
 
 # Specify custom location
-aiox mcp setup --path=/custom/path
+yard mcp setup --path=/custom/path
 ```
 
-### `aiox mcp add`
+### `yard mcp add`
 
 Adiciona um novo servidor MCP.
 
 ```bash
 # Add from template
-aiox mcp add context7
+yard mcp add context7
 
 # Add with custom config
-aiox mcp add custom-server --config='{"command":"npx","args":["-y","package"]}'
+yard mcp add custom-server --config='{"command":"npx","args":["-y","package"]}'
 
 # Add with environment variables
-aiox mcp add exa --env='EXA_API_KEY=your-key'
+yard mcp add exa --env='EXA_API_KEY=your-key'
 ```
 
-### `aiox mcp remove`
+### `yard mcp remove`
 
 Remove um servidor MCP.
 
 ```bash
 # Remove server
-aiox mcp remove context7
+yard mcp remove context7
 
 # Remove with confirmation skip
-aiox mcp remove context7 --yes
+yard mcp remove context7 --yes
 ```
 
-### `aiox mcp list`
+### `yard mcp list`
 
 Lista servidores configurados.
 
 ```bash
 # List all servers
-aiox mcp list
+yard mcp list
 
 # List with details
-aiox mcp list --verbose
+yard mcp list --verbose
 
 # List only enabled
-aiox mcp list --enabled
+yard mcp list --enabled
 ```
 
 **Saída:**
@@ -230,43 +230,43 @@ Configured MCP Servers
 Total: 3 servers (2 enabled, 1 disabled)
 ```
 
-### `aiox mcp enable/disable`
+### `yard mcp enable/disable`
 
 Habilita ou desabilita servidores.
 
 ```bash
 # Disable server
-aiox mcp disable github
+yard mcp disable github
 
 # Enable server
-aiox mcp enable github
+yard mcp enable github
 
 # Toggle
-aiox mcp toggle github
+yard mcp toggle github
 ```
 
-### `aiox mcp status`
+### `yard mcp status`
 
 Mostra status global do MCP.
 
 ```bash
 # Full status
-aiox mcp status
+yard mcp status
 
 # JSON output
-aiox mcp status --json
+yard mcp status --json
 ```
 
-### `aiox mcp sync`
+### `yard mcp sync`
 
 Sincroniza configuração global para o projeto.
 
 ```bash
 # Sync to current project
-aiox mcp sync
+yard mcp sync
 
 # Sync specific servers only
-aiox mcp sync --servers=context7,exa
+yard mcp sync --servers=context7,exa
 ```
 
 ---
@@ -430,13 +430,13 @@ Credenciais são armazenadas em `~/.yard/credentials/` com um `.gitignore` para 
 
 ```bash
 # Add credential
-aiox mcp credential set EXA_API_KEY "your-api-key"
+yard mcp credential set EXA_API_KEY "your-api-key"
 
 # Get credential
-aiox mcp credential get EXA_API_KEY
+yard mcp credential get EXA_API_KEY
 
 # List credentials (masked)
-aiox mcp credential list
+yard mcp credential list
 ```
 
 ### Formato do Arquivo de Credenciais
@@ -515,7 +515,7 @@ console.log(getGlobalConfigPath()); // ~/.yard/mcp/global-config.json
 | Problema               | Solução                                                                   |
 | ---------------------- | ------------------------------------------------------------------------- |
 | Permissão negada       | Execute o terminal como Administrador (Windows) ou use sudo (macOS/Linux) |
-| Diretório já existe    | Use `aiox mcp setup --force` para recriar                                 |
+| Diretório já existe    | Use `yard mcp setup --force` para recriar                                 |
 | Caminho não encontrado | Certifique-se de que o diretório home existe                              |
 
 ### Problemas de Servidor
@@ -539,13 +539,13 @@ console.log(getGlobalConfigPath()); // ~/.yard/mcp/global-config.json
 
 ```bash
 # Reset global config
-aiox mcp setup --force
+yard mcp setup --force
 
 # Clear cache
 rm -rf ~/.yard/mcp/cache/*
 
 # Verify config
-aiox mcp status --verbose
+yard mcp status --verbose
 
 # Test server manually
 npx -y @modelcontextprotocol/server-github
@@ -602,8 +602,8 @@ Adicione às configurações do Claude Desktop:
 ```json
 {
   "mcpServers": {
-    "aiox-global": {
-      "command": "aiox",
+    "yard-global": {
+      "command": "yard",
       "args": ["mcp", "serve", "--global"]
     }
   }
@@ -616,8 +616,8 @@ Configure em `.vscode/settings.json`:
 
 ```json
 {
-  "aiox.mcp.useGlobal": true,
-  "aiox.mcp.globalPath": "~/.yard/mcp/global-config.json"
+  "yard.mcp.useGlobal": true,
+  "yard.mcp.globalPath": "~/.yard/mcp/global-config.json"
 }
 ```
 
@@ -660,4 +660,4 @@ Crie `.mcp.json` na raiz do projeto para sobrescrever configurações globais:
 
 ---
 
-_Synkra AIOX v4 Guia de Configuração Global MCP_
+_Synkra YARD v4 Guia de Configuração Global MCP_

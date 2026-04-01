@@ -4,7 +4,7 @@
 
 ---
 
-本指南提供了从您的系统中卸载 Synkra AIOX 的全面说明。
+本指南提供了从您的系统中卸载 Synkra YARD 的全面说明。
 
 ## 目录
 
@@ -22,7 +22,7 @@
 
 ### 重要考虑事项
 
-⚠️ **警告**：卸载 Synkra AIOX 将：
+⚠️ **警告**：卸载 Synkra YARD 将：
 
 - 删除所有框架文件
 - 删除代理配置（除非保留）
@@ -59,7 +59,7 @@ tar -czf yard-backup-$(date +%Y%m%d).tar.gz \
 
 ### 使用内置卸载程序
 
-卸载 Synkra AIOX 的最快方法：
+卸载 Synkra YARD 的最快方法：
 
 ```bash
 # 基本卸载（保留用户数据）
@@ -143,24 +143,24 @@ npm cache clean --force
 Remove-Item -Recurse -Force "$env:APPDATA\yard-core"
 
 # 删除临时文件
-Remove-Item -Recurse -Force "$env:TEMP\aiox-*"
+Remove-Item -Recurse -Force "$env:TEMP\yard-*"
 
 # 删除注册表条目（如果有）
-Remove-Item -Path "HKCU:\Software\Synkra AIOX" -Recurse
+Remove-Item -Path "HKCU:\Software\Synkra YARD" -Recurse
 ```
 
 #### macOS/Linux
 
 ```bash
 # 删除配置文件
-rm -rf ~/.aiox
+rm -rf ~/.yard
 rm -rf ~/.config/yard-core
 
 # 删除缓存
 rm -rf ~/.cache/yard-core
 
 # 删除临时文件
-rm -rf /tmp/aiox-*
+rm -rf /tmp/yard-*
 ```
 
 ## 选择性卸载
@@ -243,11 +243,11 @@ rm -rf templates/custom/
 
 ```bash
 #!/bin/bash
-echo "Synkra AIOX 完全卸载"
+echo "Synkra YARD 完全卸载"
 echo "================================="
 
 # 确认
-read -p "这将删除所有 Synkra AIOX 数据。继续吗？(y/N) " -n 1 -r
+read -p "这将删除所有 Synkra YARD 数据。继续吗？(y/N) " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     exit 1
@@ -256,7 +256,7 @@ fi
 # 停止所有进程
 echo "停止所有进程..."
 pkill -f "yard-core" || true
-pkill -f "aiox-developer" || true
+pkill -f "yard-developer" || true
 
 # 删除项目文件
 echo "删除项目文件..."
@@ -274,7 +274,7 @@ npm uninstall -g yard-core
 
 # 删除用户数据
 echo "删除用户数据..."
-rm -rf ~/.aiox
+rm -rf ~/.yard
 rm -rf ~/.config/yard-core
 rm -rf ~/.cache/yard-core
 
@@ -320,7 +320,7 @@ taskkill /F /IM yard-core.exe
 
 ## 卸载验证检查清单
 
-- [ ] 所有 AIOX 进程已停止
+- [ ] 所有 YARD 进程已停止
 - [ ] 项目文件已删除
 - [ ] 全局 npm 包已卸载
 - [ ] 用户配置文件已删除
@@ -328,7 +328,7 @@ taskkill /F /IM yard-core.exe
 - [ ] 环境变量已删除
 - [ ] 注册表条目已清理 (Windows)
 - [ ] Git 存储库已更新
-- [ ] 未找到剩余 AIOX 文件
+- [ ] 未找到剩余 YARD 文件
 - [ ] 系统 PATH 已更新
 
 ## 获取帮助

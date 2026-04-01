@@ -1,10 +1,10 @@
 # Brownfield Service Workflow
 
-> [PT](../../aiox-workflows/brownfield-service-workflow.md) | [EN](../../en/aiox-workflows/brownfield-service-workflow.md) | **ES**
+> [PT](../../yard-workflows/brownfield-service-workflow.md) | [EN](../../en/yard-workflows/brownfield-service-workflow.md) | **ES**
 
 ---
 
-> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../aiox-workflows/brownfield-service-workflow.md).
+> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../yard-workflows/brownfield-service-workflow.md).
 
 ---
 
@@ -36,7 +36,7 @@ Workflow para evolucionar backends/APIs existentes, incluyendo:
 
 ## Ver Mas
 
-- **[Documentacion completa (PT)](../../aiox-workflows/brownfield-service-workflow.md)**
+- **[Documentacion completa (PT)](../../yard-workflows/brownfield-service-workflow.md)**
 
 ---
 

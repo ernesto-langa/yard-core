@@ -309,4 +309,4 @@ R: As chaves são carregadas de arquivos `.env` (não faça commit deles!) ou va
 
 ---
 
-*Gerado pelo AIOX Framework - Story 6.7*
+*Gerado pelo YARD Framework - Story 6.7*

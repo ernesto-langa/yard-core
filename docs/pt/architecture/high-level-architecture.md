@@ -1,6 +1,6 @@
 <!-- Tradução: PT-BR | Original: /docs/en/architecture/high-level-architecture.md | Sincronização: 2026-01-26 -->
 
-# Arquitetura de Alto Nível do AIOX v4
+# Arquitetura de Alto Nível do YARD v4
 
 > 🌐 [EN](../../architecture/high-level-architecture.md) | **PT** | [ES](../../es/architecture/high-level-architecture.md)
 
@@ -27,7 +27,7 @@
 
 ## Visão Geral
 
-**AIOX (AI Operating System)** é um framework sofisticado para orquestração de agentes de IA, workers e humanos em fluxos de trabalho complexos de desenvolvimento de software. A versão 2.1 introduz uma arquitetura modular com 4 módulos, estratégia multi-repositório e quality gates de 3 camadas.
+**YARD (AI Operating System)** é um framework sofisticado para orquestração de agentes de IA, workers e humanos em fluxos de trabalho complexos de desenvolvimento de software. A versão 2.1 introduz uma arquitetura modular com 4 módulos, estratégia multi-repositório e quality gates de 3 camadas.
 
 ### Capacidades Principais v4.2
 
@@ -49,12 +49,12 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                     FRAMEWORK AIOX v4                                 │
+│                     FRAMEWORK YARD v4                                 │
 │                     ═══════════════════                                 │
 │                                                                         │
 │   ┌─────────────────────────────────────────────────────────────────┐   │
 │   │                        CLI / FERRAMENTAS                        │   │
-│   │  (aiox agents, aiox tasks, aiox squads, aiox workflow)          │   │
+│   │  (yard agents, yard tasks, yard squads, yard workflow)          │   │
 │   └─────────────────────────────────────────────────────────────────┘   │
 │                                │                                        │
 │          ┌────────────────────┼────────────────────┐                   │
@@ -151,7 +151,7 @@
 │                                                                         │
 │   ┌────────────────────┐     ┌────────────────────┐                    │
 │   │  SynkraAI/         │     │  SynkraAI/         │                    │
-│   │  yard-core         │     │  aiox-squads       │                    │
+│   │  yard-core         │     │  yard-squads       │                    │
 │   │  (MIT)  │◄────│  (MIT)             │                    │
 │   │                    │     │                    │                    │
 │   │  • Core Framework  │     │  • ETL Squad       │                    │
@@ -190,11 +190,11 @@
 
 | Pacote                | Registry    | Licença        |
 | --------------------- | ----------- | -------------- |
-| `@aiox/core`          | npm público | MIT            |
-| `@aiox/squad-etl`     | npm público | MIT            |
-| `@aiox/squad-creator` | npm público | MIT            |
-| `@aiox/squad-mmos`    | npm público | MIT            |
-| `@aiox/mcp-presets`   | npm público | Apache 2.0     |
+| `@yard/core`          | npm público | MIT            |
+| `@yard/squad-etl`     | npm público | MIT            |
+| `@yard/squad-creator` | npm público | MIT            |
+| `@yard/squad-mmos`    | npm público | MIT            |
+| `@yard/mcp-presets`   | npm público | Apache 2.0     |
 
 ---
 
@@ -290,7 +290,7 @@ yard-core/
 | Dara   | `data-engineer` | Architect    | Engenharia de dados       |
 | Felix  | `devops`        | Optimizer    | CI/CD e operações         |
 | Uma    | `ux-expert`     | Creator      | Experiência do usuário    |
-| Pax    | `aiox-master`   | Orchestrator | Orquestração do framework |
+| Pax    | `yard-master`   | Orchestrator | Orquestração do framework |
 
 ---
 
@@ -348,7 +348,7 @@ yard-core/
 
 - [Sistema de Módulos](./module-system.md) - Arquitetura detalhada dos módulos
 - [ARCHITECTURE-INDEX.md](./ARCHITECTURE-INDEX.md) - Índice completo da documentação
-- [AIOX-LIVRO-DE-OURO-V2.1-COMPLETE.md](../../../.yard-core/docs/standards/AIOX-LIVRO-DE-OURO-V2.1-COMPLETE.md) - Guia completo do framework
+- [YARD-LIVRO-DE-OURO-V2.1-COMPLETE.md](../../../.yard-core/docs/standards/YARD-LIVRO-DE-OURO-V2.1-COMPLETE.md) - Guia completo do framework
 
 ---
 

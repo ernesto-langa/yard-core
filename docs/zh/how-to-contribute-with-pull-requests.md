@@ -26,7 +26,7 @@
 
 ### 1. Fork 存储库
 
-1. 进入 [Synkra AIOX 存储库](https://github.com/ernesto-langa/yard-core)
+1. 进入 [Synkra YARD 存储库](https://github.com/ernesto-langa/yard-core)
 2. 单击右上角的"Fork"按钮
 3. 这会创建您自己的项目副本
 

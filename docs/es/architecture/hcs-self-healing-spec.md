@@ -28,7 +28,7 @@
 
 ## Resumen Ejecutivo
 
-Este documento especifica las capacidades de auto-reparación del Sistema de Verificación de Salud de AIOX (HCS). La auto-reparación permite que el sistema corrija automáticamente ciertos problemas mientras mantiene la seguridad y el control del usuario.
+Este documento especifica las capacidades de auto-reparación del Sistema de Verificación de Salud de YARD (HCS). La auto-reparación permite que el sistema corrija automáticamente ciertos problemas mientras mantiene la seguridad y el control del usuario.
 
 ### Principios Fundamentales
 
@@ -366,7 +366,7 @@ Solo estos patrones son candidatos para auto-corrección:
 ```yaml
 safeToAutoFix:
   paths:
-    - '.yard/**' # Archivos del workspace AIOX
+    - '.yard/**' # Archivos del workspace YARD
     - '.yard-core/**/*.yaml' # YAML del framework (con cuidado)
     - '.claude/**' # Configuración de Claude
     - '.vscode/settings.json' # Solo configuración del IDE

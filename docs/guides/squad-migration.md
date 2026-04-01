@@ -4,11 +4,11 @@
 
 ---
 
-How to migrate legacy squads to AIOX 2.1 format.
+How to migrate legacy squads to YARD 2.1 format.
 
 ## Overview
 
-AIOX 2.1 introduced a new squad format with:
+YARD 2.1 introduced a new squad format with:
 - Task-first architecture
 - JSON Schema validation
 - Three-level distribution
@@ -23,8 +23,8 @@ Legacy squads using `config.yaml` or older formats need migration.
 | Indicator | Legacy | Current (2.1+) |
 |-----------|--------|----------------|
 | Manifest file | `config.yaml` | `squad.yaml` |
-| AIOX type field | Missing | `aiox.type: squad` |
-| Min version | Missing | `aiox.minVersion: "2.1.0"` |
+| YARD type field | Missing | `yard.type: squad` |
+| Min version | Missing | `yard.minVersion: "2.1.0"` |
 | Structure | Agent-first | Task-first |
 
 ### Check Command
@@ -78,7 +78,7 @@ config.yaml → squad.yaml
 
 ```yaml
 # These fields are added if missing
-aiox:
+yard:
   minVersion: "2.1.0"
   type: squad
 ```
@@ -192,7 +192,7 @@ my-squad/
 ```
 
 **Result:**
-- Adds missing `aiox` fields to manifest
+- Adds missing `yard` fields to manifest
 - Converts remaining YAML files
 - Skips already-migrated files
 
@@ -245,7 +245,7 @@ name: my-squad
 version: 1.0.0
 description: My squad
 
-aiox:
+yard:
   minVersion: "2.1.0"
   type: squad
 
@@ -292,8 +292,8 @@ Warning: Some files could not be migrated
 After migration, verify:
 
 - [ ] `squad.yaml` exists and is valid
-- [ ] `aiox.type` is `"squad"`
-- [ ] `aiox.minVersion` is `"2.1.0"` or higher
+- [ ] `yard.type` is `"squad"`
+- [ ] `yard.minVersion` is `"2.1.0"` or higher
 - [ ] All agents are in `agents/` folder
 - [ ] All tasks are in `tasks/` folder
 - [ ] Agent files are in Markdown format

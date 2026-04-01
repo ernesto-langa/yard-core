@@ -13,7 +13,7 @@
 
 ## 概述
 
-项目状态功能在任何AIOX Agent激活时自动显示你当前的工作上下文。这包括：
+项目状态功能在任何YARD Agent激活时自动显示你当前的工作上下文。这包括：
 
 - **Git分支** 你当前在哪个分支
 - **修改的文件** 工作目录中的修改
@@ -80,7 +80,7 @@
 
 2. 创建 `.yard/` 目录：
    ```bash
-   mkdir .aiox
+   mkdir .yard
    ```
 
 3. 添加到 `.gitignore`：
@@ -213,7 +213,7 @@ git log -2 --oneline --no-decorate
 
 ## 受影响的Agent
 
-所有11个AIOX Agent都显示项目状态：
+所有11个YARD Agent都显示项目状态：
 
 1. **@dev** (Dex - Builder)
 2. **@po** (Pax - Balancer)
@@ -225,7 +225,7 @@ git log -2 --oneline --no-decorate
 8. **@devops** (Gage - Operator)
 9. **@data-engineer** (Dara - Sage)
 10. **@ux-design-expert** (Uma - Empathizer)
-11. **@aiox-master** (Orion - Orchestrator)
+11. **@yard-master** (Orion - Orchestrator)
 
 ---
 
@@ -454,7 +454,7 @@ A: 是的，所有agent使用相同的缓存文件 (`.yard/project-status.yaml`)
 
 ## 相关文档
 
-- **Story:** `docs/stories/aiox migration/story-6.1.2.4-project-status-context.md`
+- **Story:** `docs/stories/yard migration/story-6.1.2.4-project-status-context.md`
 - **配置:** `.yard-core/core-config.yaml` (projectStatus部分)
 - **脚本:** `.yard-core/infrastructure/scripts/project-status-loader.js`
 - **Init Task:** `.yard-core/tasks/init-project-status.md`

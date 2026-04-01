@@ -4,13 +4,13 @@
   Última sincronização: 2026-01-26
 -->
 
-# Começando com o Synkra AIOX
+# Começando com o Synkra YARD
 
 > 🌐 [EN](../getting-started.md) | **PT** | [ES](../es/getting-started.md)
 
 ---
 
-Bem-vindo ao Synkra AIOX! Este guia irá orientá-lo nos seus primeiros passos com o framework de desenvolvimento auto-modificável alimentado por IA.
+Bem-vindo ao Synkra YARD! Este guia irá orientá-lo nos seus primeiros passos com o framework de desenvolvimento auto-modificável alimentado por IA.
 
 ## Índice
 
@@ -29,7 +29,7 @@ Bem-vindo ao Synkra AIOX! Este guia irá orientá-lo nos seus primeiros passos c
 
 ### Pré-requisitos
 
-Antes de instalar o Synkra AIOX, certifique-se de ter:
+Antes de instalar o Synkra YARD, certifique-se de ter:
 
 - **Node.js** versão 14.0.0 ou superior
 - **npm** versão 6.0.0 ou superior
@@ -53,7 +53,7 @@ npx yard-core
 
 ### Opções de Instalação
 
-O Synkra AIOX oferece opções flexíveis de instalação:
+O Synkra YARD oferece opções flexíveis de instalação:
 
 ```bash
 # 1. Criar novo projeto com template personalizado
@@ -127,12 +127,12 @@ ANTHROPIC_API_KEY=your-anthropic-api-key
 
 # Configurações do Framework
 NODE_ENV=development
-AIOX_TELEMETRY=enabled
+YARD_TELEMETRY=enabled
 ```
 
 ## Entendendo o Meta-Agent
 
-O meta-agent é o núcleo do Synkra AIOX - uma IA que entende e pode modificar sua própria base de código.
+O meta-agent é o núcleo do Synkra YARD - uma IA que entende e pode modificar sua própria base de código.
 
 ### Capacidades Principais
 
@@ -524,7 +524,7 @@ Junte-se à nossa comunidade para suporte e atualizações:
 
 - **Discord**: [Entre no nosso servidor](https://discord.gg/gk8jAdXWmj)
 - **GitHub Discussions**: Compartilhe ideias e obtenha ajuda
-- **Twitter**: Siga [@aioxfullstack](https://twitter.com/aioxfullstack)
+- **Twitter**: Siga [@yardfullstack](https://twitter.com/yardfullstack)
 
 ## Referência Rápida de Solução de Problemas
 
@@ -567,6 +567,6 @@ ls -la .env
 
 **Pronto para construir algo incrível?** O meta-agent está esperando para ajudá-lo a criar, melhorar e evoluir seu código. Comece com `*help` e explore as possibilidades!
 
-Lembre-se: O Synkra AIOX aprende e melhora com o uso. Quanto mais você interagir com ele, melhor ele entenderá seu estilo e necessidades de desenvolvimento.
+Lembre-se: O Synkra YARD aprende e melhora com o uso. Quanto mais você interagir com ele, melhor ele entenderá seu estilo e necessidades de desenvolvimento.
 
-Bom código com o Synkra AIOX!
+Bom código com o Synkra YARD!

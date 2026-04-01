@@ -1,6 +1,6 @@
 <!--
   翻译：zh-CN（简体中文）
-  原文：/docs/aiox-agent-flows/sm-system.md
+  原文：/docs/yard-agent-flows/sm-system.md
   最后同步：2026-02-22
 -->
 
@@ -15,7 +15,7 @@
 
 ## 概述
 
-**@sm (River)** 代理是 AIOX 的技术 Scrum Master，专门负责故事准备和敏捷流程促进。其主要角色是创建详细、可操作的故事，使开发代理能够以最少的额外研究进行实现。
+**@sm (River)** 代理是 YARD 的技术 Scrum Master，专门负责故事准备和敏捷流程促进。其主要角色是创建详细、可操作的故事，使开发代理能够以最少的额外研究进行实现。
 
 **主要职责：**
 - 用户故事的创建和细化
@@ -49,7 +49,7 @@
 | 文件 | 目的 |
 |---------|-----------|
 | `.yard-core/development/agents/sm.md` | SM 代理核心定义 |
-| `.claude/commands/AIOX/agents/sm.md` | 用于激活 @sm 的 Claude Code 命令 |
+| `.claude/commands/YARD/agents/sm.md` | 用于激活 @sm 的 Claude Code 命令 |
 | `.cursor/rules/sm.md` | Cursor IDE 规则 |
 | `.cursor/rules/sm.mdc` | Cursor 编译规则 |
 
@@ -412,7 +412,7 @@ dependencies:
 
 **解决方案：**
 1. 从 `GITHUB yard-core/core-config.yaml` 复制
-2. 或执行 AIOX 安装器：`npm run aiox:install`
+2. 或执行 YARD 安装器：`npm run yard:install`
 3. 配置 `devStoryLocation`、`prdSharded` 等
 
 ### 检查清单在多个类别返回 FAIL

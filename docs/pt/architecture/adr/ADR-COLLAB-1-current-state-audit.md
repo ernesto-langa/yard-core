@@ -210,7 +210,7 @@ gh api repos/ernesto-langa/yard-core/branches/main/protection -X PUT \
 
 ### Fase 2: Curto prazo (ALTA)
 
-1. Criar `.coderabbit.yaml` com regras específicas do AIOX
+1. Criar `.coderabbit.yaml` com regras específicas do YARD
 2. Atualizar CODEOWNERS com caminhos granulares
 
 ### Fase 3: Médio prazo (MÉDIA)

@@ -1,4 +1,4 @@
-# Windows Installation Guide for Synkra AIOX
+# Windows Installation Guide for Synkra YARD
 
 > 🌐 [EN](windows.md) | [PT](../pt/installation/windows.md) | [ES](../es/installation/windows.md)
 
@@ -182,7 +182,7 @@ The installer automatically:
    npm install -g @anthropic-ai/claude-code
    ```
 
-2. Commands are installed to `.claude\commands\AIOX\`
+2. Commands are installed to `.claude\commands\YARD\`
 3. Use `/agent-name` to activate agents
 
 
@@ -192,7 +192,7 @@ The installer automatically:
 ### VS Code
 
 1. Install Continue extension from marketplace
-2. AIOX can integrate via `.continue\` configuration
+2. YARD can integrate via `.continue\` configuration
 
 ---
 
@@ -337,7 +337,7 @@ wsl --install -d Ubuntu
 # Restart computer when prompted
 ```
 
-### Configure AIOX with WSL
+### Configure YARD with WSL
 
 ```bash
 # Inside WSL, follow the Linux installation guide
@@ -421,9 +421,9 @@ See the complete [Uninstallation Guide](../uninstallation.md) for detailed steps
 Quick uninstall via PowerShell:
 
 ```powershell
-# Remove AIOX from project
+# Remove YARD from project
 Remove-Item -Recurse -Force .yard-core
-Remove-Item -Recurse -Force .claude\commands\AIOX
+Remove-Item -Recurse -Force .claude\commands\YARD
 
 # Remove global npm packages
 npm uninstall -g yard-core

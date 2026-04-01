@@ -12,7 +12,7 @@
 1. [Visao Geral](#visao-geral)
 2. [Diagrama de Arquitetura Completo](#diagrama-de-arquitetura-completo)
 3. [Camada 1: Claude Code Nativo](#camada-1-claude-code-nativo)
-4. [Camada 2: AIOX Framework](#camada-2-aiox-framework)
+4. [Camada 2: YARD Framework](#camada-2-yard-framework)
 5. [Fluxo de Ativacao de Agente (Memory Load)](#fluxo-de-ativacao-de-agente-memory-load)
 6. [Fluxo de Persistencia (Memory Save)](#fluxo-de-persistencia-memory-save)
 7. [Fluxo de Session Lifecycle](#fluxo-de-session-lifecycle)
@@ -29,12 +29,12 @@
 
 ## Visao Geral
 
-O sistema de memoria do AIOX opera em **duas camadas independentes** que coexistem mas **nao se comunicam entre si**:
+O sistema de memoria do YARD opera em **duas camadas independentes** que coexistem mas **nao se comunicam entre si**:
 
 | Camada | Gerenciado Por | Escopo |
 |--------|---------------|--------|
 | **Camada 1: Claude Code Nativo** | Claude Code CLI | Auto Memory, CLAUDE.md, Session Transcripts |
-| **Camada 2: AIOX Framework** | Scripts JS em `.yard-core/` | Gotchas, Session State, Context Snapshots, Timeline |
+| **Camada 2: YARD Framework** | Scripts JS em `.yard-core/` | Gotchas, Session State, Context Snapshots, Timeline |
 
 ### Principios Chave
 
@@ -64,7 +64,7 @@ flowchart TB
         SESSIONS_IDX["Sessions Index<br/>sessions-index.json"]
     end
 
-    subgraph AIOX_FRAMEWORK["Camada 2: AIOX Framework"]
+    subgraph YARD_FRAMEWORK["Camada 2: YARD Framework"]
         direction TB
         GOTCHAS["Gotchas Memory<br/>.yard-core/core/memory/gotchas-memory.js"]
         CTX_SNAP["Context Snapshot<br/>.yard-core/core/memory/context-snapshot.js"]
@@ -83,7 +83,7 @@ flowchart TB
         S_AGENT_MEM[".claude/agent-memory/"]
     end
 
-    subgraph STORAGE_AIOX["Storage AIOX (.yard/)"]
+    subgraph STORAGE_YARD["Storage YARD (.yard/)"]
         S_GOTCHAS[".yard/gotchas.json + .md"]
         S_ERRORS[".yard/error-tracking.json"]
         S_SNAPSHOTS[".yard/snapshots/"]
@@ -106,9 +106,9 @@ flowchart TB
     SESS_STATE --> S_EPIC_STATE
 
     style CLAUDE_NATIVE fill:#E3F2FD,stroke:#1565C0
-    style AIOX_FRAMEWORK fill:#FFF3E0,stroke:#E65100
+    style YARD_FRAMEWORK fill:#FFF3E0,stroke:#E65100
     style STORAGE_CLAUDE fill:#E8F5E9,stroke:#2E7D32
-    style STORAGE_AIOX fill:#FCE4EC,stroke:#C62828
+    style STORAGE_YARD fill:#FCE4EC,stroke:#C62828
 ```
 
 ### Relacionamento entre Scripts
@@ -227,8 +227,8 @@ flowchart TD
 ```mermaid
 flowchart LR
     subgraph AGENT_MEM[".claude/agent-memory/"]
-        AM1["aiox-architect/MEMORY.md"]
-        AM2["aiox-dev/MEMORY.md"]
+        AM1["yard-architect/MEMORY.md"]
+        AM2["yard-dev/MEMORY.md"]
         AM3["oalanicolas/MEMORY.md"]
         AM4["pedro-valerio/MEMORY.md"]
         AM5["sop-extractor/MEMORY.md"]
@@ -237,7 +237,7 @@ flowchart LR
 
     SQUAD_AGENTS["Agentes de Squad<br/>(Claude Code Agents)"] -->|"frontmatter<br/>memory: project"| AGENT_MEM
 
-    NOTE["NOTA: Apenas agentes<br/>definidos em .claude/agents/<br/>usam esta memoria.<br/>Agentes AIOX (.yard-core/<br/>development/agents/)<br/>NAO usam."]
+    NOTE["NOTA: Apenas agentes<br/>definidos em .claude/agents/<br/>usam esta memoria.<br/>Agentes YARD (.yard-core/<br/>development/agents/)<br/>NAO usam."]
 
     style AGENT_MEM fill:#F3E5F5,stroke:#7B1FA2
     style NOTE fill:#FFF9C4,stroke:#F9A825
@@ -245,7 +245,7 @@ flowchart LR
 
 ---
 
-## Camada 2: AIOX Framework
+## Camada 2: YARD Framework
 
 ### Visao dos 4 Modulos de Memoria
 
@@ -421,7 +421,7 @@ sequenceDiagram
 
     UAP-->>CC: {greeting, quality: full|partial|fallback}
 
-    Note over CC: NENHUMA memoria AIOX<br/>e carregada automaticamente<br/>no system prompt.<br/>Apenas contexto de sessao<br/>aparece no greeting.
+    Note over CC: NENHUMA memoria YARD<br/>e carregada automaticamente<br/>no system prompt.<br/>Apenas contexto de sessao<br/>aparece no greeting.
 ```
 
 ---
@@ -639,7 +639,7 @@ flowchart TD
 ```mermaid
 classDiagram
     class GotchasStore {
-        +string schema = "aiox-gotchas-memory-v1"
+        +string schema = "yard-gotchas-memory-v1"
         +string version = "1.0.0"
         +string projectId
         +string lastUpdated
@@ -758,7 +758,7 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    subgraph AIOX_EVENTS["Eventos AIOX"]
+    subgraph YARD_EVENTS["Eventos YARD"]
         E1["sessionStart"]
         E2["beforeAgent"]
         E3["beforeTool"]
@@ -850,7 +850,7 @@ flowchart TD
 
 | Arquivo | CLI | Funcao |
 |---------|-----|--------|
-| `.yard-core/hooks/gemini/session-start.js` | Gemini | Carrega contexto AIOX no inicio da sessao |
+| `.yard-core/hooks/gemini/session-start.js` | Gemini | Carrega contexto YARD no inicio da sessao |
 | `.yard-core/hooks/gemini/session-end.js` | Gemini | Persiste sumario da sessao em `.yard/sessions/` |
 | `.yard-core/hooks/gemini/before-agent.js` | Gemini | Pre-processamento antes de agente |
 | `.yard-core/hooks/gemini/before-tool.js` | Ambos | Pre-processamento antes de tool |
@@ -917,8 +917,8 @@ docs/stories/
 └── {session-id}.jsonl                        # [Claude Code] Transcricao completa
 
 .claude/agent-memory/                         # [Claude Code Agents] Memoria por agente
-├── aiox-architect/MEMORY.md
-├── aiox-dev/MEMORY.md
+├── yard-architect/MEMORY.md
+├── yard-dev/MEMORY.md
 ├── oalanicolas/MEMORY.md
 ├── pedro-valerio/MEMORY.md
 ├── sop-extractor/MEMORY.md
@@ -947,7 +947,7 @@ Quando uma sessao fecha, o conhecimento contextual e **perdido** exceto:
 IMPACTO: HIGH
 ```
 
-Os modulos AIOX (gotchas, snapshots, timeline) **nao fazem flush** automatico ao final da sessao. Dados em memoria podem se perder se o processo terminar abruptamente.
+Os modulos YARD (gotchas, snapshots, timeline) **nao fazem flush** automatico ao final da sessao. Dados em memoria podem se perder se o processo terminar abruptamente.
 
 ### Gap 3: Hooks Gemini Nao Portados
 
@@ -963,7 +963,7 @@ IMPACTO: MEDIUM
 IMPACTO: MEDIUM
 ```
 
-Claude auto-memory (`MEMORY.md`) e AIOX memory (`.yard/`) nunca se sincronizam. Gotchas capturadas pelo AIOX nao aparecem no MEMORY.md e vice-versa.
+Claude auto-memory (`MEMORY.md`) e YARD memory (`.yard/`) nunca se sincronizam. Gotchas capturadas pelo YARD nao aparecem no MEMORY.md e vice-versa.
 
 ### Gap 5: compound-analysis Estatico
 
@@ -997,6 +997,6 @@ Os 9 arquivos em `memory/compound-analysis/` foram gerados por ferramenta extern
 
 ---
 
-*AIOX Memory System Architecture Guide v1.0*
+*YARD Memory System Architecture Guide v1.0*
 *Traced from source code, not documentation.*
 *@architect (Aria) — arquitetando o futuro*

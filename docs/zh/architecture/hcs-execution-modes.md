@@ -16,7 +16,7 @@
 
 ## 执行摘要
 
-本文档定义了 AIOX 健康检查系统 (HCS) 的执行模式,基于 Kubernetes、VS Code、Terraform、npm/yarn 和 CLI "doctor" 模式(Flutter、Homebrew、WP-CLI)的行业最佳实践研究。
+本文档定义了 YARD 健康检查系统 (HCS) 的执行模式,基于 Kubernetes、VS Code、Terraform、npm/yarn 和 CLI "doctor" 模式(Flutter、Homebrew、WP-CLI)的行业最佳实践研究。
 
 ### 主要建议
 

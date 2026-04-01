@@ -9,13 +9,13 @@
 **版本:** 1.0.0
 **创建于:** 2025-10-29
 **作者:** Sarah (@po)、Winston (@architect)
-**目的:** 为在 AIOX 框架中集成工具脚本定义模式
+**目的:** 为在 YARD 框架中集成工具脚本定义模式
 
 ---
 
 ## 什么是工具集成?
 
-**定义:** 工具集成是使孤立工具脚本**可发现、文档化和可用**的过程，位于 AIOX 框架内。
+**定义:** 工具集成是使孤立工具脚本**可发现、文档化和可用**的过程，位于 YARD 框架内。
 
 工具被认为**完全集成**当:
 1. ✅ **已注册** 在 core-config.yaml 中
@@ -108,7 +108,7 @@ execution:
 utils:
   framework:
     - elicitation-engine  # 用于代理创建工作流
-    - aiox-validator
+    - yard-validator
 ```
 
 **修改的文件:**
@@ -188,7 +188,7 @@ dependencies:
 ### 类别 1: 代码质量
 **目的:** 分析、改进、验证代码
 **模式:** 代理辅助工具 (代理 dev、qa)
-**示例:** aiox-validator、code-quality-improver、coverage-analyzer
+**示例:** yard-validator、code-quality-improver、coverage-analyzer
 
 ### 类别 2: Git/工作流
 **目的:** Git 操作、工作流自动化
@@ -290,7 +290,7 @@ utils:
   # 框架基础设施工具
   framework:
     - elicitation-engine
-    - aiox-validator
+    - yard-validator
 
   # 分析/文档工具
   analyzers:

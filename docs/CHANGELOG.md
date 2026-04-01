@@ -4,7 +4,7 @@
 
 ---
 
-All notable changes to Synkra AIOX will be documented in this file.
+All notable changes to Synkra YARD will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- **🤖 AIOX Autonomous Development Engine (ADE)**: Complete autonomous development system with 7 Epics:
+- **🤖 YARD Autonomous Development Engine (ADE)**: Complete autonomous development system with 7 Epics:
   - **Epic 1 - Worktree Manager**: Git worktree isolation for parallel story development
   - **Epic 2 - Migration V2→V3**: autoClaude V3 format with capability flags
   - **Epic 3 - Spec Pipeline**: Transform requirements into executable specifications
@@ -71,7 +71,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - **Agent Format**: All 12 agents migrated to autoClaude V3 format with capability flags
-- **Agent Sync**: All agents now synced between `.yard-core/development/agents/` and `.claude/commands/AIOX/agents/`
+- **Agent Sync**: All agents now synced between `.yard-core/development/agents/` and `.claude/commands/YARD/agents/`
 
 ### Fixed
 
@@ -104,7 +104,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Directory Structure**: Renamed `.legacy-core/` to `.yard-core/`
 - **Configuration Format**: Enhanced `core-config.yaml` with new sections for git, projectStatus, and sharding options
 - **Agent Format**: Updated agent YAML schema with persona_profile, commands visibility, and whenToUse fields
-- **IDE Configuration**: Claude Code agents moved to `.claude/commands/AIOX/agents/`
+- **IDE Configuration**: Claude Code agents moved to `.claude/commands/YARD/agents/`
 - **File Locations**:
   - `docs/architecture/coding-standards.md` → `docs/framework/coding-standards.md`
   - `docs/architecture/tech-stack.md` → `docs/framework/tech-stack.md`
@@ -133,7 +133,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Initial public release of Synkra AIOX
+- Initial public release of Synkra YARD
 - 11 specialized AI agents (dev, qa, architect, pm, po, sm, analyst, ux-expert, data-engineer, devops, db-sage)
 - Task workflow system with 60+ pre-built tasks
 - Template system with 20+ document templates

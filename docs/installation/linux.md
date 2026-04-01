@@ -1,4 +1,4 @@
-# Linux Installation Guide for Synkra AIOX
+# Linux Installation Guide for Synkra YARD
 
 > 🌐 [EN](linux.md) | [PT](../pt/installation/linux.md) | [ES](../es/installation/linux.md)
 
@@ -171,7 +171,7 @@ cd ~/.yard-core-source
 npm install
 
 # Run installer for your project
-node bin/aiox-init.js ~/projects/my-project
+node bin/yard-init.js ~/projects/my-project
 ```
 
 ### What the Installer Does
@@ -213,7 +213,7 @@ The installer automatically:
    npm install -g @anthropic-ai/claude-code
    ```
 
-2. Commands are installed to `.claude/commands/AIOX/`
+2. Commands are installed to `.claude/commands/YARD/`
 3. Use `/agent-name` to activate agents
 
 
@@ -222,7 +222,7 @@ The installer automatically:
 ### VS Code (with Continue extension)
 
 1. Install Continue extension
-2. Configure AIOX rules in `.continue/`
+2. Configure YARD rules in `.continue/`
 
 ---
 
@@ -331,9 +331,9 @@ export NVM_DIR="$HOME/.nvm"
 # npm global packages
 export PATH="$HOME/.npm-global/bin:$PATH"
 
-# AIOX configuration
-export AIOX_HOME="$HOME/.yard-core"
-export PATH="$AIOX_HOME/bin:$PATH"
+# YARD configuration
+export YARD_HOME="$HOME/.yard-core"
+export PATH="$YARD_HOME/bin:$PATH"
 
 # Editor preference (for git commits, etc.)
 export EDITOR=vim  # or code, nano, etc.
@@ -341,13 +341,13 @@ export EDITOR=vim  # or code, nano, etc.
 
 ### XDG Base Directory Compliance
 
-Synkra AIOX respects XDG directories:
+Synkra YARD respects XDG directories:
 
 ```bash
-# Data files: ~/.local/share/aiox/
-# Config files: ~/.config/aiox/
-# Cache: ~/.cache/aiox/
-# State: ~/.local/state/aiox/
+# Data files: ~/.local/share/yard/
+# Config files: ~/.config/yard/
+# Cache: ~/.cache/yard/
+# State: ~/.local/state/yard/
 ```
 
 ---
@@ -364,7 +364,7 @@ npx github:ernesto-langa/yard-core install
 cd ~/.yard-core-source
 git pull
 npm install
-node bin/aiox-init.js ~/projects/my-project --update
+node bin/yard-init.js ~/projects/my-project --update
 ```
 
 The updater will:
@@ -383,8 +383,8 @@ See the complete [Uninstallation Guide](../uninstallation.md) for detailed steps
 Quick uninstall:
 
 ```bash
-# Remove AIOX from a project
-rm -rf .yard-core .claude/commands/AIOX
+# Remove YARD from a project
+rm -rf .yard-core .claude/commands/YARD
 
 # Remove global installation
 rm -rf ~/.yard-core-source ~/.npm-global/lib/node_modules/@synkra

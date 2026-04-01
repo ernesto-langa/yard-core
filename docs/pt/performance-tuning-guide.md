@@ -4,7 +4,7 @@
   Última sincronização: 2026-01-26
 -->
 
-# Guia de Otimização de Performance do Synkra AIOX
+# Guia de Otimização de Performance do Synkra YARD
 
 > 🌐 [EN](../performance-tuning-guide.md) | **PT** | [ES](../es/performance-tuning-guide.md)
 
@@ -12,7 +12,7 @@
 
 ## Visao Geral
 
-Este guia abrangente fornece estratégias, ferramentas e melhores práticas para otimizar a performance do Synkra AIOX em todos os componentes críticos.
+Este guia abrangente fornece estratégias, ferramentas e melhores práticas para otimizar a performance do Synkra YARD em todos os componentes críticos.
 
 ## Metas de Performance
 

@@ -817,7 +817,7 @@ Artefatos disponiveis em outputs/design-system/
 
 | Versao | Data | Autor | Mudancas |
 |--------|------|-------|----------|
-| 1.0.0 | 2025-01-30 | Orion (AIOX Master) | Versao inicial do workflow |
+| 1.0.0 | 2025-01-30 | Orion (YARD Master) | Versao inicial do workflow |
 
 ---
 
@@ -827,7 +827,7 @@ Artefatos disponiveis em outputs/design-system/
 workflow_id: design-system-build-quality
 version: 1.0.0
 type: brownfield
-author: Orion (AIOX Master)
+author: Orion (YARD Master)
 created_date: 2025-01-30
 documentation_created: 2026-02-04
 tags:
@@ -842,4 +842,4 @@ tags:
 ---
 
 *Documentacao gerada por Technical Documentation Specialist*
-*AIOX-FULLSTACK Framework v2.2*
+*YARD-FULLSTACK Framework v2.2*

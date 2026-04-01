@@ -1,4 +1,4 @@
-# Cambios en los Agentes ADE - Alteraciones en los Agentes AIOX
+# Cambios en los Agentes ADE - Alteraciones en los Agentes YARD
 
 > **Documento:** Registro de las alteraciones realizadas en los agentes para soportar ADE
 > **Fecha:** 2026-01-29
@@ -9,12 +9,12 @@
 
 ## Descripción General
 
-Este documento registra todas las alteraciones realizadas en los archivos de definición de los agentes AIOX para soportar el AIOX Autonomous Development Engine (ADE).
+Este documento registra todas las alteraciones realizadas en los archivos de definición de los agentes YARD para soportar el YARD Autonomous Development Engine (ADE).
 
 **Archivos modificados:**
 
 - `.yard-core/development/agents/*.md` (fuente)
-- `.claude/commands/AIOX/agents/*.md` (sincronizado)
+- `.claude/commands/YARD/agents/*.md` (sincronizado)
 
 ---
 
@@ -430,7 +430,7 @@ dependencies:
 Todos los agentes fueron sincronizados entre:
 
 ```
-.yard-core/development/agents/   →   .claude/commands/AIOX/agents/
+.yard-core/development/agents/   →   .claude/commands/YARD/agents/
          (fuente)                           (sincronizado)
 ```
 
@@ -446,7 +446,7 @@ Todos los agentes fueron sincronizados entre:
 - sm.md
 - ux-design-expert.md
 - data-engineer.md
-- aiox-master.md
+- yard-master.md
 - squad-creator.md
 
 ---

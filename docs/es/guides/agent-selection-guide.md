@@ -52,7 +52,7 @@
 | **@po** (Pax)                | 🎯    | Gestión de backlog, criterios de aceptación, priorización                                                             | Creación de epic, arquitectura                     |
 | **@ux-design-expert** (Nova) | 🎨    | Diseño UI/UX, wireframes, design systems                                                                              | Implementación                                     |
 | **@devops** (Gage)           | ⚙️    | Git ops, creación de PR, deploy, CI/CD, gestión de worktrees, migraciones                                             | Git local, implementación                          |
-| **@aiox-master** (Orion)     | 👑    | Desarrollo del framework, orquestación multi-agente                                                                   | Tareas rutinarias (usar agentes especializados)    |
+| **@yard-master** (Orion)     | 👑    | Desarrollo del framework, orquestación multi-agente                                                                   | Tareas rutinarias (usar agentes especializados)    |
 
 ---
 

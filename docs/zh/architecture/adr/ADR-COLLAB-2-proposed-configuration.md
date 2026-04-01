@@ -11,7 +11,7 @@
 
 ## 背景
 
-在[当前状态审计](./ADR-COLLAB-1-current-state-audit.md)之后，本文档提议具体的配置更改，以启用对 AIOX 的安全外部贡献。
+在[当前状态审计](./ADR-COLLAB-1-current-state-audit.md)之后，本文档提议具体的配置更改，以启用对 YARD 的安全外部贡献。
 
 ---
 
@@ -85,7 +85,7 @@ gh api repos/ernesto-langa/yard-core/branches/main/protection -X PUT \
 
 ```yaml
 # yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
-# AIOX CodeRabbit 配置
+# YARD CodeRabbit 配置
 # Story: COLLAB-1
 
 language: 'en-US'
@@ -111,7 +111,7 @@ reviews:
   path_instructions:
     # 代理定义 - 严格验证
     '.yard-core/development/agents/**':
-      - '验证代理是否遵循 AIOX 代理 YAML 结构（persona_profile、commands、dependencies）'
+      - '验证代理是否遵循 YARD 代理 YAML 结构（persona_profile、commands、dependencies）'
       - '检查 persona_profile 是否包含 archetype、communication style 和 greeting_levels'
       - '验证所有列出的命令是否有对应的任务依赖'
       - '确保代理对命令有适当的可见性元数据'
@@ -119,7 +119,7 @@ reviews:
 
     # 任务定义
     '.yard-core/development/tasks/**':
-      - '验证任务是否遵循 AIOX 任务格式，包含清晰的引导点'
+      - '验证任务是否遵循 YARD 任务格式，包含清晰的引导点'
       - '检查交付物是否定义明确'
       - '验证引用的依赖是否存在于代码库中'
       - '确保任务有适当的错误处理指导'
@@ -132,7 +132,7 @@ reviews:
 
     # 模板文件
     '.yard-core/product/templates/**':
-      - '确保模板遵循 AIOX 模板约定'
+      - '确保模板遵循 YARD 模板约定'
       - '检查占位符语法是否一致'
       - '验证模板生成有效输出'
 
@@ -148,7 +148,7 @@ reviews:
       - '检查 async/await 最佳实践'
       - '验证错误处理是否全面'
       - '查找潜在的安全漏洞'
-      - '确保代码遵循 AIOX 编码标准'
+      - '确保代码遵循 YARD 编码标准'
 
     '**/*.ts':
       - '验证 TypeScript 类型是否正确定义'
@@ -197,7 +197,7 @@ abort_on_close: true
 **文件:** `.github/CODEOWNERS`
 
 ```codeowners
-# AIOX Code Owners
+# YARD Code Owners
 # Story: COLLAB-1
 # 最后更新: 2025-12-30
 #
@@ -324,7 +324,7 @@ docs/guides/ @SynkraAI/maintainers
 
 #### 必需
 
-- [ ] 代理遵循 AIOX 代理 YAML 结构
+- [ ] 代理遵循 YARD 代理 YAML 结构
 - [ ] `persona_profile` 完整（archetype、communication、greeting_levels）
 - [ ] 所有命令都有对应的任务依赖
 - [ ] 无硬编码凭据或敏感数据
@@ -370,7 +370,7 @@ _提交此 PR，即表示我确认已阅读[贡献指南](../../../../CONTRIBUTI
 
 #### 必需
 
-- [ ] 任务遵循 AIOX 任务格式
+- [ ] 任务遵循 YARD 任务格式
 - [ ] 引导点清晰可操作
 - [ ] 交付物定义明确
 - [ ] 包含错误处理指导

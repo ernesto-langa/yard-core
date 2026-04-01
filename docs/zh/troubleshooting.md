@@ -1,12 +1,12 @@
 <!-- 翻译：zh-CN 原文：/docs/troubleshooting.md 最后同步：2026-02-22 -->
 
-# Synkra AIOX 故障排除指南
+# Synkra YARD 故障排除指南
 
 > 🌐 [EN](../troubleshooting.md) | [PT](../pt/troubleshooting.md) | [ES](../es/troubleshooting.md) | **ZH**
 
 ---
 
-这份全面指南可帮助您诊断和解决 Synkra AIOX 的常见问题。
+这份全面指南可帮助您诊断和解决 Synkra YARD 的常见问题。
 
 ## 目录
 
@@ -731,18 +731,18 @@ sudo pacman -S openssl
 
 ```bash
 # 完整的调试输出
-export DEBUG=aiox:*
+export DEBUG=yard:*
 npx yard-core
 
 # 特定组件
-export DEBUG=aiox:memory,aiox:agent
+export DEBUG=yard:memory,yard:agent
 ```
 
 ### 分析日志
 
 ```bash
 # 查看最近的日志
-tail -f .yard/logs/aiox.log
+tail -f .yard/logs/yard.log
 
 # 搜索错误
 grep -i error .yard/logs/*.log
@@ -761,7 +761,7 @@ npx @synkra/yard-core doctor --report diagnostic.json
 npx @synkra/yard-core info --detailed >> diagnostic.json
 
 # 创建支持包
-tar -czf aiox-support.tar.gz .yard/logs diagnostic.json
+tar -czf yard-support.tar.gz .yard/logs diagnostic.json
 ```
 
 ### 性能分析
@@ -807,7 +807,7 @@ tar -czf aiox-support.tar.gz .yard/logs diagnostic.json
    - Node.js 版本：`node --version`
    - NPM 版本：`npm --version`
    - OS 和版本：`uname -a` 或 `ver`
-   - AIOX 版本：`npx @synkra/yard-core version`
+   - YARD 版本：`npx @synkra/yard-core version`
 
 3. **检查现有问题：**
    - [GitHub Issues](https://github.com/yard-core/yard-core/issues)
@@ -832,7 +832,7 @@ tar -czf aiox-support.tar.gz .yard/logs diagnostic.json
 ## 环境
 - OS: macOS 13.0
 - Node: 18.17.0
-- AIOX: 1.0.0
+- YARD: 1.0.0
 
 ## 重现步骤
 1. 运行 `npx @synkra/yard-core init test`
@@ -858,10 +858,10 @@ Error: Cannot find module 'inquirer'
 
 ```bash
 # 备份当前状态
-cp -r .aiox .aiox.backup
+cp -r .yard .yard.backup
 
 # 完全重置
-rm -rf .aiox node_modules package-lock.json
+rm -rf .yard node_modules package-lock.json
 npm cache clean --force
 
 # 新鲜安装
@@ -869,7 +869,7 @@ npm install
 npx @synkra/yard-core doctor --fix
 
 # 如果需要则恢复数据
-cp .aiox.backup/memory.db .yard/
+cp .yard.backup/memory.db .yard/
 ```
 
 ---

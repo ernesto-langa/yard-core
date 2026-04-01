@@ -884,7 +884,7 @@ flowchart TD
 ### Documentacao Relacionada
 
 - [ADR-025: Estrutura de Documentacao](../../architecture/ADR-025-DOCUMENTATION-STRUCTURE.md)
-- [Guia de Workflows AIOX](../AIOX-WORKFLOWS-GUIDE.md)
+- [Guia de Workflows YARD](../YARD-WORKFLOWS-GUIDE.md)
 - [Padrao de Stories](../templates/STORY-TEMPLATE.md)
 
 ---

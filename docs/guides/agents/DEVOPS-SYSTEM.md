@@ -21,7 +21,7 @@
 
 ## Visao Geral
 
-O agente `@devops` (Gage) e o especialista em infraestrutura e operacoes do framework AIOX. Ele e responsavel por:
+O agente `@devops` (Gage) e o especialista em infraestrutura e operacoes do framework YARD. Ele e responsavel por:
 
 - **Governanca MCP**: Gerenciamento exclusivo de servidores MCP (Model Context Protocol)
 - **CI/CD**: Configuracao e manutencao de pipelines de integracao e entrega continua
@@ -574,7 +574,7 @@ npm audit --ignore-advisories=ADVISORY_ID
 
 ## Referencias
 
-### Documentacao AIOX
+### Documentacao YARD
 
 - [Regras de Uso MCP](../../.claude/rules/mcp-usage.md)
 - [Operacoes N8N](../../.claude/rules/n8n-operations.md)
@@ -633,5 +633,5 @@ npm audit --ignore-advisories=ADVISORY_ID
 
 ---
 
-*Documento gerado pelo Sistema AIOX - 2026-02-04*
+*Documento gerado pelo Sistema YARD - 2026-02-04*
 *Mantido por: @devops*

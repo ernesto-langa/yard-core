@@ -10,7 +10,7 @@
 
 ---
 
-Este documento explica como propor novas funcionalidades para o AIOX.
+Este documento explica como propor novas funcionalidades para o YARD.
 
 ## Ideias Rápidas
 

@@ -1,8 +1,8 @@
-# 对 Synkra AIOX 做出贡献
+# 对 Synkra YARD 做出贡献
 
 > **[葡萄牙語版本](../CONTRIBUTING-PT.md)**
 
-欢迎来到 AIOX！感谢您对贡献的兴趣。本指南将帮助您了解我们的开发工作流程、贡献流程以及如何提交更改。
+欢迎来到 YARD！感谢您对贡献的兴趣。本指南将帮助您了解我们的开发工作流程、贡献流程以及如何提交更改。
 
 ## 目录
 
@@ -344,7 +344,7 @@ tasks:
 
 - 代码质量和最佳实践
 - 安全问题
-- AIOX 特定模式（代理、任务、工作流）
+- YARD 特定模式（代理、任务、工作流）
 - 性能问题
 
 **严重级别：**
@@ -383,7 +383,7 @@ tasks:
 
 ## 验证系统
 
-AIOX 实施了 **深度防御**策略，有 3 个验证层：
+YARD 实施了 **深度防御**策略，有 3 个验证层：
 
 ### 第 1 层：提交前（本地）
 
@@ -532,7 +532,7 @@ gh pr checks  # 查看 PR 检查状态
 
 ## 使用 Pro
 
-AIOX 使用 Open Core 模型，带有私人 `pro/` git 子模块（见 [ADR-PRO-001](../docs/architecture/adr/adr-pro-001-repository-strategy.md)）。
+YARD 使用 Open Core 模型，带有私人 `pro/` git 子模块（见 [ADR-PRO-001](../docs/architecture/adr/adr-pro-001-repository-strategy.md)）。
 
 ### 对于开源贡献者
 
@@ -562,7 +562,7 @@ git submodule update --init pro
 
 ```bash
 # 将在未来版本中发布
-aiox setup --pro
+yard setup --pro
 ```
 
 有关完整的开发者工作流程指南，见 [Pro 开发者工作流程](../docs/guides/workflows/pro-developer-workflow.md)。
@@ -578,4 +578,4 @@ aiox setup --pro
 
 ---
 
-**感谢您对 Synkra AIOX 的贡献！**
+**感谢您对 Synkra YARD 的贡献！**

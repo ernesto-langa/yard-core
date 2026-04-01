@@ -10,7 +10,7 @@
 
 ---
 
-Guia de referência completo para todos os comandos do meta-agente Synkra AIOX.
+Guia de referência completo para todos os comandos do meta-agente Synkra YARD.
 
 ## Sumário
 
@@ -715,7 +715,7 @@ Exemplos:
 
 ### *update
 
-Atualiza o Synkra AIOX.
+Atualiza o Synkra YARD.
 
 ```bash
 *update [options]
@@ -937,10 +937,10 @@ Entre no modo interativo para comandos contínuos:
 ```bash
 *interactive
 
-AIOX> create-agent helper
-AIOX> activate helper
-AIOX> helper translate "Hello" --to spanish
-AIOX> exit
+YARD> create-agent helper
+YARD> activate helper
+YARD> helper translate "Hello" --to spanish
+YARD> exit
 ```
 
 ## Variáveis de Ambiente
@@ -948,12 +948,12 @@ AIOX> exit
 Controle o comportamento com variáveis de ambiente:
 
 ```bash
-AIOX_AI_PROVIDER=openai          # Provedor de IA
-AIOX_AI_MODEL=gpt-4             # Modelo de IA
-AIOX_LOG_LEVEL=debug            # Nível de log
-AIOX_TELEMETRY=disabled         # Configuração de telemetria
-AIOX_TIMEOUT=30000             # Timeout de comando (ms)
-AIOX_MEMORY_CACHE=true         # Cache de memória
+YARD_AI_PROVIDER=openai          # Provedor de IA
+YARD_AI_MODEL=gpt-4             # Modelo de IA
+YARD_LOG_LEVEL=debug            # Nível de log
+YARD_TELEMETRY=disabled         # Configuração de telemetria
+YARD_TIMEOUT=30000             # Timeout de comando (ms)
+YARD_MEMORY_CACHE=true         # Cache de memória
 ```
 
 ## Tratamento de Erros

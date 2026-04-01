@@ -1,16 +1,16 @@
 # Story Development Cycle Workflow
 
-> **EN** | [PT](../../aiox-workflows/story-development-cycle-workflow.md) | [ES](../../es/aiox-workflows/story-development-cycle-workflow.md)
+> **EN** | [PT](../../yard-workflows/story-development-cycle-workflow.md) | [ES](../../es/yard-workflows/story-development-cycle-workflow.md)
 
 ---
 
-**Full documentation available in:** [Portuguese Version](../../aiox-workflows/story-development-cycle-workflow.md)
+**Full documentation available in:** [Portuguese Version](../../yard-workflows/story-development-cycle-workflow.md)
 
 ---
 
 ## Summary
 
-The **Story Development Cycle Workflow** is the core development process in AIOX. It orchestrates the complete lifecycle of implementing a user story:
+The **Story Development Cycle Workflow** is the core development process in YARD. It orchestrates the complete lifecycle of implementing a user story:
 
 - Story breakdown and task creation
 - Test-first development approach
@@ -20,7 +20,7 @@ The **Story Development Cycle Workflow** is the core development process in AIOX
 
 ### When to Use
 
-- For every story implementation in AIOX
+- For every story implementation in YARD
 - Called by greenfield and brownfield workflows
 - After spec-pipeline approval
 
@@ -47,4 +47,4 @@ The **Story Development Cycle Workflow** is the core development process in AIOX
 
 ---
 
-*For complete details, diagrams, and step-by-step instructions, see the [Portuguese documentation](../../aiox-workflows/story-development-cycle-workflow.md).*
+*For complete details, diagrams, and step-by-step instructions, see the [Portuguese documentation](../../yard-workflows/story-development-cycle-workflow.md).*

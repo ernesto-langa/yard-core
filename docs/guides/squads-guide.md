@@ -4,9 +4,9 @@
 
 ---
 
-Complete guide for creating, validating, publishing, and managing Squads in AIOX.
+Complete guide for creating, validating, publishing, and managing Squads in YARD.
 
-> **AIOX Squads:** Equipes de AI agents trabalhando com você
+> **YARD Squads:** Equipes de AI agents trabalhando com você
 
 ## Table of Contents
 
@@ -27,7 +27,7 @@ Complete guide for creating, validating, publishing, and managing Squads in AIOX
 
 ## What is a Squad?
 
-Squads are modular teams of AI agents that extend AIOX functionality. Each squad is a self-contained package containing:
+Squads are modular teams of AI agents that extend YARD functionality. Each squad is a self-contained package containing:
 
 | Component | Purpose |
 |-----------|---------|
@@ -45,7 +45,7 @@ Squads are modular teams of AI agents that extend AIOX functionality. Each squad
 │                    SQUAD DISTRIBUTION                        │
 ├─────────────────────────────────────────────────────────────┤
 │  Level 1: LOCAL        → ./squads/           (Private)      │
-│  Level 2: AIOX-SQUADS  → github.com/SynkraAI (Public/Free)  │
+│  Level 2: YARD-SQUADS  → github.com/SynkraAI (Public/Free)  │
 │  Level 3: SYNKRA API   → api.synkra.dev      (Marketplace)  │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -54,8 +54,8 @@ Squads are modular teams of AI agents that extend AIOX functionality. Each squad
 
 | Squad | Version | Description |
 |-------|---------|-------------|
-| [etl-squad](https://github.com/SynkraAI/aiox-squads/tree/main/etl) | 2.0.0 | Data collection and transformation |
-| [creator-squad](https://github.com/SynkraAI/aiox-squads/tree/main/creator) | 1.0.0 | Content generation utilities |
+| [etl-squad](https://github.com/SynkraAI/yard-squads/tree/main/etl) | 2.0.0 | Data collection and transformation |
+| [creator-squad](https://github.com/SynkraAI/yard-squads/tree/main/creator) | 1.0.0 | Content generation utilities |
 
 ---
 
@@ -64,7 +64,7 @@ Squads are modular teams of AI agents that extend AIOX functionality. Each squad
 ### Prerequisites
 
 - Node.js 18+
-- AIOX project initialized (`.yard-core/` exists)
+- YARD project initialized (`.yard-core/` exists)
 - Git for version control
 
 ### Option 1: Guided Design (Recommended)
@@ -141,8 +141,8 @@ author: Your Name <email@example.com>
 license: MIT
 slashPrefix: my                   # Command prefix for IDE
 
-# AIOX compatibility
-aiox:
+# YARD compatibility
+yard:
   minVersion: "2.1.0"
   type: squad
 
@@ -226,7 +226,7 @@ Tasks must follow [TASK-FORMAT-SPECIFICATION-V1](../../.yard-core/docs/standards
 
 | Mode | Behavior |
 |------|----------|
-| `extend` | Add squad rules to core AIOX rules |
+| `extend` | Add squad rules to core YARD rules |
 | `override` | Replace core rules with squad rules |
 | `none` | Standalone configuration |
 
@@ -533,7 +533,7 @@ Squads in `./squads/` are automatically available to your project.
 *list-squads
 ```
 
-### Level 2: aiox-squads Repository (Public)
+### Level 2: yard-squads Repository (Public)
 
 ```bash
 @squad-creator
@@ -545,7 +545,7 @@ Squads in `./squads/` are automatically available to your project.
 *publish-squad ./squads/my-squad
 ```
 
-This creates a PR to [SynkraAI/aiox-squads](https://github.com/SynkraAI/aiox-squads).
+This creates a PR to [SynkraAI/yard-squads](https://github.com/SynkraAI/yard-squads).
 
 ### Level 3: Synkra Marketplace
 
@@ -579,8 +579,8 @@ export SYNKRA_API_TOKEN="your-token"
 ### Detecting Legacy Squads
 
 Legacy squads use `config.yaml` instead of `squad.yaml` and may be missing:
-- `aiox.type` field
-- `aiox.minVersion` field
+- `yard.type` field
+- `yard.minVersion` field
 - Task-first structure
 
 ### Migration Command
@@ -602,7 +602,7 @@ Legacy squads use `config.yaml` instead of `squad.yaml` and may be missing:
 
 1. **Backup** - Creates `.backup/pre-migration-{timestamp}/`
 2. **Rename** - `config.yaml` → `squad.yaml`
-3. **Add Fields** - `aiox.type`, `aiox.minVersion`
+3. **Add Fields** - `yard.type`, `yard.minVersion`
 4. **Restructure** - Organize into task-first layout
 5. **Validate** - Run validation on migrated squad
 
@@ -625,7 +625,7 @@ The Squad Loader resolves squads in this order:
 
 ```
 1. Local     → ./squads/{name}/
-2. npm       → node_modules/@aiox-squads/{name}/
+2. npm       → node_modules/@yard-squads/{name}/
 3. Workspace → ../{name}/ (monorepo)
 4. Registry  → api.synkra.dev/squads/{name}
 ```
@@ -702,8 +702,8 @@ cat ./squads/my-squad/squad.yaml
 # Common fixes:
 # - name: must be kebab-case
 # - version: must be semver (x.y.z)
-# - aiox.type: must be "squad"
-# - aiox.minVersion: must be valid semver
+# - yard.type: must be "squad"
+# - yard.minVersion: must be valid semver
 ```
 
 ### YAML Parse Errors
@@ -746,9 +746,9 @@ gh auth status
 
 ## FAQ
 
-### What's the difference between a Squad and legacy AIOX squad formats?
+### What's the difference between a Squad and legacy YARD squad formats?
 
-**Squads** are the standard format in AIOX 2.1+ with:
+**Squads** are the standard format in YARD 2.1+ with:
 - Task-first architecture
 - JSON Schema validation
 - Three-level distribution
@@ -779,12 +779,12 @@ dependencies:
 - **Level 1**: Keep in `./squads/` (not committed) - add to `.gitignore`
 - **Level 3**: Sync with `--private` flag: `*sync-squad-synkra my-squad --private`
 
-### What's the minimum AIOX version for Squads?
+### What's the minimum YARD version for Squads?
 
-Squads require AIOX 2.1.0+. Set in manifest:
+Squads require YARD 2.1.0+. Set in manifest:
 
 ```yaml
-aiox:
+yard:
   minVersion: "2.1.0"
 ```
 
@@ -811,7 +811,7 @@ npm test -- tests/squads/my-squad/
 - [Squad Migration Guide](./squad-migration.md)
 - [Squads API Reference](../api/squads-api.md)
 - [@squad-creator Agent](../../.yard-core/development/agents/squad-creator.md)
-- [aiox-squads Repository](https://github.com/SynkraAI/aiox-squads)
+- [yard-squads Repository](https://github.com/SynkraAI/yard-squads)
 
 ---
 
@@ -822,6 +822,6 @@ npm test -- tests/squads/my-squad/
 
 ---
 
-*AIOX Squads: Equipes de AI agents trabalhando com você*
+*YARD Squads: Equipes de AI agents trabalhando com você*
 
 **Version:** 2.1.0 | **Updated:** 2025-12-26 | **Stories:** SQS-8, SQS-11

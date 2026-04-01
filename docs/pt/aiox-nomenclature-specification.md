@@ -1,12 +1,12 @@
 <!--
   Tradução: PT-BR
-  Original: /docs/en/aiox-nomenclature-specification.md
+  Original: /docs/en/yard-nomenclature-specification.md
   Última sincronização: 2026-01-26
 -->
 
-# Especificação de Nomenclatura do AIOX
+# Especificação de Nomenclatura do YARD
 
-> 🌐 [EN](../aiox-nomenclature-specification.md) | **PT** | [ES](../es/aiox-nomenclature-specification.md)
+> 🌐 [EN](../yard-nomenclature-specification.md) | **PT** | [ES](../es/yard-nomenclature-specification.md)
 
 ---
 
@@ -20,7 +20,7 @@
 
 ## Resumo Executivo
 
-Este documento estabelece nomenclatura clara para o AIOX diferenciando entre:
+Este documento estabelece nomenclatura clara para o YARD diferenciando entre:
 - **Task Workflow**: Passos de execução internos dentro de uma única task
 - **Workflow**: Orquestração multi-task entre agents com capacidades Fork/Join
 
@@ -120,9 +120,9 @@ workflow:
 
 ### Padrão Organizer-Worker
 
-**Conceito:** Inspirado pelo protocolo Organizer-Worker do AsyncThink, workflows do AIOX podem usar um **Organizer Agent** que coordena **Worker Agents** executando tasks em paralelo.
+**Conceito:** Inspirado pelo protocolo Organizer-Worker do AsyncThink, workflows do YARD podem usar um **Organizer Agent** que coordena **Worker Agents** executando tasks em paralelo.
 
-**Aplicação ao AIOX:**
+**Aplicação ao YARD:**
 
 1. **Organizer Agent:**
    - Coordena execução de workflow
@@ -140,7 +140,7 @@ workflow:
 ```yaml
 workflow:
   id: parallel-validation-workflow
-  organizer: aiox-master
+  organizer: yard-master
 
   stages:
     - id: fork-validation
@@ -186,7 +186,7 @@ workflow:
 
 **Conceito:** Agent Lightning permite otimizar QUALQUER agent com QUALQUER framework usando aprendizado por reforço, sem modificar código do agent.
 
-**Aplicação ao AIOX:**
+**Aplicação ao YARD:**
 
 1. **Integração com Lightning Server:**
    - Coleta traces de execução de agents
@@ -650,7 +650,7 @@ workflow:
    - [Documentação](https://microsoft.github.io/agent-lightning/latest/)
    - Conceitos Chave: Otimização zero-code, treinamento RL, Suporte multi-agent
 
-3. **Gerenciamento de Workflow AIOX:** Padrões de workflow existentes no AIOX
+3. **Gerenciamento de Workflow YARD:** Padrões de workflow existentes no YARD
    - `common/utils/workflow-management.md`
    - `docs/WORKFLOW-COMPLETE-CONSOLIDATED-V3.md`
 

@@ -540,7 +540,7 @@ CREATE mínimo - só coisas realmente novas
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    AIOX IDS DASHBOARD                           │
+│                    YARD IDS DASHBOARD                           │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │  REGISTRY HEALTH          DECISION METRICS                      │
@@ -686,22 +686,22 @@ Resultado:
 
 ```bash
 # Consultar o registry
-aiox ids:query "deploy automático"
+yard ids:query "deploy automático"
 
 # Ver estatísticas
-aiox ids:stats
+yard ids:stats
 
 # Verificar saúde
-aiox ids:health
+yard ids:health
 
 # Corrigir problemas simples
-aiox ids:health --fix
+yard ids:health --fix
 
 # Backup do registry
-aiox ids:backup
+yard ids:backup
 
 # Forçar sync completo
-aiox ids:sync
+yard ids:sync
 ```
 
 ---

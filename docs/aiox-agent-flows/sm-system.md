@@ -9,7 +9,7 @@
 
 ## Visão Geral
 
-O agente **@sm (River)** e o Scrum Master tecnico do AIOX, especializado em preparacao de stories e facilitacao de processos ageis. Seu papel principal e criar stories detalhadas e acionaveis que agentes desenvolvedores possam implementar com minima necessidade de pesquisa adicional.
+O agente **@sm (River)** e o Scrum Master tecnico do YARD, especializado em preparacao de stories e facilitacao de processos ageis. Seu papel principal e criar stories detalhadas e acionaveis que agentes desenvolvedores possam implementar com minima necessidade de pesquisa adicional.
 
 **Responsabilidades Principais:**
 - Criacao e refinamento de user stories
@@ -43,7 +43,7 @@ O agente **@sm (River)** e o Scrum Master tecnico do AIOX, especializado em prep
 | Arquivo | Propósito |
 |---------|-----------|
 | `.yard-core/development/agents/sm.md` | Definição core do agente SM |
-| `.claude/commands/AIOX/agents/sm.md` | Comando Claude Code para ativar @sm |
+| `.claude/commands/YARD/agents/sm.md` | Comando Claude Code para ativar @sm |
 | `.cursor/rules/sm.md` | Regras para Cursor IDE |
 | `.cursor/rules/sm.mdc` | Regras compiladas para Cursor |
 
@@ -406,7 +406,7 @@ dependencies:
 
 **Solucao:**
 1. Copiar de `GITHUB yard-core/core-config.yaml`
-2. Ou executar AIOX installer: `npm run aiox:install`
+2. Ou executar YARD installer: `npm run yard:install`
 3. Configurar `devStoryLocation`, `prdSharded`, etc.
 
 ### Checklist retorna FAIL em multiplas categorias

@@ -1,16 +1,16 @@
 # @pm (Morgan) - Documentacion del Sistema
 
-> [PT](../../aiox-agent-flows/pm-system.md) | [EN](../../en/aiox-agent-flows/pm-system.md) | **ES**
+> [PT](../../yard-agent-flows/pm-system.md) | [EN](../../en/yard-agent-flows/pm-system.md) | **ES**
 
 ---
 
-> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../aiox-agent-flows/pm-system.md).
+> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../yard-agent-flows/pm-system.md).
 
 ---
 
 ## Vision General
 
-**@pm** (Morgan) es el agente de Product Management del AIOX, responsable por:
+**@pm** (Morgan) es el agente de Product Management del YARD, responsable por:
 
 - Estrategia de producto
 - Roadmap y planificacion
@@ -29,7 +29,7 @@
 ## Ver Mas
 
 Para documentacion detallada incluyendo flowcharts, integraciones y troubleshooting, consulte:
-- **[Documentacion completa (PT)](../../aiox-agent-flows/pm-system.md)**
+- **[Documentacion completa (PT)](../../yard-agent-flows/pm-system.md)**
 
 ---
 

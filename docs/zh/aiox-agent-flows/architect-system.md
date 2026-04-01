@@ -9,7 +9,7 @@
 
 ## 概览
 
-**@architect 代理 (Aria)** 是 AIOX 的**全系统架构师和全栈技术领导**。该代理负责:
+**@architect 代理 (Aria)** 是 YARD 的**全系统架构师和全栈技术领导**。该代理负责:
 
 - **完整系统架构**(微服务、单体、无服务器、混合)
 - **技术栈选择**(框架、语言、平台)
@@ -56,7 +56,7 @@
 | 文件 | 目的 |
 |---------|-----------|
 | `.yard-core/development/agents/architect.md` | 架构师代理的核心定义 |
-| `.claude/commands/AIOX/agents/architect.md` | Claude Code 命令用于激活 @architect |
+| `.claude/commands/YARD/agents/architect.md` | Claude Code 命令用于激活 @architect |
 
 ### @architect 的模板文件
 

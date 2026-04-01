@@ -4,7 +4,7 @@
   Última sincronización: 2026-02-01
 -->
 
-# Documentación de Instalación de Synkra AIOX
+# Documentación de Instalación de Synkra YARD
 
 > 🌐 [EN](../../installation/README.md) | [PT](../../pt/installation/README.md) | **ES**
 
@@ -17,7 +17,7 @@
 
 ## Descripción General
 
-Este directorio contiene documentación completa de instalación y configuración para Synkra AIOX.
+Este directorio contiene documentación completa de instalación y configuración para Synkra YARD.
 
 ---
 

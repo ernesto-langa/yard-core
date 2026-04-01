@@ -1,4 +1,4 @@
-# Synkra AIOX FAQ
+# Synkra YARD FAQ
 
 > 🌐 **EN** | [PT](../pt/installation/faq.md) | [ES](../es/installation/faq.md)
 
@@ -61,9 +61,9 @@ npm --version   # Should be 9+
 
 ---
 
-### Q3: Can I install AIOX in an existing project?
+### Q3: Can I install YARD in an existing project?
 
-**Answer:** Yes! AIOX is designed for both greenfield and brownfield projects.
+**Answer:** Yes! YARD is designed for both greenfield and brownfield projects.
 
 **For existing projects:**
 
@@ -102,9 +102,9 @@ Factors affecting installation time:
 
 ---
 
-### Q5: What files does AIOX create in my project?
+### Q5: What files does YARD create in my project?
 
-**Answer:** AIOX creates the following structure:
+**Answer:** YARD creates the following structure:
 
 ```
 your-project/
@@ -117,7 +117,7 @@ your-project/
 │   └── core-config.yaml        # Framework configuration
 │
 ├── .claude/                    # Claude Code (if selected)
-│   └── commands/AIOX/agents/   # Agent slash commands
+│   └── commands/YARD/agents/   # Agent slash commands
 │
 ├── .cursor/                    # Cursor (if selected)
 │   └── rules/                  # Agent rules
@@ -135,7 +135,7 @@ your-project/
 
 ## Updates & Maintenance
 
-### Q6: How do I update AIOX to the latest version?
+### Q6: How do I update YARD to the latest version?
 
 **Answer:**
 
@@ -212,7 +212,7 @@ mv .yard-core.backup .yard-core
 
 ## Offline & Air-Gapped Usage
 
-### Q9: Can I use AIOX without internet?
+### Q9: Can I use YARD without internet?
 
 **Answer:** Yes, with some preparation:
 
@@ -223,16 +223,16 @@ mv .yard-core.backup .yard-core
 npx yard-core install
 
 # Package for offline use
-tar -czvf aiox-offline.tar.gz .yard-core/ .claude/ .cursor/
+tar -czvf yard-offline.tar.gz .yard-core/ .claude/ .cursor/
 ```
 
 **On air-gapped machine:**
 
 ```bash
 # Extract the package
-tar -xzvf aiox-offline.tar.gz
+tar -xzvf yard-offline.tar.gz
 
-# AIOX agents work without internet
+# YARD agents work without internet
 # (They don't require external API calls)
 ```
 
@@ -244,7 +244,7 @@ tar -xzvf aiox-offline.tar.gz
 
 ---
 
-### Q10: How do I transfer AIOX to an air-gapped environment?
+### Q10: How do I transfer YARD to an air-gapped environment?
 
 **Answer:**
 
@@ -254,7 +254,7 @@ tar -xzvf aiox-offline.tar.gz
    # Install and package
    npx yard-core install
    cd your-project
-   tar -czvf aiox-transfer.tar.gz .yard-core/ .claude/ .cursor/ docs/
+   tar -czvf yard-transfer.tar.gz .yard-core/ .claude/ .cursor/ docs/
    ```
 
 2. **Transfer the archive** via USB, secure transfer, etc.
@@ -263,7 +263,7 @@ tar -xzvf aiox-offline.tar.gz
 
    ```bash
    cd your-project
-   tar -xzvf aiox-transfer.tar.gz
+   tar -xzvf yard-transfer.tar.gz
    ```
 
 4. **Configure IDE manually** if needed (paths may differ)
@@ -272,7 +272,7 @@ tar -xzvf aiox-offline.tar.gz
 
 ## IDE & Configuration
 
-### Q11: Which IDEs does AIOX support?
+### Q11: Which IDEs does YARD support?
 
 **Answer:**
 
@@ -287,7 +287,7 @@ tar -xzvf aiox-offline.tar.gz
 
 ---
 
-### Q12: Can I configure AIOX for multiple IDEs?
+### Q12: Can I configure YARD for multiple IDEs?
 
 **Answer:** Yes! Select multiple IDEs during installation:
 
@@ -311,7 +311,7 @@ Each IDE gets its own configuration directory:
 
 ---
 
-### Q13: How do I configure AIOX for a new team member?
+### Q13: How do I configure YARD for a new team member?
 
 **Answer:**
 
@@ -342,7 +342,7 @@ npx yard-core install
 
 ### Q14: What agents are included?
 
-**Answer:** AIOX includes 11+ specialized agents:
+**Answer:** YARD includes 11+ specialized agents:
 
 | Agent           | Role                 | Best For                        |
 | --------------- | -------------------- | ------------------------------- |
@@ -428,7 +428,7 @@ npx yard-core install
 
 ### Q17: What are Squads?
 
-**Answer:** Starter squads are optional add-ons that extend AIOX capabilities:
+**Answer:** Starter squads are optional add-ons that extend YARD capabilities:
 
 | Pack           | Features                                                       |
 | -------------- | -------------------------------------------------------------- |
@@ -484,14 +484,14 @@ tasks:
 
 ## Advanced Usage
 
-### Q19: How do I integrate AIOX with CI/CD?
+### Q19: How do I integrate YARD with CI/CD?
 
 **Answer:**
 
 **GitHub Actions example:**
 
 ```yaml
-name: CI with AIOX
+name: CI with YARD
 on: [push]
 jobs:
   test:
@@ -550,7 +550,7 @@ projectStatus:
 
 ---
 
-### Q21: How do I contribute to AIOX?
+### Q21: How do I contribute to YARD?
 
 **Answer:**
 

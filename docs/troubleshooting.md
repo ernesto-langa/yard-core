@@ -1,10 +1,10 @@
-# Synkra AIOX Troubleshooting Guide
+# Synkra YARD Troubleshooting Guide
 
 > 🌐 **EN** | [PT](./pt/troubleshooting.md) | [ES](./es/troubleshooting.md)
 
 ---
 
-This comprehensive guide helps you diagnose and resolve common issues with Synkra AIOX.
+This comprehensive guide helps you diagnose and resolve common issues with Synkra YARD.
 
 ## Table of Contents
 
@@ -729,18 +729,18 @@ sudo pacman -S openssl
 
 ```bash
 # Full debug output
-export DEBUG=aiox:*
+export DEBUG=yard:*
 npx yard-core
 
 # Specific components
-export DEBUG=aiox:memory,aiox:agent
+export DEBUG=yard:memory,yard:agent
 ```
 
 ### Analyze Logs
 
 ```bash
 # View recent logs
-tail -f .yard/logs/aiox.log
+tail -f .yard/logs/yard.log
 
 # Search for errors
 grep -i error .yard/logs/*.log
@@ -759,7 +759,7 @@ npx yard-core doctor --report diagnostic.json
 npx yard-core info --detailed >> diagnostic.json
 
 # Create support bundle
-tar -czf aiox-support.tar.gz .yard/logs diagnostic.json
+tar -czf yard-support.tar.gz .yard/logs diagnostic.json
 ```
 
 ### Performance Profiling
@@ -805,7 +805,7 @@ tar -czf aiox-support.tar.gz .yard/logs diagnostic.json
    - Node.js version: `node --version`
    - NPM version: `npm --version`
    - OS and version: `uname -a` or `ver`
-   - AIOX version: `npx yard-core version`
+   - YARD version: `npx yard-core version`
 
 3. **Check existing issues:**
    - [GitHub Issues](https://github.com/yard-core/yard-core/issues)
@@ -830,7 +830,7 @@ Create detailed bug reports:
 ## Environment
 - OS: macOS 13.0
 - Node: 18.17.0
-- AIOX: 1.0.0
+- YARD: 1.0.0
 
 ## Steps to Reproduce
 1. Run `npx yard-core init test`
@@ -856,10 +856,10 @@ If all else fails:
 
 ```bash
 # Backup current state
-cp -r .aiox .aiox.backup
+cp -r .yard .yard.backup
 
 # Complete reset
-rm -rf .aiox node_modules package-lock.json
+rm -rf .yard node_modules package-lock.json
 npm cache clean --force
 
 # Fresh install
@@ -867,7 +867,7 @@ npm install
 npx yard-core doctor --fix
 
 # Restore data if needed
-cp .aiox.backup/memory.db .yard/
+cp .yard.backup/memory.db .yard/
 ```
 
 ---

@@ -47,7 +47,7 @@
 
 ### 支持的项目类型
 
-- `aiox-development`
+- `yard-development`
 - `autonomous-development`
 - `qa-automation`
 

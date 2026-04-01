@@ -1,6 +1,6 @@
 <!-- 翻译：zh-CN 原文：/docs/installation/troubleshooting.md 最后同步：2026-02-22 -->
 
-# Synkra AIOX 故障排除指南
+# Synkra YARD 故障排除指南
 
 > 🌐 [EN](../../installation/troubleshooting.md) | [PT](../pt/installation/troubleshooting.md) | [ES](../es/installation/troubleshooting.md)
 
@@ -75,7 +75,7 @@ npm --version
 
 Current directory: /Users/username
 
-Synkra AIOX should be installed in your project directory,
+Synkra YARD should be installed in your project directory,
 not in your home directory or temporary locations.
 ```
 
@@ -123,7 +123,7 @@ npx @synkra/yard-core install
 **症状:**
 
 ```
-Error: Synkra AIOX requires Node.js 18.0.0 or higher
+Error: Synkra YARD requires Node.js 18.0.0 or higher
 Current version: 14.17.0
 ```
 
@@ -548,7 +548,7 @@ nvm use 16
 
    ```bash
    # Claude Code
-   ls .claude/commands/AIOX/agents/
+   ls .claude/commands/YARD/agents/
 
    # Cursor
    ls .cursor/rules/
@@ -631,7 +631,7 @@ npx @synkra/yard-core install --full
 ### 通用诊断
 
 ```bash
-# 检查 AIOX 安装状态
+# 检查 YARD 安装状态
 npx @synkra/yard-core status
 
 # 列出可用的 Squad

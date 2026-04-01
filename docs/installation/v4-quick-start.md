@@ -1,4 +1,4 @@
-# AIOX v4 Quick Start Guide
+# YARD v4 Quick Start Guide
 
 > 🌐 **EN** | [PT](../pt/installation/v4-quick-start.md) | [ES](../es/installation/v4-quick-start.md)
 
@@ -54,7 +54,7 @@ npx yard-core@latest doctor
 Or if installed globally:
 
 ```bash
-aiox doctor
+yard doctor
 ```
 
 ### Manual Verification
@@ -82,16 +82,16 @@ Expected structure:
 
 ## Step 3: Activate Your First Agent
 
-AIOX uses specialized agents for different tasks. In your AI-powered IDE or Claude Code CLI, type:
+YARD uses specialized agents for different tasks. In your AI-powered IDE or Claude Code CLI, type:
 
 ```
-@aiox-master
+@yard-master
 ```
 
 The agent will greet you and show available commands:
 
 ```
-🎯 AIOX Master ready!
+🎯 YARD Master ready!
 Type *help to see available commands.
 ```
 
@@ -134,7 +134,7 @@ The developer agent (Dex) will activate with a greeting showing:
 
 ## Step 5: Create Your First Story
 
-Stories drive development in AIOX. Activate the Product Owner and create one:
+Stories drive development in YARD. Activate the Product Owner and create one:
 
 ```
 @po *create-story
@@ -173,7 +173,7 @@ npx yard-core@latest info      # Show system info
 npm run lint                           # Check code style
 npm run typecheck                      # Check TypeScript types
 npm test                               # Run unit tests
-npm run validate:structure             # Validate AIOX structure
+npm run validate:structure             # Validate YARD structure
 ```
 
 ### Project Structure
@@ -198,7 +198,7 @@ your-project/
 │       ├── integrations/          # PM tool adapters
 │       └── templates/             # Config templates
 ├── .claude/                       # Claude Code configuration
-│   ├── commands/AIOX/agents/      # Agent skills
+│   ├── commands/YARD/agents/      # Agent skills
 │   └── rules/                     # Agent rules
 ├── docs/                          # Documentation
 │   └── stories/                   # Development stories
@@ -244,10 +244,10 @@ sudo chown -R $(whoami) ~/.npm
 # nvm, fnm, or volta
 ```
 
-### AIOX structure not found
+### YARD structure not found
 
 ```bash
-# Reinstall AIOX in current project
+# Reinstall YARD in current project
 npx yard-core@latest install
 
 # Or clone fresh
@@ -264,4 +264,4 @@ git clone https://github.com/ernesto-langa/yard-core.git
 
 ---
 
-**Welcome to AIOX! Happy coding!**
+**Welcome to YARD! Happy coding!**

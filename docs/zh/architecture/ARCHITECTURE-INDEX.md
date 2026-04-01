@@ -1,6 +1,6 @@
 <!-- 翻译: ZH-CN | 原文: /docs/en/architecture/ARCHITECTURE-INDEX.md | 同步时间: 2026-01-26 -->
 
-# AIOX 架构文档索引
+# YARD 架构文档索引
 
 > 🌐 [EN](../../architecture/ARCHITECTURE-INDEX.md) | [PT](../../pt/architecture/ARCHITECTURE-INDEX.md) | [ES](../../es/architecture/ARCHITECTURE-INDEX.md) | **ZH-CN**
 
@@ -14,7 +14,7 @@
 
 ## 📋 文档导航
 
-本索引为 AIOX v4 的所有架构文档提供导航。
+本索引为 YARD v4 的所有架构文档提供导航。
 
 > **注意:** 官方框架文档（编码标准、技术栈、源代码树）已合并到 `docs/framework/`。详见 [Framework README](../framework/README.md)。
 
@@ -41,7 +41,7 @@ docs/architecture/
 
 | 文档 | 描述 | 状态 |
 |------|------|------|
-| [高级架构](./high-level-architecture.md) | AIOX v4 架构概览 | ✅ 当前版本 |
+| [高级架构](./high-level-architecture.md) | YARD v4 架构概览 | ✅ 当前版本 |
 | [模块系统](./module-system.md) | 4 模块模块化架构 | ✅ 当前版本 |
 | [内存层](./memory-layer.md) | 内存系统架构 | ✅ 当前版本 |
 
@@ -114,7 +114,7 @@ docs/architecture/
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                     AIOX v4 架构                                       │
+│                     YARD v4 架构                                       │
 │                                                                         │
 │   ┌─────────────────────────────────────────────────────────────────┐   │
 │   │                    多仓库结构                                    │   │
@@ -127,7 +127,7 @@ docs/architecture/
 │   │   ┌──────┴───────┐                                               │   │
 │   │   │              │                                               │   │
 │   │   ▼              ▼                                               │   │
-│   │ aiox-squads   mcp-ecosystem                                      │   │
+│   │ yard-squads   mcp-ecosystem                                      │   │
 │   │ (MIT)         (Apache 2.0)                                       │   │
 │   └─────────────────────────────────────────────────────────────────┘   │
 │                                                                         │

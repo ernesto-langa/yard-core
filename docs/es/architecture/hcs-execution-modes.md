@@ -27,7 +27,7 @@
 
 ## Resumen Ejecutivo
 
-Este documento define los modos de ejecución para el Sistema de Verificación de Salud de AIOX (HCS), basado en investigación de mejores prácticas de la industria de Kubernetes, VS Code, Terraform, npm/yarn, y patrones CLI "doctor" (Flutter, Homebrew, WP-CLI).
+Este documento define los modos de ejecución para el Sistema de Verificación de Salud de YARD (HCS), basado en investigación de mejores prácticas de la industria de Kubernetes, VS Code, Terraform, npm/yarn, y patrones CLI "doctor" (Flutter, Homebrew, WP-CLI).
 
 ### Recomendaciones Clave
 
@@ -335,7 +335,7 @@ healthCheck:
 
 ```yaml
 # .github/workflows/health-check.yml
-name: AIOX Health Check
+name: YARD Health Check
 
 on:
   schedule:
@@ -381,7 +381,7 @@ jobs:
         with:
           payload: |
             {
-              "text": "⚠️ AIOX Health Check Falló",
+              "text": "⚠️ YARD Health Check Falló",
               "blocks": [
                 {
                   "type": "section",
@@ -417,10 +417,10 @@ jobs:
 ```json
 // .vscode/settings.json
 {
-  "aiox.healthCheck.enabled": true,
-  "aiox.healthCheck.interval": 300,
-  "aiox.healthCheck.mode": "quick",
-  "aiox.healthCheck.showNotifications": true
+  "yard.healthCheck.enabled": true,
+  "yard.healthCheck.interval": 300,
+  "yard.healthCheck.mode": "quick",
+  "yard.healthCheck.showNotifications": true
 }
 ```
 

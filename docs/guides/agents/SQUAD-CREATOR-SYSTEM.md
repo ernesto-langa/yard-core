@@ -1,4 +1,4 @@
-# Sistema de Criacao e Gerenciamento de Squads AIOX
+# Sistema de Criacao e Gerenciamento de Squads YARD
 
 > **Versao:** 1.0.0
 > **Criado:** 2026-02-04
@@ -9,16 +9,16 @@
 
 ## Visao Geral
 
-O **Squad Creator** (Craft) e o agente especializado do AIOX para criacao, validacao, publicacao e gerenciamento de squads. Squads sao pacotes modulares de agentes, tasks, workflows e recursos que podem ser reutilizados entre projetos.
+O **Squad Creator** (Craft) e o agente especializado do YARD para criacao, validacao, publicacao e gerenciamento de squads. Squads sao pacotes modulares de agentes, tasks, workflows e recursos que podem ser reutilizados entre projetos.
 
-Este sistema implementa a **arquitetura task-first** do AIOX, onde tasks sao o ponto de entrada principal para execucao, e agentes orquestram essas tasks.
+Este sistema implementa a **arquitetura task-first** do YARD, onde tasks sao o ponto de entrada principal para execucao, e agentes orquestram essas tasks.
 
 ### Propositos do Sistema
 
-- **Criar squads** seguindo padroes e estrutura do AIOX
+- **Criar squads** seguindo padroes e estrutura do YARD
 - **Validar squads** contra JSON Schema e especificacoes de task
 - **Listar squads** locais do projeto
-- **Distribuir squads** em 3 niveis (Local, aiox-squads, Synkra API)
+- **Distribuir squads** em 3 niveis (Local, yard-squads, Synkra API)
 - **Migrar squads** para formato v2 com orquestracao e skills
 - **Analisar e estender** squads existentes
 
@@ -27,7 +27,7 @@ Este sistema implementa a **arquitetura task-first** do AIOX, onde tasks sao o p
 1. **Task-First Architecture**: Tasks sao o ponto de entrada, agentes orquestram
 2. **Validacao Obrigatoria**: Sempre validar antes de distribuir
 3. **JSON Schema**: Manifests validados contra schema
-4. **3 Niveis de Distribuicao**: Local, Publico (aiox-squads), Marketplace (Synkra API)
+4. **3 Niveis de Distribuicao**: Local, Publico (yard-squads), Marketplace (Synkra API)
 5. **Integracao com yard-core**: Squads trabalham em sinergia com o framework
 
 ---
@@ -39,7 +39,7 @@ Este sistema implementa a **arquitetura task-first** do AIOX, onde tasks sao o p
 | Arquivo | Proposito |
 |---------|-----------|
 | `.yard-core/development/agents/squad-creator.md` | Definicao core do agente Squad Creator |
-| `.claude/commands/AIOX/agents/squad-creator.md` | Comando Claude Code para ativar @squad-creator |
+| `.claude/commands/YARD/agents/squad-creator.md` | Comando Claude Code para ativar @squad-creator |
 
 ### Arquivos de Tasks do @squad-creator
 
@@ -55,7 +55,7 @@ Este sistema implementa a **arquitetura task-first** do AIOX, onde tasks sao o p
 | `.yard-core/development/tasks/squad-generate-skills.md` | `*generate-skills` | Gera skills de conhecimento do squad | Ativo |
 | `.yard-core/development/tasks/squad-generate-workflow.md` | `*generate-workflow` | Gera workflow de orquestracao YAML | Ativo |
 | `.yard-core/development/tasks/squad-creator-download.md` | `*download-squad` | Baixa squad do repositorio publico | Placeholder (Sprint 8) |
-| `.yard-core/development/tasks/squad-creator-publish.md` | `*publish-squad` | Publica squad no aiox-squads | Placeholder (Sprint 8) |
+| `.yard-core/development/tasks/squad-creator-publish.md` | `*publish-squad` | Publica squad no yard-squads | Placeholder (Sprint 8) |
 | `.yard-core/development/tasks/squad-creator-sync-synkra.md` | `*sync-squad-synkra` | Sincroniza squad com Synkra API | Placeholder (Sprint 8) |
 
 ### Arquivos de Tasks Relacionadas
@@ -156,7 +156,7 @@ flowchart TB
 
     subgraph DISTRIBUTE["🚀 DISTRIBUTION"]
         LOCAL["📂 Local<br/>./squads/"]
-        PUBLIC["🌐 Public<br/>github.com/SynkraAI/aiox-squads"]
+        PUBLIC["🌐 Public<br/>github.com/SynkraAI/yard-squads"]
         MARKET["💰 Marketplace<br/>api.synkra.dev/squads"]
     end
 
@@ -348,8 +348,8 @@ flowchart TB
 
 | Comando | Task File | Operacao |
 |---------|-----------|----------|
-| `*download-squad` | `squad-creator-download.md` | DOWNLOAD squad do aiox-squads |
-| `*publish-squad` | `squad-creator-publish.md` | PUBLISH squad para aiox-squads |
+| `*download-squad` | `squad-creator-download.md` | DOWNLOAD squad do yard-squads |
+| `*publish-squad` | `squad-creator-publish.md` | PUBLISH squad para yard-squads |
 | `*sync-squad-synkra` | `squad-creator-sync-synkra.md` | SYNC squad para Synkra API |
 
 ### Comandos de Componentes Individuais
@@ -455,13 +455,13 @@ flowchart LR
     SQUAD_CREATOR -->|"Validacao pre-publish"| DEVOPS
 
     SQUADS[("📦 ./squads/")]
-    AIOX_SQUADS[("🌐 aiox-squads")]
+    YARD_SQUADS[("🌐 yard-squads")]
     SYNKRA[("💰 Synkra API")]
 
     SC_CREATE --> SQUADS
     SC_VALIDATE --> SQUADS
     SC_LIST --> SQUADS
-    DEVOPS_PUB --> AIOX_SQUADS
+    DEVOPS_PUB --> YARD_SQUADS
     DEVOPS_PUB --> SYNKRA
 
     style SQUAD_CREATOR fill:#e3f2fd
@@ -509,8 +509,8 @@ license: MIT | Apache-2.0 | ISC | GPL-3.0 | UNLICENSED
 slashPrefix: string   # prefixo para comandos
 tags: string[]        # keywords para descoberta
 
-aiox:
-  minVersion: string  # versao minima do AIOX
+yard:
+  minVersion: string  # versao minima do YARD
   type: squad
 
 components:
@@ -564,7 +564,7 @@ flowchart LR
     end
 
     subgraph PUBLIC["🌐 Nivel 2: Publico"]
-        P_REPO["github.com/SynkraAI/aiox-squads"]
+        P_REPO["github.com/SynkraAI/yard-squads"]
         P_DESC["Squads da comunidade (gratuitos)"]
         P_CMD["*publish-squad"]
     end
@@ -668,7 +668,7 @@ flowchart LR
 - [Script: squad-validator.js](.yard-core/development/scripts/squad/squad-validator.js)
 - [Schema: squad-schema.json](.yard-core/schemas/squad-schema.json)
 - [Agent: squad-creator.md](.yard-core/development/agents/squad-creator.md)
-- [Command: squad-creator.md](.claude/commands/AIOX/agents/squad-creator.md)
+- [Command: squad-creator.md](.claude/commands/YARD/agents/squad-creator.md)
 
 ---
 
@@ -683,7 +683,7 @@ flowchart LR
 | **Schemas** | 2 (squad-schema, squad-design-schema) |
 | **Templates** | 3 (basic, etl, agent-only) |
 | **Versoes Template** | 2 (v1 legacy, v2 orchestration) |
-| **Niveis Distribuicao** | 3 (Local, aiox-squads, Synkra API) |
+| **Niveis Distribuicao** | 3 (Local, yard-squads, Synkra API) |
 
 ---
 

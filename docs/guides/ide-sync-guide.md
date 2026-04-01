@@ -1,10 +1,10 @@
 # IDE Sync Guide
 
-Synchronize AIOX agents, tasks, workflows, and checklists across multiple IDE configurations.
+Synchronize YARD agents, tasks, workflows, and checklists across multiple IDE configurations.
 
 ## Overview
 
-The `*command` task automates the synchronization of AIOX components to all configured IDE directories (`.claude/`, `.cursor/`, `.gemini/`, etc.), eliminating manual copy operations.
+The `*command` task automates the synchronization of YARD components to all configured IDE directories (`.claude/`, `.cursor/`, `.gemini/`, etc.), eliminating manual copy operations.
 
 ## Quick Start
 
@@ -13,12 +13,12 @@ The `*command` task automates the synchronization of AIOX components to all conf
 Copy the template to your project root:
 
 ```bash
-cp .yard-core/infrastructure/templates/aiox-sync.yaml.template .aiox-sync.yaml
+cp .yard-core/infrastructure/templates/yard-sync.yaml.template .yard-sync.yaml
 ```
 
 ### 2. Configure IDEs
 
-Edit `.aiox-sync.yaml` to enable your IDEs:
+Edit `.yard-sync.yaml` to enable your IDEs:
 
 ```yaml
 active_ides:
@@ -76,7 +76,7 @@ squads/legal/agents/legal-chief.md
 ┌─────────────────────────────────────────────────────┐
 │                 *command sync                        │
 │                                                      │
-│  1. Read .aiox-sync.yaml configuration               │
+│  1. Read .yard-sync.yaml configuration               │
 │  2. Check if component exists in squads/             │
 │  3. Apply wrapper transformations (if needed)        │
 │  4. Copy to each active IDE destination              │
@@ -128,7 +128,7 @@ alwaysApply: false
 
 ```
 your-project/
-├── .aiox-sync.yaml           # Sync configuration
+├── .yard-sync.yaml           # Sync configuration
 ├── squads/                   # Source of truth
 │   └── legal/
 │       ├── config.yaml
@@ -170,7 +170,7 @@ Error: Component 'my-agent' not found in squads/
 Warning: No squad alias for 'new-squad'
 ```
 
-**Solution**: Add the alias to `.aiox-sync.yaml`:
+**Solution**: Add the alias to `.yard-sync.yaml`:
 
 ```yaml
 squad_aliases:
@@ -185,4 +185,4 @@ Check that the IDE is enabled in `active_ides` section.
 
 - [Squads Overview](./squads-overview.md)
 - [Agent Reference](../agent-reference-guide.md)
-- [AIOX Architecture](../core-architecture.md)
+- [YARD Architecture](../core-architecture.md)

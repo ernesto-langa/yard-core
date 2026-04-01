@@ -6,7 +6,7 @@
 
 ---
 
-Todas as alteracoes notaveis do Synkra AIOX serao documentadas neste arquivo.
+Todas as alteracoes notaveis do Synkra YARD serao documentadas neste arquivo.
 
 O formato e baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/),
 e este projeto adere ao [Versionamento Semantico](https://semver.org/lang/pt-BR/).
@@ -37,7 +37,7 @@ e este projeto adere ao [Versionamento Semantico](https://semver.org/lang/pt-BR/
 - **Estrutura de Diretorios**: Renomeado `.legacy-core/` para `.yard-core/`
 - **Formato de Configuracao**: `core-config.yaml` aprimorado com novas secoes para git, projectStatus e opcoes de sharding
 - **Formato de Agentes**: Esquema YAML de agentes atualizado com persona_profile, visibilidade de comandos e campos whenToUse
-- **Configuracao de IDE**: Agentes do Claude Code movidos para `.claude/commands/AIOX/agents/`
+- **Configuracao de IDE**: Agentes do Claude Code movidos para `.claude/commands/YARD/agents/`
 - **Localizacao de Arquivos**:
   - `docs/architecture/coding-standards.md` -> `docs/framework/coding-standards.md`
   - `docs/architecture/tech-stack.md` -> `docs/framework/tech-stack.md`
@@ -66,7 +66,7 @@ e este projeto adere ao [Versionamento Semantico](https://semver.org/lang/pt-BR/
 
 ### Adicionado
 
-- Lancamento publico inicial do Synkra AIOX
+- Lancamento publico inicial do Synkra YARD
 - 11 agentes de IA especializados (dev, qa, architect, pm, po, sm, analyst, ux-expert, data-engineer, devops, db-sage)
 - Sistema de fluxo de tarefas com mais de 60 tarefas pre-construidas
 - Sistema de templates com mais de 20 modelos de documentos

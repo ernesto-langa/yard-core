@@ -1,6 +1,6 @@
 <!-- 翻译：zh-CN 原文：/docs/installation/windows.md 最后同步：2026-02-22 -->
 
-# Synkra AIOX Windows 安装指南
+# Synkra YARD Windows 安装指南
 
 > 🌐 [EN](../../installation/windows.md) | [PT](../pt/installation/windows.md) | [ES](../es/installation/windows.md)
 
@@ -184,13 +184,13 @@ winget install Microsoft.WindowsTerminal
    npm install -g @anthropic-ai/claude-code
    ```
 
-2. 命令安装到 `.claude\commands\AIOX\`
+2. 命令安装到 `.claude\commands\YARD\`
 3. 使用 `/agent-name` 激活代理
 
 ### VS Code
 
 1. 从市场安装 Continue 扩展
-2. AIOX 可以通过 `.continue\` 配置集成
+2. YARD 可以通过 `.continue\` 配置集成
 
 ---
 
@@ -335,7 +335,7 @@ wsl --install -d Ubuntu
 # 提示时重启计算机
 ```
 
-### 使用 WSL 配置 AIOX
+### 使用 WSL 配置 YARD
 
 ```bash
 # 在 WSL 内，遵循 Linux 安装指南
@@ -419,9 +419,9 @@ npx github:ernesto-langa/yard-core install
 通过 PowerShell 快速卸载：
 
 ```powershell
-# 从项目中删除 AIOX
+# 从项目中删除 YARD
 Remove-Item -Recurse -Force .yard-core
-Remove-Item -Recurse -Force .claude\commands\AIOX
+Remove-Item -Recurse -Force .claude\commands\YARD
 
 # 删除全局 npm 包
 npm uninstall -g yard-core

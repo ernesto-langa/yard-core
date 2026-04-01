@@ -92,7 +92,7 @@ autoClaude:
 
 - **12 agents** migrados para o formato V3
 - **Todos os agents** possuem `autoClaude.version: "3.0"`
-- **Todos os agents** sincronizados em `.claude/commands/AIOX/agents/`
+- **Todos os agents** sincronizados em `.claude/commands/YARD/agents/`
 
 ---
 

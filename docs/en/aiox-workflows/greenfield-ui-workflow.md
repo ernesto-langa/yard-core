@@ -1,10 +1,10 @@
 # Greenfield UI Workflow
 
-> **EN** | [PT](../../aiox-workflows/greenfield-ui-workflow.md) | [ES](../../es/aiox-workflows/greenfield-ui-workflow.md)
+> **EN** | [PT](../../yard-workflows/greenfield-ui-workflow.md) | [ES](../../es/yard-workflows/greenfield-ui-workflow.md)
 
 ---
 
-**Full documentation available in:** [Portuguese Version](../../aiox-workflows/greenfield-ui-workflow.md)
+**Full documentation available in:** [Portuguese Version](../../yard-workflows/greenfield-ui-workflow.md)
 
 ---
 
@@ -42,4 +42,4 @@ The **Greenfield UI Workflow** is designed for creating new frontend application
 
 ---
 
-*For complete details, diagrams, and step-by-step instructions, see the [Portuguese documentation](../../aiox-workflows/greenfield-ui-workflow.md).*
+*For complete details, diagrams, and step-by-step instructions, see the [Portuguese documentation](../../yard-workflows/greenfield-ui-workflow.md).*

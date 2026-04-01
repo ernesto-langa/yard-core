@@ -4,7 +4,7 @@
   Última sincronização: 2026-01-29
 -->
 
-# Guia de Instalação Linux para Synkra AIOX
+# Guia de Instalação Linux para Synkra YARD
 
 > 🌐 [EN](../../installation/linux.md) | **PT** | [ES](../../es/installation/linux.md)
 
@@ -194,7 +194,7 @@ O instalador automaticamente:
    npm install -g @anthropic-ai/claude-code
    ```
 
-2. Comandos são instalados em `.claude/commands/AIOX/`
+2. Comandos são instalados em `.claude/commands/YARD/`
 3. Use `/nome-do-agente` para ativar agentes
 
 

@@ -1,12 +1,12 @@
 # @architect (Aria) - System Documentation
 
-> **EN** | [PT](../../aiox-agent-flows/architect-system.md) | [ES](../../es/aiox-agent-flows/architect-system.md)
+> **EN** | [PT](../../yard-agent-flows/architect-system.md) | [ES](../../es/yard-agent-flows/architect-system.md)
 
 ---
 
 ## Summary
 
-**@architect** (Aria) is the **Visionary** of the AIOX agent system. This agent is responsible for:
+**@architect** (Aria) is the **Visionary** of the YARD agent system. This agent is responsible for:
 
 - Designing system architecture and technical solutions
 - Making high-level technical decisions
@@ -19,8 +19,8 @@
 
 For complete documentation including flowcharts, command mappings, integrations, and troubleshooting, please refer to the Portuguese version:
 
-**[View Full Documentation (PT)](../../aiox-agent-flows/architect-system.md)**
+**[View Full Documentation (PT)](../../yard-agent-flows/architect-system.md)**
 
 ---
 
-*AIOX Agent Flows - @architect System v1.0*
+*YARD Agent Flows - @architect System v1.0*

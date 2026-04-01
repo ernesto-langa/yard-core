@@ -4,7 +4,7 @@
 
 ---
 
-为想要为 Synkra AIOX 项目做出贡献的开发者提供的完整指南。
+为想要为 Synkra YARD 项目做出贡献的开发者提供的完整指南。
 
 **版本：** 1.0.0
 **最后更新：** 2026-01-29
@@ -42,8 +42,8 @@
 
 | 工具                 | 目的                                 |
 | -------------------- | ------------------------------------ |
-| **Claude Code**      | 与 AIOX 代理进行 AI 驱动的开发       |
-| **VS Code / Cursor** | 带 AIOX 集成的 IDE                   |
+| **Claude Code**      | 与 YARD 代理进行 AI 驱动的开发       |
+| **VS Code / Cursor** | 带 YARD 集成的 IDE                   |
 | **Docker Desktop**   | MCP 服务器和容器化工具               |
 
 ### 安装先决条件
@@ -150,7 +150,7 @@ OPENAI_API_KEY=your-openai-api-key
 
 # 框架设置
 NODE_ENV=development
-AIOX_DEBUG=false
+YARD_DEBUG=false
 
 # 可选：MCP 配置
 SYNKRA_API_TOKEN=your-synkra-token
@@ -174,7 +174,7 @@ npm run validate:structure
 
 ### 第 4 步：IDE 集成（可选）
 
-将 AIOX 代理同步到您的 IDE：
+将 YARD 代理同步到您的 IDE：
 
 ```bash
 # 同步到所有支持的 IDE
@@ -338,7 +338,7 @@ git push origin feat/my-feature
 
 ```bash
 # 设置环境变量
-export AIOX_DEBUG=true
+export YARD_DEBUG=true
 
 # 用调试输出运行
 npm test -- --verbose
@@ -380,5 +380,5 @@ npm run lint
 
 ---
 
-_Synkra AIOX 开发设置指南 v1.0.0_
+_Synkra YARD 开发设置指南 v1.0.0_
 _最后更新：2026-01-29_

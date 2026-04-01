@@ -1,6 +1,6 @@
 # Trilha @data-engineer: Do Problema ao Output Validado
 
-> **Story:** AIOX-DIFF-4.3.1
+> **Story:** YARD-DIFF-4.3.1
 > **Agente:** @data-engineer (Dara)
 > **Tempo estimado:** 30-60 minutos
 
@@ -33,7 +33,7 @@ Você está em um projeto novo e precisa:
 ### Pré-requisitos
 
 ```bash
-# Projeto AIOX inicializado
+# Projeto YARD inicializado
 npx yard-core doctor  # deve retornar healthy
 
 # Supabase configurado (ou PostgreSQL local)
@@ -312,5 +312,5 @@ CREATE POLICY "Users can update own data"
 
 ---
 
-*Trilha criada para Story AIOX-DIFF-4.3.1*
+*Trilha criada para Story YARD-DIFF-4.3.1*
 *-- Dara, arquitetando dados*

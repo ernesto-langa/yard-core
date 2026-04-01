@@ -4,7 +4,7 @@
 
 ---
 
-Guia completa para desarrolladores que quieren contribuir al proyecto Synkra AIOX.
+Guia completa para desarrolladores que quieren contribuir al proyecto Synkra YARD.
 
 **Version:** 1.0.0
 **Ultima Actualizacion:** 2026-01-29
@@ -42,8 +42,8 @@ Antes de comenzar, asegurate de tener instalado lo siguiente:
 
 | Herramienta          | Proposito                                   |
 | -------------------- | ------------------------------------------- |
-| **Claude Code**      | Desarrollo potenciado por IA con agentes AIOX |
-| **VS Code / Cursor** | IDE con integracion AIOX                    |
+| **Claude Code**      | Desarrollo potenciado por IA con agentes YARD |
+| **VS Code / Cursor** | IDE con integracion YARD                    |
 | **Docker Desktop**   | Servidores MCP y herramientas containerizadas |
 
 ### Instalacion de Prerrequisitos
@@ -155,7 +155,7 @@ OPENAI_API_KEY=your-openai-api-key
 
 # Configuraciones del Framework
 NODE_ENV=development
-AIOX_DEBUG=false
+YARD_DEBUG=false
 
 # Opcional: Configuracion MCP
 SYNKRA_API_TOKEN=your-synkra-token
@@ -179,7 +179,7 @@ npm run validate:structure
 
 ### Paso 4: Integracion con IDE (Opcional)
 
-Sincroniza los agentes AIOX con tu IDE:
+Sincroniza los agentes YARD con tu IDE:
 
 ```bash
 # Sincronizar con todos los IDEs soportados
@@ -222,13 +222,13 @@ yard-core/
 │       └── checklists/            # Checklists de producto
 │
 ├── .claude/                       # Configuracion de Claude Code
-│   ├── commands/AIOX/agents/      # Comandos skill de agentes
+│   ├── commands/YARD/agents/      # Comandos skill de agentes
 │   ├── hooks/                     # Hooks de governance
 │   └── rules/                     # Reglas de comportamiento AI
 │
 ├── bin/                           # Puntos de entrada CLI
-│   ├── aiox.js                    # CLI principal
-│   └── aiox-minimal.js            # CLI minimo
+│   ├── yard.js                    # CLI principal
+│   └── yard-minimal.js            # CLI minimo
 │
 ├── docs/                          # Toda la documentacion
 │   ├── architecture/              # Arquitectura del sistema
@@ -523,7 +523,7 @@ Crea un nuevo archivo en `.yard-core/development/tasks/`:
 
 ---
 
-## Definicion de Task (AIOX Task Format V1.0)
+## Definicion de Task (YARD Task Format V1.0)
 
 ```yaml
 task: myTaskFunction()
@@ -944,7 +944,7 @@ EOF
 
 ```bash
 # Establecer variable de entorno
-export AIOX_DEBUG=true
+export YARD_DEBUG=true
 
 # Ejecutar con salida de debug
 npm test -- --verbose
@@ -1054,7 +1054,7 @@ ls -la .husky/
 
 ```bash
 # Trazar ejecucion de workflow
-AIOX_DEBUG=true npm run trace -- workflow-name
+YARD_DEBUG=true npm run trace -- workflow-name
 
 # Verificar estado de workflow
 cat .yard/state/workflow-state.json
@@ -1107,5 +1107,5 @@ node --inspect node_modules/.bin/jest
 
 ---
 
-_Synkra AIOX Guia de Configuracion para Desarrollo v1.0.0_
+_Synkra YARD Guia de Configuracion para Desarrollo v1.0.0_
 _Ultima Actualizacion: 2026-01-29_

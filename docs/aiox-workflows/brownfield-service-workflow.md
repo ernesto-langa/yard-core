@@ -399,7 +399,7 @@ Arrastar a task `shard-doc` + `docs/prd.md` para o chat.
 | **Acao** | Projeto completo |
 | **Notas** | Todas as stories implementadas e revisadas! Fase de desenvolvimento do projeto completa. |
 
-**Referencia:** `.yard-core/data/aiox-kb.md#IDE Development Workflow`
+**Referencia:** `.yard-core/data/yard-kb.md#IDE Development Workflow`
 
 ---
 
@@ -491,7 +491,7 @@ graph LR
 
 2. **Ambiente Configurado**
    - Git configurado e funcional
-   - Acesso aos templates AIOX
+   - Acesso aos templates YARD
    - Ferramentas de desenvolvimento instaladas
 
 3. **Contexto do Projeto**
@@ -795,9 +795,9 @@ Os handoff prompts facilitam a transição entre agentes:
 
 ### Documentação Relacionada
 
-- [AIOX Knowledge Base](../../../.yard-core/data/aiox-kb.md) - Base de conhecimento do framework
+- [YARD Knowledge Base](../../../.yard-core/data/yard-kb.md) - Base de conhecimento do framework
 - [Technical Preferences](../../../.yard-core/development/data/technical-preferences.md) - Preferências técnicas do projeto
-- [IDE Development Workflow](../../../.yard-core/data/aiox-kb.md#IDE-Development-Workflow) - Fluxo de desenvolvimento no IDE
+- [IDE Development Workflow](../../../.yard-core/data/yard-kb.md#IDE-Development-Workflow) - Fluxo de desenvolvimento no IDE
 
 ---
 
@@ -809,4 +809,4 @@ Os handoff prompts facilitam a transição entre agentes:
 
 ---
 
-*Documento gerado a partir do workflow `brownfield-service.yaml` - AIOX Framework v2.2*
+*Documento gerado a partir do workflow `brownfield-service.yaml` - YARD Framework v2.2*

@@ -1,6 +1,6 @@
-# AIOX Agent Flows - Detailed Agent Documentation
+# YARD Agent Flows - Detailed Agent Documentation
 
-> **EN** | [PT](../../aiox-agent-flows/README.md) | [ES](../../es/aiox-agent-flows/README.md) | [ZH](../../zh/aiox-agent-flows/README.md)
+> **EN** | [PT](../../yard-agent-flows/README.md) | [ES](../../es/yard-agent-flows/README.md) | [ZH](../../zh/yard-agent-flows/README.md)
 
 ---
 
@@ -12,7 +12,7 @@
 
 ## Overview
 
-This folder contains detailed documentation for all AIOX agents, including:
+This folder contains detailed documentation for all YARD agents, including:
 
 - **Complete system** for each agent
 - **Mermaid flowcharts** of operations
@@ -27,7 +27,7 @@ This folder contains detailed documentation for all AIOX agents, including:
 
 | Agent | Persona | Archetype | Document |
 |-------|---------|-----------|----------|
-| **@aiox-master** | Orion | Orchestrator | [aiox-master-system.md](./aiox-master-system.md) |
+| **@yard-master** | Orion | Orchestrator | [yard-master-system.md](./yard-master-system.md) |
 | **@analyst** | Atlas | Researcher | [analyst-system.md](./analyst-system.md) |
 | **@architect** | Aria | Visionary | [architect-system.md](./architect-system.md) |
 | **@data-engineer** | Dara | Data Sage | [data-engineer-system.md](./data-engineer-system.md) |
@@ -98,7 +98,7 @@ Each agent document follows this standard structure:
 ```mermaid
 flowchart TB
     subgraph ORCHESTRATION["Orchestration"]
-        MASTER["@aiox-master\n(Orion)"]
+        MASTER["@yard-master\n(Orion)"]
     end
 
     subgraph DISCOVERY["Discovery & Planning"]
@@ -171,7 +171,7 @@ flowchart TB
 |---------------|----------|---------|
 | Meta-Agent Commands | [docs/meta-agent-commands.md](../../meta-agent-commands.md) | Quick reference |
 | Workflows Guide | [docs/guides/workflows-guide.md](../../guides/workflows-guide.md) | Workflows guide |
-| AIOX Workflows | [docs/aiox-workflows/](../../aiox-workflows/) | Detailed workflows |
+| YARD Workflows | [docs/yard-workflows/](../../yard-workflows/) | Detailed workflows |
 | Architecture | [docs/architecture/](../../architecture/) | Technical architecture |
 
 ---
@@ -187,4 +187,4 @@ To add or update agent documentation:
 
 ---
 
-*AIOX Agent Flows Documentation v1.0 - Detailed documentation of the agent system*
+*YARD Agent Flows Documentation v1.0 - Detailed documentation of the agent system*

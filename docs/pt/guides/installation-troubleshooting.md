@@ -4,7 +4,7 @@
   Última sincronização: 2026-01-26
 -->
 
-# Guia de Instalação e Solução de Problemas do AIOX-Core
+# Guia de Instalação e Solução de Problemas do YARD-Core
 
 > 🌐 [EN](../../guides/installation-troubleshooting.md) | **PT** | [ES](../../es/guides/installation-troubleshooting.md)
 
@@ -16,7 +16,7 @@
 npx yard-core@latest
 ```
 
-Este comando baixa e executa a versão mais recente do instalador do AIOX-Core.
+Este comando baixa e executa a versão mais recente do instalador do YARD-Core.
 
 ## Requisitos do Sistema
 
@@ -324,4 +324,4 @@ Ao reportar problemas, por favor inclua:
 
 ---
 
-*Última atualização: Dezembro 2025 | AIOX-Core v2.2.0*
+*Última atualização: Dezembro 2025 | YARD-Core v2.2.0*

@@ -52,7 +52,7 @@ Precisa de deploy? → @devops
 | **@po** (Pax)                | 🎯    | Gerenciamento de backlog, critérios de aceitação, priorização                                                      | Criação de epic, arquitetura                    |
 | **@ux-design-expert** (Nova) | 🎨    | Design UI/UX, wireframes, design systems                                                                           | Implementação                                   |
 | **@devops** (Gage)           | ⚙️    | Git ops, criação de PR, deploy, CI/CD, gerenciamento de worktrees, migrações                                       | Git local, implementação                        |
-| **@aiox-master** (Orion)     | 👑    | Desenvolvimento do framework, orquestração multi-agente                                                            | Tarefas rotineiras (use agentes especializados) |
+| **@yard-master** (Orion)     | 👑    | Desenvolvimento do framework, orquestração multi-agente                                                            | Tarefas rotineiras (use agentes especializados) |
 
 ---
 

@@ -1,6 +1,6 @@
 <!-- 翻译：zh-CN 原文：/docs/installation/faq.md 最后同步：2026-02-22 -->
 
-# Synkra AIOX 常见问题
+# Synkra YARD 常见问题
 
 > 🌐 [EN](../../installation/faq.md) | [PT](../pt/installation/faq.md) | [ES](../es/installation/faq.md)
 
@@ -63,9 +63,9 @@ npm --version   # 应为 9+
 
 ---
 
-### 问题 3：我可以在现有项目中安装 AIOX 吗？
+### 问题 3：我可以在现有项目中安装 YARD 吗？
 
-**答案:** 可以！AIOX 为绿地和棕地项目设计。
+**答案:** 可以！YARD 为绿地和棕地项目设计。
 
 **对于现有项目：**
 
@@ -104,9 +104,9 @@ npx @synkra/yard-core install
 
 ---
 
-### 问题 5：AIOX 在我的项目中创建了哪些文件？
+### 问题 5：YARD 在我的项目中创建了哪些文件？
 
-**答案:** AIOX 创建以下结构：
+**答案:** YARD 创建以下结构：
 
 ```
 your-project/
@@ -119,7 +119,7 @@ your-project/
 │   └── core-config.yaml        # 框架配置
 │
 ├── .claude/                    # Claude Code（如果选中）
-│   └── commands/AIOX/agents/   # 代理斜杠命令
+│   └── commands/YARD/agents/   # 代理斜杠命令
 │
 ├── .cursor/                    # Cursor（如果选中）
 │   └── rules/                  # 代理规则
@@ -137,7 +137,7 @@ your-project/
 
 ## 更新与维护
 
-### 问题 6：如何将 AIOX 更新到最新版本？
+### 问题 6：如何将 YARD 更新到最新版本？
 
 **答案:**
 
@@ -214,7 +214,7 @@ mv .yard-core.backup .yard-core
 
 ## 离线与隔离环境使用
 
-### 问题 9：我可以在没有互联网的情况下使用 AIOX 吗？
+### 问题 9：我可以在没有互联网的情况下使用 YARD 吗？
 
 **答案:** 可以，但需要一些准备：
 
@@ -225,16 +225,16 @@ mv .yard-core.backup .yard-core
 npx @synkra/yard-core install
 
 # 打包以供离线使用
-tar -czvf aiox-offline.tar.gz .yard-core/ .claude/ .cursor/
+tar -czvf yard-offline.tar.gz .yard-core/ .claude/ .cursor/
 ```
 
 **在隔离机器上：**
 
 ```bash
 # 解压软件包
-tar -xzvf aiox-offline.tar.gz
+tar -xzvf yard-offline.tar.gz
 
-# AIOX 代理可在没有互联网的情况下工作
+# YARD 代理可在没有互联网的情况下工作
 # （它们不需要外部 API 调用）
 ```
 
@@ -246,7 +246,7 @@ tar -xzvf aiox-offline.tar.gz
 
 ---
 
-### 问题 10：我如何将 AIOX 转移到隔离环境？
+### 问题 10：我如何将 YARD 转移到隔离环境？
 
 **答案:**
 
@@ -256,7 +256,7 @@ tar -xzvf aiox-offline.tar.gz
    # 安装并打包
    npx @synkra/yard-core install
    cd your-project
-   tar -czvf aiox-transfer.tar.gz .yard-core/ .claude/ .cursor/ docs/
+   tar -czvf yard-transfer.tar.gz .yard-core/ .claude/ .cursor/ docs/
    ```
 
 2. **通过 USB、安全传输等转移归档文件**
@@ -265,7 +265,7 @@ tar -xzvf aiox-offline.tar.gz
 
    ```bash
    cd your-project
-   tar -xzvf aiox-transfer.tar.gz
+   tar -xzvf yard-transfer.tar.gz
    ```
 
 4. **如果需要，手动配置 IDE**（路径可能不同）
@@ -274,7 +274,7 @@ tar -xzvf aiox-offline.tar.gz
 
 ## IDE 与配置
 
-### 问题 11：AIOX 支持哪些 IDE？
+### 问题 11：YARD 支持哪些 IDE？
 
 **答案:**
 
@@ -289,7 +289,7 @@ tar -xzvf aiox-offline.tar.gz
 
 ---
 
-### 问题 12：我可以为多个 IDE 配置 AIOX 吗？
+### 问题 12：我可以为多个 IDE 配置 YARD 吗？
 
 **答案:** 可以！在安装过程中选择多个 IDE：
 
@@ -314,7 +314,7 @@ npx @synkra/yard-core install --ide cursor,claude-code
 
 ---
 
-### 问题 13：我如何为新团队成员配置 AIOX？
+### 问题 13：我如何为新团队成员配置 YARD？
 
 **答案:**
 
@@ -345,7 +345,7 @@ npx @synkra/yard-core install
 
 ### 问题 14：包含了哪些代理？
 
-**答案:** AIOX 包括 11+ 个专门代理：
+**答案:** YARD 包括 11+ 个专门代理：
 
 | 代理           | 角色             | 最适合的工作                      |
 | -------------- | ---------------- | --------------------------------- |
@@ -431,7 +431,7 @@ npx @synkra/yard-core install
 
 ### 问题 17：什么是 Squad？
 
-**答案:** 启动 Squad 是可选的扩展，用于扩展 AIOX 功能：
+**答案:** 启动 Squad 是可选的扩展，用于扩展 YARD 功能：
 
 | 包            | 功能                                                      |
 | -------------- | --------------------------------------------------------- |
@@ -487,14 +487,14 @@ tasks:
 
 ## 高级用法
 
-### 问题 19：如何将 AIOX 与 CI/CD 集成？
+### 问题 19：如何将 YARD 与 CI/CD 集成？
 
 **答案:**
 
 **GitHub Actions 示例：**
 
 ```yaml
-name: CI with AIOX
+name: CI with YARD
 on: [push]
 jobs:
   test:
@@ -553,7 +553,7 @@ projectStatus:
 
 ---
 
-### 问题 21：我如何为 AIOX 做贡献？
+### 问题 21：我如何为 YARD 做贡献？
 
 **答案:**
 

@@ -1,4 +1,4 @@
-# AIOX Cross-Reference Phase 6: Supporting Systems Analysis
+# YARD Cross-Reference Phase 6: Supporting Systems Analysis
 
 > **Generated:** 2026-02-05
 > **Scope:** All supporting systems in `.yard-core/`
@@ -30,7 +30,7 @@
 
 **Location:** `.yard-core/workflow-intelligence/`
 **Total Files:** 19
-**Purpose:** Provides intelligent workflow analysis, suggestions, pattern learning, and confidence scoring for the AIOX agent orchestration system.
+**Purpose:** Provides intelligent workflow analysis, suggestions, pattern learning, and confidence scoring for the YARD agent orchestration system.
 
 ### Architecture
 
@@ -147,7 +147,7 @@ All layers extend `base-layer.js` and are managed by `quality-gate-manager.js`. 
 |------|---------|-----------|------------|---------|
 | `metrics-collector.js` | Collects and aggregates quality metrics across layers | `metrics-hook.js`, CLI metrics commands | Stores to `.yard/data/quality-metrics.json` | No |
 | `metrics-hook.js` | Hook functions for recording metrics from workflows | Pre-commit hooks, PR automation, `.github/workflows/pr-automation.yml` | Imports `MetricsCollector` | No |
-| `seed-metrics.js` | Seeds initial demo metrics data | CLI `aiox metrics seed` command | Uses `MetricsCollector` | No |
+| `seed-metrics.js` | Seeds initial demo metrics data | CLI `yard metrics seed` command | Uses `MetricsCollector` | No |
 | `schemas/quality-metrics.schema.json` | JSON Schema for quality metrics data validation | `metrics-collector.js` | Ajv-based validation | No |
 
 ### External References (30+ files reference this system)
@@ -193,11 +193,11 @@ All layers extend `base-layer.js` and are managed by `quality-gate-manager.js`. 
 
 **Location:** `.yard-core/cli/commands/`
 **Total Files:** 37 (across 8 command groups)
-**Purpose:** Commander.js-based CLI commands for the `aiox` executable. Provides the CLI-first interface for all framework operations.
+**Purpose:** Commander.js-based CLI commands for the `yard` executable. Provides the CLI-first interface for all framework operations.
 
 ### Architecture
 
-Commands are organized by domain into subdirectories, each with an `index.js` entry point. Registered in the main CLI (`cli/index.js`) and invoked via `bin/aiox.js`.
+Commands are organized by domain into subdirectories, each with an `index.js` entry point. Registered in the main CLI (`cli/index.js`) and invoked via `bin/yard.js`.
 
 ### Command Group Inventory
 
@@ -205,7 +205,7 @@ Commands are organized by domain into subdirectories, each with an `index.js` en
 
 | File | Purpose | Consumers | Cross-refs | Orphan? |
 |------|---------|-----------|------------|---------|
-| `config/index.js` | Config hierarchy management: show, diff, migrate, validate, init-local | `cli/index.js`, `bin/aiox.js` | Uses `core/config/config-resolver.js`, `merge-utils.js`, `env-interpolator.js` | No |
+| `config/index.js` | Config hierarchy management: show, diff, migrate, validate, init-local | `cli/index.js`, `bin/yard.js` | Uses `core/config/config-resolver.js`, `merge-utils.js`, `env-interpolator.js` | No |
 
 #### generate/ (1 file)
 
@@ -281,12 +281,12 @@ Commands are organized by domain into subdirectories, each with an `index.js` en
 
 | File | Purpose | Consumers | Cross-refs | Orphan? |
 |------|---------|-----------|------------|---------|
-| `validate/index.js` | Validate AIOX installation integrity | `cli/index.js` | Uses `install-manifest.yaml` | No |
+| `validate/index.js` | Validate YARD installation integrity | `cli/index.js` | Uses `install-manifest.yaml` | No |
 
 ### External References (20+ files reference CLI commands)
 
 - **Main CLI:** `cli/index.js` registers all command groups
-- **Entry point:** `bin/aiox.js` creates the Commander program
+- **Entry point:** `bin/yard.js` creates the Commander program
 - **Tests:** `tests/unit/` and `tests/config/` directories
 - **Architecture docs:** `docs/architecture/mcp-system-diagrams.md`
 - **Source tree:** `docs/framework/source-tree.md`
@@ -308,7 +308,7 @@ The `agent-teams/` directory was not found in the `.yard-core/` directory. Howev
 - `docs/framework/source-tree.md` and translations
 - `docs/core-architecture.md`
 - `development/README.md`
-- `data/aiox-kb.md`
+- `data/yard-kb.md`
 - QA system docs
 
 ### Assessment
@@ -343,7 +343,7 @@ The `tools/` directory exists (referenced in `core-config.yaml` as `toolsLocatio
 
 **Location:** `.yard-core/manifests/`
 **Total Files:** 4
-**Purpose:** CSV-based registry of all agents, tasks, and workers with JSON schema validation. Acts as the central inventory of all AIOX components.
+**Purpose:** CSV-based registry of all agents, tasks, and workers with JSON schema validation. Acts as the central inventory of all YARD components.
 
 ### File Inventory
 
@@ -389,7 +389,7 @@ The engine uses `inquirer` for interactive prompts, supports smart defaults, con
 | File | Purpose | Consumers | Cross-refs | Orphan? |
 |------|---------|-----------|------------|---------|
 | `elicitation-engine.js` | Main elicitation engine with progressive disclosure, validation, security checks | `create-agent` task, `create-task` task, `create-workflow` task | Uses `session-manager.js`, optional `security-checker` | No |
-| `session-manager.js` | Manages elicitation session persistence (save/load/resume) | `elicitation-engine.js` | Stores sessions in `.aiox-sessions/` | No |
+| `session-manager.js` | Manages elicitation session persistence (save/load/resume) | `elicitation-engine.js` | Stores sessions in `.yard-sessions/` | No |
 | `agent-elicitation.js` | Agent-specific elicitation steps (duplicate of sibling?) | `elicitation-engine.js` | Defines agent creation wizard steps | Possible duplicate |
 | `task-elicitation.js` | Task-specific elicitation steps (duplicate of sibling?) | `elicitation-engine.js` | Defines task creation wizard steps | Possible duplicate |
 | `workflow-elicitation.js` | Workflow-specific elicitation steps (duplicate of sibling?) | `elicitation-engine.js` | Defines workflow creation wizard steps | Possible duplicate |
@@ -428,7 +428,7 @@ There appears to be **duplication** between `core/elicitation/` (3 domain files)
 | File | Purpose | Consumers | Cross-refs | Orphan? |
 |------|---------|-----------|------------|---------|
 | `STANDARDS-INDEX.md` | Navigation index for all standards documents | All team members, agent definitions | References all standard docs | No |
-| `AIOX-LIVRO-DE-OURO-V2.1-COMPLETE.md` | **PRIMARY** -- Complete v4.0.4 framework guide (consolidated) | All agents, onboarding | Supersedes all legacy Livro docs | No |
+| `YARD-LIVRO-DE-OURO-V2.1-COMPLETE.md` | **PRIMARY** -- Complete v4.0.4 framework guide (consolidated) | All agents, onboarding | Supersedes all legacy Livro docs | No |
 | `QUALITY-GATES-SPECIFICATION.md` | 3-layer quality gates system specification | QA agent, devops, quality gate code | Referenced by `core/quality-gates/` | No |
 | `STORY-TEMPLATE-V2-SPECIFICATION.md` | Story template v2.0 specification | PO, SM, story creation tasks | Referenced by story creation workflows | No |
 | `TASK-FORMAT-SPECIFICATION-V1.md` | Task-First architecture format specification | All agents creating tasks | Referenced by task templates | No |
@@ -438,11 +438,11 @@ There appears to be **duplication** between `core/elicitation/` (3 domain files)
 | `YARD-COLOR-PALETTE-QUICK-REFERENCE.md` | Quick reference for color palette | Developers, designers | Subset of full palette doc | No |
 | `OPEN-SOURCE-VS-SERVICE-DIFFERENCES.md` | Business model documentation (OSS vs service) | Product decisions | Needs update per index | No |
 | `V3-ARCHITECTURAL-DECISIONS.md` | Old architectural decisions (archive candidate) | Historical reference | Superseded by ADR system | Yes (Archive) |
-| `AIOX-LIVRO-DE-OURO.md` | v2.0 base document (DEPRECATED) | Historical reference | Superseded by V2.1-COMPLETE | Yes (Legacy) |
-| `AIOX-LIVRO-DE-OURO-V2.1.md` | v4.0.4 delta document (DEPRECATED) | Historical reference | Superseded by V2.1-COMPLETE | Yes (Legacy) |
-| `AIOX-LIVRO-DE-OURO-V2.1-SUMMARY.md` | v4.0.4 summary (DEPRECATED) | Historical reference | Superseded by V2.1-COMPLETE | Yes (Legacy) |
-| `AIOX-LIVRO-DE-OURO-V2.2-SUMMARY.md` | Future v2.2 planning (DRAFT) | Planning only | Not yet active | No (Draft) |
-| `AIOX-FRAMEWORK-MASTER.md` | v2.0 framework doc (DEPRECATED) | Historical reference | Superseded by V2.1-COMPLETE | Yes (Legacy) |
+| `YARD-LIVRO-DE-OURO.md` | v2.0 base document (DEPRECATED) | Historical reference | Superseded by V2.1-COMPLETE | Yes (Legacy) |
+| `YARD-LIVRO-DE-OURO-V2.1.md` | v4.0.4 delta document (DEPRECATED) | Historical reference | Superseded by V2.1-COMPLETE | Yes (Legacy) |
+| `YARD-LIVRO-DE-OURO-V2.1-SUMMARY.md` | v4.0.4 summary (DEPRECATED) | Historical reference | Superseded by V2.1-COMPLETE | Yes (Legacy) |
+| `YARD-LIVRO-DE-OURO-V2.2-SUMMARY.md` | Future v2.2 planning (DRAFT) | Planning only | Not yet active | No (Draft) |
+| `YARD-FRAMEWORK-MASTER.md` | v2.0 framework doc (DEPRECATED) | Historical reference | Superseded by V2.1-COMPLETE | Yes (Legacy) |
 
 ### External References (20+ files reference docs/standards)
 
@@ -454,7 +454,7 @@ There appears to be **duplication** between `core/elicitation/` (3 domain files)
 
 ### Deprecation Summary
 
-4 files are explicitly deprecated (superseded by `AIOX-LIVRO-DE-OURO-V2.1-COMPLETE.md`), 1 is an archive candidate. These should be cleaned up or moved to an `archive/` directory.
+4 files are explicitly deprecated (superseded by `YARD-LIVRO-DE-OURO-V2.1-COMPLETE.md`), 1 is an archive candidate. These should be cleaned up or moved to an `archive/` directory.
 
 ---
 
@@ -491,9 +491,9 @@ No references to `.yard-core/processes/` were found in the codebase.
 | `project-config.yaml` | **NEW** L2 Project config (team-shared, committed) | `core/config/config-resolver.js`, config CLI | Part of ADR-PRO-002; duplicates project portions of `core-config.yaml` | No |
 | `local-config.yaml.template` | **NEW** L4 Local config template (machine-specific, gitignored) | Developers copy to `local-config.yaml` | Part of ADR-PRO-002; secrets and IDE preferences | No |
 | `install-manifest.yaml` | Complete inventory of all files in the framework | Installer, validator, upgrader | Lists every file in `.yard-core/` | No |
-| `user-guide.md` | User guide for Synkra AIOX | Users, onboarding | Referenced by workflows, brownfield guide | No |
+| `user-guide.md` | User guide for Synkra YARD | Users, onboarding | Referenced by workflows, brownfield guide | No |
 | `working-in-the-brownfield.md` | Guide for brownfield (existing project) development | Brownfield workflows | Referenced by agent definitions, brownfield tasks | No |
-| `package.json` | npm package definition for `@aiox-fullstack/core` (v4.31.0) | npm, build system | Defines dependencies, exports, scripts | No |
+| `package.json` | npm package definition for `@yard-fullstack/core` (v4.31.0) | npm, build system | Defines dependencies, exports, scripts | No |
 
 ### Configuration Hierarchy (ADR-PRO-002)
 
@@ -555,10 +555,10 @@ The `core-config.yaml` continues to function as the primary config (legacy mode)
 
 | File | System | Reason | Recommendation |
 |------|--------|--------|----------------|
-| `docs/standards/AIOX-LIVRO-DE-OURO.md` | Docs/Standards | Superseded by V2.1-COMPLETE | Move to archive/ |
-| `docs/standards/AIOX-LIVRO-DE-OURO-V2.1.md` | Docs/Standards | Superseded by V2.1-COMPLETE | Move to archive/ |
-| `docs/standards/AIOX-LIVRO-DE-OURO-V2.1-SUMMARY.md` | Docs/Standards | Superseded by V2.1-COMPLETE | Move to archive/ |
-| `docs/standards/AIOX-FRAMEWORK-MASTER.md` | Docs/Standards | Superseded by V2.1-COMPLETE | Move to archive/ |
+| `docs/standards/YARD-LIVRO-DE-OURO.md` | Docs/Standards | Superseded by V2.1-COMPLETE | Move to archive/ |
+| `docs/standards/YARD-LIVRO-DE-OURO-V2.1.md` | Docs/Standards | Superseded by V2.1-COMPLETE | Move to archive/ |
+| `docs/standards/YARD-LIVRO-DE-OURO-V2.1-SUMMARY.md` | Docs/Standards | Superseded by V2.1-COMPLETE | Move to archive/ |
+| `docs/standards/YARD-FRAMEWORK-MASTER.md` | Docs/Standards | Superseded by V2.1-COMPLETE | Move to archive/ |
 | `docs/standards/V3-ARCHITECTURAL-DECISIONS.md` | Docs/Standards | Archive candidate per STANDARDS-INDEX | Move to archive/ |
 
 ### Duplication Issues
@@ -573,7 +573,7 @@ The `core-config.yaml` continues to function as the primary config (legacy mode)
 
 | Directory | Referenced By | Status |
 |-----------|---------------|--------|
-| `.yard-core/agent-teams/` | install-manifest, source-tree docs, core-architecture, data/aiox-kb.md | Directory does not exist |
+| `.yard-core/agent-teams/` | install-manifest, source-tree docs, core-architecture, data/yard-kb.md | Directory does not exist |
 | `.yard-core/tools/` (content) | core-config.yaml, framework-config.yaml | Directory exists but is empty |
 | `.yard-core/processes/` | Not referenced | Does not exist |
 
@@ -656,7 +656,7 @@ The `core-config.yaml` continues to function as the primary config (legacy mode)
 
 1. **Root Config is the Hub:** `core-config.yaml` (and its layered replacements) is consumed by virtually every system. It defines resource locations, feature flags, and integration settings.
 
-2. **Manifests are the Registry:** `manifests/workers.csv` contains 204 entries covering all AIOX components. The CLI `workers` commands are the primary consumer.
+2. **Manifests are the Registry:** `manifests/workers.csv` contains 204 entries covering all YARD components. The CLI `workers` commands are the primary consumer.
 
 3. **Quality Gates span two directories:** `core/quality-gates/` provides the gate logic while `quality/` provides metrics. They connect via the `metrics-hook.js` and are exposed through the `metrics` CLI.
 
@@ -676,7 +676,7 @@ The `core-config.yaml` continues to function as the primary config (legacy mode)
 User Request
     |
     v
-CLI Commands (bin/aiox.js)
+CLI Commands (bin/yard.js)
     |
     +---> config show/diff/migrate ---> Config Resolver ---> L1/L2/L4 configs
     +---> manifest validate/regen ----> Manifest System ---> agents.csv, tasks.csv, workers.csv

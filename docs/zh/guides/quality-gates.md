@@ -1,10 +1,10 @@
-# AIOX 质量门控系统指南
+# YARD 质量门控系统指南
 
 > **[EN](../../guides/quality-gates.md)** | **[PT](../../pt/guides/quality-gates.md)** | **[ES](../../es/guides/quality-gates.md)** | **ZH**
 
 ---
 
-Synkra AIOX 的 3 层质量门控系统综合指南。
+Synkra YARD 的 3 层质量门控系统综合指南。
 
 **版本：** 2.1.0
 **最后更新：** 2025-12-01
@@ -13,7 +13,7 @@ Synkra AIOX 的 3 层质量门控系统综合指南。
 
 ## 概述
 
-AIOX 质量门控系统通过三个渐进式验证层提供自动化质量保证。每层在开发的适当阶段捕获不同类型的问题。
+YARD 质量门控系统通过三个渐进式验证层提供自动化质量保证。每层在开发的适当阶段捕获不同类型的问题。
 
 ### 3 层架构
 
@@ -76,15 +76,15 @@ layer1:
 
 ```bash
 # 运行所有第 1 层检查
-aiox qa run --layer=1
+yard qa run --layer=1
 
 # 运行特定检查
-aiox qa run --layer=1 --check=lint
-aiox qa run --layer=1 --check=test
-aiox qa run --layer=1 --check=typecheck
+yard qa run --layer=1 --check=lint
+yard qa run --layer=1 --check=test
+yard qa run --layer=1 --check=typecheck
 
 # 详细输出
-aiox qa run --layer=1 --verbose
+yard qa run --layer=1 --verbose
 ```
 
 ### 预期输出
@@ -147,7 +147,7 @@ layer2:
   quinn:
     enabled: true
     autoReview: true
-    agentPath: '.claude/commands/AIOX/agents/qa.md'
+    agentPath: '.claude/commands/YARD/agents/qa.md'
     severity:
       block: ['CRITICAL']
       warn: ['HIGH', 'MEDIUM']
@@ -157,13 +157,13 @@ layer2:
 
 ```bash
 # 运行所有第 2 层检查
-aiox qa run --layer=2
+yard qa run --layer=2
 
 # 仅运行 CodeRabbit
-aiox qa run --layer=2 --tool=coderabbit
+yard qa run --layer=2 --tool=coderabbit
 
 # 运行 Quinn 审查
-aiox qa run --layer=2 --tool=quinn
+yard qa run --layer=2 --tool=quinn
 ```
 
 ### 严重级别
@@ -263,78 +263,78 @@ layer3:
 
 ```bash
 # 请求人工审查
-aiox qa request-review --pr=123
+yard qa request-review --pr=123
 
 # 审查签字
-aiox qa signoff --pr=123 --reviewer="@architect"
+yard qa signoff --pr=123 --reviewer="@architect"
 
 # 检查签字状态
-aiox qa signoff-status --pr=123
+yard qa signoff-status --pr=123
 ```
 
 ---
 
 ## CLI 命令
 
-### `aiox qa run`
+### `yard qa run`
 
 运行质量门控检查。
 
 ```bash
 # 按顺序运行所有层
-aiox qa run
+yard qa run
 
 # 运行特定层
-aiox qa run --layer=1
-aiox qa run --layer=2
-aiox qa run --layer=3
+yard qa run --layer=1
+yard qa run --layer=2
+yard qa run --layer=3
 
 # 带选项运行
-aiox qa run --verbose          # 详细输出
-aiox qa run --fail-fast        # 第一个失败时停止
-aiox qa run --continue-on-fail # 尽管失败仍继续
+yard qa run --verbose          # 详细输出
+yard qa run --fail-fast        # 第一个失败时停止
+yard qa run --continue-on-fail # 尽管失败仍继续
 ```
 
-### `aiox qa status`
+### `yard qa status`
 
 检查当前质量门控状态。
 
 ```bash
 # 获取总体状态
-aiox qa status
+yard qa status
 
 # 获取特定层的状态
-aiox qa status --layer=1
+yard qa status --layer=1
 
 # 获取 PR 状态
-aiox qa status --pr=123
+yard qa status --pr=123
 ```
 
-### `aiox qa report`
+### `yard qa report`
 
 生成质量门控报告。
 
 ```bash
 # 生成报告
-aiox qa report
+yard qa report
 
 # 导出到文件
-aiox qa report --output=qa-report.json
-aiox qa report --format=markdown --output=qa-report.md
+yard qa report --output=qa-report.json
+yard qa report --format=markdown --output=qa-report.md
 ```
 
-### `aiox qa configure`
+### `yard qa configure`
 
 配置质量门控设置。
 
 ```bash
 # 交互式配置
-aiox qa configure
+yard qa configure
 
 # 设置特定选项
-aiox qa configure --layer1.coverage.minimum=90
-aiox qa configure --layer2.coderabbit.enabled=false
-aiox qa configure --layer3.requireSignoff=true
+yard qa configure --layer1.coverage.minimum=90
+yard qa configure --layer2.coderabbit.enabled=false
+yard qa configure --layer3.requireSignoff=true
 ```
 
 ---
@@ -361,7 +361,7 @@ jobs:
         with:
           node-version: '18'
       - run: npm ci
-      - run: aiox qa run --layer=1
+      - run: yard qa run --layer=1
 
   layer2:
     name: Layer 2 - PR Automation
@@ -373,7 +373,7 @@ jobs:
         with:
           node-version: '18'
       - run: npm ci
-      - run: aiox qa run --layer=2
+      - run: yard qa run --layer=2
         env:
           CODERABBIT_API_KEY: ${{ secrets.CODERABBIT_API_KEY }}
 
@@ -383,7 +383,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: aiox qa request-review --pr=${{ github.event.pull_request.number }}
+      - run: yard qa request-review --pr=${{ github.event.pull_request.number }}
 ```
 
 ### GitLab CI
@@ -399,20 +399,20 @@ layer1:
   stage: layer1
   script:
     - npm ci
-    - aiox qa run --layer=1
+    - yard qa run --layer=1
 
 layer2:
   stage: layer2
   script:
     - npm ci
-    - aiox qa run --layer=2
+    - yard qa run --layer=2
   needs:
     - layer1
 
 layer3:
   stage: layer3
   script:
-    - aiox qa request-review
+    - yard qa request-review
   needs:
     - layer2
   when: manual
@@ -425,7 +425,7 @@ layer3:
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-aiox qa run --layer=1 --fail-fast
+yard qa run --layer=1 --fail-fast
 ```
 
 ---
@@ -459,4 +459,4 @@ aiox qa run --layer=1 --fail-fast
 
 ---
 
-_Synkra AIOX v4 质量门控系统指南_
+_Synkra YARD v4 质量门控系统指南_

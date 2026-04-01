@@ -13,7 +13,7 @@ Lançamos patches para vulnerabilidades de segurança nas seguintes versões:
 
 ## Reportando uma Vulnerabilidade
 
-Levamos a segurança a sério na SynkraAI. Se você descobrir uma vulnerabilidade de segurança no AIOX, por favor reporte de forma responsável.
+Levamos a segurança a sério na SynkraAI. Se você descobrir uma vulnerabilidade de segurança no YARD, por favor reporte de forma responsável.
 
 ### Como Reportar
 
@@ -61,7 +61,7 @@ Não perseguiremos ação civil nem iniciaremos reclamação às autoridades par
 
 ## Melhores Práticas de Segurança
 
-Ao usar o AIOX Framework, recomendamos:
+Ao usar o YARD Framework, recomendamos:
 
 ### Variáveis de Ambiente
 
@@ -92,7 +92,7 @@ Ao usar o AIOX Framework, recomendamos:
 
 ### Arquitetura do Framework
 
-O AIOX Framework executa código e comandos gerados por IA. Usuários devem:
+O YARD Framework executa código e comandos gerados por IA. Usuários devem:
 
 - Entender que agentes IA podem executar código arbitrário
 - Usar sandboxing apropriado para ambientes não confiáveis
@@ -100,7 +100,7 @@ O AIOX Framework executa código e comandos gerados por IA. Usuários devem:
 
 ### Tratamento de Dados
 
-- AIOX pode processar dados sensíveis através de provedores de IA
+- YARD pode processar dados sensíveis através de provedores de IA
 - Revise as políticas de tratamento de dados do seu provedor de IA
 - Considere a classificação de dados ao usar recursos de IA
 

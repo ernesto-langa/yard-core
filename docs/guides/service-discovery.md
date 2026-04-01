@@ -1,10 +1,10 @@
-# AIOX Service Discovery Guide
+# YARD Service Discovery Guide
 
 > **EN** | [PT](../pt/guides/service-discovery.md) | [ES](../es/guides/service-discovery.md)
 
 ---
 
-> How to discover, query, and use workers in the AIOX framework.
+> How to discover, query, and use workers in the YARD framework.
 
 **Version:** 2.1.0
 **Last Updated:** 2025-12-01
@@ -13,7 +13,7 @@
 
 ## Overview
 
-The Service Discovery system enables finding and using workers (tasks, templates, scripts, workflows) across the AIOX framework. The **Service Registry** is the central catalog containing metadata about all available workers.
+The Service Discovery system enables finding and using workers (tasks, templates, scripts, workflows) across the YARD framework. The **Service Registry** is the central catalog containing metadata about all available workers.
 
 ### Key Concepts
 
@@ -131,25 +131,25 @@ const count = await registry.count();
 
 ## CLI Commands
 
-### `aiox discover`
+### `yard discover`
 
 Search for workers in the registry.
 
 ```bash
 # Search by text
-aiox discover "create story"
+yard discover "create story"
 
 # Search by category
-aiox discover --category task
+yard discover --category task
 
 # Search by tag
-aiox discover --tag testing
+yard discover --tag testing
 
 # Search for agent
-aiox discover --agent dev
+yard discover --agent dev
 
 # Combine filters
-aiox discover --category task --tag development --agent dev
+yard discover --category task --tag development --agent dev
 ```
 
 **Output:**
@@ -170,16 +170,16 @@ Found 5 workers matching "create story":
   ...
 ```
 
-### `aiox info`
+### `yard info`
 
 Get detailed information about a specific worker.
 
 ```bash
 # Get worker info by ID
-aiox info create-story
+yard info create-story
 
 # Get worker info with full path
-aiox info --path .yard-core/development/tasks/po-create-story.md
+yard info --path .yard-core/development/tasks/po-create-story.md
 ```
 
 **Output:**
@@ -215,22 +215,22 @@ Performance:
   Parallelizable: No
 ```
 
-### `aiox list`
+### `yard list`
 
 List workers by category or agent.
 
 ```bash
 # List all tasks
-aiox list tasks
+yard list tasks
 
 # List all templates
-aiox list templates
+yard list templates
 
 # List workers for agent
-aiox list --agent dev
+yard list --agent dev
 
 # List with pagination
-aiox list tasks --page 1 --limit 20
+yard list tasks --page 1 --limit 20
 ```
 
 ---
@@ -515,4 +515,4 @@ await registry.load(true);
 
 ---
 
-_Synkra AIOX v4 Service Discovery Guide_
+_Synkra YARD v4 Service Discovery Guide_

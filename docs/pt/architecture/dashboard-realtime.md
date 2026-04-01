@@ -1,4 +1,4 @@
-# 🔴 AIOX Dashboard - Arquitetura de Observabilidade em Tempo Real
+# 🔴 YARD Dashboard - Arquitetura de Observabilidade em Tempo Real
 
 > **PT** | [EN](../architecture/dashboard-realtime.md) | [ES](../es/architecture/dashboard-realtime.md)
 
@@ -27,7 +27,7 @@
 
 ## Visão Geral
 
-Este documento descreve a arquitetura para **observabilidade em tempo real** do AIOX Dashboard, permitindo que usuários acompanhem comandos executados no CLI com máximo detalhe visual.
+Este documento descreve a arquitetura para **observabilidade em tempo real** do YARD Dashboard, permitindo que usuários acompanhem comandos executados no CLI com máximo detalhe visual.
 
 ### Caso de Uso Principal
 
@@ -108,7 +108,7 @@ Usuário executa comandos no CLI → Dashboard mostra TUDO em tempo real
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                         CLI / AIOX AGENTS                                │
+│                         CLI / YARD AGENTS                                │
 │  ┌─────────────────────────────────────────────────────────────────┐    │
 │  │                      Claude Code Session                         │    │
 │  │  @architect → *create-architecture → [thinking...] → [file ops] │    │
@@ -433,7 +433,7 @@ JSON Lines (JSONL) - um objeto JSON por linha, apenas append.
   "timestamp": "...",
   "agentId": "architect",
   "data": {
-    "storyId": "AIOX-123",
+    "storyId": "YARD-123",
     "oldStatus": "in-progress",
     "newStatus": "review"
   }
@@ -478,9 +478,9 @@ import { watch, existsSync, readFileSync, statSync } from 'fs';
 import { join } from 'path';
 import { Readable } from 'stream';
 
-const AIOX_DIR = process.env.AIOX_PROJECT_ROOT || process.cwd();
-const STATUS_FILE = join(AIOX_DIR, '.yard/dashboard/status.json');
-const EVENTS_FILE = join(AIOX_DIR, '.yard/dashboard/events.jsonl');
+const YARD_DIR = process.env.YARD_PROJECT_ROOT || process.cwd();
+const STATUS_FILE = join(YARD_DIR, '.yard/dashboard/status.json');
+const EVENTS_FILE = join(YARD_DIR, '.yard/dashboard/events.jsonl');
 
 interface SSEEvent {
   type: string;

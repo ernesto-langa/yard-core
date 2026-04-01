@@ -6,13 +6,13 @@
 
 ## Overview
 
-AIOX (AI-Orchestrated System) is an open-source project maintained by SynkraAI Inc. This privacy policy explains how we handle any data that may be collected when you use Synkra AIOX.
+YARD (AI-Orchestrated System) is an open-source project maintained by SynkraAI Inc. This privacy policy explains how we handle any data that may be collected when you use Synkra YARD.
 
 ## Data Collection
 
 ### What We Don't Collect
 
-Synkra AIOX does **NOT** collect:
+Synkra YARD does **NOT** collect:
 
 - Personal identification information
 - Usage analytics or telemetry data
@@ -22,7 +22,7 @@ Synkra AIOX does **NOT** collect:
 
 ### What May Be Collected (Consent-Based)
 
-Synkra AIOX uses a **consent-based telemetry system**. The system is designed as follows:
+Synkra YARD uses a **consent-based telemetry system**. The system is designed as follows:
 
 - **Consent Manager**: A consent management component is initialized by default to handle user preferences
 - **No automatic collection**: No data is collected until you explicitly grant consent
@@ -39,7 +39,7 @@ If you grant consent, the following may be collected:
 **To completely disable the consent manager**, set `telemetry.enabled: false` in your configuration:
 
 ```javascript
-const aiox = new AIOX({
+const yard = new YARD({
   telemetry: { enabled: false },
 });
 ```
@@ -48,7 +48,7 @@ You can also revoke consent at any time through the consent management interface
 
 ## Local Data Storage
 
-Synkra AIOX stores some data locally on your machine:
+Synkra YARD stores some data locally on your machine:
 
 - Configuration files (`.yard/`, `.yard-core/`)
 - Project status cache (`.yard/project-status.yaml`)
@@ -59,7 +59,7 @@ This data never leaves your local machine unless you explicitly share it (e.g., 
 
 ## Third-Party Services
 
-When using Synkra AIOX, you may interact with third-party services:
+When using Synkra YARD, you may interact with third-party services:
 
 | Service          | Purpose                                   | Privacy Policy                                                                                     |
 | ---------------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -68,7 +68,7 @@ When using Synkra AIOX, you may interact with third-party services:
 | **AI Providers** | Claude, OpenAI, etc. (configured by user) | See respective provider policies                                                                   |
 | **MCP Servers**  | Tool integrations (user-configured)       | Varies by server                                                                                   |
 
-**Important:** Your interactions with these services are governed by their respective privacy policies. Synkra AIOX does not control or have access to data you share with these services.
+**Important:** Your interactions with these services are governed by their respective privacy policies. Synkra YARD does not control or have access to data you share with these services.
 
 ## Your Rights
 
@@ -89,7 +89,7 @@ As an open-source project, all code is publicly available for inspection:
 
 ## Children's Privacy
 
-Synkra AIOX is a development tool intended for professional use. We do not knowingly collect any information from children under 13 years of age.
+Synkra YARD is a development tool intended for professional use. We do not knowingly collect any information from children under 13 years of age.
 
 ## Security
 
@@ -97,7 +97,7 @@ We take security seriously:
 
 - No sensitive data transmission by default
 - Local-first architecture
-- API keys and credentials are never stored by AIOX (users manage their own)
+- API keys and credentials are never stored by YARD (users manage their own)
 - Regular security audits of the codebase
 
 For security vulnerabilities, please [open an issue](https://github.com/ernesto-langa/yard-core/issues) or email security@SynkraAI.com.

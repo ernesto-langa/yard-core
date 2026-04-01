@@ -13,7 +13,7 @@
 
 ## Contexto
 
-AIOX necesita un sistema de health check integral para:
+YARD necesita un sistema de health check integral para:
 
 1. **Diagnosticar problemas** en configuracion de proyecto, entorno e integraciones
 2. **Habilitar auto-reparacion** para problemas comunes sin intervencion manual
@@ -326,11 +326,11 @@ tools/
 
 **Contras:**
 
-- Sin verificaciones especificas de AIOX
+- Sin verificaciones especificas de YARD
 - Capacidades de auto-reparacion limitadas
 - Dependencia de proyecto externo
 
-**Veredicto:** ❌ Rechazado - No cumple requisitos especificos de AIOX
+**Veredicto:** ❌ Rechazado - No cumple requisitos especificos de YARD
 
 ---
 

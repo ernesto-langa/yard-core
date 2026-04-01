@@ -1,8 +1,8 @@
 <!-- Traduccion: ES | Original: /docs/en/community/README-community-snippet-squads.md | Sincronizacion: 2026-01-26 -->
 
-# Seccion de Comunidad del README - aiox-squads
+# Seccion de Comunidad del README - yard-squads
 
-> **Proposito:** Copia este fragmento en el README.md del repositorio `SynkraAI/aiox-squads`.
+> **Proposito:** Copia este fragmento en el README.md del repositorio `SynkraAI/yard-squads`.
 
 ---
 
@@ -10,13 +10,13 @@
 
 Para discusiones, preguntas e interaccion con la comunidad, visita nuestro hub central:
 
-**[Discusiones de la Comunidad AIOX](https://github.com/ernesto-langa/yard-core/discussions)**
+**[Discusiones de la Comunidad YARD](https://github.com/ernesto-langa/yard-core/discussions)**
 
 | Necesidad | Donde Ir |
 |-----------|----------|
 | **Preguntas sobre Squads?** | Usa la [categoria "Squads"](https://github.com/ernesto-langa/yard-core/discussions/categories/squads) |
 | **Ideas de funcionalidades?** | Inicia una [Discusion en "Ideas"](https://github.com/ernesto-langa/yard-core/discussions/categories/ideas) |
-| **Encontraste un bug?** | [Abre un issue](https://github.com/SynkraAI/aiox-squads/issues/new/choose) en **este repositorio** |
+| **Encontraste un bug?** | [Abre un issue](https://github.com/SynkraAI/yard-squads/issues/new/choose) en **este repositorio** |
 | **Necesitas ayuda?** | Pregunta en ["Preguntas y Respuestas"](https://github.com/ernesto-langa/yard-core/discussions/categories/q-a) |
 | **Construiste algo genial?** | Comparte en ["Mostrar y Contar"](https://github.com/ernesto-langa/yard-core/discussions/categories/show-and-tell) |
 
@@ -29,12 +29,12 @@ Para discusiones, preguntas e interaccion con la comunidad, visita nuestro hub c
 
 ### Proponer un Nuevo Squad
 
-Tienes una idea para un nuevo AIOX Squad? Nos encantaria escucharla!
+Tienes una idea para un nuevo YARD Squad? Nos encantaria escucharla!
 
-1. Revisa las [propuestas de Squad existentes](https://github.com/SynkraAI/aiox-squads/labels/new-squad)
-2. Abre un [issue de Propuesta de Squad](https://github.com/SynkraAI/aiox-squads/issues/new?template=squad-proposal.md)
+1. Revisa las [propuestas de Squad existentes](https://github.com/SynkraAI/yard-squads/labels/new-squad)
+2. Abre un [issue de Propuesta de Squad](https://github.com/SynkraAI/yard-squads/issues/new?template=squad-proposal.md)
 3. Discute en la comunidad
 
 ---
 
-**Eslogan:** *AIOX Squads: Equipos de agentes IA trabajando contigo*
+**Eslogan:** *YARD Squads: Equipos de agentes IA trabajando contigo*

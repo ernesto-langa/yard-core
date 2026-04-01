@@ -4,13 +4,13 @@
   Última sincronização: 2026-01-26
 -->
 
-# Guia de Solução de Problemas do Synkra AIOX
+# Guia de Solução de Problemas do Synkra YARD
 
 > 🌐 [EN](../troubleshooting.md) | **PT** | [ES](../es/troubleshooting.md)
 
 ---
 
-Este guia abrangente ajuda você a diagnosticar e resolver problemas comuns com o Synkra AIOX.
+Este guia abrangente ajuda você a diagnosticar e resolver problemas comuns com o Synkra YARD.
 
 ## Índice
 
@@ -735,18 +735,18 @@ sudo pacman -S openssl
 
 ```bash
 # Saída de debug completa
-export DEBUG=aiox:*
+export DEBUG=yard:*
 npx yard-core
 
 # Componentes específicos
-export DEBUG=aiox:memory,aiox:agent
+export DEBUG=yard:memory,yard:agent
 ```
 
 ### Analisar Logs
 
 ```bash
 # Ver logs recentes
-tail -f .yard/logs/aiox.log
+tail -f .yard/logs/yard.log
 
 # Buscar por erros
 grep -i error .yard/logs/*.log
@@ -765,7 +765,7 @@ npx yard-core doctor --report diagnostic.json
 npx yard-core info --detailed >> diagnostic.json
 
 # Criar pacote de suporte
-tar -czf aiox-support.tar.gz .yard/logs diagnostic.json
+tar -czf yard-support.tar.gz .yard/logs diagnostic.json
 ```
 
 ### Perfilamento de Performance
@@ -811,7 +811,7 @@ tar -czf aiox-support.tar.gz .yard/logs diagnostic.json
    - Versão do Node.js: `node --version`
    - Versão do NPM: `npm --version`
    - SO e versão: `uname -a` ou `ver`
-   - Versão do AIOX: `npx yard-core version`
+   - Versão do YARD: `npx yard-core version`
 
 3. **Verifique issues existentes:**
    - [GitHub Issues](https://github.com/yard-core/yard-core/issues)
@@ -836,7 +836,7 @@ Crie relatórios de bug detalhados:
 ## Ambiente
 - SO: macOS 13.0
 - Node: 18.17.0
-- AIOX: 1.0.0
+- YARD: 1.0.0
 
 ## Passos para Reproduzir
 1. Executar `npx yard-core init test`
@@ -862,10 +862,10 @@ Se tudo mais falhar:
 
 ```bash
 # Fazer backup do estado atual
-cp -r .aiox .aiox.backup
+cp -r .yard .yard.backup
 
 # Reset completo
-rm -rf .aiox node_modules package-lock.json
+rm -rf .yard node_modules package-lock.json
 npm cache clean --force
 
 # Instalação limpa
@@ -873,7 +873,7 @@ npm install
 npx yard-core doctor --fix
 
 # Restaurar dados se necessário
-cp .aiox.backup/memory.db .yard/
+cp .yard.backup/memory.db .yard/
 ```
 
 ---

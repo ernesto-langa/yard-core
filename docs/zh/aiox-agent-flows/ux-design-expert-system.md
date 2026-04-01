@@ -1,4 +1,4 @@
-# UX设计专家系统 AIOX
+# UX设计专家系统 YARD
 
 > **版本:** 1.0.0
 > **创建于:** 2026-02-04
@@ -9,7 +9,7 @@
 
 ## 概览
 
-本文档描述了**UX设计专家(Uma)**代理的完整系统，包括所有涉及的文件、工作流、可用命令、与其他代理的集成和AIOX工作流。
+本文档描述了**UX设计专家(Uma)**代理的完整系统，包括所有涉及的文件、工作流、可用命令、与其他代理的集成和YARD工作流。
 
 UX设计专家是一个混合型代理，结合了:
 - **Sally的UX原则** - 同理心、用户研究、以用户为中心的设计
@@ -88,7 +88,7 @@ flowchart TB
 | 文件 | 目的 |
 |------|------|
 | `.yard-core/development/agents/ux-design-expert.md` | 完整的代理定义(角色、命令、工作流) |
-| `.claude/commands/AIOX/agents/ux-design-expert.md` | Claude Code命令激活@ux-design-expert |
+| `.claude/commands/YARD/agents/ux-design-expert.md` | Claude Code命令激活@ux-design-expert |
 
 ### 按阶段的任务
 

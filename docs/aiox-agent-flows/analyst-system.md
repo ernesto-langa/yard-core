@@ -1,4 +1,4 @@
-# Sistema do Agente Analyst (@analyst) - AIOX
+# Sistema do Agente Analyst (@analyst) - YARD
 
 > **Versão:** 1.0.0
 > **Criado:** 2026-02-04
@@ -56,7 +56,7 @@ O agente Analyst e projetado para:
 | Arquivo | Propósito |
 |---------|-----------|
 | `.yard-core/development/agents/analyst.md` | Definição core do agente Analyst |
-| `.claude/commands/AIOX/agents/analyst.md` | Comando Claude Code para ativar @analyst |
+| `.claude/commands/YARD/agents/analyst.md` | Comando Claude Code para ativar @analyst |
 
 ### Tasks do Analyst
 
@@ -93,7 +93,7 @@ O agente Analyst e projetado para:
 
 | Arquivo | Propósito |
 |---------|-----------|
-| `.yard-core/development/data/aiox-kb.md` | Knowledge base do AIOX |
+| `.yard-core/development/data/yard-kb.md` | Knowledge base do YARD |
 | `.yard-core/development/data/brainstorming-techniques.md` | Tecnicas de brainstorming disponiveis |
 
 ### Workflows que Usam o Analyst

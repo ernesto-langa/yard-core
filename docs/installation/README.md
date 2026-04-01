@@ -1,4 +1,4 @@
-# Synkra AIOX Installation Documentation
+# Synkra YARD Installation Documentation
 
 > 🌐 **EN** | [PT](../pt/installation/README.md) | [ES](../es/installation/README.md)
 
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This directory contains comprehensive installation and setup documentation for Synkra AIOX.
+This directory contains comprehensive installation and setup documentation for Synkra YARD.
 
 ---
 

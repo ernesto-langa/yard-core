@@ -9,7 +9,7 @@
 
 ## Visao Geral
 
-O agente **@qa (Quinn)** e o Test Architect & Quality Advisor do AIOX. Seu papel e fornecer analise abrangente de qualidade, decisoes de quality gates e recomendacoes acionaveis para equipes de desenvolvimento.
+O agente **@qa (Quinn)** e o Test Architect & Quality Advisor do YARD. Seu papel e fornecer analise abrangente de qualidade, decisoes de quality gates e recomendacoes acionaveis para equipes de desenvolvimento.
 
 **Arquetipo:** Guardian (Virgem)
 **Tom de Comunicacao:** Analitico, sistematico, educacional, pragmatico
@@ -64,7 +64,7 @@ O agente **@qa (Quinn)** e o Test Architect & Quality Advisor do AIOX. Seu papel
 | Arquivo | Proposito |
 |---------|-----------|
 | `.yard-core/development/agents/qa.md` | Definicao completa do agente QA |
-| `.claude/commands/AIOX/agents/qa.md` | Comando Claude Code para ativar @qa |
+| `.claude/commands/YARD/agents/qa.md` | Comando Claude Code para ativar @qa |
 
 ### Arquivos de Workflow
 

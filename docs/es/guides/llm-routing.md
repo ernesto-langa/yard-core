@@ -309,4 +309,4 @@ R: Las claves se cargan desde archivos `.env` (no los subas al repositorio!) o v
 
 ---
 
-*Generado por AIOX Framework - Story 6.7*
+*Generado por YARD Framework - Story 6.7*

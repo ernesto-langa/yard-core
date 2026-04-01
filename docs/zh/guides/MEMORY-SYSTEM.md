@@ -18,7 +18,7 @@
 1. [概述](#概述)
 2. [完整架构图](#完整架构图)
 3. [第一层: Claude Code 原生](#第一层-claude-code-原生)
-4. [第二层: AIOX 框架](#第二层-aiox-框架)
+4. [第二层: YARD 框架](#第二层-yard-框架)
 5. [代理激活流程 (记忆加载)](#代理激活流程-记忆加载)
 6. [持久化流程 (记忆保存)](#持久化流程-记忆保存)
 7. [会话生命周期流程](#会话生命周期流程)
@@ -35,12 +35,12 @@
 
 ## 概述
 
-AIOX 的记忆系统在**两个独立的层**上运行，它们共存但**彼此不通信**：
+YARD 的记忆系统在**两个独立的层**上运行，它们共存但**彼此不通信**：
 
 | 层 | 管理者 | 范围 |
 |--------|---------------|--------|
 | **第一层: Claude Code 原生** | Claude Code CLI | 自动记忆, CLAUDE.md, 会话转录 |
-| **第二层: AIOX 框架** | `.yard-core/` 中的 JS 脚本 | Gotchas, 会话状态, 上下文快照, Timeline |
+| **第二层: YARD 框架** | `.yard-core/` 中的 JS 脚本 | Gotchas, 会话状态, 上下文快照, Timeline |
 
 ### 关键原则
 
@@ -70,7 +70,7 @@ flowchart TB
         SESSIONS_IDX["会话索引<br/>sessions-index.json"]
     end
 
-    subgraph AIOX_FRAMEWORK["第二层: AIOX 框架"]
+    subgraph YARD_FRAMEWORK["第二层: YARD 框架"]
         direction TB
         GOTCHAS["Gotchas 记忆<br/>.yard-core/core/memory/gotchas-memory.js"]
         CTX_SNAP["上下文快照<br/>.yard-core/core/memory/context-snapshot.js"]
@@ -89,7 +89,7 @@ flowchart TB
         S_AGENT_MEM[".claude/agent-memory/"]
     end
 
-    subgraph STORAGE_AIOX["AIOX 存储 (.yard/)"]
+    subgraph STORAGE_YARD["YARD 存储 (.yard/)"]
         S_GOTCHAS[".yard/gotchas.json + .md"]
         S_ERRORS[".yard/error-tracking.json"]
         S_SNAPSHOTS[".yard/snapshots/"]
@@ -112,9 +112,9 @@ flowchart TB
     SESS_STATE --> S_EPIC_STATE
 
     style CLAUDE_NATIVE fill:#E3F2FD,stroke:#1565C0
-    style AIOX_FRAMEWORK fill:#FFF3E0,stroke:#E65100
+    style YARD_FRAMEWORK fill:#FFF3E0,stroke:#E65100
     style STORAGE_CLAUDE fill:#E8F5E9,stroke:#2E7D32
-    style STORAGE_AIOX fill:#FCE4EC,stroke:#C62828
+    style STORAGE_YARD fill:#FCE4EC,stroke:#C62828
 ```
 
 ### 脚本间关系
@@ -233,8 +233,8 @@ flowchart TD
 ```mermaid
 flowchart LR
     subgraph AGENT_MEM[".claude/agent-memory/"]
-        AM1["aiox-architect/MEMORY.md"]
-        AM2["aiox-dev/MEMORY.md"]
+        AM1["yard-architect/MEMORY.md"]
+        AM2["yard-dev/MEMORY.md"]
         AM3["oalanicolas/MEMORY.md"]
         AM4["pedro-valerio/MEMORY.md"]
         AM5["sop-extractor/MEMORY.md"]
@@ -243,7 +243,7 @@ flowchart LR
 
     SQUAD_AGENTS["Squad 代理<br/>(Claude Code Agents)"] -->|"frontmatter<br/>memory: project"| AGENT_MEM
 
-    NOTE["注意: 只有定义在<br/>.claude/agents/ 中的代理<br/>使用此记忆。<br/>AIOX 代理 (.yard-core/<br/>development/agents/)<br/>不使用。"]
+    NOTE["注意: 只有定义在<br/>.claude/agents/ 中的代理<br/>使用此记忆。<br/>YARD 代理 (.yard-core/<br/>development/agents/)<br/>不使用。"]
 
     style AGENT_MEM fill:#F3E5F5,stroke:#7B1FA2
     style NOTE fill:#FFF9C4,stroke:#F9A825
@@ -251,7 +251,7 @@ flowchart LR
 
 ---
 
-## 第二层: AIOX 框架
+## 第二层: YARD 框架
 
 ### 4 个记忆模块视图
 
@@ -427,7 +427,7 @@ sequenceDiagram
 
     UAP-->>CC: {greeting, quality: full|partial|fallback}
 
-    Note over CC: 没有 AIOX 记忆<br/>自动加载<br/>到 system prompt。<br/>仅会话上下文<br/>出现在 greeting 中。
+    Note over CC: 没有 YARD 记忆<br/>自动加载<br/>到 system prompt。<br/>仅会话上下文<br/>出现在 greeting 中。
 ```
 
 ---
@@ -644,7 +644,7 @@ flowchart TD
 ```mermaid
 classDiagram
     class GotchasStore {
-        +string schema = "aiox-gotchas-memory-v1"
+        +string schema = "yard-gotchas-memory-v1"
         +string version = "1.0.0"
         +string projectId
         +string lastUpdated
@@ -763,7 +763,7 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    subgraph AIOX_EVENTS["AIOX 事件"]
+    subgraph YARD_EVENTS["YARD 事件"]
         E1["sessionStart"]
         E2["beforeAgent"]
         E3["beforeTool"]
@@ -855,7 +855,7 @@ flowchart TD
 
 | 文件 | CLI | 功能 |
 |---------|-----|--------|
-| `.yard-core/hooks/gemini/session-start.js` | Gemini | 会话开始时加载 AIOX 上下文 |
+| `.yard-core/hooks/gemini/session-start.js` | Gemini | 会话开始时加载 YARD 上下文 |
 | `.yard-core/hooks/gemini/session-end.js` | Gemini | 将会话摘要持久化到 `.yard/sessions/` |
 | `.yard-core/hooks/gemini/before-agent.js` | Gemini | 代理前预处理 |
 | `.yard-core/hooks/gemini/before-tool.js` | 两者 | 工具前预处理 |
@@ -922,8 +922,8 @@ docs/stories/
 └── {session-id}.jsonl                        # [Claude Code] 完整转录
 
 .claude/agent-memory/                         # [Claude Code Agents] 每代理记忆
-├── aiox-architect/MEMORY.md
-├── aiox-dev/MEMORY.md
+├── yard-architect/MEMORY.md
+├── yard-dev/MEMORY.md
 ├── oalanicolas/MEMORY.md
 ├── pedro-valerio/MEMORY.md
 ├── sop-extractor/MEMORY.md
@@ -952,7 +952,7 @@ docs/stories/
 影响: 高
 ```
 
-AIOX 模块 (gotchas, snapshots, timeline) 在会话结束时**不会自动 flush**。如果进程突然终止，内存中的数据可能丢失。
+YARD 模块 (gotchas, snapshots, timeline) 在会话结束时**不会自动 flush**。如果进程突然终止，内存中的数据可能丢失。
 
 ### 缺口 3: Gemini Hooks 未移植
 
@@ -968,7 +968,7 @@ AIOX 模块 (gotchas, snapshots, timeline) 在会话结束时**不会自动 flus
 影响: 中
 ```
 
-Claude 自动记忆 (`MEMORY.md`) 和 AIOX 记忆 (`.yard/`) 从不同步。AIOX 捕获的 Gotchas 不会出现在 MEMORY.md 中，反之亦然。
+Claude 自动记忆 (`MEMORY.md`) 和 YARD 记忆 (`.yard/`) 从不同步。YARD 捕获的 Gotchas 不会出现在 MEMORY.md 中，反之亦然。
 
 ### 缺口 5: compound-analysis 静态
 
@@ -1002,6 +1002,6 @@ Claude 自动记忆 (`MEMORY.md`) 和 AIOX 记忆 (`.yard/`) 从不同步。AIOX
 
 ---
 
-*AIOX 记忆系统架构指南 v1.0*
+*YARD 记忆系统架构指南 v1.0*
 *从源代码追踪，而非文档。*
 *@architect (Aria) — 架构未来*

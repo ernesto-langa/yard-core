@@ -1,4 +1,4 @@
-# Guia AIOX para AntiGravity
+# Guia YARD para AntiGravity
 
 > 🌐 [EN](../../platforms/antigravity.md) | **PT** | [ES](../../es/platforms/antigravity.md)
 
@@ -14,7 +14,7 @@
 
 AntiGravity é a plataforma de desenvolvimento agêntico do Google que permite que desenvolvedores construam e orquestrem workflows com IA. Ele apresenta uma abordagem única baseada em workflows para ativação de agentes e integração profunda com serviços do Google Cloud.
 
-### Por que usar AIOX com AntiGravity?
+### Por que usar YARD com AntiGravity?
 
 O AntiGravity oferece capacidades distintas:
 
@@ -75,11 +75,11 @@ antigravity auth login
 export GOOGLE_APPLICATION_CREDENTIALS="caminho/para/credentials.json"
 ```
 
-### Passo 3: Instalar o AIOX
+### Passo 3: Instalar o YARD
 
 ```bash
 cd seu-projeto
-npx @anthropic/aiox init
+npx @anthropic/yard init
 # Selecione "AntiGravity" quando solicitado
 ```
 
@@ -135,7 +135,7 @@ projeto/
 **Localização:** `.antigravity/rules.md`
 
 ```markdown
-# Regras Synkra AIOX para AntiGravity
+# Regras Synkra YARD para AntiGravity
 
 ## Sistema de Agentes
 - Use @nome-agente ou workflows para ativação
@@ -485,13 +485,13 @@ R: Agentes são personas com expertise; workflows orquestram ações de agentes 
 1. Seus agentes em `.yard-core/` são portáveis
 2. Inicialize AntiGravity:
    ```bash
-   npx @anthropic/aiox init --ide antigravity
+   npx @anthropic/yard init --ide antigravity
    ```
 3. Arquivos de workflow são gerados automaticamente
 
 ### Do AntiGravity para Outras IDEs
 
-1. Agentes AIOX permanecem em `.yard-core/`
+1. Agentes YARD permanecem em `.yard-core/`
 2. Inicialize para a IDE de destino
 3. Configs específicas da plataforma são geradas
 
@@ -505,4 +505,4 @@ R: Agentes são personas com expertise; workflows orquestram ações de agentes 
 
 ---
 
-*Synkra AIOX - Guia da Plataforma AntiGravity v1.0*
+*Synkra YARD - Guia da Plataforma AntiGravity v1.0*

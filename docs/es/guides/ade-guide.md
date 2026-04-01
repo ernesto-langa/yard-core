@@ -4,7 +4,7 @@
   Ultima sincronizacion: 2026-01-29
 -->
 
-# AIOX Autonomous Development Engine (ADE) - Guia Completa
+# YARD Autonomous Development Engine (ADE) - Guia Completa
 
 > **Version:** 1.0.0
 > **Fecha:** 2026-01-29
@@ -14,7 +14,7 @@
 
 ## Que es el ADE?
 
-El **AIOX Autonomous Development Engine (ADE)** es un sistema de desarrollo autonomo que transforma requisitos vagos en codigo funcional a traves de pipelines estructurados y agentes especializados.
+El **YARD Autonomous Development Engine (ADE)** es un sistema de desarrollo autonomo que transforma requisitos vagos en codigo funcional a traves de pipelines estructurados y agentes especializados.
 
 ### Caracteristicas Principales
 
@@ -449,4 +449,4 @@ cat docs/stories/STORY-42/spec-critique.json
 
 ---
 
-_AIOX Autonomous Development Engine - Transformando Ideas en Codigo Automaticamente_
+_YARD Autonomous Development Engine - Transformando Ideas en Codigo Automaticamente_

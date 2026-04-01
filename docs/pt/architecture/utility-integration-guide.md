@@ -9,13 +9,13 @@
 **Versão:** 1.0.0
 **Criado em:** 2025-10-29
 **Autores:** Sarah (@po), Winston (@architect)
-**Propósito:** Definir padrões para integração de scripts utilitários no framework AIOX
+**Propósito:** Definir padrões para integração de scripts utilitários no framework YARD
 
 ---
 
 ## O que é Integração de Utilitários?
 
-**Definição:** Integração de utilitários é o processo de tornar um script utilitário órfão **descobrível, documentado e utilizável** dentro do framework AIOX.
+**Definição:** Integração de utilitários é o processo de tornar um script utilitário órfão **descobrível, documentado e utilizável** dentro do framework YARD.
 
 Um utilitário é considerado **totalmente integrado** quando:
 1. ✅ **Registrado** no core-config.yaml
@@ -108,7 +108,7 @@ execution:
 utils:
   framework:
     - elicitation-engine  # Usado pelo workflow de criação de agente
-    - aiox-validator
+    - yard-validator
 ```
 
 **Arquivos Modificados:**
@@ -188,7 +188,7 @@ Utilitários devem ser categorizados para facilitar integração:
 ### Categoria 1: Qualidade de Código
 **Propósito:** Analisar, melhorar, validar código
 **Padrão:** Auxiliar de Agente (agentes dev, qa)
-**Exemplos:** aiox-validator, code-quality-improver, coverage-analyzer
+**Exemplos:** yard-validator, code-quality-improver, coverage-analyzer
 
 ### Categoria 2: Git/Workflow
 **Propósito:** Operações git, automação de workflow
@@ -290,7 +290,7 @@ utils:
   # Utilitários de infraestrutura do framework
   framework:
     - elicitation-engine
-    - aiox-validator
+    - yard-validator
 
   # Utilitários de análise/documentação
   analyzers:

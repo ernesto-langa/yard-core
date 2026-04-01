@@ -966,7 +966,7 @@ flowchart TB
 ### 10.3 Documentação Relacionada
 
 - [Workflows YAML Guide](../workflows-yaml-guide.md)
-- [AIOX Documentation Index](../AIOX-DOCUMENTATION-INDEX.md)
+- [YARD Documentation Index](../YARD-DOCUMENTATION-INDEX.md)
 - [Backlog Management System](../BACKLOG-MANAGEMENT-SYSTEM.md)
 
 ### 10.4 Commands Rapidos
@@ -1026,6 +1026,6 @@ metadata:
     - spec-pipeline
     - workflow
     - documentação
-    - aiox
+    - yard
     - auto-claude
 ```

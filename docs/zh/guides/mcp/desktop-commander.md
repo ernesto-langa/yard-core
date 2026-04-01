@@ -259,7 +259,7 @@ execute_command:
 
 ---
 
-## 与 AIOX 集成
+## 与 YARD 集成
 
 ### 工具选择优先级
 
@@ -365,4 +365,4 @@ npm install -g @anthropic/desktop-commander@latest
 
 ---
 
-_Desktop Commander MCP 指南 v1.0.0 - AIOX 框架_
+_Desktop Commander MCP 指南 v1.0.0 - YARD 框架_

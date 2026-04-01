@@ -4,7 +4,7 @@
 
 ---
 
-使用 AIOX 设置基于 Docker 的 MCP（模型上下文协议）服务器的指南。
+使用 YARD 设置基于 Docker 的 MCP（模型上下文协议）服务器的指南。
 
 **版本：** 2.1.0
 **最后更新：** 2026-01-28
@@ -17,7 +17,7 @@
 
 - **Docker Desktop** 已安装并运行
 - **Node.js** 18+ 已安装
-- **AIOX** 项目已初始化
+- **YARD** 项目已初始化
 - 所需 MCP 服务的 API 密钥（EXA、Apify 等）
 
 ---
@@ -38,7 +38,7 @@ docker mcp --version
 
 ```bash
 # 创建全局 MCP 结构
-aiox mcp setup
+yard mcp setup
 ```
 
 这会创建：
@@ -52,9 +52,9 @@ aiox mcp setup
 
 ```bash
 # 从模板添加服务器
-aiox mcp add context7
-aiox mcp add exa
-aiox mcp add github
+yard mcp add context7
+yard mcp add exa
+yard mcp add github
 ```
 
 ---
@@ -63,7 +63,7 @@ aiox mcp add github
 
 ### MCP 架构
 
-AIOX 使用 Docker MCP 工具包作为主要 MCP 基础设施。
+YARD 使用 Docker MCP 工具包作为主要 MCP 基础设施。
 
 ### 可用的 MCP
 
@@ -71,7 +71,7 @@ AIOX 使用 Docker MCP 工具包作为主要 MCP 基础设施。
 
 ```bash
 # 添加 Context7
-aiox mcp add context7
+yard mcp add context7
 ```
 
 **用于：**
@@ -83,7 +83,7 @@ aiox mcp add context7
 
 ```bash
 # 添加 EXA
-aiox mcp add exa
+yard mcp add exa
 
 # 设置 API 密钥
 export EXA_API_KEY="your-api-key"
@@ -99,7 +99,7 @@ export EXA_API_KEY="your-api-key"
 
 ```bash
 # 添加 Apify
-aiox mcp add apify
+yard mcp add apify
 
 # 设置 API 令牌
 export APIFY_TOKEN="your-token"
@@ -118,37 +118,37 @@ export APIFY_TOKEN="your-token"
 
 ```bash
 # 初始化全局 MCP 配置
-aiox mcp setup
+yard mcp setup
 
 # 强制重新创建（备份现有）
-aiox mcp setup --force
+yard mcp setup --force
 ```
 
 ### 服务器管理
 
 ```bash
 # 从模板添加服务器
-aiox mcp add <server-name>
+yard mcp add <server-name>
 
 # 删除服务器
-aiox mcp remove <server-name>
+yard mcp remove <server-name>
 
 # 启用/禁用服务器
-aiox mcp enable <server-name>
-aiox mcp disable <server-name>
+yard mcp enable <server-name>
+yard mcp disable <server-name>
 ```
 
 ### 状态和列表
 
 ```bash
 # 列出已配置的服务器
-aiox mcp list
+yard mcp list
 
 # 显示详细状态
-aiox mcp status
+yard mcp status
 
 # 同步到项目
-aiox mcp sync
+yard mcp sync
 ```
 
 ---
@@ -177,13 +177,13 @@ $env:APIFY_TOKEN = "your-apify-token"
 
 ```bash
 # 添加凭证
-aiox mcp credential set EXA_API_KEY "your-api-key"
+yard mcp credential set EXA_API_KEY "your-api-key"
 
 # 获取凭证
-aiox mcp credential get EXA_API_KEY
+yard mcp credential get EXA_API_KEY
 
 # 列表凭证（已屏蔽）
-aiox mcp credential list
+yard mcp credential list
 ```
 
 ---
@@ -204,13 +204,13 @@ aiox mcp credential list
 
 ```bash
 # 重置全局配置
-aiox mcp setup --force
+yard mcp setup --force
 
 # 清理缓存
 rm -rf ~/.yard/mcp/cache/*
 
 # 验证配置
-aiox mcp status --verbose
+yard mcp status --verbose
 ```
 
 ---
@@ -223,4 +223,4 @@ aiox mcp status --verbose
 
 ---
 
-_Synkra AIOX Docker MCP 设置指南 v4.2.11_
+_Synkra YARD Docker MCP 设置指南 v4.2.11_

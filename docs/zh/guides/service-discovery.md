@@ -1,10 +1,10 @@
-# AIOX服务发现指南
+# YARD服务发现指南
 
 > **[EN](../../guides/service-discovery.md)** | [PT](../../pt/guides/service-discovery.md) | [ES](../../es/guides/service-discovery.md) | **中文 (ZH)**
 
 ---
 
-> 如何在AIOX框架中发现、查询和使用工作者。
+> 如何在YARD框架中发现、查询和使用工作者。
 
 **版本:** 2.1.0
 **最后更新:** 2025-12-01
@@ -13,7 +13,7 @@
 
 ## 概述
 
-服务发现系统能够在AIOX框架中找到和使用工作者（任务、模板、脚本、工作流）。**服务注册表**是包含所有可用工作者元数据的中央目录。
+服务发现系统能够在YARD框架中找到和使用工作者（任务、模板、脚本、工作流）。**服务注册表**是包含所有可用工作者元数据的中央目录。
 
 ### 关键概念
 
@@ -131,25 +131,25 @@ const count = await registry.count();
 
 ## CLI命令
 
-### `aiox discover`
+### `yard discover`
 
 在注册表中搜索工作者。
 
 ```bash
 # 按文本搜索
-aiox discover "create story"
+yard discover "create story"
 
 # 按类别搜索
-aiox discover --category task
+yard discover --category task
 
 # 按标签搜索
-aiox discover --tag testing
+yard discover --tag testing
 
 # 按代理搜索
-aiox discover --agent dev
+yard discover --agent dev
 
 # 组合过滤
-aiox discover --category task --tag development --agent dev
+yard discover --category task --tag development --agent dev
 ```
 
 **输出:**
@@ -170,16 +170,16 @@ aiox discover --category task --tag development --agent dev
   ...
 ```
 
-### `aiox info`
+### `yard info`
 
 获取特定工作者的详细信息。
 
 ```bash
 # 按ID获取工作者信息
-aiox info create-story
+yard info create-story
 
 # 按完整路径获取工作者信息
-aiox info --path .yard-core/development/tasks/po-create-story.md
+yard info --path .yard-core/development/tasks/po-create-story.md
 ```
 
 **输出:**
@@ -215,22 +215,22 @@ aiox info --path .yard-core/development/tasks/po-create-story.md
   可并行化: 否
 ```
 
-### `aiox list`
+### `yard list`
 
 按类别或代理列出工作者。
 
 ```bash
 # 列出所有任务
-aiox list tasks
+yard list tasks
 
 # 列出所有模板
-aiox list templates
+yard list templates
 
 # 列出代理的工作者
-aiox list --agent dev
+yard list --agent dev
 
 # 列出分页结果
-aiox list tasks --page 1 --limit 20
+yard list tasks --page 1 --limit 20
 ```
 
 ---
@@ -515,4 +515,4 @@ await registry.load(true);
 
 ---
 
-_Synkra AIOX v4 服务发现指南_
+_Synkra YARD v4 服务发现指南_

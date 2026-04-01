@@ -1,6 +1,6 @@
 <!--
   翻译：zh-CN（简体中文）
-  原文：/docs/aiox-agent-flows/devops-system.md
+  原文：/docs/yard-agent-flows/devops-system.md
   最后同步：2026-02-22
 -->
 
@@ -27,7 +27,7 @@
 
 ## 概述
 
-`@devops` (Gage) 代理是 AIOX 框架的基础设施和运维专家。负责：
+`@devops` (Gage) 代理是 YARD 框架的基础设施和运维专家。负责：
 
 - **MCP 治理**：MCP（模型上下文协议）服务器的独家管理
 - **CI/CD**：持续集成和交付管道的配置和维护
@@ -580,7 +580,7 @@ npm audit --ignore-advisories=ADVISORY_ID
 
 ## 参考
 
-### AIOX 文档
+### YARD 文档
 
 - [MCP 使用规则](../../.claude/rules/mcp-usage.md)
 - [N8N 操作](../../.claude/rules/n8n-operations.md)
@@ -639,5 +639,5 @@ npm audit --ignore-advisories=ADVISORY_ID
 
 ---
 
-*文档由 AIOX 系统生成 - 2026-02-04*
+*文档由 YARD 系统生成 - 2026-02-04*
 *维护者：@devops*

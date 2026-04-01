@@ -4,7 +4,7 @@
   Última sincronización: 2026-01-28
 -->
 
-# Hoja de Ruta de Documentación de AIOX
+# Hoja de Ruta de Documentación de YARD
 
 > 🌐 [EN](../DOCUMENTATION-ROADMAP.md) | [PT](../pt/DOCUMENTATION-ROADMAP.md) | **ES**
 

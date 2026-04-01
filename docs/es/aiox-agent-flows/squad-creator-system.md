@@ -1,16 +1,16 @@
 # @squad-creator (Nova) - Documentacion del Sistema
 
-> [PT](../../aiox-agent-flows/squad-creator-system.md) | [EN](../../en/aiox-agent-flows/squad-creator-system.md) | **ES**
+> [PT](../../yard-agent-flows/squad-creator-system.md) | [EN](../../en/yard-agent-flows/squad-creator-system.md) | **ES**
 
 ---
 
-> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../aiox-agent-flows/squad-creator-system.md).
+> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../yard-agent-flows/squad-creator-system.md).
 
 ---
 
 ## Vision General
 
-**@squad-creator** (Nova) es el agente de creacion de squads del AIOX, responsable por:
+**@squad-creator** (Nova) es el agente de creacion de squads del YARD, responsable por:
 
 - Creacion de squads
 - Configuracion de nuevos agentes
@@ -29,7 +29,7 @@
 ## Ver Mas
 
 Para documentacion detallada incluyendo flowcharts, integraciones y troubleshooting, consulte:
-- **[Documentacion completa (PT)](../../aiox-agent-flows/squad-creator-system.md)**
+- **[Documentacion completa (PT)](../../yard-agent-flows/squad-creator-system.md)**
 
 ---
 

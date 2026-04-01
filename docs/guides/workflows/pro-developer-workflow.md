@@ -1,22 +1,22 @@
-# AIOX Pro Developer Workflow
+# YARD Pro Developer Workflow
 
-This guide covers the two developer workflows for working with the AIOX Open Core architecture.
+This guide covers the two developer workflows for working with the YARD Open Core architecture.
 
 ## Architecture Overview
 
-AIOX uses a dual-repository Open Core model:
+YARD uses a dual-repository Open Core model:
 
 - **yard-core** (public) — Open-source framework, available to everyone
-- **aiox-pro** (private) — Premium features, available to team members and licensees
+- **yard-pro** (private) — Premium features, available to team members and licensees
 
-The `pro/` directory in yard-core is a git submodule pointing to the aiox-pro repository.
+The `pro/` directory in yard-core is a git submodule pointing to the yard-pro repository.
 
 ```
 yard-core/
 ├── bin/
 ├── src/
 ├── packages/
-├── pro/ ─── git submodule ──► SynkraAI/aiox-pro (private)
+├── pro/ ─── git submodule ──► SynkraAI/yard-pro (private)
 ├── squads/ (community)
 └── package.json
 ```
@@ -68,13 +68,13 @@ git push origin feature/my-feature
 - All core tests pass without `pro/` present
 - `bin/utils/pro-detector.js` returns `isProAvailable() === false`
 - No features are degraded for core-only developers
-- You do NOT need access to SynkraAI/aiox-pro
+- You do NOT need access to SynkraAI/yard-pro
 
 ---
 
 ## Workflow 2: Pro Developer (Team Member with Access)
 
-Team members with access to the private aiox-pro repository can work on both repos.
+Team members with access to the private yard-pro repository can work on both repos.
 
 ### Initial Setup (New Clone)
 
@@ -107,7 +107,7 @@ ls pro/package.json
 
 ```bash
 # (Coming in a future story)
-aiox setup --pro
+yard setup --pro
 ```
 
 ### Working on Pro Modules
@@ -167,7 +167,7 @@ Always push in this order:
 1. Push `pro/` changes first: `cd pro && git push`
 2. Push `yard-core` changes second: `cd .. && git push`
 
-This ensures the submodule pointer in yard-core references a valid commit in aiox-pro.
+This ensures the submodule pointer in yard-core references a valid commit in yard-pro.
 
 ---
 
@@ -180,7 +180,7 @@ const { isProAvailable, loadProModule, getProVersion } = require('./bin/utils/pr
 
 // Check if pro is available
 if (isProAvailable()) {
-  console.log('AIOX Pro v' + getProVersion() + ' detected');
+  console.log('YARD Pro v' + getProVersion() + ' detected');
 
   // Load a pro module safely (returns null if not found)
   const proSquads = loadProModule('squads/squad-creator-pro');
@@ -197,7 +197,7 @@ if (isProAvailable()) {
 | Repository | Checkout | Tests | Publish |
 |------------|----------|-------|---------|
 | **yard-core** | Without submodules | Core-only (pro/ absent) | npm (excludes pro/) |
-| **aiox-pro** | With yard-core cloned | Integration (pro/ symlinked) | GitHub Packages |
+| **yard-pro** | With yard-core cloned | Integration (pro/ symlinked) | GitHub Packages |
 
 ---
 
@@ -212,7 +212,7 @@ git submodule update --init pro
 
 ### Permission denied when cloning submodule
 
-You need access to `SynkraAI/aiox-pro`. Contact the team lead.
+You need access to `SynkraAI/yard-pro`. Contact the team lead.
 
 ### Tests fail with pro/ present
 
@@ -233,4 +233,4 @@ git submodule update pro
 ## Reference
 
 - [ADR-PRO-001: Repository Strategy](../../architecture/adr/adr-pro-001-repository-strategy.md)
-- [Story PRO-5: Repository Bootstrap](../../stories/epics/epic-pro-aiox-pro-architecture/story-pro-5-repo-bootstrap.md)
+- [Story PRO-5: Repository Bootstrap](../../stories/epics/epic-pro-yard-pro-architecture/story-pro-5-repo-bootstrap.md)

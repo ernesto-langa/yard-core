@@ -1,6 +1,6 @@
-# AIOX 工作流 - 工作流详细文档
+# YARD 工作流 - 工作流详细文档
 
-> 🌐 **简体中文** | [PT](../../aiox-workflows/README.md) | [EN](../../en/aiox-workflows/README.md) | [ES](../../es/aiox-workflows/README.md)
+> 🌐 **简体中文** | [PT](../../yard-workflows/README.md) | [EN](../../en/yard-workflows/README.md) | [ES](../../es/yard-workflows/README.md)
 
 ---
 
@@ -12,7 +12,7 @@
 
 ## 概述
 
-本文件夹包含 AIOX 所有工作流的详细文档,包括:
+本文件夹包含 YARD 所有工作流的详细文档,包括:
 
 - **完整的 Mermaid 图表** (流程图、序列图、状态图)
 - **详细的步骤** 包括输入/输出
@@ -227,7 +227,7 @@ flowchart TD
 | 文档 | 位置 | 用途 |
 |------|------|------|
 | 工作流指南 | [docs/guides/workflows-guide.md](../../guides/workflows-guide.md) | 一般指南 |
-| 代理流程 | [docs/aiox-agent-flows/](../../aiox-agent-flows/) | 代理详情 |
+| 代理流程 | [docs/yard-agent-flows/](../../yard-agent-flows/) | 代理详情 |
 | 代理参考 | [docs/agent-reference-guide.md](../../agent-reference-guide.md) | 快速参考 |
 
 ---
@@ -244,4 +244,4 @@ flowchart TD
 
 ---
 
-*AIOX 工作流文档 v1.0 - 开发工作流的详细文档*
+*YARD 工作流文档 v1.0 - 开发工作流的详细文档*

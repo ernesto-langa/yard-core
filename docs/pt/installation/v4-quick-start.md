@@ -1,4 +1,4 @@
-# Guia de Início Rápido AIOX v4
+# Guia de Início Rápido YARD v4
 
 > 🌐 [EN](../../installation/v4-quick-start.md) | **PT** | [ES](../../es/installation/v4-quick-start.md)
 
@@ -56,7 +56,7 @@ npx yard-core@latest doctor
 Ou se instalado globalmente:
 
 ```bash
-aiox doctor
+yard doctor
 ```
 
 ### Verificação Manual
@@ -84,16 +84,16 @@ Estrutura esperada:
 
 ## Passo 3: Ativar Seu Primeiro Agente
 
-AIOX usa agentes especializados para diferentes tarefas. Na sua IDE com IA ou Claude Code CLI, digite:
+YARD usa agentes especializados para diferentes tarefas. Na sua IDE com IA ou Claude Code CLI, digite:
 
 ```
-@aiox-master
+@yard-master
 ```
 
 O agente irá cumprimentá-lo e mostrar comandos disponíveis:
 
 ```
-🎯 AIOX Master pronto!
+🎯 YARD Master pronto!
 Digite *help para ver comandos disponíveis.
 ```
 
@@ -136,7 +136,7 @@ O agente desenvolvedor (Dex) será ativado com uma saudação mostrando:
 
 ## Passo 5: Criar Sua Primeira Story
 
-Stories direcionam o desenvolvimento no AIOX. Ative o Product Owner e crie uma:
+Stories direcionam o desenvolvimento no YARD. Ative o Product Owner e crie uma:
 
 ```
 @po *create-story
@@ -175,7 +175,7 @@ npx yard-core@latest info      # Mostrar info do sistema
 npm run lint                           # Verificar estilo de código
 npm run typecheck                      # Verificar tipos TypeScript
 npm test                               # Executar testes unitários
-npm run validate:structure             # Validar estrutura AIOX
+npm run validate:structure             # Validar estrutura YARD
 ```
 
 ### Estrutura do Projeto
@@ -200,7 +200,7 @@ seu-projeto/
 │       ├── integrations/          # Adaptadores de PM tools
 │       └── templates/             # Templates de configuração
 ├── .claude/                       # Configuração Claude Code
-│   ├── commands/AIOX/agents/      # Skills de agentes
+│   ├── commands/YARD/agents/      # Skills de agentes
 │   └── rules/                     # Regras de agentes
 ├── docs/                          # Documentação
 │   └── stories/                   # Stories de desenvolvimento
@@ -246,10 +246,10 @@ sudo chown -R $(whoami) ~/.npm
 # nvm, fnm, ou volta
 ```
 
-### Estrutura AIOX não encontrada
+### Estrutura YARD não encontrada
 
 ```bash
-# Reinstalar AIOX no projeto atual
+# Reinstalar YARD no projeto atual
 npx yard-core@latest install
 
 # Ou clonar novamente
@@ -266,4 +266,4 @@ git clone https://github.com/ernesto-langa/yard-core.git
 
 ---
 
-**Bem-vindo ao AIOX! Bom coding!**
+**Bem-vindo ao YARD! Bom coding!**

@@ -1,6 +1,6 @@
-# AIOX Workflows - Detailed Workflow Documentation
+# YARD Workflows - Detailed Workflow Documentation
 
-> **EN** | [PT](../../aiox-workflows/README.md) | [ES](../../es/aiox-workflows/README.md) | [ZH](../../zh/aiox-workflows/README.md)
+> **EN** | [PT](../../yard-workflows/README.md) | [ES](../../es/yard-workflows/README.md) | [ZH](../../zh/yard-workflows/README.md)
 
 ---
 
@@ -12,7 +12,7 @@
 
 ## Overview
 
-This folder contains detailed documentation of all AIOX workflows, including:
+This folder contains detailed documentation of all YARD workflows, including:
 
 - **Complete Mermaid diagrams** (flowchart, sequence, state)
 - **Detailed steps** with inputs/outputs
@@ -227,7 +227,7 @@ flowchart TD
 | Documentation | Location | Purpose |
 |---------------|----------|---------|
 | Workflows Guide | [docs/guides/workflows-guide.md](../../guides/workflows-guide.md) | General guide |
-| Agent Flows | [docs/aiox-agent-flows/](../../aiox-agent-flows/) | Agent details |
+| Agent Flows | [docs/yard-agent-flows/](../../yard-agent-flows/) | Agent details |
 | Meta-Agent Commands | [docs/meta-agent-commands.md](../../meta-agent-commands.md) | Quick reference |
 
 ---
@@ -244,4 +244,4 @@ To add or update workflow documentation:
 
 ---
 
-*AIOX Workflows Documentation v1.0 - Detailed documentation of development workflows*
+*YARD Workflows Documentation v1.0 - Detailed documentation of development workflows*

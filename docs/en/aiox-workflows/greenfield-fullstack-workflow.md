@@ -1,10 +1,10 @@
 # Greenfield Fullstack Workflow
 
-> **EN** | [PT](../../aiox-workflows/greenfield-fullstack-workflow.md) | [ES](../../es/aiox-workflows/greenfield-fullstack-workflow.md)
+> **EN** | [PT](../../yard-workflows/greenfield-fullstack-workflow.md) | [ES](../../es/yard-workflows/greenfield-fullstack-workflow.md)
 
 ---
 
-**Full documentation available in:** [Portuguese Version](../../aiox-workflows/greenfield-fullstack-workflow.md)
+**Full documentation available in:** [Portuguese Version](../../yard-workflows/greenfield-fullstack-workflow.md)
 
 ---
 
@@ -42,4 +42,4 @@ The **Greenfield Fullstack Workflow** is designed for creating new full-stack ap
 
 ---
 
-*For complete details, diagrams, and step-by-step instructions, see the [Portuguese documentation](../../aiox-workflows/greenfield-fullstack-workflow.md).*
+*For complete details, diagrams, and step-by-step instructions, see the [Portuguese documentation](../../yard-workflows/greenfield-fullstack-workflow.md).*

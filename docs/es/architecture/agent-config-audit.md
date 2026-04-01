@@ -219,4 +219,4 @@
 
 ---
 
-*Auto-generado por Auditoría de Configuración de Agentes AIOX (Historia 6.1.2.6)*
+*Auto-generado por Auditoría de Configuración de Agentes YARD (Historia 6.1.2.6)*

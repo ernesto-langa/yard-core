@@ -11,7 +11,7 @@
 
 ---
 
-Synkra AIOX 的所有重要变更都将记录在此文件中。
+Synkra YARD 的所有重要变更都将记录在此文件中。
 
 本格式基于 [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)，
 本项目遵循 [语义化版本](https://semver.org/spec/v2.0.0.html)。
@@ -22,7 +22,7 @@ Synkra AIOX 的所有重要变更都将记录在此文件中。
 
 ### 新增
 
-- **AIOX 自主开发引擎 (ADE)**：完整的自主开发系统，包含 7 个 Epic：
+- **YARD 自主开发引擎 (ADE)**：完整的自主开发系统，包含 7 个 Epic：
   - **Epic 1 - Worktree Manager**：用于并行 story 开发的 Git worktree 隔离
   - **Epic 2 - Migration V2→V3**：autoClaude V3 格式及能力标志
   - **Epic 3 - Spec Pipeline**：将需求转换为可执行规范
@@ -78,7 +78,7 @@ Synkra AIOX 的所有重要变更都将记录在此文件中。
 ### 变更
 
 - **代理格式**：所有 12 个代理已迁移到 autoClaude V3 格式及能力标志
-- **代理同步**：所有代理现在在 `.yard-core/development/agents/` 和 `.claude/commands/AIOX/agents/` 之间同步
+- **代理同步**：所有代理现在在 `.yard-core/development/agents/` 和 `.claude/commands/YARD/agents/` 之间同步
 
 ### 修复
 
@@ -111,7 +111,7 @@ Synkra AIOX 的所有重要变更都将记录在此文件中。
 - **目录结构**：`.legacy-core/` 重命名为 `.yard-core/`
 - **配置格式**：增强 `core-config.yaml`，新增 git、projectStatus 和 sharding 选项部分
 - **代理格式**：更新代理 YAML schema，含 persona_profile、commands visibility 和 whenToUse 字段
-- **IDE 配置**：Claude Code 代理移至 `.claude/commands/AIOX/agents/`
+- **IDE 配置**：Claude Code 代理移至 `.claude/commands/YARD/agents/`
 - **文件位置**：
   - `docs/architecture/coding-standards.md` → `docs/framework/coding-standards.md`
   - `docs/architecture/tech-stack.md` → `docs/framework/tech-stack.md`
@@ -140,7 +140,7 @@ Synkra AIOX 的所有重要变更都将记录在此文件中。
 
 ### 新增
 
-- Synkra AIOX 首次公开发布
+- Synkra YARD 首次公开发布
 - 11 个专业 AI 代理（dev、qa、architect、pm、po、sm、analyst、ux-expert、data-engineer、devops、db-sage）
 - 任务工作流系统，含 60+ 个预构建任务
 - 模板系统，含 20+ 个文档模板

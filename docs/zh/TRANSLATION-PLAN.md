@@ -1,4 +1,4 @@
-# Synkra AIOX 中文文档翻译计划
+# Synkra YARD 中文文档翻译计划
 
 > 🌐 [EN](../TRANSLATION-PLAN.md) | [PT](../pt/TRANSLATION-PLAN.md) | [ES](../es/TRANSLATION-PLAN.md) | **ZH**
 
@@ -6,7 +6,7 @@
 
 ## 概述
 
-本文档描述了将 Synkra AIOX 文档翻译成中文的完整计划。
+本文档描述了将 Synkra YARD 文档翻译成中文的完整计划。
 
 ### 翻译范围统计
 
@@ -24,7 +24,7 @@
 
 ### 第一阶段：核心文档 (Tier 1 - Critical)
 
-**目标：** 让中文用户能够安装和开始使用 AIOX
+**目标：** 让中文用户能够安装和开始使用 YARD
 
 **预计文件数：** 25 个文件
 **优先级：** 最高
@@ -72,38 +72,38 @@
 **预计文件数：** 35 个文件
 **优先级：** 高
 
-**代理流程文档 (aiox-agent-flows/)：**
+**代理流程文档 (yard-agent-flows/)：**
 
 | 文档 | 原文路径 | 译文路径 | 状态 |
 |------|----------|----------|------|
-| 代理流程 README | `aiox-agent-flows/README.md` | `zh/aiox-agent-flows/README.md` | ⬜ |
-| AIOX Master 系统 | `aiox-agent-flows/aiox-master-system.md` | `zh/aiox-agent-flows/aiox-master-system.md` | ⬜ |
-| 开发者系统 | `aiox-agent-flows/dev-system.md` | `zh/aiox-agent-flows/dev-system.md` | ⬜ |
-| 架构师系统 | `aiox-agent-flows/architect-system.md` | `zh/aiox-agent-flows/architect-system.md` | ⬜ |
-| QA 系统 | `aiox-agent-flows/qa-system.md` | `zh/aiox-agent-flows/qa-system.md` | ⬜ |
-| UX 设计专家系统 | `aiox-agent-flows/ux-design-expert-system.md` | `zh/aiox-agent-flows/ux-design-expert-system.md` | ⬜ |
-| 数据工程师系统 | `aiox-agent-flows/data-engineer-system.md` | `zh/aiox-agent-flows/data-engineer-system.md` | ⬜ |
-| 分析师系统 | `aiox-agent-flows/analyst-system.md` | `zh/aiox-agent-flows/analyst-system.md` | ⬜ |
-| 产品经理系统 | `aiox-agent-flows/pm-system.md` | `zh/aiox-agent-flows/pm-system.md` | ⬜ |
-| Scrum Master 系统 | `aiox-agent-flows/sm-system.md` | `zh/aiox-agent-flows/sm-system.md` | ⬜ |
-| DevOps 系统 | `aiox-agent-flows/devops-system.md` | `zh/aiox-agent-flows/devops-system.md` | ⬜ |
-| Squad 创建者系统 | `aiox-agent-flows/squad-creator-system.md` | `zh/aiox-agent-flows/squad-creator-system.md` | ⬜ |
+| 代理流程 README | `yard-agent-flows/README.md` | `zh/yard-agent-flows/README.md` | ⬜ |
+| YARD Master 系统 | `yard-agent-flows/yard-master-system.md` | `zh/yard-agent-flows/yard-master-system.md` | ⬜ |
+| 开发者系统 | `yard-agent-flows/dev-system.md` | `zh/yard-agent-flows/dev-system.md` | ⬜ |
+| 架构师系统 | `yard-agent-flows/architect-system.md` | `zh/yard-agent-flows/architect-system.md` | ⬜ |
+| QA 系统 | `yard-agent-flows/qa-system.md` | `zh/yard-agent-flows/qa-system.md` | ⬜ |
+| UX 设计专家系统 | `yard-agent-flows/ux-design-expert-system.md` | `zh/yard-agent-flows/ux-design-expert-system.md` | ⬜ |
+| 数据工程师系统 | `yard-agent-flows/data-engineer-system.md` | `zh/yard-agent-flows/data-engineer-system.md` | ⬜ |
+| 分析师系统 | `yard-agent-flows/analyst-system.md` | `zh/yard-agent-flows/analyst-system.md` | ⬜ |
+| 产品经理系统 | `yard-agent-flows/pm-system.md` | `zh/yard-agent-flows/pm-system.md` | ⬜ |
+| Scrum Master 系统 | `yard-agent-flows/sm-system.md` | `zh/yard-agent-flows/sm-system.md` | ⬜ |
+| DevOps 系统 | `yard-agent-flows/devops-system.md` | `zh/yard-agent-flows/devops-system.md` | ⬜ |
+| Squad 创建者系统 | `yard-agent-flows/squad-creator-system.md` | `zh/yard-agent-flows/squad-creator-system.md` | ⬜ |
 
-**工作流文档 (aiox-workflows/)：**
+**工作流文档 (yard-workflows/)：**
 
 | 文档 | 原文路径 | 译文路径 | 状态 |
 |------|----------|----------|------|
-| 工作流 README | `aiox-workflows/README.md` | `zh/aiox-workflows/README.md` | ⬜ |
-| 绿地全栈工作流 | `aiox-workflows/greenfield-fullstack-workflow.md` | `zh/aiox-workflows/greenfield-fullstack-workflow.md` | ⬜ |
-| 绿地服务工作流 | `aiox-workflows/greenfield-service-workflow.md` | `zh/aiox-workflows/greenfield-service-workflow.md` | ⬜ |
-| 绿地 UI 工作流 | `aiox-workflows/greenfield-ui-workflow.md` | `zh/aiox-workflows/greenfield-ui-workflow.md` | ⬜ |
-| 棕地全栈工作流 | `aiox-workflows/brownfield-fullstack-workflow.md` | `zh/aiox-workflows/brownfield-fullstack-workflow.md` | ⬜ |
-| 棕地服务工作流 | `aiox-workflows/brownfield-service-workflow.md` | `zh/aiox-workflows/brownfield-service-workflow.md` | ⬜ |
-| 棕地 UI 工作流 | `aiox-workflows/brownfield-ui-workflow.md` | `zh/aiox-workflows/brownfield-ui-workflow.md` | ⬜ |
-| 棕地发现工作流 | `aiox-workflows/brownfield-discovery-workflow.md` | `zh/aiox-workflows/brownfield-discovery-workflow.md` | ⬜ |
-| 规格流水线工作流 | `aiox-workflows/spec-pipeline-workflow.md` | `zh/aiox-workflows/spec-pipeline-workflow.md` | ⬜ |
-| QA 循环工作流 | `aiox-workflows/qa-loop-workflow.md` | `zh/aiox-workflows/qa-loop-workflow.md` | ⬜ |
-| Story 开发周期 | `aiox-workflows/story-development-cycle-workflow.md` | `zh/aiox-workflows/story-development-cycle-workflow.md` | ⬜ |
+| 工作流 README | `yard-workflows/README.md` | `zh/yard-workflows/README.md` | ⬜ |
+| 绿地全栈工作流 | `yard-workflows/greenfield-fullstack-workflow.md` | `zh/yard-workflows/greenfield-fullstack-workflow.md` | ⬜ |
+| 绿地服务工作流 | `yard-workflows/greenfield-service-workflow.md` | `zh/yard-workflows/greenfield-service-workflow.md` | ⬜ |
+| 绿地 UI 工作流 | `yard-workflows/greenfield-ui-workflow.md` | `zh/yard-workflows/greenfield-ui-workflow.md` | ⬜ |
+| 棕地全栈工作流 | `yard-workflows/brownfield-fullstack-workflow.md` | `zh/yard-workflows/brownfield-fullstack-workflow.md` | ⬜ |
+| 棕地服务工作流 | `yard-workflows/brownfield-service-workflow.md` | `zh/yard-workflows/brownfield-service-workflow.md` | ⬜ |
+| 棕地 UI 工作流 | `yard-workflows/brownfield-ui-workflow.md` | `zh/yard-workflows/brownfield-ui-workflow.md` | ⬜ |
+| 棕地发现工作流 | `yard-workflows/brownfield-discovery-workflow.md` | `zh/yard-workflows/brownfield-discovery-workflow.md` | ⬜ |
+| 规格流水线工作流 | `yard-workflows/spec-pipeline-workflow.md` | `zh/yard-workflows/spec-pipeline-workflow.md` | ⬜ |
+| QA 循环工作流 | `yard-workflows/qa-loop-workflow.md` | `zh/yard-workflows/qa-loop-workflow.md` | ⬜ |
+| Story 开发周期 | `yard-workflows/story-development-cycle-workflow.md` | `zh/yard-workflows/story-development-cycle-workflow.md` | ⬜ |
 
 **代理定义：**
 
@@ -126,7 +126,7 @@
 | 架构索引 | `architecture/ARCHITECTURE-INDEX.md` | `zh/architecture/ARCHITECTURE-INDEX.md` | ⬜ |
 | 架构简介 | `architecture/introduction.md` | `zh/architecture/introduction.md` | ⬜ |
 | 高级架构 | `architecture/high-level-architecture.md` | `zh/architecture/high-level-architecture.md` | ⬜ |
-| AIOX 视觉概览 | `architecture/AIOX-VISUAL-OVERVIEW.md` | `zh/architecture/AIOX-VISUAL-OVERVIEW.md` | ⬜ |
+| YARD 视觉概览 | `architecture/YARD-VISUAL-OVERVIEW.md` | `zh/architecture/YARD-VISUAL-OVERVIEW.md` | ⬜ |
 | 模块系统 | `architecture/module-system.md` | `zh/architecture/module-system.md` | ⬜ |
 | 源码树 | `architecture/source-tree.md` | `zh/architecture/source-tree.md` | ⬜ |
 | 命令权限矩阵 | `architecture/command-authority-matrix.md` | `zh/architecture/command-authority-matrix.md` | ⬜ |
@@ -233,7 +233,7 @@
 | Pipeline | 流水线 | 管線 | |
 | Gate | 门控 | 門控 | 质量门控 |
 | Persona | 角色 / 人格 | 角色 / 人格 | |
-| Constitution | 宪法 / 准则 | 憲法 / 準則 | AIOX Constitution |
+| Constitution | 宪法 / 准则 | 憲法 / 準則 | YARD Constitution |
 | CLI | CLI / 命令行 | CLI / 命令列 | |
 | Hook | 钩子 | 鉤子 | |
 | MCP | MCP | MCP | 不翻译 |
@@ -243,7 +243,7 @@
 
 1. **保持技术准确性** - 技术术语优先使用行业标准翻译
 2. **代码不翻译** - 代码块、变量名、命令保持英文
-3. **保留品牌名** - Synkra、AIOX、Claude 等品牌名不翻译
+3. **保留品牌名** - Synkra、YARD、Claude 等品牌名不翻译
 4. **链接更新** - 更新文档内部链接指向中文版本
 5. **同步标记** - 每个文件标注原文版本和同步日期
 
@@ -314,9 +314,9 @@ docs/zh/
 │   └── squad-examples/
 │       └── README.md
 │
-├── aiox-agent-flows/                   # 代理流程
+├── yard-agent-flows/                   # 代理流程
 │   ├── README.md
-│   ├── aiox-master-system.md
+│   ├── yard-master-system.md
 │   ├── dev-system.md
 │   ├── architect-system.md
 │   ├── qa-system.md
@@ -328,7 +328,7 @@ docs/zh/
 │   ├── devops-system.md
 │   └── squad-creator-system.md
 │
-├── aiox-workflows/                     # 工作流
+├── yard-workflows/                     # 工作流
 │   ├── README.md
 │   ├── greenfield-fullstack-workflow.md
 │   ├── greenfield-service-workflow.md
@@ -345,7 +345,7 @@ docs/zh/
 │   ├── ARCHITECTURE-INDEX.md
 │   ├── introduction.md
 │   ├── high-level-architecture.md
-│   ├── AIOX-VISUAL-OVERVIEW.md
+│   ├── YARD-VISUAL-OVERVIEW.md
 │   ├── module-system.md
 │   ├── source-tree.md
 │   ├── command-authority-matrix.md
@@ -504,5 +504,5 @@ docs/zh/
 
 ---
 
-*Synkra AIOX 中文文档翻译计划 v1.0*
+*Synkra YARD 中文文档翻译计划 v1.0*
 *创建日期：2026-02-22*

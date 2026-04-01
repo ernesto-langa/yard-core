@@ -463,7 +463,7 @@ flowchart LR
 
 **状态：** 所有故事已实现和审查
 
-**参考：** `.yard-core/data/aiox-kb.md#IDE Development Workflow`
+**参考：** `.yard-core/data/yard-kb.md#IDE Development Workflow`
 
 ---
 
@@ -518,7 +518,7 @@ flowchart LR
 
 - [ ] GitHub CLI已配置 (`gh auth status`)
 - [ ] 如适用，可访问PM工具 (ClickUp/GitHub/Jira)
-- [ ] AIOX核心配置已配置 (`.yard-core/core-config.yaml`)
+- [ ] YARD核心配置已配置 (`.yard-core/core-config.yaml`)
 
 ---
 

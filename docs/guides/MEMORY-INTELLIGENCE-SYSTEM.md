@@ -10,7 +10,7 @@
 
 > **NOTA:** Este documento descreve o **estado futuro** do sistema de memoria apos todas as 7 stories do Epic MIS serem implementadas. Para o estado atual, consulte [MEMORY-SYSTEM.md](MEMORY-SYSTEM.md).
 
-> **ARQUITETURA:** O MIS segue o modelo **Open Core** do AIOX. Toda a inteligencia de memoria reside no repositorio privado `aiox-pro` (submodule `pro/`). O `yard-core` (open source) fornece apenas extension points e funciona 100% sem memoria inteligente — exatamente como hoje.
+> **ARQUITETURA:** O MIS segue o modelo **Open Core** do YARD. Toda a inteligencia de memoria reside no repositorio privado `yard-pro` (submodule `pro/`). O `yard-core` (open source) fornece apenas extension points e funciona 100% sem memoria inteligente — exatamente como hoje.
 
 ---
 
@@ -43,7 +43,7 @@
 
 ### O Problema (Estado Atual)
 
-O sistema de memoria atual opera em **duas camadas desconectadas** (Claude Code nativo + AIOX Framework) com gaps criticos:
+O sistema de memoria atual opera em **duas camadas desconectadas** (Claude Code nativo + YARD Framework) com gaps criticos:
 
 - **Sem session-digest** — conhecimento contextual evapora ao fechar sessao
 - **Sem retrieval inteligente** — agentes carregam tudo-ou-nada (200 linhas de MEMORY.md)
@@ -59,14 +59,14 @@ O MIS unifica as duas camadas em um sistema inteligente de 4 camadas, seguindo o
 | Camada | Funcao | Repositorio | Story |
 |--------|--------|-------------|-------|
 | **Cleanup** | Remover dead code, preparar base | **yard-core** | MIS-2 |
-| **Capture** | Captura conhecimento de sessao via hooks | **aiox-pro** | MIS-3 |
-| **Storage** | Armazena em Markdown com frontmatter YAML | **aiox-pro** | MIS-3, MIS-4 |
-| **Retrieval** | Recupera por relevancia com progressive disclosure | **aiox-pro** + extension points em **yard-core** | MIS-4, MIS-6 |
-| **Evolution** | Aprende e evolui regras automaticamente | **aiox-pro** | MIS-5, MIS-7 |
+| **Capture** | Captura conhecimento de sessao via hooks | **yard-pro** | MIS-3 |
+| **Storage** | Armazena em Markdown com frontmatter YAML | **yard-pro** | MIS-3, MIS-4 |
+| **Retrieval** | Recupera por relevancia com progressive disclosure | **yard-pro** + extension points em **yard-core** | MIS-4, MIS-6 |
+| **Evolution** | Aprende e evolui regras automaticamente | **yard-pro** | MIS-5, MIS-7 |
 
 ### Principios Chave (vs Estado Atual)
 
-| Aspecto | Estado Atual | Com MIS (aiox-pro ativo) | Sem MIS (yard-core only) |
+| Aspecto | Estado Atual | Com MIS (yard-pro ativo) | Sem MIS (yard-core only) |
 |---------|-------------|--------------------------|--------------------------|
 | Session end | Nada acontece | PreCompact digest captura aprendizados | Nada acontece (como hoje) |
 | Memory load | MEMORY.md (200 linhas, tudo-ou-nada) | Progressive disclosure (HOT/WARM/COLD) | MEMORY.md (como hoje) |
@@ -80,7 +80,7 @@ O MIS unifica as duas camadas em um sistema inteligente de 4 camadas, seguindo o
 
 ### Principio Fundamental
 
-> **yard-core funciona 100% sem o MIS** — exatamente como funciona hoje. Quando `aiox-pro` esta presente (submodule `pro/`), o MIS se conecta automaticamente via extension points. Zero configuracao manual.
+> **yard-core funciona 100% sem o MIS** — exatamente como funciona hoje. Quando `yard-pro` esta presente (submodule `pro/`), o MIS se conecta automaticamente via extension points. Zero configuracao manual.
 
 ### Modelo Open Core
 
@@ -95,7 +95,7 @@ flowchart LR
         C5["Extension Points<br/>(isProAvailable checks)"]
     end
 
-    subgraph PRO["aiox-pro (Privado, Submodule pro/)"]
+    subgraph PRO["yard-pro (Privado, Submodule pro/)"]
         direction TB
         P1["pro/memory/session-digest.js"]
         P2["pro/memory/memory-index.js"]
@@ -166,7 +166,7 @@ Features adicionais a registrar:
 | `.yard-core/core/session/context-loader.js` | Mantido | Path fix (MIS-2), funciona standalone |
 | `.claude/settings.json` | Modificacao | Hook stubs que chamam scripts em `pro/` (graceful fail se ausente) |
 
-#### aiox-pro (privado) — Toda a Inteligencia
+#### yard-pro (privado) — Toda a Inteligencia
 
 | Arquivo | Camada MIS | Story |
 |---------|-----------|-------|
@@ -279,7 +279,7 @@ Correcoes do usuario sao capturadas, padroes extraidos, regras propostas com con
 
 Cada agente tem memoria privada + acesso a memorias compartilhadas. Sem cross-contaminacao.
 
-### 8. Open Core (AIOX PRO pattern)
+### 8. Open Core (YARD PRO pattern)
 
 Toda a inteligencia de memoria e uma feature premium. O core funciona identicamente sem ela. A integracao e automatica via extension points + `isProAvailable()`.
 
@@ -304,7 +304,7 @@ flowchart TB
         CTX_LOADER["context-loader.js<br/>(standalone)"]
     end
 
-    subgraph PRO_BOUNDARY["aiox-pro (Privado — pro/)"]
+    subgraph PRO_BOUNDARY["yard-pro (Privado — pro/)"]
         subgraph CAPTURE["CAMADA 1: CAPTURE"]
             C1["session-digest.js<br/>PreCompact + Stop"]
             C2["gotcha-capture.js<br/>PostToolUseFailure"]
@@ -377,7 +377,7 @@ flowchart LR
         PD["bin/utils/<br/>pro-detector.js"]
     end
 
-    subgraph PRO["aiox-pro (pro/)"]
+    subgraph PRO["yard-pro (pro/)"]
         SD["memory/<br/>session-digest.js"]
         GC["memory/<br/>gotcha-capture.js"]
         MI["memory/<br/>memory-index.js"]
@@ -419,7 +419,7 @@ flowchart LR
 
 ## Camada 1: Capture Layer
 
-> **Repositorio:** `aiox-pro` (pro/memory/)
+> **Repositorio:** `yard-pro` (pro/memory/)
 > **Extension point no core:** `.yard-core/hooks/pro-hook-runner.js`
 
 ### Visao Geral
@@ -476,7 +476,7 @@ flowchart TD
         HR["pro-hook-runner.js"]
     end
 
-    subgraph PRO_CAPTURE["aiox-pro: pro/memory/"]
+    subgraph PRO_CAPTURE["yard-pro: pro/memory/"]
         subgraph EXTRACTORS["Extractors"]
             EX1["Session Digest Extractor<br/>Decisoes, erros, progresso"]
             EX2["Gotcha Extractor<br/>Erro 3x → auto-gotcha"]
@@ -504,7 +504,7 @@ flowchart TD
 
 ## Camada 2: Storage Layer
 
-> **Repositorio:** `aiox-pro` (pro/memory/) gerencia o storage
+> **Repositorio:** `yard-pro` (pro/memory/) gerencia o storage
 > **Storage location:** `.yard/memories/` (gitignored, criado pelo pro)
 
 ### Principio: Files as Memory
@@ -574,7 +574,7 @@ flowchart LR
 
 ## Camada 3: Retrieval Layer
 
-> **Repositorio:** `aiox-pro` (pro/memory/memory-retriever.js, memory-loader.js)
+> **Repositorio:** `yard-pro` (pro/memory/memory-retriever.js, memory-loader.js)
 > **Extension point no core:** `unified-activation-pipeline.js` (Tier 2 conditional load)
 
 ### Progressive Disclosure (3 Niveis)
@@ -618,7 +618,7 @@ flowchart TD
 
 ## Camada 4: Evolution Layer
 
-> **Repositorio:** `aiox-pro` (pro/memory/self-learner.js, rule-proposer.js)
+> **Repositorio:** `yard-pro` (pro/memory/self-learner.js, rule-proposer.js)
 > **Nenhum extension point no core** — esta camada e 100% pro
 
 ### Fluxo de Auto-Evolucao
@@ -673,7 +673,7 @@ sequenceDiagram
     participant CC as Claude Code
     participant HR as pro-hook-runner.js<br/>(yard-core)
     participant PD as pro-detector.js<br/>(yard-core)
-    participant SD as session-digest.js<br/>(aiox-pro)
+    participant SD as session-digest.js<br/>(yard-pro)
     participant FS as .yard/memories/
 
     Note over CC: Contexto proximo do limite
@@ -714,7 +714,7 @@ sequenceDiagram
 
 ## Agent Memory API
 
-> **Repositorio:** `aiox-pro` (pro/memory/agent-memory-api.js)
+> **Repositorio:** `yard-pro` (pro/memory/agent-memory-api.js)
 > **Sem pro:** Comandos `*recall`, `*remember` nao existem (agente opera como hoje)
 
 ### Comandos Disponiveis (com pro)
@@ -756,8 +756,8 @@ Cada agente acessa:
 sequenceDiagram
     participant UAP as UnifiedActivationPipeline<br/>(yard-core)
     participant PD as pro-detector.js<br/>(yard-core)
-    participant ML as memory-loader.js<br/>(aiox-pro)
-    participant MR as memory-retriever.js<br/>(aiox-pro)
+    participant ML as memory-loader.js<br/>(yard-pro)
+    participant MR as memory-retriever.js<br/>(yard-pro)
     participant GB as GreetingBuilder<br/>(yard-core)
 
     Note over UAP: ANTES: Claude Code ja carregou<br/>CLAUDE.md, rules, MEMORY.md
@@ -829,7 +829,7 @@ related_memories: [mem-2026-02-08-003]
 evidence_count: 5
 ---
 
-# Always Use Absolute Imports in AIOX
+# Always Use Absolute Imports in YARD
 
 ## Pattern
 Use `@/` prefix for all imports. Never use relative imports (`../`).
@@ -894,7 +894,7 @@ Decay rates por tier:
 
 ## Self-Learning & Auto-Evolution
 
-> **100% em aiox-pro** — nenhum componente de self-learning no core
+> **100% em yard-pro** — nenhum componente de self-learning no core
 
 ### Exemplos de Evolucao
 
@@ -943,8 +943,8 @@ Sessao 7: Erro "EACCES permission denied" 3x → auto-gotcha
 └── {session-id}.jsonl                        # [NATIVO] Full transcript
 
 .claude/agent-memory/                         # [NATIVO] Per-agent memory
-├── aiox-architect/MEMORY.md
-├── aiox-dev/MEMORY.md
+├── yard-architect/MEMORY.md
+├── yard-dev/MEMORY.md
 └── .../MEMORY.md
 ```
 
@@ -966,7 +966,7 @@ Sessao 7: Erro "EACCES permission denied" 3x → auto-gotcha
 | `.yard-core/core/session/context-loader.js` | **Path fix** | MIS-2 | Corrige `.yard/session-state.json` |
 | `.claude/settings.json` | **Modificacao** | MIS-3 | Hook stubs via pro-hook-runner.js |
 
-### aiox-pro (Privado) — Toda a Inteligencia
+### yard-pro (Privado) — Toda a Inteligencia
 
 | Arquivo | Camada | Story | Descricao |
 |---------|--------|-------|-----------|
@@ -996,7 +996,7 @@ Sessao 7: Erro "EACCES permission denied" 3x → auto-gotcha
 
 ## Diferencas: Estado Atual vs MIS
 
-| Aspecto | yard-core hoje | yard-core + aiox-pro (MIS) | yard-core sem pro |
+| Aspecto | yard-core hoje | yard-core + yard-pro (MIS) | yard-core sem pro |
 |---------|---------------|---------------------------|------------------|
 | **Camadas** | 2 desconectadas | 4 integradas via pro | 2 desconectadas (como hoje) |
 | **Session end** | Nada | PreCompact digest + Stop flush | Nada (como hoje) |
@@ -1021,11 +1021,11 @@ gantt
     MIS-1 Investigation (Done)           :done, mis1, 2026-02-09, 1d
     MIS-2 Dead Code Cleanup              :active, mis2, after mis1, 1d
 
-    section yard-core + aiox-pro
+    section yard-core + yard-pro
     MIS-3 Session Digest                 :mis3, after mis1, 3d
     MIS-6 Pipeline Integration           :mis6, after mis4, 2d
 
-    section aiox-pro
+    section yard-pro
     MIS-4 Progressive Retrieval          :mis4, after mis3, 3d
     MIS-5 Self-Learning Engine           :mis5, after mis3, 3d
     MIS-7 Auto-Evolution                 :mis7, after mis5, 2d
@@ -1035,11 +1035,11 @@ gantt
 |-------|--------|-------------|------------|-------|
 | MIS-1 | Investigation & Architecture Design | docs (yard-core) | — | 12h (Done) |
 | MIS-2 | Dead Code Cleanup & Path Repair | **yard-core** | MIS-1 | 4h |
-| MIS-3 | Session Digest (PreCompact Hook) | **yard-core** (hook runner) + **aiox-pro** (digest) | MIS-1 | 14h |
-| MIS-4 | Progressive Memory Retrieval | **aiox-pro** | MIS-3 | 16h |
-| MIS-5 | Self-Learning Engine | **aiox-pro** | MIS-3, MIS-4 | 14h |
-| MIS-6 | Pipeline Integration & Agent Memory API | **yard-core** (ext points) + **aiox-pro** (loader) | MIS-4 | 10h |
-| MIS-7 | CLAUDE.md & Rules Auto-Evolution | **aiox-pro** | MIS-5 | 8h |
+| MIS-3 | Session Digest (PreCompact Hook) | **yard-core** (hook runner) + **yard-pro** (digest) | MIS-1 | 14h |
+| MIS-4 | Progressive Memory Retrieval | **yard-pro** | MIS-3 | 16h |
+| MIS-5 | Self-Learning Engine | **yard-pro** | MIS-3, MIS-4 | 14h |
+| MIS-6 | Pipeline Integration & Agent Memory API | **yard-core** (ext points) + **yard-pro** (loader) | MIS-4 | 10h |
+| MIS-7 | CLAUDE.md & Rules Auto-Evolution | **yard-pro** | MIS-5 | 8h |
 | **Total** | | | | **~78h** |
 
 ---
@@ -1062,7 +1062,7 @@ gantt
 | Epic MIS Index | [EPIC-MIS-INDEX.md](../stories/epics/epic-memory-intelligence-system/EPIC-MIS-INDEX.md) |
 | MIS-1 Investigation | [story-mis-1-investigation.md](../stories/epics/epic-memory-intelligence-system/story-mis-1-investigation.md) |
 | MIS-2 Dead Code Cleanup | [story-mis-2-dead-code-cleanup.md](../stories/epics/epic-memory-intelligence-system/story-mis-2-dead-code-cleanup.md) |
-| Epic PRO Architecture | [EPIC-PRO-INDEX.md](../stories/epics/epic-pro-aiox-pro-architecture/EPIC-PRO-INDEX.md) |
+| Epic PRO Architecture | [EPIC-PRO-INDEX.md](../stories/epics/epic-pro-yard-pro-architecture/EPIC-PRO-INDEX.md) |
 | ADR-PRO-001 Repository Strategy | [adr-pro-001-repository-strategy.md](../architecture/adr/adr-pro-001-repository-strategy.md) |
 | ADR-PRO-003 Feature Gating | [adr-pro-003-feature-gating-licensing.md](../architecture/adr/adr-pro-003-feature-gating-licensing.md) |
 | Pro Detector | [bin/utils/pro-detector.js](../../bin/utils/pro-detector.js) |
@@ -1070,8 +1070,8 @@ gantt
 
 ---
 
-*AIOX Memory Intelligence System — Architecture Vision v4.0.4 (Core/Pro Split)*
+*YARD Memory Intelligence System — Architecture Vision v4.0.4 (Core/Pro Split)*
 *Target state apos Epic MIS completo (7 stories, ~78 horas)*
 *yard-core: extension points + dead code cleanup*
-*aiox-pro: toda a inteligencia de memoria (Capture, Storage, Retrieval, Evolution)*
+*yard-pro: toda a inteligencia de memoria (Capture, Storage, Retrieval, Evolution)*
 *@architect (Aria) — arquitetando o futuro*

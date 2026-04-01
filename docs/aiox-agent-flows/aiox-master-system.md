@@ -1,21 +1,21 @@
-# Sistema do Agente @aiox-master
+# Sistema do Agente @yard-master
 
 > **Versão:** 1.0.0
 > **Criado:** 2026-02-04
-> **Owner:** @aiox-master (Orion)
+> **Owner:** @yard-master (Orion)
 > **Status:** Documentação Oficial
 
 ---
 
 ## Visão Geral
 
-O **@aiox-master** (Orion - The Orchestrator) e o meta-agente principal do framework AIOX-FULLSTACK. Ele atua como orquestrador universal, desenvolvedor de framework e especialista no metodo AIOX. Suas principais responsabilidades incluem:
+O **@yard-master** (Orion - The Orchestrator) e o meta-agente principal do framework YARD-FULLSTACK. Ele atua como orquestrador universal, desenvolvedor de framework e especialista no metodo YARD. Suas principais responsabilidades incluem:
 
 - **Orquestracao Universal**: Executa qualquer task de qualquer agente diretamente
 - **Desenvolvimento de Framework**: Cria e modifica agentes, tasks, workflows e templates
 - **Gestao de Componentes**: Valida, deprecia e analisa componentes do sistema
 - **Coordenacao Multi-Agente**: Gerencia workflows complexos entre multiplos agentes
-- **Knowledge Base**: Acesso ao conhecimento completo do AIOX Method
+- **Knowledge Base**: Acesso ao conhecimento completo do YARD Method
 
 ### Quando Usar
 
@@ -23,13 +23,13 @@ O **@aiox-master** (Orion - The Orchestrator) e o meta-agente principal do frame
 - Orquestrar workflows multi-agente complexos
 - Executar qualquer task diretamente sem transformacao de persona
 - Operacoes de meta-framework e coordenacao cross-agente
-- Acessar o Knowledge Base do AIOX (*kb)
+- Acessar o Knowledge Base do YARD (*kb)
 
 ---
 
 ## Lista Completa de Arquivos
 
-### Arquivos Core de Tasks do @aiox-master
+### Arquivos Core de Tasks do @yard-master
 
 | Arquivo | Comando | Propósito |
 |---------|---------|-----------|
@@ -59,10 +59,10 @@ O **@aiox-master** (Orion - The Orchestrator) e o meta-agente principal do frame
 
 | Arquivo | Propósito |
 |---------|-----------|
-| `.yard-core/development/agents/aiox-master.md` | Definição completa do agente (persona, comandos, dependencias) |
-| `.claude/commands/AIOX/agents/aiox-master.md` | Comando Claude Code para ativar @aiox-master |
+| `.yard-core/development/agents/yard-master.md` | Definição completa do agente (persona, comandos, dependencias) |
+| `.claude/commands/YARD/agents/yard-master.md` | Comando Claude Code para ativar @yard-master |
 
-### Arquivos de Templates do @aiox-master
+### Arquivos de Templates do @yard-master
 
 | Arquivo | Propósito |
 |---------|-----------|
@@ -85,7 +85,7 @@ O **@aiox-master** (Orion - The Orchestrator) e o meta-agente principal do frame
 
 | Arquivo | Propósito |
 |---------|-----------|
-| `.yard-core/development/data/aiox-kb.md` | Knowledge Base do AIOX Method |
+| `.yard-core/development/data/yard-kb.md` | Knowledge Base do YARD Method |
 | `.yard-core/development/data/brainstorming-techniques.md` | Tecnicas de brainstorming |
 | `.yard-core/development/data/elicitation-methods.md` | Metodos de elicitacao |
 | `.yard-core/development/data/technical-preferences.md` | Preferencias tecnicas |
@@ -93,7 +93,7 @@ O **@aiox-master** (Orion - The Orchestrator) e o meta-agente principal do frame
 | `.yard-core/development/utils/yaml-validator.js` | Validador de YAML |
 | `.yard-core/development/utils/workflow-management.md` | Gestao de workflows |
 
-### Arquivos de Workflows do @aiox-master
+### Arquivos de Workflows do @yard-master
 
 | Arquivo | Propósito |
 |---------|-----------|
@@ -104,7 +104,7 @@ O **@aiox-master** (Orion - The Orchestrator) e o meta-agente principal do frame
 | `.yard-core/development/workflows/greenfield-service.md` | Workflow servico greenfield |
 | `.yard-core/development/workflows/greenfield-ui.md` | Workflow UI greenfield |
 
-### Arquivos de Checklists do @aiox-master
+### Arquivos de Checklists do @yard-master
 
 | Arquivo | Propósito |
 |---------|-----------|
@@ -133,11 +133,11 @@ O **@aiox-master** (Orion - The Orchestrator) e o meta-agente principal do frame
 flowchart TB
     subgraph ACTIVATION["🚀 ATIVACAO"]
         USER["👤 Usuario"]
-        ACTIVATE["@aiox-master"]
+        ACTIVATE["@yard-master"]
         GREETING["UnifiedActivationPipeline<br/>Saudacao Inteligente"]
     end
 
-    USER -->|"@aiox-master"| ACTIVATE
+    USER -->|"@yard-master"| ACTIVATE
     ACTIVATE --> GREETING
 
     subgraph COMMANDS["👑 COMANDOS PRINCIPAIS"]
@@ -322,7 +322,7 @@ stateDiagram-v2
 
 ```mermaid
 flowchart LR
-    subgraph MASTER["👑 @aiox-master (Orion)"]
+    subgraph MASTER["👑 @yard-master (Orion)"]
         MASTER_DESC["Orquestra todos os agentes<br/>Cria/modifica componentes<br/>Executa qualquer task"]
     end
 
@@ -497,7 +497,7 @@ agent:
 **Sintoma:** Conhecimento não disponivel apos `*kb`
 
 **Solucao:**
-1. Verifique existencia de `.yard-core/development/data/aiox-kb.md`
+1. Verifique existencia de `.yard-core/development/data/yard-kb.md`
 2. Certifique-se de que arquivo não esta corrompido
 3. Reinicie o agente se necessario
 
@@ -525,14 +525,14 @@ agent:
 
 ### Arquivos Core
 
-- [Agente aiox-master](.yard-core/development/agents/aiox-master.md)
-- [Knowledge Base](.yard-core/development/data/aiox-kb.md)
+- [Agente yard-master](.yard-core/development/agents/yard-master.md)
+- [Knowledge Base](.yard-core/development/data/yard-kb.md)
 - [Guia do Usuario](.yard-core/user-guide.md)
 
 ### Standards e Documentação
 
-- [AIOX Framework Master](.yard-core/docs/standards/AIOX-FRAMEWORK-MASTER.md)
-- [AIOX Livro de Ouro](.yard-core/docs/standards/AIOX-LIVRO-DE-OURO.md)
+- [YARD Framework Master](.yard-core/docs/standards/YARD-FRAMEWORK-MASTER.md)
+- [YARD Livro de Ouro](.yard-core/docs/standards/YARD-LIVRO-DE-OURO.md)
 - [Agent Personalization Standard](.yard-core/docs/standards/AGENT-PERSONALIZATION-STANDARD-V1.md)
 
 ### Diretorio de Tasks
@@ -547,7 +547,7 @@ agent:
 
 | Aspecto | Detalhes |
 |---------|----------|
-| **Nome do Agente** | Orion (aiox-master) |
+| **Nome do Agente** | Orion (yard-master) |
 | **Arquetipo** | Orchestrator |
 | **Icone** | 👑 |
 | **Total de Tasks Diretas** | 21 tasks |
@@ -568,7 +568,7 @@ agent:
 
 | Data | Autor | Descrição |
 |------|-------|-----------|
-| 2026-02-04 | @aiox-master | Documento inicial criado com mapeamento completo |
+| 2026-02-04 | @yard-master | Documento inicial criado com mapeamento completo |
 
 ---
 

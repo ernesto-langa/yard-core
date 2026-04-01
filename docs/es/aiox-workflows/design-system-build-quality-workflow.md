@@ -1,10 +1,10 @@
 # Design System Build Quality Workflow
 
-> [PT](../../aiox-workflows/design-system-build-quality-workflow.md) | [EN](../../en/aiox-workflows/design-system-build-quality-workflow.md) | **ES**
+> [PT](../../yard-workflows/design-system-build-quality-workflow.md) | [EN](../../en/yard-workflows/design-system-build-quality-workflow.md) | **ES**
 
 ---
 
-> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../aiox-workflows/design-system-build-quality-workflow.md).
+> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../yard-workflows/design-system-build-quality-workflow.md).
 
 ---
 
@@ -33,7 +33,7 @@ Workflow para construccion de design system, incluyendo:
 
 ## Ver Mas
 
-- **[Documentacion completa (PT)](../../aiox-workflows/design-system-build-quality-workflow.md)**
+- **[Documentacion completa (PT)](../../yard-workflows/design-system-build-quality-workflow.md)**
 
 ---
 

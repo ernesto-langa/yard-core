@@ -1,10 +1,10 @@
-# Guia AIOX para Claude Code
+# Guia YARD para Claude Code
 
 > 🌐 [EN](../../platforms/claude-code.md) | **PT** | [ES](../../es/platforms/claude-code.md)
 
 ---
 
-> **CLI Oficial da Anthropic** - Plataforma Recomendada para AIOX
+> **CLI Oficial da Anthropic** - Plataforma Recomendada para YARD
 
 ---
 
@@ -14,9 +14,9 @@
 
 Claude Code é a interface de linha de comando oficial da Anthropic para o Claude, projetada para desenvolvedores que desejam acesso direto e poderoso às capacidades do Claude em seu terminal e fluxo de trabalho de desenvolvimento.
 
-### Por que usar AIOX com Claude Code?
+### Por que usar YARD com Claude Code?
 
-O Claude Code oferece a **melhor integração** com o AIOX devido a:
+O Claude Code oferece a **melhor integração** com o YARD devido a:
 
 - **Suporte MCP Nativo**: Model Context Protocol integrado para extensões de ferramentas
 - **Task Tool**: Criar subagentes para operações complexas de múltiplas etapas
@@ -95,14 +95,14 @@ claude login
 export ANTHROPIC_API_KEY="sua-chave-api"
 ```
 
-### Passo 3: Instalar o AIOX
+### Passo 3: Instalar o YARD
 
 ```bash
 # Navegue até seu projeto
 cd seu-projeto
 
-# Inicialize o AIOX
-npx @anthropic/aiox init
+# Inicialize o YARD
+npx @anthropic/yard init
 
 # Selecione "Claude Code" quando solicitado para IDE
 ```
@@ -113,7 +113,7 @@ npx @anthropic/aiox init
 # Verificar tipo de instalação e versão
 claude doctor
 
-# Verificar se os arquivos AIOX foram criados
+# Verificar se os arquivos YARD foram criados
 ls -la .claude/
 ```
 
@@ -121,7 +121,7 @@ Estrutura esperada:
 ```
 .claude/
 ├── commands/
-│   └── AIOX/
+│   └── YARD/
 │       └── agents/        # Agentes sincronizados
 ├── settings.json          # Configurações locais
 └── settings.local.json    # Sobrescritas locais
@@ -142,7 +142,7 @@ Este arquivo contém:
 - Contexto e regras do projeto
 - Instruções de ativação de agentes
 - Metodologia de desenvolvimento
-- Entendimento do framework AIOX
+- Entendimento do framework YARD
 
 ### Variáveis de Ambiente
 
@@ -153,7 +153,7 @@ export ANTHROPIC_API_KEY="sk-ant-..."
 # Opcional
 export CLAUDE_MODEL="claude-sonnet-4-20250514"  # Modelo padrão
 export CLAUDE_MAX_TOKENS="8192"                 # Máximo de tokens de resposta
-export AIOX_DEBUG="true"                        # Habilitar log de debug
+export YARD_DEBUG="true"                        # Habilitar log de debug
 ```
 
 ### Arquivo de Configurações
@@ -210,7 +210,7 @@ claude --context "Trabalhando na feature X"
 claude --file src/main.ts
 ```
 
-### Ativando Agentes AIOX
+### Ativando Agentes YARD
 
 Os agentes são ativados usando comandos slash:
 
@@ -403,7 +403,7 @@ O Claude Code mostra status em tempo real:
 flowchart LR
     Source["Yard Core<br/>.yard-core/development/agents"] --> Parser["Parser de Agente"]
     Parser --> Transform["Transformador Claude"]
-    Transform --> Output[".claude/commands/AIOX/agents"]
+    Transform --> Output[".claude/commands/YARD/agents"]
 ```
 
 ### Comandos de Sincronização
@@ -450,7 +450,7 @@ activation: /dev
 
 Quando conflitos ocorrem:
 
-1. Alterações locais são salvas em `.claude/commands/AIOX/agents/.backup/`
+1. Alterações locais são salvas em `.claude/commands/YARD/agents/.backup/`
 2. Sync solicita resolução
 3. Escolha: manter local, usar remoto ou mesclar
 
@@ -524,7 +524,7 @@ Error: Unknown command '/xyz'
 npm run sync:ide
 
 # Verificar se o agente existe
-ls .claude/commands/AIOX/agents/
+ls .claude/commands/YARD/agents/
 ```
 
 #### Permissão de Ferramenta Negada
@@ -545,12 +545,12 @@ Atualize `.claude/settings.json`:
 
 ```bash
 # Habilitar modo debug
-export AIOX_DEBUG=true
+export YARD_DEBUG=true
 
 # Ver logs do Claude Code
 cat ~/.claude/logs/latest.log
 
-# Verificar logs do AIOX
+# Verificar logs do YARD
 cat .yard-core/logs/sync.log
 ```
 
@@ -579,7 +579,7 @@ R: O Claude Code é gratuito, mas custos de uso de API se aplicam baseado no seu
 **P: Posso usar meus próprios modelos?**
 R: O Claude Code suporta apenas os modelos Claude da Anthropic.
 
-### Perguntas Específicas do AIOX
+### Perguntas Específicas do YARD
 
 **P: Como mudo entre agentes?**
 R: Simplesmente use o comando slash para o agente desejado: `/dev`, `/qa`, etc.
@@ -588,10 +588,10 @@ R: Simplesmente use o comando slash para o agente desejado: `/dev`, `/qa`, etc.
 R: Sim, através do Task tool que pode criar subagentes.
 
 **P: Onde as definições de agentes são armazenadas?**
-R: Em `.claude/commands/AIOX/agents/` após a sincronização.
+R: Em `.claude/commands/YARD/agents/` após a sincronização.
 
 **P: Com que frequência devo sincronizar agentes?**
-R: Após atualizar o AIOX ou quando agentes são modificados no core.
+R: Após atualizar o YARD ou quando agentes são modificados no core.
 
 ---
 
@@ -604,9 +604,9 @@ R: Após atualizar o AIOX ou quando agentes são modificados no core.
    cp .cursor/rules.md cursor-rules-backup.md
    ```
 
-2. Inicialize o AIOX com Claude Code:
+2. Inicialize o YARD com Claude Code:
    ```bash
-   npx @anthropic/aiox init --ide claude-code
+   npx @anthropic/yard init --ide claude-code
    ```
 
 3. Migre regras personalizadas:
@@ -620,8 +620,8 @@ R: Após atualizar o AIOX ou quando agentes são modificados no core.
 
 ### Do Claude Code para Outra IDE
 
-1. Seus agentes AIOX estão armazenados em `.yard-core/development/agents/`
-2. Inicialize o AIOX para a IDE de destino
+1. Seus agentes YARD estão armazenados em `.yard-core/development/agents/`
+2. Inicialize o YARD para a IDE de destino
 3. Os agentes serão transformados para o novo formato automaticamente
 
 ---
@@ -645,4 +645,4 @@ R: Após atualizar o AIOX ou quando agentes são modificados no core.
 
 ---
 
-*Synkra AIOX - Guia da Plataforma Claude Code v1.0*
+*Synkra YARD - Guia da Plataforma Claude Code v1.0*

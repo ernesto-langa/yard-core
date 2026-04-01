@@ -1,6 +1,6 @@
 <!-- Traducción: ES | Original: /docs/platforms/en/github-copilot.md | Sincronización: 2026-01-26 -->
 
-# Guía de AIOX para GitHub Copilot
+# Guía de YARD para GitHub Copilot
 
 > 🌐 [EN](../../platforms/github-copilot.md) | [PT](../../pt/platforms/github-copilot.md) | **ES**
 
@@ -16,7 +16,7 @@
 
 GitHub Copilot es el asistente de programación impulsado por IA de GitHub que se integra directamente con VS Code y otros editores. Ofrece finalizaciones de código, asistencia de chat e integración profunda con GitHub para solicitudes de extracción y revisiones de código.
 
-### ¿Por qué usar AIOX con GitHub Copilot?
+### ¿Por qué usar YARD con GitHub Copilot?
 
 GitHub Copilot proporciona ventajas únicas:
 
@@ -46,7 +46,7 @@ GitHub Copilot proporciona ventajas únicas:
 |---|---|---|
 | **VS Code** | 1.101+ | Última versión |
 | **RAM** | 4GB | 8GB+ |
-| **Node.js** | 18.0+ (para AIOX) | 20.0+ |
+| **Node.js** | 18.0+ (para YARD) | 20.0+ |
 
 ### Requisitos de Cuenta
 
@@ -81,11 +81,11 @@ Habilitar el modo agente en VS Code:
 2. Autoriza VS Code
 3. Verifica que la suscripción esté activa
 
-### Paso 3: Instalar AIOX
+### Paso 3: Instalar YARD
 
 ```bash
 cd your-project
-npx @anthropic/aiox init
+npx @anthropic/yard init
 # Selecciona "GitHub Copilot" cuando se le solicite
 ```
 
@@ -100,8 +100,8 @@ Estructura esperada:
 .github/
 ├── copilot-instructions.md    # Instrucciones principales
 ├── chatmodes/                  # Modos de chat del agente
-│   ├── aiox-dev.chatmode.md
-│   ├── aiox-qa.chatmode.md
+│   ├── yard-dev.chatmode.md
+│   ├── yard-qa.chatmode.md
 │   └── ...
 └── agents/                     # Definiciones de agentes
 ```
@@ -120,7 +120,7 @@ Este archivo proporciona contexto global a Copilot:
 # Instrucciones del Proyecto para GitHub Copilot
 
 ## Descripción General del Proyecto
-Este proyecto utiliza Synkra AIOX para desarrollo orquestado por IA.
+Este proyecto utiliza Synkra YARD para desarrollo orquestado por IA.
 
 ## Estándares de Codificación
 - TypeScript con modo estricto
@@ -139,15 +139,15 @@ Utiliza modos de chat para asistencia especializada.
 Cada agente tiene un modo de chat dedicado:
 
 ```markdown
-<!-- aiox-dev.chatmode.md -->
+<!-- yard-dev.chatmode.md -->
 ---
-name: AIOX Developer
+name: YARD Developer
 description: Agente Senior Full Stack Developer
 ---
 
 # Agente de Desarrollador
 
-Eres un Senior Full Stack Developer trabajando con Synkra AIOX.
+Eres un Senior Full Stack Developer trabajando con Synkra YARD.
 
 ## Experiencia
 - TypeScript/JavaScript
@@ -183,32 +183,32 @@ VS Code proporciona cuatro modos integrados:
 | **Ask** | Responde preguntas sin hacer cambios |
 | **Edit** | Control granular sobre las ediciones propuestas |
 
-### Activando Modos de Agentes AIOX
+### Activando Modos de Agentes YARD
 
 1. Abre la vista de Chat
 2. Haz clic en el selector de modo (parte superior del chat)
 3. Selecciona el modo deseado (Agent, Plan, Ask, Edit)
-4. Para agentes AIOX, usa modos de chat personalizados en `.github/chatmodes/`
+4. Para agentes YARD, usa modos de chat personalizados en `.github/chatmodes/`
 
-### Modos Personalizados AIOX
+### Modos Personalizados YARD
 
 | Modo | Propósito |
 |---|---|
-| `aiox-dev` | Desarrollo full-stack |
-| `aiox-qa` | Aseguramiento de calidad |
-| `aiox-architect` | Diseño de sistemas |
-| `aiox-pm` | Gestión de proyectos |
+| `yard-dev` | Desarrollo full-stack |
+| `yard-qa` | Aseguramiento de calidad |
+| `yard-architect` | Diseño de sistemas |
+| `yard-pm` | Gestión de proyectos |
 
 ### Interacciones de Ejemplo
 
 ```
-# En modo aiox-dev:
+# En modo yard-dev:
 Implementa la función de autenticación de usuario de la historia
 
-# En modo aiox-qa:
+# En modo yard-qa:
 Revisa el módulo de auth para vulnerabilidades de seguridad
 
-# En modo aiox-architect:
+# En modo yard-architect:
 Diseña la arquitectura de microservicios
 ```
 
@@ -335,7 +335,7 @@ npm run sync:ide -- --ide github-copilot
 
 ```markdown
 ---
-name: AIOX Developer
+name: YARD Developer
 description: Asistencia en desarrollo full-stack
 ---
 
@@ -393,7 +393,7 @@ Eres un Senior Full Stack Developer.
 
 #### Los Modos de Chat No Aparecen
 ```
-Problema: Los modos de agentes AIOX no aparecen en el selector
+Problema: Los modos de agentes YARD no aparecen en el selector
 ```
 **Solución:**
 1. Asegúrate de tener VS Code 1.101+
@@ -452,9 +452,9 @@ R: Los modos de chat son contextos persistentes, mientras que las @menciones son
 
 ### De Cursor a Copilot
 
-1. Instala AIOX para Copilot:
+1. Instala YARD para Copilot:
    ```bash
-   npx @anthropic/aiox init --ide github-copilot
+   npx @anthropic/yard init --ide github-copilot
    ```
 
 2. Los agentes se transforman en modos de chat
@@ -464,7 +464,7 @@ R: Los modos de chat son contextos persistentes, mientras que las @menciones son
 1. Los agentes almacenados en `.yard-core/` son portables
 2. Inicializa para Claude Code:
    ```bash
-   npx @anthropic/aiox init --ide claude-code
+   npx @anthropic/yard init --ide claude-code
    ```
 
 ---
@@ -477,4 +477,4 @@ R: Los modos de chat son contextos persistentes, mientras que las @menciones son
 
 ---
 
-*Synkra AIOX - Guía de Plataforma GitHub Copilot v1.0*
+*Synkra YARD - Guía de Plataforma GitHub Copilot v1.0*

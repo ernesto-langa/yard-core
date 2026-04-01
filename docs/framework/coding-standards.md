@@ -1,4 +1,4 @@
-# AIOX Coding Standards
+# YARD Coding Standards
 
 > 🌐 **EN** | [PT](../pt/framework/coding-standards.md) | [ES](../es/framework/coding-standards.md)
 
@@ -25,7 +25,7 @@
 
 ## Overview
 
-This document defines the official coding standards for AIOX framework development. All code contributions must adhere to these standards to ensure consistency, maintainability, and quality.
+This document defines the official coding standards for YARD framework development. All code contributions must adhere to these standards to ensure consistency, maintainability, and quality.
 
 **Enforcement:**
 
@@ -535,7 +535,7 @@ if (!taskSchema.validate(taskData)) {
 
 ```javascript
 /**
- * Loads and executes an AIOX agent
+ * Loads and executes an YARD agent
  *
  * @param {string} agentId - Unique identifier for the agent
  * @param {Object} args - Agent execution arguments
@@ -585,7 +585,7 @@ Every module/directory should have a README.md:
 ```markdown
 # Agent Executor
 
-**Purpose:** Loads and executes AIOX agents with configuration management.
+**Purpose:** Loads and executes YARD agents with configuration management.
 
 ## Usage
 
@@ -881,4 +881,4 @@ All PRs automatically reviewed by CodeRabbit for:
 
 ---
 
-_This is an official AIOX framework standard. All code contributions must comply._
+_This is an official YARD framework standard. All code contributions must comply._

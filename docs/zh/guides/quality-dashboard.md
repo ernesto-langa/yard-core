@@ -358,4 +358,4 @@ npx yard-core metrics seed
 
 ---
 
-_Synkra AIOX质量门禁仪表板 v1.0_
+_Synkra YARD质量门禁仪表板 v1.0_

@@ -1,4 +1,4 @@
-# AIOX Architecture Documentation Index
+# YARD Architecture Documentation Index
 
 > 🌐 [EN](../../architecture/ARCHITECTURE-INDEX.md) | **PT** | [ES](../../es/architecture/ARCHITECTURE-INDEX.md)
 
@@ -12,7 +12,7 @@
 
 ## 📋 Document Navigation
 
-This index provides navigation to all architecture documentation for AIOX v4.
+This index provides navigation to all architecture documentation for YARD v4.
 
 > **Note:** Official framework documentation (coding-standards, tech-stack, source-tree) has been consolidated in `docs/framework/`. See [Framework README](../framework/README.md) for details.
 
@@ -39,7 +39,7 @@ docs/architecture/
 
 | Document | Description | Status |
 |----------|-------------|--------|
-| [High-Level Architecture](./high-level-architecture.md) | Overview of AIOX v4 architecture | ✅ Current |
+| [High-Level Architecture](./high-level-architecture.md) | Overview of YARD v4 architecture | ✅ Current |
 | [Module System](./module-system.md) | 4-module modular architecture | ✅ Current |
 | [Memory Layer](./memory-layer.md) | Memory system architecture | ✅ Current |
 
@@ -112,7 +112,7 @@ docs/architecture/
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                     AIOX v4 ARCHITECTURE                              │
+│                     YARD v4 ARCHITECTURE                              │
 │                                                                         │
 │   ┌─────────────────────────────────────────────────────────────────┐   │
 │   │                    MULTI-REPO STRUCTURE                          │   │
@@ -125,7 +125,7 @@ docs/architecture/
 │   │   ┌──────┴───────┐                                               │   │
 │   │   │              │                                               │   │
 │   │   ▼              ▼                                               │   │
-│   │ aiox-squads   mcp-ecosystem                                      │   │
+│   │ yard-squads   mcp-ecosystem                                      │   │
 │   │ (MIT)         (Apache 2.0)                                       │   │
 │   └─────────────────────────────────────────────────────────────────┘   │
 │                                                                         │

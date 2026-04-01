@@ -4,7 +4,7 @@
 
 ---
 
-This document explains how to propose new features for AIOX.
+This document explains how to propose new features for YARD.
 
 ## Quick Ideas
 

@@ -1,16 +1,16 @@
-# @aiox-master (Orion) - Documentacion del Sistema
+# @yard-master (Orion) - Documentacion del Sistema
 
-> [PT](../../aiox-agent-flows/aiox-master-system.md) | [EN](../../en/aiox-agent-flows/aiox-master-system.md) | **ES**
+> [PT](../../yard-agent-flows/yard-master-system.md) | [EN](../../en/yard-agent-flows/yard-master-system.md) | **ES**
 
 ---
 
-> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../aiox-agent-flows/aiox-master-system.md).
+> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../yard-agent-flows/yard-master-system.md).
 
 ---
 
 ## Vision General
 
-**@aiox-master** (Orion) es el agente orquestador central del AIOX, responsable por:
+**@yard-master** (Orion) es el agente orquestador central del YARD, responsable por:
 
 - Coordinar todos los agentes del sistema
 - Gestionar workflows multi-agente
@@ -29,7 +29,7 @@
 ## Ver Mas
 
 Para documentacion detallada incluyendo flowcharts, integraciones y troubleshooting, consulte:
-- **[Documentacion completa (PT)](../../aiox-agent-flows/aiox-master-system.md)**
+- **[Documentacion completa (PT)](../../yard-agent-flows/yard-master-system.md)**
 
 ---
 

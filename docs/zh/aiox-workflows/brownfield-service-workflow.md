@@ -399,7 +399,7 @@ shard docs/prd.md
 | **操作** | 项目完成 |
 | **注意** | 所有故事已实现和审查！项目的开发阶段完成。 |
 
-**参考：** `.yard-core/data/aiox-kb.md#IDE Development Workflow`
+**参考：** `.yard-core/data/yard-kb.md#IDE Development Workflow`
 
 ---
 
@@ -491,7 +491,7 @@ graph LR
 
 2. **环境配置**
    - Git配置且正常运行
-   - 访问AIOX模板
+   - 访问YARD模板
    - 已安装开发工具
 
 3. **项目背景**
@@ -795,9 +795,9 @@ graph TD
 
 ### 相关文档
 
-- [AIOX知识库](../../../.yard-core/data/aiox-kb.md) - 框架知识库
+- [YARD知识库](../../../.yard-core/data/yard-kb.md) - 框架知识库
 - [技术偏好](../../../.yard-core/development/data/technical-preferences.md) - 项目技术偏好
-- [IDE开发工作流](../../../.yard-core/data/aiox-kb.md#IDE-Development-Workflow) - IDE开发流程
+- [IDE开发工作流](../../../.yard-core/data/yard-kb.md#IDE-Development-Workflow) - IDE开发流程
 
 ---
 
@@ -809,4 +809,4 @@ graph TD
 
 ---
 
-*从workflow `brownfield-service.yaml` 生成 - AIOX框架 v2.2*
+*从workflow `brownfield-service.yaml` 生成 - YARD框架 v2.2*

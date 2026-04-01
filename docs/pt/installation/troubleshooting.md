@@ -4,7 +4,7 @@
   Última sincronização: 2026-01-26
 -->
 
-# Guia de Solução de Problemas do Synkra AIOX
+# Guia de Solução de Problemas do Synkra YARD
 
 > 🌐 [EN](../../installation/troubleshooting.md) | **PT** | [ES](../../es/installation/troubleshooting.md)
 
@@ -81,7 +81,7 @@ npm --version
 
 Current directory: /Users/username
 
-Synkra AIOX should be installed in your project directory,
+Synkra YARD should be installed in your project directory,
 not in your home directory or temporary locations.
 ```
 
@@ -129,7 +129,7 @@ npx yard-core install
 **Sintomas:**
 
 ```
-Error: Synkra AIOX requires Node.js 18.0.0 or higher
+Error: Synkra YARD requires Node.js 18.0.0 or higher
 Current version: 14.17.0
 ```
 
@@ -554,7 +554,7 @@ nvm use 16
 
    ```bash
    # Claude Code
-   ls .claude/commands/AIOX/agents/
+   ls .claude/commands/YARD/agents/
 
    # Cursor
    ls .cursor/rules/
@@ -637,7 +637,7 @@ npx yard-core install --full
 ### Diagnósticos Gerais
 
 ```bash
-# Verifique status da instalação AIOX
+# Verifique status da instalação YARD
 npx yard-core status
 
 # Liste Squads disponíveis

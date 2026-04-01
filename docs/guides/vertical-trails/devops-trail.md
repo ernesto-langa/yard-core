@@ -1,6 +1,6 @@
 # Trilha @devops: Do Problema ao Output Validado
 
-> **Story:** AIOX-DIFF-4.3.1
+> **Story:** YARD-DIFF-4.3.1
 > **Agente:** @devops (Gage)
 > **Tempo estimado:** 20-40 minutos
 
@@ -24,7 +24,7 @@ OUTPUT: Repo configurado + Pipeline ativo + Push com gates verdes
 
 ### Cenário
 
-Você está em um projeto AIOX e precisa:
+Você está em um projeto YARD e precisa:
 1. Configurar repositório GitHub
 2. Criar pipeline CI/CD (GitHub Actions)
 3. Fazer push seguro com quality gates
@@ -33,7 +33,7 @@ Você está em um projeto AIOX e precisa:
 ### Pré-requisitos
 
 ```bash
-# Projeto AIOX inicializado
+# Projeto YARD inicializado
 npx yard-core doctor  # deve retornar healthy
 
 # GitHub CLI autenticado
@@ -381,5 +381,5 @@ gh auth login
 
 ---
 
-*Trilha criada para Story AIOX-DIFF-4.3.1*
+*Trilha criada para Story YARD-DIFF-4.3.1*
 *-- Gage, automatizando tudo*

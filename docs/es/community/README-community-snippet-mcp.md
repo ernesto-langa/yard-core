@@ -10,7 +10,7 @@
 
 Para discusiones, preguntas e interaccion con la comunidad, visita nuestro hub central:
 
-**[Discusiones de la Comunidad AIOX](https://github.com/ernesto-langa/yard-core/discussions)**
+**[Discusiones de la Comunidad YARD](https://github.com/ernesto-langa/yard-core/discussions)**
 
 | Necesidad                     | Donde Ir                                                                                                        |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------- |

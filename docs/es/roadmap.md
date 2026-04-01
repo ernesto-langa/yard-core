@@ -1,14 +1,14 @@
-# Hoja de Ruta de AIOX
+# Hoja de Ruta de YARD
 
 > 🇧🇷 [Versão em Português](ROADMAP-PT.md)
 
-Este documento describe la dirección de desarrollo planificada para AIOX.
+Este documento describe la dirección de desarrollo planificada para YARD.
 
 > Para seguimiento detallado, consulta nuestro [Proyecto de GitHub](https://github.com/orgs/SynkraAI/projects/1)
 
 ## Visión
 
-AIOX tiene como objetivo ser el framework de agentes de IA de código abierto más completo, permitiendo a los desarrolladores construir aplicaciones sofisticadas impulsadas por IA con equipos especializados de agentes (Squads) e integración perfecta con IDEs.
+YARD tiene como objetivo ser el framework de agentes de IA de código abierto más completo, permitiendo a los desarrolladores construir aplicaciones sofisticadas impulsadas por IA con equipos especializados de agentes (Squads) e integración perfecta con IDEs.
 
 ## Enfoque Actual (Q1 2026)
 

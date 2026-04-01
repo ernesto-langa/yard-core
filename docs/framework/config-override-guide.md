@@ -1,6 +1,6 @@
 # Configuration Override Guide
 
-Reference documentation for the AIOX layered config system (ADR-PRO-002).
+Reference documentation for the YARD layered config system (ADR-PRO-002).
 
 ---
 
@@ -13,7 +13,7 @@ L2 Project (.yard-core/project-config.yaml)        — Team-shared, committed
   ↓ deep merge
 Pro Extension (pro/pro-config.yaml)                 — Optional Pro submodule
   ↓ deep merge
-L3 App ({appDir}/aiox-app.config.yaml)             — Monorepo app-specific
+L3 App ({appDir}/yard-app.config.yaml)             — Monorepo app-specific
   ↓ deep merge
 L4 Local (.yard-core/local-config.yaml)            — Machine-specific, gitignored
   ↓ deep merge
@@ -55,7 +55,7 @@ This appends `my-custom-helper` to the L1 default helpers array.
 
 | Key | Type | Default | Override Level | Description |
 |-----|------|---------|---------------|-------------|
-| `metadata.name` | string | `"Synkra AIOX"` | Never | Framework name |
+| `metadata.name` | string | `"Synkra YARD"` | Never | Framework name |
 | `metadata.framework_version` | string | `"4.0.0"` | Never | Framework version |
 | `markdownExploder` | boolean | `true` | L2+ | Enable markdown exploder |
 | `resource_locations.agents_dir` | string | `.yard-core/development/agents` | L2+ | Agent definitions path |
@@ -77,7 +77,7 @@ This appends `my-custom-helper` to the L1 default helpers array.
 
 | Key | Type | Description |
 |-----|------|-------------|
-| `project.type` | string | `EXISTING_AIOX`, `NEW_PROJECT`, `BROWNFIELD` |
+| `project.type` | string | `EXISTING_YARD`, `NEW_PROJECT`, `BROWNFIELD` |
 | `project.version` | string | Project config version |
 | `documentation_paths.stories_dir` | string | Stories directory |
 | `documentation_paths.dev_load_always_files` | array | Files loaded on dev activation |

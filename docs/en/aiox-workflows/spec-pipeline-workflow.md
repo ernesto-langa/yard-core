@@ -1,10 +1,10 @@
 # Spec Pipeline Workflow
 
-> **EN** | [PT](../../aiox-workflows/spec-pipeline-workflow.md) | [ES](../../es/aiox-workflows/spec-pipeline-workflow.md)
+> **EN** | [PT](../../yard-workflows/spec-pipeline-workflow.md) | [ES](../../es/yard-workflows/spec-pipeline-workflow.md)
 
 ---
 
-**Full documentation available in:** [Portuguese Version](../../aiox-workflows/spec-pipeline-workflow.md)
+**Full documentation available in:** [Portuguese Version](../../yard-workflows/spec-pipeline-workflow.md)
 
 ---
 
@@ -45,4 +45,4 @@ Approved specification documents and stories ready for story-development-cycle.
 
 ---
 
-*For complete details, diagrams, and step-by-step instructions, see the [Portuguese documentation](../../aiox-workflows/spec-pipeline-workflow.md).*
+*For complete details, diagrams, and step-by-step instructions, see the [Portuguese documentation](../../yard-workflows/spec-pipeline-workflow.md).*

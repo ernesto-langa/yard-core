@@ -1,10 +1,10 @@
 # Brownfield UI Workflow
 
-> [PT](../../aiox-workflows/brownfield-ui-workflow.md) | [EN](../../en/aiox-workflows/brownfield-ui-workflow.md) | **ES**
+> [PT](../../yard-workflows/brownfield-ui-workflow.md) | [EN](../../en/yard-workflows/brownfield-ui-workflow.md) | **ES**
 
 ---
 
-> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../aiox-workflows/brownfield-ui-workflow.md).
+> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../yard-workflows/brownfield-ui-workflow.md).
 
 ---
 
@@ -35,7 +35,7 @@ Workflow para evolucionar frontends existentes, incluyendo:
 
 ## Ver Mas
 
-- **[Documentacion completa (PT)](../../aiox-workflows/brownfield-ui-workflow.md)**
+- **[Documentacion completa (PT)](../../yard-workflows/brownfield-ui-workflow.md)**
 
 ---
 

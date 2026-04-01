@@ -4,13 +4,13 @@
   Última sincronización: 2026-01-26
 -->
 
-# Guía del Sistema de Quality Gates de AIOX
+# Guía del Sistema de Quality Gates de YARD
 
 > 🌐 [EN](../../guides/quality-gates.md) | [PT](../../pt/guides/quality-gates.md) | **ES**
 
 ---
 
-> Guía completa del sistema de quality gates de 3 capas para Synkra AIOX.
+> Guía completa del sistema de quality gates de 3 capas para Synkra YARD.
 
 **Versión:** 2.1.0
 **Última Actualización:** 2025-12-01
@@ -19,7 +19,7 @@
 
 ## Resumen
 
-El Sistema de Quality Gates de AIOX proporciona aseguramiento de calidad automatizado a través de tres capas progresivas de validación. Cada capa detecta diferentes tipos de problemas en la etapa apropiada del desarrollo.
+El Sistema de Quality Gates de YARD proporciona aseguramiento de calidad automatizado a través de tres capas progresivas de validación. Cada capa detecta diferentes tipos de problemas en la etapa apropiada del desarrollo.
 
 ### La Arquitectura de 3 Capas
 
@@ -97,15 +97,15 @@ layer1:
 
 ```bash
 # Ejecutar todas las verificaciones de Capa 1
-aiox qa run --layer=1
+yard qa run --layer=1
 
 # Ejecutar verificación específica
-aiox qa run --layer=1 --check=lint
-aiox qa run --layer=1 --check=test
-aiox qa run --layer=1 --check=typecheck
+yard qa run --layer=1 --check=lint
+yard qa run --layer=1 --check=test
+yard qa run --layer=1 --check=typecheck
 
 # Ejecutar con salida detallada
-aiox qa run --layer=1 --verbose
+yard qa run --layer=1 --verbose
 ```
 
 ### Salida Esperada
@@ -168,7 +168,7 @@ layer2:
   quinn:
     enabled: true
     autoReview: true
-    agentPath: '.claude/commands/AIOX/agents/qa.md'
+    agentPath: '.claude/commands/YARD/agents/qa.md'
     severity:
       block: ['CRITICAL']
       warn: ['HIGH', 'MEDIUM']
@@ -178,13 +178,13 @@ layer2:
 
 ```bash
 # Ejecutar todas las verificaciones de Capa 2
-aiox qa run --layer=2
+yard qa run --layer=2
 
 # Ejecutar solo CodeRabbit
-aiox qa run --layer=2 --tool=coderabbit
+yard qa run --layer=2 --tool=coderabbit
 
 # Ejecutar revisión de Quinn (@qa)
-aiox qa run --layer=2 --tool=quinn
+yard qa run --layer=2 --tool=quinn
 ```
 
 ### Niveles de Severidad
@@ -300,51 +300,51 @@ La lista de verificación de revisión estratégica asegura que los revisores cu
 
 ```bash
 # Solicitar revisión humana
-aiox qa request-review --pr=123
+yard qa request-review --pr=123
 
 # Aprobar la revisión
-aiox qa signoff --pr=123 --reviewer="@architect"
+yard qa signoff --pr=123 --reviewer="@architect"
 
 # Verificar estado de aprobación
-aiox qa signoff-status --pr=123
+yard qa signoff-status --pr=123
 ```
 
 ---
 
 ## Comandos CLI
 
-### `aiox qa run`
+### `yard qa run`
 
 Ejecutar verificaciones de quality gate.
 
 ```bash
 # Ejecutar todas las capas secuencialmente
-aiox qa run
+yard qa run
 
 # Ejecutar capa específica
-aiox qa run --layer=1
-aiox qa run --layer=2
-aiox qa run --layer=3
+yard qa run --layer=1
+yard qa run --layer=2
+yard qa run --layer=3
 
 # Ejecutar con opciones
-aiox qa run --verbose          # Salida detallada
-aiox qa run --fail-fast        # Detener en primera falla
-aiox qa run --continue-on-fail # Continuar a pesar de fallas
+yard qa run --verbose          # Salida detallada
+yard qa run --fail-fast        # Detener en primera falla
+yard qa run --continue-on-fail # Continuar a pesar de fallas
 ```
 
-### `aiox qa status`
+### `yard qa status`
 
 Verificar estado actual de quality gate.
 
 ```bash
 # Obtener estado general
-aiox qa status
+yard qa status
 
 # Obtener estado para capa específica
-aiox qa status --layer=1
+yard qa status --layer=1
 
 # Obtener estado para PR
-aiox qa status --pr=123
+yard qa status --pr=123
 ```
 
 **Salida:**
@@ -370,31 +370,31 @@ Capa 3: Revisión Humana
 General: PENDIENTE DE REVISIÓN
 ```
 
-### `aiox qa report`
+### `yard qa report`
 
 Generar reporte de quality gate.
 
 ```bash
 # Generar reporte
-aiox qa report
+yard qa report
 
 # Exportar a archivo
-aiox qa report --output=qa-report.json
-aiox qa report --format=markdown --output=qa-report.md
+yard qa report --output=qa-report.json
+yard qa report --format=markdown --output=qa-report.md
 ```
 
-### `aiox qa configure`
+### `yard qa configure`
 
 Configurar ajustes de quality gate.
 
 ```bash
 # Configuración interactiva
-aiox qa configure
+yard qa configure
 
 # Establecer opciones específicas
-aiox qa configure --layer1.coverage.minimum=90
-aiox qa configure --layer2.coderabbit.enabled=false
-aiox qa configure --layer3.requireSignoff=true
+yard qa configure --layer1.coverage.minimum=90
+yard qa configure --layer2.coderabbit.enabled=false
+yard qa configure --layer3.requireSignoff=true
 ```
 
 ---
@@ -421,7 +421,7 @@ jobs:
         with:
           node-version: '18'
       - run: npm ci
-      - run: aiox qa run --layer=1
+      - run: yard qa run --layer=1
 
   layer2:
     name: Capa 2 - Automatización PR
@@ -433,7 +433,7 @@ jobs:
         with:
           node-version: '18'
       - run: npm ci
-      - run: aiox qa run --layer=2
+      - run: yard qa run --layer=2
         env:
           CODERABBIT_API_KEY: ${{ secrets.CODERABBIT_API_KEY }}
 
@@ -443,7 +443,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: aiox qa request-review --pr=${{ github.event.pull_request.number }}
+      - run: yard qa request-review --pr=${{ github.event.pull_request.number }}
 ```
 
 ### GitLab CI
@@ -459,20 +459,20 @@ layer1:
   stage: layer1
   script:
     - npm ci
-    - aiox qa run --layer=1
+    - yard qa run --layer=1
 
 layer2:
   stage: layer2
   script:
     - npm ci
-    - aiox qa run --layer=2
+    - yard qa run --layer=2
   needs:
     - layer1
 
 layer3:
   stage: layer3
   script:
-    - aiox qa request-review
+    - yard qa request-review
   needs:
     - layer2
   when: manual
@@ -485,7 +485,7 @@ layer3:
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-aiox qa run --layer=1 --fail-fast
+yard qa run --layer=1 --fail-fast
 ```
 
 ---
@@ -534,7 +534,7 @@ layer2:
   quinn:
     enabled: true
     autoReview: true
-    agentPath: '.claude/commands/AIOX/agents/qa.md'
+    agentPath: '.claude/commands/YARD/agents/qa.md'
     severity:
       block: [CRITICAL]
       warn: [HIGH, MEDIUM]
@@ -611,4 +611,4 @@ verbose:
 
 ---
 
-_Guía del Sistema de Quality Gates de Synkra AIOX v4_
+_Guía del Sistema de Quality Gates de Synkra YARD v4_

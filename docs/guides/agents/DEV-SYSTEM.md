@@ -9,7 +9,7 @@
 
 ## Visao Geral
 
-O agente **@dev (Dex)** e o Full Stack Developer do AIOX, responsavel pela implementacao de stories, debugging, refactoring e aplicacao das melhores praticas de desenvolvimento. Este agente atua como um **Builder** que implementa stories de forma precisa, atualiza somente as secoes autorizadas dos arquivos de story e mantem testes abrangentes.
+O agente **@dev (Dex)** e o Full Stack Developer do YARD, responsavel pela implementacao de stories, debugging, refactoring e aplicacao das melhores praticas de desenvolvimento. Este agente atua como um **Builder** que implementa stories de forma precisa, atualiza somente as secoes autorizadas dos arquivos de story e mantem testes abrangentes.
 
 ### Caracteristicas Principais
 
@@ -55,7 +55,7 @@ O agente **@dev (Dex)** e o Full Stack Developer do AIOX, responsavel pela imple
 | Arquivo | Proposito |
 |---------|-----------|
 | `.yard-core/development/agents/dev.md` | Definicao core do agente @dev (persona, comandos, workflows) |
-| `.claude/commands/AIOX/agents/dev.md` | Comando Claude Code para ativar @dev |
+| `.claude/commands/YARD/agents/dev.md` | Comando Claude Code para ativar @dev |
 
 ### Arquivos de Checklists Usados pelo @dev
 

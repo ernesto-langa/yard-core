@@ -8,7 +8,7 @@
 
 ## Comunidade & Discussões
 
-Este repositório hospeda o **hub central da comunidade** para todos os projetos AIOX.
+Este repositório hospeda o **hub central da comunidade** para todos os projetos YARD.
 
 **[Participe das Discussões](https://github.com/ernesto-langa/yard-core/discussions)**
 
@@ -16,13 +16,13 @@ Este repositório hospeda o **hub central da comunidade** para todos os projetos
 
 | Categoria           | Propósito                                                                     |
 | ------------------- | ----------------------------------------------------------------------------- |
-| **Announcements**   | Atualizações e notícias oficiais da equipe AIOX                               |
-| **General**         | Discussões gerais sobre AIOX                                                  |
+| **Announcements**   | Atualizações e notícias oficiais da equipe YARD                               |
+| **General**         | Discussões gerais sobre YARD                                                  |
 | **Ideas**           | Propor novas funcionalidades e melhorias                                      |
 | **Q&A**             | Fazer perguntas e obter ajuda                                                 |
-| **Show and Tell**   | Compartilhar seus projetos construídos com AIOX                               |
+| **Show and Tell**   | Compartilhar seus projetos construídos com YARD                               |
 | **Troubleshooting** | Obter ajuda com problemas e erros                                             |
-| **Squads**          | Discussões sobre [AIOX Squads](https://github.com/SynkraAI/aiox-squads)       |
+| **Squads**          | Discussões sobre [YARD Squads](https://github.com/SynkraAI/yard-squads)       |
 | **MCP Ecosystem**   | Discussões sobre [ferramentas MCP](https://github.com/SynkraAI/mcp-ecosystem) |
 
 ### Links Rápidos
@@ -32,7 +32,7 @@ Este repositório hospeda o **hub central da comunidade** para todos os projetos
 | Reportar um bug          | [Abrir Issue](https://github.com/ernesto-langa/yard-core/issues/new?template=bug_report.md)                 |
 | Solicitar funcionalidade | [Iniciar Discussão](https://github.com/ernesto-langa/yard-core/discussions/new?category=ideas)              |
 | Fazer uma pergunta       | [Q&A](https://github.com/ernesto-langa/yard-core/discussions/new?category=q-a)                              |
-| Propor um Squad          | [Issues do aiox-squads](https://github.com/SynkraAI/aiox-squads/issues/new?template=squad-proposal.md) |
+| Propor um Squad          | [Issues do yard-squads](https://github.com/SynkraAI/yard-squads/issues/new?template=squad-proposal.md) |
 | Pergunta sobre MCP       | [MCP Ecosystem](https://github.com/ernesto-langa/yard-core/discussions/new?category=mcp-ecosystem)          |
 
 ### Repositórios Relacionados
@@ -40,7 +40,7 @@ Este repositório hospeda o **hub central da comunidade** para todos os projetos
 | Repositório                                                | Descrição                            | Licença        |
 | ---------------------------------------------------------- | ------------------------------------ | -------------- |
 | [yard-core](https://github.com/ernesto-langa/yard-core)         | Framework principal (você está aqui) | MIT            |
-| [aiox-squads](https://github.com/SynkraAI/aiox-squads)     | AIOX Squads (ETL, Creator, MMOS)     | MIT            |
+| [yard-squads](https://github.com/SynkraAI/yard-squads)     | YARD Squads (ETL, Creator, MMOS)     | MIT            |
 | [mcp-ecosystem](https://github.com/SynkraAI/mcp-ecosystem) | Docker MCP Toolkit & configs de IDE  | Apache 2.0     |
 
 ### Contribuindo
@@ -54,4 +54,4 @@ Contribuições são bem-vindas! Confira:
 
 ---
 
-**Tagline:** _AIOX: Sistema Orquestrado por IA para Desenvolvimento Full Stack_
+**Tagline:** _YARD: Sistema Orquestrado por IA para Desenvolvimento Full Stack_

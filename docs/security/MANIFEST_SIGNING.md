@@ -1,10 +1,10 @@
 # Manifest Signing Guide
 
-This document explains how to set up and use the cryptographic signing system for AIOX-Core install manifests.
+This document explains how to set up and use the cryptographic signing system for YARD-Core install manifests.
 
 ## Overview
 
-AIOX-Core uses **Ed25519 digital signatures** (via minisign format) to verify the integrity and authenticity of the `install-manifest.yaml` file. This ensures that:
+YARD-Core uses **Ed25519 digital signatures** (via minisign format) to verify the integrity and authenticity of the `install-manifest.yaml` file. This ensures that:
 
 1. The manifest has not been tampered with after signing
 2. The manifest was signed by a party in possession of the authorized signing key
@@ -93,7 +93,7 @@ minisign -G -p yard-core.pub -s yard-core.key
 ```bash
 cat yard-core.pub
 # Output example:
-# untrusted comment: minisign public key AIOX0001
+# untrusted comment: minisign public key YARD0001
 # RWQf6LRCGA9i8VYn7sGv...base64...
 ```
 
@@ -104,7 +104,7 @@ Edit `src/installer/manifest-signature.js`:
 ```javascript
 const PINNED_PUBLIC_KEY = {
   // Key ID from the public key file comment
-  keyId: 'AIOX0001',
+  keyId: 'YARD0001',
   // Base64 public key (the second line of yard-core.pub)
   publicKey: 'RWQf6LRCGA9i8VYn7sGv...your-actual-key...',
   algorithm: 'Ed25519',
@@ -131,7 +131,7 @@ const PINNED_PUBLIC_KEY = {
 1. **Generate/Update Manifest**
 
    ```bash
-   node bin/aiox.js manifest:generate
+   node bin/yard.js manifest:generate
    # Creates .yard-core/install-manifest.yaml with all file hashes
    ```
 
@@ -231,7 +231,7 @@ The manifest was signed with a different key than the one pinned in the code. En
 The manifest content has been modified after signing. Regenerate and re-sign:
 
 ```bash
-node bin/aiox.js manifest:generate
+node bin/yard.js manifest:generate
 minisign -Sm .yard-core/install-manifest.yaml -s /path/to/yard-core.key
 ```
 

@@ -966,7 +966,7 @@ flowchart TB
 ### 10.3 相关文档
 
 - [工作流 YAML 指南](../workflows-yaml-guide.md)
-- [AIOX 文档索引](../AIOX-DOCUMENTATION-INDEX.md)
+- [YARD 文档索引](../YARD-DOCUMENTATION-INDEX.md)
 - [待办项管理系统](../BACKLOG-MANAGEMENT-SYSTEM.md)
 
 ### 10.4 快速命令
@@ -1026,6 +1026,6 @@ metadata:
     - spec-pipeline
     - workflow
     - documentation
-    - aiox
+    - yard
     - auto-claude
 ```

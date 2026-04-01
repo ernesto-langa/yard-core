@@ -92,7 +92,7 @@ autoClaude:
 
 - **12 个代理**迁移到 V3 格式
 - **所有代理**拥有 `autoClaude.version: "3.0"`
-- **所有代理**同步到 `.claude/commands/AIOX/agents/`
+- **所有代理**同步到 `.claude/commands/YARD/agents/`
 
 ---
 

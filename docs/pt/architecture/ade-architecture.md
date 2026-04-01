@@ -24,7 +24,7 @@
 
 ## Visão Geral
 
-O **Motor de Desenvolvimento Autônomo (ADE)** é a infraestrutura do AIOX para workflows de desenvolvimento autônomo. Ele permite que agentes de IA trabalhem de forma independente através de pipelines inteligentes, loops auto-recuperáveis e aprendizado persistente.
+O **Motor de Desenvolvimento Autônomo (ADE)** é a infraestrutura do YARD para workflows de desenvolvimento autônomo. Ele permite que agentes de IA trabalhem de forma independente através de pipelines inteligentes, loops auto-recuperáveis e aprendizado persistente.
 
 ### Capacidades Principais
 
@@ -42,7 +42,7 @@ O **Motor de Desenvolvimento Autônomo (ADE)** é a infraestrutura do AIOX para 
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                           Framework AIOX                                     │
+│                           Framework YARD                                     │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
 │  ┌────────────────────────────────────────────────────────────────────────┐ │
@@ -399,7 +399,7 @@ Componentes:
 
 ### Integração com Agentes
 
-ADE integra-se com agentes AIOX através de:
+ADE integra-se com agentes YARD através de:
 
 ```yaml
 autoClaude:
@@ -584,4 +584,4 @@ estratégias:
 
 ---
 
-_Este é um padrão oficial do framework AIOX documentando o Motor de Desenvolvimento Autônomo._
+_Este é um padrão oficial do framework YARD documentando o Motor de Desenvolvimento Autônomo._

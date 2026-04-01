@@ -568,7 +568,7 @@ sequenceDiagram
 
 **Descricao:** Todas as stories implementadas e revisadas. Fase de desenvolvimento do projeto concluida.
 
-**Referencia:** `.yard-core/data/aiox-kb.md#IDE Development Workflow`
+**Referencia:** `.yard-core/data/yard-kb.md#IDE Development Workflow`
 
 ---
 
@@ -670,7 +670,7 @@ graph LR
    - Git configurado
    - Gerenciador de pacotes (npm/yarn/pnpm)
 
-2. **AIOX-Core Disponivel**
+2. **YARD-Core Disponivel**
    - Templates em `.yard-core/development/templates/`
    - Tasks em `.yard-core/development/tasks/`
    - Checklists em `.yard-core/development/checklists/`
@@ -871,7 +871,7 @@ flowchart TD
 | Arquivo | Caminho |
 |---------|---------|
 | Definicao do Workflow | `.yard-core/development/workflows/greenfield-ui.yaml` |
-| Knowledge Base | `.yard-core/data/aiox-kb.md` |
+| Knowledge Base | `.yard-core/data/yard-kb.md` |
 
 ### Agentes
 
@@ -906,7 +906,7 @@ flowchart TD
 
 ### Documentacao Relacionada
 
-- [AIOX Knowledge Base](.yard-core/data/aiox-kb.md) - Base de conhecimento central
+- [YARD Knowledge Base](.yard-core/data/yard-kb.md) - Base de conhecimento central
 - [Brownfield Workflow](./BROWNFIELD-WORKFLOW.md) - Workflow para projetos existentes (se disponivel)
 
 ---

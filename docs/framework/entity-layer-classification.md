@@ -1,6 +1,6 @@
 # Entity Layer Classification (L1-L4)
 
-Classification rules for the AIOX entity registry boundary layers.
+Classification rules for the YARD entity registry boundary layers.
 
 ## Layer Model
 
@@ -18,7 +18,7 @@ Rules are evaluated in order. **First match wins.**
 | Priority | Layer | Path Pattern | Examples |
 |----------|-------|-------------|----------|
 | 1 | L1 | `.yard-core/core/**` | ids/index.js, utils/helpers.js |
-| 2 | L1 | `bin/**` | aiox.js, aiox-init.js |
+| 2 | L1 | `bin/**` | yard.js, yard-init.js |
 | 3 | L1 | `.yard-core/constitution.md` | (exact match) |
 | 4 | L3 | `.yard-core/data/**` | entity-registry.yaml |
 | 5 | L3 | `**/MEMORY.md` | agents/dev/MEMORY.md |

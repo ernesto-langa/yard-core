@@ -210,7 +210,7 @@ gh api repos/ernesto-langa/yard-core/branches/main/protection -X PUT \
 
 ### 第二阶段: 短期（高）
 
-1. 创建包含 AIOX 特定规则的 `.coderabbit.yaml`
+1. 创建包含 YARD 特定规则的 `.coderabbit.yaml`
 2. 更新 CODEOWNERS 添加细粒度路径
 
 ### 第三阶段: 中期（中）

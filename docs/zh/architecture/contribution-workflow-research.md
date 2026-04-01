@@ -15,7 +15,7 @@
 
 ## 执行摘要
 
-本文档汇总了开源项目外部贡献者工作流最佳实践的研究发现，特别是为了实现 AIOX 代理和任务的安全社区贡献。
+本文档汇总了开源项目外部贡献者工作流最佳实践的研究发现，特别是为了实现 YARD 代理和任务的安全社区贡献。
 
 ---
 
@@ -126,7 +126,7 @@ auto_title_instructions: |
   标题应 <= 80 个字符
 ```
 
-### 2.3 AIOX 特定建议
+### 2.3 YARD 特定建议
 
 对于代理/任务贡献，CodeRabbit 应验证:
 
@@ -172,7 +172,7 @@ Dockerfile @org/devops-team
 /security/ @org/security-team
 ```
 
-### 3.3 AIOX 特定结构
+### 3.3 YARD 特定结构
 
 ```codeowners
 # 默认 - 需要维护者审查
@@ -313,7 +313,7 @@ jobs:
 
 ---
 
-## 7. AIOX 建议
+## 7. YARD 建议
 
 ### 7.1 立即行动（关键）
 
@@ -323,7 +323,7 @@ jobs:
 
 ### 7.2 短期行动（高）
 
-1. **创建 `.coderabbit.yaml`** 带有 AIOX 特定路径说明
+1. **创建 `.coderabbit.yaml`** 带有 YARD 特定路径说明
 2. **更新 CODEOWNERS** 带有粒度所有权
 3. **启用强制对话解决**
 

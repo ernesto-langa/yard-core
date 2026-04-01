@@ -1,4 +1,4 @@
-# 数据工程师代理系统 (@data-engineer) - AIOX
+# 数据工程师代理系统 (@data-engineer) - YARD
 
 > **版本:** 1.0.0
 > **创建于:** 2026-02-04
@@ -9,7 +9,7 @@
 
 ## 概览
 
-**@数据工程师(Dara)**是AIOX的数据库架构师和运营工程师，负责架构设计、迁移、安全性(RLS)、性能优化和DBA操作。该代理充当**Sage(智者)**，建模业务领域，使用快照和回滚实现安全迁移，并确保数据完整性和安全性。
+**@数据工程师(Dara)**是YARD的数据库架构师和运营工程师，负责架构设计、迁移、安全性(RLS)、性能优化和DBA操作。该代理充当**Sage(智者)**，建模业务领域，使用快照和回滚实现安全迁移，并确保数据完整性和安全性。
 
 ### 主要特征
 
@@ -77,7 +77,7 @@
 | 文件 | 目的 |
 |------|------|
 | `.yard-core/development/agents/data-engineer.md` | @data-engineer代理核心定义(角色、命令、工作流) |
-| `.claude/commands/AIOX/agents/data-engineer.md` | Claude Code命令激活@data-engineer |
+| `.claude/commands/YARD/agents/data-engineer.md` | Claude Code命令激活@data-engineer |
 
 ### SQL模板文件
 

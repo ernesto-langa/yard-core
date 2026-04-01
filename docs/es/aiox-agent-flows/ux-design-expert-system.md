@@ -1,16 +1,16 @@
 # @ux-design-expert (Uma) - Documentacion del Sistema
 
-> [PT](../../aiox-agent-flows/ux-design-expert-system.md) | [EN](../../en/aiox-agent-flows/ux-design-expert-system.md) | **ES**
+> [PT](../../yard-agent-flows/ux-design-expert-system.md) | [EN](../../en/yard-agent-flows/ux-design-expert-system.md) | **ES**
 
 ---
 
-> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../aiox-agent-flows/ux-design-expert-system.md).
+> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../yard-agent-flows/ux-design-expert-system.md).
 
 ---
 
 ## Vision General
 
-**@ux-design-expert** (Uma) es el agente de UX/UI del AIOX, responsable por:
+**@ux-design-expert** (Uma) es el agente de UX/UI del YARD, responsable por:
 
 - Diseno de interfaces
 - User experience
@@ -29,7 +29,7 @@
 ## Ver Mas
 
 Para documentacion detallada incluyendo flowcharts, integraciones y troubleshooting, consulte:
-- **[Documentacion completa (PT)](../../aiox-agent-flows/ux-design-expert-system.md)**
+- **[Documentacion completa (PT)](../../yard-agent-flows/ux-design-expert-system.md)**
 
 ---
 

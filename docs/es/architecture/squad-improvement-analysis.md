@@ -47,7 +47,7 @@
 | `*list-squads` | squad-creator-list.md | ✅ Hecho | Listar squads locales |
 | `*migrate-squad` | squad-creator-migrate.md | ✅ Hecho | Migrar formato legacy |
 | `*download-squad` | squad-creator-download.md | ⏳ Placeholder | Descargar desde registro |
-| `*publish-squad` | squad-creator-publish.md | ⏳ Placeholder | Publicar a aiox-squads |
+| `*publish-squad` | squad-creator-publish.md | ⏳ Placeholder | Publicar a yard-squads |
 | `*sync-squad-synkra` | squad-creator-sync-synkra.md | ⏳ Placeholder | Sincronizar al marketplace |
 
 ### Scripts Existentes
@@ -60,7 +60,7 @@
 | SquadDesigner | squad-designer.js | Diseñar desde docs |
 | SquadMigrator | squad-migrator.js | Migrar formato legacy |
 | SquadDownloader | squad-downloader.js | Descargar desde registro |
-| SquadPublisher | squad-publisher.js | Publicar a aiox-squads |
+| SquadPublisher | squad-publisher.js | Publicar a yard-squads |
 
 ---
 

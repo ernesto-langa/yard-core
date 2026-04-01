@@ -1,10 +1,10 @@
 # Greenfield Service Workflow
 
-> [PT](../../aiox-workflows/greenfield-service-workflow.md) | [EN](../../en/aiox-workflows/greenfield-service-workflow.md) | **ES**
+> [PT](../../yard-workflows/greenfield-service-workflow.md) | [EN](../../en/yard-workflows/greenfield-service-workflow.md) | **ES**
 
 ---
 
-> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../aiox-workflows/greenfield-service-workflow.md).
+> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../yard-workflows/greenfield-service-workflow.md).
 
 ---
 
@@ -36,7 +36,7 @@ Workflow para crear backends/APIs desde cero, incluyendo:
 
 ## Ver Mas
 
-- **[Documentacion completa (PT)](../../aiox-workflows/greenfield-service-workflow.md)**
+- **[Documentacion completa (PT)](../../yard-workflows/greenfield-service-workflow.md)**
 
 ---
 

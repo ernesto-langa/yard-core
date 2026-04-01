@@ -100,7 +100,7 @@ Comprehensive health check system with 5 domains.
 | Domain | Files | Parent Index | All Extend |
 |--------|-------|-------------|-----------|
 | `checks/index.js` | Aggregates 5 domain indices | project/, local/, repository/, deployment/, services/ | -- |
-| `checks/project/` | 8 checks: package-json, node-version, dependencies, aiox-directory, agent-config, framework-config, task-definitions, workflow-dependencies | project/index.js | base-check.js |
+| `checks/project/` | 8 checks: package-json, node-version, dependencies, yard-directory, agent-config, framework-config, task-definitions, workflow-dependencies | project/index.js | base-check.js |
 | `checks/local/` | 8 checks: git-install, npm-install, shell-environment, memory, disk-space, network, ide-detection, environment-vars | local/index.js | base-check.js |
 | `checks/repository/` | 8 checks: git-repo, git-status, gitignore, conflicts, branch-protection, commit-history, large-files, lockfile-integrity | repository/index.js | base-check.js |
 | `checks/deployment/` | 5 checks: env-file, docker-config, ci-config, build-config, deployment-readiness | deployment/index.js | base-check.js |
@@ -174,7 +174,7 @@ Multi-agent workflow orchestration and ADE (Autonomous Development Engine).
 | `parallel-executor.js` | Concurrent phase execution with max concurrency | None (chalk) | workflow-orchestrator.js, orchestration/index.js | No |
 | `tech-stack-detector.js` | Pre-flight project tech stack detection | None (fs-extra) | workflow-orchestrator.js, master-orchestrator.js, orchestration/index.js | No |
 | `condition-evaluator.js` | Evaluates workflow conditions against tech stack profile | None | workflow-orchestrator.js, orchestration/index.js | No |
-| `skill-dispatcher.js` | Maps agent IDs to AIOX Skill invocations | None | workflow-orchestrator.js, orchestration/index.js | No |
+| `skill-dispatcher.js` | Maps agent IDs to YARD Skill invocations | None | workflow-orchestrator.js, orchestration/index.js | No |
 | `recovery-handler.js` | Story 0.5: Auto error recovery (retry, rollback, skip, escalate) | None (fs-extra, EventEmitter) | master-orchestrator.js, orchestration/index.js, tests/core/ | No |
 | `gate-evaluator.js` | Story 0.6: Quality gates between epics | None (fs-extra, js-yaml) | master-orchestrator.js, orchestration/index.js, tests/core/ | No |
 | `agent-invoker.js` | Story 0.7: Agent invocation interface for orchestration | None (fs-extra, EventEmitter) | master-orchestrator.js, orchestration/index.js, tests/core/ | No |
@@ -227,7 +227,7 @@ Service registry for worker/task discovery.
 | File | Purpose | Internal Deps | External Consumers | Orphan? |
 |------|---------|---------------|-------------------|---------|
 | `registry-loader.js` | Loads and queries service registry JSON with caching | None | core/index.js, CLI workers/* (list, info, search-keyword, search-semantic), tests/ | No |
-| `build-registry.js` | Scans AIOX modules and builds registry JSON | None (glob) | **None found** (standalone script) | **Partial** -- used as CLI script |
+| `build-registry.js` | Scans YARD modules and builds registry JSON | None (glob) | **None found** (standalone script) | **Partial** -- used as CLI script |
 | `validate-registry.js` | Validates registry JSON against schema (smoke tests REG-01..06) | None (ajv, ajv-formats) | **None found** (standalone script) | **Partial** -- used as CLI script |
 
 ### 2.14 session/ (2 files)
@@ -352,15 +352,15 @@ Shared utility modules.
 
 | CLI Command | Core Module(s) Used |
 |-------------|-------------------|
-| `aiox workers list/info/search-keyword/search-semantic` | `registry/registry-loader` |
-| `aiox manifest validate` | `manifest/manifest-validator` |
-| `aiox manifest regenerate` | `manifest/manifest-generator` |
-| `aiox qa run/status` | `quality-gates/quality-gate-manager` |
-| `aiox mcp add` | `mcp/global-config-manager`, `mcp/os-detector` |
-| `aiox mcp status` | `mcp/global-config-manager`, `mcp/symlink-manager`, `mcp/os-detector`, `mcp/config-migrator` |
-| `aiox mcp setup` | `mcp/global-config-manager`, `mcp/os-detector` |
-| `aiox mcp link` | `mcp/symlink-manager`, `mcp/global-config-manager`, `mcp/os-detector`, `mcp/config-migrator` |
-| `aiox config show/diff/migrate/validate/init-local` | `config/config-resolver`, `config/merge-utils`, `config/env-interpolator` |
+| `yard workers list/info/search-keyword/search-semantic` | `registry/registry-loader` |
+| `yard manifest validate` | `manifest/manifest-validator` |
+| `yard manifest regenerate` | `manifest/manifest-generator` |
+| `yard qa run/status` | `quality-gates/quality-gate-manager` |
+| `yard mcp add` | `mcp/global-config-manager`, `mcp/os-detector` |
+| `yard mcp status` | `mcp/global-config-manager`, `mcp/symlink-manager`, `mcp/os-detector`, `mcp/config-migrator` |
+| `yard mcp setup` | `mcp/global-config-manager`, `mcp/os-detector` |
+| `yard mcp link` | `mcp/symlink-manager`, `mcp/global-config-manager`, `mcp/os-detector`, `mcp/config-migrator` |
+| `yard config show/diff/migrate/validate/init-local` | `config/config-resolver`, `config/merge-utils`, `config/env-interpolator` |
 
 ### 4.2 Development Scripts (`.yard-core/development/scripts/`)
 

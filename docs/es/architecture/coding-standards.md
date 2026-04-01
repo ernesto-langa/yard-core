@@ -8,7 +8,7 @@
 
 ---
 
-# Estandares de Codigo AIOX
+# Estandares de Codigo YARD
 
 > 🌐 [EN](../../architecture/coding-standards.md) | [PT](../../pt/architecture/coding-standards.md) | **ES**
 
@@ -37,7 +37,7 @@
 
 ## Descripcion General
 
-Este documento define los estandares oficiales de codigo para el desarrollo del framework AIOX. Todas las contribuciones de codigo deben adherirse a estos estandares para asegurar consistencia, mantenibilidad y calidad.
+Este documento define los estandares oficiales de codigo para el desarrollo del framework YARD. Todas las contribuciones de codigo deben adherirse a estos estandares para asegurar consistencia, mantenibilidad y calidad.
 
 **Aplicacion:**
 
@@ -547,7 +547,7 @@ if (!taskSchema.validate(taskData)) {
 
 ```javascript
 /**
- * Carga y ejecuta un agente AIOX
+ * Carga y ejecuta un agente YARD
  *
  * @param {string} agentId - Identificador unico del agente
  * @param {Object} args - Argumentos de ejecucion del agente
@@ -597,7 +597,7 @@ Cada modulo/directorio debe tener un README.md:
 ```markdown
 # Agent Executor
 
-**Proposito:** Carga y ejecuta agentes AIOX con gestion de configuracion.
+**Proposito:** Carga y ejecuta agentes YARD con gestion de configuracion.
 
 ## Uso
 
@@ -893,4 +893,4 @@ Todos los PRs son revisados automaticamente por CodeRabbit para:
 
 ---
 
-_Este es un estandar oficial del framework AIOX. Todas las contribuciones de codigo deben cumplir con el._
+_Este es un estandar oficial del framework YARD. Todas las contribuciones de codigo deben cumplir con el._

@@ -1,6 +1,6 @@
 <!-- Traducción: ES | Original: /docs/platforms/en/cursor.md | Sincronización: 2026-01-26 -->
 
-# Guía de AIOX para Cursor
+# Guía de YARD para Cursor
 
 > 🌐 [EN](../../platforms/cursor.md) | [PT](../../pt/platforms/cursor.md) | **ES**
 
@@ -16,9 +16,9 @@
 
 Cursor es un editor de código basado en IA construido sobre VS Code, diseñado para hacer que los desarrolladores sean más productivos con asistencia de IA integrada. Combina características familiares de VS Code con poderosas capacidades de IA incluyendo generación de código, edición y conversación.
 
-### ¿Por qué usar AIOX con Cursor?
+### ¿Por qué usar YARD con Cursor?
 
-Cursor es uno de los **IDEs de IA más populares** con excelente integración de AIOX:
+Cursor es uno de los **IDEs de IA más populares** con excelente integración de YARD:
 
 - **Base de Usuarios Grande**: Comunidad activa y actualizaciones continuas
 - **Activación @mention**: Activación natural de agentes con sintaxis @
@@ -48,7 +48,7 @@ Cursor es uno de los **IDEs de IA más populares** con excelente integración de
 | **RAM**              | 4GB                              | 8GB+        |
 | **Espacio en Disco** | 500MB                            | 1GB+        |
 | **SO**               | macOS 10.15+, Windows 10+, Linux | Último      |
-| **Node.js**          | 18.0+ (para AIOX)                | 20.0+       |
+| **Node.js**          | 18.0+ (para YARD)                | 20.0+       |
 
 ### Requisitos de Cuenta
 
@@ -86,21 +86,21 @@ Abrir Configuración de Cursor (`Cmd/Ctrl + ,`):
 2. **Modelos** > Seleccionar modelo preferido (Claude, GPT-4, etc.)
 3. **Reglas** > Habilitar reglas personalizadas
 
-### Paso 3: Instalar AIOX
+### Paso 3: Instalar YARD
 
 ```bash
 # Navegar a tu proyecto
 cd tu-proyecto
 
-# Inicializar AIOX
-npx @anthropic/aiox init
+# Inicializar YARD
+npx @anthropic/yard init
 
 # Seleccionar "Cursor" cuando se solicite el IDE
 ```
 
 ### Paso 4: Verificar Instalación
 
-Verificar que se crearon los archivos de AIOX:
+Verificar que se crearon los archivos de YARD:
 
 ```bash
 ls -la .cursor/
@@ -132,7 +132,7 @@ Este archivo contiene:
 - Reglas específicas del proyecto y contexto
 - Instrucciones de activación de agentes
 - Estándares de desarrollo
-- Integración del marco AIOX
+- Integración del marco YARD
 
 ### Carpeta de Reglas de Agentes
 
@@ -184,13 +184,13 @@ Cada agente tiene un archivo dedicado:
 
 ## Uso Básico
 
-### Iniciando Cursor con AIOX
+### Iniciando Cursor con YARD
 
 1. Abrir tu proyecto en Cursor
 2. Las reglas en `.cursor/rules.md` se cargan automáticamente
 3. Usar el panel de chat de IA (`Cmd/Ctrl + L`)
 
-### Activando Agentes AIOX
+### Activando Agentes YARD
 
 Los agentes se activan usando @mentions en el chat:
 
@@ -348,7 +348,7 @@ Usar estos en chat o Composer:
 | `@folder`     | Contenidos de carpeta          |
 | `@docs`       | Documentación                  |
 | `@web`        | Búsqueda web                   |
-| `@agent-name` | Agente AIOX                    |
+| `@agent-name` | Agente YARD                    |
 
 ### Selección de Modelo
 
@@ -536,8 +536,8 @@ tail -f ~/Library/Application\ Support/Cursor/logs/main.log
 # Hacer copia de seguridad de configuración actual
 cp -r .cursor/ .cursor-backup/
 
-# Reinicializar AIOX
-npx @anthropic/aiox init --ide cursor --force
+# Reinicializar YARD
+npx @anthropic/yard init --ide cursor --force
 ```
 
 ---
@@ -555,7 +555,7 @@ R: Sí, puedes configurar claves de API de OpenAI o Anthropic en la configuraci�
 **P: ¿Funciona Cursor sin conexión?**
 R: La edición básica funciona sin conexión, pero las características de IA requieren internet.
 
-### Preguntas Específicas de AIOX
+### Preguntas Específicas de YARD
 
 **P: ¿Cómo cambio entre agentes?**
 R: Usar @mentions en chat: `@dev`, `@qa`, `@architect`, etc.
@@ -567,7 +567,7 @@ R: Sí, pero se recomienda usar un agente por tarea para mayor claridad.
 R: En `.cursor/rules/` después de sincronizar.
 
 **P: ¿Cómo actualizo los agentes?**
-R: Ejecutar `npm run sync:ide` después de actualizaciones de AIOX.
+R: Ejecutar `npm run sync:ide` después de actualizaciones de YARD.
 
 ---
 
@@ -576,9 +576,9 @@ R: Ejecutar `npm run sync:ide` después de actualizaciones de AIOX.
 ### De VS Code a Cursor
 
 1. Cursor importa configuración de VS Code automáticamente
-2. Instalar AIOX:
+2. Instalar YARD:
    ```bash
-   npx @anthropic/aiox init --ide cursor
+   npx @anthropic/yard init --ide cursor
    ```
 3. Tus extensiones de VS Code deberían funcionar en Cursor
 
@@ -590,10 +590,10 @@ R: Ejecutar `npm run sync:ide` después de actualizaciones de AIOX.
    cp -r .cursor/rules/ cursor-rules-backup/
    ```
 
-2. Inicializar AIOX para Claude Code:
+2. Inicializar YARD para Claude Code:
 
    ```bash
-   npx @anthropic/aiox init --ide claude-code
+   npx @anthropic/yard init --ide claude-code
    ```
 
 3. Los agentes se sincronizan automáticamente al nuevo formato
@@ -628,8 +628,8 @@ R: Ejecutar `npm run sync:ide` después de actualizaciones de AIOX.
 ### Tutoriales
 
 - [Consejos y Trucos de Cursor](https://cursor.com/tips)
-- [Guía de Integración de AIOX](../README.md)
+- [Guía de Integración de YARD](../README.md)
 
 ---
 
-_Synkra AIOX - Guía de Plataforma Cursor v1.0_
+_Synkra YARD - Guía de Plataforma Cursor v1.0_

@@ -1,4 +1,4 @@
-# AIOX 工作流指南
+# YARD 工作流指南
 
 **版本:** 1.0.0
 **最后更新:** 2026-02-02
@@ -8,7 +8,7 @@
 
 ## 概述
 
-AIOX 工作流是一系列精心编排的代理活动序列，可以自动化复杂的开发流程。它为常见的开发场景提供了结构化、可重复的模式。
+YARD 工作流是一系列精心编排的代理活动序列，可以自动化复杂的开发流程。它为常见的开发场景提供了结构化、可重复的模式。
 
 ### 核心概念
 
@@ -284,7 +284,7 @@ steps:
 工作流在Claude Code会话之间持久化:
 
 1. 用户启动新会话
-2. 激活@aiox-master
+2. 激活@yard-master
 3. 运行`*run-workflow {name} continue`
 4. 系统加载状态，显示当前步骤
 5. 用户执行步骤
@@ -294,7 +294,7 @@ steps:
 
 ## 工作流模式
 
-AIOX根据命令历史检测常见的工作流模式:
+YARD根据命令历史检测常见的工作流模式:
 
 ### 检测到的模式
 
@@ -393,7 +393,7 @@ cat .yard-core/development/workflows/{name}.yaml
 
 有关每个工作流的完整文档，包括详细的分步指南、流程图和实现细节，请参阅:
 
-- [AIOX工作流](../aiox-workflows/README.md) - 每个工作流的完整文档
+- [YARD工作流](../yard-workflows/README.md) - 每个工作流的完整文档
 
 ---
 
@@ -405,4 +405,4 @@ cat .yard-core/development/workflows/{name}.yaml
 
 ---
 
-*AIOX工作流指南 v1.0 - 协调AI-人工协作*
+*YARD工作流指南 v1.0 - 协调AI-人工协作*

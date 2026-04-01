@@ -1,10 +1,10 @@
-# AIOX Agent Execution Traces - Index
+# YARD Agent Execution Traces - Index
 
-> **Story:** AIOX-TRACE-001 | **Traced from source code, not documentation.**
+> **Story:** YARD-TRACE-001 | **Traced from source code, not documentation.**
 
 ## Overview
 
-This directory contains comprehensive runtime execution trace documentation for all 12 AIOX agents. Each document shows **exactly** what files are loaded, in what order, and why - from agent activation through every command execution.
+This directory contains comprehensive runtime execution trace documentation for all 12 YARD agents. Each document shows **exactly** what files are loaded, in what order, and why - from agent activation through every command execution.
 
 ---
 
@@ -23,7 +23,7 @@ This directory contains comprehensive runtime execution trace documentation for 
 | @architect | Aria (Visionary) | 21 | Direct | [architect-execution-trace.md](./architect-execution-trace.md) |
 | @dev | Dex (Builder) | 36 | Direct | [dev-execution-trace.md](./dev-execution-trace.md) |
 | @qa | Quinn (Guardian) | 25 | Direct | [qa-execution-trace.md](./qa-execution-trace.md) |
-| @aiox-master | Nova (Orchestrator) | 33 | Direct | [aiox-master-execution-trace.md](./aiox-master-execution-trace.md) |
+| @yard-master | Nova (Orchestrator) | 33 | Direct | [yard-master-execution-trace.md](./yard-master-execution-trace.md) |
 | @devops | Gage (Pipeline) | 30 | CLI Wrapper | [devops-execution-trace.md](./devops-execution-trace.md) |
 | @data-engineer | Dara (Architect) | 27 | CLI Wrapper | [data-engineer-execution-trace.md](./data-engineer-execution-trace.md) |
 | @ux-design-expert | Uma (Harmonizer) | 24 | CLI Wrapper | [ux-design-expert-execution-trace.md](./ux-design-expert-execution-trace.md) |
@@ -43,7 +43,7 @@ graph LR
         A1[@architect] --> GB[GreetingBuilder.buildGreeting]
         A2[@dev] --> GB
         A3[@qa] --> GB
-        A4[@aiox-master] --> GB
+        A4[@yard-master] --> GB
         A5[@po] --> GB
         A6[@pm] --> GB
         A7[@sm] --> GB
@@ -71,7 +71,7 @@ graph LR
 ```mermaid
 graph TD
     subgraph "Orchestration Layer"
-        MASTER[@aiox-master<br/>Nova]
+        MASTER[@yard-master<br/>Nova]
     end
 
     subgraph "Management Layer"
@@ -135,7 +135,7 @@ graph TD
 
 | Agent | Priority | Config Sections | Files Loaded | Perf Target |
 |-------|----------|-----------------|--------------|-------------|
-| @aiox-master | Critical | dataLocation, registry | aiox-kb.md (lazy) | <30ms |
+| @yard-master | Critical | dataLocation, registry | yard-kb.md (lazy) | <30ms |
 | @dev | High | devLoadAlwaysFiles, devStoryLocation, dataLocation | coding-standards.md, tech-stack.md, source-tree.md, technical-preferences.md | <50ms |
 | @qa | High | qaLocation, dataLocation, storyBacklog | technical-preferences.md, test-levels-framework.md, test-priorities-matrix.md | <50ms |
 | @devops | High | dataLocation, cicdLocation | technical-preferences.md | <50ms |
@@ -236,7 +236,7 @@ Each trace documents files referenced but not found on disk:
 | Agent | Missing File | Impact |
 |-------|--------------|--------|
 | @dev | 9 scripts (recovery-tracker.js, stuck-detector.js, etc.), 1 checklist | Non-functional commands |
-| @aiox-master | add-tech-doc.md | `*add-tech-doc` command non-functional |
+| @yard-master | add-tech-doc.md | `*add-tech-doc` command non-functional |
 | @ux-design-expert | integrate-Squad.md | Only `integrate-squad.md` exists |
 | @devops | gitignore-manager, version-tracker | Referenced tools not found |
 
@@ -253,4 +253,4 @@ All traces were created by reading actual source code, **NOT** from documentatio
 
 ---
 
-*Traced from source on 2026-02-05 | Story AIOX-TRACE-001*
+*Traced from source on 2026-02-05 | Story YARD-TRACE-001*

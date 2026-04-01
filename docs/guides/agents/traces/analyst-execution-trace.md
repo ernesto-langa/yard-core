@@ -431,7 +431,7 @@ graph TD
     subgraph "Data Files"
         D1[brainstorming-techniques.md]
         D2[elicitation-methods.md]
-        D3[aiox-kb.md]
+        D3[yard-kb.md]
     end
 
     subgraph "Scripts"
@@ -535,4 +535,4 @@ graph TD
 
 ---
 
-*Traced from source on 2026-02-05 | Story AIOX-TRACE-001*
+*Traced from source on 2026-02-05 | Story YARD-TRACE-001*

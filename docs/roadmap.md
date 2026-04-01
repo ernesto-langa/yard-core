@@ -1,14 +1,14 @@
-# AIOX Roadmap
+# YARD Roadmap
 
 > 🇧🇷 [Versão em Português](ROADMAP-PT.md)
 
-This document outlines the planned development direction for AIOX.
+This document outlines the planned development direction for YARD.
 
 > For detailed tracking, see our [GitHub Project](https://github.com/orgs/SynkraAI/projects/1)
 
 ## Vision
 
-AIOX aims to be the most comprehensive open-source AI agent framework, enabling developers to build sophisticated AI-powered applications with specialized agent teams (Squads) and seamless IDE integration.
+YARD aims to be the most comprehensive open-source AI agent framework, enabling developers to build sophisticated AI-powered applications with specialized agent teams (Squads) and seamless IDE integration.
 
 ## Current Focus (Q1 2026)
 
@@ -36,7 +36,7 @@ Core framework stabilization and community infrastructure:
 
 ### P0 Strategic Focus: Learning Curve Reduction
 
-Primary objective for AIOX 4.0.x execution:
+Primary objective for YARD 4.0.x execution:
 
 - onboarding-first experience (single "start here" path)
 - time-to-first-value <= 10 minutes for new users
@@ -44,8 +44,8 @@ Primary objective for AIOX 4.0.x execution:
 - runtime-guided next action (state-driven, not command-list driven)
 
 Tracking reference:
-- `docs/strategy/AIOX-LEARNING-CURVE-FOCUS-4.0.4.md`
-- `docs/strategy/AIOX-DIFFERENTIATION-PLAN-4.0.4.md`
+- `docs/strategy/YARD-LEARNING-CURVE-FOCUS-4.0.4.md`
+- `docs/strategy/YARD-DIFFERENTIATION-PLAN-4.0.4.md`
 
 Execution gates:
 - P0 gate: onboarding metric + clear IDE matrix + first-value flow + smoke tests
@@ -118,7 +118,7 @@ This public roadmap is synchronized with our internal sprint planning:
 
 | Public Roadmap | Internal Tracking |
 |----------------|-------------------|
-| [GitHub Project](https://github.com/orgs/SynkraAI/projects/1) | `docs/strategy/AIOX-DIFFERENTIATION-PLAN-4.0.4.md` |
+| [GitHub Project](https://github.com/orgs/SynkraAI/projects/1) | `docs/strategy/YARD-DIFFERENTIATION-PLAN-4.0.4.md` |
 | High-level features | Detailed stories per sprint |
 | Quarterly timeline | Sprint-based execution |
 

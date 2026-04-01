@@ -1,6 +1,6 @@
 <!-- Tradução: PT-BR | Original: /docs/en/architecture/source-tree.md | Sincronização: 2026-01-26 -->
 
-# Estrutura da Árvore de Código AIOX
+# Estrutura da Árvore de Código YARD
 
 > 🌐 [EN](../../architecture/source-tree.md) | **PT** | [ES](../../es/architecture/source-tree.md)
 
@@ -14,7 +14,7 @@
 
 ---
 
-# Estrutura da Árvore de Código AIOX
+# Estrutura da Árvore de Código YARD
 
 **Versão:** 1.1
 **Última Atualização:** 2025-12-14
@@ -38,7 +38,7 @@
 
 ## Visão Geral
 
-AIOX utiliza uma **arquitetura de camada dupla**:
+YARD utiliza uma **arquitetura de camada dupla**:
 
 1. **Framework Core** (`.yard-core/`) - Componentes portáteis do framework
 2. **Workspace do Projeto** (raiz) - Implementação específica do projeto
@@ -89,7 +89,7 @@ yard-core/                             # Raiz (projeto brownfield)
 │
 ├── bin/                               # Executáveis CLI
 │   ├── yard-core.js              # Ponto de entrada principal da CLI
-│   └── aiox-minimal.js                # CLI mínima
+│   └── yard-minimal.js                # CLI mínima
 │
 ├── tools/                             # Ferramentas de build e utilitários
 │   ├── cli.js                         # Builder da CLI
@@ -127,14 +127,14 @@ yard-core/                             # Raiz (projeto brownfield)
 
 ## Framework Core (.yard-core/)
 
-**Propósito:** Componentes portáteis do framework que funcionam em qualquer projeto AIOX.
+**Propósito:** Componentes portáteis do framework que funcionam em qualquer projeto YARD.
 
 ### Estrutura de Diretórios
 
 ```
 .yard-core/
 ├── agents/                            # 145 definições de agentes
-│   ├── aiox-master.md                 # Orquestrador master
+│   ├── yard-master.md                 # Orquestrador master
 │   ├── dev.md                         # Agente desenvolvedor
 │   ├── qa.md                          # Agente engenheiro de QA
 │   ├── architect.md                   # Agente arquiteto de sistema
@@ -188,7 +188,7 @@ yard-core/                             # Raiz (projeto brownfield)
 │   └── change-checklist.md            # Checklist de gerenciamento de mudanças
 │
 ├── data/                              # 6 arquivos de base de conhecimento
-│   ├── aiox-kb.md                     # Base de conhecimento AIOX
+│   ├── yard-kb.md                     # Base de conhecimento YARD
 │   ├── technical-preferences.md       # Preferências de tech stack
 │   ├── elicitation-methods.md         # Técnicas de elicitação
 │   ├── brainstorming-techniques.md    # Métodos de brainstorming
@@ -290,7 +290,7 @@ docs/
 │   └── README.md                      # Aviso de migração
 │
 ├── stories/                           # Stories de desenvolvimento
-│   ├── aiox migration/                # Stories de migração AIOX
+│   ├── yard migration/                # Stories de migração YARD
 │   │   ├── story-6.1.2.1.md
 │   │   ├── story-6.1.2.2.md
 │   │   ├── story-6.1.2.3.md
@@ -365,7 +365,7 @@ docs/
 
 ### Visão Geral
 
-Squads são extensões modulares que adicionam capacidades especializadas ao AIOX. Diferente dos Squads descontinuados, Squads seguem uma estrutura de template padronizada.
+Squads são extensões modulares que adicionam capacidades especializadas ao YARD. Diferente dos Squads descontinuados, Squads seguem uma estrutura de template padronizada.
 
 ### Localização do Template de Squad
 
@@ -392,7 +392,7 @@ templates/squad/                       # Template de squad para criar extensões
 
 ```bash
 # CLI futura (planejada):
-npx create-aiox-squad my-squad-name
+npx create-yard-squad my-squad-name
 
 # Método atual:
 cp -r templates/squad/ squads/my-squad-name/
@@ -481,7 +481,7 @@ yard-core/
 
 ```
 squads/
-├── verified/                          # Squads curados pelo AIOX
+├── verified/                          # Squads curados pelo YARD
 │   ├── github-devops/
 │   ├── db-sage/
 │   └── coderabbit-workflow/
@@ -496,7 +496,7 @@ squads/
 │   └── agent-squad/
 │
 └── tools/                             # Ferramentas de desenvolvimento de squad
-    └── create-aiox-squad/
+    └── create-yard-squad/
 ```
 
 ### REPO 3: SynkraAI/mcp-ecosystem (Apache 2.0)
@@ -504,9 +504,9 @@ squads/
 ```
 mcp-ecosystem/
 ├── presets/                           # Presets MCP (Docker MCP Toolkit)
-│   ├── aiox-dev/
-│   ├── aiox-research/
-│   └── aiox-docker/
+│   ├── yard-dev/
+│   ├── yard-research/
+│   └── yard-docker/
 │
 ├── mcps/                              # Configurações base de MCP
 │   ├── exa/
@@ -563,7 +563,7 @@ mmos/
 Diretórios: kebab-case (minúsculas, separados por hífen)
   ✅ .yard-core/
   ✅ Squads/
-  ❌ .AIOX-Core/
+  ❌ .YARD-Core/
   ❌ legacy-packs/
 
 Arquivos (Código): kebab-case com extensão
@@ -634,7 +634,7 @@ Exemplo: .yard-core/product/templates/deployment-plan-tmpl.yaml
 
 # Estou escrevendo uma story:
 Localização: docs/stories/{epic-context}/{story-file}.md
-Exemplo: docs/stories/aiox migration/story-6.1.2.6.md
+Exemplo: docs/stories/yard migration/story-6.1.2.6.md
 
 # Estou documentando uma decisão de arquitetura:
 Localização: docs/architecture/project-decisions/{decision-file}.md
@@ -709,4 +709,4 @@ outputs/                               # Saídas em runtime (gitignored)
 
 ---
 
-_Este é um padrão oficial do framework AIOX. Todo posicionamento de arquivos deve seguir esta estrutura._
+_Este é um padrão oficial do framework YARD. Todo posicionamento de arquivos deve seguir esta estrutura._

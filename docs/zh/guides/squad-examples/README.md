@@ -60,4 +60,4 @@ code my-squad/agents/my-agent.yaml
 
 ---
 
-*AIOX Squads：与你一起工作的 AI 代理团队*
+*YARD Squads：与你一起工作的 AI 代理团队*

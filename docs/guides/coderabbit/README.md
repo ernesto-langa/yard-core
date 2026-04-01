@@ -19,9 +19,9 @@
 
 ---
 
-## AIOX Integration Overview
+## YARD Integration Overview
 
-In AIOX, CodeRabbit is integrated into the Quality Gates system as part of **Layer 2: PR Automation**.
+In YARD, CodeRabbit is integrated into the Quality Gates system as part of **Layer 2: PR Automation**.
 
 ```
 Quality Gates 3 Layers
@@ -109,7 +109,7 @@ wsl bash -c '~/.local/bin/coderabbit --version'
 wsl bash -c '~/.local/bin/coderabbit auth status'
 ```
 
-### AIOX Agent Configuration
+### YARD Agent Configuration
 
 CodeRabbit is configured in agent definition files:
 
@@ -174,7 +174,7 @@ wsl bash -c 'cd /mnt/c/.../yard-core && ~/.local/bin/coderabbit --prompt-only --
 
 CodeRabbit categorizes issues by severity:
 
-| Severity     | Description                               | AIOX Action                      |
+| Severity     | Description                               | YARD Action                      |
 | ------------ | ----------------------------------------- | -------------------------------- |
 | **CRITICAL** | Security vulnerabilities, data loss risks | Block, auto-fix (3 attempts max) |
 | **HIGH**     | Significant bugs, performance issues      | Block, auto-fix recommended      |
@@ -317,7 +317,7 @@ wsl bash -c 'cd /path/to/repo && ~/.local/bin/coderabbit --prompt-only --base ma
 
 ---
 
-## Integration with AIOX Workflow
+## Integration with YARD Workflow
 
 ### Standard Development Flow
 
@@ -403,4 +403,4 @@ docs/qa/coderabbit-reports/
 
 ---
 
-_Last Updated: 2026-01-28 | AIOX Framework Team_
+_Last Updated: 2026-01-28 | YARD Framework Team_

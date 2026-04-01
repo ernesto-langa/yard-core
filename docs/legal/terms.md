@@ -6,11 +6,11 @@
 
 ## Acceptance of Terms
 
-By using Synkra AIOX ("the Software"), you agree to be bound by these Terms of Use. If you do not agree to these terms, do not use the Software.
+By using Synkra YARD ("the Software"), you agree to be bound by these Terms of Use. If you do not agree to these terms, do not use the Software.
 
 ## License
 
-Synkra AIOX is released under the **MIT License**. See the [LICENSE](LICENSE) file for the full license text.
+Synkra YARD is released under the **MIT License**. See the [LICENSE](LICENSE) file for the full license text.
 
 For licensing scope between open-source core and private modules, see:
 - [License Clarification (Core vs Pro)](./license-clarification.md)
@@ -67,7 +67,7 @@ This limitation applies to:
 
 ## Contributions
 
-By contributing to Synkra AIOX, you agree that:
+By contributing to Synkra YARD, you agree that:
 
 1. **License Grant:** Your contributions will be licensed under the same MIT License
 2. **Original Work:** Your contributions are your original work or you have the right to submit them
@@ -80,8 +80,8 @@ For detailed contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 The following are trademarks or registered trademarks of SynkraAI Inc.:
 
-- "AIOX"
-- "Synkra AIOX"
+- "YARD"
+- "Synkra YARD"
 - "Synkra"
 - Associated logos and branding
 
@@ -104,7 +104,7 @@ For trademark licensing inquiries, contact: legal@SynkraAI.com
 
 ## Third-Party Dependencies
 
-Synkra AIOX includes third-party open-source components. Each component is subject to its own license terms:
+Synkra YARD includes third-party open-source components. Each component is subject to its own license terms:
 
 - See `package.json` for a list of dependencies
 - Run `npm ls` to view the complete dependency tree
@@ -112,7 +112,7 @@ Synkra AIOX includes third-party open-source components. Each component is subje
 
 ## AI-Generated Content
 
-When using AI providers (Claude, OpenAI, etc.) through Synkra AIOX:
+When using AI providers (Claude, OpenAI, etc.) through Synkra YARD:
 
 1. **User Responsibility:** You are responsible for content generated
 2. **Provider Terms:** AI interactions are subject to provider terms of service
@@ -148,7 +148,7 @@ If any provision of these terms is found to be unenforceable, the remaining prov
 
 ## Entire Agreement
 
-These Terms of Use, together with the [LICENSE](LICENSE), [Privacy Policy](PRIVACY.md), and [Code of Conduct](CODE_OF_CONDUCT.md), constitute the entire agreement between you and SynkraAI Inc. regarding use of Synkra AIOX.
+These Terms of Use, together with the [LICENSE](LICENSE), [Privacy Policy](PRIVACY.md), and [Code of Conduct](CODE_OF_CONDUCT.md), constitute the entire agreement between you and SynkraAI Inc. regarding use of Synkra YARD.
 
 ## Contact
 

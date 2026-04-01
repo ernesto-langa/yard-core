@@ -74,7 +74,7 @@ flowchart TB
     PF2 -->|否| ERR2[错误: Git < 2.5]
 
     PF3 -->|存在| PF4
-    PF3 -->|不存在| ERR3[错误: AIOX 不完整]
+    PF3 -->|不存在| ERR3[错误: YARD 不完整]
 
     PF4 -->|正常| S1
     PF4 -->|接近限制| WARN1[警告: 接近限制]
@@ -141,7 +141,7 @@ stateDiagram-v2
 
 ```mermaid
 graph TB
-    subgraph AIOX["AIOX 核心"]
+    subgraph YARD["YARD 核心"]
         WF[auto-worktree.yaml<br/>工作流定义]
         TK[create-worktree.md<br/>任务定义]
     end
@@ -169,7 +169,7 @@ graph TB
     GIT -->|创建| WT
     WM -->|记录| LOG
 
-    style AIOX fill:#e3f2fd
+    style YARD fill:#e3f2fd
     style INFRA fill:#fce4ec
     style FS fill:#f3e5f5
     style AGENTS fill:#e8f5e9
@@ -341,8 +341,8 @@ git worktree add .yard/worktrees/{storyId} -b auto-claude/{storyId}
 
 **环境变量:**
 ```bash
-AIOX_WORKTREE=/path/to/.yard/worktrees/{storyId}
-AIOX_STORY={storyId}
+YARD_WORKTREE=/path/to/.yard/worktrees/{storyId}
+YARD_STORY={storyId}
 ```
 
 **输出:**
@@ -463,7 +463,7 @@ interface SwitchResult {
 |------|-----------|-------|
 | **Git** | >= 2.5 | `git --version` |
 | **Node.js** | >= 18 | `node --version` |
-| **AIOX 核心** | 已安装 | 检查 `.yard-core/` |
+| **YARD 核心** | 已安装 | 检查 `.yard-core/` |
 
 ### NPM 依赖
 
@@ -595,7 +595,7 @@ flowchart TD
 |------|------|---------|
 | `Not a git repository` | 目录不是 git 存储库 | 执行 `git init` |
 | `Git worktree not supported` | Git < 2.5 | 升级 Git |
-| `WorktreeManager not found` | AIOX 不完整 | 重新安装 AIOX |
+| `WorktreeManager not found` | YARD 不完整 | 重新安装 YARD |
 | `Maximum worktrees limit reached` | >= 10 个工作树 | 执行 `*cleanup-worktrees` |
 | `Could not determine story ID` | 未找到 ID | 明确提供 ID |
 | `Worktree creation failed` | git worktree 错误 | 检查 git 状态 |
@@ -790,4 +790,4 @@ ls .git/worktrees/{storyId}/locked
 
 ---
 
-*自动由 AIOX-FULLSTACK 生成的文档*
+*自动由 YARD-FULLSTACK 生成的文档*

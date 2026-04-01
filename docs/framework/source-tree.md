@@ -1,4 +1,4 @@
-# AIOX Source Tree Structure
+# YARD Source Tree Structure
 
 > 🌐 **EN** | [PT](../pt/framework/source-tree.md) | [ES](../es/framework/source-tree.md)
 
@@ -25,7 +25,7 @@
 
 ## Overview
 
-AIOX uses a **modular architecture** with clear separation of concerns:
+YARD uses a **modular architecture** with clear separation of concerns:
 
 1. **Framework Core** (`.yard-core/`) - Portable framework components organized by domain
 2. **Project Workspace** (root) - Project-specific implementation
@@ -67,7 +67,7 @@ yard-core/                             # Root project
 │   └── squad/                         # Squad template (see docs/guides/squads-guide.md)
 │
 ├── bin/                               # CLI executables
-│   └── aiox.js                        # Main CLI entry point
+│   └── yard.js                        # Main CLI entry point
 │
 ├── tools/                             # Build and utility tools
 │   ├── cli.js                         # CLI builder
@@ -123,14 +123,14 @@ yard-core/                             # Root project
 │   └── utils/                         # Core utilities
 │
 ├── data/                              # Shared Data
-│   ├── aiox-kb.md                     # AIOX knowledge base (@aiox-master, lazy-loaded)
+│   ├── yard-kb.md                     # YARD knowledge base (@yard-master, lazy-loaded)
 │   ├── agent-config-requirements.yaml # Per-agent config loading rules (@architect, updated on agent changes)
 │   ├── technical-preferences.md       # User/team technical preferences (@architect, updated on preference changes)
 │   └── workflow-patterns.yaml         # Workflow detection patterns (@sm, updated on workflow changes)
 │
 ├── development/                       # Development Assets
 │   ├── agents/                        # Agent definitions (11 core agents)
-│   │   ├── aiox-master.md             # Master orchestrator
+│   │   ├── yard-master.md             # Master orchestrator
 │   │   ├── dev.md                     # Developer agent
 │   │   ├── qa.md                      # QA engineer agent
 │   │   ├── architect.md               # System architect agent
@@ -275,7 +275,7 @@ All data files used by agents during activation must have documented ownership, 
 
 | File | Owner | Fill Rule | Update Trigger | Used By |
 |------|-------|-----------|----------------|---------|
-| `aiox-kb.md` | @aiox-master | Updated on major framework changes | Manual edit | @aiox-master (lazy) |
+| `yard-kb.md` | @yard-master | Updated on major framework changes | Manual edit | @yard-master (lazy) |
 | `agent-config-requirements.yaml` | @architect | Updated when agent config needs change | Story-driven | AgentConfigLoader |
 | `technical-preferences.md` | @architect | Updated on preference changes | Manual edit or `*add-tech-doc` | @dev, @qa, @devops, @architect, @data-engineer |
 | `workflow-patterns.yaml` | @sm | Updated on workflow changes | Manual edit | @sm, WorkflowNavigator |
@@ -313,7 +313,7 @@ docs/
 │   └── README.md                      # Migration notice
 │
 ├── stories/                           # Development stories
-│   ├── aiox migration/                # AIOX migration stories
+│   ├── yard migration/                # YARD migration stories
 │   │   ├── story-6.1.2.1.md
 │   │   ├── story-6.1.2.2.md
 │   │   ├── story-6.1.2.3.md
@@ -388,7 +388,7 @@ docs/
 
 ### Overview
 
-Squads are modular extensions that add specialized capabilities to AIOX. Unlike the deprecated Squads, Squads follow a standardized template structure.
+Squads are modular extensions that add specialized capabilities to YARD. Unlike the deprecated Squads, Squads follow a standardized template structure.
 
 ### Squad Template Location
 
@@ -415,7 +415,7 @@ templates/squad/                       # Squad template for creating extensions
 
 ```bash
 # Future CLI (planned):
-npx create-aiox-squad my-squad-name
+npx create-yard-squad my-squad-name
 
 # Current method:
 cp -r templates/squad/ squads/my-squad-name/
@@ -487,7 +487,7 @@ yard-core/
 │   └── ...
 │
 ├── bin/                               # CLI entry points
-│   └── aiox.js                        # Main CLI
+│   └── yard.js                        # Main CLI
 │
 ├── tools/                             # Build and utility tools
 │   ├── cli.js                         # CLI builder
@@ -517,7 +517,7 @@ yard-core/
 
 ```
 squads/
-├── verified/                          # AIOX-curated squads
+├── verified/                          # YARD-curated squads
 │   ├── github-devops/
 │   ├── db-sage/
 │   └── coderabbit-workflow/
@@ -532,7 +532,7 @@ squads/
 │   └── agent-squad/
 │
 └── tools/                             # Squad development tools
-    └── create-aiox-squad/
+    └── create-yard-squad/
 ```
 
 ### REPO 3: SynkraAI/mcp-ecosystem (Apache 2.0)
@@ -540,9 +540,9 @@ squads/
 ```
 mcp-ecosystem/
 ├── presets/                           # MCP presets (Docker MCP Toolkit)
-│   ├── aiox-dev/
-│   ├── aiox-research/
-│   └── aiox-docker/
+│   ├── yard-dev/
+│   ├── yard-research/
+│   └── yard-docker/
 │
 ├── mcps/                              # Base MCP configs
 │   ├── exa/
@@ -599,7 +599,7 @@ mmos/
 Directories: kebab-case (lowercase, hyphen-separated)
   ✅ .yard-core/
   ✅ Squads/
-  ❌ .AIOX-Core/
+  ❌ .YARD-Core/
   ❌ legacy-packs/
 
 Files (Code): kebab-case with extension
@@ -885,4 +885,4 @@ Runtime state is persisted in `.yard/`:
 
 ---
 
-_This is an official AIOX framework standard. All file placement must follow this structure._
+_This is an official YARD framework standard. All file placement must follow this structure._

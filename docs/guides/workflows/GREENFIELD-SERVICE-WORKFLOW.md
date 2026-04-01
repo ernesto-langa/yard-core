@@ -419,7 +419,7 @@ Apos conclusao do epic:
 **Descricao:**
 Todas as stories implementadas e revisadas! Fase de desenvolvimento do servico completa.
 
-**Referencia:** `.yard-core/data/aiox-kb.md#IDE Development Workflow`
+**Referencia:** `.yard-core/data/yard-kb.md#IDE Development Workflow`
 
 ---
 
@@ -716,7 +716,7 @@ ls docs/stories/epic-*/
 tail -f .yard/logs/agent.log
 
 # Habilitar modo debug
-export AIOX_DEBUG=true
+export YARD_DEBUG=true
 ```
 
 ---
@@ -728,7 +728,7 @@ export AIOX_DEBUG=true
 | Arquivo | Descricao |
 |---------|-----------|
 | `.yard-core/development/workflows/greenfield-service.yaml` | Definicao do workflow |
-| `.yard-core/data/aiox-kb.md` | Knowledge base do AIOX |
+| `.yard-core/data/yard-kb.md` | Knowledge base do YARD |
 
 ### Agentes
 

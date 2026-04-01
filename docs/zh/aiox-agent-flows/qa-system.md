@@ -9,7 +9,7 @@
 
 ## 概览
 
-**@qa 代理 (Quinn)** 是 AIOX 的**测试架构师和质量顾问**。其角色是为开发团队提供全面的质量分析、质量门决策和可行的建议。
+**@qa 代理 (Quinn)** 是 YARD 的**测试架构师和质量顾问**。其角色是为开发团队提供全面的质量分析、质量门决策和可行的建议。
 
 **原型:** 守护者
 **通信语气:** 分析、系统、教育、务实
@@ -50,7 +50,7 @@
 | 文件 | 目的 |
 |---------|-----------|
 | `.yard-core/development/agents/qa.md` | QA 代理的完整定义 |
-| `.claude/commands/AIOX/agents/qa.md` | Claude Code 命令用于激活 @qa |
+| `.claude/commands/YARD/agents/qa.md` | Claude Code 命令用于激活 @qa |
 
 ### 工作流文件
 

@@ -74,7 +74,7 @@ flowchart TB
     PF2 -->|Não| ERR2[Erro: Git < 2.5]
 
     PF3 -->|Existe| PF4
-    PF3 -->|Não existe| ERR3[Erro: AIOX incompleto]
+    PF3 -->|Não existe| ERR3[Erro: YARD incompleto]
 
     PF4 -->|OK| S1
     PF4 -->|Limite| WARN1[Aviso: Próximo do limite]
@@ -141,7 +141,7 @@ stateDiagram-v2
 
 ```mermaid
 graph TB
-    subgraph AIOX["Yard Core"]
+    subgraph YARD["Yard Core"]
         WF[auto-worktree.yaml<br/>Workflow Definição]
         TK[create-worktree.md<br/>Task Definição]
     end
@@ -169,7 +169,7 @@ graph TB
     GIT -->|Cria| WT
     WM -->|Grava logs| LOG
 
-    style AIOX fill:#e3f2fd
+    style YARD fill:#e3f2fd
     style INFRA fill:#fce4ec
     style FS fill:#f3e5f5
     style AGENTS fill:#e8f5e9
@@ -337,8 +337,8 @@ Configura variáveis de ambiente e exibe instruções para navegar até a worktr
 
 **Variáveis de Ambiente:**
 ```bash
-AIOX_WORKTREE=/path/to/.yard/worktrees/{storyId}
-AIOX_STORY={storyId}
+YARD_WORKTREE=/path/to/.yard/worktrees/{storyId}
+YARD_STORY={storyId}
 ```
 
 **Output:**
@@ -591,7 +591,7 @@ flowchart TD
 |------|-------|-----------|
 | `Not a git repository` | Diretório não é repo git | Executar `git init` |
 | `Git worktree not supported` | Git < 2.5 | Atualizar Git |
-| `WorktreeManager not found` | AIOX incompleto | Reinstalar AIOX |
+| `WorktreeManager not found` | YARD incompleto | Reinstalar YARD |
 | `Maximum worktrees limit reached` | >= 10 worktrees | Executar `*cleanup-worktrees` |
 | `Could not determine story ID` | ID não encontrado | Fornecer ID explicitamente |
 | `Worktree creation failed` | Erro no git worktree | Verificar git status |
@@ -786,4 +786,4 @@ ls .git/worktrees/{storyId}/locked
 
 ---
 
-*Documentação gerada automaticamente pelo AIOX-FULLSTACK*
+*Documentação gerada automaticamente pelo YARD-FULLSTACK*

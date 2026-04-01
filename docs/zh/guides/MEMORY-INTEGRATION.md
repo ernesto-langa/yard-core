@@ -28,9 +28,9 @@
 
 ### 扩展点模式
 
-集成遵循 AIOX Open Core 模型:
+集成遵循 YARD Open Core 模型:
 - **yard-core:** UnifiedActivationPipeline 中的扩展点 (本指南)
-- **aiox-pro:** 记忆智能实现 (检索, 评分, 学习)
+- **yard-pro:** 记忆智能实现 (检索, 评分, 学习)
 
 ```
 UnifiedActivationPipeline (Tier 2 Enrich)

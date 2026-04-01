@@ -4,7 +4,7 @@
 
 ---
 
-> Document generation and variable substitution engine for Synkra AIOX.
+> Document generation and variable substitution engine for Synkra YARD.
 
 **Version:** 2.0
 **Last Updated:** 2025-12-05
@@ -13,7 +13,7 @@
 
 ## Overview
 
-The Template Engine provides a consistent way to generate documents (PRDs, ADRs, Stories, etc.) with variable substitution, conditionals, and loops. It powers all document generation tasks in AIOX.
+The Template Engine provides a consistent way to generate documents (PRDs, ADRs, Stories, etc.) with variable substitution, conditionals, and loops. It powers all document generation tasks in YARD.
 
 ### Key Features
 
@@ -192,7 +192,7 @@ Email: {{project.owner.email}}
 ```javascript
 const variables = {
   project: {
-    name: 'AIOX',
+    name: 'YARD',
     owner: {
       name: 'Pedro',
       email: 'pedro@example.com',
@@ -475,4 +475,4 @@ console.log('Validation result:', validation);
 
 ---
 
-_Synkra AIOX Template Engine v2.0_
+_Synkra YARD Template Engine v2.0_

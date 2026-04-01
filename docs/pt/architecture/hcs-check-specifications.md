@@ -145,7 +145,7 @@ heal:
 
 ## Domínio 1: Coerência do Projeto
 
-**Propósito:** Verificar se os arquivos do framework AIOX estão corretamente configurados e consistentes.
+**Propósito:** Verificar se os arquivos do framework YARD estão corretamente configurados e consistentes.
 
 ### Verificações
 
@@ -656,7 +656,7 @@ class GitHubApiCheck extends BaseCheck {
 ```javascript
 // Seções obrigatórias no CLAUDE.md
 const requiredSections = [
-  'Project Overview', // ou 'AIOX-FULLSTACK Development Rules'
+  'Project Overview', // ou 'YARD-FULLSTACK Development Rules'
   'Agent System', // ou 'Workflow Execution'
   'Git Conventions', // ou 'Best Practices'
 ];
@@ -709,7 +709,7 @@ checks:
       type: content-pattern
       patterns:
         - 'You are'
-        - 'AIOX'
+        - 'YARD'
     autoFix:
       tier: 2
       action: 'create-from-template'

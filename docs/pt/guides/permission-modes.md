@@ -6,13 +6,13 @@
 
 # Guia de Modos de Permissão
 
-> Controle o nível de autonomia que os agentes AIOX têm sobre seu sistema.
+> Controle o nível de autonomia que os agentes YARD têm sobre seu sistema.
 
 ---
 
 ## Visão Geral
 
-Os Modos de Permissão permitem controlar o nível de autonomia dos agentes AIOX. Seja explorando um novo codebase ou executando builds totalmente autônomos, há um modo para seu workflow.
+Os Modos de Permissão permitem controlar o nível de autonomia dos agentes YARD. Seja explorando um novo codebase ou executando builds totalmente autônomos, há um modo para seu workflow.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -243,11 +243,11 @@ As seguintes 5 operações serão executadas:
 Defina o modo na automação:
 
 ```yaml
-# .github/workflows/aiox.yml
-- name: Executar AIOX
+# .github/workflows/yard.yml
+- name: Executar YARD
   run: |
     echo "permissions:\n  mode: auto" > .yard/config.yaml
-    aiox run build
+    yard run build
 ```
 
 ### Para Equipes

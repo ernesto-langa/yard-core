@@ -331,7 +331,7 @@ flowchart TD
     E -->|GitHub Projects| G[Sync to GitHub issue via gh CLI]
     E -->|Jira| H[Sync to Jira issue via API]
     E -->|Local-only| I[Validate YAML only<br/>no external sync]
-    E -->|None configured| J[Prompt: run aiox init]
+    E -->|None configured| J[Prompt: run yard init]
     F --> K[Output: sync confirmation with link]
     G --> K
     H --> K
@@ -539,7 +539,7 @@ graph TD
 | @pm -> @po | Provides | Strategic direction, PRDs, requirements |
 | @po -> @sm | Delegate | Story creation via `*draft` |
 | @po -> @pm | Delegate | Epic creation via `*create-epic` |
-| @po -> @aiox-master | Escalate | Course corrections via `*correct-course` |
+| @po -> @yard-master | Escalate | Course corrections via `*correct-course` |
 | @po -> @analyst | Delegate | Research via `*research` |
 | @po -> @devops | Delegate | Git push operations, PR creation |
 | @pm -> @po | Receives | Story validation requests via `*validate-story-draft` |
@@ -556,7 +556,7 @@ graph TD
 - Epic creation is needed (uses `*create-epic` command)
 - Strategic direction or PRD creation is required
 
-**Delegates to @aiox-master when:**
+**Delegates to @yard-master when:**
 - Course corrections are needed (uses `*correct-course` command)
 - Systemic issues require orchestrator-level intervention
 
@@ -597,4 +597,4 @@ graph TD
 
 ---
 
-*Traced from source on 2026-02-05 | Story AIOX-TRACE-001*
+*Traced from source on 2026-02-05 | Story YARD-TRACE-001*

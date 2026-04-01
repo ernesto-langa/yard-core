@@ -1,7 +1,7 @@
-# @aiox-master (Orion) - Execution Trace
+# @yard-master (Orion) - Execution Trace
 
 > Traced from source code, not documentation.
-> Agent definition: `.yard-core/development/agents/aiox-master.md`
+> Agent definition: `.yard-core/development/agents/yard-master.md`
 
 ## 1. Activation Trace
 
@@ -9,7 +9,7 @@
 
 | Order | File | Loader | Purpose |
 |-------|------|--------|---------|
-| 1 | `.yard-core/development/agents/aiox-master.md` | AgentConfigLoader.loadAgentDefinition() | Agent definition (YAML block) |
+| 1 | `.yard-core/development/agents/yard-master.md` | AgentConfigLoader.loadAgentDefinition() | Agent definition (YAML block) |
 | 2 | `.yard-core/core-config.yaml` | GreetingBuilder._loadConfig() | Core configuration |
 | 3 | `.yard-core/data/agent-config-requirements.yaml` | AgentConfigLoader.loadRequirements() | Config sections: dataLocation, registry |
 | 4 | `.yard-core/data/workflow-patterns.yaml` | WorkflowNavigator._loadPatterns() | Workflow state detection |
@@ -20,7 +20,7 @@
 
 | File | Condition | Size |
 |------|-----------|------|
-| `.yard-core/data/aiox-kb.md` | ONLY when user types `*kb` | 35KB |
+| `.yard-core/data/yard-kb.md` | ONLY when user types `*kb` | 35KB |
 
 ### 1.2 Greeting Construction
 
@@ -29,7 +29,7 @@
 ```mermaid
 sequenceDiagram
     participant CC as Claude Code
-    participant AMd as aiox-master.md
+    participant AMd as yard-master.md
     participant ACL as AgentConfigLoader
     participant GB as GreetingBuilder
     participant GPM as GreetingPreferenceManager
@@ -40,7 +40,7 @@ sequenceDiagram
 
     CC->>AMd: Load agent file (STEP 1)
     CC->>AMd: Adopt persona (STEP 2)
-    CC->>ACL: loadAgentDefinition('aiox-master')
+    CC->>ACL: loadAgentDefinition('yard-master')
     ACL-->>CC: { agent: { name: 'Orion', icon: '👑' }, commands: [...33], ... }
 
     CC->>GB: new GreetingBuilder()
@@ -72,18 +72,18 @@ sequenceDiagram
 From `agent-config-requirements.yaml`:
 
 ```yaml
-aiox-master:
+yard-master:
   config_sections:
     - dataLocation
     - registry
   files_loaded:
-    - path: .yard-core/data/aiox-kb.md
+    - path: .yard-core/data/yard-kb.md
       lazy: true
       condition: kb_command
       size: 35KB
   lazy_loading:
     registry: false      # Always load (15KB, frequently used)
-    aiox-kb: true        # Load only on *kb command
+    yard-kb: true        # Load only on *kb command
   performance_target: <30ms
 ```
 
@@ -93,7 +93,7 @@ aiox-master:
 |------|--------|-------|
 | Greeting level | `persona_profile.greeting_levels.archetypal` | `👑 Orion the Orchestrator ready to lead!` |
 | Signature | `persona_profile.communication.signature_closing` | `— Orion, orquestrando o sistema 🎯` |
-| Role | `persona.role` | Master Orchestrator, Framework Developer & AIOX Method Expert |
+| Role | `persona.role` | Master Orchestrator, Framework Developer & YARD Method Expert |
 | Commands shown | `filterCommandsByVisibility('full')` | 33 commands with `full` visibility |
 
 ---
@@ -148,20 +148,20 @@ aiox-master:
 | File | Type | Status |
 |------|------|--------|
 | `kb-mode-interaction.md` | Task | EXISTS |
-| `.yard-core/data/aiox-kb.md` | Data | EXISTS (lazy, 35KB) |
+| `.yard-core/data/yard-kb.md` | Data | EXISTS (lazy, 35KB) |
 
 **Execution flow:**
 
 ```mermaid
 flowchart TD
     A["*kb"] --> B[Load kb-mode-interaction.md task]
-    B --> C[Load aiox-kb.md into context]
+    B --> C[Load yard-kb.md into context]
     C --> D[Toggle KB mode ON]
-    D --> E[Agent now answers with full AIOX Method knowledge]
+    D --> E[Agent now answers with full YARD Method knowledge]
     E --> F[User types *kb again to toggle OFF]
 ```
 
-**CRITICAL:** aiox-kb.md is NEVER loaded unless user explicitly types `*kb`.
+**CRITICAL:** yard-kb.md is NEVER loaded unless user explicitly types `*kb`.
 
 ---
 
@@ -208,7 +208,7 @@ flowchart TD
     O --> Q[Update manifest if applicable]
 ```
 
-**Expected output:** New AIOX component file written to appropriate directory.
+**Expected output:** New YARD component file written to appropriate directory.
 
 ---
 
@@ -715,11 +715,11 @@ These are built-in commands handled by the agent framework, not external task fi
 |---------|----------|
 | `*help` | Renders full command list from `commands[]` in agent definition (33 commands) |
 | `*status` | Shows current context: active story, branch, modified files, session info |
-| `*guide` | Renders the `## AIOX Master Guide` section from agent .md |
+| `*guide` | Renders the `## YARD Master Guide` section from agent .md |
 | `*chat-mode` | Starts conversational assistance mode (freeform interaction) |
 | `*doc-out` | Outputs complete document content |
 | `*yolo` | Toggles confirmation skipping mode |
-| `*exit` | Exits aiox-master mode, returns to base Claude Code |
+| `*exit` | Exits yard-master mode, returns to base Claude Code |
 | `*agent {name}` | Reads and displays info about a specialized agent (use `@` to transform into it) |
 | `*list-components` | Scans .yard-core/ and lists all framework components (agents, tasks, workflows, templates, checklists) |
 | `*test-memory` | Tests memory layer connection and reports status |
@@ -731,7 +731,7 @@ These are built-in commands handled by the agent framework, not external task fi
 ```mermaid
 graph TD
     subgraph "Agent Definition"
-        AD[aiox-master.md]
+        AD[yard-master.md]
     end
 
     subgraph "Activation Pipeline"
@@ -752,7 +752,7 @@ graph TD
     end
 
     subgraph "Data Files"
-        KB[aiox-kb.md - LAZY]
+        KB[yard-kb.md - LAZY]
         BT[brainstorming-techniques.md]
         EM[elicitation-methods.md]
         TP[technical-preferences.md]
@@ -922,14 +922,14 @@ graph TD
 
 | Interaction | Direction | Trigger |
 |-------------|-----------|---------|
-| @aiox-master -> @pm | Delegate | Epic/story creation (brownfield-create-epic, brownfield-create-story) |
-| @aiox-master -> @analyst | Delegate | Brainstorming sessions (*brainstorm) |
-| @aiox-master -> @qa | Delegate | Test suite creation (*create-suite) |
-| @aiox-master -> @architect | Delegate | AI prompt generation (*generate-ai-prompt) |
-| @aiox-master -> @dev | Handoff | Story implementation after story creation |
-| @aiox-master -> @devops | Delegate | Git push operations, PR creation |
-| @aiox-master -> any agent | Execute | Can execute any task from any agent directly |
-| Any agent -> @aiox-master | Escalate | Cross-agent coordination, framework operations |
+| @yard-master -> @pm | Delegate | Epic/story creation (brownfield-create-epic, brownfield-create-story) |
+| @yard-master -> @analyst | Delegate | Brainstorming sessions (*brainstorm) |
+| @yard-master -> @qa | Delegate | Test suite creation (*create-suite) |
+| @yard-master -> @architect | Delegate | AI prompt generation (*generate-ai-prompt) |
+| @yard-master -> @dev | Handoff | Story implementation after story creation |
+| @yard-master -> @devops | Delegate | Git push operations, PR creation |
+| @yard-master -> any agent | Execute | Can execute any task from any agent directly |
+| Any agent -> @yard-master | Escalate | Cross-agent coordination, framework operations |
 
 ### Delegation Rules (from agent definition)
 
@@ -1014,4 +1014,4 @@ Some dependencies resolve to non-standard paths:
 
 ---
 
-*Traced from source on 2026-02-05 | Story AIOX-TRACE-001*
+*Traced from source on 2026-02-05 | Story YARD-TRACE-001*

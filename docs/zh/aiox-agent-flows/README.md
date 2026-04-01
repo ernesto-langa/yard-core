@@ -1,12 +1,12 @@
 <!--
   翻译：zh-CN（简体中文）
-  原文：/docs/aiox-agent-flows/README.md
+  原文：/docs/yard-agent-flows/README.md
   最后同步：2026-02-22
 -->
 
-# AIOX 代理流程 - 代理详细文档
+# YARD 代理流程 - 代理详细文档
 
-> 🌐 [PT](../../aiox-agent-flows/README.md) | [EN](../../en/aiox-agent-flows/README.md) | [ES](../../es/aiox-agent-flows/README.md) | **ZH**
+> 🌐 [PT](../../yard-agent-flows/README.md) | [EN](../../en/yard-agent-flows/README.md) | [ES](../../es/yard-agent-flows/README.md) | **ZH**
 
 ---
 
@@ -18,7 +18,7 @@
 
 ## 概述
 
-此文件夹包含所有 AIOX 代理的详细文档，包括：
+此文件夹包含所有 YARD 代理的详细文档，包括：
 
 - 每个代理的**完整系统**
 - 操作的 **Mermaid 流程图**
@@ -33,7 +33,7 @@
 
 | 代理 | 角色 | 原型 | 文档 |
 |--------|---------|-----------|-----------|
-| **@aiox-master** | Orion | 编排者 | [aiox-master-system.md](./aiox-master-system.md) |
+| **@yard-master** | Orion | 编排者 | [yard-master-system.md](./yard-master-system.md) |
 | **@analyst** | Atlas | 研究员 | [analyst-system.md](./analyst-system.md) |
 | **@architect** | Aria | 愿景者 | [architect-system.md](./architect-system.md) |
 | **@data-engineer** | Dara | 数据圣人 | [data-engineer-system.md](./data-engineer-system.md) |
@@ -104,7 +104,7 @@
 ```mermaid
 flowchart TB
     subgraph ORCHESTRATION["编排"]
-        MASTER["@aiox-master\n(Orion)"]
+        MASTER["@yard-master\n(Orion)"]
     end
 
     subgraph DISCOVERY["发现与规划"]
@@ -177,7 +177,7 @@ flowchart TB
 |--------------|-------------|-----------|
 | 代理参考指南 | [docs/agent-reference-guide.md](../agent-reference-guide.md) | 快速参考 |
 | 工作流指南 | [docs/guides/workflows-guide.md](../guides/workflows-guide.md) | 工作流指南 |
-| AIOX 工作流 | [docs/aiox-workflows/](../aiox-workflows/) | 工作流详情 |
+| YARD 工作流 | [docs/yard-workflows/](../yard-workflows/) | 工作流详情 |
 | 架构 | [docs/architecture/](../architecture/) | 技术架构 |
 
 ---
@@ -193,4 +193,4 @@ flowchart TB
 
 ---
 
-*AIOX 代理流程文档 v1.0 - 代理系统详细文档*
+*YARD 代理流程文档 v1.0 - 代理系统详细文档*

@@ -2,7 +2,7 @@
 
 **版本:** 1.0
 **类型:** 通用工作流
-**作者:** Orion (AIOX 主机)
+**作者:** Orion (YARD 主机)
 **创建日期:** 2025-01-30
 **标签:** story、development-cycle、quality-gate、agile、generic
 
@@ -10,7 +10,7 @@
 
 ## 概览
 
-**故事开发循环**是 AIOX 中央工作流，用于故事开发。它自动化从创建到交付的完整流程，整合质量网关，遵循序列: **创建 -> 验证 -> 实现 -> QA 审查**。
+**故事开发循环**是 YARD 中央工作流，用于故事开发。它自动化从创建到交付的完整流程，整合质量网关，遵循序列: **创建 -> 验证 -> 实现 -> QA 审查**。
 
 ### 目标
 
@@ -549,7 +549,7 @@ graph TD
 
 ### 项目配置
 
-1. **core-config.yaml** - 必需的 AIOX 配置文件
+1. **core-config.yaml** - 必需的 YARD 配置文件
    - `devStoryLocation` - 故事位置
    - `prd.*` - PRD 配置
    - `architecture.*` - 架构配置

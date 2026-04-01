@@ -421,7 +421,7 @@ QA 代理 (新会话): `@qa` -> `*review-story`
 **描述:**
 所有故事已实施和审阅! 服务开发阶段完成。
 
-**参考:** `.yard-core/data/aiox-kb.md#IDE Development Workflow`
+**参考:** `.yard-core/data/yard-kb.md#IDE Development Workflow`
 
 ---
 
@@ -718,7 +718,7 @@ ls docs/stories/epic-*/
 tail -f .yard/logs/agent.log
 
 # 启用调试模式
-export AIOX_DEBUG=true
+export YARD_DEBUG=true
 ```
 
 ---
@@ -730,7 +730,7 @@ export AIOX_DEBUG=true
 | 文件 | 描述 |
 |------|------|
 | `.yard-core/development/workflows/greenfield-service.yaml` | 工作流定义 |
-| `.yard-core/data/aiox-kb.md` | AIOX 知识库 |
+| `.yard-core/data/yard-kb.md` | YARD 知识库 |
 
 ### 代理
 

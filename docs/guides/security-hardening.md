@@ -1,10 +1,10 @@
-# AIOX Security Hardening Guide
+# YARD Security Hardening Guide
 
 > **EN** | [PT](../pt/guides/security-hardening.md) | [ES](../es/guides/security-hardening.md)
 
 ---
 
-> Complete guide to hardening security for Synkra AIOX deployments - from development to production.
+> Complete guide to hardening security for Synkra YARD deployments - from development to production.
 
 **Version:** 2.1.0
 **Last Updated:** 2026-01-29
@@ -29,7 +29,7 @@
 
 ## Security Overview
 
-Synkra AIOX operates at a privileged layer between AI models and your system. This guide covers hardening strategies specific to AI-orchestrated development environments.
+Synkra YARD operates at a privileged layer between AI models and your system. This guide covers hardening strategies specific to AI-orchestrated development environments.
 
 ### Security Architecture
 
@@ -49,7 +49,7 @@ Synkra AIOX operates at a privileged layer between AI models and your system. Th
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### AIOX-Specific Security Concerns
+### YARD-Specific Security Concerns
 
 | Concern                  | Risk Level | Mitigation                        |
 | ------------------------ | ---------- | --------------------------------- |
@@ -62,7 +62,7 @@ Synkra AIOX operates at a privileged layer between AI models and your system. Th
 
 ### Defense in Depth
 
-AIOX implements multiple layers of protection:
+YARD implements multiple layers of protection:
 
 1. **Permission Modes** - Control agent autonomy (Explore/Ask/Auto)
 2. **Claude Hooks** - Pre-execution validation (read-protection, sql-governance)
@@ -74,7 +74,7 @@ AIOX implements multiple layers of protection:
 
 ## API Key Management
 
-API keys are the most critical secrets in AIOX. Compromised keys can lead to unauthorized usage, data breaches, and significant financial impact.
+API keys are the most critical secrets in YARD. Compromised keys can lead to unauthorized usage, data breaches, and significant financial impact.
 
 ### Storage Hierarchy
 
@@ -124,7 +124,7 @@ JWT_SECRET=your-256-bit-cryptographically-secure-random-key
 // Load secrets from secure vault
 const secrets = await SecretManager.loadSecrets({
   provider: 'aws-secrets-manager', // or 'hashicorp-vault', 'gcp-secrets'
-  secretName: 'aiox/production/api-keys',
+  secretName: 'yard/production/api-keys',
   region: process.env.AWS_REGION,
 });
 
@@ -185,7 +185,7 @@ function validateApiKeys() {
 
 ```bash
 # ============================================================
-# AIOX ENVIRONMENT CONFIGURATION
+# YARD ENVIRONMENT CONFIGURATION
 # ============================================================
 # SECURITY: This file must NEVER be committed to version control
 # Add to .gitignore: .env, .env.local, .env.*.local
@@ -195,7 +195,7 @@ function validateApiKeys() {
 # ENVIRONMENT
 # ------------------------------------------------------------
 NODE_ENV=development
-AIOX_DEBUG=false
+YARD_DEBUG=false
 LOG_LEVEL=info
 
 # ------------------------------------------------------------
@@ -256,7 +256,7 @@ CSP_ENABLED=true
 # AUDIT & LOGGING
 # ------------------------------------------------------------
 AUDIT_LOG_ENABLED=true
-AUDIT_LOG_PATH=/var/log/aiox/audit.log
+AUDIT_LOG_PATH=/var/log/yard/audit.log
 AUDIT_LOG_RETENTION_DAYS=90
 ```
 
@@ -294,7 +294,7 @@ function validateEnvironment() {
 
   // Ensure debug mode is off in production
   if (process.env.NODE_ENV === 'production') {
-    if (process.env.AIOX_DEBUG === 'true') {
+    if (process.env.YARD_DEBUG === 'true') {
       console.warn('WARNING: Debug mode enabled in production');
     }
   }
@@ -305,7 +305,7 @@ function validateEnvironment() {
 
 ## File and Directory Permissions
 
-### AIOX Directory Structure Permissions
+### YARD Directory Structure Permissions
 
 ```bash
 # ============================================================
@@ -315,7 +315,7 @@ function validateEnvironment() {
 # Project root (standard)
 chmod 755 /path/to/project
 
-# AIOX configuration directories
+# YARD configuration directories
 chmod 700 .yard/              # Only owner can access
 chmod 700 .yard-core/         # Framework source
 chmod 700 .claude/            # Claude configuration
@@ -347,7 +347,7 @@ security:
   allowedDirectories:
     read:
       - '${PROJECT_ROOT}'
-      - '${HOME}/.aiox'
+      - '${HOME}/.yard'
     write:
       - '${PROJECT_ROOT}/src'
       - '${PROJECT_ROOT}/docs'
@@ -371,7 +371,7 @@ security:
 #!/bin/bash
 # scripts/check-permissions.sh
 
-echo "AIOX Security Permission Check"
+echo "YARD Security Permission Check"
 echo "=============================="
 
 # Check critical files
@@ -412,7 +412,7 @@ echo "Permission check complete."
 
 ### Docker MCP Isolation
 
-AIOX uses Docker containers to isolate MCP servers from the host system:
+YARD uses Docker containers to isolate MCP servers from the host system:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -1047,7 +1047,7 @@ function loadSecurityConfig() {
 
 | Setting                | Development       | Production       |
 | ---------------------- | ----------------- | ---------------- |
-| **AIOX_DEBUG**         | `true`            | `false`          |
+| **YARD_DEBUG**         | `true`            | `false`          |
 | **LOG_LEVEL**          | `debug`           | `info`           |
 | **Permission Mode**    | `auto`            | `ask`            |
 | **Rate Limiting**      | Relaxed           | Strict           |
@@ -1159,8 +1159,8 @@ function validateProductionSecurity() {
   }
 
   // Debug must be off
-  if (process.env.AIOX_DEBUG === 'true') {
-    errors.push('AIOX_DEBUG must be false in production');
+  if (process.env.YARD_DEBUG === 'true') {
+    errors.push('YARD_DEBUG must be false in production');
   }
 
   // TLS must be enabled (check for cert files)
@@ -1283,7 +1283,7 @@ function validateProductionSecurity() {
 
 ### Responsible Disclosure Policy
 
-If you discover a security vulnerability in Synkra AIOX, please follow responsible disclosure practices:
+If you discover a security vulnerability in Synkra YARD, please follow responsible disclosure practices:
 
 ### Reporting Process
 
@@ -1306,7 +1306,7 @@ If you discover a security vulnerability in Synkra AIOX, please follow responsib
 
 **Affected Component:** [e.g., InputSanitizer, AuthSystem, MCP Gateway]
 
-**AIOX Version:** [e.g., 2.1.0]
+**YARD Version:** [e.g., 2.1.0]
 
 **Description:**
 [Detailed description of the vulnerability]
@@ -1343,7 +1343,7 @@ Contributors who responsibly disclose vulnerabilities are recognized in our Secu
 
 ### Bug Bounty Program
 
-Currently, Synkra AIOX does not have a formal bug bounty program. However, significant security contributions are recognized and may receive AIOX Pro licenses or other recognition.
+Currently, Synkra YARD does not have a formal bug bounty program. However, significant security contributions are recognized and may receive YARD Pro licenses or other recognition.
 
 ---
 
@@ -1356,4 +1356,4 @@ Currently, Synkra AIOX does not have a formal bug bounty program. However, signi
 
 ---
 
-_Synkra AIOX Security Hardening Guide v4.0.4_
+_Synkra YARD Security Hardening Guide v4.0.4_

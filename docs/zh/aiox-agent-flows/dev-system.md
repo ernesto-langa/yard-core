@@ -9,7 +9,7 @@
 
 ## 概览
 
-**@dev 代理 (Dex)** 是 AIOX 的全栈开发者，负责故事实现、调试、重构和应用开发最佳实践。该代理充当**构建者**，精确实现故事，仅更新故事文件的授权部分，并保持全面的测试。
+**@dev 代理 (Dex)** 是 YARD 的全栈开发者，负责故事实现、调试、重构和应用开发最佳实践。该代理充当**构建者**，精确实现故事，仅更新故事文件的授权部分，并保持全面的测试。
 
 ### 主要特性
 
@@ -55,7 +55,7 @@
 | 文件 | 目的 |
 |---------|-----------|
 | `.yard-core/development/agents/dev.md` | @dev 代理的核心定义(角色、命令、工作流) |
-| `.claude/commands/AIOX/agents/dev.md` | Claude Code 命令用于激活 @dev |
+| `.claude/commands/YARD/agents/dev.md` | Claude Code 命令用于激活 @dev |
 
 ### @dev 使用的检查清单文件
 

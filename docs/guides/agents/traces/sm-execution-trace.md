@@ -330,8 +330,8 @@ graph TD
 - Pull request creation and management
 - Remote branch operations
 
-**Escalates to @aiox-master when:**
-- Course corrections needed (`@aiox-master *correct-course`)
+**Escalates to @yard-master when:**
+- Course corrections needed (`@yard-master *correct-course`)
 
 **Git restrictions:**
 - ALLOWED: `git status`, `git log`, `git diff`, `git branch`, `git branch -d`, `git checkout -b`, `git checkout`, `git merge`
@@ -358,4 +358,4 @@ graph TD
 
 ---
 
-*Traced from source on 2026-02-05 | Story AIOX-TRACE-001*
+*Traced from source on 2026-02-05 | Story YARD-TRACE-001*

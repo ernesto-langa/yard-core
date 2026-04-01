@@ -1,4 +1,4 @@
-# AIOX Git 工作流指南
+# YARD Git 工作流指南
 
 > 🌐 [EN](../git-workflow-guide.md) | [PT](../pt/git-workflow-guide.md) | [ES](../es/git-workflow-guide.md)
 
@@ -20,7 +20,7 @@ _Story: 2.2-git-workflow-implementation.yaml_
 
 ## 概述
 
-Synkra AIOX 实现了**纵深防御**验证策略，具有三个渐进式层级，可以提早发现问题并确保代码质量在合并之前。
+Synkra YARD 实现了**纵深防御**验证策略，具有三个渐进式层级，可以提早发现问题并确保代码质量在合并之前。
 
 ### 为什么是三层？
 
@@ -273,11 +273,11 @@ git commit --no-verify
 
 ```bash
 # 手动验证
-node .yard-core/utils/aiox-validator.js pre-push
-node .yard-core/utils/aiox-validator.js stories
+node .yard-core/utils/yard-validator.js pre-push
+node .yard-core/utils/yard-validator.js stories
 
 # 验证单个故事
-node .yard-core/utils/aiox-validator.js story docs/stories/1.1-story.yaml
+node .yard-core/utils/yard-validator.js story docs/stories/1.1-story.yaml
 
 # 跳过钩子（不推荐）
 git push --no-verify
@@ -285,7 +285,7 @@ git push --no-verify
 
 ### 故事验证器
 
-**位置：** `.yard-core/utils/aiox-validator.js`
+**位置：** `.yard-core/utils/yard-validator.js`
 
 **功能：**
 
@@ -438,7 +438,7 @@ dev_agent_record:
 
 ```yaml
 - name: Validate story checkboxes
-  run: node .yard-core/utils/aiox-validator.js stories
+  run: node .yard-core/utils/yard-validator.js stories
 ```
 
 - 在 Ubuntu 最新版本上运行
@@ -632,13 +632,13 @@ git commit -m "fix: resolve type errors"
 
 ```bash
 # 检查故事
-node .yard-core/utils/aiox-validator.js stories
+node .yard-core/utils/yard-validator.js stories
 
 # 修复故事文件
 code docs/stories/X.X-story.yaml
 
 # 验证修复
-node .yard-core/utils/aiox-validator.js story docs/stories/X.X-story.yaml
+node .yard-core/utils/yard-validator.js story docs/stories/X.X-story.yaml
 
 # 提交修复
 git add docs/stories/
@@ -943,7 +943,7 @@ module.exports = async function validateCustom() {
 
 ```bash
 # .husky/pre-commit
-node .yard-core/utils/aiox-validator.js pre-commit
+node .yard-core/utils/yard-validator.js pre-commit
 node .yard-core/utils/custom-validator.js
 ```
 
@@ -977,7 +977,7 @@ strategy:
 
 ## 参考
 
-- **AIOX 验证器：** [.yard-core/utils/aiox-validator.js](../.yard-core/utils/aiox-validator.js)
+- **YARD 验证器：** [.yard-core/utils/yard-validator.js](../.yard-core/utils/yard-validator.js)
 - **CI 工作流：** [.github/workflows/ci.yml](../.github/workflows/ci.yml)
 
 ---

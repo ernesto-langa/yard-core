@@ -10,9 +10,9 @@
 
 ---
 
-Guia completa para crear, validar, publicar y gestionar Squads en AIOX.
+Guia completa para crear, validar, publicar y gestionar Squads en YARD.
 
-> **AIOX Squads:** Equipos de agentes de IA trabajando contigo
+> **YARD Squads:** Equipos de agentes de IA trabajando contigo
 
 ## Tabla de Contenidos
 
@@ -33,7 +33,7 @@ Guia completa para crear, validar, publicar y gestionar Squads en AIOX.
 
 ## Que es un Squad?
 
-Los Squads son equipos modulares de agentes de IA que extienden la funcionalidad de AIOX. Cada squad es un paquete autocontenido que incluye:
+Los Squads son equipos modulares de agentes de IA que extienden la funcionalidad de YARD. Cada squad es un paquete autocontenido que incluye:
 
 | Componente        | Proposito                                                 |
 | ----------------- | --------------------------------------------------------- |
@@ -51,7 +51,7 @@ Los Squads son equipos modulares de agentes de IA que extienden la funcionalidad
 │                    DISTRIBUCION DE SQUAD                      │
 ├─────────────────────────────────────────────────────────────┤
 │  Nivel 1: LOCAL        → ./squads/           (Privado)       │
-│  Nivel 2: AIOX-SQUADS  → github.com/SynkraAI (Publico/Gratis)│
+│  Nivel 2: YARD-SQUADS  → github.com/SynkraAI (Publico/Gratis)│
 │  Nivel 3: SYNKRA API   → api.synkra.dev      (Marketplace)   │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -60,8 +60,8 @@ Los Squads son equipos modulares de agentes de IA que extienden la funcionalidad
 
 | Squad                                                                      | Version | Descripcion                           |
 | -------------------------------------------------------------------------- | ------- | ------------------------------------- |
-| [etl-squad](https://github.com/SynkraAI/aiox-squads/tree/main/etl)         | 2.0.0   | Recoleccion y transformacion de datos |
-| [creator-squad](https://github.com/SynkraAI/aiox-squads/tree/main/creator) | 1.0.0   | Utilidades de generacion de contenido |
+| [etl-squad](https://github.com/SynkraAI/yard-squads/tree/main/etl)         | 2.0.0   | Recoleccion y transformacion de datos |
+| [creator-squad](https://github.com/SynkraAI/yard-squads/tree/main/creator) | 1.0.0   | Utilidades de generacion de contenido |
 
 ---
 
@@ -70,7 +70,7 @@ Los Squads son equipos modulares de agentes de IA que extienden la funcionalidad
 ### Prerequisitos
 
 - Node.js 18+
-- Proyecto AIOX inicializado (`.yard-core/` existe)
+- Proyecto YARD inicializado (`.yard-core/` existe)
 - Git para control de versiones
 
 ### Opcion 1: Diseno Guiado (Recomendado)
@@ -147,8 +147,8 @@ author: Tu Nombre <email@example.com>
 license: MIT
 slashPrefix: my # Prefijo de comando para IDE
 
-# Compatibilidad AIOX
-aiox:
+# Compatibilidad YARD
+yard:
   minVersion: '2.1.0'
   type: squad
 
@@ -232,7 +232,7 @@ Las tareas deben seguir [TASK-FORMAT-SPECIFICATION-V1](../../../.yard-core/docs/
 
 | Modo       | Comportamiento                                     |
 | ---------- | -------------------------------------------------- |
-| `extend`   | Agregar reglas del squad a las reglas base de AIOX |
+| `extend`   | Agregar reglas del squad a las reglas base de YARD |
 | `override` | Reemplazar reglas base con reglas del squad        |
 | `none`     | Configuracion independiente                        |
 
@@ -539,7 +539,7 @@ Los Squads en `./squads/` estan automaticamente disponibles para tu proyecto.
 *list-squads
 ```
 
-### Nivel 2: Repositorio aiox-squads (Publico)
+### Nivel 2: Repositorio yard-squads (Publico)
 
 ```bash
 @squad-creator
@@ -551,7 +551,7 @@ Los Squads en `./squads/` estan automaticamente disponibles para tu proyecto.
 *publish-squad ./squads/my-squad
 ```
 
-Esto crea un PR a [SynkraAI/aiox-squads](https://github.com/SynkraAI/aiox-squads).
+Esto crea un PR a [SynkraAI/yard-squads](https://github.com/SynkraAI/yard-squads).
 
 ### Nivel 3: Marketplace de Synkra
 
@@ -586,8 +586,8 @@ export SYNKRA_API_TOKEN="your-token"
 
 Los squads legacy usan `config.yaml` en lugar de `squad.yaml` y pueden faltar:
 
-- Campo `aiox.type`
-- Campo `aiox.minVersion`
+- Campo `yard.type`
+- Campo `yard.minVersion`
 - Estructura task-first
 
 ### Comando de Migracion
@@ -609,7 +609,7 @@ Los squads legacy usan `config.yaml` en lugar de `squad.yaml` y pueden faltar:
 
 1. **Respaldo** - Crea `.backup/pre-migration-{timestamp}/`
 2. **Renombrar** - `config.yaml` → `squad.yaml`
-3. **Agregar Campos** - `aiox.type`, `aiox.minVersion`
+3. **Agregar Campos** - `yard.type`, `yard.minVersion`
 4. **Reestructurar** - Organizar en diseño task-first
 5. **Validar** - Ejecutar validacion en el squad migrado
 
@@ -632,7 +632,7 @@ El Cargador de Squad resuelve squads en este orden:
 
 ```
 1. Local     → ./squads/{name}/
-2. npm       → node_modules/@aiox-squads/{name}/
+2. npm       → node_modules/@yard-squads/{name}/
 3. Workspace → ../{name}/ (monorepo)
 4. Registry  → api.synkra.dev/squads/{name}
 ```
@@ -709,8 +709,8 @@ cat ./squads/my-squad/squad.yaml
 # Correcciones comunes:
 # - name: debe ser kebab-case
 # - version: debe ser semver (x.y.z)
-# - aiox.type: debe ser "squad"
-# - aiox.minVersion: debe ser semver valido
+# - yard.type: debe ser "squad"
+# - yard.minVersion: debe ser semver valido
 ```
 
 ### Errores de Parseo YAML
@@ -754,9 +754,9 @@ gh auth status
 
 ## Preguntas Frecuentes
 
-### Cual es la diferencia entre un Squad y formatos legados de squad en AIOX?
+### Cual es la diferencia entre un Squad y formatos legados de squad en YARD?
 
-**Squads** son el formato estandar en AIOX 2.1+ con:
+**Squads** son el formato estandar en YARD 2.1+ con:
 
 - Arquitectura task-first
 - Validacion con JSON Schema
@@ -788,12 +788,12 @@ dependencies:
 - **Nivel 1**: Mantener en `./squads/` (sin commit) - agregar a `.gitignore`
 - **Nivel 3**: Sincronizar con bandera `--private`: `*sync-squad-synkra my-squad --private`
 
-### Cual es la version minima de AIOX para Squads?
+### Cual es la version minima de YARD para Squads?
 
-Los Squads requieren AIOX 2.1.0+. Configurar en el manifiesto:
+Los Squads requieren YARD 2.1.0+. Configurar en el manifiesto:
 
 ```yaml
-aiox:
+yard:
   minVersion: '2.1.0'
 ```
 
@@ -820,7 +820,7 @@ npm test -- tests/squads/my-squad/
 - [Guia de Migracion de Squad](./squad-migration.md)
 - [Referencia de API de Squads](../api/squads-api.md)
 - [Agente @squad-creator](../../../.yard-core/development/agents/squad-creator.md)
-- [Repositorio aiox-squads](https://github.com/SynkraAI/aiox-squads)
+- [Repositorio yard-squads](https://github.com/SynkraAI/yard-squads)
 
 ---
 
@@ -831,6 +831,6 @@ npm test -- tests/squads/my-squad/
 
 ---
 
-_AIOX Squads: Equipos de agentes de IA trabajando contigo_
+_YARD Squads: Equipos de agentes de IA trabajando contigo_
 
 **Version:** 2.1.0 | **Actualizado:** 2025-12-26 | **Stories:** SQS-8, SQS-11

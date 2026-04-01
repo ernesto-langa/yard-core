@@ -1,10 +1,10 @@
 <!--
   翻译：zh-CN（简体中文）
-  原文：/docs/aiox-agent-flows/squad-creator-system.md
+  原文：/docs/yard-agent-flows/squad-creator-system.md
   最后同步：2026-02-22
 -->
 
-# AIOX 小队创建和管理系统
+# YARD 小队创建和管理系统
 
 > **版本：** 1.0.0
 > **创建日期：** 2026-02-04
@@ -15,16 +15,16 @@
 
 ## 概述
 
-**小队创建者** (Craft) 是 AIOX 用于创建、验证、发布和管理小队的专业代理。小队是代理、任务、工作流和资源的模块化包，可在项目之间重用。
+**小队创建者** (Craft) 是 YARD 用于创建、验证、发布和管理小队的专业代理。小队是代理、任务、工作流和资源的模块化包，可在项目之间重用。
 
-该系统实现了 AIOX 的**任务优先架构**，其中任务是执行的主要入口点，代理编排这些任务。
+该系统实现了 YARD 的**任务优先架构**，其中任务是执行的主要入口点，代理编排这些任务。
 
 ### 系统目的
 
-- **创建小队**遵循 AIOX 模式和结构
+- **创建小队**遵循 YARD 模式和结构
 - **验证小队**针对 JSON Schema 和任务规范
 - **列出小队**项目本地
-- **分发小队**在 3 个级别（本地、aiox-squads、Synkra API）
+- **分发小队**在 3 个级别（本地、yard-squads、Synkra API）
 - **迁移小队**到带编排和技能的 v2 格式
 - **分析和扩展**现有小队
 
@@ -33,7 +33,7 @@
 1. **任务优先架构**：任务是入口点，代理编排
 2. **强制验证**：分发前始终验证
 3. **JSON Schema**：清单针对 schema 验证
-4. **3 级分发**：本地、公共（aiox-squads）、市场（Synkra API）
+4. **3 级分发**：本地、公共（yard-squads）、市场（Synkra API）
 5. **与 yard-core 集成**：小队与框架协同工作
 
 ---
@@ -45,7 +45,7 @@
 | 文件 | 目的 |
 |---------|-----------|
 | `.yard-core/development/agents/squad-creator.md` | 小队创建者代理核心定义 |
-| `.claude/commands/AIOX/agents/squad-creator.md` | 用于激活 @squad-creator 的 Claude Code 命令 |
+| `.claude/commands/YARD/agents/squad-creator.md` | 用于激活 @squad-creator 的 Claude Code 命令 |
 
 ### @squad-creator 任务文件
 
@@ -61,7 +61,7 @@
 | `.yard-core/development/tasks/squad-generate-skills.md` | `*generate-skills` | 生成小队知识技能 | 活跃 |
 | `.yard-core/development/tasks/squad-generate-workflow.md` | `*generate-workflow` | 生成 YAML 编排工作流 | 活跃 |
 | `.yard-core/development/tasks/squad-creator-download.md` | `*download-squad` | 从公共仓库下载小队 | 占位符（Sprint 8） |
-| `.yard-core/development/tasks/squad-creator-publish.md` | `*publish-squad` | 发布小队到 aiox-squads | 占位符（Sprint 8） |
+| `.yard-core/development/tasks/squad-creator-publish.md` | `*publish-squad` | 发布小队到 yard-squads | 占位符（Sprint 8） |
 | `.yard-core/development/tasks/squad-creator-sync-synkra.md` | `*sync-squad-synkra` | 同步小队到 Synkra API | 占位符（Sprint 8） |
 
 ### 相关任务文件
@@ -162,7 +162,7 @@ flowchart TB
 
     subgraph DISTRIBUTE["分发"]
         LOCAL["本地<br/>./squads/"]
-        PUBLIC["公共<br/>github.com/SynkraAI/aiox-squads"]
+        PUBLIC["公共<br/>github.com/SynkraAI/yard-squads"]
         MARKET["市场<br/>api.synkra.dev/squads"]
     end
 
@@ -354,8 +354,8 @@ flowchart TB
 
 | 命令 | 任务文件 | 操作 |
 |---------|-----------|----------|
-| `*download-squad` | `squad-creator-download.md` | 从 aiox-squads 下载小队 |
-| `*publish-squad` | `squad-creator-publish.md` | 发布小队到 aiox-squads |
+| `*download-squad` | `squad-creator-download.md` | 从 yard-squads 下载小队 |
+| `*publish-squad` | `squad-creator-publish.md` | 发布小队到 yard-squads |
 | `*sync-squad-synkra` | `squad-creator-sync-synkra.md` | 同步小队到 Synkra API |
 
 ### 单个组件命令
@@ -461,13 +461,13 @@ flowchart LR
     SQUAD_CREATOR -->|"发布前验证"| DEVOPS
 
     SQUADS[("./squads/")]
-    AIOX_SQUADS[("aiox-squads")]
+    YARD_SQUADS[("yard-squads")]
     SYNKRA[("Synkra API")]
 
     SC_CREATE --> SQUADS
     SC_VALIDATE --> SQUADS
     SC_LIST --> SQUADS
-    DEVOPS_PUB --> AIOX_SQUADS
+    DEVOPS_PUB --> YARD_SQUADS
     DEVOPS_PUB --> SYNKRA
 
     style SQUAD_CREATOR fill:#e3f2fd
@@ -515,8 +515,8 @@ license: MIT | Apache-2.0 | ISC | GPL-3.0 | UNLICENSED
 slashPrefix: string   # 命令前缀
 tags: string[]        # 发现关键词
 
-aiox:
-  minVersion: string  # AIOX 最低版本
+yard:
+  minVersion: string  # YARD 最低版本
   type: squad
 
 components:
@@ -570,7 +570,7 @@ flowchart LR
     end
 
     subgraph PUBLIC["级别 2：公共"]
-        P_REPO["github.com/SynkraAI/aiox-squads"]
+        P_REPO["github.com/SynkraAI/yard-squads"]
         P_DESC["社区小队（免费）"]
         P_CMD["*publish-squad"]
     end
@@ -674,7 +674,7 @@ flowchart LR
 - [脚本：squad-validator.js](.yard-core/development/scripts/squad/squad-validator.js)
 - [Schema：squad-schema.json](.yard-core/schemas/squad-schema.json)
 - [代理：squad-creator.md](.yard-core/development/agents/squad-creator.md)
-- [命令：squad-creator.md](.claude/commands/AIOX/agents/squad-creator.md)
+- [命令：squad-creator.md](.claude/commands/YARD/agents/squad-creator.md)
 
 ---
 
@@ -689,7 +689,7 @@ flowchart LR
 | **Schemas** | 2 个（squad-schema、squad-design-schema） |
 | **模板** | 3 个（basic、etl、agent-only） |
 | **模板版本** | 2 个（v1 遗留、v2 编排） |
-| **分发级别** | 3 个（本地、aiox-squads、Synkra API） |
+| **分发级别** | 3 个（本地、yard-squads、Synkra API） |
 
 ---
 

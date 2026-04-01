@@ -4,7 +4,7 @@
   Última sincronização: 2026-01-26
 -->
 
-# Estrutura do Source Tree AIOX
+# Estrutura do Source Tree YARD
 
 > 🌐 [EN](../../framework/source-tree.md) | **PT** | [ES](../../es/framework/source-tree.md)
 
@@ -32,7 +32,7 @@
 
 ## Visão Geral
 
-O AIOX usa uma **arquitetura modular** com clara separação de responsabilidades:
+O YARD usa uma **arquitetura modular** com clara separação de responsabilidades:
 
 1. **Framework Core** (`.yard-core/`) - Componentes portáveis do framework organizados por domínio
 2. **Project Workspace** (root) - Implementação específica do projeto
@@ -74,7 +74,7 @@ yard-core/                             # Root project
 │   └── squad/                         # Squad template (see docs/guides/squads-guide.md)
 │
 ├── bin/                               # CLI executables
-│   └── aiox.js                        # Main CLI entry point
+│   └── yard.js                        # Main CLI entry point
 │
 ├── tools/                             # Build and utility tools
 │   ├── cli.js                         # CLI builder
@@ -130,11 +130,11 @@ yard-core/                             # Root project
 │   └── utils/                         # Utilitários core
 │
 ├── data/                              # Dados Compartilhados
-│   └── aiox-kb.md                     # Base de conhecimento AIOX
+│   └── yard-kb.md                     # Base de conhecimento YARD
 │
 ├── development/                       # Assets de Desenvolvimento
 │   ├── agents/                        # Definições de agentes (11 agentes core)
-│   │   ├── aiox-master.md             # Orquestrador master
+│   │   ├── yard-master.md             # Orquestrador master
 │   │   ├── dev.md                     # Agente desenvolvedor
 │   │   ├── qa.md                      # Agente engenheiro QA
 │   │   ├── architect.md               # Agente arquiteto de sistemas
@@ -279,7 +279,7 @@ docs/
 │   └── README.md                      # Aviso de migração
 │
 ├── stories/                           # Stories de desenvolvimento
-│   ├── aiox migration/                # Stories de migração AIOX
+│   ├── yard migration/                # Stories de migração YARD
 │   │   ├── story-6.1.2.1.md
 │   │   ├── story-6.1.2.2.md
 │   │   ├── story-6.1.2.3.md
@@ -354,7 +354,7 @@ docs/
 
 ### Visão Geral
 
-Squads são extensões modulares que adicionam capacidades especializadas ao AIOX. Diferente dos Squads deprecados, Squads seguem uma estrutura de template padronizada.
+Squads são extensões modulares que adicionam capacidades especializadas ao YARD. Diferente dos Squads deprecados, Squads seguem uma estrutura de template padronizada.
 
 ### Localização do Template de Squad
 
@@ -381,7 +381,7 @@ templates/squad/                       # Template de squad para criar extensões
 
 ```bash
 # Future CLI (planejado):
-npx create-aiox-squad my-squad-name
+npx create-yard-squad my-squad-name
 
 # Método atual:
 cp -r templates/squad/ squads/my-squad-name/
@@ -453,7 +453,7 @@ yard-core/
 │   └── ...
 │
 ├── bin/                               # CLI entry points
-│   └── aiox.js                        # Main CLI
+│   └── yard.js                        # Main CLI
 │
 ├── tools/                             # Build and utility tools
 │   ├── cli.js                         # CLI builder
@@ -483,7 +483,7 @@ yard-core/
 
 ```
 squads/
-├── verified/                          # Squads curados pelo AIOX
+├── verified/                          # Squads curados pelo YARD
 │   ├── github-devops/
 │   ├── db-sage/
 │   └── coderabbit-workflow/
@@ -498,7 +498,7 @@ squads/
 │   └── agent-squad/
 │
 └── tools/                             # Ferramentas de desenvolvimento de squad
-    └── create-aiox-squad/
+    └── create-yard-squad/
 ```
 
 ### REPO 3: SynkraAI/mcp-ecosystem (Apache 2.0)
@@ -506,9 +506,9 @@ squads/
 ```
 mcp-ecosystem/
 ├── presets/                           # MCP presets (Docker MCP Toolkit)
-│   ├── aiox-dev/
-│   ├── aiox-research/
-│   └── aiox-docker/
+│   ├── yard-dev/
+│   ├── yard-research/
+│   └── yard-docker/
 │
 ├── mcps/                              # Base MCP configs
 │   ├── exa/
@@ -565,7 +565,7 @@ mmos/
 Directories: kebab-case (minúsculas, separado por hífen)
   ✅ .yard-core/
   ✅ Squads/
-  ❌ .AIOX-Core/
+  ❌ .YARD-Core/
   ❌ legacy-packs/
 
 Files (Code): kebab-case com extensão
@@ -724,4 +724,4 @@ outputs/                               # Runtime outputs (gitignored)
 
 ---
 
-_Este é um padrão oficial do framework AIOX. Todo posicionamento de arquivos deve seguir esta estrutura._
+_Este é um padrão oficial do framework YARD. Todo posicionamento de arquivos deve seguir esta estrutura._

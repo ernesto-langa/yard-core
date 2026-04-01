@@ -1,6 +1,6 @@
 <!-- 翻译: ZH-CN | 原始: /docs/pt/architecture/coding-standards.md | 同步: 2026-02-22 -->
 
-# AIOX 编码标准
+# YARD 编码标准
 
 > 🌐 [EN](../../architecture/coding-standards.md) | [PT](../../pt/architecture/coding-standards.md) | **ZH**
 
@@ -14,7 +14,7 @@
 
 ---
 
-# AIOX 编码标准
+# YARD 编码标准
 
 **版本**: 1.1
 **最后更新**: 2025-12-14
@@ -39,7 +39,7 @@
 
 ## 概述
 
-本文档定义了 AIOX 框架开发的官方编码标准。所有代码贡献必须遵守这些标准以确保一致性、可维护性和质量。
+本文档定义了 YARD 框架开发的官方编码标准。所有代码贡献必须遵守这些标准以确保一致性、可维护性和质量。
 
 **应用**:
 
@@ -549,7 +549,7 @@ if (!taskSchema.validate(taskData)) {
 
 ```javascript
 /**
- * 加载并执行 AIOX 代理
+ * 加载并执行 YARD 代理
  *
  * @param {string} agentId - 代理的唯一标识符
  * @param {Object} args - 代理执行参数
@@ -599,7 +599,7 @@ if (yoloMode) {
 ```markdown
 # Agent Executor
 
-**目的**: 加载并执行带有配置管理的 AIOX 代理。
+**目的**: 加载并执行带有配置管理的 YARD 代理。
 
 ## 使用
 
@@ -895,4 +895,4 @@ jobs:
 
 ---
 
-_这是 AIOX 框架的官方标准。所有代码贡献必须符合这些标准。_
+_这是 YARD 框架的官方标准。所有代码贡献必须符合这些标准。_

@@ -4,13 +4,13 @@
   Última sincronização: 2026-01-26
 -->
 
-# Guia de Atualização do Synkra AIOX
+# Guia de Atualização do Synkra YARD
 
 > 🌐 [EN](../migration-guide.md) | **PT** | [ES](../es/migration-guide.md)
 
 ---
 
-Este guia ajuda você a atualizar entre versões do Synkra AIOX.
+Este guia ajuda você a atualizar entre versões do Synkra YARD.
 
 ## Sumário
 
@@ -26,7 +26,7 @@ Este guia ajuda você a atualizar entre versões do Synkra AIOX.
 
 ### Versão Atual
 
-**Synkra AIOX v4.2.11** (Versão Estável Atual)
+**Synkra YARD v4.2.11** (Versão Estável Atual)
 
 ### Caminhos de Atualização
 
@@ -103,10 +103,10 @@ find .yard-core -name "*.custom.*" -type f > ../backups/custom-files.txt
 npm install -g yard-core@latest
 
 # 3. Executar comando de atualização
-aiox upgrade
+yard upgrade
 
 # 4. Verificar instalação
-aiox --version
+yard --version
 ```
 
 ### Opção 2: Instalação Limpa
@@ -123,7 +123,7 @@ npm install -g yard-core@latest
 
 # 4. Reinicializar projeto
 cd your-project
-aiox init --upgrade
+yard init --upgrade
 ```
 
 ### Opção 3: Atualização Específica do Projeto
@@ -146,33 +146,33 @@ npm list yard-core/core
 
 ```bash
 # Verificar versão
-aiox --version
+yard --version
 
 # Verificar componentes principais
-aiox verify --components
+yard verify --components
 
 # Testar funcionalidade básica
-aiox test --quick
+yard test --quick
 ```
 
 ### 2. Testar Agentes
 
 ```bash
 # Listar agentes disponíveis
-aiox list agents
+yard list agents
 
 # Testar ativação de agente
-aiox test agent aiox-developer
+yard test agent yard-developer
 
 # Verificar dependências dos agentes
-aiox verify --agents
+yard verify --agents
 ```
 
 ### 3. Verificar Configuração
 
 ```bash
 # Validar configuração
-aiox config validate
+yard config validate
 
 # Revisar log de atualização
 cat .yard-core/logs/upgrade.log
@@ -182,10 +182,10 @@ cat .yard-core/logs/upgrade.log
 
 ```bash
 # Listar workflows
-aiox list workflows
+yard list workflows
 
 # Testar execução de workflow
-aiox test workflow basic-dev-cycle
+yard test workflow basic-dev-cycle
 ```
 
 ## Procedimentos de Rollback
@@ -204,7 +204,7 @@ tar -xzf backups/yard-backup-YYYYMMDD-HHMMSS.tar.gz
 npm install -g yard-core@<previous-version>
 
 # Verificar rollback
-aiox --version
+yard --version
 ```
 
 ### Rollback Seletivo
@@ -239,39 +239,39 @@ npm config get prefix
 
 ```bash
 # Reconstruir manifestos dos agentes
-aiox rebuild --manifests
+yard rebuild --manifests
 
 # Verificar dependências dos agentes
-aiox verify --agents --verbose
+yard verify --agents --verbose
 
 # Verificar sintaxe dos agentes
-aiox validate agents
+yard validate agents
 ```
 
 #### Erros de Configuração
 
 ```bash
 # Validar configuração
-aiox config validate --verbose
+yard config validate --verbose
 
 # Redefinir para padrões (cuidado!)
-aiox config reset --backup
+yard config reset --backup
 
 # Reparar configuração
-aiox config repair
+yard config repair
 ```
 
 #### Problemas na Camada de Memória
 
 ```bash
 # Reconstruir índices de memória
-aiox memory rebuild
+yard memory rebuild
 
 # Verificar integridade da memória
-aiox memory verify
+yard memory verify
 
 # Limpar e reinicializar
-aiox memory reset
+yard memory reset
 ```
 
 ### Obtendo Ajuda
@@ -297,7 +297,7 @@ Se você encontrar problemas não cobertos aqui:
 - Nenhuma (compatível com versões anteriores a partir da v4.0+)
 
 **Novos Recursos:**
-- Melhorias no meta-agente `aiox-developer`
+- Melhorias no meta-agente `yard-developer`
 - Assistente de instalação interativo
 - Ferramentas de monitoramento de desempenho
 

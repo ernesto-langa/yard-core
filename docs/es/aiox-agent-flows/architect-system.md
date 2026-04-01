@@ -1,16 +1,16 @@
 # @architect (Aria) - Documentacion del Sistema
 
-> [PT](../../aiox-agent-flows/architect-system.md) | [EN](../../en/aiox-agent-flows/architect-system.md) | **ES**
+> [PT](../../yard-agent-flows/architect-system.md) | [EN](../../en/yard-agent-flows/architect-system.md) | **ES**
 
 ---
 
-> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../aiox-agent-flows/architect-system.md).
+> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../yard-agent-flows/architect-system.md).
 
 ---
 
 ## Vision General
 
-**@architect** (Aria) es el agente de arquitectura y diseno tecnico del AIOX, responsable por:
+**@architect** (Aria) es el agente de arquitectura y diseno tecnico del YARD, responsable por:
 
 - Diseno de arquitectura de sistemas
 - Decisiones tecnicas (ADRs)
@@ -29,7 +29,7 @@
 ## Ver Mas
 
 Para documentacion detallada incluyendo flowcharts, integraciones y troubleshooting, consulte:
-- **[Documentacion completa (PT)](../../aiox-agent-flows/architect-system.md)**
+- **[Documentacion completa (PT)](../../yard-agent-flows/architect-system.md)**
 
 ---
 

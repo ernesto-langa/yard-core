@@ -10,7 +10,7 @@
 
 ---
 
-Introdução aos AIOX Squads - equipes modulares de agentes de IA que estendem a funcionalidade do framework.
+Introdução aos YARD Squads - equipes modulares de agentes de IA que estendem a funcionalidade do framework.
 
 **Versão:** 2.1.0
 **Última Atualização:** 2026-01-28
@@ -19,9 +19,9 @@ Introdução aos AIOX Squads - equipes modulares de agentes de IA que estendem a
 
 ## O que são Squads?
 
-Squads são equipes modulares de agentes de IA que estendem a funcionalidade do AIOX para domínios ou casos de uso específicos. Cada squad é um pacote autocontido que pode ser instalado, compartilhado e composto com outros squads.
+Squads são equipes modulares de agentes de IA que estendem a funcionalidade do YARD para domínios ou casos de uso específicos. Cada squad é um pacote autocontido que pode ser instalado, compartilhado e composto com outros squads.
 
-> **AIOX Squads:** Equipes de agentes de IA trabalhando com você
+> **YARD Squads:** Equipes de agentes de IA trabalhando com você
 
 ### Características Principais
 
@@ -35,7 +35,7 @@ Squads são equipes modulares de agentes de IA que estendem a funcionalidade do 
 
 ### Squad vs. Agentes Tradicionais
 
-| Agentes Tradicionais   | AIOX Squads                  |
+| Agentes Tradicionais   | YARD Squads                  |
 | ---------------------- | ---------------------------- |
 | Agentes individuais    | Equipe coordenada de agentes |
 | Propósito único        | Workflows focados em domínio |
@@ -91,8 +91,8 @@ author: Seu Nome <email@exemplo.com>
 license: MIT
 slashPrefix: my # Prefixo de comando para IDE
 
-# Compatibilidade AIOX
-aiox:
+# Compatibilidade YARD
+yard:
   minVersion: '2.1.0'
   type: squad
 
@@ -172,8 +172,8 @@ tags:
 
 | Squad             | Versão | Descrição                          | Repositório                                                                      |
 | ----------------- | ------ | ---------------------------------- | -------------------------------------------------------------------------------- |
-| **etl-squad**     | 2.0.0  | Coleta e transformação de dados    | [aiox-squads/etl](https://github.com/SynkraAI/aiox-squads/tree/main/etl)         |
-| **creator-squad** | 1.0.0  | Utilitários de geração de conteúdo | [aiox-squads/creator](https://github.com/SynkraAI/aiox-squads/tree/main/creator) |
+| **etl-squad**     | 2.0.0  | Coleta e transformação de dados    | [yard-squads/etl](https://github.com/SynkraAI/yard-squads/tree/main/etl)         |
+| **creator-squad** | 1.0.0  | Utilitários de geração de conteúdo | [yard-squads/creator](https://github.com/SynkraAI/yard-squads/tree/main/creator) |
 
 ### Níveis de Distribuição
 
@@ -182,7 +182,7 @@ tags:
 │                    DISTRIBUIÇÃO DE SQUADS                     │
 ├─────────────────────────────────────────────────────────────┤
 │  Nível 1: LOCAL        --> ./squads/           (Privado)     │
-│  Nível 2: AIOX-SQUADS  --> github.com/SynkraAI (Público)     │
+│  Nível 2: YARD-SQUADS  --> github.com/SynkraAI (Público)     │
 │  Nível 3: SYNKRA API   --> api.synkra.dev      (Marketplace) │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -191,7 +191,7 @@ tags:
 
 ```bash
 # Listar squads disponíveis
-aiox squads list
+yard squads list
 
 # Baixar do repositório oficial
 *download-squad etl-squad
@@ -223,8 +223,8 @@ Tasks devem seguir [TASK-FORMAT-SPECIFICATION-V1](../../../.yard-core/docs/stand
 
 | Modo       | Comportamento                           |
 | ---------- | --------------------------------------- |
-| `extend`   | Adiciona regras do squad às regras AIOX |
-| `override` | Substitui regras AIOX pelas do squad    |
+| `extend`   | Adiciona regras do squad às regras YARD |
+| `override` | Substitui regras YARD pelas do squad    |
 | `none`     | Configuração independente               |
 
 ### 3. Valide Antes de Publicar
@@ -276,7 +276,7 @@ Use versionamento semântico:
 ## Próximos Passos
 
 - **Crie Seu Primeiro Squad:** Siga o [Guia de Squads](./squads-guide.md) para instruções detalhadas
-- **Explore Squads Oficiais:** Confira o [repositório aiox-squads](https://github.com/SynkraAI/aiox-squads)
+- **Explore Squads Oficiais:** Confira o [repositório yard-squads](https://github.com/SynkraAI/yard-squads)
 - **Contribua:** Veja o [Guia de Contribuição de Squads](./contributing-squads.md)
 - **Aprenda o Formato de Task:** Leia [TASK-FORMAT-SPECIFICATION-V1](../../../.yard-core/docs/standards/TASK-FORMAT-SPECIFICATION-V1.md)
 
@@ -293,9 +293,9 @@ Use versionamento semântico:
 
 ## FAQ
 
-### Qual a diferença entre um Squad e formatos legados de squad no AIOX?
+### Qual a diferença entre um Squad e formatos legados de squad no YARD?
 
-**Squads** são o padrão no AIOX 2.1+ com:
+**Squads** são o padrão no YARD 2.1+ com:
 
 - Arquitetura task-first
 - Validação JSON Schema
@@ -316,17 +316,17 @@ dependencies:
     - etl-squad@^2.0.0
 ```
 
-### Qual a versão mínima do AIOX para Squads?
+### Qual a versão mínima do YARD para Squads?
 
-Squads requerem AIOX 2.1.0+. Defina no manifesto:
+Squads requerem YARD 2.1.0+. Defina no manifesto:
 
 ```yaml
-aiox:
+yard:
   minVersion: '2.1.0'
 ```
 
 ---
 
-_AIOX Squads: Equipes de agentes de IA trabalhando com você_
+_YARD Squads: Equipes de agentes de IA trabalhando com você_
 
 _Versão: 2.1.0 | Atualizado: 2026-01-28_

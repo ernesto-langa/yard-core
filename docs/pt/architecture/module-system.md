@@ -1,12 +1,12 @@
 <!-- Tradução: PT-BR | Original: /docs/en/architecture/module-system.md | Sincronização: 2026-01-26 -->
 
-# Arquitetura do Sistema de Módulos do AIOX
+# Arquitetura do Sistema de Módulos do YARD
 
 > 🌐 [EN](../../architecture/module-system.md) | **PT** | [ES](../../es/architecture/module-system.md)
 
 ---
 
-> Guia completo para a arquitetura modular v4.2 do Synkra AIOX.
+> Guia completo para a arquitetura modular v4.2 do Synkra YARD.
 
 **Versão:** 2.1.0
 **Última Atualização:** 2025-12-01
@@ -39,7 +39,7 @@ A arquitetura modular v4.2 aborda vários desafios da estrutura flat da v2.0:
 
 ## Estrutura de Módulos
 
-O Synkra AIOX organiza o diretório `.yard-core/` em quatro módulos principais:
+O Synkra YARD organiza o diretório `.yard-core/` em quatro módulos principais:
 
 ```
 .yard-core/
@@ -53,7 +53,7 @@ O Synkra AIOX organiza o diretório `.yard-core/` em quatro módulos principais:
 
 ```mermaid
 graph TB
-    subgraph "Framework AIOX v4"
+    subgraph "Framework YARD v4"
         CLI[CLI / Ferramentas]
 
         subgraph "Módulo Product"
@@ -112,7 +112,7 @@ graph TB
 | Diretório        | Conteúdos                                        | Descrição                                   |
 | ---------------- | ------------------------------------------------ | ------------------------------------------- |
 | `config/`        | `config-cache.js`, `config-loader.js`            | Gerenciamento de configuração com cache TTL |
-| `data/`          | `aiox-kb.md`, `workflow-patterns.yaml`           | Base de conhecimento do framework           |
+| `data/`          | `yard-kb.md`, `workflow-patterns.yaml`           | Base de conhecimento do framework           |
 | `docs/`          | Documentação interna                             | Guias de componentes, troubleshooting       |
 | `elicitation/`   | `elicitation-engine.js`, `session-manager.js`    | Sistema de prompting interativo             |
 | `session/`       | `context-detector.js`, `context-loader.js`       | Gerenciamento de contexto de sessão         |
@@ -168,7 +168,7 @@ const QualityGateManager = require('./.yard-core/core/quality-gates/quality-gate
 
 | Agente          | ID                 | Responsabilidade          |
 | --------------- | ------------------ | ------------------------- |
-| AIOX Master     | `aiox-master`      | Orquestração do framework |
+| YARD Master     | `yard-master`      | Orquestração do framework |
 | Developer       | `dev`              | Implementação de código   |
 | QA              | `qa`               | Garantia de qualidade     |
 | Architect       | `architect`        | Arquitetura técnica       |
@@ -356,13 +356,13 @@ Para projetos atualizando da estrutura flat v2.0:
 
 ```bash
 # Dry run para visualizar mudanças
-aiox migrate --dry-run
+yard migrate --dry-run
 
 # Executar migração
-aiox migrate --from=2.0 --to=2.1
+yard migrate --from=2.0 --to=2.1
 
 # Validar migração
-aiox migrate --validate
+yard migrate --validate
 ```
 
 Veja o [Guia de Migração](../../migration/migration-guide.md) para instruções detalhadas.
@@ -379,4 +379,4 @@ Veja o [Guia de Migração](../../migration/migration-guide.md) para instruçõe
 
 ---
 
-_Arquitetura do Sistema de Módulos Synkra AIOX v4_
+_Arquitetura do Sistema de Módulos Synkra YARD v4_

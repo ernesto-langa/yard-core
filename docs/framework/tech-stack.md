@@ -1,4 +1,4 @@
-# AIOX Technology Stack
+# YARD Technology Stack
 
 > 🌐 **EN** | [PT](../pt/framework/tech-stack.md) | [ES](../es/framework/tech-stack.md)
 
@@ -25,7 +25,7 @@
 
 ## Overview
 
-AIOX is built on modern JavaScript/TypeScript with Node.js runtime, optimized for cross-platform CLI development with interactive UX and agent orchestration capabilities.
+YARD is built on modern JavaScript/TypeScript with Node.js runtime, optimized for cross-platform CLI development with interactive UX and agent orchestration capabilities.
 
 **Philosophy:**
 
@@ -522,7 +522,7 @@ npm run publish:stable         # Publish latest tag
 
 ### MCP Servers
 
-AIOX integrates with Model Context Protocol (MCP) servers:
+YARD integrates with Model Context Protocol (MCP) servers:
 
 ```yaml
 MCP Servers:
@@ -757,10 +757,10 @@ Node.js: nvm, apt, yum, or official binaries
 ## Environment Variables
 
 ```bash
-# AIOX Configuration
-AIOX_DEBUG=true                    # Enable debug logging
-AIOX_CONFIG_PATH=/custom/path      # Custom config location
-AIOX_YOLO_MODE=true               # Force yolo mode
+# YARD Configuration
+YARD_DEBUG=true                    # Enable debug logging
+YARD_CONFIG_PATH=/custom/path      # Custom config location
+YARD_YOLO_MODE=true               # Force yolo mode
 
 # Node.js
 NODE_ENV=production                # Production mode
@@ -791,4 +791,4 @@ SUPABASE_ACCESS_TOKEN=xxx         # Supabase CLI auth
 
 ---
 
-_This is an official AIOX framework standard. All technology choices must align with this stack._
+_This is an official YARD framework standard. All technology choices must align with this stack._

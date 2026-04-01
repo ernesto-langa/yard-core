@@ -1,4 +1,4 @@
-# Guia de Workflows de AIOX
+# Guia de Workflows de YARD
 
 **Version:** 1.0.0
 **Ultima Actualizacion:** 2026-02-02
@@ -8,7 +8,7 @@
 
 ## Descripcion General
 
-Los Workflows de AIOX son secuencias orquestadas de actividades de agents que automatizan procesos de desarrollo complejos. Proporcionan patrones estructurados y repetibles para escenarios de desarrollo comunes.
+Los Workflows de YARD son secuencias orquestadas de actividades de agents que automatizan procesos de desarrollo complejos. Proporcionan patrones estructurados y repetibles para escenarios de desarrollo comunes.
 
 ### Conceptos Clave
 
@@ -284,7 +284,7 @@ steps:
 Los workflows persisten entre sesiones de Claude Code:
 
 1. Usuario inicia nueva sesion
-2. Activa @aiox-master
+2. Activa @yard-master
 3. Ejecuta `*run-workflow {name} continue`
 4. El sistema carga el state, muestra el step actual
 5. Usuario ejecuta el step
@@ -294,7 +294,7 @@ Los workflows persisten entre sesiones de Claude Code:
 
 ## Patrones de Workflow
 
-AIOX detecta patrones comunes de workflow basados en el historial de comandos:
+YARD detecta patrones comunes de workflow basados en el historial de comandos:
 
 ### Patrones Detectados
 
@@ -397,4 +397,4 @@ cat .yard-core/development/workflows/{name}.yaml
 
 ---
 
-*Guia de Workflows de AIOX v1.0 - Orquestando la Colaboracion IA-Humano*
+*Guia de Workflows de YARD v1.0 - Orquestando la Colaboracion IA-Humano*

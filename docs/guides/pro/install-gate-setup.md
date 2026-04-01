@@ -45,7 +45,7 @@ npx yard-pro status
 - Node.js >= 18
 - `yard-core` >= 4.0.0 instalado no projeto
 
-### Passo 1: Instalar AIOX Pro
+### Passo 1: Instalar YARD Pro
 
 ```bash
 npx yard-pro install
@@ -68,7 +68,7 @@ npx yard-pro activate --key PRO-XXXX-XXXX-XXXX-XXXX
 ```
 
 Esse comando:
-1. Valida a chave contra o License Server (`https://aiox-license-server.vercel.app`)
+1. Valida a chave contra o License Server (`https://yard-license-server.vercel.app`)
 2. Registra sua maquina (machine ID unico)
 3. Salva um cache local criptografado para uso offline
 
@@ -100,7 +100,7 @@ npx yard-pro features
 
 ## Operacao Offline
 
-Apos a instalacao e ativacao, o AIOX Pro funciona offline:
+Apos a instalacao e ativacao, o YARD Pro funciona offline:
 
 - **30 dias** sem necessidade de revalidacao
 - **7 dias de grace period** apos expirar o cache
@@ -119,18 +119,18 @@ Para pipelines, instale e ative usando secrets de ambiente:
 
 **GitHub Actions:**
 ```yaml
-- name: Install AIOX Pro
+- name: Install YARD Pro
   run: npx yard-pro install
 
 - name: Activate License
-  run: npx yard-pro activate --key ${{ secrets.AIOX_PRO_LICENSE_KEY }}
+  run: npx yard-pro activate --key ${{ secrets.YARD_PRO_LICENSE_KEY }}
 ```
 
 **GitLab CI:**
 ```yaml
 before_script:
   - npx yard-pro install
-  - npx yard-pro activate --key ${AIOX_PRO_LICENSE_KEY}
+  - npx yard-pro activate --key ${YARD_PRO_LICENSE_KEY}
 ```
 
 ---
@@ -173,21 +173,21 @@ License activation failed: ECONNREFUSED
 ```
 ┌─────────────────┐     ┌─────────────────────────────────┐     ┌──────────┐
 │  Cliente (CLI)   │────>│  License Server (Vercel)        │────>│ Supabase │
-│  npx yard-pro    │<────│  aiox-license-server.vercel.app │<────│ Database │
+│  npx yard-pro    │<────│  yard-license-server.vercel.app │<────│ Database │
 └─────────────────┘     └─────────────────────────────────┘     └──────────┘
                                                                       │
                                                                       │
                         ┌─────────────────────────────────┐           │
                         │  Admin Dashboard (Vercel)       │───────────┘
-                        │  aiox-license-dashboard         │
+                        │  yard-license-dashboard         │
                         │  Cria/revoga/gerencia licencas  │
                         └─────────────────────────────────┘
 ```
 
 | Componente | URL | Proposito |
 |-----------|-----|-----------|
-| License Server | `https://aiox-license-server.vercel.app` | API de ativacao/validacao |
-| Admin Dashboard | `https://aiox-license-dashboard.vercel.app` | Gestao de licencas (admin) |
+| License Server | `https://yard-license-server.vercel.app` | API de ativacao/validacao |
+| Admin Dashboard | `https://yard-license-dashboard.vercel.app` | Gestao de licencas (admin) |
 | Database | Supabase PostgreSQL | Armazena licencas e ativacoes |
 
 ---
@@ -201,5 +201,5 @@ License activation failed: ECONNREFUSED
 
 ---
 
-*AIOX Pro Installation Guide v3.0*
+*YARD Pro Installation Guide v3.0*
 *Story PRO-6 — License Key & Feature Gating System*

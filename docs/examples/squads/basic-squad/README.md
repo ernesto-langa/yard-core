@@ -1,6 +1,6 @@
 # Basic Squad Example
 
-A minimal squad demonstrating the essential structure required for AIOX squads.
+A minimal squad demonstrating the essential structure required for YARD squads.
 
 ## Structure
 

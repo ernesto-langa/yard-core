@@ -4,7 +4,7 @@
   Última sincronización: 2026-01-26
 -->
 
-# Documentación del Framework AIOX
+# Documentación del Framework YARD
 
 > 🌐 [EN](../../framework/README.md) | [PT](../../pt/framework/README.md) | **ES**
 
@@ -18,7 +18,7 @@
 
 ## Descripción General
 
-Este directorio contiene la **documentación oficial del framework AIOX** que define estándares, patrones y estructuras aplicables a todos los proyectos AIOX (greenfield y brownfield).
+Este directorio contiene la **documentación oficial del framework YARD** que define estándares, patrones y estructuras aplicables a todos los proyectos YARD (greenfield y brownfield).
 
 **Propósito**: Separar la documentación a nivel de framework de los detalles de implementación específicos del proyecto.
 
@@ -36,7 +36,7 @@ Este directorio contiene la **documentación oficial del framework AIOX** que de
 
 ## Aviso de Migración
 
-**IMPORTANTE**: Estos documentos ahora están en el repositorio `ernesto-langa/yard-core`. La migración desde la antigua organización `aiox/yard-core` se completó en diciembre de 2024 como parte del OSR-9 (Rebranding).
+**IMPORTANTE**: Estos documentos ahora están en el repositorio `ernesto-langa/yard-core`. La migración desde la antigua organización `yard/yard-core` se completó en diciembre de 2024 como parte del OSR-9 (Rebranding).
 
 ### Cronograma de Migración
 
@@ -59,7 +59,7 @@ Para compatibilidad hacia atrás, la documentación del framework permanece acce
 
 ### Documentación del Framework (`docs/framework/`)
 
-- **Alcance**: Portable a través de todos los proyectos AIOX
+- **Alcance**: Portable a través de todos los proyectos YARD
 - **Ejemplos**: Estándares de codificación, stack tecnológico, estructura del árbol de código fuente
 - **Ciclo de vida**: Reside en el repositorio `ernesto-langa/yard-core`
 - **Cambios**: Requieren aprobación a nivel de framework
@@ -77,7 +77,7 @@ Para compatibilidad hacia atrás, la documentación del framework permanece acce
 
 ### Para Desarrolladores
 
-1. **Lea la documentación del framework durante la incorporación** - Comprenda los estándares de AIOX
+1. **Lea la documentación del framework durante la incorporación** - Comprenda los estándares de YARD
 2. **Consulte durante el desarrollo** - Asegure el cumplimiento con los patrones del framework
 3. **Proponga cambios mediante PRs** - Los estándares del framework evolucionan con aportes de la comunidad
 
@@ -87,7 +87,7 @@ Para compatibilidad hacia atrás, la documentación del framework permanece acce
 2. **Revise PRs para cumplimiento** - Asegure que el código siga los estándares documentados
 3. **Planifique la migración** - Prepárese para la separación del repositorio en Q2 2026
 
-### Para Mantenedores del Framework AIOX
+### Para Mantenedores del Framework YARD
 
 1. **Control de versiones** - Rastree cambios en los estándares del framework
 2. **Preparación para la migración** - Asegure que la documentación esté lista para la separación del repositorio
@@ -96,4 +96,4 @@ Para compatibilidad hacia atrás, la documentación del framework permanece acce
 ---
 
 **Última Actualización**: 2025-12-14
-**Mantenedor**: Equipo del Framework AIOX
+**Mantenedor**: Equipo del Framework YARD

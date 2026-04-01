@@ -4,7 +4,7 @@
   Última sincronização: 2026-01-26
 -->
 
-# Método AIOX: Arquitetura Central
+# Método YARD: Arquitetura Central
 
 > 🌐 [EN](../core-architecture.md) | **PT** | [ES](../es/core-architecture.md)
 
@@ -12,7 +12,7 @@
 
 ## 1. Visão Geral
 
-O Método AIOX foi projetado para fornecer modos agênticos, tarefas e templates que permitem workflows úteis e repetíveis, seja para desenvolvimento ágil com agentes ou expansão para domínios vastamente diferentes. O propósito central do projeto é fornecer um conjunto estruturado, porém flexível, de prompts, templates e workflows que os usuários podem empregar para guiar agentes de IA (como Gemini, Claude ou ChatGPT) para realizar tarefas complexas, discussões guiadas ou outros fluxos significativos específicos de domínio de maneira previsível e com alta qualidade.
+O Método YARD foi projetado para fornecer modos agênticos, tarefas e templates que permitem workflows úteis e repetíveis, seja para desenvolvimento ágil com agentes ou expansão para domínios vastamente diferentes. O propósito central do projeto é fornecer um conjunto estruturado, porém flexível, de prompts, templates e workflows que os usuários podem empregar para guiar agentes de IA (como Gemini, Claude ou ChatGPT) para realizar tarefas complexas, discussões guiadas ou outros fluxos significativos específicos de domínio de maneira previsível e com alta qualidade.
 
 O módulo central do sistema facilita um ciclo de vida de desenvolvimento completo adaptado aos desafios das ferramentas modernas de IA Agêntica:
 
@@ -22,11 +22,11 @@ O módulo central do sistema facilita um ciclo de vida de desenvolvimento comple
 
 ## 2. Diagrama de Arquitetura do Sistema
 
-Todo o ecossistema do Método AIOX é projetado em torno do diretório `yard-core` instalado, que atua como o cérebro da operação. O diretório `tools` fornece os meios para processar e empacotar este cérebro para diferentes ambientes.
+Todo o ecossistema do Método YARD é projetado em torno do diretório `yard-core` instalado, que atua como o cérebro da operação. O diretório `tools` fornece os meios para processar e empacotar este cérebro para diferentes ambientes.
 
 ```mermaid
 graph TD
-    subgraph AIOX Method Project
+    subgraph YARD Method Project
         subgraph Core Framework
             A["yard-core"]
             A --> B["agents"]
@@ -75,11 +75,11 @@ O diretório `yard-core` contém todas as definições e recursos que dão aos a
 
 ### 3.1. Agentes (`yard-core/agents/`)
 
-- **Propósito**: Estes são os blocos fundamentais do sistema. Cada arquivo markdown (ex: `aiox-master.md`, `pm.md`, `dev.md`) define a persona, capacidades e dependências de um único agente de IA.
+- **Propósito**: Estes são os blocos fundamentais do sistema. Cada arquivo markdown (ex: `yard-master.md`, `pm.md`, `dev.md`) define a persona, capacidades e dependências de um único agente de IA.
 - **Estrutura**: Um arquivo de agente contém um cabeçalho YAML que especifica seu papel, persona, dependências e instruções de inicialização. Estas dependências são listas de tasks, templates, checklists e arquivos de dados que o agente tem permissão para usar.
 - **Instruções de Inicialização**: Agentes podem incluir sequências de inicialização que carregam documentação específica do projeto da pasta `docs/`, como padrões de codificação, especificações de API ou documentos de estrutura do projeto. Isso fornece contexto imediato do projeto na ativação.
 - **Integração de Documentos**: Agentes podem referenciar e carregar documentos da pasta `docs/` do projeto como parte de tasks, workflows ou sequências de inicialização. Os usuários também podem arrastar documentos diretamente para interfaces de chat para fornecer contexto adicional.
-- **Exemplo**: O agente `aiox-master` lista suas dependências, o que informa à ferramenta de build quais arquivos incluir em um bundle web e informa ao agente sobre suas próprias capacidades.
+- **Exemplo**: O agente `yard-master` lista suas dependências, o que informa à ferramenta de build quais arquivos incluir em um bundle web e informa ao agente sobre suas próprias capacidades.
 
 ### 3.2. Times de Agentes (`yard-core/agent-teams/`)
 
@@ -88,7 +88,7 @@ O diretório `yard-core` contém todas as definições e recursos que dão aos a
 
 ### 3.3. Workflows (`yard-core/workflows/`)
 
-- **Propósito**: Workflows são arquivos YAML (ex: `greenfield-fullstack.yaml`) que definem uma sequência prescrita de etapas e interações de agentes para um tipo específico de projeto. Eles atuam como um guia estratégico para o usuário e o agente `aiox-orchestrator`.
+- **Propósito**: Workflows são arquivos YAML (ex: `greenfield-fullstack.yaml`) que definem uma sequência prescrita de etapas e interações de agentes para um tipo específico de projeto. Eles atuam como um guia estratégico para o usuário e o agente `yard-orchestrator`.
 - **Estrutura**: Um workflow define sequências para projetos complexos e simples, lista os agentes envolvidos em cada etapa, os artefatos que eles criam e as condições para passar de uma etapa para a próxima. Frequentemente inclui um diagrama Mermaid para visualização.
 
 ### 3.4. Recursos Reutilizáveis (`templates`, `tasks`, `checklists`, `data`)
@@ -97,15 +97,15 @@ O diretório `yard-core` contém todas as definições e recursos que dão aos a
   - **`templates/`**: Contém templates markdown para documentos comuns como PRDs, especificações de arquitetura e user stories.
   - **`tasks/`**: Define as instruções para executar ações específicas e repetíveis como "shard-doc" ou "create-next-story".
   - **`checklists/`**: Fornece checklists de garantia de qualidade para agentes como o Product Owner (`po`) ou Arquiteto.
-  - **`data/`**: Contém a base de conhecimento central (`aiox-kb.md`), preferências técnicas (`technical-preferences.md`) e outros arquivos de dados importantes.
+  - **`data/`**: Contém a base de conhecimento central (`yard-kb.md`), preferências técnicas (`technical-preferences.md`) e outros arquivos de dados importantes.
 
 #### 3.4.1. Sistema de Processamento de Templates
 
-Um princípio arquitetural chave do AIOX é que templates são auto-contidos e interativos - eles incorporam tanto a saída desejada do documento quanto as instruções do LLM necessárias para trabalhar com os usuários. Isso significa que, em muitos casos, nenhuma task separada é necessária para criação de documentos, pois o próprio template contém toda a lógica de processamento.
+Um princípio arquitetural chave do YARD é que templates são auto-contidos e interativos - eles incorporam tanto a saída desejada do documento quanto as instruções do LLM necessárias para trabalhar com os usuários. Isso significa que, em muitos casos, nenhuma task separada é necessária para criação de documentos, pois o próprio template contém toda a lógica de processamento.
 
-O framework AIOX emprega um sistema sofisticado de processamento de templates orquestrado por três componentes-chave:
+O framework YARD emprega um sistema sofisticado de processamento de templates orquestrado por três componentes-chave:
 
-- **`template-format.md`** (`yard-core/utils/`): Define a linguagem de marcação fundamental usada em todos os templates do AIOX. Esta especificação estabelece regras de sintaxe para substituição de variáveis (`{{placeholders}}`), diretivas de processamento exclusivas para IA (`[[LLM: instructions]]`) e blocos de lógica condicional. Templates seguem este formato para garantir processamento consistente em todo o sistema.
+- **`template-format.md`** (`yard-core/utils/`): Define a linguagem de marcação fundamental usada em todos os templates do YARD. Esta especificação estabelece regras de sintaxe para substituição de variáveis (`{{placeholders}}`), diretivas de processamento exclusivas para IA (`[[LLM: instructions]]`) e blocos de lógica condicional. Templates seguem este formato para garantir processamento consistente em todo o sistema.
 
 - **`create-doc.md`** (`yard-core/tasks/`): Atua como o motor de orquestração que gerencia todo o workflow de geração de documentos. Esta task coordena a seleção de templates, gerencia modos de interação com o usuário (geração incremental vs. rápida), aplica regras de processamento de template-format e lida com validação. Serve como a interface principal entre usuários e o sistema de templates.
 
@@ -115,7 +115,7 @@ O sistema mantém uma clara separação de responsabilidades: a marcação de te
 
 #### 3.4.2. Sistema de Preferências Técnicas
 
-O AIOX inclui uma camada de personalização através do arquivo `technical-preferences.md` em `yard-core/data/`. Este arquivo serve como um perfil técnico persistente que influencia o comportamento dos agentes em todos os projetos.
+O YARD inclui uma camada de personalização através do arquivo `technical-preferences.md` em `yard-core/data/`. Este arquivo serve como um perfil técnico persistente que influencia o comportamento dos agentes em todos os projetos.
 
 **Propósito e Benefícios:**
 
@@ -155,11 +155,11 @@ O framework é projetado para dois ambientes principais: IDEs locais e interface
 - **Para IDEs**: Usuários interagem com os agentes diretamente via seus arquivos markdown em `yard-core/agents/`. A integração do IDE (para Cursor, Claude Code, etc.) sabe como chamar estes agentes.
 - **Para UIs Web**: Usuários fazem upload de um bundle pré-construído de `dist`. Este único arquivo fornece à IA o contexto de todo o time e todas as suas ferramentas e conhecimento necessários.
 
-## 5. Workflows do AIOX
+## 5. Workflows do YARD
 
 ### 5.1. O Workflow de Planejamento
 
-Antes do desenvolvimento começar, o AIOX segue um workflow de planejamento estruturado que estabelece a fundação para execução bem-sucedida do projeto:
+Antes do desenvolvimento começar, o YARD segue um workflow de planejamento estruturado que estabelece a fundação para execução bem-sucedida do projeto:
 
 ```mermaid
 graph TD
@@ -196,11 +196,11 @@ graph TD
 7. **Transição de Ambiente**: Mudança crítica da UI web para IDE para workflow de desenvolvimento
 8. **Preparação de Documentos**: PO fragmenta documentos grandes para consumo no desenvolvimento
 
-**Orquestração de Workflow**: O agente `aiox-orchestrator` usa estas definições de workflow para guiar usuários através do processo completo, garantindo transições adequadas entre fases de planejamento (UI web) e desenvolvimento (IDE).
+**Orquestração de Workflow**: O agente `yard-orchestrator` usa estas definições de workflow para guiar usuários através do processo completo, garantindo transições adequadas entre fases de planejamento (UI web) e desenvolvimento (IDE).
 
 ### 5.2. O Ciclo Principal de Desenvolvimento
 
-Uma vez que as fases iniciais de planejamento e arquitetura estejam completas, o projeto move para um workflow de desenvolvimento cíclico, conforme detalhado no `aiox-kb.md`. Isso garante um processo de implementação estável, sequencial e controlado por qualidade.
+Uma vez que as fases iniciais de planejamento e arquitetura estejam completas, o projeto move para um workflow de desenvolvimento cíclico, conforme detalhado no `yard-kb.md`. Isso garante um processo de implementação estável, sequencial e controlado por qualidade.
 
 ```mermaid
 graph TD

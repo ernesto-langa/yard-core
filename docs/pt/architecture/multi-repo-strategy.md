@@ -26,7 +26,7 @@
 
 ## Visão Geral
 
-AIOX v4 adota uma **estratégia multi-repositório** para viabilizar desenvolvimento modular, contribuições comunitárias e separação clara entre framework principal, extensões (squads) e componentes proprietários.
+YARD v4 adota uma **estratégia multi-repositório** para viabilizar desenvolvimento modular, contribuições comunitárias e separação clara entre framework principal, extensões (squads) e componentes proprietários.
 
 ### Objetivos de Design
 
@@ -46,7 +46,7 @@ AIOX v4 adota uma **estratégia multi-repositório** para viabilizar desenvolvim
 Organização SynkraAI
 ├── REPOSITÓRIOS PÚBLICOS
 │   ├── yard-core          # Framework principal (MIT)
-│   ├── aiox-squads        # Squads comunitárias (MIT)
+│   ├── yard-squads        # Squads comunitárias (MIT)
 │   └── mcp-ecosystem      # Configurações MCP (Apache 2.0)
 │
 └── REPOSITÓRIOS PRIVADOS
@@ -65,7 +65,7 @@ Organização SynkraAI
 │                                                                          │
 │   ┌────────────────────┐     ┌────────────────────┐                     │
 │   │  SynkraAI/         │     │  SynkraAI/         │                     │
-│   │  yard-core         │     │  aiox-squads       │                     │
+│   │  yard-core         │     │  yard-squads       │                     │
 │   │  (MIT)  │◄────│  (MIT)             │                     │
 │   │                    │     │                    │                     │
 │   │  - Framework Core  │     │  - Squad ETL       │                     │
@@ -106,7 +106,7 @@ Organização SynkraAI
 
 ### Propósito
 
-O repositório principal contém o framework AIOX fundamental que todos os projetos dependem.
+O repositório principal contém o framework YARD fundamental que todos os projetos dependem.
 
 ### Conteúdo
 
@@ -125,7 +125,7 @@ O repositório principal contém o framework AIOX fundamental que todos os proje
 ### Pacote npm
 
 ```bash
-npm install @aiox/core
+npm install @yard/core
 ```
 
 ---
@@ -134,12 +134,12 @@ npm install @aiox/core
 
 ### Visão Geral
 
-Squads são extensões modulares que adicionam capacidades especializadas ao AIOX.
+Squads são extensões modulares que adicionam capacidades especializadas ao YARD.
 
-### Repositório aiox-squads
+### Repositório yard-squads
 
 ```
-aiox-squads/
+yard-squads/
 ├── etl/                    # Squad de processamento ETL
 │   ├── squad.yaml          # Manifesto da squad
 │   ├── agents/             # Agentes específicos da squad
@@ -169,7 +169,7 @@ description: Squad de processamento ETL para pipelines de dados
 license: MIT
 
 peerDependencies:
-  '@aiox/core': '^2.1.0'
+  '@yard/core': '^2.1.0'
 
 agents:
   - id: data-engineer
@@ -192,9 +192,9 @@ exports:
 ### Pacotes npm
 
 ```bash
-npm install @aiox/squad-etl
-npm install @aiox/squad-creator
-npm install @aiox/squad-mmos
+npm install @yard/squad-etl
+npm install @yard/squad-creator
+npm install @yard/squad-mmos
 ```
 
 ---
@@ -231,7 +231,7 @@ mcp-ecosystem/
 ### Pacote npm
 
 ```bash
-npm install @aiox/mcp-presets
+npm install @yard/mcp-presets
 ```
 
 ---
@@ -251,7 +251,7 @@ Contém componentes proprietários MMOS (Mental Model Operating System):
 
 ### SynkraAI/certified-partners (Proprietário)
 
-Recursos para parceiros AIOX certificados:
+Recursos para parceiros YARD certificados:
 
 - Implementações de squads premium
 - Acesso ao portal de parceiros
@@ -268,7 +268,7 @@ Recursos para parceiros AIOX certificados:
 
 ```
 ┌──────────────┐     depende de      ┌──────────────┐
-│  aiox-squads │ ──────────────────► │  yard-core   │
+│  yard-squads │ ──────────────────► │  yard-core   │
 └──────────────┘                     └──────────────┘
        │                                    │
        │                                    │
@@ -282,7 +282,7 @@ Recursos para parceiros AIOX certificados:
 
 ### Compatibilidade de Versões
 
-| yard-core | aiox-squads | mcp-ecosystem |
+| yard-core | yard-squads | mcp-ecosystem |
 | --------- | ----------- | ------------- |
 | ^2.1.0    | ^1.0.0      | ^1.0.0        |
 | ^3.0.0    | ^2.0.0      | ^1.x.x        |
@@ -293,7 +293,7 @@ Para projetos que precisam de múltiplos repositórios:
 
 ```bash
 # Adicionar squads como submódulo
-git submodule add https://github.com/SynkraAI/aiox-squads.git squads
+git submodule add https://github.com/SynkraAI/yard-squads.git squads
 
 # Adicionar ecossistema MCP como submódulo
 git submodule add https://github.com/SynkraAI/mcp-ecosystem.git mcp
@@ -304,9 +304,9 @@ git submodule add https://github.com/SynkraAI/mcp-ecosystem.git mcp
 ```json
 {
   "dependencies": {
-    "@aiox/core": "^2.1.0",
-    "@aiox/squad-etl": "^1.0.0",
-    "@aiox/mcp-presets": "^1.0.0"
+    "@yard/core": "^2.1.0",
+    "@yard/squad-etl": "^1.0.0",
+    "@yard/mcp-presets": "^1.0.0"
   }
 }
 ```
@@ -319,11 +319,11 @@ git submodule add https://github.com/SynkraAI/mcp-ecosystem.git mcp
 
 | Pacote               | Registry   | Licença        | Repositório   |
 | -------------------- | ---------- | -------------- | ------------- |
-| `@aiox/core`         | npm public | MIT            | yard-core     |
-| `@aiox/squad-etl`    | npm public | MIT            | aiox-squads   |
-| `@aiox/squad-creator`| npm public | MIT            | aiox-squads   |
-| `@aiox/squad-mmos`   | npm public | MIT            | aiox-squads   |
-| `@aiox/mcp-presets`  | npm public | Apache 2.0     | mcp-ecosystem |
+| `@yard/core`         | npm public | MIT            | yard-core     |
+| `@yard/squad-etl`    | npm public | MIT            | yard-squads   |
+| `@yard/squad-creator`| npm public | MIT            | yard-squads   |
+| `@yard/squad-mmos`   | npm public | MIT            | yard-squads   |
+| `@yard/mcp-presets`  | npm public | Apache 2.0     | mcp-ecosystem |
 
 ### Workflow de Publicação
 
@@ -331,7 +331,7 @@ git submodule add https://github.com/SynkraAI/mcp-ecosystem.git mcp
 # A partir de yard-core
 npm publish --access public
 
-# A partir de aiox-squads/etl
+# A partir de yard-squads/etl
 cd etl && npm publish --access public
 
 # A partir de mcp-ecosystem
@@ -383,4 +383,4 @@ npm publish --access public
 
 ---
 
-_Última Atualização: 2026-01-28 | Time do Framework AIOX_
+_Última Atualização: 2026-01-28 | Time do Framework YARD_

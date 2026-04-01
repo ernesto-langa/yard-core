@@ -1,16 +1,16 @@
 # @devops (Gage) - Documentacion del Sistema
 
-> [PT](../../aiox-agent-flows/devops-system.md) | [EN](../../en/aiox-agent-flows/devops-system.md) | **ES**
+> [PT](../../yard-agent-flows/devops-system.md) | [EN](../../en/yard-agent-flows/devops-system.md) | **ES**
 
 ---
 
-> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../aiox-agent-flows/devops-system.md).
+> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../yard-agent-flows/devops-system.md).
 
 ---
 
 ## Vision General
 
-**@devops** (Gage) es el agente de operaciones del AIOX, responsable por:
+**@devops** (Gage) es el agente de operaciones del YARD, responsable por:
 
 - CI/CD y pipelines
 - Git push (EXCLUSIVO)
@@ -29,7 +29,7 @@
 ## Ver Mas
 
 Para documentacion detallada incluyendo flowcharts, integraciones y troubleshooting, consulte:
-- **[Documentacion completa (PT)](../../aiox-agent-flows/devops-system.md)**
+- **[Documentacion completa (PT)](../../yard-agent-flows/devops-system.md)**
 
 ---
 

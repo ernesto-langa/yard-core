@@ -4,13 +4,13 @@
   Última sincronização: 2026-01-29
 -->
 
-# Guia do Usuário AIOX
+# Guia do Usuário YARD
 
 > **PT-BR**
 
 ---
 
-Guia completo para usar o Synkra AIOX - o Sistema Orquestrado por IA para Desenvolvimento Full Stack.
+Guia completo para usar o Synkra YARD - o Sistema Orquestrado por IA para Desenvolvimento Full Stack.
 
 **Versão:** 2.1.0
 **Última Atualização:** 2026-01-28
@@ -21,7 +21,7 @@ Guia completo para usar o Synkra AIOX - o Sistema Orquestrado por IA para Desenv
 
 ### Pré-requisitos
 
-Antes de usar o AIOX, certifique-se de ter:
+Antes de usar o YARD, certifique-se de ter:
 
 - **Node.js** versão 18.0.0 ou superior
 - **npm** versão 8.0.0 ou superior
@@ -46,7 +46,7 @@ npx yard-core install
 cd my-project
 
 # Liste agentes disponíveis
-aiox agents list
+yard agents list
 
 # Ative um agente
 @dev
@@ -63,14 +63,14 @@ aiox agents list
 
 > **"Estrutura é Sagrada. Tom é Flexível."**
 
-O AIOX fornece estrutura orquestrada enquanto permite flexibilidade na comunicação. Isso significa:
+O YARD fornece estrutura orquestrada enquanto permite flexibilidade na comunicação. Isso significa:
 
 - **Fixo:** Posições de templates, ordem de seções, formatos de métricas, estrutura de arquivos, workflows
 - **Flexível:** Mensagens de status, escolhas de vocabulário, uso de emojis, personalidade, tom
 
-### A Diferença do AIOX
+### A Diferença do YARD
 
-| Desenvolvimento Tradicional com IA | AIOX                                        |
+| Desenvolvimento Tradicional com IA | YARD                                        |
 | ---------------------------------- | ------------------------------------------- |
 | Agentes descoordenados             | 11 agentes especializados com papéis claros |
 | Resultados inconsistentes          | Workflows estruturados com quality gates    |
@@ -81,7 +81,7 @@ O AIOX fornece estrutura orquestrada enquanto permite flexibilidade na comunica�
 
 ## Agentes
 
-O AIOX inclui 11 agentes especializados, cada um com papel e personalidade distintos:
+O YARD inclui 11 agentes especializados, cada um com papel e personalidade distintos:
 
 | Agente    | ID               | Arquétipo    | Responsabilidade          |
 | --------- | ---------------- | ------------ | ------------------------- |
@@ -95,7 +95,7 @@ O AIOX inclui 11 agentes especializados, cada um com papel e personalidade disti
 | **Dara**  | `@data-engineer` | Arquiteto    | Engenharia de dados       |
 | **Felix** | `@devops`        | Otimizador   | CI/CD e operações         |
 | **Uma**   | `@ux-expert`     | Criador      | Experiência do usuário    |
-| **Pax**   | `@aiox-master`   | Orquestrador | Orquestração do framework |
+| **Pax**   | `@yard-master`   | Orquestrador | Orquestração do framework |
 
 ### Ativação de Agentes
 
@@ -104,7 +104,7 @@ O AIOX inclui 11 agentes especializados, cada um com papel e personalidade disti
 @dev                # Ativar Dex (Desenvolvedor)
 @qa                 # Ativar Quinn (QA)
 @architect          # Ativar Aria (Arquiteto)
-@aiox-master        # Ativar Pax (Orquestrador)
+@yard-master        # Ativar Pax (Orquestrador)
 
 # Comandos de agente usam prefixo *
 *help               # Mostrar comandos disponíveis
@@ -124,7 +124,7 @@ Quando um agente está ativo:
 
 ## Tasks
 
-Tasks são o ponto de entrada principal no AIOX. Tudo é uma task.
+Tasks são o ponto de entrada principal no YARD. Tudo é uma task.
 
 ### Arquitetura Task-First
 
@@ -141,7 +141,7 @@ Requisição do Usuário --> Task --> Execução do Agente --> Saída
 *task develop-story --story=1.1
 
 # Listar tasks disponíveis
-aiox tasks list
+yard tasks list
 
 # Obter ajuda da task
 *task --help
@@ -167,7 +167,7 @@ Workflows orquestram múltiplas tasks e agentes para operações complexas.
 | Workflow                 | Caso de Uso                | Agentes Envolvidos |
 | ------------------------ | -------------------------- | ------------------ |
 | `greenfield-fullstack`   | Novo projeto full-stack    | Todos os agentes   |
-| `brownfield-integration` | Adicionar AIOX a existente | dev, architect     |
+| `brownfield-integration` | Adicionar YARD a existente | dev, architect     |
 | `fork-join`              | Execução paralela de tasks | Múltiplos          |
 | `organizer-worker`       | Execução delegada          | po, dev            |
 | `data-pipeline`          | Workflows de ETL           | data-engineer, qa  |
@@ -176,17 +176,17 @@ Workflows orquestram múltiplas tasks e agentes para operações complexas.
 
 ```bash
 # Iniciar um workflow
-aiox workflow greenfield-fullstack
+yard workflow greenfield-fullstack
 
 # Com parâmetros
-aiox workflow brownfield-integration --target=./existing-project
+yard workflow brownfield-integration --target=./existing-project
 ```
 
 ---
 
 ## Squads
 
-Squads são equipes modulares de agentes de IA que estendem a funcionalidade do AIOX.
+Squads são equipes modulares de agentes de IA que estendem a funcionalidade do YARD.
 
 ### O que é um Squad?
 
@@ -205,7 +205,7 @@ Um squad é um pacote autocontido contendo:
 
 ```
 Nível 1: LOCAL        --> ./squads/           (Privado)
-Nível 2: AIOX-SQUADS  --> github.com/SynkraAI (Público/Gratuito)
+Nível 2: YARD-SQUADS  --> github.com/SynkraAI (Público/Gratuito)
 Nível 3: SYNKRA API   --> api.synkra.dev      (Marketplace)
 ```
 
@@ -213,10 +213,10 @@ Nível 3: SYNKRA API   --> api.synkra.dev      (Marketplace)
 
 ```bash
 # Listar squads disponíveis
-aiox squads list
+yard squads list
 
 # Baixar um squad
-aiox squads download etl-squad
+yard squads download etl-squad
 
 # Criar seu próprio squad
 @squad-creator
@@ -254,7 +254,7 @@ my-project/
 ### Comandos Comuns
 
 ```bash
-# Comandos do AIOX Master
+# Comandos do YARD Master
 *help                # Mostrar comandos disponíveis
 *create-story        # Criar nova story
 *task {name}         # Executar task específica
@@ -284,7 +284,7 @@ npm run build        # Build do projeto
 A configuração principal está em `.yard-core/core/config/`:
 
 ```yaml
-# aiox.config.yaml
+# yard.config.yaml
 version: 2.1.0
 projectName: my-project
 
@@ -312,12 +312,12 @@ OPENAI_API_KEY=sua-chave-openai-api
 
 # Configurações do Framework
 NODE_ENV=development
-AIOX_DEBUG=false
+YARD_DEBUG=false
 ```
 
 ### Integração com IDE
 
-O AIOX suporta múltiplas IDEs. A configuração é sincronizada entre:
+O YARD suporta múltiplas IDEs. A configuração é sincronizada entre:
 
 - Claude Code (`.claude/`)
 - Cursor (`.cursor/`)
@@ -341,7 +341,7 @@ npm run sync:ide
 ls .yard-core/development/agents/
 
 # Verificar configuração
-aiox doctor
+yard doctor
 ```
 
 **Execução de task falha**
@@ -361,7 +361,7 @@ cat .yard-core/development/tasks/{task-name}.md
 rm -rf .yard-core/core/cache/*
 
 # Reconstruir índice
-aiox rebuild
+yard rebuild
 ```
 
 ### Obtendo Ajuda
@@ -397,7 +397,7 @@ aiox rebuild
 Sempre crie uma story antes de implementar funcionalidades:
 
 ```bash
-@aiox-master
+@yard-master
 *create-story
 ```
 
@@ -414,7 +414,7 @@ Escolha o agente apropriado para cada task:
 
 ### 3. Siga Quality Gates
 
-O AIOX implementa quality gates em 3 camadas:
+O YARD implementa quality gates em 3 camadas:
 
 1. **Camada 1 (Local)**: Hooks de pre-commit, linting, verificação de tipos
 2. **Camada 2 (CI/CD)**: Testes automatizados, review do CodeRabbit
@@ -433,7 +433,7 @@ Mantenha o contexto entre sessões:
 Não reinvente a roda - verifique se existem squads:
 
 ```bash
-aiox squads search {keyword}
+yard squads search {keyword}
 ```
 
 ---
@@ -449,4 +449,4 @@ aiox squads search {keyword}
 
 ---
 
-_Guia do Usuário Synkra AIOX v4.0_
+_Guia do Usuário Synkra YARD v4.0_

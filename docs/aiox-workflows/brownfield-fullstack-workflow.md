@@ -463,7 +463,7 @@ Continua ate que todas as stories no PRD estejam completas.
 
 **Status:** Todas as stories implementadas e revisadas
 
-**Referencia:** `.yard-core/data/aiox-kb.md#IDE Development Workflow`
+**Referencia:** `.yard-core/data/yard-kb.md#IDE Development Workflow`
 
 ---
 
@@ -518,7 +518,7 @@ Antes de iniciar este workflow, certifique-se de:
 
 - [ ] GitHub CLI configurado (`gh auth status`)
 - [ ] Acesso ao PM tool (ClickUp/GitHub/Jira) se aplicável
-- [ ] Core config AIOX configurado (`.yard-core/core-config.yaml`)
+- [ ] Core config YARD configurado (`.yard-core/core-config.yaml`)
 
 ---
 

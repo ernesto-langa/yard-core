@@ -1,12 +1,12 @@
 <!-- 翻译: ZH-CN | 原文: /docs/en/architecture/module-system.md | 同步时间: 2026-01-26 -->
 
-# AIOX 模块系统架构
+# YARD 模块系统架构
 
 > 🌐 [EN](../../architecture/module-system.md) | [PT](../../pt/architecture/module-system.md) | [ES](../../es/architecture/module-system.md) | **ZH-CN**
 
 ---
 
-> Synkra AIOX v4.2 模块化架构完整指南。
+> Synkra YARD v4.2 模块化架构完整指南。
 
 **版本:** 2.1.0
 **上次更新:** 2025-12-01
@@ -39,7 +39,7 @@ v4.2 模块化架构解决了 v2.0 扁平结构的几个挑战：
 
 ## 模块结构
 
-Synkra AIOX 将 `.yard-core/` 目录组织为四个主要模块：
+Synkra YARD 将 `.yard-core/` 目录组织为四个主要模块：
 
 ```
 .yard-core/
@@ -53,7 +53,7 @@ Synkra AIOX 将 `.yard-core/` 目录组织为四个主要模块：
 
 ```mermaid
 graph TB
-    subgraph "AIOX v4 框架"
+    subgraph "YARD v4 框架"
         CLI[CLI / 工具]
 
         subgraph "产品模块"
@@ -112,7 +112,7 @@ graph TB
 | 目录 | 内容 | 描述 |
 | --- | --- | --- |
 | `config/` | `config-cache.js`、`config-loader.js` | 带 TTL 缓存的配置管理 |
-| `data/` | `aiox-kb.md`、`workflow-patterns.yaml` | 框架知识库 |
+| `data/` | `yard-kb.md`、`workflow-patterns.yaml` | 框架知识库 |
 | `docs/` | 内部文档 | 组件指南、故障排除 |
 | `elicitation/` | `elicitation-engine.js`、`session-manager.js` | 交互式提示系统 |
 | `session/` | `context-detector.js`、`context-loader.js` | 会话上下文管理 |
@@ -168,7 +168,7 @@ const QualityGateManager = require('./.yard-core/core/quality-gates/quality-gate
 
 | 代理 | ID | 责任 |
 | --- | --- | --- |
-| AIOX 主代理 | `aiox-master` | 框架编排 |
+| YARD 主代理 | `yard-master` | 框架编排 |
 | 开发者 | `dev` | 代码实现 |
 | QA | `qa` | 质量保证 |
 | 架构师 | `architect` | 技术架构 |
@@ -356,13 +356,13 @@ graph LR
 
 ```bash
 # 预演显示变化
-aiox migrate --dry-run
+yard migrate --dry-run
 
 # 执行迁移
-aiox migrate --from=2.0 --to=2.1
+yard migrate --from=2.0 --to=2.1
 
 # 验证迁移
-aiox migrate --validate
+yard migrate --validate
 ```
 
 详见 [迁移指南](../../migration/migration-guide.md) 了解详细说明。
@@ -379,4 +379,4 @@ aiox migrate --validate
 
 ---
 
-_Synkra AIOX v4 模块系统架构_
+_Synkra YARD v4 模块系统架构_

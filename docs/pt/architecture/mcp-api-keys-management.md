@@ -12,13 +12,13 @@
 
 ## Visão Geral
 
-Este documento descreve as melhores práticas para gerenciar chaves de API usadas por servidores MCP (Model Context Protocol) no AIOX. O gerenciamento adequado de chaves de API é crítico para segurança e integridade operacional.
+Este documento descreve as melhores práticas para gerenciar chaves de API usadas por servidores MCP (Model Context Protocol) no YARD. O gerenciamento adequado de chaves de API é crítico para segurança e integridade operacional.
 
 ---
 
-## Arquitetura MCP no AIOX
+## Arquitetura MCP no YARD
 
-AIOX utiliza Docker MCP Toolkit como a infraestrutura principal de MCP:
+YARD utiliza Docker MCP Toolkit como a infraestrutura principal de MCP:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -105,7 +105,7 @@ APIFY_API_TOKEN=seu-token-apify
 
 ---
 
-## Governança MCP no AIOX
+## Governança MCP no YARD
 
 **IMPORTANTE:** Todo o gerenciamento de infraestrutura MCP é tratado EXCLUSIVAMENTE pelo **Agente DevOps (@devops / Gage)**.
 

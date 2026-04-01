@@ -19,7 +19,7 @@
 
 ## Descripción General
 
-La funcionalidad de Estado del Proyecto muestra automáticamente tu contexto de trabajo actual cuando cualquier agente AIOX se activa. Esto incluye:
+La funcionalidad de Estado del Proyecto muestra automáticamente tu contexto de trabajo actual cuando cualquier agente YARD se activa. Esto incluye:
 
 - **Rama de Git** en la que estás actualmente
 - **Archivos modificados** en tu directorio de trabajo
@@ -86,7 +86,7 @@ Si prefieres configuración manual:
 
 2. Crear directorio `.yard/`:
    ```bash
-   mkdir .aiox
+   mkdir .yard
    ```
 
 3. Agregar a `.gitignore`:
@@ -219,7 +219,7 @@ Solo muestra stories con status: `InProgress` o `In Progress`.
 
 ## Agentes Afectados
 
-Los 11 agentes AIOX muestran estado del proyecto:
+Los 11 agentes YARD muestran estado del proyecto:
 
 1. **@dev** (Dex - Builder)
 2. **@po** (Pax - Balancer)
@@ -231,7 +231,7 @@ Los 11 agentes AIOX muestran estado del proyecto:
 8. **@devops** (Gage - Operator)
 9. **@data-engineer** (Dara - Sage)
 10. **@ux-design-expert** (Uma - Empathizer)
-11. **@aiox-master** (Orion - Orchestrator)
+11. **@yard-master** (Orion - Orchestrator)
 
 ---
 
@@ -460,7 +460,7 @@ R: Sí, todos los agentes usan el mismo archivo de caché (`.yard/project-status
 
 ## Documentación Relacionada
 
-- **Story:** `docs/stories/aiox migration/story-6.1.2.4-project-status-context.md`
+- **Story:** `docs/stories/yard migration/story-6.1.2.4-project-status-context.md`
 - **Config:** `.yard-core/core-config.yaml` (sección projectStatus)
 - **Script:** `.yard-core/infrastructure/scripts/project-status-loader.js`
 - **Init Task:** `.yard-core/tasks/init-project-status.md`

@@ -1,8 +1,8 @@
-# Synkra AIOX Community
+# Synkra YARD Community
 
 > 🇧🇷 [Versão em Português](COMMUNITY-PT.md)
 
-Welcome to the Synkra AIOX community!
+Welcome to the Synkra YARD community!
 
 We're building the future of AI-orchestrated development together.
 
@@ -32,15 +32,15 @@ We're building the future of AI-orchestrated development together.
 
 ### GitHub Discussions (Primary)
 
-Our main communication hub for all AIOX repositories:
+Our main communication hub for all YARD repositories:
 
 - **Announcements** - Project updates from maintainers
-- **General** - General discussions about AIOX
+- **General** - General discussions about YARD
 - **Ideas** - Propose new features and improvements
 - **Q&A** - Get help with technical questions
-- **Show and Tell** - Share your projects using AIOX
+- **Show and Tell** - Share your projects using YARD
 - **Troubleshooting** - Get help with problems
-- **Squads** - Discussions about AIOX Squads (modular agent teams)
+- **Squads** - Discussions about YARD Squads (modular agent teams)
 - **MCP Ecosystem** - Discussions about MCP tools and integrations
 
 [Join the Discussion](https://github.com/ernesto-langa/yard-core/discussions)
@@ -50,7 +50,7 @@ Our main communication hub for all AIOX repositories:
 For bug reports and feature requests:
 
 - [yard-core Issues](https://github.com/ernesto-langa/yard-core/issues) - Core framework
-- [aiox-squads Issues](https://github.com/SynkraAI/aiox-squads/issues) - AIOX Squads
+- [yard-squads Issues](https://github.com/SynkraAI/yard-squads/issues) - YARD Squads
 - [mcp-ecosystem Issues](https://github.com/SynkraAI/mcp-ecosystem/issues) - MCP tools
 
 ## How to Contribute
@@ -90,7 +90,7 @@ See [docs/Squads.md](docs/Squads.md) for details on creating your own Squad.
 
 ### Contributors
 
-Anyone who has contributed to AIOX in any way.
+Anyone who has contributed to YARD in any way.
 - Listed in our [Contributors page](https://github.com/ernesto-langa/yard-core/graphs/contributors)
 - Mentioned in release notes for significant contributions
 
@@ -162,7 +162,7 @@ Report violations to: conduct@SynkraAI.com
 
 ## Project Roadmap
 
-Want to know where AIOX is headed? Check out our public roadmap:
+Want to know where YARD is headed? Check out our public roadmap:
 
 - [ROADMAP.md](ROADMAP.md) - High-level vision and planned features
 - [GitHub Project](https://github.com/orgs/SynkraAI/projects/1) - Detailed tracking board
@@ -188,7 +188,7 @@ See [Feature Request Process](docs/FEATURE_PROCESS.md) for complete details.
 
 ## Resources
 
-### Learning AIOX
+### Learning YARD
 
 - [Getting Started Guide](docs/getting-started.md)
 - [Architecture Overview](docs/architecture.md)
@@ -196,7 +196,7 @@ See [Feature Request Process](docs/FEATURE_PROCESS.md) for complete details.
 
 ### External Resources
 
-- [AIOX GitHub Organization](https://github.com/SynkraAI)
+- [YARD GitHub Organization](https://github.com/SynkraAI)
 - [Changelog](CHANGELOG.md)
 
 ## Internationalization
@@ -219,9 +219,9 @@ We welcome contributions in all languages!
 Can't find what you're looking for?
 Open a Discussion or reach out to the community!
 
-**Thank you for being part of the AIOX community!**
+**Thank you for being part of the YARD community!**
 
 ---
 
-*This document is maintained by the AIOX community.*
+*This document is maintained by the YARD community.*
 *Last updated: 2025-12-09*

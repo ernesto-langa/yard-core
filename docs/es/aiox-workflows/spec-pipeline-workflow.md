@@ -1,10 +1,10 @@
 # Spec Pipeline Workflow
 
-> [PT](../../aiox-workflows/spec-pipeline-workflow.md) | [EN](../../en/aiox-workflows/spec-pipeline-workflow.md) | **ES**
+> [PT](../../yard-workflows/spec-pipeline-workflow.md) | [EN](../../en/yard-workflows/spec-pipeline-workflow.md) | **ES**
 
 ---
 
-> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../aiox-workflows/spec-pipeline-workflow.md).
+> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../yard-workflows/spec-pipeline-workflow.md).
 
 ---
 
@@ -33,7 +33,7 @@ Workflow para el pipeline de especificacion, incluyendo:
 
 ## Ver Mas
 
-- **[Documentacion completa (PT)](../../aiox-workflows/spec-pipeline-workflow.md)**
+- **[Documentacion completa (PT)](../../yard-workflows/spec-pipeline-workflow.md)**
 
 ---
 

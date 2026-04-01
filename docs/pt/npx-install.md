@@ -12,7 +12,7 @@
 
 ## Visão Geral
 
-O Synkra AIOX pode ser instalado via NPX para uma configuração rápida sem instalação global. Este guia cobre o uso correto e a resolução de problemas para instalações baseadas em NPX.
+O Synkra YARD pode ser instalado via NPX para uma configuração rápida sem instalação global. Este guia cobre o uso correto e a resolução de problemas para instalações baseadas em NPX.
 
 ## Início Rápido
 
@@ -44,7 +44,7 @@ npx yard-core install
 
 ## Por Que Isso Importa
 
-O NPX executa pacotes em **diretórios temporários** (ex: `/private/var/folders/.../npx-xxx/` no macOS). Quando o Synkra AIOX é executado a partir desses locais temporários, ele não consegue:
+O NPX executa pacotes em **diretórios temporários** (ex: `/private/var/folders/.../npx-xxx/` no macOS). Quando o Synkra YARD é executado a partir desses locais temporários, ele não consegue:
 
 - Detectar a configuração da sua IDE corretamente
 - Instalar arquivos no diretório correto do projeto
@@ -52,13 +52,13 @@ O NPX executa pacotes em **diretórios temporários** (ex: `/private/var/folders
 
 ## Detecção de Diretório Temporário do NPX
 
-A partir da versão 4.31.1, o Synkra AIOX detecta automaticamente quando está sendo executado a partir de um diretório temporário do NPX e exibe uma mensagem de erro útil:
+A partir da versão 4.31.1, o Synkra YARD detecta automaticamente quando está sendo executado a partir de um diretório temporário do NPX e exibe uma mensagem de erro útil:
 
 ```
 ⚠️  Diretório Temporário do NPX Detectado
 
 O NPX executa em um diretório temporário, o que impede
-o AIOX de detectar sua IDE corretamente.
+o YARD de detectar sua IDE corretamente.
 
 Solução:
   cd /path/to/your/project
@@ -101,7 +101,7 @@ Os diretórios temporários do NPX normalmente aparecem em:
 - `/private/var/folders/[hash]/T/npx-[random]/`
 - `/Users/[user]/.npm/_npx/[hash]/`
 
-O Synkra AIOX detecta esses padrões e previne instalação incorreta.
+O Synkra YARD detecta esses padrões e previne instalação incorreta.
 
 ### Linux
 
@@ -158,14 +158,14 @@ yard-core install
 
 ### Arquitetura de Defesa em Profundidade
 
-O Synkra AIOX v4.31.1+ implementa detecção em duas camadas:
+O Synkra YARD v4.31.1+ implementa detecção em duas camadas:
 
-1. **Camada PRIMÁRIA** (`tools/aiox-npx-wrapper.js`):
+1. **Camada PRIMÁRIA** (`tools/yard-npx-wrapper.js`):
    - Verifica `__dirname` (onde o NPX extrai o pacote)
    - Usa padrões regex para caminhos temporários do macOS
    - Saída antecipada antes de delegar ao CLI
 
-2. **Camada SECUNDÁRIA** (`tools/installer/bin/aiox.js`):
+2. **Camada SECUNDÁRIA** (`tools/installer/bin/yard.js`):
    - Verificação de fallback usando `process.cwd()`
    - Valida no início do comando de instalação
    - Fornece redundância se o wrapper for contornado

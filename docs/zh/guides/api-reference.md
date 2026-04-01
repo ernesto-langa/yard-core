@@ -1,10 +1,10 @@
-# AIOX API 参考
+# YARD API 参考
 
 > **[EN](../../guides/api-reference.md)** | **[PT](../../pt/guides/api-reference.md)** | **[ES](../../es/guides/api-reference.md)** | **ZH**
 
 ---
 
-Synkra AIOX 完整 API 参考 - AI 编排全栈开发系统。
+Synkra YARD 完整 API 参考 - AI 编排全栈开发系统。
 
 **版本：** 2.1.0
 **最后更新：** 2026-01-29
@@ -29,14 +29,14 @@ Synkra AIOX 完整 API 参考 - AI 编排全栈开发系统。
 
 ### API 架构
 
-AIOX 通过两个主要机制提供统一 API 来与专业 AI 代理交互：
+YARD 通过两个主要机制提供统一 API 来与专业 AI 代理交互：
 
 1. **代理激活** - 使用 `@` 前缀激活专业代理
 2. **命令执行** - 使用 `*` 前缀执行代理命令
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                      AIOX API 层                             │
+│                      YARD API 层                             │
 ├─────────────────────────────────────────────────────────────┤
 │  @agent         →  激活代理角色                               │
 │  *command       →  执行代理命令                               │
@@ -87,7 +87,7 @@ AIOX 通过两个主要机制提供统一 API 来与专业 AI 代理交互：
 | `@data-engineer` | Dara   | Architect| 数据库架构、迁移、查询           |
 | `@devops`        | Gage   | Optimizer| CI/CD、部署、git 操作             |
 | `@ux-expert`     | Uma    | Creator | UI/UX 设计、线框图                 |
-| `@aiox-master`   | Orion  | Orchestrator| 框架编排、元操作             |
+| `@yard-master`   | Orion  | Orchestrator| 框架编排、元操作             |
 
 ### 激活行为
 
@@ -245,7 +245,7 @@ AIOX 通过两个主要机制提供统一 API 来与专业 AI 代理交互：
 
 ```bash
 # 启动工作流
-@aiox-master *workflow greenfield-fullstack
+@yard-master *workflow greenfield-fullstack
 
 # 带参数
 *workflow brownfield-service --target=./services/auth
@@ -387,7 +387,7 @@ Claude Code 是主要支持的 IDE，拥有完整集成：
 /dev          → 激活 @dev 代理
 /qa           → 激活 @qa 代理
 /architect    → 激活 @architect 代理
-/aiox-master  → 激活 @aiox-master 代理
+/yard-master  → 激活 @yard-master 代理
 ```
 
 ---
@@ -424,4 +424,4 @@ Claude Code 是主要支持的 IDE，拥有完整集成：
 
 ---
 
-_Synkra AIOX API 参考 v4.0.4_
+_Synkra YARD API 参考 v4.0.4_

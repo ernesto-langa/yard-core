@@ -70,7 +70,7 @@ await manager.cleanup();
 ## 集成点
 
 - **status.json**: Worktree 状态跟踪在 `.yard/status.json`
-- **Dashboard**: WorktreeManager API 被 AIOX Dashboard 消费
+- **Dashboard**: WorktreeManager API 被 YARD Dashboard 消费
 - **Epic 4**: Execution Engine 使用 worktrees 进行隔离开发
 
 ---

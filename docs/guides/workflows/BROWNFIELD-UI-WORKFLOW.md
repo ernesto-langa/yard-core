@@ -527,7 +527,7 @@ graph TB
 | Requisito | Descricao | Verificacao |
 |-----------|-----------|-------------|
 | **Aplicacao Existente** | Frontend ativo para analise | Codebase acessivel |
-| **Templates AIOX** | Templates instalados | Verificar `.yard-core/development/templates/` |
+| **Templates YARD** | Templates instalados | Verificar `.yard-core/development/templates/` |
 | **Agentes Configurados** | Todos os agentes do workflow | Verificar `.yard-core/development/agents/` |
 | **Git Configurado** | Controle de versao | `git status` funcional |
 | **Node.js** | Runtime para scripts | `node --version` >= 18 |
@@ -793,8 +793,8 @@ ls .yard-core/development/templates/
 #### Verificar Status do Projeto
 
 ```bash
-# Via AIOX
-@aiox-master
+# Via YARD
+@yard-master
 *status
 
 # Via Git
@@ -829,8 +829,8 @@ ls docs/architecture/
 
 | Documento | Localizacao | Descricao |
 |-----------|-------------|-----------|
-| AIOX Knowledge Base | `.yard-core/data/aiox-kb.md` | Base de conhecimento AIOX |
-| IDE Development Workflow | `.yard-core/data/aiox-kb.md#IDE Development Workflow` | Workflow de desenvolvimento IDE |
+| YARD Knowledge Base | `.yard-core/data/yard-kb.md` | Base de conhecimento YARD |
+| IDE Development Workflow | `.yard-core/data/yard-kb.md#IDE Development Workflow` | Workflow de desenvolvimento IDE |
 | Brownfield PRD Template | `.yard-core/development/templates/brownfield-prd-tmpl.yaml` | Template PRD brownfield |
 | Frontend Spec Template | `.yard-core/development/templates/front-end-spec-tmpl.yaml` | Template especificacao frontend |
 | Brownfield Architecture Template | `.yard-core/development/templates/brownfield-architecture-tmpl.yaml` | Template arquitetura brownfield |

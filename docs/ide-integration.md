@@ -4,18 +4,18 @@
 
 ---
 
-Guide for integrating AIOX with supported IDEs and AI development platforms.
+Guide for integrating YARD with supported IDEs and AI development platforms.
 
 **Version:** 4.2.11
 **Last Updated:** 2026-02-16
 
 ---
 
-## Compatibility Contract (AIOX 4.2.11)
+## Compatibility Contract (YARD 4.2.11)
 
 The IDE matrix is enforced by a versioned contract:
 
-- Contract file: `.yard-core/infrastructure/contracts/compatibility/aiox-4.2.11.yaml`
+- Contract file: `.yard-core/infrastructure/contracts/compatibility/yard-4.2.11.yaml`
 - Validator: `npm run validate:parity`
 
 If matrix claims in this document diverge from validator results, parity validation fails.
@@ -24,21 +24,21 @@ If matrix claims in this document diverge from validator results, parity validat
 
 ## Supported IDEs
 
-AIOX supports multiple AI-powered development platforms. Choose the one that best fits your workflow.
+YARD supports multiple AI-powered development platforms. Choose the one that best fits your workflow.
 
-### Quick Status Matrix (AIOX 4.2.11)
+### Quick Status Matrix (YARD 4.2.11)
 
 | IDE/CLI | Overall Status | How to Activate an Agent | Auto-Checks Before/After Actions | Workaround if Limited |
 | --- | --- | --- | --- | --- |
 | Claude Code | Works | `/agent-name` commands | Works (full) | -- |
-| Gemini CLI | Works | `/aiox-menu` then `/aiox-<agent>` | Works (minor differences in event handling) | -- |
-| Codex CLI | Limited | `/skills` then `aiox-<agent-id>` | Limited (some checks need manual sync) | Run `npm run sync:ide:codex` and follow `/skills` flow |
+| Gemini CLI | Works | `/yard-menu` then `/yard-<agent>` | Works (minor differences in event handling) | -- |
+| Codex CLI | Limited | `/skills` then `yard-<agent-id>` | Limited (some checks need manual sync) | Run `npm run sync:ide:codex` and follow `/skills` flow |
 | Cursor | Limited | `@agent` + synced rules | Not available | Follow synced rules and run validators manually (`npm run validate:parity`) |
 | GitHub Copilot | Limited | chat modes + repo instructions | Not available | Use repo instructions and VS Code MCP config for context |
 | AntiGravity | Limited | workflow-driven activation | Not available | Use generated workflows and run validators manually |
 
 Legend:
-- `Works`: fully recommended for new users in AIOX 4.2.11.
+- `Works`: fully recommended for new users in YARD 4.2.11.
 - `Limited`: usable with the documented workaround.
 - `Not available`: this IDE does not offer this capability; use the workaround instead.
 
@@ -82,11 +82,11 @@ If your goal is to get started as fast as possible:
 
 ### Claude Code
 
-**Recommendation Level:** Best AIOX integration
+**Recommendation Level:** Best YARD integration
 
 ```yaml
 config_file: .claude/CLAUDE.md
-agent_folder: .claude/commands/AIOX/agents
+agent_folder: .claude/commands/YARD/agents
 activation: /agent-name (slash commands)
 format: full-markdown-yaml
 mcp_support: native
@@ -100,7 +100,7 @@ special_features:
 
 **Setup:**
 
-1. AIOX automatically creates `.claude/` directory on init
+1. YARD automatically creates `.claude/` directory on init
 2. Agents are available as slash commands: `/dev`, `/qa`, `/architect`
 3. Configure MCP servers in `~/.claude.json`
 
@@ -111,7 +111,7 @@ special_features:
 npm run sync:ide
 
 # Verify setup
-ls -la .claude/commands/AIOX/agents/
+ls -la .claude/commands/YARD/agents/
 ```
 
 ---
@@ -129,7 +129,7 @@ format: markdown
 mcp_support: native via Codex tooling
 special_features:
   - AGENTS.md project instructions
-  - /skills activators (aiox-<agent-id>)
+  - /skills activators (yard-<agent-id>)
   - Strong CLI workflow support
   - Easy integration with repository scripts
   - Notify command plus emerging tool hooks in recent Codex releases
@@ -140,7 +140,7 @@ special_features:
 1. Keep `AGENTS.md` at repository root
 2. Run `npm run sync:ide:codex` to sync auxiliary agent files
 3. Run `npm run sync:skills:codex` to generate project-local skills in `.codex/skills`
-4. Use `/skills` and choose `aiox-architect`, `aiox-dev`, etc.
+4. Use `/skills` and choose `yard-architect`, `yard-dev`, etc.
 5. Use `npm run sync:skills:codex:global` only when you explicitly want global installation
 
 **Configuration:**
@@ -180,7 +180,7 @@ special_features:
 
 **Setup:**
 
-1. AIOX creates `.cursor/` directory on init
+1. YARD creates `.cursor/` directory on init
 2. Agents activated with @mention: `@dev`, `@qa`
 3. Rules synchronized to `.cursor/rules/`
 
@@ -228,7 +228,7 @@ special_features:
 **Setup:**
 
 1. Enable GitHub Copilot in your repository
-2. AIOX creates `.github/copilot-instructions.md`
+2. YARD creates `.github/copilot-instructions.md`
 3. Agent instructions synchronized
 
 **Configuration:**
@@ -262,7 +262,7 @@ special_features:
 
 **Setup:**
 
-1. AIOX creates `.antigravity/` directory
+1. YARD creates `.antigravity/` directory
 2. Configure Google Cloud credentials
 3. Agents synchronized as workflows
 
@@ -274,7 +274,7 @@ special_features:
 
 ```yaml
 config_file: .gemini/rules.md
-agent_folder: .gemini/rules/AIOX/agents
+agent_folder: .gemini/rules/YARD/agents
 activation: slash launcher commands
 format: text
 mcp_support: native
@@ -290,10 +290,10 @@ special_features:
 **Setup:**
 
 1. Run installer flow selecting `gemini` in IDE selection (wizard path)
-2. AIOX creates:
+2. YARD creates:
    - `.gemini/rules.md`
-   - `.gemini/rules/AIOX/agents/*.md`
-   - `.gemini/commands/*.toml` (`/aiox-menu`, `/aiox-<agent>`)
+   - `.gemini/rules/YARD/agents/*.md`
+   - `.gemini/commands/*.toml` (`/yard-menu`, `/yard-<agent>`)
    - `.gemini/hooks/*.js`
    - `.gemini/settings.json` (hooks enabled)
 3. Validate integration:
@@ -305,9 +305,9 @@ npm run validate:gemini-integration
 ```
 
 4. Quick agent activation (recommended):
-   - `/aiox-menu` to list shortcuts
-   - `/aiox-dev`, `/aiox-architect`, `/aiox-qa`, etc.
-   - `/aiox-agent <agent-id>` for generic launcher
+   - `/yard-menu` to list shortcuts
+   - `/yard-dev`, `/yard-architect`, `/yard-qa`, etc.
+   - `/yard-agent <agent-id>` for generic launcher
 
 ---
 
@@ -315,7 +315,7 @@ npm run validate:gemini-integration
 
 ### How Sync Works
 
-AIOX maintains a single source of truth for agent definitions and synchronizes them to all configured IDEs:
+YARD maintains a single source of truth for agent definitions and synchronizes them to all configured IDEs:
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -346,7 +346,7 @@ npm run sync:ide:check
 
 ### Automatic Sync
 
-AIOX can be configured to automatically sync on agent changes:
+YARD can be configured to automatically sync on agent changes:
 
 ```yaml
 # .yard-core/core/config/sync.yaml
@@ -379,8 +379,8 @@ npm run sync:ide:check
 
 # Check platform-specific directory
 ls .cursor/rules/agents/               # Cursor
-ls .claude/commands/AIOX/agents/       # Claude Code
-ls .gemini/rules/AIOX/agents/          # Gemini CLI
+ls .claude/commands/YARD/agents/       # Claude Code
+ls .gemini/rules/YARD/agents/          # Gemini CLI
 ```
 
 ### Sync Conflicts
@@ -398,7 +398,7 @@ npm run sync:ide
 
 ```bash
 # Check MCP status
-aiox mcp status
+yard mcp status
 
 # Verify MCP configuration for IDE
 cat ~/.claude.json  # For Claude Code
@@ -423,7 +423,7 @@ Use this guide to choose the right platform:
 
 ```
 Do you use Claude/Anthropic API?
-├── Yes --> Claude Code (Best AIOX integration)
+├── Yes --> Claude Code (Best YARD integration)
 └── No
     └── Do you prefer VS Code?
         ├── Yes --> Want an extension?
@@ -451,7 +451,7 @@ cp -r .cursor/rules/ ./rules-backup/
 npm run sync:ide
 
 # Verify migration
-diff -r ./rules-backup/ .claude/commands/AIOX/agents/
+diff -r ./rules-backup/ .claude/commands/YARD/agents/
 ```
 
 ### From Claude Code to Cursor
@@ -475,4 +475,4 @@ npm run sync:ide:cursor
 
 ---
 
-_Synkra AIOX IDE Integration Guide v4.2.11_
+_Synkra YARD IDE Integration Guide v4.2.11_

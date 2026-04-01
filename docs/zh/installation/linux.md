@@ -1,6 +1,6 @@
 <!-- 翻译：zh-CN 原文：/docs/installation/linux.md 最后同步：2026-02-22 -->
 
-# Synkra AIOX Linux 安装指南
+# Synkra YARD Linux 安装指南
 
 > 🌐 [EN](../../installation/linux.md) | [PT](../pt/installation/linux.md) | [ES](../es/installation/linux.md)
 
@@ -173,7 +173,7 @@ cd ~/.yard-core-source
 npm install
 
 # 为您的项目运行安装程序
-node bin/aiox-init.js ~/projects/my-project
+node bin/yard-init.js ~/projects/my-project
 ```
 
 ### 安装程序的作用
@@ -215,13 +215,13 @@ node bin/aiox-init.js ~/projects/my-project
    npm install -g @anthropic-ai/claude-code
    ```
 
-2. 命令安装到 `.claude/commands/AIOX/`
+2. 命令安装到 `.claude/commands/YARD/`
 3. 使用 `/agent-name` 激活代理
 
 ### VS Code（使用 Continue 扩展）
 
 1. 安装 Continue 扩展
-2. 在 `.continue/` 中配置 AIOX 规则
+2. 在 `.continue/` 中配置 YARD 规则
 
 ---
 
@@ -330,9 +330,9 @@ export NVM_DIR="$HOME/.nvm"
 # npm 全局包
 export PATH="$HOME/.npm-global/bin:$PATH"
 
-# AIOX 配置
-export AIOX_HOME="$HOME/.yard-core"
-export PATH="$AIOX_HOME/bin:$PATH"
+# YARD 配置
+export YARD_HOME="$HOME/.yard-core"
+export PATH="$YARD_HOME/bin:$PATH"
 
 # 编辑器偏好设置（用于 git 提交等）
 export EDITOR=vim  # 或 code, nano 等
@@ -340,13 +340,13 @@ export EDITOR=vim  # 或 code, nano 等
 
 ### XDG Base Directory 合规性
 
-Synkra AIOX 遵守 XDG 目录：
+Synkra YARD 遵守 XDG 目录：
 
 ```bash
-# 数据文件：~/.local/share/aiox/
-# 配置文件：~/.config/aiox/
-# 缓存：~/.cache/aiox/
-# 状态：~/.local/state/aiox/
+# 数据文件：~/.local/share/yard/
+# 配置文件：~/.config/yard/
+# 缓存：~/.cache/yard/
+# 状态：~/.local/state/yard/
 ```
 
 ---
@@ -363,7 +363,7 @@ npx github:ernesto-langa/yard-core install
 cd ~/.yard-core-source
 git pull
 npm install
-node bin/aiox-init.js ~/projects/my-project --update
+node bin/yard-init.js ~/projects/my-project --update
 ```
 
 更新程序将：
@@ -382,8 +382,8 @@ node bin/aiox-init.js ~/projects/my-project --update
 快速卸载：
 
 ```bash
-# 从项目中删除 AIOX
-rm -rf .yard-core .claude/commands/AIOX
+# 从项目中删除 YARD
+rm -rf .yard-core .claude/commands/YARD
 
 # 删除全局安装
 rm -rf ~/.yard-core-source ~/.npm-global/lib/node_modules/@synkra

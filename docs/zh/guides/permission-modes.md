@@ -1,12 +1,12 @@
 # 权限模式指南
 
-> 控制AIOX代理对您系统的自主权。
+> 控制YARD代理对您系统的自主权。
 
 ---
 
 ## 概述
 
-权限模式让您控制AIOX代理拥有的自主权级别。无论您是探索新代码库还是运行完全自主的构建，都有适合您工作流的模式。
+权限模式让您控制YARD代理拥有的自主权级别。无论您是探索新代码库还是运行完全自主的构建，都有适合您工作流的模式。
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -237,11 +237,11 @@ TRUNCATE
 在自动化中设置模式:
 
 ```yaml
-# .github/workflows/aiox.yml
-- name: 运行AIOX
+# .github/workflows/yard.yml
+- name: 运行YARD
   run: |
     echo "permissions:\n  mode: auto" > .yard/config.yaml
-    aiox run build
+    yard run build
 ```
 
 ### 对于团队

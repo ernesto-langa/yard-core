@@ -1,10 +1,10 @@
-# Synkra AIOX Testing Guide
+# Synkra YARD Testing Guide
 
 > **EN** | [PT](../pt/guides/testing-guide.md) | [ES](../es/guides/testing-guide.md)
 
 ---
 
-> Comprehensive guide to the testing strategy, tools, and best practices for Synkra AIOX.
+> Comprehensive guide to the testing strategy, tools, and best practices for Synkra YARD.
 
 **Version:** 2.1.0
 **Last Updated:** 2026-01-29
@@ -31,7 +31,7 @@
 
 ## Overview
 
-AIOX follows a comprehensive testing strategy that ensures code quality across all layers of the framework. Our testing philosophy is built on:
+YARD follows a comprehensive testing strategy that ensures code quality across all layers of the framework. Our testing philosophy is built on:
 
 - **Test-Driven Development (TDD)** for core functionality
 - **Layered Testing** with unit, integration, and E2E tests
@@ -244,7 +244,7 @@ Integration tests verify that multiple components work together correctly.
 ```javascript
 // tests/setup.js
 process.env.NODE_ENV = 'test';
-process.env.AIOX_DEBUG = 'false';
+process.env.YARD_DEBUG = 'false';
 
 // Skip integration tests by default
 if (process.env.SKIP_INTEGRATION_TESTS === undefined) {
@@ -405,7 +405,7 @@ Testing AI agents requires special considerations for persona behavior and comma
 /**
  * Agent Backward Compatibility Tests
  *
- * Ensures agents from previous AIOX versions continue to work.
+ * Ensures agents from previous YARD versions continue to work.
  */
 
 const { loadAgent } = require('../../.yard-core/core/registry/agent-loader');
@@ -471,7 +471,7 @@ describe('Agent Commands', () => {
 
 ## Cross-Platform Testing
 
-AIOX supports Windows, macOS, and Linux. Cross-platform testing ensures consistent behavior.
+YARD supports Windows, macOS, and Linux. Cross-platform testing ensures consistent behavior.
 
 ### Platform-Specific Test Files
 
@@ -512,7 +512,7 @@ function normalizePath(p) {
 
 // Get platform-appropriate temp directory
 function getTempDir() {
-  return path.join(os.tmpdir(), 'aiox-tests');
+  return path.join(os.tmpdir(), 'yard-tests');
 }
 
 module.exports = {
@@ -778,7 +778,7 @@ npm test -- --passWithNoTests --testPathIgnorePatterns=integration,e2e
 
 ### Quality Gate Integration
 
-The AIOX Quality Gate System (see [Quality Gates Guide](./quality-gates.md)) integrates testing at multiple layers:
+The YARD Quality Gate System (see [Quality Gates Guide](./quality-gates.md)) integrates testing at multiple layers:
 
 | Layer       | Test Type               | When         |
 | ----------- | ----------------------- | ------------ |
@@ -1212,4 +1212,4 @@ module.exports = {
 
 ---
 
-_Synkra AIOX v4 Testing Guide_
+_Synkra YARD v4 Testing Guide_

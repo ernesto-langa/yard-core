@@ -1,10 +1,10 @@
 # QA Loop Workflow
 
-> [PT](../../aiox-workflows/qa-loop-workflow.md) | [EN](../../en/aiox-workflows/qa-loop-workflow.md) | **ES**
+> [PT](../../yard-workflows/qa-loop-workflow.md) | [EN](../../en/yard-workflows/qa-loop-workflow.md) | **ES**
 
 ---
 
-> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../aiox-workflows/qa-loop-workflow.md).
+> **Nota:** Esta es una version resumida. Para la documentacion completa, consulte la [version en portugues](../../yard-workflows/qa-loop-workflow.md).
 
 ---
 
@@ -32,7 +32,7 @@ Workflow para el ciclo de calidad, incluyendo:
 
 ## Ver Mas
 
-- **[Documentacion completa (PT)](../../aiox-workflows/qa-loop-workflow.md)**
+- **[Documentacion completa (PT)](../../yard-workflows/qa-loop-workflow.md)**
 
 ---
 

@@ -12,7 +12,7 @@
 
 ## Visión General de las Plataformas Soportadas
 
-AIOX soporta 9 plataformas de desarrollo con IA. Elija la que mejor se adapte a su flujo de trabajo.
+YARD soporta 9 plataformas de desarrollo con IA. Elija la que mejor se adapte a su flujo de trabajo.
 
 ### Tabla Comparativa Rápida
 
@@ -31,7 +31,7 @@ AIOX soporta 9 plataformas de desarrollo con IA. Elija la que mejor se adapte a 
 flowchart TD
     Start["¿Qué plataforma<br/>debo usar?"] --> Q1{"¿Usas<br/>Claude/Anthropic API?"}
 
-    Q1 -->|Sí| CC["<b>Claude Code</b> ⭐<br/>Mejor integración AIOX"]
+    Q1 -->|Sí| CC["<b>Claude Code</b> ⭐<br/>Mejor integración YARD"]
     Q1 -->|No| Q2{"¿Prefieres<br/>VS Code?"}
 
     Q2 -->|Sí| Q3{"¿Quieres una<br/>extensión?"}
@@ -68,7 +68,7 @@ flowchart TD
 
 ```yaml
 config_file: .claude/CLAUDE.md
-agent_folder: .claude/commands/AIOX/agents
+agent_folder: .claude/commands/YARD/agents
 activation: /agent-name (comandos slash)
 format: full-markdown-yaml
 mcp_support: native
@@ -228,10 +228,10 @@ graph TD
 
 ### Inicio Rápido
 
-1. **Instale AIOX** en su proyecto:
+1. **Instale YARD** en su proyecto:
 
    ```bash
-   npx @anthropic/aiox init
+   npx @anthropic/yard init
    ```
 
 2. **Seleccione su(s) IDE(s)** durante la configuración
@@ -251,7 +251,7 @@ graph TD
 ```mermaid
 sequenceDiagram
     participant User as Usuario
-    participant CLI as AIOX CLI
+    participant CLI as YARD CLI
     participant Parser as Agent Parser
     participant Transform as IDE Transformer
     participant IDE as IDE Config
@@ -280,4 +280,4 @@ sequenceDiagram
 
 ---
 
-_Synkra AIOX - Documentación de Plataformas v1.0_
+_Synkra YARD - Documentación de Plataformas v1.0_

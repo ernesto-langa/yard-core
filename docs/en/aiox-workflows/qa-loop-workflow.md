@@ -1,16 +1,16 @@
 # QA Loop Workflow
 
-> **EN** | [PT](../../aiox-workflows/qa-loop-workflow.md) | [ES](../../es/aiox-workflows/qa-loop-workflow.md)
+> **EN** | [PT](../../yard-workflows/qa-loop-workflow.md) | [ES](../../es/yard-workflows/qa-loop-workflow.md)
 
 ---
 
-**Full documentation available in:** [Portuguese Version](../../aiox-workflows/qa-loop-workflow.md)
+**Full documentation available in:** [Portuguese Version](../../yard-workflows/qa-loop-workflow.md)
 
 ---
 
 ## Summary
 
-The **QA Loop Workflow** defines the quality assurance cycle within AIOX development. It ensures:
+The **QA Loop Workflow** defines the quality assurance cycle within YARD development. It ensures:
 
 - Comprehensive test coverage
 - Code quality standards
@@ -47,4 +47,4 @@ The **QA Loop Workflow** defines the quality assurance cycle within AIOX develop
 
 ---
 
-*For complete details, diagrams, and step-by-step instructions, see the [Portuguese documentation](../../aiox-workflows/qa-loop-workflow.md).*
+*For complete details, diagrams, and step-by-step instructions, see the [Portuguese documentation](../../yard-workflows/qa-loop-workflow.md).*

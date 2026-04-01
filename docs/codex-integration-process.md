@@ -1,11 +1,11 @@
-# Integracao AIOX com Codex CLI (Estado Atual)
+# Integracao YARD com Codex CLI (Estado Atual)
 
-Este documento descreve o estado operacional atual da integracao AIOX + Codex CLI no AIOX `4.2.11`.
+Este documento descreve o estado operacional atual da integracao YARD + Codex CLI no YARD `4.2.11`.
 O foco aqui nao e historico: e operacao pratica, compatibilidade real e como manter sem regressao.
 
 ## Resumo Executivo
 
-O Codex hoje e alvo de primeira classe no AIOX:
+O Codex hoje e alvo de primeira classe no YARD:
 
 - `AGENTS.md` como contrato operacional do projeto no Codex
 - suporte oficial no installer/sync (`codex` em `ide-configs`)
@@ -14,14 +14,14 @@ O Codex hoje e alvo de primeira classe no AIOX:
 - validadores dedicados para detectar drift rapidamente
 - suporte a notify command e hooks de ferramenta em releases recentes do Codex CLI
 
-Em termos praticos: Codex esta no mesmo trilho arquitetural das integracoes principais do AIOX, sem caminho paralelo legado.
+Em termos praticos: Codex esta no mesmo trilho arquitetural das integracoes principais do YARD, sem caminho paralelo legado.
 
-## Status de Compatibilidade (AIOX 4.2)
+## Status de Compatibilidade (YARD 4.2)
 
 | O que você quer fazer | Funciona no Codex? | Como fazer |
 | --- | --- | --- |
-| Ativar agentes AIOX | Works | `/skills` depois escolha `aiox-<agent-id>` |
-| Sincronizar e validar arquivos AIOX | Works | `npm run sync:ide:codex` e `npm run validate:codex-sync` |
+| Ativar agentes YARD | Works | `/skills` depois escolha `yard-<agent-id>` |
+| Sincronizar e validar arquivos YARD | Works | `npm run sync:ide:codex` e `npm run validate:codex-sync` |
 | Checagens automáticas antes/depois de ações | Limited | Rode `npm run validate:parity` manualmente; parte da automação depende de disciplina no fluxo |
 
 Regra prática para iniciantes:
@@ -44,7 +44,7 @@ Regra prática para iniciantes:
 ### Artefatos Codex no projeto
 
 - Agentes auxiliares: `.codex/agents/`
-- Skills locais: `.codex/skills/aiox-*/SKILL.md`
+- Skills locais: `.codex/skills/yard-*/SKILL.md`
 
 ## Fluxo Operacional Recomendado
 
@@ -57,7 +57,7 @@ Regra prática para iniciantes:
    - `npm run validate:codex-integration`
    - `npm run validate:codex-skills`
    - `npm run validate:paths`
-4. No Codex, usar `/skills` e escolher `aiox-<agent-id>` como ativacao padrao.
+4. No Codex, usar `/skills` e escolher `yard-<agent-id>` como ativacao padrao.
 
 Fallback: atalhos definidos em `AGENTS.md` (`@architect`, `/architect`, etc.).
 
@@ -97,16 +97,16 @@ Criterio de sucesso:
 
 - `AGENTS.md` presente e coerente
 - `.codex/agents/*.md` existente
-- `.codex/skills/aiox-*/SKILL.md` existente
+- `.codex/skills/yard-*/SKILL.md` existente
 - validadores sem erro
 
-## Recursos Recentes do Codex (AIOX 4.0)
+## Recursos Recentes do Codex (YARD 4.0)
 
 - `notify` command configuravel no `config.toml`
 - aprovacoes por preset (`suggest`/`auto-edit`/`full-auto`)
 - hooks de ferramenta e de execucao de comandos em evolucao no CLI
 
-No AIOX, o caminho recomendado continua: `AGENTS.md` + `/skills` + MCP + scripts de sync/validacao.
+No YARD, o caminho recomendado continua: `AGENTS.md` + `/skills` + MCP + scripts de sync/validacao.
 
 ## Limitacoes de Hooks no Codex (Impacto Real)
 
@@ -114,11 +114,11 @@ Mesmo com melhorias recentes, o Codex ainda nao replica 1:1 o lifecycle de hooks
 
 Impactos praticos:
 
-- menor automacao de eventos de ciclo de sessao (`SessionStart/SessionEnd`) no padrao AIOX
+- menor automacao de eventos de ciclo de sessao (`SessionStart/SessionEnd`) no padrao YARD
 - menor capacidade de enforcement automatico em `beforeTool/afterTool`
 - trilha automatica de auditoria menos rica quando comparada ao fluxo com hooks completos
 
-Mitigacao operacional no AIOX:
+Mitigacao operacional no YARD:
 
 - fortalecer `AGENTS.md` como contrato de execucao
 - usar `/skills` como ativacao padrao de agentes

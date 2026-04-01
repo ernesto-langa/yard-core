@@ -4,7 +4,7 @@
 
 ---
 
-> 用于Synkra AIOX的文档生成和变量替换引擎。
+> 用于Synkra YARD的文档生成和变量替换引擎。
 
 **版本:** 2.0
 **最后更新:** 2025-12-05
@@ -13,7 +13,7 @@
 
 ## 概述
 
-模板引擎提供了一致的方式来生成文档（PRD、ADR、故事等），具有变量替换、条件和循环功能。它为AIOX中的所有文档生成任务提供支持。
+模板引擎提供了一致的方式来生成文档（PRD、ADR、故事等），具有变量替换、条件和循环功能。它为YARD中的所有文档生成任务提供支持。
 
 ### 关键功能
 
@@ -192,7 +192,7 @@ const safeInput = engine.escapeInput(userProvidedValue);
 ```javascript
 const variables = {
   project: {
-    name: 'AIOX',
+    name: 'YARD',
     owner: {
       name: '佩德罗',
       email: 'pedro@example.com',
@@ -475,4 +475,4 @@ console.log('验证结果:', validation);
 
 ---
 
-_Synkra AIOX模板引擎 v2.0_
+_Synkra YARD模板引擎 v2.0_
