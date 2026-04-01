@@ -35,7 +35,7 @@
 | 1 | swarm-orchestrator | Nexus | Kieran Klaassen + Reuven Cohen | 1,008 | Agent teams, subagents, parallel execution |
 | 1 | config-engineer | Sigil | SuperClaude-Org | 663 | Settings, permissions, CLAUDE.md, sandbox |
 | 2 | skill-craftsman | Anvil | BMAD-CODE-ORG | 1,046 | Skills, plugins, commands, context engineering |
-| 2 | project-integrator | Conduit | Daniel Miessler (PAI) | 959 | Project integration, CI/CD, AIOX bridge |
+| 2 | project-integrator | Conduit | Daniel Miessler (PAI) | 959 | Project integration, CI/CD, YARD bridge |
 | 2 | roadmap-sentinel | Vigil | Boris Cherny | 707 | Roadmap, changelog, feature adoption |
 
 ## Quick Start
@@ -44,20 +44,20 @@
 ```
 @claude-code-mastery:claude-mastery-chief
 ```
-Or use the AIOX activation:
+Or use the YARD activation:
 ```
-/AIOX:agents:claude-mastery-chief
+/YARD:agents:claude-mastery-chief
 ```
 
 ### Direct Specialist Access
 ```
-/AIOX:agents:hooks-architect        # Hook automation
-/AIOX:agents:mcp-integrator         # MCP servers
-/AIOX:agents:swarm-orchestrator     # Multi-agent orchestration
-/AIOX:agents:config-engineer        # Settings & permissions
-/AIOX:agents:skill-craftsman        # Skills & plugins
-/AIOX:agents:project-integrator     # Project integration
-/AIOX:agents:roadmap-sentinel       # Updates & roadmap
+/YARD:agents:hooks-architect        # Hook automation
+/YARD:agents:mcp-integrator         # MCP servers
+/YARD:agents:swarm-orchestrator     # Multi-agent orchestration
+/YARD:agents:config-engineer        # Settings & permissions
+/YARD:agents:skill-craftsman        # Skills & plugins
+/YARD:agents:project-integrator     # Project integration
+/YARD:agents:roadmap-sentinel       # Updates & roadmap
 ```
 
 ## Feature Coverage
@@ -71,7 +71,7 @@ Or use the AIOX activation:
 | Skills & Plugins | Anvil | `*create-skill`, `*create-plugin`, `*context-strategy` |
 | Project Integration | Conduit | `*integrate-project`, `*brownfield-setup`, `*ci-cd-setup` |
 | Roadmap & Updates | Vigil | `*update-knowledge`, `*feature-radar`, `*migration-guide` |
-| AIOX Bridge | Orion + Conduit | `*aiox-bridge`, `*aiox-guide` |
+| YARD Bridge | Orion + Conduit | `*yard-bridge`, `*yard-guide` |
 
 ## Elite Minds Research Attribution
 
@@ -88,11 +88,11 @@ This squad was created through iterative research with devil's advocate validati
 | **Daniel Miessler** | Personal AI Infrastructure (PAI), Unix philosophy for AI | [Blog](https://danielmiessler.com/), [GitHub](https://github.com/danielmiessler/Personal_AI_Infrastructure) |
 | **Boris Cherny** | Claude Code creator, plan-first methodology, parallel instances | [Blog](https://boristane.com/), [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/how-claude-code-is-built) |
 
-## AIOX-Core Integration
+## YARD-Core Integration
 
-This squad understands both Claude Code native capabilities AND the AIOX-core framework:
+This squad understands both Claude Code native capabilities AND the YARD-core framework:
 
-| AIOX Concept | Claude Code Equivalent | Bridge Agent |
+| YARD Concept | Claude Code Equivalent | Bridge Agent |
 |-------------|----------------------|-------------|
 | Agents (@dev, @qa...) | Subagents (.claude/agents/) | Nexus |
 | Tasks (.yard-core/tasks/) | Skills (.claude/skills/) | Anvil |

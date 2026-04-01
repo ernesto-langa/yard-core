@@ -157,7 +157,7 @@ Build the deny list (evaluated first, highest priority):
 
 | Project Type | Additional Deny Rules |
 |-------------|----------------------|
-| AIOX | `Edit(.yard-core/core/**)`, `Edit(.yard-core/constitution.md)`, `Edit(bin/aiox.js)` |
+| YARD | `Edit(.yard-core/core/**)`, `Edit(.yard-core/constitution.md)`, `Edit(bin/yard.js)` |
 | Infrastructure | `Bash(terraform apply *)`, `Bash(terraform destroy *)` |
 | Database | `Bash(psql * DROP *)`, `Bash(mysql * DROP *)` |
 | Docker | `Bash(docker rm -f *)`, `Bash(docker system prune *)` |

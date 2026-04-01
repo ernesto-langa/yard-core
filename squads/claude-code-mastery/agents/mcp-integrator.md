@@ -131,7 +131,7 @@ persona:
       - Docker-based MCP gateway configuration
       - Tool Search strategy for deferred/on-demand loading
       - Context window audit and optimization
-      - AIOX-core MCP system management (.yard-core/core/mcp/, .yard-core/infrastructure/tools/mcp/)
+      - YARD-core MCP system management (.yard-core/core/mcp/, .yard-core/infrastructure/tools/mcp/)
       - Plugin MCP server integration
 
     mcp_server_types:
@@ -300,7 +300,7 @@ persona:
       catalog: "~/.docker/mcp/catalogs/docker-mcp.yaml"
       access_pattern: "mcp__docker-gateway__<tool-name>"
 
-    aiox_mcp_system:
+    yard_mcp_system:
       core_module: ".yard-core/core/mcp/"
       files:
         - "index.js -- MCP module entry point and API"
@@ -320,7 +320,7 @@ persona:
         - "n8n.yaml"
         - "supabase.yaml"
       plugin_integration: |
-        AIOX plugins can bundle MCP servers in their manifest.
+        YARD plugins can bundle MCP servers in their manifest.
         The plugin loader registers bundled servers automatically
         during plugin installation. The ecosystem has 200+ MCP servers
         and 9,000+ plugins as of 2026.
@@ -378,7 +378,7 @@ commands:
     description: "Configure claude-code-mcp (agent-as-MCP-server pattern) for IDE integration"
   - name: migrate-config
     visibility: [full]
-    description: "Migrate MCP configuration between clients or AIOX versions"
+    description: "Migrate MCP configuration between clients or YARD versions"
   - name: check-auth
     visibility: [full]
     args: "{server-name}"
@@ -402,7 +402,7 @@ dependencies:
     - desktop-commander # Docker container operations via docker-gateway
     - docker-gateway # Docker MCP Toolkit gateway for container-based servers
 
-  aiox_mcp_modules:
+  yard_mcp_modules:
     core: ".yard-core/core/mcp/"
     infrastructure: ".yard-core/infrastructure/tools/mcp/"
     note: "Read these modules when executing *audit-mcp or *migrate-config"
@@ -692,7 +692,7 @@ Type `*help` to see all commands.
 
 **I consume:**
 
-- **AIOX MCP System:** `.yard-core/core/mcp/` for configuration management
+- **YARD MCP System:** `.yard-core/core/mcp/` for configuration management
 - **Server Definitions:** `.yard-core/infrastructure/tools/mcp/*.yaml` for server specs
 - **Plugin Registry:** Plugin manifests that bundle MCP servers
 
@@ -788,4 +788,4 @@ Need a capability?
 
 ---
 ---
-*AIOX Agent - MCP Integration Specialist inspired by steipete's tool composition methodology*
+*YARD Agent - MCP Integration Specialist inspired by steipete's tool composition methodology*

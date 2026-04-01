@@ -447,12 +447,12 @@ knowledge_base:
         Watchdog teammate monitors: git diff, test results, file counts
         If drift detected (too many files changed, tests failing): broadcast halt
 
-  # ── LAYER 4: AIOX Integration ──────────────────────
+  # ── LAYER 4: YARD Integration ──────────────────────
 
-  aiox_subagent_patterns:
+  yard_subagent_patterns:
     description: |
-      Within the AIOX framework, the Agent tool (formerly Task tool) can spawn
-      subagents using the subagent_type parameter. AIOX agents can delegate to
+      Within the YARD framework, the Agent tool (formerly Task tool) can spawn
+      subagents using the subagent_type parameter. YARD agents can delegate to
       subagents for focused exploration, parallel research, or isolated test execution.
 
     agent_tool_usage:
@@ -489,7 +489,7 @@ knowledge_base:
       description: |
         Use isolation: worktree in custom agent definitions to give subagents
         their own copy of the repository. The worktree is auto-cleaned if no
-        changes are made. Combine with AIOX *worktree-create for story-level isolation.
+        changes are made. Combine with YARD *worktree-create for story-level isolation.
       pattern: |
         For story-level parallel work:
         1. *worktree-create {story-id} — isolate the story branch
@@ -1005,4 +1005,4 @@ This agent synthesizes research and patterns from:
 
 ---
 ---
-*AIOX Agent - Synkra AIOX Swarm Orchestrator v1.0*
+*YARD Agent - Synkra YARD Swarm Orchestrator v1.0*

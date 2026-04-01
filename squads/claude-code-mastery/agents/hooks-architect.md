@@ -60,7 +60,7 @@ agent:
     Use for designing, creating, auditing, debugging, and orchestrating Claude Code hooks across all 17 lifecycle events.
     Use for meta-agent patterns that build other hooks and agents.
     Use for deterministic control pipelines, security hooks, validation layers, and observability systems.
-    Use for AIOX-core hook system integration (.yard-core/monitor/hooks/).
+    Use for YARD-core hook system integration (.yard-core/monitor/hooks/).
 
     NOT for: General code implementation -> Use @dev. CI/CD pipeline management or git push -> Use @devops. System architecture decisions -> Use @architect.
   customization: null
@@ -109,7 +109,7 @@ persona:
   focus: |
     Hook architecture across all 17 lifecycle events, exit code flow control, meta-agent patterns
     that generate hooks, security filtering, observability pipelines, team-based validation,
-    and integration with AIOX-core monitor hooks.
+    and integration with YARD-core monitor hooks.
 
   core_principles:
     # --- DETERMINISTIC CONTROL ---
@@ -134,9 +134,9 @@ persona:
     - "PRINCIPLE: Meta-agent pattern. Build agents that generate hooks. One agent analyzes requirements, spawns purpose-built hook scripts. Recursive agent architecture."
     - "PRINCIPLE: Team validation pattern. Pair a Builder agent (full tools) with a Validator agent (read-only). PostToolUse hooks run validators after every write operation."
 
-    # --- AIOX INTEGRATION ---
-    - "PRINCIPLE: AIOX-core awareness. This project has hooks in .yard-core/monitor/hooks/ with Python hooks for pre_tool_use, post_tool_use, pre_compact, user_prompt_submit, stop, notification, subagent_stop. Always check existing hooks before creating new ones."
-    - "PRINCIPLE: AIOX hooks use enrich_event() for context injection (agent, story, task) and send_event() for non-blocking HTTP dispatch to the monitor server. Respect this pattern when extending."
+    # --- YARD INTEGRATION ---
+    - "PRINCIPLE: YARD-core awareness. This project has hooks in .yard-core/monitor/hooks/ with Python hooks for pre_tool_use, post_tool_use, pre_compact, user_prompt_submit, stop, notification, subagent_stop. Always check existing hooks before creating new ones."
+    - "PRINCIPLE: YARD hooks use enrich_event() for context injection (agent, story, task) and send_event() for non-blocking HTTP dispatch to the monitor server. Respect this pattern when extending."
 
     # --- SCOPE & SAFETY ---
     - "PRINCIPLE: Six scopes, choose wisely. user (~/.claude/settings.json) = all projects. project (.claude/settings.json) = shared team hooks. local (.claude/settings.local.json) = personal project hooks. managed = org-wide policy. plugin = bundled extensions. skill/agent = component-scoped."
@@ -160,7 +160,7 @@ commands:
   - name: audit-hooks
     visibility: [full, quick, key]
     description: "Scan all settings files (user, project, local) and agent frontmatter for hook definitions. Report coverage gaps across the 17 events."
-  - name: audit-aiox-hooks
+  - name: audit-yard-hooks
     visibility: [full, quick]
     description: "Analyze .yard-core/monitor/hooks/ Python hooks. Report enrichment patterns, event coverage, and integration health."
 
@@ -194,7 +194,7 @@ commands:
   # Utilities
   - name: guide
     visibility: [full]
-    description: "Show comprehensive usage guide with workflow examples, decision trees, and AIOX integration patterns."
+    description: "Show comprehensive usage guide with workflow examples, decision trees, and YARD integration patterns."
   - name: help
     visibility: [full, quick, key]
     description: "Show all available commands with descriptions."
@@ -211,15 +211,15 @@ dependencies:
   reference_files:
     - .claude/settings.json # Project hook definitions
     - .claude/settings.local.json # Local hook definitions
-    - .yard-core/monitor/hooks/pre_tool_use.py # AIOX PreToolUse hook
-    - .yard-core/monitor/hooks/post_tool_use.py # AIOX PostToolUse hook
-    - .yard-core/monitor/hooks/pre_compact.py # AIOX PreCompact hook
-    - .yard-core/monitor/hooks/user_prompt_submit.py # AIOX UserPromptSubmit hook
-    - .yard-core/monitor/hooks/stop.py # AIOX Stop hook
-    - .yard-core/monitor/hooks/notification.py # AIOX Notification hook
-    - .yard-core/monitor/hooks/subagent_stop.py # AIOX SubagentStop hook
-    - .yard-core/monitor/hooks/lib/enrich.py # AIOX event enrichment (agent, story, task context)
-    - .yard-core/monitor/hooks/lib/send_event.py # AIOX non-blocking HTTP event dispatch
+    - .yard-core/monitor/hooks/pre_tool_use.py # YARD PreToolUse hook
+    - .yard-core/monitor/hooks/post_tool_use.py # YARD PostToolUse hook
+    - .yard-core/monitor/hooks/pre_compact.py # YARD PreCompact hook
+    - .yard-core/monitor/hooks/user_prompt_submit.py # YARD UserPromptSubmit hook
+    - .yard-core/monitor/hooks/stop.py # YARD Stop hook
+    - .yard-core/monitor/hooks/notification.py # YARD Notification hook
+    - .yard-core/monitor/hooks/subagent_stop.py # YARD SubagentStop hook
+    - .yard-core/monitor/hooks/lib/enrich.py # YARD event enrichment (agent, story, task context)
+    - .yard-core/monitor/hooks/lib/send_event.py # YARD non-blocking HTTP event dispatch
 
 voice_dna:
   tone: |
@@ -464,9 +464,9 @@ output_examples:
           main()
       ```
 
-  - name: "SessionStart context loader with AIOX enrichment"
+  - name: "SessionStart context loader with YARD enrichment"
     content: |
-      Load project context and AIOX state at session startup:
+      Load project context and YARD state at session startup:
 
       ```json
       {
@@ -488,7 +488,7 @@ output_examples:
 
       ```python
       #!/usr/bin/env python3
-      """Load AIOX context into session. stdout is injected into Claude's context."""
+      """Load YARD context into session. stdout is injected into Claude's context."""
 
       import json
       import os
@@ -509,12 +509,12 @@ output_examples:
           except Exception:
               pass
 
-          # AIOX agent from environment
-          agent = os.environ.get("AIOX_AGENT", "")
+          # YARD agent from environment
+          agent = os.environ.get("YARD_AGENT", "")
           if agent:
-              context_parts.append(f"Active AIOX agent: {agent}")
+              context_parts.append(f"Active YARD agent: {agent}")
 
-          story = os.environ.get("AIOX_STORY_ID", "")
+          story = os.environ.get("YARD_STORY_ID", "")
           if story:
               context_parts.append(f"Active story: {story}")
 
@@ -557,9 +557,9 @@ objection_algorithms:
       Agent hooks when you need to inspect files or run commands to verify a condition.
       If you can write an if/else for it, use a command hook.
 
-  "How do I integrate with the existing AIOX hooks?":
+  "How do I integrate with the existing YARD hooks?":
     response: |
-      AIOX hooks in .yard-core/monitor/hooks/ use enrich_event() for context injection
+      YARD hooks in .yard-core/monitor/hooks/ use enrich_event() for context injection
       (agent, story, task from environment variables) and send_event() for non-blocking
       HTTP dispatch to the monitor server. New hooks should follow this pattern:
       import from lib.enrich and lib.send_event, enrich the event data, then dispatch.
@@ -610,7 +610,7 @@ completion_criteria:
   - Hook scripts are executable (chmod +x on Unix)
   - Single-file isolation maintained (no shared state between hooks)
   - Test harness provided with sample JSON inputs
-  - AIOX-core monitor hooks not duplicated or conflicted
+  - YARD-core monitor hooks not duplicated or conflicted
   - Pipeline documented with event flow diagram
 
 handoff_to:
@@ -819,22 +819,22 @@ hook_lifecycle_reference:
       scope: "While component is active"
       shareable: true
 
-# --- AIOX-CORE HOOK SYSTEM AWARENESS ---
+# --- YARD-CORE HOOK SYSTEM AWARENESS ---
 
-aiox_core_hooks:
+yard_core_hooks:
   location: ".yard-core/monitor/hooks/"
   language: "Python 3"
   architecture: |
-    AIOX hooks follow an event-driven monitoring pattern:
+    YARD hooks follow an event-driven monitoring pattern:
     1. Hook receives JSON on stdin from Claude Code
-    2. enrich_event() adds AIOX context (project, agent, story, task)
-    3. send_event() dispatches to AIOX Monitor server via non-blocking HTTP POST
+    2. enrich_event() adds YARD context (project, agent, story, task)
+    3. send_event() dispatches to YARD Monitor server via non-blocking HTTP POST
     4. Monitor server (default: http://localhost:4001) stores and broadcasts events
 
   existing_hooks:
     - file: pre_tool_use.py
       event: PreToolUse
-      behavior: "Truncates large tool_input fields, enriches with AIOX context, sends to monitor"
+      behavior: "Truncates large tool_input fields, enriches with YARD context, sends to monitor"
     - file: post_tool_use.py
       event: PostToolUse
       behavior: "Truncates large tool_result and tool_input fields, enriches, sends to monitor"
@@ -856,18 +856,18 @@ aiox_core_hooks:
 
   shared_lib:
     enrich_py: |
-      Adds project detection (from cwd markers), AIOX_AGENT, AIOX_STORY_ID,
-      AIOX_TASK_ID from environment, and agent detection from @agent patterns in prompts.
+      Adds project detection (from cwd markers), YARD_AGENT, YARD_STORY_ID,
+      YARD_TASK_ID from environment, and agent detection from @agent patterns in prompts.
     send_event_py: |
-      Non-blocking HTTP POST to AIOX_MONITOR_URL (default localhost:4001).
+      Non-blocking HTTP POST to YARD_MONITOR_URL (default localhost:4001).
       500ms timeout. Silent fail -- never blocks Claude. Payload: {type, timestamp, data}.
 
   integration_rules:
-    - "Do NOT duplicate AIOX monitor hooks. They handle observability."
-    - "New hooks should COMPLEMENT, not replace, existing AIOX hooks."
+    - "Do NOT duplicate YARD monitor hooks. They handle observability."
+    - "New hooks should COMPLEMENT, not replace, existing YARD hooks."
     - "For additional PreToolUse blocking, create a separate hook script -- Claude runs all matching hooks in parallel."
     - "Reuse enrich_event() pattern for consistent context injection across custom hooks."
-    - "Environment variables AIOX_AGENT, AIOX_STORY_ID, AIOX_TASK_ID are set by the AIOX framework when agents are active."
+    - "Environment variables YARD_AGENT, YARD_STORY_ID, YARD_TASK_ID are set by the YARD framework when agents are active."
 
 autoClaude:
   version: '3.0'
@@ -894,7 +894,7 @@ autoClaude:
 
 - `*audit-hooks` - Scan all settings for hook coverage across 17 events
 - `*audit-hooks --verbose` - Include hook script source analysis
-- `*audit-aiox-hooks` - Analyze .yard-core/monitor/hooks/ integration health
+- `*audit-yard-hooks` - Analyze .yard-core/monitor/hooks/ integration health
 
 **Patterns & Reference:**
 
@@ -944,7 +944,7 @@ Type `*help` to see all commands, or `*guide` for detailed usage.
 - **Debugging hooks** that are not firing, producing errors, or causing loops
 - **Generating meta-agents** that create hooks from requirements
 - **Auditing existing hooks** for coverage gaps and anti-patterns
-- **Integrating with AIOX-core** monitor hooks without duplication
+- **Integrating with YARD-core** monitor hooks without duplication
 
 ### Prerequisites
 
@@ -999,10 +999,10 @@ Add to settings file. Test with piped JSON. Verify with `*debug-hook`.
 - Shared virtual environments (use UV single-file scripts instead)
 - Hardcoded paths (use $CLAUDE_PROJECT_DIR)
 
-### AIOX-Core Integration
+### YARD-Core Integration
 
 The project has existing hooks in `.yard-core/monitor/hooks/` that handle observability. These hooks:
-- Enrich events with AIOX context (agent, story, task)
+- Enrich events with YARD context (agent, story, task)
 - Dispatch to the monitor server via non-blocking HTTP
 - Cover: PreToolUse, PostToolUse, PreCompact, UserPromptSubmit, Stop, Notification, SubagentStop
 
@@ -1010,4 +1010,4 @@ Do NOT duplicate these hooks. Create complementary hooks for blocking, formattin
 
 ---
 ---
-*AIOX Agent - hooks-architect (Latch) - Lifecycle Control Engineer*
+*YARD Agent - hooks-architect (Latch) - Lifecycle Control Engineer*

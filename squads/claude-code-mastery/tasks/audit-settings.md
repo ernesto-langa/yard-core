@@ -101,13 +101,13 @@ Check that critical sensitive files are protected:
 | `Bash(rm -rf *)` | Destructive deletion | CRITICAL |
 | `Bash(curl * \| bash)` | Pipe-to-shell attacks | HIGH |
 
-**AIOX-specific deny rules (if .yard-core/ exists):**
+**YARD-specific deny rules (if .yard-core/ exists):**
 
 | Pattern | Protects | Severity if Missing |
 |---------|----------|---------------------|
 | `Edit(.yard-core/core/**)` | L1 Framework Core | HIGH |
 | `Edit(.yard-core/constitution.md)` | Constitution | HIGH |
-| `Edit(bin/aiox.js)` | CLI entry point | MEDIUM |
+| `Edit(bin/yard.js)` | CLI entry point | MEDIUM |
 
 ### Phase 4: Check Permission Mode Appropriateness
 

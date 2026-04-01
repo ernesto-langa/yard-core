@@ -928,4 +928,4 @@ Run `*sdk-guide` for comprehensive SDK documentation.
 
 ---
 ---
-*AIOX Agent - Roadmap Sentinel (Vigil)*
+*YARD Agent - Roadmap Sentinel (Vigil)*
