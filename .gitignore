@@ -103,8 +103,8 @@ CLAUDE.md
 *.decision-log.md
 
 # Project-specific
-# Note: .aiox-core is SOURCE CODE for framework-development mode
-# It should NOT be ignored in the main repository
+# Note: .aiox-core is an old alias for .yard-core — ignored (use .yard-core/ instead)
+.aiox-core/
 .yard-core.backup*/               # Only ignore backup directories
 test-project-install/*
 sample-project/*
@@ -324,6 +324,14 @@ C:Users*
 .eslintcache
 
 # ============================================
+# YARD RUNTIME ARTIFACTS (auto-generated)
+# ============================================
+.yard/notifications/
+.yard/*.tmp.*
+.yard/data/quality-metrics.json
+.yard-core/backup/
+
+# ============================================
 # SYNAPSE RUNTIME (auto-managed)
 # ============================================
 .synapse/sessions/
@@ -367,3 +375,5 @@ build/
 .aiox-core/local/
 .claude/settings.local.json
 .aiox/install-log.txt
+
+core-config.local.yaml

@@ -1,4 +1,4 @@
-# AGENTS.md - Synkra AIOX
+# AGENTS.md - Synkra YARD
 
 Este arquivo configura o comportamento esperado de agentes no Codex CLI neste repositorio.
 
@@ -50,13 +50,13 @@ npm test
 ## Agent Shortcuts (Codex)
 
 Preferencia de ativacao no Codex CLI:
-1. Use `/skills` e selecione `aiox-<agent-id>` vindo de `.codex/skills` (ex.: `aiox-architect`)
+1. Use `/skills` e selecione `yard-<agent-id>` vindo de `.codex/skills` (ex.: `yard-architect`)
 2. Se preferir, use os atalhos abaixo (`@architect`, `/architect`, etc.)
 
 Quando a mensagem do usuario for um atalho de agente, carregue o arquivo correspondente em `.yard-core/development/agents/` (fallback: `.codex/agents/`), renderize o greeting via `generate-greeting.js` e assuma a persona ate receber `*exit`.
 
 Atalhos aceitos por agente:
-- `@aiox-master`, `/aiox-master`, `/aiox-master.md` -> `.yard-core/development/agents/aiox-master.md`
+- `@yard-master`, `/yard-master`, `/yard-master.md` -> `.yard-core/development/agents/yard-master.md`
 - `@analyst`, `/analyst`, `/analyst.md` -> `.yard-core/development/agents/analyst.md`
 - `@architect`, `/architect`, `/architect.md` -> `.yard-core/development/agents/architect.md`
 - `@data-engineer`, `/data-engineer`, `/data-engineer.md` -> `.yard-core/development/agents/data-engineer.md`

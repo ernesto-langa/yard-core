@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Synkra AIOX will be documented in this file.
+All notable changes to Synkra YARD will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -46,7 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `docs/glossary.md` with official AIOX taxonomy terms:
+- `docs/glossary.md` with official YARD taxonomy terms:
   - `squad`
   - `flow-state`
   - `confidence gate`
@@ -114,7 +114,7 @@ This release introduces **Squad Continuous Improvement** capabilities with analy
 
 ### Highlights
 
-This release marks the **Open-Source Community Readiness** milestone, preparing AIOX for public contribution while introducing the **Squad System** for extensibility.
+This release marks the **Open-Source Community Readiness** milestone, preparing YARD for public contribution while introducing the **Squad System** for extensibility.
 
 ### Added
 
@@ -189,7 +189,7 @@ This release marks the **Open-Source Community Readiness** milestone, preparing 
   - Automatic CHANGELOG generation
 
 - **Agent Command Rationalization** (Story 6.1.2.3)
-  - Command consolidation: `aiox-master` 44→30 commands (32% reduction)
+  - Command consolidation: `yard-master` 44→30 commands (32% reduction)
   - Command consolidation: `data-engineer` 31→28 commands (9.7% reduction)
   - New consolidated tasks: `security-audit`, `analyze-performance`, `test-as-user`, `setup-database`
   - Migration guide: `docs/guides/command-migration-guide.md`
@@ -230,25 +230,25 @@ This release marks the **Open-Source Community Readiness** milestone, preparing 
 ## [4.32.0] - 2025-11-12
 
 ### Removed
-- **Private squads** - Moved to separate private repository (`aiox-squads`)
+- **Private squads** - Moved to separate private repository (`yard-squads`)
   - Removed `squads/creator/` (CreatorOS)
   - Removed `squads/innerlens/`
   - Removed `squads/mmos-mapper/`
-  - Removed `squads/aiox-infrastructure-devops/`
+  - Removed `squads/yard-infrastructure-devops/`
   - Removed `squads/meeting-notes/`
-  - Repository: https://github.com/SynkraAI/aiox-squads (PRIVATE)
-- **Internal development tools** - Moved to separate private repository (`aiox-dev-tools`)
+  - Repository: https://github.com/SynkraAI/yard-squads (PRIVATE)
+- **Internal development tools** - Moved to separate private repository (`yard-dev-tools`)
   - Removed analysis scripts: `analyze-batches.js`, `analyze-decision-patterns.js`, `analyze-epic3.js`, etc.
   - Removed consolidation scripts: `consolidate-entities.js`, `consolidate-results.js`, etc.
   - Removed extraction scripts: `extract-all-claude-backups.js`, `extract-claude-history.js`
   - Removed generation scripts: `generate-entity-summary.js`, `generate-entity-table.js`
-  - Repository: https://github.com/SynkraAI/aiox-dev-tools (PRIVATE)
+  - Repository: https://github.com/SynkraAI/yard-dev-tools (PRIVATE)
 - **hybrid-ops squad** - Moved to separate repository for independent maintenance
   - Removed `squads/hybrid-ops/` directory
   - Removed `.hybrid-ops/` directory
   - Updated `core-config.yaml` to reference external repository
   - Updated `install-manifest.yaml` (removed 47 file entries)
-  - Repository: https://github.com/SynkraAI/aiox-hybrid-ops-pedro-valerio
+  - Repository: https://github.com/SynkraAI/yard-hybrid-ops-pedro-valerio
 
 ### Changed
 - README.md - hybrid-ops now listed under "Squads Externos"
@@ -258,7 +258,7 @@ This release marks the **Open-Source Community Readiness** milestone, preparing 
   - Creator pack: 4 tasks already renamed (pre-existing migration)
   - Innerlens pack: 4 tasks renamed (fragment-extractor, psychologist, quality-assurance)
   - Mmos-mapper pack: 7 tasks renamed (cognitive-analyst, research-specialist, system-prompt-architect, emulator, mind-pm)
-  - Aiox-infrastructure-devops pack: 2 tasks already renamed (pre-existing)
+  - Yard-infrastructure-devops pack: 2 tasks already renamed (pre-existing)
   - Meeting-notes pack: 1 task already renamed (pre-existing)
   - All agent dependencies updated to reference new task names
   - Shared tasks correctly have NO prefix (conservative approach)
@@ -278,8 +278,8 @@ This release marks the **Open-Source Community Readiness** milestone, preparing 
 
 ### Added
 - NPX temporary directory detection with defense-in-depth architecture
-- PRIMARY detection layer in `tools/aiox-npx-wrapper.js` using `__dirname`
-- SECONDARY fallback detection in `tools/installer/bin/aiox.js` using `process.cwd()`
+- PRIMARY detection layer in `tools/yard-npx-wrapper.js` using `__dirname`
+- SECONDARY fallback detection in `tools/installer/bin/yard.js` using `process.cwd()`
 - User-friendly help message with chalk styling when NPX temp directory detected
 - Regex patterns to identify macOS NPX temporary paths (`/private/var/folders/.*/npx-/`, `/.npm/_npx/`)
 - JSDoc documentation for NPX detection functions

@@ -1,8 +1,8 @@
-# Contributing to Synkra AIOX
+# Contributing to Synkra YARD
 
 > **[Versao em Portugues](docs/pt/contributing.md)**
 
-Welcome to AIOX! Thank you for your interest in contributing. This guide will help you understand our development workflow, contribution process, and how to submit your changes.
+Welcome to YARD! Thank you for your interest in contributing. This guide will help you understand our development workflow, contribution process, and how to submit your changes.
 
 ## Table of Contents
 
@@ -346,7 +346,7 @@ When you submit a PR, the following checks run automatically:
 
 - Code quality and best practices
 - Security concerns
-- AIOX-specific patterns (agents, tasks, workflows)
+- YARD-specific patterns (agents, tasks, workflows)
 - Performance issues
 
 **Severity Levels:**
@@ -385,7 +385,7 @@ After automated checks pass, a maintainer will:
 
 ## Validation System
 
-AIOX implements a **Defense in Depth** strategy with 3 validation layers:
+YARD implements a **Defense in Depth** strategy with 3 validation layers:
 
 ### Layer 1: Pre-commit (Local)
 
@@ -581,7 +581,7 @@ Common fixes:
 
 ## Working with Pro
 
-AIOX uses an Open Core model with a private `pro/` git submodule (see [ADR-PRO-001](docs/architecture/adr/adr-pro-001-repository-strategy.md)).
+YARD uses an Open Core model with a private `pro/` git submodule (see [ADR-PRO-001](docs/architecture/adr/adr-pro-001-repository-strategy.md)).
 
 ### For Open-Source Contributors
 
@@ -652,7 +652,7 @@ git submodule update --init pro
 
 ```bash
 # Coming in a future release
-aiox setup --pro
+yard setup --pro
 ```
 
 For the complete developer workflow guide, see [Pro Developer Workflow](docs/guides/workflows/pro-developer-workflow.md).
@@ -668,4 +668,4 @@ For the complete developer workflow guide, see [Pro Developer Workflow](docs/gui
 
 ---
 
-**Thank you for contributing to Synkra AIOX!**
+**Thank you for contributing to Synkra YARD!**
