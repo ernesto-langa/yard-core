@@ -3,15 +3,15 @@
 **Story 6.19** - IDE Command Auto-Sync System
 **Story TD-4** - Pre-commit Auto-Stage Integration
 
-Automatically synchronizes AIOX agent definitions to IDE command files.
+Automatically synchronizes YARD agent definitions to IDE command files.
 
 ## Overview
 
 IDE Sync keeps agent definitions in `.yard-core/development/agents/` synchronized with IDE-specific command files in:
 
-- `.claude/commands/AIOX/agents/` (Claude Code)
+- `.claude/commands/YARD/agents/` (Claude Code)
 - `.codex/agents/` (Codex CLI support files)
-- `.gemini/rules/AIOX/agents/` (Gemini CLI)
+- `.gemini/rules/YARD/agents/` (Gemini CLI)
 - `.gemini/commands/` (Gemini slash command launcher files)
 - `.github/agents/` (GitHub Copilot support files)
 - `.cursor/rules/agents/` (Cursor)
@@ -104,7 +104,7 @@ ideSync:
   targets:
     claude-code:
       enabled: true
-      path: .claude/commands/AIOX/agents
+      path: .claude/commands/YARD/agents
       format: full-markdown-yaml
     codex:
       enabled: true
@@ -112,7 +112,7 @@ ideSync:
       format: full-markdown-yaml
     gemini:
       enabled: true
-      path: .gemini/rules/AIOX/agents
+      path: .gemini/rules/YARD/agents
       format: full-markdown-yaml
     github-copilot:
       enabled: true
@@ -124,7 +124,7 @@ ideSync:
       format: condensed-rules
     # ... other IDEs
   redirects:
-    aiox-developer: aiox-master
+    yard-developer: yard-master
     db-sage: data-engineer
 ```
 
@@ -159,9 +159,9 @@ Deprecated or renamed agents are handled via redirects. When an old agent name i
 Example redirect file:
 
 ```markdown
-# Agent Redirect: aiox-developer -> aiox-master
+# Agent Redirect: yard-developer -> yard-master
 
-This agent has been renamed. Use `aiox-master` instead.
+This agent has been renamed. Use `yard-master` instead.
 ```
 
 ## File Structure

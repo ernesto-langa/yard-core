@@ -1,6 +1,6 @@
 # AI Providers
 
-Multi-provider AI integration for AIOX. Supports Claude Code and Gemini CLI with automatic fallback and task-based routing.
+Multi-provider AI integration for YARD. Supports Claude Code and Gemini CLI with automatic fallback and task-based routing.
 
 ## Architecture
 
@@ -67,7 +67,7 @@ console.log(status);
 
 ## Configuration
 
-Create `.aiox-ai-config.yaml` in project root:
+Create `.yard-ai-config.yaml` in project root:
 
 ```yaml
 ai_providers:

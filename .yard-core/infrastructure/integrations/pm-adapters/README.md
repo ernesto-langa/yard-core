@@ -1,6 +1,6 @@
 # PM Adapters
 
-Project Management tool adapters for AIOX. Enables story synchronization with various PM tools.
+Project Management tool adapters for YARD. Enables story synchronization with various PM tools.
 
 ## Available Adapters
 
@@ -30,7 +30,7 @@ if (isPMToolConfigured()) {
 
 ## Configuration
 
-PM tool is configured via `.aiox-pm-config.yaml` in the project root:
+PM tool is configured via `.yard-pm-config.yaml` in the project root:
 
 ```yaml
 pmTool: clickup  # Options: clickup, github, jira, local

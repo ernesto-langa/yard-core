@@ -1,6 +1,6 @@
-# AIOX V3 Schemas
+# YARD V3 Schemas
 
-> Schema definitions for AIOX agents and tasks with Auto-Claude capabilities.
+> Schema definitions for YARD agents and tasks with Auto-Claude capabilities.
 
 ## Overview
 
@@ -16,7 +16,7 @@ V3 schemas extend the existing V2 format with an `autoClaude` section that enabl
 
 ## Schema Versions
 
-- **V2 (Legacy)**: Current AIOX format without `autoClaude` section
+- **V2 (Legacy)**: Current YARD format without `autoClaude` section
 - **V3 (New)**: Extended format with `autoClaude` capabilities
 
 V3 is **backward compatible** with V2. Migration adds fields without breaking existing functionality.
@@ -325,7 +325,7 @@ node validate-v3-schema.js .yard-core/development/agents/dev.md --strict
 
 ## Related Documents
 
-- PRD: `docs/prd/aiox-autonomous-development-engine.md`
+- PRD: `docs/prd/yard-autonomous-development-engine.md`
 - Auto-Claude Analysis: `docs/architecture/AUTO-CLAUDE-ANALYSIS-COMPLETE.md`
 - Migration Stories: `docs/stories/yard-core-ade/epic-2-migration-v2-v3.md`
 
@@ -392,12 +392,12 @@ node validate-v3-schema.js .yard-core/development/agents/dev.md --strict
 
 ## Related Documents
 
-- PRD: `docs/prd/aiox-autonomous-development-engine.md`
+- PRD: `docs/prd/yard-autonomous-development-engine.md`
 - Auto-Claude Analysis: `docs/architecture/AUTO-CLAUDE-ANALYSIS-COMPLETE.md`
 - Migration Stories: `docs/stories/yard-core-ade/epic-2-migration-v2-v3.md`
 
 ---
 
-_AIOX V3 Schemas - Synkra Framework_
+_YARD V3 Schemas - Synkra Framework_
 _Created: 2026-01-28_
 _Updated: 2026-01-28 - Added status and known issues_

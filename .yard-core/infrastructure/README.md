@@ -1,6 +1,6 @@
 # Infrastructure Module
 
-Base layer of the AIOX modular architecture. Contains tools, integrations, scripts, and PM adapters.
+Base layer of the YARD modular architecture. Contains tools, integrations, scripts, and PM adapters.
 
 ## Structure
 
@@ -55,11 +55,11 @@ infrastructure/ ← core/ ← development/ ← product/
 
 ### Template & Generation
 - `TemplateEngine` - Template rendering
-- `ComponentGenerator` - AIOX component generation
+- `ComponentGenerator` - YARD component generation
 - `BatchCreator` - Batch operations
 
 ### Validation
-- `AioxValidator` - AIOX component validation
+- `YardValidator` - YARD component validation
 - `TemplateValidator` - Template validation
 - `SpotCheckValidator` - Spot check validation
 

@@ -1,4 +1,4 @@
-# AIOX Presets
+# YARD Presets
 
 **Version:** 1.0.0
 **Last Updated:** 2026-01-28
@@ -8,7 +8,7 @@
 
 ## Overview
 
-AIOX Presets are pre-configured bundles that provide ready-to-use configurations for specific use cases, project types, or team structures. Presets simplify the initial setup process and ensure consistent configuration across projects.
+YARD Presets are pre-configured bundles that provide ready-to-use configurations for specific use cases, project types, or team structures. Presets simplify the initial setup process and ensure consistent configuration across projects.
 
 ### What is a Preset?
 
@@ -30,7 +30,7 @@ Presets can be combined (layered) to create custom configurations that match you
 
 | Preset       | Description             | Agents             | Use Case          |
 | ------------ | ----------------------- | ------------------ | ----------------- |
-| `minimal`    | Bare minimum AIOX setup | dev                | Quick prototyping |
+| `minimal`    | Bare minimum YARD setup | dev                | Quick prototyping |
 | `standard`   | Balanced configuration  | dev, qa, architect | General projects  |
 | `enterprise` | Full-featured setup     | All 11 agents      | Large teams       |
 
@@ -177,7 +177,7 @@ Description of when to use this preset.
 ## Usage
 
 \`\`\`bash
-aiox install --preset my-preset
+yard install --preset my-preset
 \`\`\`
 ```
 
@@ -189,43 +189,43 @@ aiox install --preset my-preset
 
 ```bash
 # Install with specific preset
-aiox install --preset standard
+yard install --preset standard
 
 # Install with multiple presets (layered)
-aiox install --preset standard --preset frontend
+yard install --preset standard --preset frontend
 
 # Install custom preset from directory
-aiox install --preset ./presets/my-preset
+yard install --preset ./presets/my-preset
 ```
 
 ### Listing Available Presets
 
 ```bash
 # List built-in presets
-aiox presets list
+yard presets list
 
 # List with details
-aiox presets list --verbose
+yard presets list --verbose
 ```
 
 ### Viewing Preset Details
 
 ```bash
 # View preset configuration
-aiox presets show standard
+yard presets show standard
 
 # Compare two presets
-aiox presets diff minimal standard
+yard presets diff minimal standard
 ```
 
 ### Exporting Current Configuration as Preset
 
 ```bash
 # Export current project config as preset
-aiox presets export --name my-project-preset --output ./presets/
+yard presets export --name my-project-preset --output ./presets/
 
 # Export with description
-aiox presets export --name my-preset --description "Project template" --output ./presets/
+yard presets export --name my-preset --description "Project template" --output ./presets/
 ```
 
 ---
@@ -235,7 +235,7 @@ aiox presets export --name my-preset --description "Project template" --output .
 Presets can be layered to combine configurations:
 
 ```bash
-aiox install --preset standard --preset frontend --preset small-team
+yard install --preset standard --preset frontend --preset small-team
 ```
 
 **Resolution Order:**
@@ -291,9 +291,9 @@ agents:
 ### For Preset Users
 
 1. **Start minimal** - Begin with `minimal` or `standard`, add as needed
-2. **Review before install** - Use `aiox presets show` to understand what you're getting
+2. **Review before install** - Use `yard presets show` to understand what you're getting
 3. **Export before modifying** - Save your config as a preset before major changes
-4. **Keep presets updated** - Check for preset updates when upgrading AIOX
+4. **Keep presets updated** - Check for preset updates when upgrading YARD
 
 ### Naming Conventions
 
@@ -355,4 +355,4 @@ presets/
 
 ---
 
-_Last Updated: 2026-01-28 | AIOX Framework Team_
+_Last Updated: 2026-01-28 | YARD Framework Team_
