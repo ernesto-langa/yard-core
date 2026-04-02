@@ -1,0 +1,40 @@
+# Backups
+.yard-core/backup
+.yard-core/backup/**
+
+# Runtime data
+.yard/
+.synapse/
+.aiox-core/
+
+# Tests
+tests/
+*.test.js
+*.spec.js
+
+# Dev config
+.eslintcache
+.husky/
+jest.config.*
+tsconfig*.json
+.prettierrc*
+.editorconfig
+
+# Docs (stories, architecture, etc.)
+docs/stories/
+docs/architecture/
+docs/research/
+
+# Git
+.gitignore
+.gitmodules
+
+# CI
+.github/
+
+# Squads (runtime)
+squads/
+
+# Misc
+*.log
+*.tgz

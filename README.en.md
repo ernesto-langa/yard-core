@@ -1,4 +1,4 @@
-# AIOX Squad: Artificial Intelligence Orchestration eXperience
+# YARD Squad: Artificial Intelligence Orchestration eXperience
 
 > 🌍 **[English](README.en.md)** | [Português](README.md)
 
@@ -7,7 +7,7 @@
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
 [![CI](https://github.com/ernesto-langa/yard-core/actions/workflows/ci.yml/badge.svg)](https://github.com/ernesto-langa/yard-core/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/ernesto-langa/yard-core/branch/main/graph/badge.svg)](https://codecov.io/gh/ernesto-langa/yard-core)
-[![Documentation](https://img.shields.io/badge/docs-available-orange.svg)](https://aioxsquad.ai)
+[![Documentation](https://img.shields.io/badge/docs-available-orange.svg)](https://yardsquad.ai)
 [![Open Source](https://img.shields.io/badge/Open%20Source-Yes-success.svg)](LICENSE)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-Contributor%20Covenant-blue.svg)](CODE_OF_CONDUCT.md)
@@ -16,7 +16,7 @@
 
 ## Start Here (10 Min)
 
-If this is your first time with AIOX, follow this linear path:
+If this is your first time with YARD, follow this linear path:
 
 1. Install in a new or existing project:
 ```bash
@@ -29,8 +29,8 @@ npx yard-core install
 ```
 2. Choose your IDE/CLI and the activation path:
 - Claude Code: `/agent-name`
-- Gemini CLI: `/aiox-menu` → `/aiox-<agent>`
-- Codex CLI: `/skills` → `aiox-<agent-id>`
+- Gemini CLI: `/yard-menu` → `/yard-<agent>`
+- Codex CLI: `/skills` → `yard-<agent-id>`
 - Cursor/Copilot/AntiGravity: follow the limits and workarounds in `docs/ide-integration.md`
 3. Activate 1 agent and confirm the greeting.
 4. Run 1 initial command (`*help` or equivalent) to validate first-value.
@@ -38,9 +38,9 @@ npx yard-core install
 First-value definition (binary): agent activation + valid greeting + initial command with useful output in <= 10 minutes.
 
 
-## IDE Hook Compatibility (AIOX 4.2 Reality)
+## IDE Hook Compatibility (YARD 4.2 Reality)
 
-Many advanced AIOX features depend on lifecycle events (hooks). The table below shows the actual parity between IDEs/platforms:
+Many advanced YARD features depend on lifecycle events (hooks). The table below shows the actual parity between IDEs/platforms:
 
 | IDE/CLI | Hook Parity vs Claude | Practical Impact |
 | --- | --- | --- |
@@ -57,7 +57,7 @@ Detailed impacts and mitigation: `docs/ide-integration.md`.
 
 ### Architectural Premise: CLI First
 
-AIOX follows a clear priority hierarchy:
+YARD follows a clear priority hierarchy:
 
 ```text
 CLI First → Observability Second → UI Third
@@ -78,7 +78,7 @@ CLI First → Observability Second → UI Third
 
 ---
 
-**The Two Key Innovations of AIOX:**
+**The Two Key Innovations of YARD:**
 
 **1. Agentic Planning:** Dedicated agents (analyst, pm, architect) collaborate with you to create detailed, consistent PRD and Architecture documents. Through advanced prompt engineering and human-in-the-loop refinement, these planning agents produce comprehensive specifications that go far beyond generic AI task generation.
 
@@ -106,19 +106,19 @@ This two-phase approach eliminates both **planning inconsistency** and **context
 
 ## Quick Navigation
 
-### Understanding the AIOX Workflow
+### Understanding the YARD Workflow
 
-**Before diving in, review these critical workflow diagrams that explain how AIOX works:**
+**Before diving in, review these critical workflow diagrams that explain how YARD works:**
 
 1. **[Planning Workflow (Web Interface)](docs/guides/user-guide.md#the-planning-workflow-web-ui)** - How to create PRD and Architecture documents
 2. **[Core Development Cycle (IDE)](docs/guides/user-guide.md#the-core-development-cycle-ide)** - How the sm, dev, and qa agents collaborate through story files
 
-> ⚠️ **These diagrams explain 90% of the confusion about the AIOX Agentic Agile workflow** - Understanding PRD+Architecture creation and the sm/dev/qa workflow and how agents pass notes through story files is essential - and it also explains why this is NOT taskmaster or just a simple task runner!
+> ⚠️ **These diagrams explain 90% of the confusion about the YARD Agentic Agile workflow** - Understanding PRD+Architecture creation and the sm/dev/qa workflow and how agents pass notes through story files is essential - and it also explains why this is NOT taskmaster or just a simple task runner!
 
 ### What would you like to do?
 
 - **[Install and Build software with a Full Stack AI Agile Team](#quick-start)** → Quick Start Instructions
-- **[Learn how to use AIOX](docs/guides/user-guide.md)** → Complete user guide and walkthrough
+- **[Learn how to use YARD](docs/guides/user-guide.md)** → Complete user guide and walkthrough
 - **[See available AI agents](#available-agents)** → Specialized roles for your team
 - **[Explore non-technical uses](#-beyond-software-development---squads)** → Creative writing, business, wellness, education
 - **[Create my own AI agents](#creating-your-own-squad)** → Build agents for your domain
@@ -126,9 +126,9 @@ This two-phase approach eliminates both **planning inconsistency** and **context
 - **[Understand the architecture](docs/architecture/ARCHITECTURE-INDEX.md)** → Deep technical dive
 - **[Report issues](https://github.com/ernesto-langa/yard-core/issues)** → Bug reports and feature requests
 
-## Important: Keep Your AIOX Installation Updated
+## Important: Keep Your YARD Installation Updated
 
-**Stay up to date effortlessly!** To update your existing AIOX installation:
+**Stay up to date effortlessly!** To update your existing YARD installation:
 
 ```bash
 npx yard-core@latest install
@@ -147,7 +147,7 @@ This makes it easy to benefit from the latest improvements, bug fixes, and new a
 
 ### 🚀 Installation via NPX (Recommended)
 
-**Install AIOX with a single command:**
+**Install YARD with a single command:**
 
 ```bash
 # Create a new project with modern interactive wizard
@@ -163,7 +163,7 @@ npx yard-core@latest init my-project
 
 ### ✨ Modern Installation Wizard
 
-AIOX now includes a cutting-edge interactive installation experience, inspired by modern tools like Vite and Next.js:
+YARD now includes a cutting-edge interactive installation experience, inspired by modern tools like Vite and Next.js:
 
 **Interactive Installer Features:**
 
@@ -181,7 +181,7 @@ AIOX now includes a cutting-edge interactive installation experience, inspired b
 - ✅ Download of the latest version from NPM
 - ✅ Modern interactive installation wizard
 - ✅ Automatic IDE configuration (Codex CLI, Cursor, or Claude Code)
-- ✅ Configuration of all AIOX agents and workflows
+- ✅ Configuration of all YARD agents and workflows
 - ✅ Creation of necessary configuration files
 - ✅ Meta-agent system initialization
 - ✅ System health checks
@@ -193,16 +193,16 @@ AIOX now includes a cutting-edge interactive installation experience, inspired b
 
 ### Updating an Existing Installation
 
-If you already have AIOX installed:
+If you already have YARD installed:
 
 ```bash
 npx yard-core@latest install
 # The installer will detect your existing installation and update it
 ```
 
-### Configure Your IDE for AIOX Development
+### Configure Your IDE for YARD Development
 
-AIOX includes pre-configured IDE rules to enhance your development experience:
+YARD includes pre-configured IDE rules to enhance your development experience:
 
 #### For Cursor:
 
@@ -219,7 +219,7 @@ AIOX includes pre-configured IDE rules to enhance your development experience:
 
 #### For Codex CLI:
 
-- ✅ First-class integration in AIOX 4.2 (shared activation and greeting pipeline)
+- ✅ First-class integration in YARD 4.2 (shared activation and greeting pipeline)
 - ✅ Already configured! The `AGENTS.md` file at the root is loaded automatically
 - Optional: sync auxiliary agents with `npm run sync:ide:codex`
 - Recommended in this repository: generate and version local skills with `npm run sync:skills:codex`
@@ -230,9 +230,9 @@ AIOX includes pre-configured IDE rules to enhance your development experience:
 #### For Gemini CLI:
 
 - ✅ Rules and agents syncable with `npm run sync:ide:gemini`
-- Generated files in `.gemini/rules.md`, `.gemini/rules/AIOX/agents/`, and `.gemini/commands/*.toml`
+- Generated files in `.gemini/rules.md`, `.gemini/rules/YARD/agents/`, and `.gemini/commands/*.toml`
 - ✅ Local hooks and settings in the installation flow (`.gemini/hooks/` + `.gemini/settings.json`)
-- ✅ Quick activation via slash commands (`/aiox-menu`, `/aiox-dev`, `/aiox-architect`, etc.)
+- ✅ Quick activation via slash commands (`/yard-menu`, `/yard-dev`, `/yard-architect`, etc.)
 - Dedicated validation: `npm run validate:gemini-sync && npm run validate:gemini-integration`
 - Multi-IDE parity in one command: `npm run validate:parity`
 
@@ -242,19 +242,19 @@ These rules provide:
 - 📋 Story-driven development workflow
 - ✅ Automatic checkbox tracking
 - 🧪 Testing and validation patterns
-- 📝 AIOX-specific code patterns
+- 📝 YARD-specific code patterns
 
 ### Fastest Start with Web Interface (2 minutes)
 
-1. **Install AIOX**: Run `npx yard-core init my-project`
+1. **Install YARD**: Run `npx yard-core init my-project`
 2. **Configure your IDE**: Follow the setup instructions for Codex CLI, Cursor, or Claude Code
 3. **Start Planning**: Activate an agent like `@analyst` to begin creating your briefing
-4. **Use AIOX commands**: Type `*help` to see available commands
+4. **Use YARD commands**: Type `*help` to see available commands
 5. **Follow the flow**: See the [User Guide](docs/guides/user-guide.md) for more details
 
 ### CLI Command Reference
 
-AIOX offers a modern, cross-platform CLI with intuitive commands:
+YARD offers a modern, cross-platform CLI with intuitive commands:
 
 ```bash
 # Project Management (with interactive wizard)
@@ -278,7 +278,7 @@ npx yard-core doctor --fix Automatically fix detected issues
 
 # Maintenance
 npx yard-core update      Update to latest version
-npx yard-core uninstall   Remove AIOX
+npx yard-core uninstall   Remove YARD
 ```
 
 **CLI Features:**
@@ -296,7 +296,7 @@ npx yard-core uninstall   Remove AIOX
 ```bash
 $ npx yard-core install
 
-🚀 AIOX Installation
+🚀 YARD Installation
 
 ◆ What is your project name?
 │  my-awesome-project
@@ -341,7 +341,7 @@ Next steps:
 ```bash
 # Automated installation without prompts
 $ npx yard-core install --quiet --force
-✔ AIOX installed successfully
+✔ YARD installed successfully
 ```
 
 #### Installation Simulation (Dry-Run)
@@ -362,13 +362,13 @@ $ npx yard-core install --dry-run
 ```bash
 $ npx yard-core doctor
 
-🏥 AIOX System Diagnostics
+🏥 YARD System Diagnostics
 
 ✔ Node.js version: v20.10.0 (meets requirement: >=18.0.0)
 ✔ npm version: 10.2.3
 ✔ Git installed: version 2.43.0
 ✔ GitHub CLI: gh 2.40.1
-✔ AIOX: v4.2.11
+✔ YARD: v4.2.11
 
 Configuration:
 ✔ .yard-core/ directory exists
@@ -393,15 +393,15 @@ $ npx yard-core --help
 
 Usage: yard-core [options] [command]
 
-AIOX: AI-Orchestrated System for Full Stack Development
+YARD: AI-Orchestrated System for Full Stack Development
 
 Options:
   -V, --version                output the version number
   -h, --help                   display help for command
 
 Commands:
-  init <project-name>          Create new AIOX project with interactive wizard
-  install [options]            Install AIOX in current directory
+  init <project-name>          Create new YARD project with interactive wizard
+  install [options]            Install YARD in current directory
   info                         Display system information
   doctor [options]             Run system diagnostics and health checks
   help [command]               display help for command
@@ -430,27 +430,27 @@ npx yard-core install
 For team members joining the project:
 
 ```bash
-# Install AIOX in the project
+# Install YARD in the project
 npx yard-core@latest install
 
 # This will:
 # 1. Detect existing installation (if any)
-# 2. Install/update AIOX framework
+# 2. Install/update YARD framework
 # 3. Configure agents and workflows
 ```
 
 ## 🌟 Beyond Software Development - Squads
 
-The AIOX natural language framework works in ANY domain. Squads provide specialized AI agents for creative writing, business strategy, health and wellness, education, and more. Additionally, Squads can expand the Yard core with domain-specific functionality that isn't generic for all use cases. [See the Squads Guide](docs/guides/squads-guide.md) and learn to create your own!
+The YARD natural language framework works in ANY domain. Squads provide specialized AI agents for creative writing, business strategy, health and wellness, education, and more. Additionally, Squads can expand the Yard core with domain-specific functionality that isn't generic for all use cases. [See the Squads Guide](docs/guides/squads-guide.md) and learn to create your own!
 
 ## Available Agents
 
-AIOX comes with 12 specialized agents:
+YARD comes with 12 specialized agents:
 
 ### Meta Agents
 
-- **aiox-master** - Master orchestration agent (includes framework development capabilities)
-- **aiox-orchestrator** - Workflow orchestrator and team coordination
+- **yard-master** - Master orchestration agent (includes framework development capabilities)
+- **yard-orchestrator** - Workflow orchestrator and team coordination
 
 ### Planning Agents (Web Interface)
 
@@ -474,23 +474,23 @@ AIOX comes with 12 specialized agents:
 
 - 📖 **[User Guide](docs/guides/user-guide.md)** - Complete walkthrough from conception to project completion
 - 🏗️ **[Core Architecture](docs/architecture/ARCHITECTURE-INDEX.md)** - Deep technical dive and system design
-- 🚀 **[Squads Guide](docs/guides/squads-guide.md)** - Extend AIOX to any domain beyond software development
+- 🚀 **[Squads Guide](docs/guides/squads-guide.md)** - Extend YARD to any domain beyond software development
 
 ### Additional Documentation
 
 - 🤖 **[Squads Guide](docs/guides/squads-guide.md)** - Create and publish AI agent teams
 - 📋 **[Getting Started](docs/getting-started.md)** - Step-by-step tutorial for beginners
 - 🔧 **[Troubleshooting](docs/troubleshooting.md)** - Solutions for common issues
-- 🎯 **[Guiding Principles](docs/GUIDING-PRINCIPLES.md)** - AIOX philosophy and best practices
+- 🎯 **[Guiding Principles](docs/GUIDING-PRINCIPLES.md)** - YARD philosophy and best practices
 - 🏛️ **[Architecture Overview](docs/architecture/ARCHITECTURE-INDEX.md)** - Detailed view of system architecture
-- ⚙️ **[Performance Tuning Guide](docs/performance-tuning-guide.md)** - Optimize your AIOX workflow
+- ⚙️ **[Performance Tuning Guide](docs/performance-tuning-guide.md)** - Optimize your YARD workflow
 - 🔒 **[Security Best Practices](docs/security-best-practices.md)** - Security and data protection
 - 🔄 **[Migration Guide](docs/migration-guide.md)** - Migration from previous versions
 - 📦 **[Versioning and Releases](docs/versioning-and-releases.md)** - Versioning policy
 
-## 🤖 AIOX Autonomous Development Engine (ADE)
+## 🤖 YARD Autonomous Development Engine (ADE)
 
-AIOX introduces the **Autonomous Development Engine (ADE)** - a complete system for autonomous development that transforms requirements into working code.
+YARD introduces the **Autonomous Development Engine (ADE)** - a complete system for autonomous development that transforms requirements into working code.
 
 ### 🎯 What is ADE?
 
@@ -576,7 +576,7 @@ User Request → Spec Pipeline → Execution Engine → QA Review → Working Co
 
 ## Creating Your Own Squad
 
-Squads allow you to extend AIOX to any domain. Basic structure:
+Squads allow you to extend YARD to any domain. Basic structure:
 
 ```text
 squads/your-squad/
@@ -598,13 +598,13 @@ Squads are modular AI agent teams. See the [Squads Overview](docs/guides/squads-
 
 ### External Squads
 
-- **[hybrid-ops](https://github.com/SynkraAI/aiox-hybrid-ops-pedro-valerio)** - Human-agent hybrid operations (separate repository)
+- **[hybrid-ops](https://github.com/SynkraAI/yard-hybrid-ops-pedro-valerio)** - Human-agent hybrid operations (separate repository)
 
 ## Yard Pro
 
 **Yard Pro** (`@ernesto-langa/yard-pro`) is the premium module of Yard, offering advanced features for teams and larger-scale projects.
 
-> **Restricted availability:** Yard Pro is available exclusively to members of the **Yard Cohort Advanced**. [Learn more about the program](https://aioxsquad.ai).
+> **Restricted availability:** Yard Pro is available exclusively to members of the **Yard Cohort Advanced**. [Learn more about the program](https://yardsquad.ai).
 
 ### Installation
 
@@ -633,7 +633,7 @@ For more information, run `npx yard-pro --help` after installation.
 
 ## Git Workflow and Validation
 
-AIOX implements a multi-layer validation system to ensure code quality and consistency:
+YARD implements a multi-layer validation system to ensure code quality and consistency:
 
 ### 🛡️ Defense in Depth - 3 Validation Layers
 
@@ -671,10 +671,10 @@ npm run typecheck      # TypeScript
 npm test              # Tests
 npm run test:coverage # Tests with coverage
 
-# AIOX Validator
-node .yard-core/utils/aiox-validator.js pre-commit   # Pre-commit validation
-node .yard-core/utils/aiox-validator.js pre-push     # Pre-push validation
-node .yard-core/utils/aiox-validator.js stories      # Validate all stories
+# YARD Validator
+node .yard-core/utils/yard-validator.js pre-commit   # Pre-commit validation
+node .yard-core/utils/yard-validator.js pre-push     # Pre-push validation
+node .yard-core/utils/yard-validator.js stories      # Validate all stories
 ```
 
 ### Branch Protection
@@ -730,4 +730,4 @@ See also:
 
 ---
 
-**[⬆ Back to top](#aiox-squad-artificial-intelligence-orchestration-experience)**
+**[⬆ Back to top](#yard-squad-artificial-intelligence-orchestration-experience)**
