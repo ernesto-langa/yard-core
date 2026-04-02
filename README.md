@@ -1,6 +1,10 @@
-# Yard: Artificial Intelligence Orchestration
+<div align="center">
 
-> 🌍 [English](README.en.md) | **[Português](README.md)**
+# YARD: Orquestração por Inteligência Artificial
+
+**Devolvendo às pessoas o poder de criar**
+
+🌍 [English](README.en.md) | **[Português](README.md)**
 
 [![Versão NPM](https://img.shields.io/npm/v/yard-core.svg)](https://www.npmjs.com/package/yard-core)
 [![Licença: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -12,15 +16,22 @@
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-Contributor%20Covenant-blue.svg)](CODE_OF_CONDUCT.md)
 
-> 🌐 README por idioma: [EN](docs/README.md) | [PT](docs/pt/README.md) | [ES](docs/es/README.md) | [ZH](docs/zh/README.md)
->
-> **Devolvendo às pessoas o poder de criar** — Framework open source de orquestração de IA que devolve o controle a quem tem coragem de construir. Agentes especializados, workflows e experiência CLI First para qualquer domínio.
+[Início Rápido](#-início-rápido) · [Agentes](#-agentes-disponíveis) · [ADE](#-yard-autonomous-development-engine-ade) · [Squads](#-além-do-desenvolvimento-de-software---squads)
 
-## Comece Aqui (10 Min)
+</div>
+
+> 🌐 README por idioma: [EN](docs/README.md) | [PT](docs/pt/README.md)
+
+Framework open source de orquestração de IA que devolve o controle a quem tem coragem de construir. Agentes especializados, workflows e experiência CLI First para qualquer domínio.
+
+---
+
+## ⚡ Comece Aqui (10 Min)
 
 Se é sua primeira vez no Yard, siga este caminho linear:
 
 1. Instale em um projeto novo ou existente:
+
 ```bash
 # novo projeto
 npx yard-core init meu-projeto
@@ -29,23 +40,25 @@ npx yard-core init meu-projeto
 cd seu-projeto
 npx yard-core install
 ```
+
 2. Escolha sua IDE/CLI e o caminho de ativação:
-- Claude Code: `/agent-name`
-- Gemini CLI: `/yard-menu` → `/yard-<agent>`
-- Codex CLI: `/skills` → `yard-<agent-id>`
-- Cursor/Copilot/AntiGravity: siga os limites e workarounds em `docs/ide-integration.md`
+   - Claude Code: `/agent-name`
+   - Gemini CLI: `/yard-menu` → `/yard-<agent>`
+   - Codex CLI: `/skills` → `yard-<agent-id>`
+   - Cursor/Copilot/AntiGravity: siga os limites e workarounds em `docs/ide-integration.md`
 3. Ative 1 agente e confirme o greeting.
 4. Rode 1 comando inicial (`*help` ou equivalente) para validar first-value.
 
 Definição de first-value (binária): ativação de agente + greeting válido + comando inicial com output útil em <= 10 minutos.
 
+---
 
-## Compatibilidade de Hooks por IDE (Realidade Yard 4.2)
+## 🖥️ Compatibilidade de Hooks por IDE (Realidade Yard 4.2)
 
 Muitos recursos avançados do Yard dependem de eventos de ciclo de vida (hooks). A tabela abaixo mostra a paridade real entre IDEs/plataformas:
 
 | IDE/CLI | Paridade de Hooks vs Claude | Impacto Prático |
-| --- | --- | --- |
+|---|---|---|
 | Claude Code | Completa (referência) | Automação máxima de contexto, guardrails e auditoria |
 | Gemini CLI | Alta (eventos nativos) | Cobertura forte de automações pre/post tool e sessão |
 | Codex CLI | Parcial/limitada | Parte das automações depende de `AGENTS.md`, `/skills`, MCP e fluxo operacional |
@@ -55,82 +68,92 @@ Muitos recursos avançados do Yard dependem de eventos de ciclo de vida (hooks).
 
 Impactos e mitigação detalhados: `docs/ide-integration.md`.
 
-## Visão Geral
+---
+
+## 🏗️ Visão Geral
 
 ### Premissa Arquitetural: CLI First
 
 O Yard segue uma hierarquia clara de prioridades:
 
-```
+```text
 CLI First → Observability Second → UI Third
 ```
 
-| Camada            | Prioridade | Foco                                                                          | Exemplos                                     |
-| ----------------- | ---------- | ----------------------------------------------------------------------------- | -------------------------------------------- |
-| **CLI**           | Máxima     | Onde a inteligência vive. Toda execução, decisões e automação acontecem aqui. | Agentes (`@dev`, `@qa`), workflows, comandos |
-| **Observability** | Secundária | Observar e monitorar o que acontece no CLI em tempo real.                     | Dashboard SSE, logs, métricas, timeline      |
-| **UI**            | Terciária  | Gestão pontual e visualizações quando necessário.                             | Kanban, settings, story management           |
+| Camada | Prioridade | Foco | Exemplos |
+|---|---|---|---|
+| **CLI** | Máxima | Onde a inteligência vive. Toda execução, decisões e automação acontecem aqui. | Agentes (`@dev`, `@qa`), workflows, comandos |
+| **Observability** | Secundária | Observar e monitorar o que acontece no CLI em tempo real. | Dashboard SSE, logs, métricas, timeline |
+| **UI** | Terciária | Gestão pontual e visualizações quando necessário. | Kanban, settings, story management |
 
 **Princípios derivados:**
 
-- A CLI é a fonte da verdade - dashboards apenas observam
+- A CLI é a fonte da verdade — dashboards apenas observam
 - Funcionalidades novas devem funcionar 100% via CLI antes de ter UI
 - A UI nunca deve ser requisito para operação do sistema
 - Observabilidade serve para entender o que o CLI está fazendo, não para controlá-lo
 
 ---
 
-**As Duas Inovações Chave do Yard:**
+### As Duas Inovações Chave do Yard
 
 **1. Planejamento Agêntico:** Agentes dedicados (analyst, pm, architect) colaboram com você para criar documentos de PRD e Arquitetura detalhados e consistentes. Através de engenharia avançada de prompts e refinamento com human-in-the-loop, estes agentes de planejamento produzem especificações abrangentes que vão muito além da geração genérica de tarefas de IA.
 
-**2. Desenvolvimento Contextualizado por Engenharia:** O agente sm (Scrum Master) então transforma estes planos detalhados em histórias de desenvolvimento hiperdetalhadas que contêm tudo que o agente dev precisa - contexto completo, detalhes de implementação e orientação arquitetural incorporada diretamente nos arquivos de histórias.
+**2. Desenvolvimento Contextualizado por Engenharia:** O agente sm (Scrum Master) então transforma estes planos detalhados em histórias de desenvolvimento hiperdetalhadas que contêm tudo que o agente dev precisa — contexto completo, detalhes de implementação e orientação arquitetural incorporada diretamente nos arquivos de histórias.
 
-Esta abordagem de duas fases elimina tanto a **inconsistência de planejamento** quanto a **perda de contexto** - os maiores problemas no desenvolvimento assistido por IA. Seu agente dev abre um arquivo de história com compreensão completa do que construir, como construir e por quê.
+Esta abordagem de duas fases elimina tanto a **inconsistência de planejamento** quanto a **perda de contexto** — os maiores problemas no desenvolvimento assistido por IA. Seu agente dev abre um arquivo de história com compreensão completa do que construir, como construir e por quê.
 
-**📖 [Veja o fluxo de trabalho completo no Guia do Usuário](docs/guides/user-guide.md)** - Fase de planejamento, ciclo de desenvolvimento e todos os papéis dos agentes
+📖 [Veja o fluxo de trabalho completo no Guia do Usuário](docs/guides/user-guide.md) — Fase de planejamento, ciclo de desenvolvimento e todos os papéis dos agentes
 
-## Pré-requisitos
+---
+
+## 📋 Pré-requisitos
 
 - Node.js >=18.0.0 (v20+ recomendado)
 - npm >=9.0.0
 - GitHub CLI (opcional, necessário para colaboração em equipe)
 
-> **Problemas de instalação?** Consulte o [Guia de Troubleshooting](docs/guides/installation-troubleshooting.md)
+> [!TIP]
+> Problemas de instalação? Consulte o [Guia de Troubleshooting](docs/guides/installation-troubleshooting.md)
 
 **Guias específicos por plataforma:**
 
-- 📖 [Guia de Instalação para macOS](docs/installation/macos.md)
-- 📖 [Guia de Instalação para Windows](docs/installation/windows.md)
-- 📖 [Guia de Instalação para Linux](docs/installation/linux.md)
+- [Guia de Instalação para macOS](docs/installation/macos.md)
+- [Guia de Instalação para Windows](docs/installation/windows.md)
+- [Guia de Instalação para Linux](docs/installation/linux.md)
 
-**Documentação multilíngue disponível:** [English](docs/README.md) | [Português](docs/pt/README.md) | [Español](docs/es/README.md) | [中文](docs/zh/README.md)
+**Documentação disponível em:** [English](docs/README.md) | [Português](docs/pt/README.md)
 
-## Navegação Rápida
+---
+
+## 🗺️ Navegação Rápida
 
 ### Entendendo o Fluxo de Trabalho YARD
 
-**Antes de mergulhar, revise estes diagramas críticos de fluxo de trabalho que explicam como o YARD funciona:**
+Antes de mergulhar, revise estes diagramas críticos de fluxo de trabalho que explicam como o YARD funciona:
 
-1. **[Fluxo de Planejamento (Interface Web)](docs/guides/user-guide.md#the-planning-workflow-web-ui)** - Como criar documentos de PRD e Arquitetura
-2. **[Ciclo Principal de Desenvolvimento (IDE)](docs/guides/user-guide.md#the-core-development-cycle-ide)** - Como os agentes sm, dev e qa colaboram através de arquivos de histórias
+1. **[Fluxo de Planejamento (Interface Web)](docs/guides/user-guide.md#the-planning-workflow-web-ui)** — Como criar documentos de PRD e Arquitetura
+2. **[Ciclo Principal de Desenvolvimento (IDE)](docs/guides/user-guide.md#the-core-development-cycle-ide)** — Como os agentes sm, dev e qa colaboram através de arquivos de histórias
 
-> ⚠️ **Estes diagramas explicam 90% da confusão sobre o fluxo YARD Agentic Agile** - Entender a criação de PRD+Arquitetura e o fluxo de trabalho sm/dev/qa e como os agentes passam notas através de arquivos de histórias é essencial - e também explica por que isto NÃO é taskmaster ou apenas um simples executor de tarefas!
+> [!IMPORTANT]
+> Estes diagramas explicam 90% da confusão sobre o fluxo YARD Agentic Agile. Entender a criação de PRD+Arquitetura e o fluxo de trabalho sm/dev/qa e como os agentes passam notas através de arquivos de histórias é essencial — e também explica por que isto NÃO é taskmaster ou apenas um simples executor de tarefas!
 
 ### O que você gostaria de fazer?
 
-- **[Instalar e Construir software com Equipe Ágil Full Stack de IA](#início-rápido)** → Instruções de Início Rápido
+- **[Instalar e Construir software com Equipe Ágil Full Stack de IA](#-início-rápido)** → Instruções de Início Rápido
 - **[Aprender como usar o YARD](docs/guides/user-guide.md)** → Guia completo do usuário e passo a passo
-- **[Ver agentes IA disponíveis](#agentes-disponíveis)** → Papéis especializados para sua equipe
+- **[Ver agentes IA disponíveis](#-agentes-disponíveis)** → Papéis especializados para sua equipe
 - **[Explorar usos não técnicos](#-além-do-desenvolvimento-de-software---squads)** → Escrita criativa, negócios, bem-estar, educação
 - **[Criar meus próprios agentes IA](#criando-seu-próprio-squad)** → Construir agentes para seu domínio
 - **[Navegar Squads prontos](docs/guides/squads-overview.md)** → Veja como criar e usar equipes de agentes IA
 - **[Entender a arquitetura](docs/architecture/ARCHITECTURE-INDEX.md)** → Mergulho técnico profundo
 - **[Reportar problemas](https://github.com/ernesto-langa/yard-core/issues)** → Bug reports e feature requests
 
-## Importante: Mantenha Sua Instalação YARD Atualizada
+---
 
-**Mantenha-se atualizado sem esforço!** Para atualizar sua instalação YARD existente:
+## 🔄 Mantenha Sua Instalação YARD Atualizada
+
+Mantenha-se atualizado sem esforço. Para atualizar sua instalação YARD existente:
 
 ```bash
 npx yard-core@latest install
@@ -138,18 +161,20 @@ npx yard-core@latest install
 
 Isto vai:
 
-- ✅ Detectar automaticamente sua instalação existente
-- ✅ Atualizar apenas os arquivos que mudaram
-- ✅ Criar arquivos de backup `.bak` para quaisquer modificações customizadas
-- ✅ Preservar suas configurações específicas do projeto
+- Detectar automaticamente sua instalação existente
+- Atualizar apenas os arquivos que mudaram
+- Criar arquivos de backup `.bak` para quaisquer modificações customizadas
+- Preservar suas configurações específicas do projeto
 
 Isto facilita beneficiar-se das últimas melhorias, correções de bugs e novos agentes sem perder suas customizações!
 
-## Início Rápido
+---
 
-### 🚀 Instalação via NPX (Recomendado)
+## 🚀 Início Rápido
 
-**Instale o YARD com um único comando:**
+### Instalação via NPX (Recomendado)
+
+Instale o YARD com um único comando:
 
 ```bash
 # Criar um novo projeto com assistente interativo moderno
@@ -169,27 +194,30 @@ O YARD agora inclui uma experiência de instalação interativa de última gera�
 
 **Recursos do Instalador Interativo:**
 
-- 🎨 **Interface Moderna**: Prompts coloridos e visuais com @clack/prompts
-- ✅ **Validação em Tempo Real**: Feedback instantâneo sobre entradas inválidas
-- 🔄 **Indicadores de Progresso**: Spinners para operações longas (cópia de arquivos, instalação de deps)
-- 📦 **Seleção Multi-Componente**: Escolha quais componentes instalar com interface intuitiva
-- ⚙️ **Escolha de Gerenciador de Pacotes**: Selecione entre npm, yarn ou pnpm
-- ⌨️ **Suporte a Cancelamento**: Ctrl+C ou ESC para sair graciosamente a qualquer momento
-- 📊 **Resumo de Instalação**: Visualize todas as configurações antes de prosseguir
-- ⏱️ **Rastreamento de Duração**: Veja quanto tempo levou a instalação
+| Recurso | Descrição |
+|---|---|
+| Interface Moderna | Prompts coloridos e visuais com @clack/prompts |
+| Validação em Tempo Real | Feedback instantâneo sobre entradas inválidas |
+| Indicadores de Progresso | Spinners para operações longas |
+| Seleção Multi-Componente | Escolha quais componentes instalar |
+| Escolha de Package Manager | Selecione entre npm, yarn ou pnpm |
+| Suporte a Cancelamento | Ctrl+C ou ESC para sair graciosamente |
+| Resumo de Instalação | Visualize todas as configurações antes de prosseguir |
+| Rastreamento de Duração | Veja quanto tempo levou a instalação |
 
 **O instalador oferece:**
 
-- ✅ Download da versão mais recente do NPM
-- ✅ Assistente de instalação interativo moderno
-- ✅ Configuração automática do IDE (Codex CLI, Cursor ou Claude Code)
-- ✅ Configuração de todos os agentes e fluxos de trabalho YARD
-- ✅ Criação dos arquivos de configuração necessários
-- ✅ Inicialização do sistema de meta-agentes
-- ✅ Verificações de saúde do sistema
-- ✅ **Suporte Cross-Platform**: Testado em Windows, macOS e Linux
+- Download da versão mais recente do NPM
+- Assistente de instalação interativo moderno
+- Configuração automática do IDE (Codex CLI, Cursor ou Claude Code)
+- Configuração de todos os agentes e fluxos de trabalho YARD
+- Criação dos arquivos de configuração necessários
+- Inicialização do sistema de meta-agentes
+- Verificações de saúde do sistema
+- Suporte Cross-Platform: testado em Windows, macOS e Linux
 
-> **É isso!** Sem clonar, sem configuração manual - apenas um comando e você está pronto para começar com uma experiência de instalação moderna e profissional.
+> [!NOTE]
+> Sem clonar, sem configuração manual — apenas um comando e você está pronto para começar com uma experiência de instalação moderna e profissional.
 
 **Pré-requisitos**: [Node.js](https://nodejs.org) v18+ necessário (v20+ recomendado) | [Troubleshooting](docs/guides/installation-troubleshooting.md)
 
@@ -202,49 +230,57 @@ npx yard-core@latest install
 # O instalador detectará sua instalação existente e a atualizará
 ```
 
-### Configure Seu IDE para Desenvolvimento YARD
+---
+
+## ⚙️ Configure Seu IDE para Desenvolvimento YARD
 
 O YARD inclui regras pré-configuradas para IDE para melhorar sua experiência de desenvolvimento:
 
-#### Para Cursor:
+<details>
+<summary>Para Cursor</summary>
 
 1. Abra as configurações do Cursor
 2. Navegue até **User Rules**
 3. Copie o conteúdo de `.cursor/global-rules.md`
 4. Cole na seção de regras e salve
 
-#### Para Claude Code:
+</details>
 
-- ✅ Já configurado! O arquivo `.claude/CLAUDE.md` é carregado automaticamente
+<details>
+<summary>Para Claude Code</summary>
+
+- Já configurado! O arquivo `.claude/CLAUDE.md` é carregado automaticamente
 - Sync dedicado de agentes: `npm run sync:ide:claude`
 - Validacao dedicada: `npm run validate:claude-sync && npm run validate:claude-integration`
 
-#### Para Codex CLI:
+</details>
 
-- ✅ Integração de primeira classe no YARD 4.2 (pipeline de ativação e greeting compartilhado)
-- ✅ Já configurado! O arquivo `AGENTS.md` na raiz é carregado automaticamente
+<details>
+<summary>Para Codex CLI</summary>
+
+- Integração de primeira classe no YARD 4.2 (pipeline de ativação e greeting compartilhado)
+- Já configurado! O arquivo `AGENTS.md` na raiz é carregado automaticamente
 - Opcional: sincronize agentes auxiliares com `npm run sync:ide:codex`
 - Recomendado neste repositório: gerar e versionar skills locais com `npm run sync:skills:codex`
 - Use `npm run sync:skills:codex:global` apenas fora deste projeto (para evitar duplicidade no `/skills`)
 - Validacao dedicada: `npm run validate:codex-sync && npm run validate:codex-integration`
 - Guardrails de skills/paths: `npm run validate:codex-skills && npm run validate:paths`
 
-#### Para Gemini CLI:
+</details>
 
-- ✅ Regras e agentes sincronizaveis com `npm run sync:ide:gemini`
+<details>
+<summary>Para Gemini CLI</summary>
+
+- Regras e agentes sincronizaveis com `npm run sync:ide:gemini`
 - Arquivos gerados em `.gemini/rules.md`, `.gemini/rules/YARD/agents/` e `.gemini/commands/*.toml`
-- ✅ Hooks e settings locais no fluxo de instalacao (`.gemini/hooks/` + `.gemini/settings.json`)
-- ✅ Ativacao rapida por slash commands (`/yard-menu`, `/yard-dev`, `/yard-architect`, etc.)
+- Hooks e settings locais no fluxo de instalacao (`.gemini/hooks/` + `.gemini/settings.json`)
+- Ativacao rapida por slash commands (`/yard-menu`, `/yard-dev`, `/yard-architect`, etc.)
 - Validacao dedicada: `npm run validate:gemini-sync && npm run validate:gemini-integration`
 - Paridade multi-IDE em um comando: `npm run validate:parity`
 
-Estas regras fornecem:
+</details>
 
-- 🤖 Reconhecimento e integração de comandos de agentes
-- 📋 Fluxo de trabalho de desenvolvimento dirigido por histórias
-- ✅ Rastreamento automático de checkboxes
-- 🧪 Padrões de teste e validação
-- 📝 Padrões de código específicos do YARD
+Estas regras fornecem reconhecimento de comandos de agentes, fluxo de trabalho dirigido por histórias, rastreamento automático de checkboxes, padrões de teste e validação, e padrões de código específicos do YARD.
 
 ### Início Mais Rápido com Interface Web (2 minutos)
 
@@ -254,7 +290,9 @@ Estas regras fornecem:
 4. **Use comandos YARD**: Digite `*help` para ver comandos disponíveis
 5. **Siga o fluxo**: Veja o [Guia do usuário](docs/guides/user-guide.md) para mais detalhes
 
-### Referência de Comandos CLI
+---
+
+## 🖱️ Referência de Comandos CLI
 
 O YARD oferece uma CLI moderna e cross-platform com comandos intuitivos:
 
@@ -285,15 +323,20 @@ npx yard-core uninstall   Remover YARD
 
 **Recursos da CLI:**
 
-- ✅ **Help System Abrangente**: `--help` em qualquer comando mostra documentação detalhada
-- ✅ **Validação de Entrada**: Feedback imediato sobre parâmetros inválidos
-- ✅ **Mensagens Coloridas**: Erros em vermelho, sucessos em verde, avisos em amarelo
-- ✅ **Cross-Platform**: Funciona perfeitamente em Windows, macOS e Linux
-- ✅ **Suporte a Dry-Run**: Teste instalações sem modificar arquivos
+| Recurso | Descrição |
+|---|---|
+| Help System Abrangente | `--help` em qualquer comando mostra documentação detalhada |
+| Validação de Entrada | Feedback imediato sobre parâmetros inválidos |
+| Mensagens Coloridas | Erros em vermelho, sucessos em verde, avisos em amarelo |
+| Cross-Platform | Funciona perfeitamente em Windows, macOS e Linux |
+| Suporte a Dry-Run | Teste instalações sem modificar arquivos |
 
-### 💡 Exemplos de Uso
+---
 
-#### Instalação Interativa Completa
+## 💡 Exemplos de Uso
+
+<details>
+<summary>Instalação Interativa Completa</summary>
 
 ```bash
 $ npx yard-core install
@@ -338,7 +381,10 @@ Next steps:
   yard-core --help     # See available commands
 ```
 
-#### Instalação Silenciosa (CI/CD)
+</details>
+
+<details>
+<summary>Instalação Silenciosa (CI/CD)</summary>
 
 ```bash
 # Instalação automatizada sem prompts
@@ -346,7 +392,10 @@ $ npx yard-core install --quiet --force
 ✔ YARD installed successfully
 ```
 
-#### Simulação de Instalação (Dry-Run)
+</details>
+
+<details>
+<summary>Simulação de Instalação (Dry-Run)</summary>
 
 ```bash
 # Testar instalação sem modificar arquivos
@@ -359,7 +408,10 @@ $ npx yard-core install --dry-run
 ✔ Dry run completed - no files were modified
 ```
 
-#### Diagnóstico do Sistema
+</details>
+
+<details>
+<summary>Diagnóstico do Sistema</summary>
 
 ```bash
 $ npx yard-core doctor
@@ -388,7 +440,10 @@ Dependencies:
 ✅ All checks passed! Your installation is healthy.
 ```
 
-#### Obter Ajuda
+</details>
+
+<details>
+<summary>Obter Ajuda</summary>
 
 ```bash
 $ npx yard-core --help
@@ -410,6 +465,8 @@ Commands:
 
 Run 'yard-core <command> --help' for detailed information about each command.
 ```
+
+</details>
 
 ### Alternativa: Clonar e Construir
 
@@ -441,76 +498,95 @@ npx yard-core@latest install
 # 3. Configurar agentes e workflows
 ```
 
+---
+
 ## 🌟 Além do Desenvolvimento de Software - Squads
 
 O framework de linguagem natural do YARD funciona em QUALQUER domínio. Os Squads fornecem agentes IA especializados para escrita criativa, estratégia de negócios, saúde e bem-estar, educação e muito mais. Além disso, os Squads podem expandir o núcleo do YARD com funcionalidade específica que não é genérica para todos os casos. [Veja o Guia de Squads](docs/guides/squads-guide.md) e aprenda a criar os seus próprios!
 
-## Agentes Disponíveis
+---
+
+## 🤖 Agentes Disponíveis
 
 O YARD vem com 12 agentes especializados:
 
 ### Agentes Meta
 
-- **yard-master** - Agente mestre de orquestração (inclui capacidades de desenvolvimento de framework)
-- **yard-orchestrator** - Orquestrador de fluxo de trabalho e coordenação de equipe
+| Agente | Descrição |
+|---|---|
+| **yard-master** | Agente mestre de orquestração (inclui capacidades de desenvolvimento de framework) |
+| **yard-orchestrator** | Orquestrador de fluxo de trabalho e coordenação de equipe |
 
 ### Agentes de Planejamento (Interface Web)
 
-- **analyst** - Especialista em análise de negócios e criação de PRD
-- **pm** (Product Manager) - Gerente de produto e priorização
-- **architect** - Arquiteto de sistema e design técnico
-- **ux-expert** - Design de experiência do usuário e usabilidade
+| Agente | Descrição |
+|---|---|
+| **analyst** | Especialista em análise de negócios e criação de PRD |
+| **pm** (Product Manager) | Gerente de produto e priorização |
+| **architect** | Arquiteto de sistema e design técnico |
+| **ux-expert** | Design de experiência do usuário e usabilidade |
 
 ### Agentes de Desenvolvimento (IDE)
 
-- **sm** (Scrum Master) - Gerenciamento de sprint e criação de histórias
-- **dev** - Desenvolvedor e implementação
-- **qa** - Garantia de qualidade e testes
-- **po** (Product Owner) - Gerenciamento de backlog e histórias
-- **data-engineer** - Design de banco de dados e modelagem de dados
-- **devops** - CI/CD, infraestrutura e operações git (autoridade exclusiva de push)
+| Agente | Descrição |
+|---|---|
+| **sm** (Scrum Master) | Gerenciamento de sprint e criação de histórias |
+| **dev** | Desenvolvedor e implementação |
+| **qa** | Garantia de qualidade e testes |
+| **po** (Product Owner) | Gerenciamento de backlog e histórias |
+| **data-engineer** | Design de banco de dados e modelagem de dados |
+| **devops** | CI/CD, infraestrutura e operações git (autoridade exclusiva de push) |
 
-## Documentação e Recursos
+---
+
+## 📚 Documentação e Recursos
 
 ### Guias Essenciais
 
-- 📖 **[Guia do Usuário](docs/guides/user-guide.md)** - Passo a passo completo desde a concepção até a conclusão do projeto
-- 🏗️ **[Arquitetura Principal](docs/architecture/YARD-VISUAL-OVERVIEW.md)** - Mergulho técnico profundo e design do sistema
-- 🚀 **[Guia de Squads](docs/guides/squads-guide.md)** - Estenda o YARD para qualquer domínio além do desenvolvimento de software
+- 📖 **[Guia do Usuário](docs/guides/user-guide.md)** — Passo a passo completo desde a concepção até a conclusão do projeto
+- 🏗️ **[Arquitetura Principal](docs/architecture/YARD-VISUAL-OVERVIEW.md)** — Mergulho técnico profundo e design do sistema
+- 🚀 **[Guia de Squads](docs/guides/squads-guide.md)** — Estenda o YARD para qualquer domínio além do desenvolvimento de software
 
 ### Documentação Adicional
 
-- 🤖 **[Guia de Squads](docs/guides/squads-guide.md)** - Crie e publique equipes de agentes IA
-- 📋 **[Primeiros Passos](docs/getting-started.md)** - Tutorial passo a passo para iniciantes
-- 🔧 **[Solução de Problemas](docs/troubleshooting.md)** - Soluções para problemas comuns
-- 🎯 **[Princípios Orientadores](docs/GUIDING-PRINCIPLES.md)** - Filosofia e melhores práticas do YARD
-- 🏛️ **[Visão Geral da Arquitetura](docs/architecture/YARD-VISUAL-OVERVIEW.md)** - Visão detalhada da arquitetura do sistema
-- ⚙️ **[Guia de Ajuste de Performance](docs/performance-tuning-guide.md)** - Otimize seu fluxo de trabalho YARD
-- 🔒 **[Melhores Práticas de Segurança](docs/security-best-practices.md)** - Segurança e proteção de dados
-- 🔄 **[Guia de Migração](docs/migration-guide.md)** - Migração de versões anteriores
-- 📦 **[Versionamento e Releases](docs/versioning-and-releases.md)** - Política de versões
+<details>
+<summary>Ver todos os documentos</summary>
+
+- 🤖 **[Guia de Squads](docs/guides/squads-guide.md)** — Crie e publique equipes de agentes IA
+- 📋 **[Primeiros Passos](docs/getting-started.md)** — Tutorial passo a passo para iniciantes
+- 🔧 **[Solução de Problemas](docs/troubleshooting.md)** — Soluções para problemas comuns
+- 🎯 **[Princípios Orientadores](docs/GUIDING-PRINCIPLES.md)** — Filosofia e melhores práticas do YARD
+- 🏛️ **[Visão Geral da Arquitetura](docs/architecture/YARD-VISUAL-OVERVIEW.md)** — Visão detalhada da arquitetura do sistema
+- ⚙️ **[Guia de Ajuste de Performance](docs/performance-tuning-guide.md)** — Otimize seu fluxo de trabalho YARD
+- 🔒 **[Melhores Práticas de Segurança](docs/security-best-practices.md)** — Segurança e proteção de dados
+- 🔄 **[Guia de Migração](docs/migration-guide.md)** — Migração de versões anteriores
+- 📦 **[Versionamento e Releases](docs/versioning-and-releases.md)** — Política de versões
+
+</details>
+
+---
 
 ## 🤖 YARD Autonomous Development Engine (ADE)
 
-O YARD introduz o **Autonomous Development Engine (ADE)** - um sistema completo para desenvolvimento autônomo que transforma requisitos em código funcional.
+O YARD introduz o **Autonomous Development Engine (ADE)** — um sistema completo para desenvolvimento autônomo que transforma requisitos em código funcional.
 
-### 🎯 O Que é o ADE?
+### O Que é o ADE?
 
-O ADE é um conjunto de **7 Epics** que habilitam execução autônoma de desenvolvimento:
+ADE é um conjunto de **7 Epics** que habilitam execução autônoma de desenvolvimento:
 
-| Epic  | Nome             | Descrição                                  |
-| ----- | ---------------- | ------------------------------------------ |
-| **1** | Worktree Manager | Isolamento de branches via Git worktrees   |
-| **2** | Migration V2→V3  | Migração para formato autoClaude V3        |
-| **3** | Spec Pipeline    | Transforma requisitos em specs executáveis |
+| Epic | Nome | Descrição |
+|---|---|---|
+| **1** | Worktree Manager | Isolamento de branches via Git worktrees |
+| **2** | Migration V2→V3 | Migração para formato autoClaude V3 |
+| **3** | Spec Pipeline | Transforma requisitos em specs executáveis |
 | **4** | Execution Engine | Executa specs com 13 steps + self-critique |
-| **5** | Recovery System  | Recuperação automática de falhas           |
-| **6** | QA Evolution     | Review estruturado em 10 fases             |
-| **7** | Memory Layer     | Memória persistente de padrões e insights  |
+| **5** | Recovery System | Recuperação automática de falhas |
+| **6** | QA Evolution | Review estruturado em 10 fases |
+| **7** | Memory Layer | Memória persistente de padrões e insights |
 
-### 🔄 Fluxo Principal
+### Fluxo Principal
 
-```
+```text
 User Request → Spec Pipeline → Execution Engine → QA Review → Working Code
                                       ↓
                               Recovery System
@@ -518,7 +594,7 @@ User Request → Spec Pipeline → Execution Engine → QA Review → Working Co
                                Memory Layer
 ```
 
-### ⚡ Quick Start ADE
+### Quick Start ADE
 
 ```bash
 # 1. Criar spec a partir de requisito
@@ -537,10 +613,10 @@ User Request → Spec Pipeline → Execution Engine → QA Review → Working Co
 @qa *review-build STORY-42
 ```
 
-### 📖 Documentação ADE
+### Documentação ADE
 
-- **[Guia Completo do ADE](docs/guides/ade-guide.md)** - Tutorial passo a passo
-- **[Alterações nos Agentes](docs/architecture/ADE-AGENT-CHANGES.md)** - Comandos e capabilities por agente
+- **[Guia Completo do ADE](docs/guides/ade-guide.md)** — Tutorial passo a passo
+- **[Alterações nos Agentes](docs/architecture/ADE-AGENT-CHANGES.md)** — Comandos e capabilities por agente
 - **[Epic 1 - Worktree Manager](docs/architecture/ADE-EPIC1-HANDOFF.md)**
 - **[Epic 2 - Migration V2→V3](docs/architecture/ADE-EPIC2-HANDOFF.md)**
 - **[Epic 3 - Spec Pipeline](docs/architecture/ADE-EPIC3-HANDOFF.md)**
@@ -549,38 +625,39 @@ User Request → Spec Pipeline → Execution Engine → QA Review → Working Co
 - **[Epic 6 - QA Evolution](docs/architecture/ADE-EPIC6-HANDOFF.md)**
 - **[Epic 7 - Memory Layer](docs/architecture/ADE-EPIC7-HANDOFF.md)**
 
-### 🆕 Novos Comandos por Agente
+### Novos Comandos por Agente
+
+<details>
+<summary>Ver todos os comandos ADE</summary>
 
 **@devops:**
-
 - `*create-worktree`, `*list-worktrees`, `*merge-worktree`, `*cleanup-worktrees`
 - `*inventory-assets`, `*analyze-paths`, `*migrate-agent`, `*migrate-batch`
 
 **@pm:**
-
 - `*gather-requirements`, `*write-spec`
 
 **@architect:**
-
 - `*assess-complexity`, `*create-plan`, `*create-context`, `*map-codebase`
 
 **@analyst:**
-
 - `*research-deps`, `*extract-patterns`
 
 **@qa:**
-
 - `*critique-spec`, `*review-build`, `*request-fix`, `*verify-fix`
 
 **@dev:**
-
 - `*execute-subtask`, `*track-attempt`, `*rollback`, `*capture-insights`, `*list-gotchas`, `*apply-qa-fix`
 
-## Criando Seu Próprio Squad
+</details>
+
+---
+
+## 🧩 Criando Seu Próprio Squad
 
 Squads permitem estender o YARD para qualquer domínio. Estrutura básica:
 
-```
+```text
 squads/seu-squad/
 ├── config.yaml           # Configuração do squad
 ├── agents/              # Agentes especializados
@@ -600,13 +677,16 @@ Squads são equipes modulares de agentes IA. Veja a [Visão Geral de Squads](doc
 
 ### Squads Externos
 
-- **[hybrid-ops](https://github.com/SynkraAI/yard-hybrid-ops-pedro-valerio)** - Operações híbridas humano-agente (repositório separado)
+- **[hybrid-ops](https://github.com/SynkraAI/yard-hybrid-ops-pedro-valerio)** — Operações híbridas humano-agente (repositório separado)
 
-## Yard Pro
+---
+
+## 💎 Yard Pro
 
 O **Yard Pro** (`@ernesto-langa/yard-pro`) é o módulo premium do Yard, oferecendo funcionalidades avançadas para equipes e projetos de maior escala.
 
-> **Disponibilidade restrita:** O Yard Pro está disponível exclusivamente para membros do **Yard Cohort Advanced**. [Saiba mais sobre o programa](https://yardsquad.ai).
+> [!NOTE]
+> Disponibilidade restrita: O Yard Pro está disponível exclusivamente para membros do **Yard Cohort Advanced**. [Saiba mais sobre o programa](https://yardsquad.ai).
 
 ### Instalação
 
@@ -616,53 +696,59 @@ npm install @ernesto-langa/yard-pro
 
 ### Features Premium
 
-- **Squads Avançados** - Squads especializados com capacidades expandidas
-- **Memory Layer** - Memória persistente de padrões e insights entre sessões
-- **Métricas & Analytics** - Dashboard de produtividade e métricas de desenvolvimento
-- **Integrações Enterprise** - Conectores para Jira, Linear, Notion e mais
-- **Configuração em Camadas** - Sistema de configuração L1-L4 com herança
-- **Licenciamento** - Gerenciamento de licença via `npx yard-pro activate --key <KEY>`
+| Feature | Descrição |
+|---|---|
+| **Squads Avançados** | Squads especializados com capacidades expandidas |
+| **Memory Layer** | Memória persistente de padrões e insights entre sessões |
+| **Métricas & Analytics** | Dashboard de produtividade e métricas de desenvolvimento |
+| **Integrações Enterprise** | Conectores para Jira, Linear, Notion e mais |
+| **Configuração em Camadas** | Sistema de configuração L1-L4 com herança |
+| **Licenciamento** | Gerenciamento de licença via `npx yard-pro activate --key <KEY>` |
 
 Para mais informações, execute `npx yard-pro --help` após a instalação.
 
-## Suporte
+---
 
-- 🐛 [Rastreador de Issues](https://github.com/ernesto-langa/yard-core/issues) - Bug reports e feature requests
-- 💡 [Processo de Features](docs/FEATURE_PROCESS.md) - Como propor novas funcionalidades
+## 🆘 Suporte
+
+- 🐛 [Rastreador de Issues](https://github.com/ernesto-langa/yard-core/issues) — Bug reports e feature requests
+- 💡 [Processo de Features](docs/FEATURE_PROCESS.md) — Como propor novas funcionalidades
 - 📋 [Como Contribuir](CONTRIBUTING.md)
-- 🗺️ [Roadmap](docs/roadmap.md) - Veja o que estamos construindo
-- 🤖 [Guia de Squads](docs/guides/squads-guide.md) - Crie equipes de agentes IA
+- 🗺️ [Roadmap](docs/roadmap.md) — Veja o que estamos construindo
+- 🤖 [Guia de Squads](docs/guides/squads-guide.md) — Crie equipes de agentes IA
 
-## Git Workflow e Validação
+---
 
-O YARD implementa um sistema de validação de múltiplas camadas para garantir qualidade do código e consistência:
+## 🛡️ Git Workflow e Validação
 
-### 🛡️ Defense in Depth - 3 Camadas de Validação
+O YARD implementa um sistema de validação de múltiplas camadas para garantir qualidade do código e consistência.
 
-**Camada 1: Pre-commit (Local - Rápida)**
+### Defense in Depth — 3 Camadas de Validação
 
-- ✅ ESLint - Qualidade de código
-- ✅ TypeScript - Verificação de tipos
-- ⚡ Performance: <5s
-- 💾 Cache habilitado
+**Camada 1: Pre-commit (Local — Rápida)**
 
-**Camada 2: Pre-push (Local - Validação de Stories)**
+- ESLint — Qualidade de código
+- TypeScript — Verificação de tipos
+- Performance: <5s
+- Cache habilitado
 
-- ✅ Validação de checkboxes de histórias
-- ✅ Consistência de status
-- ✅ Seções obrigatórias
+**Camada 2: Pre-push (Local — Validação de Stories)**
 
-**Camada 3: CI/CD (Cloud - Obrigatório para merge)**
+- Validação de checkboxes de histórias
+- Consistência de status
+- Seções obrigatórias
 
-- ✅ Todos os testes
-- ✅ Cobertura de testes (80% mínimo)
-- ✅ Validações completas
-- ✅ GitHub Actions
+**Camada 3: CI/CD (Cloud — Obrigatório para merge)**
 
-### 📖 Documentação Detalhada
+- Todos os testes
+- Cobertura de testes (80% mínimo)
+- Validações completas
+- GitHub Actions
 
-- 📋 **[Guia Completo de Git Workflow](docs/git-workflow-guide.md)** - Guia detalhado do fluxo de trabalho
-- 📋 **[CONTRIBUTING.md](CONTRIBUTING.md)** - Guia de contribuição
+### Documentação Detalhada
+
+- 📋 **[Guia Completo de Git Workflow](docs/git-workflow-guide.md)** — Guia detalhado do fluxo de trabalho
+- 📋 **[CONTRIBUTING.md](CONTRIBUTING.md)** — Guia de contribuição
 
 ### Comandos Disponíveis
 
@@ -687,14 +773,13 @@ Configure proteção da branch master com:
 node scripts/setup-branch-protection.js
 ```
 
-Requer:
+Requer GitHub CLI (`gh`) instalado e autenticado, e acesso de admin ao repositório.
 
-- GitHub CLI (gh) instalado e autenticado
-- Acesso de admin ao repositório
+---
 
-## Contribuindo
+## 🤝 Contribuindo
 
-**Estamos empolgados com contribuições e acolhemos suas ideias, melhorias e Squads!** 🎉
+Estamos empolgados com contribuições e acolhemos suas ideias, melhorias e Squads!
 
 Para contribuir:
 
@@ -709,38 +794,23 @@ Veja também:
 - 📋 [Como Contribuir com Pull Requests](docs/how-to-contribute-with-pull-requests.md)
 - 📋 [Guia de Git Workflow](docs/git-workflow-guide.md)
 
+---
+
 ## 📄 Legal
 
-| Documento             | English                                     | Português                             |
-| --------------------- | ------------------------------------------- | ------------------------------------- |
-| **Licença**           | [MIT License](LICENSE)                      | -                                     |
-| **Modelo de Licença** | [Core vs Pro](docs/legal/license-clarification.md) | -                               |
-| **Privacidade**       | [Privacy Policy](docs/legal/privacy.md)     | -                                     |
-| **Termos de Uso**     | [Terms of Use](docs/legal/terms.md)         | -                                     |
-| **Código de Conduta** | [Code of Conduct](CODE_OF_CONDUCT.md)       | [PT-BR](docs/pt/code-of-conduct.md)   |
-| **Contribuição**      | [Contributing](CONTRIBUTING.md)             | [PT-BR](docs/pt/contributing.md)      |
-| **Segurança**         | [Security](docs/security.md)                | [PT-BR](docs/pt/security.md)          |
-| **Comunidade**        | [Community](docs/community.md)              | [PT-BR](docs/pt/community.md)         |
-| **Roadmap**           | [Roadmap](docs/roadmap.md)                  | [PT-BR](docs/pt/roadmap.md)           |
-| **Changelog**         | [Version History](CHANGELOG.md)             | -                                     |
-
-## Contribuidores
-
-[![Contributors](https://contrib.rocks/image?repo=ernesto-langa/yard-core)](https://github.com/ernesto-langa/yard-core/graphs/contributors)
-
-### 🌟 Contribuidores da Comunidade
-
-<!-- prettier-ignore-start -->
-<!-- Manually maintained — add new community contributors here -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/nikolasdehor"><img src="https://github.com/nikolasdehor.png?size=100" width="100px;" alt="Nikolas de Hor"/><br /><sub><b>Nikolas de Hor</b></sub></a><br />💻🐛⚠️👀</td>
-  </tr>
-</table>
-<!-- prettier-ignore-end -->
-
-<sub>Construído com ❤️ para a comunidade de desenvolvimento assistido por IA</sub>
+| Documento | English | Português |
+|---|---|---|
+| **Licença** | [MIT License](LICENSE) | — |
+| **Modelo de Licença** | [Core vs Pro](docs/legal/license-clarification.md) | — |
+| **Privacidade** | [Privacy Policy](docs/legal/privacy.md) | — |
+| **Termos de Uso** | [Terms of Use](docs/legal/terms.md) | — |
+| **Código de Conduta** | [Code of Conduct](CODE_OF_CONDUCT.md) | [PT-BR](docs/pt/code-of-conduct.md) |
+| **Contribuição** | [Contributing](CONTRIBUTING.md) | [PT-BR](docs/pt/contributing.md) |
+| **Segurança** | [Security](docs/security.md) | [PT-BR](docs/pt/security.md) |
+| **Comunidade** | [Community](docs/community.md) | [PT-BR](docs/pt/community.md) |
+| **Roadmap** | [Roadmap](docs/roadmap.md) | [PT-BR](docs/pt/roadmap.md) |
+| **Changelog** | [Version History](CHANGELOG.md) | — |
 
 ---
 
-**[⬆ Voltar ao topo](#yard-squad-artificial-intelligence-orchestration-experience)**
+[Voltar ao topo](#yard-orquestração-por-inteligência-artificial)
