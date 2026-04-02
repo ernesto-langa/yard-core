@@ -1,26 +1,26 @@
-# AGENTS.md - Synkra AIOX (Codex CLI)
+# AGENTS.md - Synkra YARD (Codex CLI)
 
 Este arquivo define as instrucoes do projeto para o Codex CLI.
 
-<!-- AIOX-MANAGED-START: core -->
+<!-- YARD-MANAGED-START: core -->
 ## Core Rules
 
 1. Siga a Constitution em `.yard-core/constitution.md`
 2. Priorize `CLI First -> Observability Second -> UI Third`
 3. Trabalhe por stories em `docs/stories/`
 4. Nao invente requisitos fora dos artefatos existentes
-<!-- AIOX-MANAGED-END: core -->
+<!-- YARD-MANAGED-END: core -->
 
-<!-- AIOX-MANAGED-START: quality -->
+<!-- YARD-MANAGED-START: quality -->
 ## Quality Gates
 
 - Rode `npm run lint`
 - Rode `npm run typecheck`
 - Rode `npm test`
 - Atualize checklist e file list da story antes de concluir
-<!-- AIOX-MANAGED-END: quality -->
+<!-- YARD-MANAGED-END: quality -->
 
-<!-- AIOX-MANAGED-START: codebase -->
+<!-- YARD-MANAGED-START: codebase -->
 ## Project Map
 
 - Core framework: `.yard-core/`
@@ -28,9 +28,9 @@ Este arquivo define as instrucoes do projeto para o Codex CLI.
 - Shared packages: `packages/`
 - Tests: `tests/`
 - Docs: `docs/`
-<!-- AIOX-MANAGED-END: codebase -->
+<!-- YARD-MANAGED-END: codebase -->
 
-<!-- AIOX-MANAGED-START: commands -->
+<!-- YARD-MANAGED-START: commands -->
 ## Common Commands
 
 - `npm run sync:ide`
@@ -39,13 +39,13 @@ Este arquivo define as instrucoes do projeto para o Codex CLI.
 - `npm run sync:skills:codex:global` (opcional; neste repo o padrao e local-first)
 - `npm run validate:structure`
 - `npm run validate:agents`
-<!-- AIOX-MANAGED-END: commands -->
+<!-- YARD-MANAGED-END: commands -->
 
-<!-- AIOX-MANAGED-START: shortcuts -->
+<!-- YARD-MANAGED-START: shortcuts -->
 ## Agent Shortcuts
 
 Preferencia de ativacao no Codex CLI:
-1. Use `/skills` e selecione `aiox-<agent-id>` vindo de `.codex/skills` (ex.: `aiox-architect`)
+1. Use `/skills` e selecione `yard-<agent-id>` vindo de `.codex/skills` (ex.: `yard-architect`)
 2. Se preferir, use os atalhos abaixo (`@architect`, `/architect`, etc.)
 
 Interprete os atalhos abaixo carregando o arquivo correspondente em `.yard-core/development/agents/` (fallback: `.codex/agents/`), renderize o greeting via `generate-greeting.js` e assuma a persona ate `*exit`:
@@ -61,5 +61,5 @@ Interprete os atalhos abaixo carregando o arquivo correspondente em `.yard-core/
 - `@data-engineer`, `/data-engineer`, `/data-engineer.md` -> `.yard-core/development/agents/data-engineer.md`
 - `@ux-design-expert`, `/ux-design-expert`, `/ux-design-expert.md` -> `.yard-core/development/agents/ux-design-expert.md`
 - `@squad-creator`, `/squad-creator`, `/squad-creator.md` -> `.yard-core/development/agents/squad-creator.md`
-- `@aiox-master`, `/aiox-master`, `/aiox-master.md` -> `.yard-core/development/agents/aiox-master.md`
-<!-- AIOX-MANAGED-END: shortcuts -->
+- `@yard-master`, `/yard-master`, `/yard-master.md` -> `.yard-core/development/agents/yard-master.md`
+<!-- YARD-MANAGED-END: shortcuts -->

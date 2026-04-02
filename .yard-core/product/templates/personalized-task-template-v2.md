@@ -40,7 +40,7 @@
 
 ---
 
-## Task Definition (AIOX Task Format V1.0)
+## Task Definition (YARD Task Format V1.0)
 
 ```yaml
 task: {taskIdentifier()}
@@ -890,7 +890,7 @@ atomic_layer: Molecule
 
 ## Notes
 
-- **CRITICAL:** Follow AIOX Task Format Specification V1.0 exactly
+- **CRITICAL:** Follow YARD Task Format Specification V1.0 exactly
 - **CRITICAL:** All outputs use standardized template (familiaridade = produtividade)
 - **CRITICAL:** Track duration and tokens for all executions
 - **CRITICAL:** Use agent's vocabulary and tone consistently
@@ -901,5 +901,5 @@ atomic_layer: Molecule
 
 **Template Version:** 2.0
 **Last Updated:** 2025-01-14
-**Applies to:** All tasks with AIOX Task Format V1.0 + Personalized Agents (Story 6.1.2+)
+**Applies to:** All tasks with YARD Task Format V1.0 + Personalized Agents (Story 6.1.2+)
 **Breaking Changes:** Yes (from v1.0 - added execution modes, restructured checklist)

@@ -1,26 +1,26 @@
-# Gemini Rules - Synkra AIOX
+# Gemini Rules - Synkra YARD
 
 Este arquivo define as instrucoes do projeto para Gemini CLI neste repositorio.
 
-<!-- AIOX-MANAGED-START: core -->
+<!-- YARD-MANAGED-START: core -->
 ## Core Rules
 
 1. Siga a Constitution em `.yard-core/constitution.md`
 2. Priorize `CLI First -> Observability Second -> UI Third`
 3. Trabalhe por stories em `docs/stories/`
 4. Nao invente requisitos fora dos artefatos existentes
-<!-- AIOX-MANAGED-END: core -->
+<!-- YARD-MANAGED-END: core -->
 
-<!-- AIOX-MANAGED-START: quality -->
+<!-- YARD-MANAGED-START: quality -->
 ## Quality Gates
 
 - Rode `npm run lint`
 - Rode `npm run typecheck`
 - Rode `npm test`
 - Atualize checklist e file list da story antes de concluir
-<!-- AIOX-MANAGED-END: quality -->
+<!-- YARD-MANAGED-END: quality -->
 
-<!-- AIOX-MANAGED-START: codebase -->
+<!-- YARD-MANAGED-START: codebase -->
 ## Project Map
 
 - Core framework: `.yard-core/`
@@ -28,14 +28,14 @@ Este arquivo define as instrucoes do projeto para Gemini CLI neste repositorio.
 - Shared packages: `packages/`
 - Tests: `tests/`
 - Docs: `docs/`
-<!-- AIOX-MANAGED-END: codebase -->
+<!-- YARD-MANAGED-END: codebase -->
 
-<!-- AIOX-MANAGED-START: gemini-integration -->
+<!-- YARD-MANAGED-START: gemini-integration -->
 ## Gemini Integration
 
 Fonte de verdade de agentes:
 - Canonico: `.yard-core/development/agents/*.md`
-- Espelhado para Gemini: `.gemini/rules/AIOX/agents/*.md`
+- Espelhado para Gemini: `.gemini/rules/YARD/agents/*.md`
 
 Hooks e settings:
 - Hooks locais: `.gemini/hooks/`
@@ -45,21 +45,21 @@ Sempre que houver drift, execute:
 - `npm run sync:ide:gemini`
 - `npm run validate:gemini-sync`
 - `npm run validate:gemini-integration`
-<!-- AIOX-MANAGED-END: gemini-integration -->
+<!-- YARD-MANAGED-END: gemini-integration -->
 
-<!-- AIOX-MANAGED-START: parity -->
+<!-- YARD-MANAGED-START: parity -->
 ## Multi-IDE Parity
 
 Para garantir paridade entre Claude Code, Codex e Gemini:
 - `npm run validate:parity`
 - `npm run validate:paths`
-<!-- AIOX-MANAGED-END: parity -->
+<!-- YARD-MANAGED-END: parity -->
 
-<!-- AIOX-MANAGED-START: activation -->
+<!-- YARD-MANAGED-START: activation -->
 ## Agent Activation
 
 Preferencia de ativacao:
-1. Use agentes em `.gemini/rules/AIOX/agents/`
+1. Use agentes em `.gemini/rules/YARD/agents/`
 2. Se necessario, use fonte canonica em `.yard-core/development/agents/`
 
 Ao ativar agente:
@@ -68,12 +68,12 @@ Ao ativar agente:
 - manter persona ativa ate `*exit`
 
 Atalhos recomendados no Gemini:
-- `/aiox-menu` para listar agentes
-- `/aiox-<agent-id>` (ex.: `/aiox-dev`, `/aiox-architect`)
-- `/aiox-agent <agent-id>` para launcher generico
-<!-- AIOX-MANAGED-END: activation -->
+- `/yard-menu` para listar agentes
+- `/yard-<agent-id>` (ex.: `/yard-dev`, `/yard-architect`)
+- `/yard-agent <agent-id>` para launcher generico
+<!-- YARD-MANAGED-END: activation -->
 
-<!-- AIOX-MANAGED-START: commands -->
+<!-- YARD-MANAGED-START: commands -->
 ## Common Commands
 
 - `npm run sync:ide`
@@ -84,4 +84,4 @@ Atalhos recomendados no Gemini:
 - `npm run validate:parity`
 - `npm run validate:structure`
 - `npm run validate:agents`
-<!-- AIOX-MANAGED-END: commands -->
+<!-- YARD-MANAGED-END: commands -->

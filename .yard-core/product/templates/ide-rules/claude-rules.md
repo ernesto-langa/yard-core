@@ -1,17 +1,17 @@
-# Synkra AIOX Development Rules for Claude Code
+# Synkra YARD Development Rules for Claude Code
 
-You are working with Synkra AIOX, an AI-Orchestrated System for Full Stack Development.
+You are working with Synkra YARD, an AI-Orchestrated System for Full Stack Development.
 
-<!-- AIOX-MANAGED-START: core-framework -->
+<!-- YARD-MANAGED-START: core-framework -->
 ## Core Framework Understanding
 
-Synkra AIOX is a meta-framework that orchestrates AI agents to handle complex development workflows. Always recognize and work within this architecture.
-<!-- AIOX-MANAGED-END: core-framework -->
+Synkra YARD is a meta-framework that orchestrates AI agents to handle complex development workflows. Always recognize and work within this architecture.
+<!-- YARD-MANAGED-END: core-framework -->
 
-<!-- AIOX-MANAGED-START: constitution -->
+<!-- YARD-MANAGED-START: constitution -->
 ## Constitution
 
-O AIOX possui uma **Constitution formal** com princípios inegociáveis e gates automáticos.
+O YARD possui uma **Constitution formal** com princípios inegociáveis e gates automáticos.
 
 **Documento completo:** `.yard-core/constitution.md`
 
@@ -27,13 +27,13 @@ O AIOX possui uma **Constitution formal** com princípios inegociáveis e gates 
 | VI | Absolute Imports | SHOULD |
 
 **Gates automáticos bloqueiam violações.** Consulte a Constitution para detalhes completos.
-<!-- AIOX-MANAGED-END: constitution -->
+<!-- YARD-MANAGED-END: constitution -->
 
-<!-- AIOX-MANAGED-START: sistema-de-agentes -->
+<!-- YARD-MANAGED-START: sistema-de-agentes -->
 ## Sistema de Agentes
 
 ### Ativação de Agentes
-Use `@agent-name` ou `/AIOX:agents:agent-name`:
+Use `@agent-name` ou `/YARD:agents:agent-name`:
 
 | Agente | Persona | Escopo Principal |
 |--------|---------|------------------|
@@ -54,14 +54,14 @@ Use prefixo `*` para comandos:
 - `*create-story` - Criar story de desenvolvimento
 - `*task {name}` - Executar task específica
 - `*exit` - Sair do modo agente
-<!-- AIOX-MANAGED-END: sistema-de-agentes -->
+<!-- YARD-MANAGED-END: sistema-de-agentes -->
 
-<!-- AIOX-MANAGED-START: agent-system -->
+<!-- YARD-MANAGED-START: agent-system -->
 ## Agent System
 
 ### Agent Activation
 - Agents are activated with @agent-name syntax: @dev, @qa, @architect, @pm, @po, @sm, @analyst
-- The master agent is activated with @aiox-master
+- The master agent is activated with @yard-master
 - Agent commands use the * prefix: *help, *create-story, *task, *exit
 
 ### Agent Context
@@ -69,7 +69,7 @@ When an agent is active:
 - Follow that agent's specific persona and expertise
 - Use the agent's designated workflow patterns
 - Maintain the agent's perspective throughout the interaction
-<!-- AIOX-MANAGED-END: agent-system -->
+<!-- YARD-MANAGED-END: agent-system -->
 
 ## Development Methodology
 
@@ -93,8 +93,8 @@ When an agent is active:
 - Add tests for new features
 - Test edge cases and error scenarios
 
-<!-- AIOX-MANAGED-START: framework-structure -->
-## AIOX Framework Structure
+<!-- YARD-MANAGED-START: framework-structure -->
+## YARD Framework Structure
 
 ```
 yard-core/
@@ -111,16 +111,16 @@ docs/
 ├── architecture/   # System architecture documentation
 └── guides/         # User and developer guides
 ```
-<!-- AIOX-MANAGED-END: framework-structure -->
+<!-- YARD-MANAGED-END: framework-structure -->
 
-<!-- AIOX-MANAGED-START: framework-boundary -->
+<!-- YARD-MANAGED-START: framework-boundary -->
 ## Framework vs Project Boundary
 
-O AIOX usa um modelo de 4 camadas (L1-L4) para separar artefatos do framework e do projeto. Deny rules em `.claude/settings.json` reforçam isso deterministicamente.
+O YARD usa um modelo de 4 camadas (L1-L4) para separar artefatos do framework e do projeto. Deny rules em `.claude/settings.json` reforçam isso deterministicamente.
 
 | Camada | Mutabilidade | Paths | Notas |
 |--------|-------------|-------|-------|
-| **L1** Framework Core | NEVER modify | `.yard-core/core/`, `.yard-core/constitution.md`, `bin/aiox.js`, `bin/aiox-init.js` | Protegido por deny rules |
+| **L1** Framework Core | NEVER modify | `.yard-core/core/`, `.yard-core/constitution.md`, `bin/yard.js`, `bin/yard-init.js` | Protegido por deny rules |
 | **L2** Framework Templates | NEVER modify | `.yard-core/development/tasks/`, `.yard-core/development/templates/`, `.yard-core/development/checklists/`, `.yard-core/development/workflows/`, `.yard-core/infrastructure/` | Extend-only |
 | **L3** Project Config | Mutable (exceptions) | `.yard-core/data/`, `agents/*/MEMORY.md`, `core-config.yaml` | Allow rules permitem |
 | **L4** Project Runtime | ALWAYS modify | `docs/stories/`, `packages/`, `squads/`, `tests/` | Trabalho do projeto |
@@ -128,12 +128,12 @@ O AIOX usa um modelo de 4 camadas (L1-L4) para separar artefatos do framework e 
 **Toggle:** `core-config.yaml` → `boundary.frameworkProtection: true/false` controla se deny rules são ativas (default: true para projetos, false para contribuidores do framework).
 
 > **Referência formal:** `.claude/settings.json` (deny/allow rules), `.claude/rules/agent-authority.md`
-<!-- AIOX-MANAGED-END: framework-boundary -->
+<!-- YARD-MANAGED-END: framework-boundary -->
 
-<!-- AIOX-MANAGED-START: rules-system -->
+<!-- YARD-MANAGED-START: rules-system -->
 ## Rules System
 
-O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras com frontmatter `paths:` só carregam quando arquivos correspondentes são editados.
+O YARD carrega regras contextuais de `.claude/rules/` automaticamente. Regras com frontmatter `paths:` só carregam quando arquivos correspondentes são editados.
 
 | Rule File | Description |
 |-----------|-------------|
@@ -147,12 +147,12 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `workflow-execution.md` | 4 primary workflows (SDC, QA Loop, Spec Pipeline, Brownfield) |
 
 > **Diretório:** `.claude/rules/` — rules são carregadas automaticamente pelo Claude Code quando relevantes.
-<!-- AIOX-MANAGED-END: rules-system -->
+<!-- YARD-MANAGED-END: rules-system -->
 
-<!-- AIOX-MANAGED-START: code-intelligence -->
+<!-- YARD-MANAGED-START: code-intelligence -->
 ## Code Intelligence
 
-O AIOX possui um sistema de code intelligence opcional que enriquece operações com dados de análise de código.
+O YARD possui um sistema de code intelligence opcional que enriquece operações com dados de análise de código.
 
 | Status | Descrição | Comportamento |
 |--------|-----------|---------------|
@@ -162,33 +162,33 @@ O AIOX possui um sistema de code intelligence opcional que enriquece operações
 
 **Graceful Fallback:** Code intelligence é sempre opcional. `isCodeIntelAvailable()` verifica disponibilidade antes de qualquer operação. Se indisponível, o sistema retorna o resultado base sem modificação — nunca falha.
 
-**Diagnóstico:** `aiox doctor` inclui check de code-intel provider status.
+**Diagnóstico:** `yard doctor` inclui check de code-intel provider status.
 
 > **Referência:** `.yard-core/core/code-intel/` — provider interface, enricher, client
-<!-- AIOX-MANAGED-END: code-intelligence -->
+<!-- YARD-MANAGED-END: code-intelligence -->
 
-<!-- AIOX-MANAGED-START: graph-dashboard -->
+<!-- YARD-MANAGED-START: graph-dashboard -->
 ## Graph Dashboard
 
-O CLI `aiox graph` visualiza dependências, estatísticas de entidades e status de providers.
+O CLI `yard graph` visualiza dependências, estatísticas de entidades e status de providers.
 
 ### Comandos
 
 ```bash
-aiox graph --deps                        # Dependency tree (ASCII)
-aiox graph --deps --format=json          # Output como JSON
-aiox graph --deps --format=html          # Interactive HTML (abre browser)
-aiox graph --deps --format=mermaid       # Mermaid diagram
-aiox graph --deps --format=dot           # DOT format (Graphviz)
-aiox graph --deps --watch                # Live mode com auto-refresh
-aiox graph --deps --watch --interval=10  # Refresh a cada 10 segundos
-aiox graph --stats                       # Entity stats e cache metrics
+yard graph --deps                        # Dependency tree (ASCII)
+yard graph --deps --format=json          # Output como JSON
+yard graph --deps --format=html          # Interactive HTML (abre browser)
+yard graph --deps --format=mermaid       # Mermaid diagram
+yard graph --deps --format=dot           # DOT format (Graphviz)
+yard graph --deps --watch                # Live mode com auto-refresh
+yard graph --deps --watch --interval=10  # Refresh a cada 10 segundos
+yard graph --stats                       # Entity stats e cache metrics
 ```
 
 **Formatos de saída:** ascii (default), json, dot, mermaid, html
 
 > **Referência:** `.yard-core/core/graph-dashboard/` — CLI, renderers, data sources
-<!-- AIOX-MANAGED-END: graph-dashboard -->
+<!-- YARD-MANAGED-END: graph-dashboard -->
 
 ## Workflow Execution
 
@@ -243,8 +243,8 @@ try {
 - Use for PR creation: `gh pr create`
 - Check org access: `gh api user/memberships`
 
-<!-- AIOX-MANAGED-START: aiox-patterns -->
-## AIOX-Specific Patterns
+<!-- YARD-MANAGED-START: yard-patterns -->
+## YARD-Specific Patterns
 
 ### Working with Templates
 ```javascript
@@ -267,7 +267,7 @@ const story = await loadStory(storyId);
 story.updateTask(taskId, { status: 'completed' });
 await story.save();
 ```
-<!-- AIOX-MANAGED-END: aiox-patterns -->
+<!-- YARD-MANAGED-END: yard-patterns -->
 
 ## Environment Setup
 
@@ -280,12 +280,12 @@ await story.save();
 ### Configuration Files
 - `.yard/config.yaml` - Framework configuration
 - `.env` - Environment variables
-- `aiox.config.js` - Project-specific settings
+- `yard.config.js` - Project-specific settings
 
-<!-- AIOX-MANAGED-START: common-commands -->
+<!-- YARD-MANAGED-START: common-commands -->
 ## Common Commands
 
-### AIOX Master Commands
+### YARD Master Commands
 - `*help` - Show available commands
 - `*create-story` - Create new story
 - `*task {name}` - Execute specific task
@@ -296,13 +296,13 @@ await story.save();
 - `npm test` - Run tests
 - `npm run lint` - Check code style
 - `npm run build` - Build project
-<!-- AIOX-MANAGED-END: common-commands -->
+<!-- YARD-MANAGED-END: common-commands -->
 
 ## Debugging
 
 ### Enable Debug Mode
 ```bash
-export AIOX_DEBUG=true
+export YARD_DEBUG=true
 ```
 
 ### View Agent Logs
@@ -353,4 +353,4 @@ npm run trace -- workflow-name
 - Document breaking changes prominently
 
 ---
-*Synkra AIOX Claude Code Configuration v2.0*
+*Synkra YARD Claude Code Configuration v2.0*

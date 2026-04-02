@@ -5,7 +5,7 @@
 
 ## Overview
 
-This template defines the canonical activation-instructions format for AIOX agents after GreetingBuilder integration (Story 6.1.2.5).
+This template defines the canonical activation-instructions format for YARD agents after GreetingBuilder integration (Story 6.1.2.5).
 
 **Key Change**: Replaced manual greeting STEPs (2.5-5) with intelligent `GreetingBuilder` call that adapts greetings based on session context.
 
@@ -255,4 +255,4 @@ commands:
 
 ---
 
-*Template maintained by AIOX Framework Team*
+*Template maintained by YARD Framework Team*

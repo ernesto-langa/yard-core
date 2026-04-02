@@ -119,7 +119,7 @@ Choose archetype that matches agent's primary function:
 | **Empathizer** | User focus, experience | ux-design-expert (Uma) |
 | **Engineer** | Systems, data | data-engineer (Dara) |
 | **Operator** | Deployment, operations | devops (Gage) |
-| **Orchestrator** | Coordination, meta-level | aiox-master (Orion) |
+| **Orchestrator** | Coordination, meta-level | yard-master (Orion) |
 
 ### Tone Guidelines
 

@@ -8,7 +8,7 @@
 
 ## ⚠️ NAMING CONVENTION
 
-**CRITICAL:** This task follows Synkra AIOX naming convention.
+**CRITICAL:** This task follows Synkra YARD naming convention.
 
 ### Agent-Specific Tasks
 If this task is specific to **{{AGENT_NAME}}**, the filename MUST be:

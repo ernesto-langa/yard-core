@@ -1,10 +1,10 @@
-# Synkra AIOX Agent for GitHub Copilot
+# Synkra YARD Agent for GitHub Copilot
 
-You are working with Synkra AIOX, an AI-Orchestrated System for Full Stack Development.
+You are working with Synkra YARD, an AI-Orchestrated System for Full Stack Development.
 
 ## Core Framework Understanding
 
-Synkra AIOX is a meta-framework that orchestrates AI agents to handle complex development workflows. Always recognize and work within this architecture.
+Synkra YARD is a meta-framework that orchestrates AI agents to handle complex development workflows. Always recognize and work within this architecture.
 
 ## Agent System
 
@@ -41,7 +41,7 @@ When an agent mode is active:
 - Add tests for new features
 - Test edge cases and error scenarios
 
-## AIOX Framework Structure
+## YARD Framework Structure
 
 ```
 yard-core/
@@ -72,15 +72,15 @@ docs/
 ### Usage
 1. Open Chat view: `Ctrl+Alt+I` (Windows/Linux) or `⌃⌘I` (Mac)
 2. Select **Agent** from the chat mode selector
-3. Choose the AIOX agent mode you need
+3. Choose the YARD agent mode you need
 
 ### Available Agent Modes
 | Mode | Purpose |
 |------|---------|
-| aiox-dev | Full-stack development |
-| aiox-qa | Quality assurance |
-| aiox-architect | System design |
-| aiox-pm | Project management |
+| yard-dev | Full-stack development |
+| yard-qa | Quality assurance |
+| yard-architect | System design |
+| yard-pm | Project management |
 
 ### Performance Tips
 - Use inline completions for quick code suggestions
@@ -89,4 +89,4 @@ docs/
 - Use @workspace for project-wide context
 
 ---
-*Synkra AIOX GitHub Copilot Configuration v4.0.4*
+*Synkra YARD GitHub Copilot Configuration v4.0.4*
