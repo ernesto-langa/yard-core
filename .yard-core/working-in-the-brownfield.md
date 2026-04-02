@@ -11,7 +11,7 @@
 
 Brownfield development refers to adding features, fixing bugs, or modernizing existing software projects. Unlike greenfield (new) projects, brownfield work requires understanding existing code, respecting constraints, and ensuring new changes integrate seamlessly without breaking existing functionality.
 
-## When to Use AIOX for Brownfield
+## When to Use YARD for Brownfield
 
 - Add significant new features to existing applications
 - Modernize legacy codebases
@@ -22,7 +22,7 @@ Brownfield development refers to adding features, fixing bugs, or modernizing ex
 
 ## When NOT to use a Brownfield Flow
 
-If you have just completed an MVP with AIOX, and you want to continue with post-MVP, its easier to just talk to the PM and ask him to work with you to create a new epic to add into the PRD, shard out the epic, update any architecture documents with the architect, and just go from there.
+If you have just completed an MVP with YARD, and you want to continue with post-MVP, its easier to just talk to the PM and ask him to work with you to create a new epic to add into the PRD, shard out the epic, update any architecture documents with the architect, and just go from there.
 
 ## The Complete Brownfield Workflow
 
@@ -356,6 +356,6 @@ Is this a major enhancement affecting multiple systems?
 
 ## Conclusion
 
-Brownfield development with AIOX-Method provides structure and safety when modifying existing systems. The key is providing comprehensive context through documentation, using specialized templates that consider integration requirements, and following workflows that respect existing constraints while enabling progress.
+Brownfield development with YARD-Method provides structure and safety when modifying existing systems. The key is providing comprehensive context through documentation, using specialized templates that consider integration requirements, and following workflows that respect existing constraints while enabling progress.
 
 Remember: **Document First, Plan Carefully, Integrate Safely**

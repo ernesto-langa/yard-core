@@ -1,8 +1,8 @@
-# Guia do Usuário Synkra AIOX
+# Guia do Usuário Synkra YARD
 
 ## Visão Geral
 
-O Synkra AIOX é um framework de desenvolvimento full stack orientado por agentes de IA que implementa uma metodologia ágil única. Este guia explica como usar o Synkra AIOX de forma eficaz através de suas duas fases principais: **Planejamento** e **Desenvolvimento**.
+O Synkra YARD é um framework de desenvolvimento full stack orientado por agentes de IA que implementa uma metodologia ágil única. Este guia explica como usar o Synkra YARD de forma eficaz através de suas duas fases principais: **Planejamento** e **Desenvolvimento**.
 
 ### As Duas Inovações Chave
 
@@ -37,7 +37,7 @@ cd /path/to/your/project
 npx yard-core@latest install
 
 # OU usando NPM direto (produção - quando disponível)
-npx @aiox/fullstack install
+npx @yard/fullstack install
 ```
 
 **O que acontece durante a instalação**:
@@ -51,7 +51,7 @@ npx @aiox/fullstack install
 📦 Select Squads to Install:
   ◉ hybrid-ops (Pedro Valério methodology)
   ◯ expansion-creator (Create new squads)
-  ◯ aiox-infrastructure-devops (DevOps utilities)
+  ◯ yard-infrastructure-devops (DevOps utilities)
   ◯ meeting-notes (Meeting assistant)
 
 💻 Select IDEs to Configure:
@@ -110,7 +110,7 @@ your-project/
 │
 ├── .claude/                       # ✅ Se Claude Code selecionado
 │   └── commands/
-│       └── AIOX/
+│       └── YARD/
 │           ├── agents/*.md        # 11 comandos de agentes
 │           └── tasks/*.md         # 45+ comandos de tasks
 │
@@ -127,7 +127,7 @@ your-project/
 
 ### Upgrade de Instalação Existente
 
-Se você já tem AIOX instalado e quer fazer upgrade:
+Se você já tem YARD instalado e quer fazer upgrade:
 
 ```bash
 # Upgrade automático (RC.9+)
@@ -164,7 +164,7 @@ npx yard-core@latest install --help
 
 **Em desenvolvimento**: Sistema de detecção de modo de instalação
 
-O futuro comando `aiox init` permitirá escolher explicitamente entre dois modos:
+O futuro comando `yard init` permitirá escolher explicitamente entre dois modos:
 
 #### Framework Development Mode
 - Para desenvolvedores contribuindo ao Yard
@@ -173,7 +173,7 @@ O futuro comando `aiox init` permitirá escolher explicitamente entre dois modos
 - Quality gates testam integridade do framework
 
 #### Project Development Mode
-- Para desenvolvedores usando AIOX em seus projetos
+- Para desenvolvedores usando YARD em seus projetos
 - `.yard-core/` é dependência (gitignored)
 - Mudanças NÃO modificam o framework
 - Quality gates testam seu projeto
@@ -225,7 +225,7 @@ npx yard-core@latest install --force-upgrade
 
 ## Fluxo de Trabalho de Planejamento e Execução
 
-O Synkra AIOX usa uma abordagem de duas fases que separa planejamento estratégico de implementação tática:
+O Synkra YARD usa uma abordagem de duas fases que separa planejamento estratégico de implementação tática:
 
 ### Fase 1: Planejamento (Interface Web)
 
@@ -477,7 +477,7 @@ O **po** (Product Owner) gerencia o backlog:
 
 ## Capacidades do Test Architect (QA Agent)
 
-O agente **qa** do Synkra AIOX inclui capacidades avançadas de arquitetura de testes:
+O agente **qa** do Synkra YARD inclui capacidades avançadas de arquitetura de testes:
 
 ### 1. Perfil de Risco e Priorização
 
@@ -581,13 +581,13 @@ O agente **qa** monitora:
    - Nenhuma configuração manual necessária
 
 2. **Recursos especiais**:
-   - Reconhecimento automático de comandos AIOX
+   - Reconhecimento automático de comandos YARD
    - Integração com workflows e tasks
    - Rastreamento automático de checkboxes
 
 ## Sistema de Preferências Técnicas
 
-O Synkra AIOX permite configurar preferências técnicas que influenciam decisões dos agentes:
+O Synkra YARD permite configurar preferências técnicas que influenciam decisões dos agentes:
 
 ### Definir Preferências
 
@@ -819,7 +819,7 @@ O agente @github-devops funciona com QUALQUER repositório git:
 # Output:
 # Repository: github.com/ernesto-langa/yard-core
 # Mode: framework-development
-# Quality Gates: Testes do framework AIOX
+# Quality Gates: Testes do framework YARD
 ```
 
 **Modo Project Development** (futuro):
@@ -1132,7 +1132,7 @@ Todos os critérios atendidos
 
 ## Trabalhando em Projetos Brownfield
 
-Ao integrar Synkra AIOX em projetos existentes:
+Ao integrar Synkra YARD em projetos existentes:
 
 ### 1. Análise Inicial
 
@@ -1230,11 +1230,11 @@ Ao integrar Synkra AIOX em projetos existentes:
 
 ## Meta-Agentes
 
-O Synkra AIOX inclui meta-agentes para orquestração:
+O Synkra YARD inclui meta-agentes para orquestração:
 
-### aiox-master
+### yard-master
 
-O **aiox-master** é o agente de orquestração principal:
+O **yard-master** é o agente de orquestração principal:
 
 **Capacidades**:
 - Coordenar múltiplos agentes
@@ -1247,9 +1247,9 @@ O **aiox-master** é o agente de orquestração principal:
 - Workflows automatizados
 - Situações que requerem decisões contextuais
 
-### aiox-orchestrator
+### yard-orchestrator
 
-O **aiox-orchestrator** gerencia fluxos de trabalho:
+O **yard-orchestrator** gerencia fluxos de trabalho:
 
 **Funções**:
 - Sequenciar tarefas entre agentes
@@ -1257,9 +1257,9 @@ O **aiox-orchestrator** gerencia fluxos de trabalho:
 - Monitorar progresso
 - Coordenar handoffs
 
-### aiox-developer
+### yard-developer
 
-O **aiox-developer** é o meta-agente para o próprio AIOX:
+O **yard-developer** é o meta-agente para o próprio YARD:
 
 **Uso**:
 - Criar novos agentes
@@ -1268,22 +1268,22 @@ O **aiox-developer** é o meta-agente para o próprio AIOX:
 - Customizar comportamentos
 
 ```
-@aiox-developer
+@yard-developer
 *create-agent "custom-agent"
 
-[aiox-developer guiará você na criação de um novo agente]
+[yard-developer guiará você na criação de um novo agente]
 ```
 
 ## Expansão e Customização
 
 ### Squads
 
-O Synkra AIOX suporta squads para domínios específicos:
+O Synkra YARD suporta squads para domínios específicos:
 
 **Disponíveis durante instalação**:
 - **hybrid-ops** - Metodologia Pedro Valério (operações híbridas humano-agente)
 - **expansion-creator** - Ferramentas para criar novos squads
-- **aiox-infrastructure-devops** - Utilities de DevOps e infraestrutura
+- **yard-infrastructure-devops** - Utilities de DevOps e infraestrutura
 - **meeting-notes** - Assistente de notas e atas de reuniões
 
 **Configurar squads na instalação**:
@@ -1295,7 +1295,7 @@ npx yard-core@latest install
 # 📦 Select Squads to Install:
 #   ◉ hybrid-ops
 #   ◯ expansion-creator
-#   ◯ aiox-infrastructure-devops
+#   ◯ yard-infrastructure-devops
 #   ◯ meeting-notes
 ```
 
@@ -1310,10 +1310,10 @@ npx yard-core@latest install
 
 ### Criar Seus Próprios Agentes
 
-Use o **aiox-developer** para criar agentes customizados:
+Use o **yard-developer** para criar agentes customizados:
 
 ```
-@aiox-developer
+@yard-developer
 *create-agent
 
 [Siga a elicitação interativa:]
@@ -1359,7 +1359,7 @@ Use este checklist para garantir que está seguindo o workflow corretamente:
 - [ ] Stories priorizadas pelo po
 - [ ] Working directory configurado
 - [ ] Repositório Git inicializado
-- [ ] IDE configurado com regras AIOX
+- [ ] IDE configurado com regras YARD
 
 ### Para Cada Story
 - [ ] Story lida completamente
@@ -1387,7 +1387,7 @@ Use este checklist para garantir que está seguindo o workflow corretamente:
 
 ### Documentação
 - [Guia de Instalação](../docs/getting-started.md)
-- [Arquitetura do AIOX](../docs/architecture.md)
+- [Arquitetura do YARD](../docs/architecture.md)
 - [Guia de Squads](../docs/Squads.md)
 - [Trabalhando em Brownfield](./working-in-the-brownfield.md)
 
@@ -1405,5 +1405,5 @@ Veja `Squads/` para exemplos de:
 
 **Nota**: Este guia é uma visão geral. Para detalhes específicos de implementação, consulte a documentação técnica na pasta `docs/`.
 
-*Synkra AIOX User Guide v2.0*
+*Synkra YARD User Guide v2.0*
 *Última atualização: Janeiro 2025*
