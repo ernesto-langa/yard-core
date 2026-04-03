@@ -8,7 +8,7 @@
 # - File types for categorization
 #
 version: 1.0.0
-generated_at: "2026-04-03T14:52:37.616Z"
+generated_at: "2026-04-03T15:05:25.871Z"
 generator: scripts/generate-install-manifest.js
 file_count: 1003
 files:
@@ -2985,9 +2985,9 @@ files:
     type: script
     size: 8559
   - path: infrastructure/scripts/llm-routing/templates/claude-free-tracked.cmd
-    hash: sha256:beee91404492d74f864b82502e28df1df73eaa776a8406d68d486a2c13cbb4fc
+    hash: sha256:353e59b8fc9932505baaf0cec5d740f5fe32ed4f78cd405a4324c2595d79e8da
     type: template
-    size: 4132
+    size: 4137
   - path: infrastructure/scripts/llm-routing/templates/claude-free-tracked.sh
     hash: sha256:be1904080b79ec25fbb9fad09465853ecc7c468dcbc005e4bc44af0e23dc6d46
     type: template
@@ -3009,17 +3009,17 @@ files:
     type: template
     size: 481
   - path: infrastructure/scripts/llm-routing/templates/deepseek-proxy.cmd
-    hash: sha256:cec120390fa10bebf2a18728030ef6a8dda81342b034c26830a93ae36cf9dd4a
+    hash: sha256:c520be62f5c9d85f7886cb66a5b902c68496b41c97a23a66b791202c8d47cb42
     type: template
-    size: 2061
+    size: 2066
   - path: infrastructure/scripts/llm-routing/templates/deepseek-proxy.sh
     hash: sha256:c8c2fb5f5911be6d2b137558000637bd1bceef7fcf5849517a954920ab86f446
     type: template
     size: 2204
   - path: infrastructure/scripts/llm-routing/templates/deepseek-usage.cmd
-    hash: sha256:62ed5629bcfed05b5fd95f3e849ed6b9c380477c40c1234118f4aa1bdb0b86d3
+    hash: sha256:07d2ea6b1faa7b792e73211947a27524c5ef49c2de46f574faac203616ad5852
     type: template
-    size: 1828
+    size: 1833
   - path: infrastructure/scripts/llm-routing/templates/deepseek-usage.sh
     hash: sha256:d38e07b3a1bbb4d36f6613376b155fec65bc6be45d1762e9502f18f79770565b
     type: template
@@ -3937,9 +3937,9 @@ files:
     type: script
     size: 1330
   - path: scripts/update-yard.sh
-    hash: sha256:f9df1e06cb6aa844854b99037a4a93ba9d1d45a971c42291fb1545f6bef4361f
+    hash: sha256:f88a624888ed4228f222f51bf767cd2971a269bc29987f898351a52374921cae
     type: script
-    size: 6083
+    size: 6088
   - path: user-guide.md
     hash: sha256:4848b0b8505196b562bce4a5ad8aaf508a9ee7f29ce04eba886caee66bf23ba3
     type: documentation
