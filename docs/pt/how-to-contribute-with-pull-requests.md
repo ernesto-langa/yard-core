@@ -28,7 +28,7 @@ Um pull request (PR) é como você propõe mudanças para um projeto no GitHub. 
 
 ### 1. Fazer Fork do Repositório
 
-1. Vá para o [repositório Synkra YARD](https://github.com/ernesto-langa/yard-core)
+1. Vá para o [repositório YARD-Framework](https://github.com/ernesto-langa/yard-core)
 2. Clique no botão "Fork" no canto superior direito
 3. Isso cria sua própria cópia do projeto
 

@@ -454,7 +454,7 @@ No scripts are truly orphaned -- all have at least one reference in the `install
 
 All scripts are located under:
 ```
-C:\Users\AllFluence-User\Workspaces\YARD\SynkraAI\yard-core\.yard-core\development\scripts\
+C:\Users\AllFluence-User\Workspaces\YARD\YardAI\yard-core\.yard-core\development\scripts\
 ```
 
 Full absolute paths for top-level scripts:

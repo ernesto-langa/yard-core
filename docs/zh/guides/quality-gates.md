@@ -4,7 +4,7 @@
 
 ---
 
-Synkra YARD 的 3 层质量门控系统综合指南。
+YARD-Framework 的 3 层质量门控系统综合指南。
 
 **版本：** 2.1.0
 **最后更新：** 2025-12-01
@@ -459,4 +459,4 @@ yard qa run --layer=1 --fail-fast
 
 ---
 
-_Synkra YARD v4 质量门控系统指南_
+_YARD-Framework v4 质量门控系统指南_

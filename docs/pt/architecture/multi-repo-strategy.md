@@ -43,7 +43,7 @@ YARD v4 adota uma **estratégia multi-repositório** para viabilizar desenvolvim
 ## Estrutura de Repositórios
 
 ```
-Organização SynkraAI
+Organização YardAI
 ├── REPOSITÓRIOS PÚBLICOS
 │   ├── yard-core          # Framework principal (MIT)
 │   ├── yard-squads        # Squads comunitárias (MIT)
@@ -64,7 +64,7 @@ Organização SynkraAI
 │   ═══════════════════════                                                │
 │                                                                          │
 │   ┌────────────────────┐     ┌────────────────────┐                     │
-│   │  SynkraAI/         │     │  SynkraAI/         │                     │
+│   │  YardAI/         │     │  YardAI/         │                     │
 │   │  yard-core         │     │  yard-squads       │                     │
 │   │  (MIT)  │◄────│  (MIT)             │                     │
 │   │                    │     │                    │                     │
@@ -77,7 +77,7 @@ Organização SynkraAI
 │            │ dependência opcional                                        │
 │            ▼                                                             │
 │   ┌────────────────────┐                                                │
-│   │  SynkraAI/         │                                                │
+│   │  YardAI/         │                                                │
 │   │  mcp-ecosystem     │                                                │
 │   │  (Apache 2.0)      │                                                │
 │   │                    │                                                │
@@ -90,7 +90,7 @@ Organização SynkraAI
 │   ═══════════════════════                                                │
 │                                                                          │
 │   ┌────────────────────┐     ┌────────────────────┐                     │
-│   │  SynkraAI/mmos     │     │  SynkraAI/         │                     │
+│   │  YardAI/mmos     │     │  YardAI/         │                     │
 │   │  (Proprietário+NDA)│     │  certified-partners│                     │
 │   │                    │     │  (Proprietário)    │                     │
 │   │  - MMOS Minds      │     │  - Squads Premium  │                     │
@@ -238,7 +238,7 @@ npm install @yard/mcp-presets
 
 ## Repositórios Privados
 
-### SynkraAI/mmos (Proprietário + NDA)
+### YardAI/mmos (Proprietário + NDA)
 
 Contém componentes proprietários MMOS (Mental Model Operating System):
 
@@ -249,7 +249,7 @@ Contém componentes proprietários MMOS (Mental Model Operating System):
 
 **Acesso:** Requer NDA e acordo de licenciamento.
 
-### SynkraAI/certified-partners (Proprietário)
+### YardAI/certified-partners (Proprietário)
 
 Recursos para parceiros YARD certificados:
 
@@ -293,10 +293,10 @@ Para projetos que precisam de múltiplos repositórios:
 
 ```bash
 # Adicionar squads como submódulo
-git submodule add https://github.com/SynkraAI/yard-squads.git squads
+git submodule add https://github.com/YardAI/yard-squads.git squads
 
 # Adicionar ecossistema MCP como submódulo
-git submodule add https://github.com/SynkraAI/mcp-ecosystem.git mcp
+git submodule add https://github.com/YardAI/mcp-ecosystem.git mcp
 ```
 
 ### Dependências npm (Recomendado)

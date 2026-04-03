@@ -4,7 +4,7 @@
 
 ---
 
-> Complete guide to hardening security for Synkra YARD deployments - from development to production.
+> Complete guide to hardening security for YARD-Framework deployments - from development to production.
 
 **Version:** 2.1.0
 **Last Updated:** 2026-01-29
@@ -29,7 +29,7 @@
 
 ## Security Overview
 
-Synkra YARD operates at a privileged layer between AI models and your system. This guide covers hardening strategies specific to AI-orchestrated development environments.
+YARD-Framework operates at a privileged layer between AI models and your system. This guide covers hardening strategies specific to AI-orchestrated development environments.
 
 ### Security Architecture
 
@@ -1283,7 +1283,7 @@ function validateProductionSecurity() {
 
 ### Responsible Disclosure Policy
 
-If you discover a security vulnerability in Synkra YARD, please follow responsible disclosure practices:
+If you discover a security vulnerability in YARD-Framework, please follow responsible disclosure practices:
 
 ### Reporting Process
 
@@ -1343,7 +1343,7 @@ Contributors who responsibly disclose vulnerabilities are recognized in our Secu
 
 ### Bug Bounty Program
 
-Currently, Synkra YARD does not have a formal bug bounty program. However, significant security contributions are recognized and may receive YARD Pro licenses or other recognition.
+Currently, YARD-Framework does not have a formal bug bounty program. However, significant security contributions are recognized and may receive YARD Pro licenses or other recognition.
 
 ---
 
@@ -1356,4 +1356,4 @@ Currently, Synkra YARD does not have a formal bug bounty program. However, signi
 
 ---
 
-_Synkra YARD Security Hardening Guide v4.0.4_
+_YARD-Framework Security Hardening Guide v4.0.4_

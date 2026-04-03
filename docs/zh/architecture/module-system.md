@@ -6,7 +6,7 @@
 
 ---
 
-> Synkra YARD v4.2 模块化架构完整指南。
+> YARD-Framework v4.2 模块化架构完整指南。
 
 **版本:** 2.1.0
 **上次更新:** 2025-12-01
@@ -39,7 +39,7 @@ v4.2 模块化架构解决了 v2.0 扁平结构的几个挑战：
 
 ## 模块结构
 
-Synkra YARD 将 `.yard-core/` 目录组织为四个主要模块：
+YARD-Framework 将 `.yard-core/` 目录组织为四个主要模块：
 
 ```
 .yard-core/
@@ -379,4 +379,4 @@ yard migrate --validate
 
 ---
 
-_Synkra YARD v4 模块系统架构_
+_YARD-Framework v4 模块系统架构_

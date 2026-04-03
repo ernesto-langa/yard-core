@@ -10,7 +10,7 @@
 
 ---
 
-Synkra YARD 所有元代理命令的完整参考指南。
+YARD-Framework 所有元代理命令的完整参考指南。
 
 ## 目录
 
@@ -715,7 +715,7 @@ Synkra YARD 所有元代理命令的完整参考指南。
 
 ### *update
 
-更新 Synkra YARD。
+更新 YARD-Framework。
 
 ```bash
 *update [options]

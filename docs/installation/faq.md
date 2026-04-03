@@ -1,4 +1,4 @@
-# Synkra YARD FAQ
+# YARD-Framework FAQ
 
 > 🌐 **EN** | [PT](../pt/installation/faq.md) | [ES](../es/installation/faq.md)
 

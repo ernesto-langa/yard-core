@@ -11,7 +11,7 @@
 
 ---
 
-Synkra YARD 的所有重要变更都将记录在此文件中。
+YARD-Framework 的所有重要变更都将记录在此文件中。
 
 本格式基于 [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)，
 本项目遵循 [语义化版本](https://semver.org/spec/v2.0.0.html)。
@@ -140,7 +140,7 @@ Synkra YARD 的所有重要变更都将记录在此文件中。
 
 ### 新增
 
-- Synkra YARD 首次公开发布
+- YARD-Framework 首次公开发布
 - 11 个专业 AI 代理（dev、qa、architect、pm、po、sm、analyst、ux-expert、data-engineer、devops、db-sage）
 - 任务工作流系统，含 60+ 个预构建任务
 - 模板系统，含 20+ 个文档模板

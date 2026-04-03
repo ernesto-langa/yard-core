@@ -1,4 +1,4 @@
-# Contribuindo para o Synkra YARD
+# Contribuindo para o YARD-Framework
 
 > **[English Version](CONTRIBUTING.md)**
 
@@ -538,4 +538,4 @@ Correcoes comuns:
 
 ---
 
-**Obrigado por contribuir para o Synkra YARD!**
+**Obrigado por contribuir para o YARD-Framework!**

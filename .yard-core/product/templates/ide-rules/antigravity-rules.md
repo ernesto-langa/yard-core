@@ -1,6 +1,6 @@
-# Synkra YARD Development Rules for AntiGravity
+# YARD-Framework Development Rules for AntiGravity
 
-You are working with Synkra YARD, an AI-Orchestrated System for Full Stack Development.
+You are working with YARD-Framework, an AI-Orchestrated System for Full Stack Development.
 
 ## Core Development Rules
 
@@ -112,4 +112,4 @@ async function operation() {
 ```
 
 ---
-*Synkra YARD AntiGravity Configuration v1.0*
+*YARD-Framework AntiGravity Configuration v1.0*

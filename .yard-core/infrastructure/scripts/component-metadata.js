@@ -1,5 +1,5 @@
 /**
- * Component Metadata Manager for Synkra AIOX
+ * Component Metadata Manager for YARD
  * Manages detailed metadata for all framework components
  * @module component-metadata
  */

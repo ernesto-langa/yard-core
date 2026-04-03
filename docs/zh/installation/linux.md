@@ -1,6 +1,6 @@
 <!-- 翻译：zh-CN 原文：/docs/installation/linux.md 最后同步：2026-02-22 -->
 
-# Synkra YARD Linux 安装指南
+# YARD-Framework Linux 安装指南
 
 > 🌐 [EN](../../installation/linux.md) | [PT](../pt/installation/linux.md) | [ES](../es/installation/linux.md)
 
@@ -340,7 +340,7 @@ export EDITOR=vim  # 或 code, nano 等
 
 ### XDG Base Directory 合规性
 
-Synkra YARD 遵守 XDG 目录：
+YARD-Framework 遵守 XDG 目录：
 
 ```bash
 # 数据文件：~/.local/share/yard/

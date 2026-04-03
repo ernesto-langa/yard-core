@@ -4,7 +4,7 @@
 
 ---
 
-Synkra YARD 系统指南的完整文档索引。
+YARD-Framework 系统指南的完整文档索引。
 
 ---
 

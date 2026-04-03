@@ -3,7 +3,7 @@ const path = require('path');
 const chalk = require('chalk');
 
 /**
- * Dependency impact analyzer for Synkra AIOX framework
+ * Dependency impact analyzer for YARD framework
  * Analyzes how component modifications affect dependent components
  */
 class DependencyImpactAnalyzer {

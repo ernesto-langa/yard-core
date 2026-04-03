@@ -1,4 +1,4 @@
-# Linux Installation Guide for Synkra YARD
+# Linux Installation Guide for YARD-Framework
 
 > 🌐 [EN](linux.md) | [PT](../pt/installation/linux.md) | [ES](../es/installation/linux.md)
 
@@ -341,7 +341,7 @@ export EDITOR=vim  # or code, nano, etc.
 
 ### XDG Base Directory Compliance
 
-Synkra YARD respects XDG directories:
+YARD-Framework respects XDG directories:
 
 ```bash
 # Data files: ~/.local/share/yard/

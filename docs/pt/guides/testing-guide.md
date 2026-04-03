@@ -1,10 +1,10 @@
-# Guia de Testes do Synkra YARD
+# Guia de Testes do YARD-Framework
 
 > [EN](../../guides/testing-guide.md) | **PT** | [ES](../../es/guides/testing-guide.md)
 
 ---
 
-> Guia completo sobre a estratégia de testes, ferramentas e melhores práticas do Synkra YARD.
+> Guia completo sobre a estratégia de testes, ferramentas e melhores práticas do YARD-Framework.
 
 **Versão:** 2.1.0
 **Última Atualização:** 2026-01-29
@@ -1212,4 +1212,4 @@ module.exports = {
 
 ---
 
-_Synkra YARD v4 Guia de Testes_
+_YARD-Framework v4 Guia de Testes_

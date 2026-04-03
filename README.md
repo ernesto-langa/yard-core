@@ -677,7 +677,7 @@ Squads são equipes modulares de agentes IA. Veja a [Visão Geral de Squads](doc
 
 ### Squads Externos
 
-- **[hybrid-ops](https://github.com/SynkraAI/yard-hybrid-ops-pedro-valerio)** — Operações híbridas humano-agente (repositório separado)
+- **[hybrid-ops](https://github.com/YardAI/yard-hybrid-ops-pedro-valerio)** — Operações híbridas humano-agente (repositório separado)
 
 ---
 

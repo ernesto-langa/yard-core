@@ -114,7 +114,7 @@ Estrutura esperada:
 **Localização:** `.gemini/rules.md`
 
 ```markdown
-# Regras Synkra YARD para Gemini CLI
+# Regras YARD-Framework para Gemini CLI
 
 ## Sistema de Agentes
 - Inclua contexto de agente em seus prompts
@@ -338,7 +338,7 @@ O Gemini CLI usa markdown otimizado para prompt:
 **Frase de Ativação:** "Como agente YARD dev"
 
 ## Papel
-Você é um Desenvolvedor Full Stack Sênior trabalhando com Synkra YARD.
+Você é um Desenvolvedor Full Stack Sênior trabalhando com YARD-Framework.
 
 ## Expertise
 - TypeScript/JavaScript
@@ -478,4 +478,4 @@ R: Use aliases do shell ou inclua contexto de agente nos prompts.
 
 ---
 
-*Synkra YARD - Guia da Plataforma Gemini CLI v1.0*
+*YARD-Framework - Guia da Plataforma Gemini CLI v1.0*

@@ -12,7 +12,7 @@
 
 # --- Metadata (framework portion) ---
 metadata:
-  name: "Synkra AIOX"
+  name: "YARD"
   framework_version: "4.0.0"
 
 markdownExploder: true

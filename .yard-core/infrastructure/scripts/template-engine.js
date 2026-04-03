@@ -1,5 +1,5 @@
 /**
- * Template Engine for Synkra AIOX
+ * Template Engine for YARD
  * Handles variable substitution, conditionals, and loops for component generation
  * @module template-engine
  */

@@ -4,7 +4,7 @@
 
 ---
 
-Complete reference guide for all Synkra YARD meta-agent commands.
+Complete reference guide for all YARD-Framework meta-agent commands.
 
 ## Table of Contents
 
@@ -709,7 +709,7 @@ Examples:
 
 ### *update
 
-Update Synkra YARD.
+Update YARD-Framework.
 
 ```bash
 *update [options]

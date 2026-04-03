@@ -2,7 +2,7 @@
 
 > 🌐 [EN](../../en/community/README-community-snippet-mcp.md) | [PT](../../pt/community/README-community-snippet-mcp.md) | [ES](../../es/community/README-community-snippet-mcp.md) | **ZH**
 
-> **用途:** 将此代码段复制到 `SynkraAI/mcp-ecosystem` 仓库的 README.md 中。
+> **用途:** 将此代码段复制到 `YardAI/mcp-ecosystem` 仓库的 README.md 中。
 
 ---
 
@@ -16,7 +16,7 @@
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | 🔧 **MCP 问题?**        | 使用 ["MCP 生态" 类别](https://github.com/ernesto-langa/yard-core/discussions/categories/mcp-ecosystem) |
 | 💡 **功能创意?**        | 在 ["创意" 中启动讨论](https://github.com/ernesto-langa/yard-core/discussions/categories/ideas)            |
-| 🐛 **发现错误?**          | [在此仓库中打开 issue](https://github.com/SynkraAI/mcp-ecosystem/issues/new/choose)            |
+| 🐛 **发现错误?**          | [在此仓库中打开 issue](https://github.com/YardAI/mcp-ecosystem/issues/new/choose)            |
 | 🙏 **需要帮助?**            | 在 ["问答" 中提问](https://github.com/ernesto-langa/yard-core/discussions/categories/q-a)                               |
 | 🙌 **创建了什么酷的东西?** | 在 ["展示和讲述" 中分享](https://github.com/ernesto-langa/yard-core/discussions/categories/show-and-tell)         |
 
@@ -40,7 +40,7 @@
 
 有想要的新 MCP 服务器配置吗？
 
-1. 检查现有的 [MCP 提案](https://github.com/SynkraAI/mcp-ecosystem/labels/mcp-server)
+1. 检查现有的 [MCP 提案](https://github.com/YardAI/mcp-ecosystem/labels/mcp-server)
 2. 使用 `mcp-server` 标签打开 issue
 3. 在 [MCP 生态类别](https://github.com/ernesto-langa/yard-core/discussions/categories/mcp-ecosystem) 中讨论
 

@@ -1,5 +1,5 @@
 # yamllint disable
-# Workflow Template for Synkra AIOX
+# Workflow Template for YARD
 # This template is used by aiox-developer to create new workflows
 # Variables are replaced during generation: {{VARIABLE_NAME}}
 #

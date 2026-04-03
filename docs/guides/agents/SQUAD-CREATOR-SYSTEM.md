@@ -18,7 +18,7 @@ Este sistema implementa a **arquitetura task-first** do YARD, onde tasks sao o p
 - **Criar squads** seguindo padroes e estrutura do YARD
 - **Validar squads** contra JSON Schema e especificacoes de task
 - **Listar squads** locais do projeto
-- **Distribuir squads** em 3 niveis (Local, yard-squads, Synkra API)
+- **Distribuir squads** em 3 niveis (Local, yard-squads, Yard API)
 - **Migrar squads** para formato v2 com orquestracao e skills
 - **Analisar e estender** squads existentes
 
@@ -27,7 +27,7 @@ Este sistema implementa a **arquitetura task-first** do YARD, onde tasks sao o p
 1. **Task-First Architecture**: Tasks sao o ponto de entrada, agentes orquestram
 2. **Validacao Obrigatoria**: Sempre validar antes de distribuir
 3. **JSON Schema**: Manifests validados contra schema
-4. **3 Niveis de Distribuicao**: Local, Publico (yard-squads), Marketplace (Synkra API)
+4. **3 Niveis de Distribuicao**: Local, Publico (yard-squads), Marketplace (Yard API)
 5. **Integracao com yard-core**: Squads trabalham em sinergia com o framework
 
 ---
@@ -56,7 +56,7 @@ Este sistema implementa a **arquitetura task-first** do YARD, onde tasks sao o p
 | `.yard-core/development/tasks/squad-generate-workflow.md` | `*generate-workflow` | Gera workflow de orquestracao YAML | Ativo |
 | `.yard-core/development/tasks/squad-creator-download.md` | `*download-squad` | Baixa squad do repositorio publico | Placeholder (Sprint 8) |
 | `.yard-core/development/tasks/squad-creator-publish.md` | `*publish-squad` | Publica squad no yard-squads | Placeholder (Sprint 8) |
-| `.yard-core/development/tasks/squad-creator-sync-synkra.md` | `*sync-squad-synkra` | Sincroniza squad com Synkra API | Placeholder (Sprint 8) |
+| `.yard-core/development/tasks/squad-creator-sync-synkra.md` | `*sync-squad-synkra` | Sincroniza squad com Yard API | Placeholder (Sprint 8) |
 
 ### Arquivos de Tasks Relacionadas
 
@@ -156,7 +156,7 @@ flowchart TB
 
     subgraph DISTRIBUTE["🚀 DISTRIBUTION"]
         LOCAL["📂 Local<br/>./squads/"]
-        PUBLIC["🌐 Public<br/>github.com/SynkraAI/yard-squads"]
+        PUBLIC["🌐 Public<br/>github.com/YardAI/yard-squads"]
         MARKET["💰 Marketplace<br/>api.synkra.dev/squads"]
     end
 
@@ -350,7 +350,7 @@ flowchart TB
 |---------|-----------|----------|
 | `*download-squad` | `squad-creator-download.md` | DOWNLOAD squad do yard-squads |
 | `*publish-squad` | `squad-creator-publish.md` | PUBLISH squad para yard-squads |
-| `*sync-squad-synkra` | `squad-creator-sync-synkra.md` | SYNC squad para Synkra API |
+| `*sync-squad-synkra` | `squad-creator-sync-synkra.md` | SYNC squad para Yard API |
 
 ### Comandos de Componentes Individuais
 
@@ -456,7 +456,7 @@ flowchart LR
 
     SQUADS[("📦 ./squads/")]
     YARD_SQUADS[("🌐 yard-squads")]
-    SYNKRA[("💰 Synkra API")]
+    SYNKRA[("💰 Yard API")]
 
     SC_CREATE --> SQUADS
     SC_VALIDATE --> SQUADS
@@ -564,14 +564,14 @@ flowchart LR
     end
 
     subgraph PUBLIC["🌐 Nivel 2: Publico"]
-        P_REPO["github.com/SynkraAI/yard-squads"]
+        P_REPO["github.com/YardAI/yard-squads"]
         P_DESC["Squads da comunidade (gratuitos)"]
         P_CMD["*publish-squad"]
     end
 
     subgraph MARKET["💰 Nivel 3: Marketplace"]
         M_API["api.synkra.dev/squads"]
-        M_DESC["Squads premium via Synkra API"]
+        M_DESC["Squads premium via Yard API"]
         M_CMD["*sync-squad-synkra"]
     end
 
@@ -683,7 +683,7 @@ flowchart LR
 | **Schemas** | 2 (squad-schema, squad-design-schema) |
 | **Templates** | 3 (basic, etl, agent-only) |
 | **Versoes Template** | 2 (v1 legacy, v2 orchestration) |
-| **Niveis Distribuicao** | 3 (Local, yard-squads, Synkra API) |
+| **Niveis Distribuicao** | 3 (Local, yard-squads, Yard API) |
 
 ---
 

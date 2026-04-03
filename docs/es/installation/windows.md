@@ -4,7 +4,7 @@
   Última sincronización: 2026-01-29
 -->
 
-# Guía de Instalación Windows para Synkra YARD
+# Guía de Instalación Windows para YARD-Framework
 
 > 🌐 [EN](../../installation/windows.md) | [PT](../../pt/installation/windows.md) | **ES**
 

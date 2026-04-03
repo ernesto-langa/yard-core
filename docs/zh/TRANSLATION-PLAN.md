@@ -1,4 +1,4 @@
-# Synkra YARD 中文文档翻译计划
+# YARD-Framework 中文文档翻译计划
 
 > 🌐 [EN](../TRANSLATION-PLAN.md) | [PT](../pt/TRANSLATION-PLAN.md) | [ES](../es/TRANSLATION-PLAN.md) | **ZH**
 
@@ -6,7 +6,7 @@
 
 ## 概述
 
-本文档描述了将 Synkra YARD 文档翻译成中文的完整计划。
+本文档描述了将 YARD-Framework 文档翻译成中文的完整计划。
 
 ### 翻译范围统计
 
@@ -243,7 +243,7 @@
 
 1. **保持技术准确性** - 技术术语优先使用行业标准翻译
 2. **代码不翻译** - 代码块、变量名、命令保持英文
-3. **保留品牌名** - Synkra、YARD、Claude 等品牌名不翻译
+3. **保留品牌名** - YARD、YARD、Claude 等品牌名不翻译
 4. **链接更新** - 更新文档内部链接指向中文版本
 5. **同步标记** - 每个文件标注原文版本和同步日期
 
@@ -504,5 +504,5 @@ docs/zh/
 
 ---
 
-*Synkra YARD 中文文档翻译计划 v1.0*
+*YARD-Framework 中文文档翻译计划 v1.0*
 *创建日期：2026-02-22*

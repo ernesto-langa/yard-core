@@ -105,7 +105,7 @@ Auditar o estado atual de:
 **Fonte:** `.github/CODEOWNERS`
 
 ```codeowners
-* @SynkraAI
+* @YardAI
 ```
 
 **Análise:** Ownership único no nível da organização - sem ownership granular por caminho.

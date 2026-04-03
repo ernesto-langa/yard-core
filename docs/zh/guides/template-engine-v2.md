@@ -4,7 +4,7 @@
 
 ---
 
-> 用于Synkra YARD的文档生成和变量替换引擎。
+> 用于YARD-Framework的文档生成和变量替换引擎。
 
 **版本:** 2.0
 **最后更新:** 2025-12-05
@@ -475,4 +475,4 @@ console.log('验证结果:', validation);
 
 ---
 
-_Synkra YARD模板引擎 v2.0_
+_YARD-Framework模板引擎 v2.0_

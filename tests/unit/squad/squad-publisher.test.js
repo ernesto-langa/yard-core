@@ -75,7 +75,7 @@ describe('SquadPublisher', () => {
 
   describe('Constants', () => {
     it('should export AIOX_SQUADS_REPO', () => {
-      expect(AIOX_SQUADS_REPO).toBe('SynkraAI/aiox-squads');
+      expect(AIOX_SQUADS_REPO).toBe('YardAI/aiox-squads');
     });
 
     it('should export PublisherErrorCodes enum', () => {

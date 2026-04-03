@@ -398,6 +398,6 @@ node validate-v3-schema.js .yard-core/development/agents/dev.md --strict
 
 ---
 
-_YARD V3 Schemas - Synkra Framework_
+_YARD V3 Schemas - YARD-Framework_
 _Created: 2026-01-28_
 _Updated: 2026-01-28 - Added status and known issues_

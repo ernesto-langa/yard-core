@@ -1,10 +1,10 @@
-# Synkra YARD 安全最佳实践
+# YARD-Framework 安全最佳实践
 
 > 🌐 [EN](../security-best-practices.md) | [PT](../pt/security-best-practices.md) | [ES](../es/security-best-practices.md)
 
 ---
 
-本指南为在生产环境中部署和维护 Synkra YARD 提供了全面的安全建议。
+本指南为在生产环境中部署和维护 YARD-Framework 提供了全面的安全建议。
 
 ## 目录
 
@@ -21,7 +21,7 @@
 
 ## 安全架构概述
 
-Synkra YARD 实现了多层安全方法：
+YARD-Framework 实现了多层安全方法：
 
 ```
 ┌─────────────────────────────────────────┐

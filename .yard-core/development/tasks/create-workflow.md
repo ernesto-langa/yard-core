@@ -247,7 +247,7 @@ tools:
 # Create Workflow
 
 ## Purpose
-To create a new workflow definition that orchestrates multiple agents and tasks for complex multi-step processes in Synkra YARD.
+To create a new workflow definition that orchestrates multiple agents and tasks for complex multi-step processes in YARD-Framework.
 
 ## Prerequisites
 - User authorization verified

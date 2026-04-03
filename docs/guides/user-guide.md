@@ -4,7 +4,7 @@
 
 ---
 
-Complete guide for using Synkra YARD - the AI-Orchestrated System for Full Stack Development.
+Complete guide for using YARD-Framework - the AI-Orchestrated System for Full Stack Development.
 
 **Version:** 2.1.0
 **Last Updated:** 2026-01-28
@@ -240,7 +240,7 @@ A squad is a self-contained package containing:
 
 ```
 Level 1: LOCAL        --> ./squads/           (Private)
-Level 2: YARD-SQUADS  --> github.com/SynkraAI (Public/Free)
+Level 2: YARD-SQUADS  --> github.com/YardAI (Public/Free)
 Level 3: SYNKRA API   --> api.synkra.dev      (Marketplace)
 ```
 
@@ -484,4 +484,4 @@ yard squads search {keyword}
 
 ---
 
-_Synkra YARD User Guide v4.2.11_
+_YARD-Framework User Guide v4.2.11_

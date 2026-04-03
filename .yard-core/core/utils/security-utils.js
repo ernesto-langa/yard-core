@@ -1,5 +1,5 @@
 /**
- * Security Utilities for Synkra AIOX
+ * Security Utilities for YARD
  * Provides centralized security functions for input validation and sanitization
  *
  * @module security-utils

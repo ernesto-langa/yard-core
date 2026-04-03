@@ -187,7 +187,7 @@ function generateReadme(outDir) {
 
 ## What is SYNAPSE?
 
-SYNAPSE (Synkra Adaptive Processing & State Engine) is the JIT context injection
+SYNAPSE (YARD Adaptive Processing & State Engine) is the JIT context injection
 engine for AIOX. On every user prompt, it injects \`<synapse-rules>\` with adaptive
 contextual rules through an 8-layer pipeline.
 
@@ -314,7 +314,7 @@ synapse-package/
 
 ---
 
-*SYNAPSE Context Engine v2.0 — Synkra AIOX*
+*SYNAPSE Context Engine v2.0 — YARD*
 *Generated: ${new Date().toISOString().split('T')[0]}*
 `;
 

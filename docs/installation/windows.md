@@ -1,4 +1,4 @@
-# Windows Installation Guide for Synkra YARD
+# Windows Installation Guide for YARD-Framework
 
 > 🌐 [EN](windows.md) | [PT](../pt/installation/windows.md) | [ES](../es/installation/windows.md)
 

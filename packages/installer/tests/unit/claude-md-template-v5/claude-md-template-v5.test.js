@@ -124,7 +124,7 @@ describe('CLAUDE.md Template v5 (Story INS-4.4)', () => {
     });
 
     test('upgrade adds 4 new sections to CLAUDE.md without them', async () => {
-      const existingClaudeMd = `# Synkra AIOX
+      const existingClaudeMd = `# YARD
 
 <!-- AIOX-MANAGED-START: core-framework -->
 ## Core Framework Understanding

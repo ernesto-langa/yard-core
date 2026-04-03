@@ -4,13 +4,13 @@
   Última sincronização: 2026-01-26
 -->
 
-# Melhores Práticas de Segurança do Synkra YARD
+# Melhores Práticas de Segurança do YARD-Framework
 
 > 🌐 [EN](../security-best-practices.md) | **PT** | [ES](../es/security-best-practices.md)
 
 ---
 
-Este guia fornece recomendações abrangentes de segurança para implantação e manutenção do Synkra YARD em ambientes de produção.
+Este guia fornece recomendações abrangentes de segurança para implantação e manutenção do YARD-Framework em ambientes de produção.
 
 ## Índice
 
@@ -27,7 +27,7 @@ Este guia fornece recomendações abrangentes de segurança para implantação e
 
 ## Visão Geral da Arquitetura de Segurança
 
-O Synkra YARD implementa uma abordagem de segurança em múltiplas camadas:
+O YARD-Framework implementa uma abordagem de segurança em múltiplas camadas:
 
 ```
 ┌─────────────────────────────────────────┐

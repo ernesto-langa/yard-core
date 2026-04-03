@@ -24,7 +24,7 @@
 
 ## 1. Executive Summary
 
-This document is the result of a comprehensive cross-reference analysis of every artifact in the Synkra YARD framework. The analysis was conducted in 7 phases, examining 25 entity types totaling approximately 745 tracked files.
+This document is the result of a comprehensive cross-reference analysis of every artifact in the YARD-Framework framework. The analysis was conducted in 7 phases, examining 25 entity types totaling approximately 745 tracked files.
 
 ### Key Findings
 

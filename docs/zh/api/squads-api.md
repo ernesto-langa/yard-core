@@ -2,13 +2,13 @@
 
 # Squads API 参考
 
-REST API用于将squads同步到Synkra并发现marketplace中的squads。
+REST API用于将squads同步到YARD并发现marketplace中的squads。
 
 ## 概述
 
 Squads API允许：
 
-- **同步**: 将本地squads发送到Synkra云端
+- **同步**: 将本地squads发送到YARD云端
 - **Marketplace**: 发现和浏览公共squads
 - **管理**: 更新可见性、删除squads
 
@@ -36,7 +36,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 ### 同步Squad
 
-将squad定义发送到Synkra。
+将squad定义发送到YARD。
 
 ```http
 POST /api/squads/sync
@@ -232,7 +232,7 @@ curl "https://api.synkra.ai/api/squads?tags=devops,automation&search=deploy&offi
       "name": "devops-squad",
       "version": "2.1.0",
       "description": "DevOps自动化squad",
-      "author": "SynkraAI",
+      "author": "YardAI",
       "tags": ["devops", "automation", "ci-cd"],
       "is_public": true,
       "is_official": true,
@@ -343,7 +343,7 @@ curl https://api.synkra.ai/api/squads/550e8400-e29b-41d4-a716-446655440000
     "name": "devops-squad",
     "version": "2.1.0",
     "description": "用于CI/CD管道的DevOps自动化squad",
-    "author": "SynkraAI",
+    "author": "YardAI",
     "license": "MIT",
     "slash_prefix": "devops",
     "tags": ["devops", "automation", "ci-cd"],
@@ -428,7 +428,7 @@ curl -X PATCH https://api.synkra.ai/api/squads/my-squad \
 
 ### 删除Squad
 
-从Synkra删除squad。
+从YARD删除squad。
 
 ```http
 DELETE /api/squads/:id
@@ -585,8 +585,8 @@ export SYNKRA_API_TOKEN="sk_your_api_key"
 ```json
 {
   "info": {
-    "name": "Synkra Squads API",
-    "description": "Synkra Squads Marketplace的REST API",
+    "name": "Yard Squads API",
+    "description": "Yard Squads Marketplace的REST API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [

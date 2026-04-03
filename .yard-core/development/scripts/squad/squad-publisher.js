@@ -24,7 +24,7 @@ const SAFE_NAME_PATTERN = /^[a-zA-Z0-9._-]+$/;
  * Repository for aiox-squads
  * @constant {string}
  */
-const AIOX_SQUADS_REPO = 'SynkraAI/aiox-squads';
+const AIOX_SQUADS_REPO = 'YardAI/aiox-squads';
 
 /**
  * Error codes for SquadPublisherError
@@ -114,7 +114,7 @@ class SquadPublisher {
    * @param {Object} [options={}] - Configuration options
    * @param {boolean} [options.verbose=false] - Enable verbose logging
    * @param {boolean} [options.dryRun=false] - Simulate without creating PR
-   * @param {string} [options.repo] - Target repository (default: SynkraAI/aiox-squads)
+   * @param {string} [options.repo] - Target repository (default: YardAI/aiox-squads)
    */
   constructor(options = {}) {
     this.verbose = options.verbose || false;

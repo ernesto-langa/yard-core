@@ -10,7 +10,7 @@
 
 ---
 
-> Motor de generación de documentos y sustitución de variables para Synkra YARD.
+> Motor de generación de documentos y sustitución de variables para YARD-Framework.
 
 **Versión:** 2.0
 **Última Actualización:** 2025-12-05
@@ -481,4 +481,4 @@ console.log('Validation result:', validation);
 
 ---
 
-_Synkra YARD Motor de Plantillas v2.0_
+_YARD-Framework Motor de Plantillas v2.0_

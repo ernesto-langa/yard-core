@@ -4,7 +4,7 @@
 
 Este documento describe la dirección de desarrollo planificada para YARD.
 
-> Para seguimiento detallado, consulta nuestro [Proyecto de GitHub](https://github.com/orgs/SynkraAI/projects/1)
+> Para seguimiento detallado, consulta nuestro [Proyecto de GitHub](https://github.com/orgs/YardAI/projects/1)
 
 ## Visión
 
@@ -100,7 +100,7 @@ Esta hoja de ruta pública está sincronizada con nuestra planificación interna
 
 | Hoja de Ruta Pública | Seguimiento Interno |
 |----------------|-------------------|
-| [Proyecto de GitHub](https://github.com/orgs/SynkraAI/projects/1) | `docs/stories/backlog.md` |
+| [Proyecto de GitHub](https://github.com/orgs/YardAI/projects/1) | `docs/stories/backlog.md` |
 | Características de alto nivel | Stories detalladas por sprint |
 | Cronograma trimestral | Ejecución basada en sprints |
 

@@ -1,4 +1,4 @@
-# Contributing to Synkra YARD
+# Contributing to YARD-Framework
 
 > **[Versao em Portugues](docs/pt/contributing.md)**
 
@@ -668,4 +668,4 @@ For the complete developer workflow guide, see [Pro Developer Workflow](docs/gui
 
 ---
 
-**Thank you for contributing to Synkra YARD!**
+**Thank you for contributing to YARD-Framework!**

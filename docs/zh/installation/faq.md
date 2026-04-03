@@ -1,6 +1,6 @@
 <!-- 翻译：zh-CN 原文：/docs/installation/faq.md 最后同步：2026-02-22 -->
 
-# Synkra YARD 常见问题
+# YARD-Framework 常见问题
 
 > 🌐 [EN](../../installation/faq.md) | [PT](../pt/installation/faq.md) | [ES](../es/installation/faq.md)
 

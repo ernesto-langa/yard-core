@@ -2,13 +2,13 @@
 
 # Referência da API de Squads
 
-API REST para sincronizar squads com Synkra e descobrir squads do marketplace.
+API REST para sincronizar squads com YARD e descobrir squads do marketplace.
 
 ## Visão Geral
 
 A API de Squads permite:
 
-- **Sync**: Enviar squads locais para a nuvem Synkra
+- **Sync**: Enviar squads locais para a nuvem YARD
 - **Marketplace**: Descobrir e navegar squads públicos
 - **Gerenciamento**: Atualizar visibilidade, excluir squads
 
@@ -36,7 +36,7 @@ Obtenha sua chave de API em: https://synkra.ai/settings/api-keys
 
 ### Sincronizar Squad
 
-Enviar uma definição de squad para Synkra.
+Enviar uma definição de squad para YARD.
 
 ```
 POST /api/squads/sync
@@ -232,7 +232,7 @@ curl "https://api.synkra.ai/api/squads?tags=devops,automation&search=deploy&offi
       "name": "devops-squad",
       "version": "2.1.0",
       "description": "Squad de automação DevOps",
-      "author": "SynkraAI",
+      "author": "YardAI",
       "tags": ["devops", "automation", "ci-cd"],
       "is_public": true,
       "is_official": true,
@@ -343,7 +343,7 @@ curl https://api.synkra.ai/api/squads/550e8400-e29b-41d4-a716-446655440000
     "name": "devops-squad",
     "version": "2.1.0",
     "description": "Squad de automação DevOps para pipelines CI/CD",
-    "author": "SynkraAI",
+    "author": "YardAI",
     "license": "MIT",
     "slash_prefix": "devops",
     "tags": ["devops", "automation", "ci-cd"],
@@ -428,7 +428,7 @@ curl -X PATCH https://api.synkra.ai/api/squads/my-squad \
 
 ### Excluir Squad
 
-Remover um squad do Synkra.
+Remover um squad do YARD.
 
 ```
 DELETE /api/squads/:id
@@ -585,8 +585,8 @@ Importe esta coleção no Postman ou Insomnia:
 ```json
 {
   "info": {
-    "name": "Synkra Squads API",
-    "description": "API REST para o Marketplace de Squads Synkra",
+    "name": "Yard Squads API",
+    "description": "API REST para o Marketplace de Squads YARD",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [

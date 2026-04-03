@@ -3,7 +3,7 @@ const path = require('path');
 const chalk = require('chalk');
 
 /**
- * Modification risk assessment for Synkra AIOX framework
+ * Modification risk assessment for YARD framework
  * Evaluates modification risks across multiple dimensions
  */
 class ModificationRiskAssessment {

@@ -1,5 +1,5 @@
 /**
- * Transaction Manager for Synkra AIOX
+ * Transaction Manager for YARD
  * Manages component operations with rollback support
  * @module transaction-manager
  */

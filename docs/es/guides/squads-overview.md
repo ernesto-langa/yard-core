@@ -172,8 +172,8 @@ tags:
 
 | Squad             | Version | Descripcion                           | Repositorio                                                                      |
 | ----------------- | ------- | ------------------------------------- | -------------------------------------------------------------------------------- |
-| **etl-squad**     | 2.0.0   | Recoleccion y transformacion de datos | [yard-squads/etl](https://github.com/SynkraAI/yard-squads/tree/main/etl)         |
-| **creator-squad** | 1.0.0   | Utilidades de generacion de contenido | [yard-squads/creator](https://github.com/SynkraAI/yard-squads/tree/main/creator) |
+| **etl-squad**     | 2.0.0   | Recoleccion y transformacion de datos | [yard-squads/etl](https://github.com/YardAI/yard-squads/tree/main/etl)         |
+| **creator-squad** | 1.0.0   | Utilidades de generacion de contenido | [yard-squads/creator](https://github.com/YardAI/yard-squads/tree/main/creator) |
 
 ### Niveles de Distribucion
 
@@ -182,7 +182,7 @@ tags:
 │                    DISTRIBUCION DE SQUADS                    │
 ├─────────────────────────────────────────────────────────────┤
 │  Nivel 1: LOCAL        --> ./squads/           (Privado)    │
-│  Nivel 2: YARD-SQUADS  --> github.com/SynkraAI (Publico)    │
+│  Nivel 2: YARD-SQUADS  --> github.com/YardAI (Publico)    │
 │  Nivel 3: SYNKRA API   --> api.synkra.dev      (Marketplace)│
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -276,7 +276,7 @@ Usar versionado semantico:
 ## Proximos Pasos
 
 - **Crear Tu Primer Squad:** Seguir la [Guia de Squads](./squads-guide.md) para instrucciones detalladas
-- **Explorar Squads Oficiales:** Revisar [repositorio yard-squads](https://github.com/SynkraAI/yard-squads)
+- **Explorar Squads Oficiales:** Revisar [repositorio yard-squads](https://github.com/YardAI/yard-squads)
 - **Contribuir:** Ver [Guia de Contribucion de Squads](./contributing-squads.md)
 - **Aprender Formato de Tasks:** Leer [TASK-FORMAT-SPECIFICATION-V1](../../../.yard-core/docs/standards/TASK-FORMAT-SPECIFICATION-V1.md)
 

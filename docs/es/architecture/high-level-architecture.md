@@ -150,7 +150,7 @@
 │   ═════════════════════                                                 │
 │                                                                         │
 │   ┌────────────────────┐     ┌────────────────────┐                    │
-│   │  SynkraAI/         │     │  SynkraAI/         │                    │
+│   │  YardAI/         │     │  YardAI/         │                    │
 │   │  yard-core         │     │  yard-squads       │                    │
 │   │  (MIT)  │◄────│  (MIT)             │                    │
 │   │                    │     │                    │                    │
@@ -163,7 +163,7 @@
 │            │ dependencia opcional                                       │
 │            ▼                                                            │
 │   ┌────────────────────┐                                               │
-│   │  SynkraAI/         │                                               │
+│   │  YardAI/         │                                               │
 │   │  mcp-ecosystem     │                                               │
 │   │  (Apache 2.0)      │                                               │
 │   │                    │                                               │
@@ -176,7 +176,7 @@
 │   ═════════════════════                                                 │
 │                                                                         │
 │   ┌────────────────────┐     ┌────────────────────┐                    │
-│   │  SynkraAI/mmos     │     │  SynkraAI/         │                    │
+│   │  YardAI/mmos     │     │  YardAI/         │                    │
 │   │  (Proprietary+NDA) │     │  certified-partners│                    │
 │   │                    │     │  (Proprietary)     │                    │
 │   │  • MMOS Minds      │     │  • Premium Squads  │                    │

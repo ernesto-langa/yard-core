@@ -1,12 +1,12 @@
 <!-- 翻译：zh-CN 原文：/docs/troubleshooting.md 最后同步：2026-02-22 -->
 
-# Synkra YARD 故障排除指南
+# YARD-Framework 故障排除指南
 
 > 🌐 [EN](../troubleshooting.md) | [PT](../pt/troubleshooting.md) | [ES](../es/troubleshooting.md) | **ZH**
 
 ---
 
-这份全面指南可帮助您诊断和解决 Synkra YARD 的常见问题。
+这份全面指南可帮助您诊断和解决 YARD-Framework 的常见问题。
 
 ## 目录
 

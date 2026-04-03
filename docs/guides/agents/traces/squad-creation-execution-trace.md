@@ -410,7 +410,7 @@ flowchart TD
     M --> N[Display success + next steps]
 ```
 
-**Source:** `github.com/SynkraAI/yard-squads`
+**Source:** `github.com/YardAI/yard-squads`
 
 ---
 
@@ -446,7 +446,7 @@ flowchart TD
     N --> O[Display PR URL]
 ```
 
-**Target:** `github.com/SynkraAI/yard-squads` via Pull Request
+**Target:** `github.com/YardAI/yard-squads` via Pull Request
 
 **Tools used:** github-cli (gh auth, gh pr create)
 

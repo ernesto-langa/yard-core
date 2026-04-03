@@ -1,4 +1,4 @@
-# Gemini Rules - Synkra YARD
+# Gemini Rules - YARD-Framework
 
 Este arquivo define as instrucoes do projeto para Gemini CLI neste repositorio.
 

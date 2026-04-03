@@ -1,4 +1,4 @@
-# 对 Synkra YARD 做出贡献
+# 对 YARD-Framework 做出贡献
 
 > **[葡萄牙語版本](../CONTRIBUTING-PT.md)**
 
@@ -578,4 +578,4 @@ yard setup --pro
 
 ---
 
-**感谢您对 Synkra YARD 的贡献！**
+**感谢您对 YARD-Framework 的贡献！**

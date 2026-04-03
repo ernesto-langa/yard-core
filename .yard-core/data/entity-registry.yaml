@@ -250,7 +250,7 @@ entities:
       path: .yard-core/development/tasks/architect-analyze-impact.md
       layer: L2
       type: task
-      purpose: Analyze the potential impact of proposed component modifications on the broader Synkra AIOX framework.
+      purpose: Analyze the potential impact of proposed component modifications on the broader YARD framework.
       keywords:
         - architect
         - analyze
@@ -1058,7 +1058,7 @@ entities:
       type: task
       purpose: >-
         To create a new workflow definition that orchestrates multiple agents and tasks for complex multi-step processes
-        in Synkra AIOX.
+        in YARD.
       keywords:
         - create
         - workflow
@@ -3361,7 +3361,7 @@ entities:
       path: .yard-core/development/tasks/propose-modification.md
       layer: L2
       type: task
-      purpose: Create and submit modification proposals for collaborative review and approval within the Synkra AIOX framework.
+      purpose: Create and submit modification proposals for collaborative review and approval within the YARD framework.
       keywords:
         - propose
         - modification
@@ -5588,7 +5588,7 @@ entities:
       path: .yard-core/product/templates/agent-template.yaml
       layer: L2
       type: template
-      purpose: Agent Template for Synkra AIOX
+      purpose: Agent Template for YARD
       keywords:
         - agent
         - template
@@ -6550,7 +6550,7 @@ entities:
       path: .yard-core/product/templates/ide-rules/antigravity-rules.md
       layer: L2
       type: template
-      purpose: Synkra AIOX Development Rules for AntiGravity
+      purpose: YARD Development Rules for AntiGravity
       keywords:
         - antigravity
         - rules
@@ -6579,7 +6579,7 @@ entities:
       path: .yard-core/product/templates/ide-rules/claude-rules.md
       layer: L2
       type: template
-      purpose: Synkra AIOX Development Rules for Claude Code
+      purpose: YARD Development Rules for Claude Code
       keywords:
         - claude
         - rules
@@ -6612,7 +6612,7 @@ entities:
       path: .yard-core/product/templates/ide-rules/codex-rules.md
       layer: L2
       type: template
-      purpose: AGENTS.md - Synkra AIOX (Codex CLI)
+      purpose: AGENTS.md - YARD (Codex CLI)
       keywords:
         - codex
         - rules
@@ -6647,7 +6647,7 @@ entities:
       path: .yard-core/product/templates/ide-rules/copilot-rules.md
       layer: L2
       type: template
-      purpose: Synkra AIOX Agent for GitHub Copilot
+      purpose: YARD Agent for GitHub Copilot
       keywords:
         - copilot
         - rules
@@ -6670,7 +6670,7 @@ entities:
       path: .yard-core/product/templates/ide-rules/cursor-rules.md
       layer: L2
       type: template
-      purpose: Synkra AIOX Development Rules for Cursor
+      purpose: YARD Development Rules for Cursor
       keywords:
         - cursor
         - rules
@@ -6699,7 +6699,7 @@ entities:
       path: .yard-core/product/templates/ide-rules/gemini-rules.md
       layer: L2
       type: template
-      purpose: Gemini Rules - Synkra AIOX
+      purpose: Gemini Rules - YARD
       keywords:
         - gemini
         - rules

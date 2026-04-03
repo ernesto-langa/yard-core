@@ -4,7 +4,7 @@
 
 ---
 
-> 为Synkra YARD配置全局MCP（模型上下文协议）服务器。
+> 为YARD-Framework配置全局MCP（模型上下文协议）服务器。
 
 **版本:** 2.1.1
 **最后更新:** 2025-12-23
@@ -693,4 +693,4 @@ apify-mcp-server:
 
 ---
 
-_Synkra YARD v4 MCP全局设置指南_
+_YARD-Framework v4 MCP全局设置指南_

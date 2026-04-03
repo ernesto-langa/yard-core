@@ -479,7 +479,7 @@ yard-core/
     └── multi-agent-workflow/
 ```
 
-### REPO 2: SynkraAI/squads (MIT)
+### REPO 2: YardAI/squads (MIT)
 
 ```
 squads/
@@ -501,7 +501,7 @@ squads/
     └── create-yard-squad/
 ```
 
-### REPO 3: SynkraAI/mcp-ecosystem (Apache 2.0)
+### REPO 3: YardAI/mcp-ecosystem (Apache 2.0)
 
 ```
 mcp-ecosystem/
@@ -521,7 +521,7 @@ mcp-ecosystem/
     └── cursor/
 ```
 
-### REPO 4: SynkraAI/certified-partners (Privado)
+### REPO 4: YardAI/certified-partners (Privado)
 
 ```
 certified-partners/
@@ -538,7 +538,7 @@ certified-partners/
     └── web/
 ```
 
-### REPO 5: SynkraAI/mmos (Privado + NDA)
+### REPO 5: YardAI/mmos (Privado + NDA)
 
 ```
 mmos/
@@ -719,7 +719,7 @@ outputs/                               # Runtime outputs (gitignored)
 | Versão | Data       | Alterações                                                                                                              | Autor            |
 | ------ | ---------- | ----------------------------------------------------------------------------------------------------------------------- | ---------------- |
 | 1.0    | 2025-01-15 | Documentação inicial de source tree                                                                                     | Aria (architect) |
-| 1.1    | 2025-12-14 | Atualizado org para SynkraAI, substituído Squads pelo sistema Squads [Story 6.10]                                       | Dex (dev)        |
+| 1.1    | 2025-12-14 | Atualizado org para YardAI, substituído Squads pelo sistema Squads [Story 6.10]                                       | Dex (dev)        |
 | 2.0    | 2025-12-15 | Atualização maior para refletir arquitetura modular (cli/, core/, development/, infrastructure/, product/) [Story 6.13] | Pax (PO)         |
 
 ---

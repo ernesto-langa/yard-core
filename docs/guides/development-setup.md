@@ -4,7 +4,7 @@
 
 ---
 
-Complete guide for developers who want to contribute to the Synkra YARD project.
+Complete guide for developers who want to contribute to the YARD-Framework project.
 
 **Version:** 1.0.0
 **Last Updated:** 2026-01-29
@@ -1096,7 +1096,7 @@ node --inspect node_modules/.bin/jest
 ### Contact Maintainers
 
 - See `CODEOWNERS` file for module ownership
-- Tag `@SynkraAI/core-team` for urgent issues
+- Tag `@YardAI/core-team` for urgent issues
 
 ---
 
@@ -1110,5 +1110,5 @@ node --inspect node_modules/.bin/jest
 
 ---
 
-_Synkra YARD Development Setup Guide v1.0.0_
+_YARD-Framework Development Setup Guide v1.0.0_
 _Last Updated: 2026-01-29_

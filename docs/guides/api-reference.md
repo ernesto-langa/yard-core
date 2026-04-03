@@ -4,7 +4,7 @@
 
 ---
 
-Complete API reference for Synkra YARD - the AI-Orchestrated System for Full Stack Development.
+Complete API reference for YARD-Framework - the AI-Orchestrated System for Full Stack Development.
 
 **Version:** 2.1.0
 **Last Updated:** 2026-01-29
@@ -896,4 +896,4 @@ For parallel development:
 
 ---
 
-_Synkra YARD API Reference v4.0.4_
+_YARD-Framework API Reference v4.0.4_

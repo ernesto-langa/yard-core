@@ -10,17 +10,17 @@
 
 ---
 
-Este documento lista todas las variables de entorno utilizadas por Synkra YARD y sus componentes.
+Este documento lista todas las variables de entorno utilizadas por YARD-Framework y sus componentes.
 
 ## Descripción General
 
-Synkra YARD utiliza variables de entorno para configuración, claves API e información sensible. **Nunca haga commit de variables de entorno al repositorio.**
+YARD-Framework utiliza variables de entorno para configuración, claves API e información sensible. **Nunca haga commit de variables de entorno al repositorio.**
 
 ## Variables de Entorno Requeridas
 
 ### Framework Central
 
-Actualmente, Synkra YARD no requiere ninguna variable de entorno obligatoria para operación básica. Toda la configuración se realiza a través de `core-config.yaml` y archivos de configuración de Squad.
+Actualmente, YARD-Framework no requiere ninguna variable de entorno obligatoria para operación básica. Toda la configuración se realiza a través de `core-config.yaml` y archivos de configuración de Squad.
 
 ## Variables de Entorno Opcionales
 
@@ -74,7 +74,7 @@ Los Squads privados (en el repositorio `yard-Squads`) pueden requerir variables 
 
 ### Cargando Variables de Entorno
 
-Synkra YARD usa `dotenv` (si está instalado) o el soporte nativo de variables de entorno de Node.js. Las variables de entorno se cargan automáticamente desde archivos `.env` en la raíz del proyecto.
+YARD-Framework usa `dotenv` (si está instalado) o el soporte nativo de variables de entorno de Node.js. Las variables de entorno se cargan automáticamente desde archivos `.env` en la raíz del proyecto.
 
 **Importante:** El archivo `.env` está en gitignore y nunca se hará commit al repositorio.
 

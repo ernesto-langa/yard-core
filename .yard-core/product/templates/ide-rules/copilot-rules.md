@@ -1,10 +1,10 @@
-# Synkra YARD Agent for GitHub Copilot
+# YARD-Framework Agent for GitHub Copilot
 
-You are working with Synkra YARD, an AI-Orchestrated System for Full Stack Development.
+You are working with YARD-Framework, an AI-Orchestrated System for Full Stack Development.
 
 ## Core Framework Understanding
 
-Synkra YARD is a meta-framework that orchestrates AI agents to handle complex development workflows. Always recognize and work within this architecture.
+YARD-Framework is a meta-framework that orchestrates AI agents to handle complex development workflows. Always recognize and work within this architecture.
 
 ## Agent System
 
@@ -89,4 +89,4 @@ docs/
 - Use @workspace for project-wide context
 
 ---
-*Synkra YARD GitHub Copilot Configuration v4.0.4*
+*YARD-Framework GitHub Copilot Configuration v4.0.4*

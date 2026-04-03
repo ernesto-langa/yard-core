@@ -221,8 +221,8 @@ describe('IDE Config Generator', () => {
       const content = await fs.readFile(configPath, 'utf8');
 
       // v2.1 templates use static content from .yard-core/templates/ide-rules/
-      // They contain Synkra AIOX standard rules
-      expect(content).toContain('Synkra AIOX');
+      // They contain YARD standard rules
+      expect(content).toContain('YARD');
       expect(content).toContain('Development Rules');
     });
 
@@ -241,7 +241,7 @@ describe('IDE Config Generator', () => {
 
       const content = await fs.readFile(configPath, 'utf8');
       // Should contain AIOX rules content
-      expect(content).toContain('Synkra AIOX');
+      expect(content).toContain('YARD');
     });
 
     it('should create text config files successfully', async () => {

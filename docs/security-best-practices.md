@@ -1,10 +1,10 @@
-# Synkra YARD Security Best Practices
+# YARD-Framework Security Best Practices
 
 > 🌐 **EN** | [PT](./pt/security-best-practices.md) | [ES](./es/security-best-practices.md)
 
 ---
 
-This guide provides comprehensive security recommendations for deploying and maintaining Synkra YARD in production environments.
+This guide provides comprehensive security recommendations for deploying and maintaining YARD-Framework in production environments.
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ This guide provides comprehensive security recommendations for deploying and mai
 
 ## Security Architecture Overview
 
-Synkra YARD implements a multi-layered security approach:
+YARD-Framework implements a multi-layered security approach:
 
 ```
 ┌─────────────────────────────────────────┐

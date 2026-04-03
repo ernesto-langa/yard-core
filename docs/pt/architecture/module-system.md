@@ -6,7 +6,7 @@
 
 ---
 
-> Guia completo para a arquitetura modular v4.2 do Synkra YARD.
+> Guia completo para a arquitetura modular v4.2 do YARD-Framework.
 
 **Versão:** 2.1.0
 **Última Atualização:** 2025-12-01
@@ -39,7 +39,7 @@ A arquitetura modular v4.2 aborda vários desafios da estrutura flat da v2.0:
 
 ## Estrutura de Módulos
 
-O Synkra YARD organiza o diretório `.yard-core/` em quatro módulos principais:
+O YARD-Framework organiza o diretório `.yard-core/` em quatro módulos principais:
 
 ```
 .yard-core/
@@ -379,4 +379,4 @@ Veja o [Guia de Migração](../../migration/migration-guide.md) para instruçõe
 
 ---
 
-_Arquitetura do Sistema de Módulos Synkra YARD v4_
+_Arquitetura do Sistema de Módulos YARD-Framework v4_

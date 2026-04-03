@@ -11,7 +11,7 @@
 有两种方式与社区共享你的Squad：
 
 1. **yard-squads Repository** - GitHub上的免费开源Squad
-2. **Synkra Marketplace** - 通过Synkra API的高级Squad
+2. **Yard Marketplace** - 通过Yard API的高级Squad
 
 ## 质量标准
 
@@ -153,7 +153,7 @@ dependencies:
 ```
 
 这将：
-1. Fork `SynkraAI/yard-squads` （如需要）
+1. Fork `YardAI/yard-squads` （如需要）
 2. 用你的Squad创建分支
 3. 开启审查PR
 
@@ -165,11 +165,11 @@ dependencies:
 
 时间表：通常2-5个工作日。
 
-## 发布到Synkra Marketplace
+## 发布到Yard Marketplace
 
 ### 前提条件
 
-1. Synkra账户
+1. YARD账户
 2. 配置API令牌
 3. Squad已验证
 
@@ -243,7 +243,7 @@ export SYNKRA_API_TOKEN="your-token"
 
 - [Squad开发指南](./squads-guide.md)
 - [Squad迁移指南](./squad-migration.md)
-- [yard-squads Repository](https://github.com/SynkraAI/yard-squads)
+- [yard-squads Repository](https://github.com/YardAI/yard-squads)
 
 ---
 

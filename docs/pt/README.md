@@ -6,7 +6,7 @@
 
 <div align="center">
 
-# Documentação Synkra YARD
+# Documentação YARD-Framework
 
 **Sistema Orquestrado por IA para Desenvolvimento Full Stack**
 
@@ -103,8 +103,8 @@ docs/
 
 ## 📄 Licença
 
-Esta documentação faz parte do Synkra YARD, licenciado sob [Licença MIT](../../LICENSE).
+Esta documentação faz parte do YARD-Framework, licenciado sob [Licença MIT](../../LICENSE).
 
 ---
 
-_Synkra YARD — Orquestrando IA para Melhor Desenvolvimento de Software_
+_YARD-Framework — Orquestrando IA para Melhor Desenvolvimento de Software_

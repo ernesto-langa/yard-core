@@ -3,7 +3,7 @@ const path = require('path');
 const chalk = require('chalk');
 
 /**
- * Coverage analyzer for Synkra AIOX test generation
+ * Coverage analyzer for YARD test generation
  * Analyzes existing test coverage and identifies gaps
  */
 class CoverageAnalyzer {

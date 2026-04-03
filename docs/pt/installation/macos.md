@@ -4,7 +4,7 @@
   Última sincronização: 2026-01-26
 -->
 
-# Guia de Instalação para macOS - Synkra YARD
+# Guia de Instalação para macOS - YARD-Framework
 
 > 🌐 [EN](../../installation/macos.md) | **PT** | [ES](../../es/installation/macos.md)
 
@@ -150,7 +150,7 @@ Os sistemas de arquivos do macOS podem ser case-insensitive por padrão. Se voc�
    diskutil info / | grep "File System"
    ```
 
-2. O Synkra YARD lida automaticamente com sistemas de arquivos case-sensitive e case-insensitive
+2. O YARD-Framework lida automaticamente com sistemas de arquivos case-sensitive e case-insensitive
 
 ## Atualização
 

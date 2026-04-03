@@ -4,13 +4,13 @@
   最后同步：2026-02-22
 -->
 
-# Synkra YARD 入门指南
+# YARD-Framework 入门指南
 
 > 🌐 [EN](../getting-started.md) | [PT](../pt/getting-started.md) | [ES](../es/getting-started.md) | **ZH**
 
 ---
 
-欢迎使用 Synkra YARD。本指南针对 10 分钟内实现首次价值进行了优化。
+欢迎使用 YARD-Framework。本指南针对 10 分钟内实现首次价值进行了优化。
 
 ## 目录
 
@@ -314,4 +314,4 @@ npm run validate:parity
 
 ---
 
-_Synkra YARD 入门指南 v4.2.11_
+_YARD-Framework 入门指南 v4.2.11_

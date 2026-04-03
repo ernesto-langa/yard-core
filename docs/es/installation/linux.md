@@ -4,7 +4,7 @@
   Última sincronización: 2026-01-29
 -->
 
-# Guía de Instalación Linux para Synkra YARD
+# Guía de Instalación Linux para YARD-Framework
 
 > 🌐 [EN](../../installation/linux.md) | [PT](../../pt/installation/linux.md) | **ES**
 

@@ -176,23 +176,23 @@ Dockerfile @org/devops-team
 
 ```codeowners
 # 默认 - 需要维护者审查
-* @SynkraAI/maintainers
+* @YardAI/maintainers
 
 # 代理定义 - 需要核心团队审查
-.yard-core/development/agents/ @SynkraAI/core-team
+.yard-core/development/agents/ @YardAI/core-team
 
 # 任务定义 - 需要核心团队审查
-.yard-core/development/tasks/ @SynkraAI/core-team
+.yard-core/development/tasks/ @YardAI/core-team
 
 # CI/CD - 需要 devops 批准
-.github/ @SynkraAI/devops
+.github/ @YardAI/devops
 
 # 文档 - 对贡献者更宽容
-docs/ @SynkraAI/maintainers
+docs/ @YardAI/maintainers
 
 # 模板 - 需要架构师审查
-templates/ @SynkraAI/core-team
-.yard-core/product/templates/ @SynkraAI/core-team
+templates/ @YardAI/core-team
+.yard-core/product/templates/ @YardAI/core-team
 ```
 
 ---

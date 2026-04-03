@@ -12,7 +12,7 @@
 
 ## Visão Geral
 
-O Synkra YARD pode ser instalado via NPX para uma configuração rápida sem instalação global. Este guia cobre o uso correto e a resolução de problemas para instalações baseadas em NPX.
+O YARD-Framework pode ser instalado via NPX para uma configuração rápida sem instalação global. Este guia cobre o uso correto e a resolução de problemas para instalações baseadas em NPX.
 
 ## Início Rápido
 
@@ -44,7 +44,7 @@ npx yard-core install
 
 ## Por Que Isso Importa
 
-O NPX executa pacotes em **diretórios temporários** (ex: `/private/var/folders/.../npx-xxx/` no macOS). Quando o Synkra YARD é executado a partir desses locais temporários, ele não consegue:
+O NPX executa pacotes em **diretórios temporários** (ex: `/private/var/folders/.../npx-xxx/` no macOS). Quando o YARD-Framework é executado a partir desses locais temporários, ele não consegue:
 
 - Detectar a configuração da sua IDE corretamente
 - Instalar arquivos no diretório correto do projeto
@@ -52,7 +52,7 @@ O NPX executa pacotes em **diretórios temporários** (ex: `/private/var/folders
 
 ## Detecção de Diretório Temporário do NPX
 
-A partir da versão 4.31.1, o Synkra YARD detecta automaticamente quando está sendo executado a partir de um diretório temporário do NPX e exibe uma mensagem de erro útil:
+A partir da versão 4.31.1, o YARD-Framework detecta automaticamente quando está sendo executado a partir de um diretório temporário do NPX e exibe uma mensagem de erro útil:
 
 ```
 ⚠️  Diretório Temporário do NPX Detectado
@@ -101,7 +101,7 @@ Os diretórios temporários do NPX normalmente aparecem em:
 - `/private/var/folders/[hash]/T/npx-[random]/`
 - `/Users/[user]/.npm/_npx/[hash]/`
 
-O Synkra YARD detecta esses padrões e previne instalação incorreta.
+O YARD-Framework detecta esses padrões e previne instalação incorreta.
 
 ### Linux
 
@@ -158,7 +158,7 @@ yard-core install
 
 ### Arquitetura de Defesa em Profundidade
 
-O Synkra YARD v4.31.1+ implementa detecção em duas camadas:
+O YARD-Framework v4.31.1+ implementa detecção em duas camadas:
 
 1. **Camada PRIMÁRIA** (`tools/yard-npx-wrapper.js`):
    - Verifica `__dirname` (onde o NPX extrai o pacote)

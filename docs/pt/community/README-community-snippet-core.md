@@ -22,8 +22,8 @@ Este repositório hospeda o **hub central da comunidade** para todos os projetos
 | **Q&A**             | Fazer perguntas e obter ajuda                                                 |
 | **Show and Tell**   | Compartilhar seus projetos construídos com YARD                               |
 | **Troubleshooting** | Obter ajuda com problemas e erros                                             |
-| **Squads**          | Discussões sobre [YARD Squads](https://github.com/SynkraAI/yard-squads)       |
-| **MCP Ecosystem**   | Discussões sobre [ferramentas MCP](https://github.com/SynkraAI/mcp-ecosystem) |
+| **Squads**          | Discussões sobre [YARD Squads](https://github.com/YardAI/yard-squads)       |
+| **MCP Ecosystem**   | Discussões sobre [ferramentas MCP](https://github.com/YardAI/mcp-ecosystem) |
 
 ### Links Rápidos
 
@@ -32,7 +32,7 @@ Este repositório hospeda o **hub central da comunidade** para todos os projetos
 | Reportar um bug          | [Abrir Issue](https://github.com/ernesto-langa/yard-core/issues/new?template=bug_report.md)                 |
 | Solicitar funcionalidade | [Iniciar Discussão](https://github.com/ernesto-langa/yard-core/discussions/new?category=ideas)              |
 | Fazer uma pergunta       | [Q&A](https://github.com/ernesto-langa/yard-core/discussions/new?category=q-a)                              |
-| Propor um Squad          | [Issues do yard-squads](https://github.com/SynkraAI/yard-squads/issues/new?template=squad-proposal.md) |
+| Propor um Squad          | [Issues do yard-squads](https://github.com/YardAI/yard-squads/issues/new?template=squad-proposal.md) |
 | Pergunta sobre MCP       | [MCP Ecosystem](https://github.com/ernesto-langa/yard-core/discussions/new?category=mcp-ecosystem)          |
 
 ### Repositórios Relacionados
@@ -40,8 +40,8 @@ Este repositório hospeda o **hub central da comunidade** para todos os projetos
 | Repositório                                                | Descrição                            | Licença        |
 | ---------------------------------------------------------- | ------------------------------------ | -------------- |
 | [yard-core](https://github.com/ernesto-langa/yard-core)         | Framework principal (você está aqui) | MIT            |
-| [yard-squads](https://github.com/SynkraAI/yard-squads)     | YARD Squads (ETL, Creator, MMOS)     | MIT            |
-| [mcp-ecosystem](https://github.com/SynkraAI/mcp-ecosystem) | Docker MCP Toolkit & configs de IDE  | Apache 2.0     |
+| [yard-squads](https://github.com/YardAI/yard-squads)     | YARD Squads (ETL, Creator, MMOS)     | MIT            |
+| [mcp-ecosystem](https://github.com/YardAI/mcp-ecosystem) | Docker MCP Toolkit & configs de IDE  | Apache 2.0     |
 
 ### Contribuindo
 

@@ -105,7 +105,7 @@ Auditar el estado actual de:
 **Fuente:** `.github/CODEOWNERS`
 
 ```codeowners
-* @SynkraAI
+* @YardAI
 ```
 
 **Analisis:** Propiedad unica a nivel de organizacion - sin propiedad granular basada en rutas.

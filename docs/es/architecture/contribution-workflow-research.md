@@ -176,23 +176,23 @@ Dockerfile @org/devops-team
 
 ```codeowners
 # Por defecto - requiere revisión de maintainer
-* @SynkraAI/maintainers
+* @YardAI/maintainers
 
 # Definiciones de agentes - requiere equipo core
-.yard-core/development/agents/ @SynkraAI/core-team
+.yard-core/development/agents/ @YardAI/core-team
 
 # Definiciones de tareas - requiere equipo core
-.yard-core/development/tasks/ @SynkraAI/core-team
+.yard-core/development/tasks/ @YardAI/core-team
 
 # CI/CD - requiere aprobación devops
-.github/ @SynkraAI/devops
+.github/ @YardAI/devops
 
 # Documentación - más permisivo para contribuidores
-docs/ @SynkraAI/maintainers
+docs/ @YardAI/maintainers
 
 # Plantillas - requiere revisión de arquitecto
-templates/ @SynkraAI/core-team
-.yard-core/product/templates/ @SynkraAI/core-team
+templates/ @YardAI/core-team
+.yard-core/product/templates/ @YardAI/core-team
 ```
 
 ---

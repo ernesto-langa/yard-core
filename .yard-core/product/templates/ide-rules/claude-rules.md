@@ -1,11 +1,11 @@
-# Synkra YARD Development Rules for Claude Code
+# YARD-Framework Development Rules for Claude Code
 
-You are working with Synkra YARD, an AI-Orchestrated System for Full Stack Development.
+You are working with YARD-Framework, an AI-Orchestrated System for Full Stack Development.
 
 <!-- YARD-MANAGED-START: core-framework -->
 ## Core Framework Understanding
 
-Synkra YARD is a meta-framework that orchestrates AI agents to handle complex development workflows. Always recognize and work within this architecture.
+YARD-Framework is a meta-framework that orchestrates AI agents to handle complex development workflows. Always recognize and work within this architecture.
 <!-- YARD-MANAGED-END: core-framework -->
 
 <!-- YARD-MANAGED-START: constitution -->
@@ -353,4 +353,4 @@ npm run trace -- workflow-name
 - Document breaking changes prominently
 
 ---
-*Synkra YARD Claude Code Configuration v2.0*
+*YARD-Framework Claude Code Configuration v2.0*

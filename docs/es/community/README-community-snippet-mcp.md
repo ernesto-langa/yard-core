@@ -2,7 +2,7 @@
 
 # Seccion de Comunidad del README - mcp-ecosystem
 
-> **Proposito:** Copia este fragmento en el README.md del repositorio `SynkraAI/mcp-ecosystem`.
+> **Proposito:** Copia este fragmento en el README.md del repositorio `YardAI/mcp-ecosystem`.
 
 ---
 
@@ -16,7 +16,7 @@ Para discusiones, preguntas e interaccion con la comunidad, visita nuestro hub c
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | **Preguntas sobre MCP?**      | Usa la [categoria "Ecosistema MCP"](https://github.com/ernesto-langa/yard-core/discussions/categories/mcp-ecosystem) |
 | **Ideas de funcionalidades?** | Inicia una [Discusion en "Ideas"](https://github.com/ernesto-langa/yard-core/discussions/categories/ideas)           |
-| **Encontraste un bug?**       | [Abre un issue](https://github.com/SynkraAI/mcp-ecosystem/issues/new/choose) en **este repositorio**            |
+| **Encontraste un bug?**       | [Abre un issue](https://github.com/YardAI/mcp-ecosystem/issues/new/choose) en **este repositorio**            |
 | **Necesitas ayuda?**          | Pregunta en ["Preguntas y Respuestas"](https://github.com/ernesto-langa/yard-core/discussions/categories/q-a)        |
 | **Construiste algo genial?**  | Comparte en ["Mostrar y Contar"](https://github.com/ernesto-langa/yard-core/discussions/categories/show-and-tell)    |
 
@@ -40,7 +40,7 @@ Para discusiones, preguntas e interaccion con la comunidad, visita nuestro hub c
 
 Tienes una idea para una nueva configuracion de servidor MCP?
 
-1. Revisa las [propuestas MCP existentes](https://github.com/SynkraAI/mcp-ecosystem/labels/mcp-server)
+1. Revisa las [propuestas MCP existentes](https://github.com/YardAI/mcp-ecosystem/labels/mcp-server)
 2. Abre un issue con la etiqueta `mcp-server`
 3. Discute en la [categoria Ecosistema MCP](https://github.com/ernesto-langa/yard-core/discussions/categories/mcp-ecosystem)
 

@@ -1,6 +1,6 @@
 # Yard Core Module
 
-> Central runtime module providing essential framework functionality for Synkra YARD.
+> Central runtime module providing essential framework functionality for YARD-Framework.
 
 **Version:** 2.0.0
 **Created:** Story 2.2 - Core Module Creation
@@ -12,7 +12,7 @@ The Core module contains the foundational runtime components that all other YARD
 
 ## Installation
 
-The core module is automatically available within the Synkra YARD framework:
+The core module is automatically available within the YARD-Framework framework:
 
 ```javascript
 // CommonJS
@@ -226,4 +226,4 @@ Scripts that import these modules have been updated to reference the new paths.
 
 ---
 
-*Synkra Yard Core Module v2.0.0*
+*YARD-Framework Core Module v2.0.0*

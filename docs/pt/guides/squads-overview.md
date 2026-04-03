@@ -172,8 +172,8 @@ tags:
 
 | Squad             | Versão | Descrição                          | Repositório                                                                      |
 | ----------------- | ------ | ---------------------------------- | -------------------------------------------------------------------------------- |
-| **etl-squad**     | 2.0.0  | Coleta e transformação de dados    | [yard-squads/etl](https://github.com/SynkraAI/yard-squads/tree/main/etl)         |
-| **creator-squad** | 1.0.0  | Utilitários de geração de conteúdo | [yard-squads/creator](https://github.com/SynkraAI/yard-squads/tree/main/creator) |
+| **etl-squad**     | 2.0.0  | Coleta e transformação de dados    | [yard-squads/etl](https://github.com/YardAI/yard-squads/tree/main/etl)         |
+| **creator-squad** | 1.0.0  | Utilitários de geração de conteúdo | [yard-squads/creator](https://github.com/YardAI/yard-squads/tree/main/creator) |
 
 ### Níveis de Distribuição
 
@@ -182,7 +182,7 @@ tags:
 │                    DISTRIBUIÇÃO DE SQUADS                     │
 ├─────────────────────────────────────────────────────────────┤
 │  Nível 1: LOCAL        --> ./squads/           (Privado)     │
-│  Nível 2: YARD-SQUADS  --> github.com/SynkraAI (Público)     │
+│  Nível 2: YARD-SQUADS  --> github.com/YardAI (Público)     │
 │  Nível 3: SYNKRA API   --> api.synkra.dev      (Marketplace) │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -276,7 +276,7 @@ Use versionamento semântico:
 ## Próximos Passos
 
 - **Crie Seu Primeiro Squad:** Siga o [Guia de Squads](./squads-guide.md) para instruções detalhadas
-- **Explore Squads Oficiais:** Confira o [repositório yard-squads](https://github.com/SynkraAI/yard-squads)
+- **Explore Squads Oficiais:** Confira o [repositório yard-squads](https://github.com/YardAI/yard-squads)
 - **Contribua:** Veja o [Guia de Contribuição de Squads](./contributing-squads.md)
 - **Aprenda o Formato de Task:** Leia [TASK-FORMAT-SPECIFICATION-V1](../../../.yard-core/docs/standards/TASK-FORMAT-SPECIFICATION-V1.md)
 

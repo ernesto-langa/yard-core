@@ -630,4 +630,4 @@ R: Execute `npm run sync:ide` após atualizações do YARD.
 
 ---
 
-_Synkra YARD - Guia da Plataforma Cursor v1.0_
+_YARD-Framework - Guia da Plataforma Cursor v1.0_

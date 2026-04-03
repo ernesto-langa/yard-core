@@ -137,7 +137,7 @@ proyecto/
 **Ubicación:** `.antigravity/rules.md`
 
 ```markdown
-# Reglas de Synkra YARD para AntiGravity
+# Reglas de YARD-Framework para AntiGravity
 
 ## Sistema de Agentes
 - Usa @nombre-agente o flujos de trabajo para activación
@@ -507,4 +507,4 @@ R: Los agentes son personas con experiencia; los flujos de trabajo orquestan acc
 
 ---
 
-*Synkra YARD - Guía de Plataforma AntiGravity v1.0*
+*YARD-Framework - Guía de Plataforma AntiGravity v1.0*

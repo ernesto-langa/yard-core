@@ -1,4 +1,4 @@
-# AGENTS.md - Synkra YARD (Codex CLI)
+# AGENTS.md - YARD-Framework (Codex CLI)
 
 Este arquivo define as instrucoes do projeto para o Codex CLI.
 

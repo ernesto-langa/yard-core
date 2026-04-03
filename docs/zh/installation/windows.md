@@ -1,6 +1,6 @@
 <!-- 翻译：zh-CN 原文：/docs/installation/windows.md 最后同步：2026-02-22 -->
 
-# Synkra YARD Windows 安装指南
+# YARD-Framework Windows 安装指南
 
 > 🌐 [EN](../../installation/windows.md) | [PT](../pt/installation/windows.md) | [ES](../es/installation/windows.md)
 

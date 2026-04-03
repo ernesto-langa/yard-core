@@ -2,7 +2,7 @@
 
 > 🌐 [EN](../../en/community/README-community-snippet-squads.md) | [PT](../../pt/community/README-community-snippet-squads.md) | [ES](../../es/community/README-community-snippet-squads.md) | **ZH**
 
-> **用途:** 将此代码段复制到 `SynkraAI/yard-squads` 仓库的 README.md 中。
+> **用途:** 将此代码段复制到 `YardAI/yard-squads` 仓库的 README.md 中。
 
 ---
 
@@ -16,7 +16,7 @@
 |------|-------------|
 | 📦 **Squad 问题?** | 使用 ["Squad" 类别](https://github.com/ernesto-langa/yard-core/discussions/categories/squads) |
 | 💡 **功能创意?** | 在 ["创意" 中启动讨论](https://github.com/ernesto-langa/yard-core/discussions/categories/ideas) |
-| 🐛 **发现错误?** | [在此仓库中打开 issue](https://github.com/SynkraAI/yard-squads/issues/new/choose) |
+| 🐛 **发现错误?** | [在此仓库中打开 issue](https://github.com/YardAI/yard-squads/issues/new/choose) |
 | 🙏 **需要帮助?** | 在 ["问答" 中提问](https://github.com/ernesto-langa/yard-core/discussions/categories/q-a) |
 | 🙌 **创建了什么酷的东西?** | 在 ["展示和讲述" 中分享](https://github.com/ernesto-langa/yard-core/discussions/categories/show-and-tell) |
 
@@ -31,8 +31,8 @@
 
 有新的 YARD Squad 想法？我们很乐意听到！
 
-1. 检查现有的 [Squad 提案](https://github.com/SynkraAI/yard-squads/labels/new-squad)
-2. 打开 [Squad 提案 issue](https://github.com/SynkraAI/yard-squads/issues/new?template=squad-proposal.md)
+1. 检查现有的 [Squad 提案](https://github.com/YardAI/yard-squads/labels/new-squad)
+2. 打开 [Squad 提案 issue](https://github.com/YardAI/yard-squads/issues/new?template=squad-proposal.md)
 3. 在社区中讨论
 
 ---

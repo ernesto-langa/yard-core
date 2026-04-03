@@ -16,7 +16,7 @@ yard-core/
 ├── bin/
 ├── src/
 ├── packages/
-├── pro/ ─── git submodule ──► SynkraAI/yard-pro (private)
+├── pro/ ─── git submodule ──► YardAI/yard-pro (private)
 ├── squads/ (community)
 └── package.json
 ```
@@ -68,7 +68,7 @@ git push origin feature/my-feature
 - All core tests pass without `pro/` present
 - `bin/utils/pro-detector.js` returns `isProAvailable() === false`
 - No features are degraded for core-only developers
-- You do NOT need access to SynkraAI/yard-pro
+- You do NOT need access to YardAI/yard-pro
 
 ---
 
@@ -212,7 +212,7 @@ git submodule update --init pro
 
 ### Permission denied when cloning submodule
 
-You need access to `SynkraAI/yard-pro`. Contact the team lead.
+You need access to `YardAI/yard-pro`. Contact the team lead.
 
 ### Tests fail with pro/ present
 

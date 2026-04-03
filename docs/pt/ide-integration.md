@@ -422,4 +422,4 @@ npm run sync:ide:cursor
 
 ---
 
-_Guia de Integração com IDEs do Synkra YARD v4.0_
+_Guia de Integração com IDEs do YARD-Framework v4.0_

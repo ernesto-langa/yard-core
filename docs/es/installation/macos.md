@@ -4,7 +4,7 @@
   Última sincronización: 2026-01-26
 -->
 
-# Guía de Instalación de Synkra YARD para macOS
+# Guía de Instalación de YARD-Framework para macOS
 
 > 🌐 [EN](../../installation/macos.md) | [PT](../../pt/installation/macos.md) | **ES**
 
@@ -150,7 +150,7 @@ Los sistemas de archivos de macOS pueden ser insensibles a mayúsculas por defec
    diskutil info / | grep "File System"
    ```
 
-2. Synkra YARD maneja automáticamente tanto sistemas de archivos sensibles como insensibles a mayúsculas
+2. YARD-Framework maneja automáticamente tanto sistemas de archivos sensibles como insensibles a mayúsculas
 
 ## Actualización
 

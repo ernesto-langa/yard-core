@@ -1,5 +1,5 @@
 /**
- * Batch Component Creator for Synkra AIOX
+ * Batch Component Creator for YARD
  * Creates multiple related components in a single operation
  * @module batch-creator
  */

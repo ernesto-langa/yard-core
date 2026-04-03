@@ -1,6 +1,6 @@
 # YARD Workflows
 
-This directory contains workflow definitions for the Synkra YARD framework. Workflows define multi-step processes that can be executed by YARD agents.
+This directory contains workflow definitions for the YARD-Framework framework. Workflows define multi-step processes that can be executed by YARD agents.
 
 ## Available Workflows
 

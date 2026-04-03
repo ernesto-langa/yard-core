@@ -1,6 +1,6 @@
 # Technical Preferences
 
-This document captures architectural and technical preferences for the Synkra YARD project. It is owned by `@architect` and consulted during agent activation by `@dev`, `@qa`, `@devops`, `@architect`, and `@data-engineer`.
+This document captures architectural and technical preferences for the YARD-Framework project. It is owned by `@architect` and consulted during agent activation by `@dev`, `@qa`, `@devops`, `@architect`, and `@data-engineer`.
 
 ---
 

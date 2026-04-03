@@ -73,7 +73,7 @@ Amendment process here.
 /**
  * Fixture: full 6-article constitution matching real format
  */
-const FULL_CONSTITUTION = `# Synkra AIOX Constitution
+const FULL_CONSTITUTION = `# YARD Constitution
 
 > **Version:** 1.0.0
 

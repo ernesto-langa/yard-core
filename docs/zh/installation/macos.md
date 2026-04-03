@@ -4,7 +4,7 @@
   最后同步：2026-02-22
 -->
 
-# Synkra YARD macOS 安装指南
+# YARD-Framework macOS 安装指南
 
 > 🌐 [EN](../../installation/macos.md) | [PT](../pt/installation/macos.md) | [ES](../es/installation/macos.md) | **ZH**
 
@@ -148,7 +148,7 @@ macOS 文件系统默认可能不区分大小写。如果遇到问题：
    diskutil info / | grep "File System"
    ```
 
-2. Synkra YARD 会自动处理区分大小写和不区分大小写的文件系统
+2. YARD-Framework 会自动处理区分大小写和不区分大小写的文件系统
 
 ## 更新
 

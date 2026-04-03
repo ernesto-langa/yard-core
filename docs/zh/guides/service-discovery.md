@@ -515,4 +515,4 @@ await registry.load(true);
 
 ---
 
-_Synkra YARD v4 服务发现指南_
+_YARD-Framework v4 服务发现指南_

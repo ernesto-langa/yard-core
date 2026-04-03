@@ -521,4 +521,4 @@ await registry.load(true);
 
 ---
 
-_Guia de Service Discovery Synkra YARD v4_
+_Guia de Service Discovery YARD-Framework v4_

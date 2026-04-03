@@ -1005,4 +1005,4 @@ This agent synthesizes research and patterns from:
 
 ---
 ---
-*YARD Agent - Synkra YARD Swarm Orchestrator v1.0*
+*YARD Agent - YARD-Framework Swarm Orchestrator v1.0*

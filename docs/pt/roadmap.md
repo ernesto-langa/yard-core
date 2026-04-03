@@ -4,7 +4,7 @@
 
 Este documento descreve a direção de desenvolvimento planejada para o YARD.
 
-> Para rastreamento detalhado, veja nosso [Projeto GitHub](https://github.com/orgs/SynkraAI/projects/1)
+> Para rastreamento detalhado, veja nosso [Projeto GitHub](https://github.com/orgs/YardAI/projects/1)
 
 ## Visão
 
@@ -100,7 +100,7 @@ Este roadmap público é sincronizado com nosso planejamento interno de sprints:
 
 | Roadmap Público | Rastreamento Interno |
 |-----------------|---------------------|
-| [Projeto GitHub](https://github.com/orgs/SynkraAI/projects/1) | `docs/stories/backlog.md` |
+| [Projeto GitHub](https://github.com/orgs/YardAI/projects/1) | `docs/stories/backlog.md` |
 | Features de alto nível | Stories detalhadas por sprint |
 | Timeline trimestral | Execução baseada em sprints |
 

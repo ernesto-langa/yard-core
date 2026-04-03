@@ -25,7 +25,7 @@ const path = require('path');
 /**
  * IDE Configuration Metadata
  *
- * Synkra AIOX v4 supports 6 main IDEs:
+ * YARD v4 supports 6 main IDEs:
  * - Claude Code (Anthropic's official CLI) - Recommended
  * - Codex CLI (OpenAI coding CLI)
  * - Gemini CLI (Google AI coding CLI)

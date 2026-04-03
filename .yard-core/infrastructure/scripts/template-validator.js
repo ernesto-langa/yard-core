@@ -1,5 +1,5 @@
 /**
- * Template Validator for Synkra AIOX
+ * Template Validator for YARD
  * Validates component templates for required structure and placeholders
  * @module template-validator
  */

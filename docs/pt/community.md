@@ -1,8 +1,8 @@
-# Comunidade Synkra YARD
+# Comunidade YARD-Framework
 
 > 🇺🇸 [English Version](COMMUNITY.md)
 
-Bem-vindo à comunidade Synkra YARD!
+Bem-vindo à comunidade YARD-Framework!
 
 Estamos construindo o futuro do desenvolvimento orquestrado por IA juntos.
 
@@ -50,8 +50,8 @@ Nosso hub principal de comunicação para todos os repositórios YARD:
 Para relatórios de bugs e solicitações de funcionalidades:
 
 - [Issues do yard-core](https://github.com/ernesto-langa/yard-core/issues) - Framework principal
-- [Issues do yard-squads](https://github.com/SynkraAI/yard-squads/issues) - Squads YARD
-- [Issues do mcp-ecosystem](https://github.com/SynkraAI/mcp-ecosystem/issues) - Ferramentas MCP
+- [Issues do yard-squads](https://github.com/YardAI/yard-squads/issues) - Squads YARD
+- [Issues do mcp-ecosystem](https://github.com/YardAI/mcp-ecosystem/issues) - Ferramentas MCP
 
 ## Como Contribuir
 
@@ -98,7 +98,7 @@ Qualquer pessoa que contribuiu para o YARD de qualquer forma.
 
 Membros da equipe principal que revisam PRs e guiam o projeto:
 
-- [@SynkraAI](https://github.com/SynkraAI) - Líder do Projeto
+- [@YardAI](https://github.com/YardAI) - Líder do Projeto
 
 ### Tornando-se um Mantenedor
 
@@ -138,7 +138,7 @@ Para mudanças significativas:
 
 Seguimos o [Contributor Covenant](CODE_OF_CONDUCT-PT.md). Por favor, leia e respeite-o.
 
-Reporte violações para: conduct@SynkraAI.com
+Reporte violações para: conduct@YardAI.com
 
 ## Obtendo Ajuda
 
@@ -165,7 +165,7 @@ Reporte violações para: conduct@SynkraAI.com
 Quer saber para onde o YARD está indo? Confira nosso roadmap público:
 
 - [ROADMAP-PT.md](ROADMAP-PT.md) - Visão de alto nível e funcionalidades planejadas
-- [Projeto GitHub](https://github.com/orgs/SynkraAI/projects/1) - Quadro de rastreamento detalhado
+- [Projeto GitHub](https://github.com/orgs/YardAI/projects/1) - Quadro de rastreamento detalhado
 
 O roadmap é atualizado mensalmente e reflete a contribuição da comunidade. Você pode influenciar nossa direção por:
 
@@ -196,7 +196,7 @@ Veja [Processo de Solicitação de Features](docs/FEATURE_PROCESS.md) para detal
 
 ### Recursos Externos
 
-- [Organização YARD no GitHub](https://github.com/SynkraAI)
+- [Organização YARD no GitHub](https://github.com/YardAI)
 - [Changelog](CHANGELOG.md)
 
 ## Internacionalização

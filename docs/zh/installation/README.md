@@ -4,7 +4,7 @@
   最后同步：2026-02-22
 -->
 
-# Synkra YARD 安装文档
+# YARD-Framework 安装文档
 
 > 🌐 [EN](../../installation/README.md) | [PT](../pt/installation/README.md) | [ES](../es/installation/README.md) | **ZH**
 
@@ -15,7 +15,7 @@
 
 ## 概述
 
-本目录包含 Synkra YARD 的完整安装和设置文档。
+本目录包含 YARD-Framework 的完整安装和设置文档。
 
 ---
 

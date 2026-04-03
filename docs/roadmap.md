@@ -4,7 +4,7 @@
 
 This document outlines the planned development direction for YARD.
 
-> For detailed tracking, see our [GitHub Project](https://github.com/orgs/SynkraAI/projects/1)
+> For detailed tracking, see our [GitHub Project](https://github.com/orgs/YardAI/projects/1)
 
 ## Vision
 
@@ -118,7 +118,7 @@ This public roadmap is synchronized with our internal sprint planning:
 
 | Public Roadmap | Internal Tracking |
 |----------------|-------------------|
-| [GitHub Project](https://github.com/orgs/SynkraAI/projects/1) | `docs/strategy/YARD-DIFFERENTIATION-PLAN-4.0.4.md` |
+| [GitHub Project](https://github.com/orgs/YardAI/projects/1) | `docs/strategy/YARD-DIFFERENTIATION-PLAN-4.0.4.md` |
 | High-level features | Detailed stories per sprint |
 | Quarterly timeline | Sprint-based execution |
 

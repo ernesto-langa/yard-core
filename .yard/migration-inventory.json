@@ -3004,7 +3004,7 @@
       {
         "type": "task",
         "id": "squad-creator-sync-synkra",
-        "name": "Sync Squad to Synkra",
+        "name": "Sync Squad to YARD",
         "responsavel": "@squad-creator",
         "path": ".yard-core/development/tasks/squad-creator-sync-synkra.md",
         "version": "v2",

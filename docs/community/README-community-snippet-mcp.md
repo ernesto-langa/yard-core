@@ -2,7 +2,7 @@
 
 > 🌐 **EN** | [PT](../pt/community/README-community-snippet-mcp.md) | [ES](../es/community/README-community-snippet-mcp.md)
 
-> **Purpose:** Copy this snippet into the README.md of `SynkraAI/mcp-ecosystem` repository.
+> **Purpose:** Copy this snippet into the README.md of `YardAI/mcp-ecosystem` repository.
 
 ---
 
@@ -16,7 +16,7 @@ For discussions, questions, and community interaction, visit our central hub:
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | 🔧 **MCP questions?**        | Use the ["MCP Ecosystem" category](https://github.com/ernesto-langa/yard-core/discussions/categories/mcp-ecosystem) |
 | 💡 **Feature ideas?**        | Start a [Discussion in "Ideas"](https://github.com/ernesto-langa/yard-core/discussions/categories/ideas)            |
-| 🐛 **Found a bug?**          | [Open an issue](https://github.com/SynkraAI/mcp-ecosystem/issues/new/choose) in **this repository**            |
+| 🐛 **Found a bug?**          | [Open an issue](https://github.com/YardAI/mcp-ecosystem/issues/new/choose) in **this repository**            |
 | 🙏 **Need help?**            | Ask in ["Q&A"](https://github.com/ernesto-langa/yard-core/discussions/categories/q-a)                               |
 | 🙌 **Built something cool?** | Share in ["Show and Tell"](https://github.com/ernesto-langa/yard-core/discussions/categories/show-and-tell)         |
 
@@ -40,7 +40,7 @@ For discussions, questions, and community interaction, visit our central hub:
 
 Have an idea for a new MCP server configuration?
 
-1. Check existing [MCP proposals](https://github.com/SynkraAI/mcp-ecosystem/labels/mcp-server)
+1. Check existing [MCP proposals](https://github.com/YardAI/mcp-ecosystem/labels/mcp-server)
 2. Open an issue with the `mcp-server` label
 3. Discuss in the [MCP Ecosystem category](https://github.com/ernesto-langa/yard-core/discussions/categories/mcp-ecosystem)
 

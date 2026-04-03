@@ -1,10 +1,10 @@
 {
   "$schema": "https://geminicli.com/schemas/extension.json",
   "name": "yard",
-  "displayName": "Synkra Yard",
+  "displayName": "YARD-Framework",
   "version": "1.0.0",
   "description": "Multi-agent orchestration system for CLI-first development. Brings Yard agents, hooks, and workflows to Gemini CLI.",
-  "author": "Synkra",
+  "author": "YARD",
   "license": "MIT",
   "repository": {
     "type": "git",

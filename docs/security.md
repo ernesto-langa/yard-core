@@ -13,7 +13,7 @@ We release patches for security vulnerabilities in the following versions:
 
 ## Reporting a Vulnerability
 
-We take security seriously at SynkraAI. If you discover a security vulnerability in YARD, please report it responsibly.
+We take security seriously at YardAI. If you discover a security vulnerability in YARD, please report it responsibly.
 
 ### How to Report
 

@@ -1,8 +1,8 @@
-# Guia do Usuário Synkra YARD
+# Guia do Usuário YARD-Framework
 
 ## Visão Geral
 
-O Synkra YARD é um framework de desenvolvimento full stack orientado por agentes de IA que implementa uma metodologia ágil única. Este guia explica como usar o Synkra YARD de forma eficaz através de suas duas fases principais: **Planejamento** e **Desenvolvimento**.
+O YARD-Framework é um framework de desenvolvimento full stack orientado por agentes de IA que implementa uma metodologia ágil única. Este guia explica como usar o YARD-Framework de forma eficaz através de suas duas fases principais: **Planejamento** e **Desenvolvimento**.
 
 ### As Duas Inovações Chave
 
@@ -225,7 +225,7 @@ npx yard-core@latest install --force-upgrade
 
 ## Fluxo de Trabalho de Planejamento e Execução
 
-O Synkra YARD usa uma abordagem de duas fases que separa planejamento estratégico de implementação tática:
+O YARD-Framework usa uma abordagem de duas fases que separa planejamento estratégico de implementação tática:
 
 ### Fase 1: Planejamento (Interface Web)
 
@@ -477,7 +477,7 @@ O **po** (Product Owner) gerencia o backlog:
 
 ## Capacidades do Test Architect (QA Agent)
 
-O agente **qa** do Synkra YARD inclui capacidades avançadas de arquitetura de testes:
+O agente **qa** do YARD-Framework inclui capacidades avançadas de arquitetura de testes:
 
 ### 1. Perfil de Risco e Priorização
 
@@ -587,7 +587,7 @@ O agente **qa** monitora:
 
 ## Sistema de Preferências Técnicas
 
-O Synkra YARD permite configurar preferências técnicas que influenciam decisões dos agentes:
+O YARD-Framework permite configurar preferências técnicas que influenciam decisões dos agentes:
 
 ### Definir Preferências
 
@@ -1132,7 +1132,7 @@ Todos os critérios atendidos
 
 ## Trabalhando em Projetos Brownfield
 
-Ao integrar Synkra YARD em projetos existentes:
+Ao integrar YARD-Framework em projetos existentes:
 
 ### 1. Análise Inicial
 
@@ -1230,7 +1230,7 @@ Ao integrar Synkra YARD em projetos existentes:
 
 ## Meta-Agentes
 
-O Synkra YARD inclui meta-agentes para orquestração:
+O YARD-Framework inclui meta-agentes para orquestração:
 
 ### yard-master
 
@@ -1278,7 +1278,7 @@ O **yard-developer** é o meta-agente para o próprio YARD:
 
 ### Squads
 
-O Synkra YARD suporta squads para domínios específicos:
+O YARD-Framework suporta squads para domínios específicos:
 
 **Disponíveis durante instalação**:
 - **hybrid-ops** - Metodologia Pedro Valério (operações híbridas humano-agente)
@@ -1405,5 +1405,5 @@ Veja `Squads/` para exemplos de:
 
 **Nota**: Este guia é uma visão geral. Para detalhes específicos de implementação, consulte a documentação técnica na pasta `docs/`.
 
-*Synkra YARD User Guide v2.0*
+*YARD-Framework User Guide v2.0*
 *Última atualização: Janeiro 2025*

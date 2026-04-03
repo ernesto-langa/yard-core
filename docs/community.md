@@ -1,8 +1,8 @@
-# Synkra YARD Community
+# YARD-Framework Community
 
 > 🇧🇷 [Versão em Português](COMMUNITY-PT.md)
 
-Welcome to the Synkra YARD community!
+Welcome to the YARD-Framework community!
 
 We're building the future of AI-orchestrated development together.
 
@@ -50,8 +50,8 @@ Our main communication hub for all YARD repositories:
 For bug reports and feature requests:
 
 - [yard-core Issues](https://github.com/ernesto-langa/yard-core/issues) - Core framework
-- [yard-squads Issues](https://github.com/SynkraAI/yard-squads/issues) - YARD Squads
-- [mcp-ecosystem Issues](https://github.com/SynkraAI/mcp-ecosystem/issues) - MCP tools
+- [yard-squads Issues](https://github.com/YardAI/yard-squads/issues) - YARD Squads
+- [mcp-ecosystem Issues](https://github.com/YardAI/mcp-ecosystem/issues) - MCP tools
 
 ## How to Contribute
 
@@ -98,7 +98,7 @@ Anyone who has contributed to YARD in any way.
 
 Core team members who review PRs and guide the project:
 
-- [@SynkraAI](https://github.com/SynkraAI) - Project Lead
+- [@YardAI](https://github.com/YardAI) - Project Lead
 
 ### Becoming a Maintainer
 
@@ -138,7 +138,7 @@ For significant changes:
 
 We follow the [Contributor Covenant](CODE_OF_CONDUCT.md). Please read and respect it.
 
-Report violations to: conduct@SynkraAI.com
+Report violations to: conduct@YardAI.com
 
 ## Getting Help
 
@@ -165,7 +165,7 @@ Report violations to: conduct@SynkraAI.com
 Want to know where YARD is headed? Check out our public roadmap:
 
 - [ROADMAP.md](ROADMAP.md) - High-level vision and planned features
-- [GitHub Project](https://github.com/orgs/SynkraAI/projects/1) - Detailed tracking board
+- [GitHub Project](https://github.com/orgs/YardAI/projects/1) - Detailed tracking board
 
 The roadmap is updated monthly and reflects community input. You can influence our direction by:
 
@@ -196,7 +196,7 @@ See [Feature Request Process](docs/FEATURE_PROCESS.md) for complete details.
 
 ### External Resources
 
-- [YARD GitHub Organization](https://github.com/SynkraAI)
+- [YARD GitHub Organization](https://github.com/YardAI)
 - [Changelog](CHANGELOG.md)
 
 ## Internationalization

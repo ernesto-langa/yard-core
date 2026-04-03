@@ -45,7 +45,7 @@ Squads are modular teams of AI agents that extend YARD functionality. Each squad
 │                    SQUAD DISTRIBUTION                        │
 ├─────────────────────────────────────────────────────────────┤
 │  Level 1: LOCAL        → ./squads/           (Private)      │
-│  Level 2: YARD-SQUADS  → github.com/SynkraAI (Public/Free)  │
+│  Level 2: YARD-SQUADS  → github.com/YardAI (Public/Free)  │
 │  Level 3: SYNKRA API   → api.synkra.dev      (Marketplace)  │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -54,8 +54,8 @@ Squads are modular teams of AI agents that extend YARD functionality. Each squad
 
 | Squad | Version | Description |
 |-------|---------|-------------|
-| [etl-squad](https://github.com/SynkraAI/yard-squads/tree/main/etl) | 2.0.0 | Data collection and transformation |
-| [creator-squad](https://github.com/SynkraAI/yard-squads/tree/main/creator) | 1.0.0 | Content generation utilities |
+| [etl-squad](https://github.com/YardAI/yard-squads/tree/main/etl) | 2.0.0 | Data collection and transformation |
+| [creator-squad](https://github.com/YardAI/yard-squads/tree/main/creator) | 1.0.0 | Content generation utilities |
 
 ---
 
@@ -545,9 +545,9 @@ Squads in `./squads/` are automatically available to your project.
 *publish-squad ./squads/my-squad
 ```
 
-This creates a PR to [SynkraAI/yard-squads](https://github.com/SynkraAI/yard-squads).
+This creates a PR to [YardAI/yard-squads](https://github.com/YardAI/yard-squads).
 
-### Level 3: Synkra Marketplace
+### Level 3: Yard Marketplace
 
 ```bash
 # Set up authentication
@@ -811,7 +811,7 @@ npm test -- tests/squads/my-squad/
 - [Squad Migration Guide](./squad-migration.md)
 - [Squads API Reference](../api/squads-api.md)
 - [@squad-creator Agent](../../.yard-core/development/agents/squad-creator.md)
-- [yard-squads Repository](https://github.com/SynkraAI/yard-squads)
+- [yard-squads Repository](https://github.com/YardAI/yard-squads)
 
 ---
 

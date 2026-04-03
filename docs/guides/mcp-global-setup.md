@@ -4,7 +4,7 @@
 
 ---
 
-> Configure global MCP (Model Context Protocol) servers for Synkra YARD.
+> Configure global MCP (Model Context Protocol) servers for YARD-Framework.
 
 **Version:** 2.1.1
 **Last Updated:** 2025-12-23
@@ -693,4 +693,4 @@ Create `.mcp.json` in project root to override global settings:
 
 ---
 
-_Synkra YARD v4 MCP Global Setup Guide_
+_YARD-Framework v4 MCP Global Setup Guide_

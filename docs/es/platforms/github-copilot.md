@@ -120,7 +120,7 @@ Este archivo proporciona contexto global a Copilot:
 # Instrucciones del Proyecto para GitHub Copilot
 
 ## Descripción General del Proyecto
-Este proyecto utiliza Synkra YARD para desarrollo orquestado por IA.
+Este proyecto utiliza YARD-Framework para desarrollo orquestado por IA.
 
 ## Estándares de Codificación
 - TypeScript con modo estricto
@@ -147,7 +147,7 @@ description: Agente Senior Full Stack Developer
 
 # Agente de Desarrollador
 
-Eres un Senior Full Stack Developer trabajando con Synkra YARD.
+Eres un Senior Full Stack Developer trabajando con YARD-Framework.
 
 ## Experiencia
 - TypeScript/JavaScript
@@ -477,4 +477,4 @@ R: Los modos de chat son contextos persistentes, mientras que las @menciones son
 
 ---
 
-*Synkra YARD - Guía de Plataforma GitHub Copilot v1.0*
+*YARD-Framework - Guía de Plataforma GitHub Copilot v1.0*

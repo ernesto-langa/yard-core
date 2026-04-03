@@ -4,7 +4,7 @@
   Última sincronização: 2026-02-01
 -->
 
-# Documentação de Instalação do Synkra YARD
+# Documentação de Instalação do YARD-Framework
 
 > 🌐 [EN](../../installation/README.md) | **PT** | [ES](../../es/installation/README.md)
 
@@ -17,7 +17,7 @@
 
 ## Visão Geral
 
-Este diretório contém documentação abrangente de instalação e configuração para o Synkra YARD.
+Este diretório contém documentação abrangente de instalação e configuração para o YARD-Framework.
 
 ---
 

@@ -20,7 +20,7 @@ _Story: 2.2-git-workflow-implementation.yaml_
 
 ## Overview
 
-Synkra YARD implements a **Defense in Depth** validation strategy with three progressive layers that catch issues early and ensure code quality before merge.
+YARD-Framework implements a **Defense in Depth** validation strategy with three progressive layers that catch issues early and ensure code quality before merge.
 
 ### Why Three Layers?
 

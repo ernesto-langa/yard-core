@@ -6,11 +6,11 @@
 
 ---
 
-Este documento captura o estado atual do codebase do **Synkra YARD**, servindo como a arquitetura de referência para o desenvolvimento da **Fase 1 do Synkra YARD (MVP até o FR4)**. Ele descreve os padrões, componentes e tecnologias existentes sobre os quais as novas funcionalidades serão construídas.
+Este documento captura o estado atual do codebase do **YARD-Framework**, servindo como a arquitetura de referência para o desenvolvimento da **Fase 1 do YARD-Framework (MVP até o FR4)**. Ele descreve os padrões, componentes e tecnologias existentes sobre os quais as novas funcionalidades serão construídas.
 
 ## Escopo do Documento
 
-Documentação abrangente do framework Synkra YARD para servir como baseline para o MVP do YARD, que inclui: Rebranding, Workflow de Setup de IDE, Camada de Memória com LlamaIndex e o Meta-Agente `yard-developer`.
+Documentação abrangente do framework YARD-Framework para servir como baseline para o MVP do YARD, que inclui: Rebranding, Workflow de Setup de IDE, Camada de Memória com LlamaIndex e o Meta-Agente `yard-developer`.
 
 ## Registro de Alterações
 

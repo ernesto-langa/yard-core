@@ -148,7 +148,7 @@
 │   ═════════                                                           │
 │                                                                         │
 │   ┌────────────────────┐     ┌────────────────────┐                    │
-│   │  SynkraAI/         │     │  SynkraAI/         │                    │
+│   │  YardAI/         │     │  YardAI/         │                    │
 │   │  yard-core         │     │  yard-squads       │                    │
 │   │  (MIT)  │◄────│  (MIT)             │                    │
 │   │                    │     │                    │                    │
@@ -161,7 +161,7 @@
 │            │ 可选依赖                                                   │
 │            ▼                                                            │
 │   ┌────────────────────┐                                               │
-│   │  SynkraAI/         │                                               │
+│   │  YardAI/         │                                               │
 │   │  mcp-ecosystem     │                                               │
 │   │  (Apache 2.0)      │                                               │
 │   │                    │                                               │
@@ -174,7 +174,7 @@
 │   ═════════════                                                       │
 │                                                                         │
 │   ┌────────────────────┐     ┌────────────────────┐                    │
-│   │  SynkraAI/mmos     │     │  SynkraAI/         │                    │
+│   │  YardAI/mmos     │     │  YardAI/         │                    │
 │   │  (专有+NDA)        │     │  certified-partners│                    │
 │   │                    │     │  (专有)            │                    │
 │   │  • MMOS Minds      │     │  • 高级 Squads     │                    │

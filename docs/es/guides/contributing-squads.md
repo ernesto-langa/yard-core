@@ -17,7 +17,7 @@ Como contribuir squads al ecosistema YARD.
 Hay dos formas de compartir tu squad con la comunidad:
 
 1. **Repositorio yard-squads** - Squads gratuitos y de codigo abierto en GitHub
-2. **Marketplace de Synkra** - Squads premium via API de Synkra
+2. **Marketplace de YARD** - Squads premium via API de YARD
 
 ## Estandares de Calidad
 
@@ -159,7 +159,7 @@ Informacion de licencia.
 ```
 
 Esto:
-1. Hara fork de `SynkraAI/yard-squads` (si es necesario)
+1. Hara fork de `YardAI/yard-squads` (si es necesario)
 2. Creara branch con tu squad
 3. Abrira PR para revision
 
@@ -171,11 +171,11 @@ Esto:
 
 Tiempo estimado: Usualmente 2-5 dias habiles.
 
-## Publicando en el Marketplace de Synkra
+## Publicando en el Marketplace de YARD
 
 ### Prerequisitos
 
-1. Cuenta de Synkra
+1. Cuenta de YARD
 2. Token de API configurado
 3. Squad validado
 
@@ -249,7 +249,7 @@ Seguir versionado semantico:
 
 - [Guia de Desarrollo de Squad](./squads-guide.md)
 - [Guia de Migracion de Squad](./squad-migration.md)
-- [Repositorio yard-squads](https://github.com/SynkraAI/yard-squads)
+- [Repositorio yard-squads](https://github.com/YardAI/yard-squads)
 
 ---
 

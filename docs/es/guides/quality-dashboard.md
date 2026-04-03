@@ -364,4 +364,4 @@ La auto-actualización se pausa cuando:
 
 ---
 
-_Synkra YARD Quality Dashboard v1.0_
+_YARD-Framework Quality Dashboard v1.0_

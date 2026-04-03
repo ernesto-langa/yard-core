@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-02-15
 
-This document clarifies the licensing boundary in Synkra YARD.
+This document clarifies the licensing boundary in YARD-Framework.
 
 ## Scope
 

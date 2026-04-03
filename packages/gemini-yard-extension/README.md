@@ -1,6 +1,6 @@
 # AIOX Gemini CLI Extension
 
-Brings Synkra Yard multi-agent orchestration to Gemini CLI.
+Brings YARD-Framework multi-agent orchestration to Gemini CLI.
 
 ## Installation
 

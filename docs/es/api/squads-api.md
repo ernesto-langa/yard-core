@@ -2,13 +2,13 @@
 
 # Referencia de la API de Squads
 
-API REST para sincronizar squads con Synkra y descubrir squads del marketplace.
+API REST para sincronizar squads con YARD y descubrir squads del marketplace.
 
 ## Vision General
 
 La API de Squads permite:
 
-- **Sync**: Enviar squads locales a la nube de Synkra
+- **Sync**: Enviar squads locales a la nube de YARD
 - **Marketplace**: Descubrir y explorar squads publicos
 - **Gestion**: Actualizar visibilidad, eliminar squads
 
@@ -36,7 +36,7 @@ Obtiene tu clave API de: https://synkra.ai/settings/api-keys
 
 ### Sincronizar Squad
 
-Envia una definicion de squad a Synkra.
+Envia una definicion de squad a YARD.
 
 ```
 POST /api/squads/sync
@@ -232,7 +232,7 @@ curl "https://api.synkra.ai/api/squads?tags=devops,automation&search=deploy&offi
       "name": "devops-squad",
       "version": "2.1.0",
       "description": "Squad de automatizacion DevOps",
-      "author": "SynkraAI",
+      "author": "YardAI",
       "tags": ["devops", "automation", "ci-cd"],
       "is_public": true,
       "is_official": true,
@@ -343,7 +343,7 @@ curl https://api.synkra.ai/api/squads/550e8400-e29b-41d4-a716-446655440000
     "name": "devops-squad",
     "version": "2.1.0",
     "description": "Squad de automatizacion DevOps para pipelines CI/CD",
-    "author": "SynkraAI",
+    "author": "YardAI",
     "license": "MIT",
     "slash_prefix": "devops",
     "tags": ["devops", "automation", "ci-cd"],
@@ -428,7 +428,7 @@ curl -X PATCH https://api.synkra.ai/api/squads/mi-squad \
 
 ### Eliminar Squad
 
-Elimina un squad de Synkra.
+Elimina un squad de YARD.
 
 ```
 DELETE /api/squads/:id
@@ -585,8 +585,8 @@ Importa esta coleccion en Postman o Insomnia:
 ```json
 {
   "info": {
-    "name": "API de Squads Synkra",
-    "description": "API REST para el Marketplace de Squads de Synkra",
+    "name": "API de Squads YARD",
+    "description": "API REST para el Marketplace de Squads de YARD",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [

@@ -208,76 +208,76 @@ abort_on_close: true
 # ============================================
 # Propietario por Defecto (fallback)
 # ============================================
-* @SynkraAI/maintainers
+* @YardAI/maintainers
 
 # ============================================
 # Framework Core
 # ============================================
 # Definiciones de agentes - requiere revision del equipo core
-.yard-core/development/agents/ @SynkraAI/core-team
+.yard-core/development/agents/ @YardAI/core-team
 
 # Definiciones de tareas - requiere revision del equipo core
-.yard-core/development/tasks/ @SynkraAI/core-team
+.yard-core/development/tasks/ @YardAI/core-team
 
 # Definiciones de workflows - requiere revision del equipo core
-.yard-core/development/workflows/ @SynkraAI/core-team
+.yard-core/development/workflows/ @YardAI/core-team
 
 # Plantillas - requiere revision de arquitecto/equipo core
-.yard-core/product/templates/ @SynkraAI/core-team
-templates/ @SynkraAI/core-team
+.yard-core/product/templates/ @YardAI/core-team
+templates/ @YardAI/core-team
 
 # Utilidades core - requiere revision senior
-.yard-core/core/ @SynkraAI/core-team
-.yard-core/cli/ @SynkraAI/core-team
+.yard-core/core/ @YardAI/core-team
+.yard-core/cli/ @YardAI/core-team
 
 # ============================================
 # Infraestructura
 # ============================================
 # CI/CD - requiere aprobacion de devops
-.github/ @SynkraAI/devops
+.github/ @YardAI/devops
 
 # Configuraciones de Docker
-.docker/ @SynkraAI/devops
+.docker/ @YardAI/devops
 
 # Archivos de configuracion
-.yard-core/core-config.yaml @SynkraAI/core-team
-package.json @SynkraAI/maintainers
-package-lock.json @SynkraAI/maintainers
+.yard-core/core-config.yaml @YardAI/core-team
+package.json @YardAI/maintainers
+package-lock.json @YardAI/maintainers
 
 # ============================================
 # Documentacion (Mas Permisiva)
 # ============================================
 # Documentacion general - mantenedores pueden aprobar
-docs/ @SynkraAI/maintainers
+docs/ @YardAI/maintainers
 
 # Decisiones de arquitectura - requiere equipo core
-docs/architecture/ @SynkraAI/core-team
-docs/framework/ @SynkraAI/core-team
+docs/architecture/ @YardAI/core-team
+docs/framework/ @YardAI/core-team
 
 # Historias - mantenedores (documentacion de desarrollo interno)
-docs/stories/ @SynkraAI/maintainers
+docs/stories/ @YardAI/maintainers
 
 # Guias - mantenedores (amigable para contribuidores)
-docs/guides/ @SynkraAI/maintainers
+docs/guides/ @YardAI/maintainers
 
 # ============================================
 # Archivos Sensibles de Seguridad
 # ============================================
 # Configuraciones de seguridad
-.github/CODEOWNERS @SynkraAI/core-team
-.github/workflows/semantic-release.yml @SynkraAI/devops
-.github/workflows/npm-publish.yml @SynkraAI/devops
+.github/CODEOWNERS @YardAI/core-team
+.github/workflows/semantic-release.yml @YardAI/devops
+.github/workflows/npm-publish.yml @YardAI/devops
 
 # Archivos de configuracion raiz
-.env* @SynkraAI/core-team
-*.config.js @SynkraAI/maintainers
+.env* @YardAI/core-team
+*.config.js @YardAI/maintainers
 ```
 
 **Equipos de GitHub Requeridos:**
 
-- `@SynkraAI/maintainers` - Mantenedores generales (acceso de escritura)
-- `@SynkraAI/core-team` - Desarrolladores core del framework
-- `@SynkraAI/devops` - CI/CD e infraestructura
+- `@YardAI/maintainers` - Mantenedores generales (acceso de escritura)
+- `@YardAI/core-team` - Desarrolladores core del framework
+- `@YardAI/devops` - CI/CD e infraestructura
 
 ---
 
@@ -467,7 +467,7 @@ git push
 
 ```bash
 # Restaurar propiedad simple
-echo "* @SynkraAI" > .github/CODEOWNERS
+echo "* @YardAI" > .github/CODEOWNERS
 git add -A && git commit -m "chore: rollback CODEOWNERS"
 git push
 ```

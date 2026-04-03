@@ -2,7 +2,7 @@
 
 > 🌐 **EN** | [PT](../pt/community/README-community-snippet-squads.md) | [ES](../es/community/README-community-snippet-squads.md)
 
-> **Purpose:** Copy this snippet into the README.md of `SynkraAI/yard-squads` repository.
+> **Purpose:** Copy this snippet into the README.md of `YardAI/yard-squads` repository.
 
 ---
 
@@ -16,7 +16,7 @@ For discussions, questions, and community interaction, visit our central hub:
 |------|-------------|
 | 📦 **Squad questions?** | Use the ["Squads" category](https://github.com/ernesto-langa/yard-core/discussions/categories/squads) |
 | 💡 **Feature ideas?** | Start a [Discussion in "Ideas"](https://github.com/ernesto-langa/yard-core/discussions/categories/ideas) |
-| 🐛 **Found a bug?** | [Open an issue](https://github.com/SynkraAI/yard-squads/issues/new/choose) in **this repository** |
+| 🐛 **Found a bug?** | [Open an issue](https://github.com/YardAI/yard-squads/issues/new/choose) in **this repository** |
 | 🙏 **Need help?** | Ask in ["Q&A"](https://github.com/ernesto-langa/yard-core/discussions/categories/q-a) |
 | 🙌 **Built something cool?** | Share in ["Show and Tell"](https://github.com/ernesto-langa/yard-core/discussions/categories/show-and-tell) |
 
@@ -31,8 +31,8 @@ For discussions, questions, and community interaction, visit our central hub:
 
 Have an idea for a new YARD Squad? We'd love to hear it!
 
-1. Check existing [Squad proposals](https://github.com/SynkraAI/yard-squads/labels/new-squad)
-2. Open a [Squad Proposal issue](https://github.com/SynkraAI/yard-squads/issues/new?template=squad-proposal.md)
+1. Check existing [Squad proposals](https://github.com/YardAI/yard-squads/labels/new-squad)
+2. Open a [Squad Proposal issue](https://github.com/YardAI/yard-squads/issues/new?template=squad-proposal.md)
 3. Discuss in the community
 
 ---

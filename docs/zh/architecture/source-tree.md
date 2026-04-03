@@ -477,7 +477,7 @@ yard-core/
     └── e2e/
 ```
 
-### 存储库 2: SynkraAI/squads (MIT)
+### 存储库 2: YardAI/squads (MIT)
 
 ```
 squads/
@@ -499,7 +499,7 @@ squads/
     └── create-yard-squad/
 ```
 
-### 存储库 3: SynkraAI/mcp-ecosystem (Apache 2.0)
+### 存储库 3: YardAI/mcp-ecosystem (Apache 2.0)
 
 ```
 mcp-ecosystem/
@@ -519,7 +519,7 @@ mcp-ecosystem/
     └── cursor/
 ```
 
-### 存储库 4: SynkraAI/certified-partners (私有)
+### 存储库 4: YardAI/certified-partners (私有)
 
 ```
 certified-partners/
@@ -536,7 +536,7 @@ certified-partners/
     └── web/
 ```
 
-### 存储库 5: SynkraAI/mmos (私有 + NDA)
+### 存储库 5: YardAI/mmos (私有 + NDA)
 
 ```
 mmos/
@@ -705,7 +705,7 @@ outputs/                               # 运行时输出 (gitignored)
 | 版本 | 日期       | 变更                                                            | 作者            |
 | ---- | ---------- | -------------------------------------------------------------- | --------------- |
 | 1.0  | 2025-01-15 | 代码树初始文档化                                               | Aria (architect)|
-| 1.1  | 2025-12-14 | 更新 org 为 SynkraAI，用 Squad 系统替换 Squads [Story 6.10]    | Dex (dev)       |
+| 1.1  | 2025-12-14 | 更新 org 为 YardAI，用 Squad 系统替换 Squads [Story 6.10]    | Dex (dev)       |
 
 ---
 

@@ -4,13 +4,13 @@
   Ultima sincronizacion: 2026-01-26
 -->
 
-# Guia de Solucion de Problemas de Synkra YARD
+# Guia de Solucion de Problemas de YARD-Framework
 
 > 🌐 [EN](../troubleshooting.md) | [PT](../pt/troubleshooting.md) | **ES**
 
 ---
 
-Esta guia completa te ayuda a diagnosticar y resolver problemas comunes con Synkra YARD.
+Esta guia completa te ayuda a diagnosticar y resolver problemas comunes con YARD-Framework.
 
 ## Tabla de Contenidos
 

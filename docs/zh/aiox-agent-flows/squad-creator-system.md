@@ -24,7 +24,7 @@
 - **创建小队**遵循 YARD 模式和结构
 - **验证小队**针对 JSON Schema 和任务规范
 - **列出小队**项目本地
-- **分发小队**在 3 个级别（本地、yard-squads、Synkra API）
+- **分发小队**在 3 个级别（本地、yard-squads、Yard API）
 - **迁移小队**到带编排和技能的 v2 格式
 - **分析和扩展**现有小队
 
@@ -33,7 +33,7 @@
 1. **任务优先架构**：任务是入口点，代理编排
 2. **强制验证**：分发前始终验证
 3. **JSON Schema**：清单针对 schema 验证
-4. **3 级分发**：本地、公共（yard-squads）、市场（Synkra API）
+4. **3 级分发**：本地、公共（yard-squads）、市场（Yard API）
 5. **与 yard-core 集成**：小队与框架协同工作
 
 ---
@@ -62,7 +62,7 @@
 | `.yard-core/development/tasks/squad-generate-workflow.md` | `*generate-workflow` | 生成 YAML 编排工作流 | 活跃 |
 | `.yard-core/development/tasks/squad-creator-download.md` | `*download-squad` | 从公共仓库下载小队 | 占位符（Sprint 8） |
 | `.yard-core/development/tasks/squad-creator-publish.md` | `*publish-squad` | 发布小队到 yard-squads | 占位符（Sprint 8） |
-| `.yard-core/development/tasks/squad-creator-sync-synkra.md` | `*sync-squad-synkra` | 同步小队到 Synkra API | 占位符（Sprint 8） |
+| `.yard-core/development/tasks/squad-creator-sync-synkra.md` | `*sync-squad-synkra` | 同步小队到 Yard API | 占位符（Sprint 8） |
 
 ### 相关任务文件
 
@@ -162,7 +162,7 @@ flowchart TB
 
     subgraph DISTRIBUTE["分发"]
         LOCAL["本地<br/>./squads/"]
-        PUBLIC["公共<br/>github.com/SynkraAI/yard-squads"]
+        PUBLIC["公共<br/>github.com/YardAI/yard-squads"]
         MARKET["市场<br/>api.synkra.dev/squads"]
     end
 
@@ -356,7 +356,7 @@ flowchart TB
 |---------|-----------|----------|
 | `*download-squad` | `squad-creator-download.md` | 从 yard-squads 下载小队 |
 | `*publish-squad` | `squad-creator-publish.md` | 发布小队到 yard-squads |
-| `*sync-squad-synkra` | `squad-creator-sync-synkra.md` | 同步小队到 Synkra API |
+| `*sync-squad-synkra` | `squad-creator-sync-synkra.md` | 同步小队到 Yard API |
 
 ### 单个组件命令
 
@@ -462,7 +462,7 @@ flowchart LR
 
     SQUADS[("./squads/")]
     YARD_SQUADS[("yard-squads")]
-    SYNKRA[("Synkra API")]
+    SYNKRA[("Yard API")]
 
     SC_CREATE --> SQUADS
     SC_VALIDATE --> SQUADS
@@ -570,14 +570,14 @@ flowchart LR
     end
 
     subgraph PUBLIC["级别 2：公共"]
-        P_REPO["github.com/SynkraAI/yard-squads"]
+        P_REPO["github.com/YardAI/yard-squads"]
         P_DESC["社区小队（免费）"]
         P_CMD["*publish-squad"]
     end
 
     subgraph MARKET["级别 3：市场"]
         M_API["api.synkra.dev/squads"]
-        M_DESC["通过 Synkra API 的高级小队"]
+        M_DESC["通过 Yard API 的高级小队"]
         M_CMD["*sync-squad-synkra"]
     end
 
@@ -689,7 +689,7 @@ flowchart LR
 | **Schemas** | 2 个（squad-schema、squad-design-schema） |
 | **模板** | 3 个（basic、etl、agent-only） |
 | **模板版本** | 2 个（v1 遗留、v2 编排） |
-| **分发级别** | 3 个（本地、yard-squads、Synkra API） |
+| **分发级别** | 3 个（本地、yard-squads、Yard API） |
 
 ---
 

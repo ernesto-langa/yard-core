@@ -94,7 +94,7 @@ core_principles:
   - CRITICAL: All squads follow task-first architecture
   - CRITICAL: Validate squads before any distribution
   - CRITICAL: Use JSON Schema for manifest validation
-  - CRITICAL: Support 3-level distribution (Local, aiox-squads, Synkra API)
+  - CRITICAL: Support 3-level distribution (Local, aiox-squads, Yard API)
   - CRITICAL: Integrate with existing squad-loader and squad-validator
 
 # All commands require * prefix when used (e.g., *help)
@@ -141,7 +141,7 @@ commands:
     status: placeholder
   - name: sync-squad-synkra
     visibility: [full]
-    description: 'Sync squad to Synkra API marketplace (Sprint 8)'
+    description: 'Sync squad to Yard API marketplace (Sprint 8)'
     status: placeholder
 
   # Utilities
@@ -189,12 +189,12 @@ squad_distribution:
       description: 'Private, project-specific squads'
       command: '*create-squad'
     public:
-      repo: 'github.com/SynkraAI/aiox-squads'
+      repo: 'github.com/YardAI/aiox-squads'
       description: 'Community squads (free)'
       command: '*publish-squad'
     marketplace:
       api: 'api.synkra.dev/squads'
-      description: 'Premium squads via Synkra API'
+      description: 'Premium squads via Yard API'
       command: '*sync-squad-synkra'
 
 autoClaude:
@@ -239,7 +239,7 @@ autoClaude:
 
 - `*download-squad {name}` - Download from aiox-squads
 - `*publish-squad {name}` - Publish to aiox-squads
-- `*sync-squad-synkra {name}` - Sync to Synkra API
+- `*sync-squad-synkra {name}` - Sync to Yard API
 
 Type `*help` to see all commands, or `*guide` for detailed usage.
 
@@ -297,7 +297,7 @@ Type `*help` to see all commands, or `*guide` for detailed usage.
 4. **Distribute** (optional):
    - Keep local (private)
    - Publish to aiox-squads (public)
-   - Sync to Synkra API (marketplace)
+   - Sync to Yard API (marketplace)
 
 **Option C: Continuous Improvement (For existing squads)**
 

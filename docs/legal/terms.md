@@ -6,11 +6,11 @@
 
 ## Acceptance of Terms
 
-By using Synkra YARD ("the Software"), you agree to be bound by these Terms of Use. If you do not agree to these terms, do not use the Software.
+By using YARD-Framework ("the Software"), you agree to be bound by these Terms of Use. If you do not agree to these terms, do not use the Software.
 
 ## License
 
-Synkra YARD is released under the **MIT License**. See the [LICENSE](LICENSE) file for the full license text.
+YARD-Framework is released under the **MIT License**. See the [LICENSE](LICENSE) file for the full license text.
 
 For licensing scope between open-source core and private modules, see:
 - [License Clarification (Core vs Pro)](./license-clarification.md)
@@ -36,9 +36,9 @@ You **MUST**:
 You may **NOT**:
 
 - ❌ Remove or alter copyright notices from the Software
-- ❌ Use SynkraAI Inc. trademarks without written permission
+- ❌ Use Yard trademarks without written permission
 - ❌ Hold the authors or copyright holders liable for any damages
-- ❌ Claim authorship or endorsement by SynkraAI Inc.
+- ❌ Claim authorship or endorsement by Yard
 - ❌ Use the project name in a way that implies official endorsement
 
 ## Disclaimer of Warranties
@@ -67,7 +67,7 @@ This limitation applies to:
 
 ## Contributions
 
-By contributing to Synkra YARD, you agree that:
+By contributing to YARD-Framework, you agree that:
 
 1. **License Grant:** Your contributions will be licensed under the same MIT License
 2. **Original Work:** Your contributions are your original work or you have the right to submit them
@@ -78,11 +78,11 @@ For detailed contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Trademarks
 
-The following are trademarks or registered trademarks of SynkraAI Inc.:
+The following are trademarks or registered trademarks of Yard:
 
 - "YARD"
-- "Synkra YARD"
-- "Synkra"
+- "YARD-Framework"
+- "YARD"
 - Associated logos and branding
 
 ### Trademark Usage Guidelines
@@ -100,11 +100,11 @@ You may **NOT**:
 - Use trademarks in a way suggesting endorsement
 - Register similar trademarks
 
-For trademark licensing inquiries, contact: legal@SynkraAI.com
+For trademark licensing inquiries, contact: legal@YardAI.com
 
 ## Third-Party Dependencies
 
-Synkra YARD includes third-party open-source components. Each component is subject to its own license terms:
+YARD-Framework includes third-party open-source components. Each component is subject to its own license terms:
 
 - See `package.json` for a list of dependencies
 - Run `npm ls` to view the complete dependency tree
@@ -112,7 +112,7 @@ Synkra YARD includes third-party open-source components. Each component is subje
 
 ## AI-Generated Content
 
-When using AI providers (Claude, OpenAI, etc.) through Synkra YARD:
+When using AI providers (Claude, OpenAI, etc.) through YARD-Framework:
 
 1. **User Responsibility:** You are responsible for content generated
 2. **Provider Terms:** AI interactions are subject to provider terms of service
@@ -148,16 +148,16 @@ If any provision of these terms is found to be unenforceable, the remaining prov
 
 ## Entire Agreement
 
-These Terms of Use, together with the [LICENSE](LICENSE), [Privacy Policy](PRIVACY.md), and [Code of Conduct](CODE_OF_CONDUCT.md), constitute the entire agreement between you and SynkraAI Inc. regarding use of Synkra YARD.
+These Terms of Use, together with the [LICENSE](LICENSE), [Privacy Policy](PRIVACY.md), and [Code of Conduct](CODE_OF_CONDUCT.md), constitute the entire agreement between you and Yard regarding use of YARD-Framework.
 
 ## Contact
 
 For questions about these terms:
 
 - **GitHub Issues:** [Open an issue](https://github.com/ernesto-langa/yard-core/issues)
-- **Email:** legal@SynkraAI.com
+- **Email:** legal@YardAI.com
 - **Discord:** [Community Server](https://discord.gg/gk8jAdXWmj)
 
 ---
 
-**Copyright (c) 2025 SynkraAI Inc. All rights reserved.**
+**Copyright (c) 2025 Yard All rights reserved.**

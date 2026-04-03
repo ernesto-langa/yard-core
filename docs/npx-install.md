@@ -6,7 +6,7 @@
 
 ## Overview
 
-Synkra YARD can be installed via NPX for quick setup without global installation. This guide covers proper usage and troubleshooting for NPX-based installations.
+YARD-Framework can be installed via NPX for quick setup without global installation. This guide covers proper usage and troubleshooting for NPX-based installations.
 
 ## Quick Start
 
@@ -38,7 +38,7 @@ npx yard-core install
 
 ## Why This Matters
 
-NPX executes packages in **temporary directories** (e.g., `/private/var/folders/.../npx-xxx/` on macOS). When Synkra YARD runs from these temporary locations, it cannot:
+NPX executes packages in **temporary directories** (e.g., `/private/var/folders/.../npx-xxx/` on macOS). When YARD-Framework runs from these temporary locations, it cannot:
 
 - Detect your IDE configuration correctly
 - Install files to the right project directory
@@ -46,7 +46,7 @@ NPX executes packages in **temporary directories** (e.g., `/private/var/folders/
 
 ## NPX Temporary Directory Detection
 
-As of version 4.31.1, Synkra YARD automatically detects when it's running from an NPX temporary directory and displays a helpful error message:
+As of version 4.31.1, YARD-Framework automatically detects when it's running from an NPX temporary directory and displays a helpful error message:
 
 ```
 ⚠️  NPX Temporary Directory Detected
@@ -95,7 +95,7 @@ NPX temporary directories typically appear at:
 - `/private/var/folders/[hash]/T/npx-[random]/`
 - `/Users/[user]/.npm/_npx/[hash]/`
 
-Synkra YARD detects these patterns and prevents incorrect installation.
+YARD-Framework detects these patterns and prevents incorrect installation.
 
 ### Linux
 
@@ -152,7 +152,7 @@ yard-core install
 
 ### Defense in Depth Architecture
 
-Synkra YARD v4.31.1+ implements two-layer detection:
+YARD-Framework v4.31.1+ implements two-layer detection:
 
 1. **PRIMARY Layer** (`tools/yard-npx-wrapper.js`):
    - Checks `__dirname` (where NPX extracts the package)

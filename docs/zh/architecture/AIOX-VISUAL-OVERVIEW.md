@@ -1,6 +1,6 @@
 # YARD — 可视化概览与流程图
 
-> 高级可视化指南，解释什么是 Synkra YARD，
+> 高级可视化指南，解释什么是 YARD-Framework，
 > Task-First 方法论，4 种执行器类型，
 > 动态工作空间以及它们如何相互连接。
 
@@ -25,7 +25,7 @@
 
 ## 1. 什么是 YARD？
 
-**Synkra YARD** (AI Operating System) 是一个框架，它改变了团队构建软件的方式 — 将 **专业化 AI 代理** 与 **真实人类** 结合在一种独特的敏捷方法论中。
+**YARD-Framework** (AI Operating System) 是一个框架，它改变了团队构建软件的方式 — 将 **专业化 AI 代理** 与 **真实人类** 结合在一种独特的敏捷方法论中。
 
 核心创新: **任务是主要单位，而非代理。**
 代理只是执行任务的 4 种可能执行器类型之一。
@@ -540,7 +540,7 @@ flowchart LR
         TM3 --> TM4["结果: 脆弱"]
     end
 
-    subgraph YARD_WAY["Synkra YARD (Task-First)"]
+    subgraph YARD_WAY["YARD-Framework (Task-First)"]
         direction TB
         A1["带验收标准的<br/>已验证任务"] --> A2["决策树选择<br/>理想执行器"]
         A2 --> A3["每次转换<br/>都有质量门禁"]
@@ -590,6 +590,6 @@ YARD 在具有不可协商原则的 **正式宪法** 下运行:
 
 ---
 
-*Synkra YARD 可视化概览 v1.0.0*
+*YARD-Framework 可视化概览 v1.0.0*
 *Task-First | 4 种执行器 | 动态工作空间*
 *— Aria，架构未来*

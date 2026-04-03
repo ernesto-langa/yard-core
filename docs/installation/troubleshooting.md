@@ -1,4 +1,4 @@
-# Synkra YARD Troubleshooting Guide
+# YARD-Framework Troubleshooting Guide
 
 > 🌐 **EN** | [PT](../pt/installation/troubleshooting.md) | [ES](../es/installation/troubleshooting.md)
 
@@ -73,7 +73,7 @@ npm --version
 
 Current directory: /Users/username
 
-Synkra YARD should be installed in your project directory,
+YARD-Framework should be installed in your project directory,
 not in your home directory or temporary locations.
 ```
 
@@ -121,7 +121,7 @@ npx yard-core install
 **Symptoms:**
 
 ```
-Error: Synkra YARD requires Node.js 18.0.0 or higher
+Error: YARD-Framework requires Node.js 18.0.0 or higher
 Current version: 14.17.0
 ```
 

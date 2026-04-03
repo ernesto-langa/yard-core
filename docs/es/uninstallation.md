@@ -10,7 +10,7 @@
 
 ---
 
-Esta guía proporciona instrucciones completas para desinstalar Synkra YARD de su sistema.
+Esta guía proporciona instrucciones completas para desinstalar YARD-Framework de su sistema.
 
 ## Tabla de Contenidos
 
@@ -28,7 +28,7 @@ Esta guía proporciona instrucciones completas para desinstalar Synkra YARD de s
 
 ### Consideraciones Importantes
 
-⚠️ **Advertencia**: Desinstalar Synkra YARD:
+⚠️ **Advertencia**: Desinstalar YARD-Framework:
 
 - Eliminará todos los archivos del framework
 - Borrará configuraciones de agentes (a menos que se preserven)
@@ -65,7 +65,7 @@ tar -czf yard-backup-$(date +%Y%m%d).tar.gz \
 
 ### Usando el Desinstalador Incorporado
 
-La forma más rápida de desinstalar Synkra YARD:
+La forma más rápida de desinstalar YARD-Framework:
 
 ```bash
 # Desinstalación básica (preserva datos de usuario)
@@ -152,7 +152,7 @@ Remove-Item -Recurse -Force "$env:APPDATA\yard-core"
 Remove-Item -Recurse -Force "$env:TEMP\yard-*"
 
 # Eliminar entradas del registro (si las hay)
-Remove-Item -Path "HKCU:\Software\Synkra YARD" -Recurse
+Remove-Item -Path "HKCU:\Software\YARD-Framework" -Recurse
 ```
 
 #### macOS/Linux
@@ -282,11 +282,11 @@ Crear `clean-uninstall.sh`:
 
 ```bash
 #!/bin/bash
-echo "Synkra YARD Complete Uninstall"
+echo "YARD-Framework Complete Uninstall"
 echo "================================="
 
 # Confirmación
-read -p "This will remove ALL Synkra YARD data. Continue? (y/N) " -n 1 -r
+read -p "This will remove ALL YARD-Framework data. Continue? (y/N) " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     exit 1
@@ -334,7 +334,7 @@ echo "Uninstall complete!"
 
 ```powershell
 # Script PowerShell para limpieza de Windows
-Write-Host "Cleaning Synkra YARD from Windows Registry..."
+Write-Host "Cleaning YARD-Framework from Windows Registry..."
 
 # Eliminar del PATH
 $path = [Environment]::GetEnvironmentVariable("PATH", "User")
@@ -403,7 +403,7 @@ Si la desinstalación normal falla:
 ```bash
 #!/bin/bash
 # force-uninstall.sh
-echo "Force uninstalling Synkra YARD..."
+echo "Force uninstalling YARD-Framework..."
 
 # Matar todos los procesos relacionados
 pkill -9 -f yard || true
@@ -474,14 +474,14 @@ sed -i '/yard-/d' .gitignore
 
 # Commit de eliminación
 git add -A
-git commit -m "Remove Synkra YARD"
+git commit -m "Remove YARD-Framework"
 ```
 
 ## Reinstalación
 
 ### Después de Desinstalación Completa
 
-Si desea reinstalar Synkra YARD:
+Si desea reinstalar YARD-Framework:
 
 1. **Esperar la limpieza**
 

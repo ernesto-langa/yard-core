@@ -203,7 +203,7 @@ updated_at: 2025-11-17
 alyze Impact - YARD Developer Task
 
 ## Purpose
-Analyze the potential impact of proposed component modifications on the broader Synkra YARD framework.
+Analyze the potential impact of proposed component modifications on the broader YARD-Framework framework.
 
 ## Command Pattern
 ```

@@ -4,7 +4,7 @@
 
 ---
 
-> Guía completa para fortalecer la seguridad en despliegues de Synkra YARD - desde desarrollo hasta producción.
+> Guía completa para fortalecer la seguridad en despliegues de YARD-Framework - desde desarrollo hasta producción.
 
 **Versión:** 2.1.0
 **Última Actualización:** 2026-01-29
@@ -29,7 +29,7 @@
 
 ## Visión General de Seguridad
 
-Synkra YARD opera en una capa privilegiada entre los modelos de IA y tu sistema. Esta guía cubre estrategias de hardening específicas para entornos de desarrollo orquestados por IA.
+YARD-Framework opera en una capa privilegiada entre los modelos de IA y tu sistema. Esta guía cubre estrategias de hardening específicas para entornos de desarrollo orquestados por IA.
 
 ### Arquitectura de Seguridad
 
@@ -1283,7 +1283,7 @@ function validateProductionSecurity() {
 
 ### Política de Divulgación Responsable
 
-Si descubres una vulnerabilidad de seguridad en Synkra YARD, por favor sigue las prácticas de divulgación responsable:
+Si descubres una vulnerabilidad de seguridad en YARD-Framework, por favor sigue las prácticas de divulgación responsable:
 
 ### Proceso de Reporte
 
@@ -1343,7 +1343,7 @@ Los contribuyentes que divulguen vulnerabilidades de manera responsable son reco
 
 ### Programa de Bug Bounty
 
-Actualmente, Synkra YARD no tiene un programa formal de bug bounty. Sin embargo, las contribuciones significativas de seguridad son reconocidas y pueden recibir licencias de YARD Pro u otro reconocimiento.
+Actualmente, YARD-Framework no tiene un programa formal de bug bounty. Sin embargo, las contribuciones significativas de seguridad son reconocidas y pueden recibir licencias de YARD Pro u otro reconocimiento.
 
 ---
 
@@ -1356,4 +1356,4 @@ Actualmente, Synkra YARD no tiene un programa formal de bug bounty. Sin embargo,
 
 ---
 
-_Guía de Hardening de Seguridad de Synkra YARD v4.0_
+_Guía de Hardening de Seguridad de YARD-Framework v4.0_

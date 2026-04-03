@@ -4,7 +4,7 @@
 
 ---
 
-本指南提供了从您的系统中卸载 Synkra YARD 的全面说明。
+本指南提供了从您的系统中卸载 YARD-Framework 的全面说明。
 
 ## 目录
 
@@ -22,7 +22,7 @@
 
 ### 重要考虑事项
 
-⚠️ **警告**：卸载 Synkra YARD 将：
+⚠️ **警告**：卸载 YARD-Framework 将：
 
 - 删除所有框架文件
 - 删除代理配置（除非保留）
@@ -59,7 +59,7 @@ tar -czf yard-backup-$(date +%Y%m%d).tar.gz \
 
 ### 使用内置卸载程序
 
-卸载 Synkra YARD 的最快方法：
+卸载 YARD-Framework 的最快方法：
 
 ```bash
 # 基本卸载（保留用户数据）
@@ -146,7 +146,7 @@ Remove-Item -Recurse -Force "$env:APPDATA\yard-core"
 Remove-Item -Recurse -Force "$env:TEMP\yard-*"
 
 # 删除注册表条目（如果有）
-Remove-Item -Path "HKCU:\Software\Synkra YARD" -Recurse
+Remove-Item -Path "HKCU:\Software\YARD-Framework" -Recurse
 ```
 
 #### macOS/Linux
@@ -243,11 +243,11 @@ rm -rf templates/custom/
 
 ```bash
 #!/bin/bash
-echo "Synkra YARD 完全卸载"
+echo "YARD-Framework 完全卸载"
 echo "================================="
 
 # 确认
-read -p "这将删除所有 Synkra YARD 数据。继续吗？(y/N) " -n 1 -r
+read -p "这将删除所有 YARD-Framework 数据。继续吗？(y/N) " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     exit 1

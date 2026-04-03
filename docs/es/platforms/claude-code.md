@@ -647,4 +647,4 @@ R: Después de actualizar YARD o cuando los agentes se modifiquen en el núcleo.
 
 ---
 
-*Synkra YARD - Guía de Plataforma Claude Code v1.0*
+*YARD-Framework - Guía de Plataforma Claude Code v1.0*

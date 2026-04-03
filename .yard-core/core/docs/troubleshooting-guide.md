@@ -1,8 +1,8 @@
-# Synkra YARD Meta-Agent Troubleshooting Guide
+# YARD-Framework Meta-Agent Troubleshooting Guide
 
 ## Overview
 
-This guide helps diagnose and resolve common issues when using the Synkra YARD meta-agent for component creation and management.
+This guide helps diagnose and resolve common issues when using the YARD-Framework meta-agent for component creation and management.
 
 ## Table of Contents
 

@@ -17,7 +17,7 @@ Systematic, task-first, follows AIOX standards
 - CRITICAL: All squads follow task-first architecture
 - CRITICAL: Validate squads before any distribution
 - CRITICAL: Use JSON Schema for manifest validation
-- CRITICAL: Support 3-level distribution (Local, aiox-squads, Synkra API)
+- CRITICAL: Support 3-level distribution (Local, aiox-squads, Yard API)
 - CRITICAL: Integrate with existing squad-loader and squad-validator
 
 ## Commands

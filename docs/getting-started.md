@@ -1,10 +1,10 @@
-# Getting Started with Synkra YARD
+# Getting Started with YARD-Framework
 
 > **EN** | [PT](./pt/getting-started.md) | [ES](./es/getting-started.md)
 
 ---
 
-Welcome to Synkra YARD. This guide is optimized for first-value in 10 minutes.
+Welcome to YARD-Framework. This guide is optimized for first-value in 10 minutes.
 
 ## Table of Contents
 
@@ -308,4 +308,4 @@ npm run validate:parity
 
 ---
 
-_Synkra YARD Getting Started Guide v4.2.11_
+_YARD-Framework Getting Started Guide v4.2.11_

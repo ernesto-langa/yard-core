@@ -208,7 +208,7 @@ checklists:
 # Propose Modification - YARD Developer Task
 
 ## Purpose
-Create and submit modification proposals for collaborative review and approval within the Synkra YARD framework.
+Create and submit modification proposals for collaborative review and approval within the YARD-Framework framework.
 
 ## Command Pattern
 ```

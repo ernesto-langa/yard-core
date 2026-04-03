@@ -208,76 +208,76 @@ abort_on_close: true
 # ============================================
 # 默认所有者（后备）
 # ============================================
-* @SynkraAI/maintainers
+* @YardAI/maintainers
 
 # ============================================
 # 框架核心
 # ============================================
 # 代理定义 - 需要核心团队审查
-.yard-core/development/agents/ @SynkraAI/core-team
+.yard-core/development/agents/ @YardAI/core-team
 
 # 任务定义 - 需要核心团队审查
-.yard-core/development/tasks/ @SynkraAI/core-team
+.yard-core/development/tasks/ @YardAI/core-team
 
 # 工作流定义 - 需要核心团队审查
-.yard-core/development/workflows/ @SynkraAI/core-team
+.yard-core/development/workflows/ @YardAI/core-team
 
 # 模板 - 需要架构师/核心团队审查
-.yard-core/product/templates/ @SynkraAI/core-team
-templates/ @SynkraAI/core-team
+.yard-core/product/templates/ @YardAI/core-team
+templates/ @YardAI/core-team
 
 # 核心工具 - 需要高级审查
-.yard-core/core/ @SynkraAI/core-team
-.yard-core/cli/ @SynkraAI/core-team
+.yard-core/core/ @YardAI/core-team
+.yard-core/cli/ @YardAI/core-team
 
 # ============================================
 # 基础设施
 # ============================================
 # CI/CD - 需要 devops 批准
-.github/ @SynkraAI/devops
+.github/ @YardAI/devops
 
 # Docker 配置
-.docker/ @SynkraAI/devops
+.docker/ @YardAI/devops
 
 # 配置文件
-.yard-core/core-config.yaml @SynkraAI/core-team
-package.json @SynkraAI/maintainers
-package-lock.json @SynkraAI/maintainers
+.yard-core/core-config.yaml @YardAI/core-team
+package.json @YardAI/maintainers
+package-lock.json @YardAI/maintainers
 
 # ============================================
 # 文档（更宽松）
 # ============================================
 # 通用文档 - 维护者可批准
-docs/ @SynkraAI/maintainers
+docs/ @YardAI/maintainers
 
 # 架构决策 - 需要核心团队
-docs/architecture/ @SynkraAI/core-team
-docs/framework/ @SynkraAI/core-team
+docs/architecture/ @YardAI/core-team
+docs/framework/ @YardAI/core-team
 
 # Stories - 维护者（内部开发文档）
-docs/stories/ @SynkraAI/maintainers
+docs/stories/ @YardAI/maintainers
 
 # 指南 - 维护者（对贡献者友好）
-docs/guides/ @SynkraAI/maintainers
+docs/guides/ @YardAI/maintainers
 
 # ============================================
 # 安全敏感文件
 # ============================================
 # 安全配置
-.github/CODEOWNERS @SynkraAI/core-team
-.github/workflows/semantic-release.yml @SynkraAI/devops
-.github/workflows/npm-publish.yml @SynkraAI/devops
+.github/CODEOWNERS @YardAI/core-team
+.github/workflows/semantic-release.yml @YardAI/devops
+.github/workflows/npm-publish.yml @YardAI/devops
 
 # 根配置文件
-.env* @SynkraAI/core-team
-*.config.js @SynkraAI/maintainers
+.env* @YardAI/core-team
+*.config.js @YardAI/maintainers
 ```
 
 **需要的 GitHub 团队:**
 
-- `@SynkraAI/maintainers` - 通用维护者（写入权限）
-- `@SynkraAI/core-team` - 框架核心开发者
-- `@SynkraAI/devops` - CI/CD 和基础设施
+- `@YardAI/maintainers` - 通用维护者（写入权限）
+- `@YardAI/core-team` - 框架核心开发者
+- `@YardAI/devops` - CI/CD 和基础设施
 
 ---
 
@@ -467,7 +467,7 @@ git push
 
 ```bash
 # 恢复简单所有权
-echo "* @SynkraAI" > .github/CODEOWNERS
+echo "* @YardAI" > .github/CODEOWNERS
 git add -A && git commit -m "chore: rollback CODEOWNERS"
 git push
 ```

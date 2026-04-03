@@ -423,4 +423,4 @@ Only use docker-gateway when:
 
 ---
 
-_Synkra YARD Docker MCP Setup Guide v4.2.11_
+_YARD-Framework Docker MCP Setup Guide v4.2.11_

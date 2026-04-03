@@ -280,4 +280,4 @@ sequenceDiagram
 
 ---
 
-_Synkra YARD - Documentación de Plataformas v1.0_
+_YARD-Framework - Documentación de Plataformas v1.0_

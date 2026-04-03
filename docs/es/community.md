@@ -1,8 +1,8 @@
-# Comunidad de Synkra YARD
+# Comunidad de YARD-Framework
 
 > 🇧🇷 [Versão em Português](COMMUNITY-PT.md)
 
-¡Bienvenido a la comunidad de Synkra YARD!
+¡Bienvenido a la comunidad de YARD-Framework!
 
 Estamos construyendo juntos el futuro del desarrollo orquestado por IA.
 
@@ -50,8 +50,8 @@ Nuestro centro de comunicación principal para todos los repositorios YARD:
 Para reportes de bugs y solicitudes de características:
 
 - [yard-core Issues](https://github.com/ernesto-langa/yard-core/issues) - Framework principal
-- [yard-squads Issues](https://github.com/SynkraAI/yard-squads/issues) - YARD Squads
-- [mcp-ecosystem Issues](https://github.com/SynkraAI/mcp-ecosystem/issues) - Herramientas MCP
+- [yard-squads Issues](https://github.com/YardAI/yard-squads/issues) - YARD Squads
+- [mcp-ecosystem Issues](https://github.com/YardAI/mcp-ecosystem/issues) - Herramientas MCP
 
 ## Cómo Contribuir
 
@@ -98,7 +98,7 @@ Cualquiera que haya contribuido a YARD de cualquier manera.
 
 Miembros del equipo principal que revisan PRs y guían el proyecto:
 
-- [@SynkraAI](https://github.com/SynkraAI) - Líder del Proyecto
+- [@YardAI](https://github.com/YardAI) - Líder del Proyecto
 
 ### Convertirse en Mantenedor
 
@@ -138,7 +138,7 @@ Para cambios significativos:
 
 Seguimos el [Contributor Covenant](CODE_OF_CONDUCT.md). Por favor léelo y respétalo.
 
-Reporta violaciones a: conduct@SynkraAI.com
+Reporta violaciones a: conduct@YardAI.com
 
 ## Obteniendo Ayuda
 
@@ -165,7 +165,7 @@ Reporta violaciones a: conduct@SynkraAI.com
 ¿Quieres saber hacia dónde se dirige YARD? Consulta nuestra hoja de ruta pública:
 
 - [ROADMAP.md](ROADMAP.md) - Visión de alto nivel y características planificadas
-- [GitHub Project](https://github.com/orgs/SynkraAI/projects/1) - Tablero de seguimiento detallado
+- [GitHub Project](https://github.com/orgs/YardAI/projects/1) - Tablero de seguimiento detallado
 
 La hoja de ruta se actualiza mensualmente y refleja la opinión de la comunidad. Puedes influir en nuestra dirección mediante:
 
@@ -196,7 +196,7 @@ Consulta [Proceso de Solicitud de Características](docs/FEATURE_PROCESS.md) par
 
 ### Recursos Externos
 
-- [Organización de YARD en GitHub](https://github.com/SynkraAI)
+- [Organización de YARD en GitHub](https://github.com/YardAI)
 - [Registro de Cambios](CHANGELOG.md)
 
 ## Internacionalización

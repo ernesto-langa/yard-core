@@ -4,7 +4,7 @@
 
 ---
 
-All notable changes to Synkra YARD will be documented in this file.
+All notable changes to YARD-Framework will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -133,7 +133,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Initial public release of Synkra YARD
+- Initial public release of YARD-Framework
 - 11 specialized AI agents (dev, qa, architect, pm, po, sm, analyst, ux-expert, data-engineer, devops, db-sage)
 - Task workflow system with 60+ pre-built tasks
 - Template system with 20+ document templates

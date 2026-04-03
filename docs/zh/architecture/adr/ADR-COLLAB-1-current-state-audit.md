@@ -105,7 +105,7 @@
 **来源:** `.github/CODEOWNERS`
 
 ```codeowners
-* @SynkraAI
+* @YardAI
 ```
 
 **分析:** 仅在组织级别单一所有权 - 无按路径的细粒度所有权。

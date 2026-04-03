@@ -1,6 +1,6 @@
 # YARD Tools - Integrations Directory
 
-This directory contains tool integration definitions for Synkra YARD agents. Tools are external capabilities that agents can discover and use to accomplish tasks.
+This directory contains tool integration definitions for YARD-Framework agents. Tools are external capabilities that agents can discover and use to accomplish tasks.
 
 ## Directory Structure
 

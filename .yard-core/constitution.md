@@ -1,8 +1,8 @@
-# Synkra YARD Constitution
+# YARD-Framework Constitution
 
 > **Version:** 1.0.0 | **Ratified:** 2025-01-30 | **Last Amended:** 2025-01-30
 
-Este documento define os princípios fundamentais e inegociáveis do Synkra YARD. Todos os agentes, tasks, e workflows DEVEM respeitar estes princípios. Violações são bloqueadas automaticamente via gates.
+Este documento define os princípios fundamentais e inegociáveis do YARD-Framework. Todos os agentes, tasks, e workflows DEVEM respeitar estes princípios. Violações são bloqueadas automaticamente via gates.
 
 ---
 
@@ -167,5 +167,5 @@ import { useStore } from '../../../stores/feature/store'
 
 ---
 
-*Synkra YARD Constitution v1.0.0*
+*YARD-Framework Constitution v1.0.0*
 *CLI First | Agent-Driven | Quality First*

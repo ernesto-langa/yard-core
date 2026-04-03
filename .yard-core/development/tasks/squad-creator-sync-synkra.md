@@ -1,5 +1,5 @@
 ---
-task: Sync Squad to Synkra
+task: Sync Squad to YARD
 responsavel: "@squad-creator"
 responsavel_type: agent
 atomic_layer: task
@@ -10,7 +10,7 @@ version: 1.0.0
 Entrada: |
   - squad_path: Caminho do squad para sincronizar (obrigatório)
   - visibility: public | private (default: private)
-  - official: Flag para marcar como oficial (--official, apenas SynkraAI)
+  - official: Flag para marcar como oficial (--official, apenas YardAI)
   - dry_run: Preview sem sincronizar (--dry-run)
 Saida: |
   - sync_result: Resultado do sync (created | updated | skipped)
@@ -21,13 +21,13 @@ Checklist:
   - "[x] Validar squad localmente"
   - "[x] Obter token de autenticação"
   - "[x] Calcular checksum"
-  - "[x] Enviar para Synkra API"
+  - "[x] Enviar para Yard API"
   - "[x] Exibir URL do marketplace"
 ---
 
 # *sync-squad-synkra
 
-Sincroniza um squad local para o Synkra API marketplace.
+Sincroniza um squad local para o Yard API marketplace.
 
 ## Uso
 
@@ -49,7 +49,7 @@ Sincroniza um squad local para o Synkra API marketplace.
 
 ## Autenticação
 
-Requer autenticação com Synkra API:
+Requer autenticação com Yard API:
 
 ```bash
 export SYNKRA_API_TOKEN="seu-token"
@@ -85,11 +85,11 @@ Step 1: Local Validation
 Step 2: Calculate Checksum
   ✓ Checksum: a1b2c3d4e5f6...
 
-Step 3: Sync to Synkra API
+Step 3: Sync to Yard API
   ✓ Visibility: private
   ✓ API URL: https://api.synkra.dev/api
 
-Syncing to Synkra API...
+Syncing to Yard API...
 
 ✅ Squad synced successfully!
 
@@ -110,7 +110,7 @@ Next steps:
 | `--private` | Mantém squad privado (apenas workspace) | true |
 | `--dry-run` | Preview sem enviar para API | false |
 | `--verbose` | Output detalhado | false |
-| `--official` | Marca como squad oficial (apenas SynkraAI team) | false |
+| `--official` | Marca como squad oficial (apenas YardAI team) | false |
 | `--force` | Ignora warnings e força sync | false |
 
 ## Workflow
@@ -247,7 +247,7 @@ DRY RUN - Would sync:
   return;
 }
 
-// 8. Call Synkra API
+// 8. Call Yard API
 const response = await fetch(`${apiUrl}/squads/sync`, {
   method: 'POST',
   headers: {
@@ -305,7 +305,7 @@ if (result.success) {
 
 ## Related Story
 
-- **SQS-5:** SquadSyncService for Synkra API (Sprint 8)
+- **SQS-5:** SquadSyncService for Yard API (Sprint 8)
 
 ## Changelog
 

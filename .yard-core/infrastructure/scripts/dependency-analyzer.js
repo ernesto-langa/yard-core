@@ -1,5 +1,5 @@
 /**
- * Dependency Analyzer for Synkra AIOX
+ * Dependency Analyzer for YARD
  * Analyzes and resolves dependencies between components
  * @module dependency-analyzer
  */

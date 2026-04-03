@@ -51,7 +51,7 @@ Squads são equipes modulares de agentes de IA que estendem a funcionalidade do 
 │                    DISTRIBUIÇÃO DE SQUAD                     │
 ├─────────────────────────────────────────────────────────────┤
 │  Nível 1: LOCAL        → ./squads/           (Privado)      │
-│  Nível 2: YARD-SQUADS  → github.com/SynkraAI (Público/Free) │
+│  Nível 2: YARD-SQUADS  → github.com/YardAI (Público/Free) │
 │  Nível 3: SYNKRA API   → api.synkra.dev      (Marketplace)  │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -60,8 +60,8 @@ Squads são equipes modulares de agentes de IA que estendem a funcionalidade do 
 
 | Squad                                                                      | Versão | Descrição                          |
 | -------------------------------------------------------------------------- | ------ | ---------------------------------- |
-| [etl-squad](https://github.com/SynkraAI/yard-squads/tree/main/etl)         | 2.0.0  | Coleta e transformação de dados    |
-| [creator-squad](https://github.com/SynkraAI/yard-squads/tree/main/creator) | 1.0.0  | Utilitários de geração de conteúdo |
+| [etl-squad](https://github.com/YardAI/yard-squads/tree/main/etl)         | 2.0.0  | Coleta e transformação de dados    |
+| [creator-squad](https://github.com/YardAI/yard-squads/tree/main/creator) | 1.0.0  | Utilitários de geração de conteúdo |
 
 ---
 
@@ -551,9 +551,9 @@ Squads em `./squads/` estão automaticamente disponíveis para seu projeto.
 *publish-squad ./squads/my-squad
 ```
 
-Isso cria um PR para [SynkraAI/yard-squads](https://github.com/SynkraAI/yard-squads).
+Isso cria um PR para [YardAI/yard-squads](https://github.com/YardAI/yard-squads).
 
-### Nível 3: Synkra Marketplace
+### Nível 3: Yard Marketplace
 
 ```bash
 # Configurar autenticação
@@ -820,7 +820,7 @@ npm test -- tests/squads/my-squad/
 - [Guia de Migração de Squad](./squad-migration.md)
 - [Referência da API de Squads](../api/squads-api.md)
 - [Agente @squad-creator](../../../.yard-core/development/agents/squad-creator.md)
-- [Repositório yard-squads](https://github.com/SynkraAI/yard-squads)
+- [Repositório yard-squads](https://github.com/YardAI/yard-squads)
 
 ---
 

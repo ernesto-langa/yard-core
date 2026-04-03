@@ -4,7 +4,7 @@
   Última sincronização: 2026-01-26
 -->
 
-# FAQ do Synkra YARD
+# FAQ do YARD-Framework
 
 > 🌐 [EN](../../installation/faq.md) | **PT** | [ES](../../es/installation/faq.md)
 

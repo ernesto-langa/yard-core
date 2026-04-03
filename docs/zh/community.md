@@ -1,8 +1,8 @@
-# Synkra YARD 社区
+# YARD-Framework 社区
 
 > 🇧🇷 [葡萄牙語版本](../COMMUNITY-PT.md)
 
-欢迎来到 Synkra YARD 社区！
+欢迎来到 YARD-Framework 社区！
 
 我们正在一起构建 AI 编排开发的未来。
 
@@ -50,8 +50,8 @@
 用于错误报告和功能请求：
 
 - [yard-core Issues](https://github.com/ernesto-langa/yard-core/issues) - 核心框架
-- [yard-squads Issues](https://github.com/SynkraAI/yard-squads/issues) - YARD Squads
-- [mcp-ecosystem Issues](https://github.com/SynkraAI/mcp-ecosystem/issues) - MCP 工具
+- [yard-squads Issues](https://github.com/YardAI/yard-squads/issues) - YARD Squads
+- [mcp-ecosystem Issues](https://github.com/YardAI/mcp-ecosystem/issues) - MCP 工具
 
 ## 如何贡献
 
@@ -98,7 +98,7 @@ Squads 是在特定领域协作工作的专业 AI 代理团队：
 
 审查 PR 并指导项目的核心团队成员：
 
-- [@SynkraAI](https://github.com/SynkraAI) - 项目负责人
+- [@YardAI](https://github.com/YardAI) - 项目负责人
 
 ### 成为维护者
 
@@ -138,7 +138,7 @@ Squads 是在特定领域协作工作的专业 AI 代理团队：
 
 我们遵循 [贡献者契约](../CODE_OF_CONDUCT.md)。请阅读并尊重它。
 
-报告违反行为至：conduct@SynkraAI.com
+报告违反行为至：conduct@YardAI.com
 
 ## 获得帮助
 
@@ -165,7 +165,7 @@ Squads 是在特定领域协作工作的专业 AI 代理团队：
 想知道 YARD 的发展方向吗？查看我们的公开路线图：
 
 - [ROADMAP.md](../ROADMAP.md) - 高层愿景和计划功能
-- [GitHub 项目](https://github.com/orgs/SynkraAI/projects/1) - 详细跟踪板
+- [GitHub 项目](https://github.com/orgs/YardAI/projects/1) - 详细跟踪板
 
 路线图每月更新并反映社区意见。您可以通过以下方式影响我们的方向：
 
@@ -196,7 +196,7 @@ Squads 是在特定领域协作工作的专业 AI 代理团队：
 
 ### 外部资源
 
-- [YARD GitHub 组织](https://github.com/SynkraAI)
+- [YARD GitHub 组织](https://github.com/YardAI)
 - [变更日志](../CHANGELOG.md)
 
 ## 国际化

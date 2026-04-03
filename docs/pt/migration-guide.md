@@ -4,13 +4,13 @@
   Última sincronização: 2026-01-26
 -->
 
-# Guia de Atualização do Synkra YARD
+# Guia de Atualização do YARD-Framework
 
 > 🌐 [EN](../migration-guide.md) | **PT** | [ES](../es/migration-guide.md)
 
 ---
 
-Este guia ajuda você a atualizar entre versões do Synkra YARD.
+Este guia ajuda você a atualizar entre versões do YARD-Framework.
 
 ## Sumário
 
@@ -26,7 +26,7 @@ Este guia ajuda você a atualizar entre versões do Synkra YARD.
 
 ### Versão Atual
 
-**Synkra YARD v4.2.11** (Versão Estável Atual)
+**YARD-Framework v4.2.11** (Versão Estável Atual)
 
 ### Caminhos de Atualização
 

@@ -4,13 +4,13 @@
   Ultima sincronizacion: 2026-01-26
 -->
 
-# Primeros Pasos con Synkra YARD
+# Primeros Pasos con YARD-Framework
 
 > 🌐 [EN](../getting-started.md) | [PT](../pt/getting-started.md) | **ES**
 
 ---
 
-Bienvenido a Synkra YARD! Esta guia te llevara a traves de tus primeros pasos con el framework de desarrollo auto-modificable impulsado por IA.
+Bienvenido a YARD-Framework! Esta guia te llevara a traves de tus primeros pasos con el framework de desarrollo auto-modificable impulsado por IA.
 
 ## Tabla de Contenidos
 
@@ -29,7 +29,7 @@ Bienvenido a Synkra YARD! Esta guia te llevara a traves de tus primeros pasos co
 
 ### Prerrequisitos
 
-Antes de instalar Synkra YARD, asegurate de tener:
+Antes de instalar YARD-Framework, asegurate de tener:
 
 - **Node.js** version 14.0.0 o superior
 - **npm** version 6.0.0 o superior
@@ -53,7 +53,7 @@ npx yard-core
 
 ### Opciones de Instalacion
 
-Synkra YARD ofrece opciones de instalacion flexibles:
+YARD-Framework ofrece opciones de instalacion flexibles:
 
 ```bash
 # 1. Crear nuevo proyecto con plantilla personalizada
@@ -132,7 +132,7 @@ YARD_TELEMETRY=enabled
 
 ## Entendiendo el Meta-Agente
 
-El meta-agente es el nucleo de Synkra YARD - una IA que entiende y puede modificar su propia base de codigo.
+El meta-agente es el nucleo de YARD-Framework - una IA que entiende y puede modificar su propia base de codigo.
 
 ### Capacidades Principales
 
@@ -567,6 +567,6 @@ ls -la .env
 
 **Listo para construir algo increible?** El meta-agente esta esperando para ayudarte a crear, mejorar y evolucionar tu codigo. Comienza con `*help` y explora las posibilidades!
 
-Recuerda: Synkra YARD aprende y mejora con el uso. Cuanto mas interactues con el, mejor entendera tu estilo de desarrollo y necesidades.
+Recuerda: YARD-Framework aprende y mejora con el uso. Cuanto mas interactues con el, mejor entendera tu estilo de desarrollo y necesidades.
 
-Feliz programacion con Synkra YARD!
+Feliz programacion con YARD-Framework!

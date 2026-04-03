@@ -491,7 +491,7 @@ No references to `.yard-core/processes/` were found in the codebase.
 | `project-config.yaml` | **NEW** L2 Project config (team-shared, committed) | `core/config/config-resolver.js`, config CLI | Part of ADR-PRO-002; duplicates project portions of `core-config.yaml` | No |
 | `local-config.yaml.template` | **NEW** L4 Local config template (machine-specific, gitignored) | Developers copy to `local-config.yaml` | Part of ADR-PRO-002; secrets and IDE preferences | No |
 | `install-manifest.yaml` | Complete inventory of all files in the framework | Installer, validator, upgrader | Lists every file in `.yard-core/` | No |
-| `user-guide.md` | User guide for Synkra YARD | Users, onboarding | Referenced by workflows, brownfield guide | No |
+| `user-guide.md` | User guide for YARD-Framework | Users, onboarding | Referenced by workflows, brownfield guide | No |
 | `working-in-the-brownfield.md` | Guide for brownfield (existing project) development | Brownfield workflows | Referenced by agent definitions, brownfield tasks | No |
 | `package.json` | npm package definition for `@yard-fullstack/core` (v4.31.0) | npm, build system | Defines dependencies, exports, scripts | No |
 

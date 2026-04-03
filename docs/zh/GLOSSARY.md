@@ -1,6 +1,6 @@
-# Synkra YARD 术语表
+# YARD-Framework 术语表
 
-> 本术语表定义了 Synkra YARD 文档中使用的核心术语的标准中文翻译。
+> 本术语表定义了 YARD-Framework 文档中使用的核心术语的标准中文翻译。
 
 ---
 
@@ -115,7 +115,7 @@
 
 以下术语在中文文档中保持英文：
 
-- **Synkra** - 品牌名
+- **YARD** - 品牌名
 - **YARD** - 系统名称
 - **Claude** - AI 模型名
 - **MCP** - 协议名
@@ -176,4 +176,4 @@
 
 ---
 
-*Synkra YARD 术语表 v1.0*
+*YARD-Framework 术语表 v1.0*

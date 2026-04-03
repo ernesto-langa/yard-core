@@ -1,10 +1,10 @@
-# Synkra YARD Troubleshooting Guide
+# YARD-Framework Troubleshooting Guide
 
 > 🌐 **EN** | [PT](./pt/troubleshooting.md) | [ES](./es/troubleshooting.md)
 
 ---
 
-This comprehensive guide helps you diagnose and resolve common issues with Synkra YARD.
+This comprehensive guide helps you diagnose and resolve common issues with YARD-Framework.
 
 ## Table of Contents
 

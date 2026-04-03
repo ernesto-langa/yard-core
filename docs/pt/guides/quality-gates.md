@@ -10,7 +10,7 @@
 
 ---
 
-> Guia completo para o sistema de quality gates de 3 camadas do Synkra YARD.
+> Guia completo para o sistema de quality gates de 3 camadas do YARD-Framework.
 
 **Versão:** 2.1.0
 **Última Atualização:** 2025-12-01
@@ -611,4 +611,4 @@ verbose:
 
 ---
 
-_Guia do Sistema de Quality Gates Synkra YARD v4_
+_Guia do Sistema de Quality Gates YARD-Framework v4_

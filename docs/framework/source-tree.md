@@ -513,7 +513,7 @@ yard-core/
     └── multi-agent-workflow/
 ```
 
-### REPO 2: SynkraAI/squads (MIT)
+### REPO 2: YardAI/squads (MIT)
 
 ```
 squads/
@@ -535,7 +535,7 @@ squads/
     └── create-yard-squad/
 ```
 
-### REPO 3: SynkraAI/mcp-ecosystem (Apache 2.0)
+### REPO 3: YardAI/mcp-ecosystem (Apache 2.0)
 
 ```
 mcp-ecosystem/
@@ -555,7 +555,7 @@ mcp-ecosystem/
     └── cursor/
 ```
 
-### REPO 4: SynkraAI/certified-partners (Private)
+### REPO 4: YardAI/certified-partners (Private)
 
 ```
 certified-partners/
@@ -572,7 +572,7 @@ certified-partners/
     └── web/
 ```
 
-### REPO 5: SynkraAI/mmos (Private + NDA)
+### REPO 5: YardAI/mmos (Private + NDA)
 
 ```
 mmos/
@@ -878,7 +878,7 @@ Runtime state is persisted in `.yard/`:
 | Version | Date       | Changes                                                                                                                                                            | Author           |
 | ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- |
 | 1.0     | 2025-01-15 | Initial source tree documentation                                                                                                                                  | Aria (architect) |
-| 1.1     | 2025-12-14 | Updated org to SynkraAI, replaced Squads with Squads system [Story 6.10]                                                                                           | Dex (dev)        |
+| 1.1     | 2025-12-14 | Updated org to YardAI, replaced Squads with Squads system [Story 6.10]                                                                                           | Dex (dev)        |
 | 2.0     | 2025-12-15 | Major update to reflect modular architecture (cli/, core/, development/, infrastructure/, product/) [Story 6.13]                                                   | Pax (PO)         |
 | 3.0     | 2026-01-29 | Added ADE (Autonomous Development Engine) section documenting Epics 1-7: workflow-intelligence, ADE scripts, workflows, tasks, and runtime state [ADE Integration] | Aria (architect) |
 | 3.1     | 2026-02-06 | Added Data File Governance section: documented 7 missing data files with owner, fill rule, and update trigger. Expanded .yard-core/data/ and product/data/ tree listings. [Story ACT-8] | Dex (dev) |

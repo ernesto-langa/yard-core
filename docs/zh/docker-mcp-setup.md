@@ -223,4 +223,4 @@ yard mcp status --verbose
 
 ---
 
-_Synkra YARD Docker MCP 设置指南 v4.2.11_
+_YARD-Framework Docker MCP 设置指南 v4.2.11_

@@ -1,4 +1,4 @@
-# AGENTS.md - Synkra YARD
+# AGENTS.md - YARD-Framework
 
 Este arquivo configura o comportamento esperado de agentes no Codex CLI neste repositorio.
 
