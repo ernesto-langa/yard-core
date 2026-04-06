@@ -24,8 +24,9 @@ const PRO_DIR = path.join(PROJECT_ROOT, 'pro');
 const CRITICAL_FILE = path.join(PRO_DIR, 'license', 'license-api.js');
 const MIN_FILE_COUNT = 50;
 
-// CI environments may not have access to the private pro submodule
+// CI environments or local builds without pro submodule access
 const IS_CI = process.env.CI === 'true' || process.env.GITHUB_ACTIONS === 'true';
+const SKIP_PRO = process.env.YARD_SKIP_PRO === 'true';
 
 let passed = true;
 let fileCount = 0;
@@ -34,21 +35,23 @@ let fileCount = 0;
 console.log('--- Publish Safety Gate (INS-4.10) ---\n');
 
 if (!fs.existsSync(PRO_DIR)) {
-  if (IS_CI) {
-    console.log('SKIP: pro/ directory not available (CI — private submodule requires separate access token)');
+  if (IS_CI || SKIP_PRO) {
+    console.log('SKIP: pro/ directory not available (private submodule — use YARD_SKIP_PRO=true to skip)');
   } else {
     console.error('FAIL: pro/ directory does not exist.');
     console.error('  Fix: git submodule update --init pro');
+    console.error('  Or:  YARD_SKIP_PRO=true npm publish --access public');
     passed = false;
   }
 } else {
   const entries = fs.readdirSync(PRO_DIR).filter(e => e !== '.git');
   if (entries.length === 0) {
-    if (IS_CI) {
-      console.log('SKIP: pro/ submodule empty (CI — private submodule requires separate access token)');
+    if (IS_CI || SKIP_PRO) {
+      console.log('SKIP: pro/ submodule empty (private submodule — use YARD_SKIP_PRO=true to skip)');
     } else {
       console.error('FAIL: pro/ submodule not initialized (directory is empty).');
       console.error('  Fix: git submodule update --init pro');
+      console.error('  Or:  YARD_SKIP_PRO=true npm publish --access public');
       passed = false;
     }
   } else {
@@ -58,12 +61,13 @@ if (!fs.existsSync(PRO_DIR)) {
 
 // Check 2: Critical file exists
 if (!fs.existsSync(CRITICAL_FILE)) {
-  if (IS_CI) {
-    console.log('SKIP: pro/license/license-api.js not available (CI — private submodule)');
+  if (IS_CI || SKIP_PRO) {
+    console.log('SKIP: pro/license/license-api.js not available (private submodule)');
   } else {
     console.error('FAIL: pro/license/license-api.js not found.');
     console.error('  This is a critical file required for Pro license validation.');
     console.error('  Fix: git submodule update --init --recursive pro');
+    console.error('  Or:  YARD_SKIP_PRO=true npm publish --access public');
     passed = false;
   }
 } else {
