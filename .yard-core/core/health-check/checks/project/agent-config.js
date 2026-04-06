@@ -29,7 +29,7 @@ class AgentConfigCheck extends BaseCheck {
       timeout: 5000,
       cacheable: true,
       healingTier: 0, // Cannot auto-fix invalid YAML
-      tags: ['aiox', 'agents', 'config'],
+      tags: ['yard', 'agents', 'config'],
     });
   }
 

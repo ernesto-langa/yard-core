@@ -10,7 +10,7 @@
         "matcher": "*",
         "hooks": [
           {
-            "name": "aiox-session-init",
+            "name": "yard-session-init",
             "type": "command",
             "command": "node .yard-core/hooks/gemini/session-start.js",
             "timeout": 5000,
@@ -24,7 +24,7 @@
         "matcher": "*",
         "hooks": [
           {
-            "name": "aiox-context-inject",
+            "name": "yard-context-inject",
             "type": "command",
             "command": "node .yard-core/hooks/gemini/before-agent.js",
             "timeout": 3000,
@@ -38,7 +38,7 @@
         "matcher": "write_file|replace|shell",
         "hooks": [
           {
-            "name": "aiox-security-check",
+            "name": "yard-security-check",
             "type": "command",
             "command": "node .yard-core/hooks/gemini/before-tool.js",
             "timeout": 2000,
@@ -52,7 +52,7 @@
         "matcher": "*",
         "hooks": [
           {
-            "name": "aiox-audit-log",
+            "name": "yard-audit-log",
             "type": "command",
             "command": "node .yard-core/hooks/gemini/after-tool.js",
             "timeout": 2000,
@@ -66,7 +66,7 @@
         "matcher": "*",
         "hooks": [
           {
-            "name": "aiox-session-persist",
+            "name": "yard-session-persist",
             "type": "command",
             "command": "node .yard-core/hooks/gemini/session-end.js",
             "timeout": 5000,

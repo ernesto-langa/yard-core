@@ -1,0 +1,29 @@
+{
+  "uuid": "db7b81d1-ee71-4048-99e5-53f4dce30061",
+  "schema_version": "2.0",
+  "started": "2026-04-06T08:30:26.434Z",
+  "last_activity": "2026-04-06T08:45:02.582Z",
+  "cwd": "/home/dev/Desktop/Teste_OX/yard-core",
+  "label": "yard-core",
+  "title": null,
+  "prompt_count": 4,
+  "active_agent": {
+    "id": null,
+    "activated_at": null,
+    "activation_quality": null
+  },
+  "active_workflow": null,
+  "active_squad": null,
+  "active_task": null,
+  "context": {
+    "last_bracket": "FRESH",
+    "last_tokens_used": 0,
+    "last_context_percent": 100
+  },
+  "overrides": {},
+  "history": {
+    "star_commands_used": [],
+    "domains_loaded_last": [],
+    "agents_activated": []
+  }
+}

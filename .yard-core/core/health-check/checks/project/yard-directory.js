@@ -1,9 +1,9 @@
 /**
- * AIOX Directory Check
+ * YARD Directory Check
  *
  * Verifies .yard/ directory structure and permissions.
  *
- * @module yard-core/health-check/checks/project/aiox-directory
+ * @module yard-core/health-check/checks/project/yard-directory
  * @version 1.0.0
  * @story HCS-2 - Health Check System Implementation
  */
@@ -13,7 +13,7 @@ const path = require('path');
 const { BaseCheck, CheckSeverity, CheckDomain } = require('../../base-check');
 
 /**
- * Expected .aiox directory structure
+ * Expected .yard directory structure
  */
 const EXPECTED_STRUCTURE = [
   { path: '.yard', type: 'directory', required: false },
@@ -23,23 +23,23 @@ const EXPECTED_STRUCTURE = [
 ];
 
 /**
- * AIOX directory structure check
+ * YARD directory structure check
  *
- * @class AioxDirectoryCheck
+ * @class YardDirectoryCheck
  * @extends BaseCheck
  */
-class AioxDirectoryCheck extends BaseCheck {
+class YardDirectoryCheck extends BaseCheck {
   constructor() {
     super({
-      id: 'project.aiox-directory',
-      name: 'AIOX Directory Structure',
+      id: 'project.yard-directory',
+      name: 'YARD Directory Structure',
       description: 'Verifies .yard/ directory structure',
       domain: CheckDomain.PROJECT,
       severity: CheckSeverity.MEDIUM,
       timeout: 2000,
       cacheable: true,
       healingTier: 1, // Can auto-create directories
-      tags: ['aiox', 'directory', 'structure'],
+      tags: ['yard', 'directory', 'structure'],
     });
   }
 
@@ -50,24 +50,24 @@ class AioxDirectoryCheck extends BaseCheck {
    */
   async execute(context) {
     const projectRoot = context.projectRoot || process.cwd();
-    const aioxPath = path.join(projectRoot, '.yard');
+    const yardPath = path.join(projectRoot, '.yard');
     const issues = [];
     const found = [];
 
-    // Check if .aiox exists at all
+    // Check if .yard exists at all
     try {
-      const stats = await fs.stat(aioxPath);
+      const stats = await fs.stat(yardPath);
       if (!stats.isDirectory()) {
-        return this.fail('.aiox exists but is not a directory', {
-          recommendation: 'Remove .aiox file and run health check again',
+        return this.fail('.yard exists but is not a directory', {
+          recommendation: 'Remove .yard file and run health check again',
         });
       }
       found.push('.yard');
     } catch {
-      // .aiox doesn't exist - this is optional
-      return this.pass('.aiox directory not present (optional)', {
+      // .yard doesn't exist - this is optional
+      return this.pass('.yard directory not present (optional)', {
         details: {
-          message: '.aiox directory is created automatically when needed',
+          message: '.yard directory is created automatically when needed',
           healable: true,
         },
       });
@@ -93,15 +93,15 @@ class AioxDirectoryCheck extends BaseCheck {
 
     // Check write permissions
     try {
-      const testFile = path.join(aioxPath, '.write-test');
+      const testFile = path.join(yardPath, '.write-test');
       await fs.writeFile(testFile, 'test');
       await fs.unlink(testFile);
     } catch {
-      issues.push('.aiox directory is not writable');
+      issues.push('.yard directory is not writable');
     }
 
     if (issues.length > 0) {
-      return this.warning(`AIOX directory has issues: ${issues.join(', ')}`, {
+      return this.warning(`YARD directory has issues: ${issues.join(', ')}`, {
         recommendation: 'Run health check with --fix to create missing directories',
         healable: true,
         healingTier: 1,
@@ -109,7 +109,7 @@ class AioxDirectoryCheck extends BaseCheck {
       });
     }
 
-    return this.pass('AIOX directory structure is valid', {
+    return this.pass('YARD directory structure is valid', {
       details: { found },
     });
   }
@@ -120,9 +120,9 @@ class AioxDirectoryCheck extends BaseCheck {
    */
   getHealer() {
     return {
-      name: 'create-aiox-directories',
+      name: 'create-yard-directories',
       action: 'create-directories',
-      successMessage: 'Created missing AIOX directories',
+      successMessage: 'Created missing YARD directories',
       fix: async (_result) => {
         const projectRoot = process.cwd();
         const dirs = ['.yard', '.yard/reports', '.yard/backups', '.yard/backups/health-check'];
@@ -132,10 +132,10 @@ class AioxDirectoryCheck extends BaseCheck {
           await fs.mkdir(fullPath, { recursive: true });
         }
 
-        return { success: true, message: 'Created AIOX directories' };
+        return { success: true, message: 'Created YARD directories' };
       },
     };
   }
 }
 
-module.exports = AioxDirectoryCheck;
+module.exports = YardDirectoryCheck;

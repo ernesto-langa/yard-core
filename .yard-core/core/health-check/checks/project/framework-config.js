@@ -1,7 +1,7 @@
 /**
  * Framework Config Check
  *
- * Verifies that AIOX framework configuration files are present.
+ * Verifies that YARD framework configuration files are present.
  *
  * @module yard-core/health-check/checks/project/framework-config
  * @version 1.0.0
@@ -24,7 +24,7 @@ const REQUIRED_CONFIGS = [
  * Optional but recommended config files
  */
 const RECOMMENDED_CONFIGS = [
-  { path: '.yard', type: 'directory', description: 'AIOX local configuration' },
+  { path: '.yard', type: 'directory', description: 'YARD local configuration' },
   { path: '.claude/CLAUDE.md', type: 'file', description: 'Project instructions' },
   { path: 'docs/framework', type: 'directory', description: 'Framework documentation' },
 ];
@@ -40,13 +40,13 @@ class FrameworkConfigCheck extends BaseCheck {
     super({
       id: 'project.framework-config',
       name: 'Framework Configuration',
-      description: 'Verifies AIOX framework configuration is present',
+      description: 'Verifies YARD framework configuration is present',
       domain: CheckDomain.PROJECT,
       severity: CheckSeverity.HIGH,
       timeout: 3000,
       cacheable: true,
       healingTier: 0, // Cannot auto-fix framework setup
-      tags: ['aiox', 'config', 'framework'],
+      tags: ['yard', 'config', 'framework'],
     });
   }
 
@@ -97,7 +97,7 @@ class FrameworkConfigCheck extends BaseCheck {
     if (missingRequired.length > 0) {
       const missing = missingRequired.map((c) => c.path).join(', ');
       return this.fail(`Missing required framework configuration: ${missing}`, {
-        recommendation: 'Run AIOX setup or manually create missing directories',
+        recommendation: 'Run YARD setup or manually create missing directories',
         details: {
           missingRequired: missingRequired.map((c) => ({
             path: c.path,
@@ -111,7 +111,7 @@ class FrameworkConfigCheck extends BaseCheck {
     if (missingRecommended.length > 0) {
       const missing = missingRecommended.map((c) => c.path).join(', ');
       return this.warning(`Missing recommended configuration: ${missing}`, {
-        recommendation: 'Consider adding recommended configuration for full AIOX functionality',
+        recommendation: 'Consider adding recommended configuration for full YARD functionality',
         details: {
           missingRecommended: missingRecommended.map((c) => ({
             path: c.path,

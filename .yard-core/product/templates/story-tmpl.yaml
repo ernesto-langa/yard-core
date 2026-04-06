@@ -55,7 +55,7 @@ sections:
       **REQUIRED FIELDS** - Automatically populated by PM during epic creation.
 
       Uses dynamic executor assignment based on story type analysis.
-      See: PRD AIOX v2.0 "Projeto Bob" - Section 5
+      See: PRD YARD v2.0 "Projeto Bob" - Section 5
 
       **Work Type → Executor Mapping:**
       | Work Type | Executor | Quality Gate |

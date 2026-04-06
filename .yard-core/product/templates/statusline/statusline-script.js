@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AIOX Unified Statusline v3 for Claude Code
+ * YARD Unified Statusline v3 for Claude Code
  *
  * Displays: Session | Model | Context Bar | Time | Agent | Squad | Project:Branch | Git | Messages | Alert
  *

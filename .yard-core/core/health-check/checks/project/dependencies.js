@@ -13,7 +13,7 @@ const path = require('path');
 const { BaseCheck, CheckSeverity, CheckDomain } = require('../../base-check');
 
 /**
- * Required AIOX dependencies
+ * Required YARD dependencies
  */
 const REQUIRED_DEPENDENCIES = ['js-yaml'];
 

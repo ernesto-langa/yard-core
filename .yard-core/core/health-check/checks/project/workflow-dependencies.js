@@ -29,7 +29,7 @@ class WorkflowDependenciesCheck extends BaseCheck {
       timeout: 5000,
       cacheable: true,
       healingTier: 0,
-      tags: ['aiox', 'workflows', 'dependencies'],
+      tags: ['yard', 'workflows', 'dependencies'],
     });
   }
 

@@ -1,12 +1,12 @@
 #!/bin/bash
-# AIOX Agent/Squad Tracker for Claude Code Statusline
+# YARD Agent/Squad Tracker for Claude Code Statusline
 # Called via Claude Code UserPromptSubmit hook
 #
 # Detects @agent, /squad:command, /ns:agents:name activations
 # Writes to ~/.claude/session-cache/ for statusline-script.js to read
 #
-# Installed automatically by `npx aiox-core install`
-# Source: .aiox-core/product/templates/statusline/
+# Installed automatically by `npx yard-core install`
+# Source: .yard-core/product/templates/statusline/
 
 INPUT=$(cat)
 

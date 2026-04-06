@@ -35,7 +35,7 @@ const WORKFLOW_META = {
   name: '{{WORKFLOW_NAME:-example-workflow}}',
   version: '1.0.0',
   description: '{{WORKFLOW_DESCRIPTION:-Example MCP workflow template}}',
-  author: 'AIOX Framework',
+  author: 'YARD Framework',
   mcps_required: ['fs', 'fetch'], // MCPs used by this workflow
   estimated_duration: '10-30 seconds',
   token_savings: '~98.7%',

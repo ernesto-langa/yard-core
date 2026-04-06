@@ -1,5 +1,5 @@
 # Agent Template for YARD
-# This template is used by aiox-developer to create new agents
+# This template is used by yard-developer to create new agents
 # Variables are replaced during generation: {{VARIABLE_NAME}}
 
 ###############################################################################

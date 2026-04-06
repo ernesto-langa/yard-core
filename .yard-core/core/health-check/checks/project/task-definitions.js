@@ -29,7 +29,7 @@ class TaskDefinitionsCheck extends BaseCheck {
       timeout: 5000,
       cacheable: true,
       healingTier: 0, // Cannot auto-fix task definitions
-      tags: ['aiox', 'tasks', 'config'],
+      tags: ['yard', 'tasks', 'config'],
     });
   }
 

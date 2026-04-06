@@ -77,7 +77,7 @@ sections:
       Provide a clear, concise statement of what this story aims to achieve.
       Focus on the "what" and "why" of the design/research work.
     example: |
-      Define complete personas for all 13 AIOX agents with names, roles, archetypes,
+      Define complete personas for all 13 YARD agents with names, roles, archetypes,
       colors, and icons to establish the foundation for the agent identity system.
     elicit: true
     owner: po

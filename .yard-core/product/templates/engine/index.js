@@ -1,6 +1,6 @@
 /**
  * Template Engine v2.0
- * Main entry point for the AIOX Template Engine
+ * Main entry point for the YARD Template Engine
  *
  * @module TemplateEngine
  * @version 2.0.0

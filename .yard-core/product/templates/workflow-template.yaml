@@ -1,6 +1,6 @@
 # yamllint disable
 # Workflow Template for YARD
-# This template is used by aiox-developer to create new workflows
+# This template is used by yard-developer to create new workflows
 # Variables are replaced during generation: {{VARIABLE_NAME}}
 #
 # NOTE: This file contains Handlebars template directives ({{...}}) that are

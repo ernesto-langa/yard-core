@@ -1,6 +1,6 @@
-# AIOX AI Provider Configuration
+# YARD AI Provider Configuration
 #
-# Configure AI providers (Claude Code, Gemini CLI) for AIOX operations.
+# Configure AI providers (Claude Code, Gemini CLI) for YARD operations.
 # This file controls which provider is used for different task types.
 #
 # @see Epic GEMINI-INT - Story 2: AI Provider Factory Pattern
