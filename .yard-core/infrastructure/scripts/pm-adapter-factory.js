@@ -2,10 +2,10 @@
  * @fileoverview PM Adapter Factory
  *
  * Central factory for creating and caching PM tool adapters.
- * Automatically selects the correct adapter based on .aiox-pm-config.yaml.
+ * Automatically selects the correct adapter based on .yard-pm-config.yaml.
  *
  * Falls back to LocalAdapter if no PM tool is configured, ensuring
- * AIOX works 100% standalone without external dependencies.
+ * YARD works 100% standalone without external dependencies.
  *
  * @see Story 3.20 - PM Tool-Agnostic Integration (TR-3.20.7)
  */
@@ -28,11 +28,11 @@ let cachedAdapter = null;
 /**
  * Get PM adapter instance based on configuration
  *
- * Reads .aiox-pm-config.yaml from project root and instantiates
+ * Reads .yard-pm-config.yaml from project root and instantiates
  * the appropriate adapter. Caches the adapter for subsequent calls.
  *
  * Falls back to LocalAdapter if:
- * - No .aiox-pm-config.yaml file exists
+ * - No .yard-pm-config.yaml file exists
  * - Config file has type: 'local'
  * - Config file is malformed
  *
@@ -48,12 +48,12 @@ function getPMAdapter() {
     return cachedAdapter;
   }
 
-  const configPath = path.join(process.cwd(), '.aiox-pm-config.yaml');
+  const configPath = path.join(process.cwd(), '.yard-pm-config.yaml');
 
   // If no PM config file, use local-only adapter
   if (!fs.existsSync(configPath)) {
     console.log('ℹ️  No PM tool configured - using local-only mode');
-    console.log('   To configure a PM tool, run: aiox init');
+    console.log('   To configure a PM tool, run: yard init');
     cachedAdapter = new LocalAdapter();
     return cachedAdapter;
   }
@@ -128,7 +128,7 @@ function clearAdapterCache() {
 /**
  * Get current PM tool type without creating adapter
  *
- * Reads .aiox-pm-config.yaml and returns the tool type.
+ * Reads .yard-pm-config.yaml and returns the tool type.
  * Returns 'local' if no config or config is invalid.
  *
  * @returns {string} PM tool type ('clickup', 'github-projects', 'jira', 'local')
@@ -140,7 +140,7 @@ function clearAdapterCache() {
  * }
  */
 function getPMToolType() {
-  const configPath = path.join(process.cwd(), '.aiox-pm-config.yaml');
+  const configPath = path.join(process.cwd(), '.yard-pm-config.yaml');
 
   if (!fs.existsSync(configPath)) {
     return 'local';

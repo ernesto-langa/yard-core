@@ -10,7 +10,7 @@ const chalk = require('chalk');
 class FrameworkAnalyzer {
   constructor(options = {}) {
     this.rootPath = options.rootPath || process.cwd();
-    this.aioxCoreDir = path.join(this.rootPath, 'yard-core');
+    this.yardCoreDir = path.join(this.rootPath, 'yard-core');
     this.excludes = options.excludes || [
       'node_modules',
       '.git',

@@ -1,7 +1,7 @@
 /**
- * AIOX Installer - Main installation logic
+ * YARD Installer - Main installation logic
  *
- * Orchestrates the complete AIOX installation flow:
+ * Orchestrates the complete YARD installation flow:
  * 1. OS detection
  * 2. Dependency checking
  * 3. Profile selection (bob vs advanced)
@@ -154,7 +154,7 @@ async function createUserConfigDirect(profile, logger, dryRun) {
 }
 
 /**
- * Check if this is a brownfield installation (existing AIOX)
+ * Check if this is a brownfield installation (existing YARD)
  * @param {string} projectRoot - Project root
  * @returns {Object} Brownfield detection result
  */
@@ -181,8 +181,8 @@ function detectBrownfield(projectRoot) {
   }
 
   // Check for .yard-core directory
-  const aioxCoreDir = path.join(projectRoot, '.yard-core');
-  if (fs.existsSync(aioxCoreDir)) {
+  const yardCoreDir = path.join(projectRoot, '.yard-core');
+  if (fs.existsSync(yardCoreDir)) {
     result.isBrownfield = true;
   }
 
@@ -193,7 +193,7 @@ function detectBrownfield(projectRoot) {
 }
 
 /**
- * Run the AIOX doctor command
+ * Run the YARD doctor command
  * @param {string} projectRoot - Project root
  * @param {InstallLogger} logger - Logger instance
  * @param {boolean} dryRun - Whether this is a dry run
@@ -204,7 +204,7 @@ async function runDoctor(projectRoot, logger, dryRun) {
     return;
   }
 
-  const spinner = ora('Running AIOX doctor...').start();
+  const spinner = ora('Running YARD doctor...').start();
 
   try {
     const { stdout } = await execa('npx', ['yard-core', 'doctor'], {
@@ -212,13 +212,13 @@ async function runDoctor(projectRoot, logger, dryRun) {
       timeout: 60000,
     });
 
-    spinner.succeed('AIOX doctor completed');
+    spinner.succeed('YARD doctor completed');
 
     if (logger.verbose) {
       console.log(chalk.dim(stdout));
     }
   } catch (error) {
-    spinner.warn('AIOX doctor had warnings');
+    spinner.warn('YARD doctor had warnings');
     if (logger.verbose) {
       console.log(chalk.yellow(error.message));
     }
@@ -231,7 +231,7 @@ async function runDoctor(projectRoot, logger, dryRun) {
  * @param {InstallLogger} logger - Logger instance
  * @param {boolean} dryRun - Whether this is a dry run
  */
-async function installAioxCore(projectRoot, logger, dryRun) {
+async function installYardCore(projectRoot, logger, dryRun) {
   if (dryRun) {
     logger.action('Run: npm install yard-core --save-dev');
     return;
@@ -253,18 +253,18 @@ async function installAioxCore(projectRoot, logger, dryRun) {
 }
 
 /**
- * Initialize AIOX in the project
+ * Initialize YARD in the project
  * @param {string} projectRoot - Project root
  * @param {InstallLogger} logger - Logger instance
  * @param {boolean} dryRun - Whether this is a dry run
  */
-async function initializeAiox(projectRoot, logger, dryRun) {
+async function initializeYard(projectRoot, logger, dryRun) {
   if (dryRun) {
     logger.action('Run: npx yard-core install');
     return;
   }
 
-  const spinner = ora('Initializing AIOX...').start();
+  const spinner = ora('Initializing YARD...').start();
 
   try {
     await execa('npx', ['yard-core', 'install'], {
@@ -272,9 +272,9 @@ async function initializeAiox(projectRoot, logger, dryRun) {
       timeout: 120000, // 2 minutes
     });
 
-    spinner.succeed('AIOX initialized');
+    spinner.succeed('YARD initialized');
   } catch (error) {
-    spinner.fail('Failed to initialize AIOX');
+    spinner.fail('Failed to initialize YARD');
     throw error;
   }
 }
@@ -299,7 +299,7 @@ async function runInstaller(options = {}) {
   }
 
   // Introduction
-  intro(chalk.bgCyan(' AIOX Installer '));
+  intro(chalk.bgCyan(' YARD Installer '));
 
   if (options.dryRun) {
     note(
@@ -356,7 +356,7 @@ async function runInstaller(options = {}) {
   if (!profile) {
     console.log('');
     const profileSelection = await select({
-      message: 'Select your AIOX profile:',
+      message: 'Select your YARD profile:',
       options: [
         {
           value: 'bob',
@@ -391,7 +391,7 @@ async function runInstaller(options = {}) {
   const brownfield = detectBrownfield(projectRoot);
 
   if (brownfield.isBrownfield) {
-    logger.info('Existing AIOX installation detected');
+    logger.info('Existing YARD installation detected');
 
     if (brownfield.hasLegacyConfig && !brownfield.hasLayeredConfig) {
       logger.warn('Legacy configuration format detected');
@@ -443,10 +443,10 @@ async function runInstaller(options = {}) {
     }
 
     // Install yard-core
-    await installAioxCore(projectRoot, logger, options.dryRun);
+    await installYardCore(projectRoot, logger, options.dryRun);
 
-    // Initialize AIOX
-    await initializeAiox(projectRoot, logger, options.dryRun);
+    // Initialize YARD
+    await initializeYard(projectRoot, logger, options.dryRun);
   }
 
   // Step 6: Run doctor
@@ -464,7 +464,7 @@ async function runInstaller(options = {}) {
   if (options.dryRun) {
     outro(chalk.yellow(`Dry-run complete in ${elapsed}. No changes were made.`));
   } else {
-    outro(chalk.green(`AIOX installed successfully in ${elapsed}!`));
+    outro(chalk.green(`YARD installed successfully in ${elapsed}!`));
     console.log('');
     console.log(chalk.dim('Next steps:'));
     console.log(chalk.dim('  1. Run `npx yard-core info` to see your configuration'));

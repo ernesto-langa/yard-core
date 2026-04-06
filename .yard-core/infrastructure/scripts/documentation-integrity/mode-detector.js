@@ -1,7 +1,7 @@
 /**
  * Mode Detector Module
  *
- * Detects installation mode for AIOX projects with three-mode support:
+ * Detects installation mode for YARD projects with three-mode support:
  * - FRAMEWORK_DEV: Contributing to yard-core itself
  * - GREENFIELD: New empty project
  * - BROWNFIELD: Existing project being integrated
@@ -15,7 +15,7 @@ const fs = require('fs');
 const path = require('path');
 
 /**
- * Installation modes supported by AIOX
+ * Installation modes supported by YARD
  * @enum {string}
  */
 const InstallationMode = {
@@ -30,7 +30,7 @@ const InstallationMode = {
  * @enum {string}
  */
 const LegacyProjectType = {
-  EXISTING_AIOX: 'EXISTING_AIOX',
+  EXISTING_YARD: 'EXISTING_YARD',
   GREENFIELD: 'GREENFIELD',
   BROWNFIELD: 'BROWNFIELD',
   UNKNOWN: 'UNKNOWN',
@@ -44,16 +44,16 @@ const ModeDescriptions = {
   [InstallationMode.FRAMEWORK_DEV]: {
     label: '🔧 Framework Development',
     hint: 'Developing yard-core itself - uses framework standards, skips project setup',
-    description: 'For AIOX contributors working on the framework',
+    description: 'For YARD contributors working on the framework',
   },
   [InstallationMode.GREENFIELD]: {
     label: '🆕 New Project (Greenfield)',
-    hint: 'Start a fresh project with AIOX - generates project docs, config, and infrastructure',
+    hint: 'Start a fresh project with YARD - generates project docs, config, and infrastructure',
     description: 'Empty directory setup with full scaffolding',
   },
   [InstallationMode.BROWNFIELD]: {
     label: '📂 Existing Project (Brownfield)',
-    hint: 'Add AIOX to existing project - analyzes current structure and adapts',
+    hint: 'Add YARD to existing project - analyzes current structure and adapts',
     description: 'Integration with existing codebase',
   },
   [InstallationMode.UNKNOWN]: {
@@ -102,24 +102,24 @@ function detectInstallationMode(targetDir = process.cwd()) {
   // Collect markers
   const markers = collectMarkers(normalizedDir);
 
-  // Priority 1: Check for AIOX framework development
-  if (markers.hasAioxCore && markers.isAioxCoreRepo) {
+  // Priority 1: Check for YARD framework development
+  if (markers.hasYardCore && markers.isYardCoreRepo) {
     return {
       mode: InstallationMode.FRAMEWORK_DEV,
-      legacyType: LegacyProjectType.EXISTING_AIOX,
+      legacyType: LegacyProjectType.EXISTING_YARD,
       confidence: 100,
       reason: 'Detected yard-core repository with .yard-core directory',
       markers,
     };
   }
 
-  // Priority 2: Check for existing AIOX installation (non-framework)
-  if (markers.hasAioxCore && !markers.isAioxCoreRepo) {
+  // Priority 2: Check for existing YARD installation (non-framework)
+  if (markers.hasYardCore && !markers.isYardCoreRepo) {
     return {
       mode: InstallationMode.BROWNFIELD,
-      legacyType: LegacyProjectType.EXISTING_AIOX,
+      legacyType: LegacyProjectType.EXISTING_YARD,
       confidence: 95,
-      reason: 'AIOX already installed in user project - treating as brownfield update',
+      reason: 'YARD already installed in user project - treating as brownfield update',
       markers,
     };
   }
@@ -178,9 +178,9 @@ function collectMarkers(targetDir) {
   const dirContents = fs.readdirSync(targetDir);
 
   return {
-    // AIOX markers
-    hasAioxCore: fs.existsSync(path.join(targetDir, '.yard-core')),
-    isAioxCoreRepo: isAioxCoreRepository(targetDir),
+    // YARD markers
+    hasYardCore: fs.existsSync(path.join(targetDir, '.yard-core')),
+    isYardCoreRepo: isYardCoreRepository(targetDir),
 
     // Directory state
     isEmpty: dirContents.length === 0,
@@ -225,7 +225,7 @@ function collectMarkers(targetDir) {
  * @param {string} targetDir - Directory to check
  * @returns {boolean} True if this is the yard-core repository
  */
-function isAioxCoreRepository(targetDir) {
+function isYardCoreRepository(targetDir) {
   const packageJsonPath = path.join(targetDir, 'package.json');
 
   if (!fs.existsSync(packageJsonPath)) {
@@ -236,20 +236,20 @@ function isAioxCoreRepository(targetDir) {
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
     // Primary check: explicit yard-core package names
-    if (packageJson.name === '@aiox/core' || packageJson.name === 'yard-core') {
+    if (packageJson.name === '@yard/core' || packageJson.name === 'yard-core') {
       return true;
     }
 
-    // Secondary check: workspaces pattern + aiox-specific marker file
+    // Secondary check: workspaces pattern + yard-specific marker file
     // This prevents false positives for generic monorepos
-    const hasAioxMarker = fs.existsSync(path.join(targetDir, '.yard-core', 'infrastructure'));
+    const hasYardMarker = fs.existsSync(path.join(targetDir, '.yard-core', 'infrastructure'));
     const hasWorkspaces =
       Array.isArray(packageJson.workspaces) && packageJson.workspaces.includes('packages/*');
 
-    return hasWorkspaces && hasAioxMarker;
+    return hasWorkspaces && hasYardMarker;
   } catch (error) {
     // Log error for debugging but don't throw - return false for safety
-    if (process.env.AIOX_DEBUG) {
+    if (process.env.YARD_DEBUG) {
       console.warn(`[mode-detector] Error checking yard-core repository: ${error.message}`);
     }
     return false;
@@ -261,23 +261,23 @@ function isAioxCoreRepository(targetDir) {
  *
  * @deprecated Use detectInstallationMode().mode directly instead.
  * This function cannot distinguish between FRAMEWORK_DEV and BROWNFIELD
- * for EXISTING_AIOX legacy type (both use EXISTING_AIOX but with different modes).
+ * for EXISTING_YARD legacy type (both use EXISTING_YARD but with different modes).
  * For accurate mode detection, use the mode property from detectInstallationMode().
  *
- * @param {string} legacyType - Legacy project type (EXISTING_AIOX, GREENFIELD, etc.)
+ * @param {string} legacyType - Legacy project type (EXISTING_YARD, GREENFIELD, etc.)
  * @param {Object} [context] - Optional context for disambiguation
- * @param {boolean} [context.isAioxCoreRepo] - True if this is the yard-core repository
+ * @param {boolean} [context.isYardCoreRepo] - True if this is the yard-core repository
  * @returns {string} New installation mode
  */
 function mapLegacyTypeToMode(legacyType, context = {}) {
-  // EXISTING_AIOX is ambiguous: it can be FRAMEWORK_DEV (yard-core repo)
-  // or BROWNFIELD (user project with AIOX installed)
-  if (legacyType === LegacyProjectType.EXISTING_AIOX) {
+  // EXISTING_YARD is ambiguous: it can be FRAMEWORK_DEV (yard-core repo)
+  // or BROWNFIELD (user project with YARD installed)
+  if (legacyType === LegacyProjectType.EXISTING_YARD) {
     // Use context to disambiguate if provided
-    if (context.isAioxCoreRepo === true) {
+    if (context.isYardCoreRepo === true) {
       return InstallationMode.FRAMEWORK_DEV;
     }
-    if (context.isAioxCoreRepo === false) {
+    if (context.isYardCoreRepo === false) {
       return InstallationMode.BROWNFIELD;
     }
     // Default to BROWNFIELD as it's safer (won't skip project setup)
@@ -320,7 +320,7 @@ function validateModeSelection(selectedMode, detected) {
       );
     }
 
-    if (selectedMode === InstallationMode.FRAMEWORK_DEV && !detected.markers.isAioxCoreRepo) {
+    if (selectedMode === InstallationMode.FRAMEWORK_DEV && !detected.markers.isYardCoreRepo) {
       result.warnings.push(
         'Selected framework-dev but this does not appear to be the yard-core repository.',
       );
@@ -379,7 +379,7 @@ function getModeOptions(detected = null) {
 module.exports = {
   detectInstallationMode,
   collectMarkers,
-  isAioxCoreRepository,
+  isYardCoreRepository,
   mapLegacyTypeToMode,
   validateModeSelection,
   getModeOptions,

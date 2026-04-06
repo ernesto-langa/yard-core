@@ -93,7 +93,7 @@ const RUNTIME_DOMAINS = [
   'manifest', 'constitution', 'global', 'context', 'commands',
   'agent-dev', 'agent-qa', 'agent-architect', 'agent-pm', 'agent-po',
   'agent-sm', 'agent-devops', 'agent-analyst', 'agent-data-engineer',
-  'agent-ux', 'agent-aiox-master', 'agent-squad-creator',
+  'agent-ux', 'agent-yard-master', 'agent-squad-creator',
   'workflow-story-dev', 'workflow-epic-create', 'workflow-arch-review',
 ];
 
@@ -188,7 +188,7 @@ function generateReadme(outDir) {
 ## What is SYNAPSE?
 
 SYNAPSE (YARD Adaptive Processing & State Engine) is the JIT context injection
-engine for AIOX. On every user prompt, it injects \`<synapse-rules>\` with adaptive
+engine for YARD. On every user prompt, it injects \`<synapse-rules>\` with adaptive
 contextual rules through an 8-layer pipeline.
 
 ## Prerequisites

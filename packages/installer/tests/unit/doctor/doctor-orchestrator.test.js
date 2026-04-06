@@ -1,6 +1,6 @@
 /**
  * Unit Tests: Doctor Orchestrator
- * Story INS-4.1: aiox doctor rewrite
+ * Story INS-4.1: yard doctor rewrite
  *
  * Tests for options forwarding, output format, and fix/dry-run behavior.
  */
@@ -42,7 +42,7 @@ describe('Doctor Orchestrator', () => {
 
     it('should produce text when json option is false', async () => {
       const result = await runDoctorChecks({ json: false, projectRoot });
-      expect(result.formatted).toContain('AIOX Doctor');
+      expect(result.formatted).toContain('YARD Doctor');
       expect(result.formatted).toContain('Summary:');
     });
   });

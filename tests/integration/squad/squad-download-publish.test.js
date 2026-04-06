@@ -5,7 +5,7 @@
  * and other squad components (SquadValidator, SquadLoader).
  *
  * Note: Network-dependent tests are skipped by default.
- * Set AIOX_INTEGRATION_TESTS=true to run network tests.
+ * Set YARD_INTEGRATION_TESTS=true to run network tests.
  *
  * @see Story SQS-6: Download & Publish Tasks
  */
@@ -41,7 +41,7 @@ const FIXTURES_PATH = path.join(__dirname, '..', 'fixtures', 'squad');
 const TEMP_PATH = path.join(__dirname, 'temp-download-publish');
 
 // Check if network tests should run
-const RUN_NETWORK_TESTS = process.env.AIOX_INTEGRATION_TESTS === 'true';
+const RUN_NETWORK_TESTS = process.env.YARD_INTEGRATION_TESTS === 'true';
 
 describe('Squad Download & Publish Integration', () => {
   let downloader;
@@ -173,7 +173,7 @@ This is a sample task for integration testing.
     const conditionalTest = RUN_NETWORK_TESTS ? it : it.skip;
 
     conditionalTest(
-      'should list squads from aiox-squads registry',
+      'should list squads from yard-squads registry',
       async () => {
         const squads = await downloader.listAvailable();
 

@@ -41,7 +41,7 @@ const FAKE_HOME = '/fake/home';
 
 const LEGACY_CONFIG_YAML = `
 project:
-  type: EXISTING_AIOX
+  type: EXISTING_YARD
   installedAt: "2025-01-14"
   version: "2.1.0"
 user_profile: advanced
@@ -153,21 +153,21 @@ describe('extractProjectFields', () => {
   it('should extract project.type from nested project object', () => {
     // Given
     const legacyConfig = {
-      project: { type: 'EXISTING_AIOX', version: '2.1.0' },
+      project: { type: 'EXISTING_YARD', version: '2.1.0' },
     };
 
     // When
     const projectFields = extractProjectFields(legacyConfig);
 
     // Then
-    expect(projectFields.project_type).toBe('EXISTING_AIOX');
+    expect(projectFields.project_type).toBe('EXISTING_YARD');
   });
 
   it('should not override explicit project_type with nested project.type', () => {
     // Given
     const legacyConfig = {
       project_type: 'fullstack',
-      project: { type: 'EXISTING_AIOX' },
+      project: { type: 'EXISTING_YARD' },
     };
 
     // When

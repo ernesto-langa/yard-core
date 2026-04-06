@@ -151,10 +151,10 @@ describe('Migration Backup Module', () => {
   describe('createBackup', () => {
     it('should create backup of .yard-core directory', async () => {
       // Create mock .yard-core structure
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'agents'), { recursive: true });
-      await fs.promises.writeFile(path.join(aioxCoreDir, 'agents', 'test.md'), 'Agent content');
-      await fs.promises.writeFile(path.join(aioxCoreDir, 'index.js'), 'module.exports = {}');
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      await fs.promises.mkdir(path.join(yardCoreDir, 'agents'), { recursive: true });
+      await fs.promises.writeFile(path.join(yardCoreDir, 'agents', 'test.md'), 'Agent content');
+      await fs.promises.writeFile(path.join(yardCoreDir, 'index.js'), 'module.exports = {}');
 
       const result = await createBackup(testDir);
 
@@ -169,9 +169,9 @@ describe('Migration Backup Module', () => {
     });
 
     it('should include backup manifest', async () => {
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      await fs.promises.mkdir(aioxCoreDir, { recursive: true });
-      await fs.promises.writeFile(path.join(aioxCoreDir, 'test.js'), 'test');
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      await fs.promises.mkdir(yardCoreDir, { recursive: true });
+      await fs.promises.writeFile(path.join(yardCoreDir, 'test.js'), 'test');
 
       const result = await createBackup(testDir);
       const manifestPath = path.join(result.backupDir, 'backup-manifest.json');
@@ -188,9 +188,9 @@ describe('Migration Backup Module', () => {
   describe('verifyBackup', () => {
     it('should verify valid backup', async () => {
       // Create and verify a backup
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      await fs.promises.mkdir(aioxCoreDir, { recursive: true });
-      await fs.promises.writeFile(path.join(aioxCoreDir, 'test.js'), 'test content');
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      await fs.promises.mkdir(yardCoreDir, { recursive: true });
+      await fs.promises.writeFile(path.join(yardCoreDir, 'test.js'), 'test content');
 
       const backupResult = await createBackup(testDir);
       const verification = await verifyBackup(backupResult.backupDir);
@@ -201,9 +201,9 @@ describe('Migration Backup Module', () => {
     });
 
     it('should detect corrupted files', async () => {
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      await fs.promises.mkdir(aioxCoreDir, { recursive: true });
-      await fs.promises.writeFile(path.join(aioxCoreDir, 'test.js'), 'original');
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      await fs.promises.mkdir(yardCoreDir, { recursive: true });
+      await fs.promises.writeFile(path.join(yardCoreDir, 'test.js'), 'original');
 
       const backupResult = await createBackup(testDir);
 
@@ -221,9 +221,9 @@ describe('Migration Backup Module', () => {
   describe('findLatestBackup', () => {
     it('should find the most recent backup', async () => {
       // Create mock backup directories
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      await fs.promises.mkdir(aioxCoreDir, { recursive: true });
-      await fs.promises.writeFile(path.join(aioxCoreDir, 'test.js'), 'test');
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      await fs.promises.mkdir(yardCoreDir, { recursive: true });
+      await fs.promises.writeFile(path.join(yardCoreDir, 'test.js'), 'test');
 
       // Create first backup
       await createBackup(testDir);
@@ -242,9 +242,9 @@ describe('Migration Backup Module', () => {
 
   describe('listBackups', () => {
     it('should list all backups', async () => {
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      await fs.promises.mkdir(aioxCoreDir, { recursive: true });
-      await fs.promises.writeFile(path.join(aioxCoreDir, 'test.js'), 'test');
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      await fs.promises.mkdir(yardCoreDir, { recursive: true });
+      await fs.promises.writeFile(path.join(yardCoreDir, 'test.js'), 'test');
 
       await createBackup(testDir);
 

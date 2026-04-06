@@ -805,7 +805,7 @@ function formatUpdateResult(result, options = {}) {
 
 module.exports = {
   YARDUpdater,
-  AIOXUpdater: YARDUpdater, // backward-compat alias
+  YARDUpdater: YARDUpdater, // backward-compat alias
   UpdateStatus,
   FileAction,
   formatCheckResult,

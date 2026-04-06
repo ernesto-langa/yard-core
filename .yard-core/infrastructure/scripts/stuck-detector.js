@@ -993,7 +993,7 @@ async function main() {
 
   if (args.length === 0 || args.includes('--help') || args.includes('-h')) {
     console.log(`
-${chalk.bold('Stuck Detector')} - AIOX Auto-Claude Recovery System (Story 5.2)
+${chalk.bold('Stuck Detector')} - YARD Auto-Claude Recovery System (Story 5.2)
 
 ${chalk.cyan('Usage:')}
   stuck-detector check <attempts-json> [--approach <current>]

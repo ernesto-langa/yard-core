@@ -41,13 +41,13 @@ async function getClickUpTool() {
  * CRITICAL: Stories use custom field "story-status", NOT native status
  *
  * @param {string} taskId - ClickUp task ID (can be regular or custom ID)
- * @param {string} newStatus - New AIOX status value (will be mapped to ClickUp)
+ * @param {string} newStatus - New YARD status value (will be mapped to ClickUp)
  * @returns {Promise<void>}
  * @throws {Error} If ClickUp API call fails
  */
 async function updateStoryStatus(taskId, newStatus) {
   try {
-    // Map AIOX status to ClickUp story-status value
+    // Map YARD status to ClickUp story-status value
     const mappedStatus = mapStatusToClickUp(newStatus);
 
     console.log(`Updating story ${taskId} status to: ${mappedStatus}`);

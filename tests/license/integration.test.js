@@ -67,7 +67,7 @@ describe('License System Integration', () => {
 
   beforeEach(() => {
     // Create temp directory for each test
-    testDir = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-integration-test-'));
+    testDir = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-integration-test-'));
 
     // Mock process.cwd to return our test directory
     originalCwd = process.cwd;
@@ -183,7 +183,7 @@ describe('License System Integration', () => {
       const graceStatus = getDegradationStatus();
       expect(graceStatus.degraded).toBe(false);
       expect(graceStatus.reason).toContain('grace');
-      expect(graceStatus.action).toBe('aiox pro validate');
+      expect(graceStatus.action).toBe('yard pro validate');
 
       // Phase 3: Past grace period (Expired)
       deleteLicenseCache(testDir);

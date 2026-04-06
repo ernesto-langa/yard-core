@@ -10,7 +10,7 @@ const {
 
 describe('WorkflowStateManager runtime-first recommendations', () => {
   it('creates state with version metadata', async () => {
-    const tmp = await fs.mkdtemp(path.join(os.tmpdir(), 'aiox-wsm-'));
+    const tmp = await fs.mkdtemp(path.join(os.tmpdir(), 'yard-wsm-'));
     const manager = new WorkflowStateManager({ basePath: tmp });
 
     const workflowData = {

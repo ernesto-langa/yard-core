@@ -94,7 +94,7 @@ describe('FocusAreaRecommender', () => {
       expect(analysis.riskLevel).toBe('critical');
     });
 
-    it('should detect AIOX framework changes', () => {
+    it('should detect YARD framework changes', () => {
       const files = ['src/agents/developer.js', 'src/workflows/review.yaml'];
       const analysis = recommender.analyzeChangedFiles(files);
 

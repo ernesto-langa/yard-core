@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * AIOX Validate Command - Validate installation and skills
+ * YARD Validate Command - Validate installation and skills
  */
 
 const path = require('path');
@@ -8,7 +8,7 @@ const path = require('path');
 async function main() {
   const projectDir = process.cwd();
 
-  console.log('🔍 AIOX Validation\n');
+  console.log('🔍 YARD Validation\n');
 
   try {
     const validatorPath = path.join(
@@ -26,7 +26,7 @@ async function main() {
     console.log(validator.generateReport(results));
   } catch (error) {
     console.log('❌ Validation failed:', error.message);
-    console.log('\nMake sure AIOX is installed: npx yard-core install');
+    console.log('\nMake sure YARD is installed: npx yard-core install');
   }
 }
 

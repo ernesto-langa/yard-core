@@ -98,7 +98,7 @@ describe('IDE Config Generator', () => {
       expect(variables).toHaveProperty('projectName');
       expect(variables).toHaveProperty('projectType');
       expect(variables).toHaveProperty('timestamp');
-      expect(variables).toHaveProperty('aioxVersion');
+      expect(variables).toHaveProperty('yardVersion');
     });
 
     it('should use projectName from wizard state', () => {
@@ -129,12 +129,12 @@ describe('IDE Config Generator', () => {
       expect(variables.timestamp).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/);
     });
 
-    it('should include AIOX version', () => {
+    it('should include YARD version', () => {
       const wizardState = {};
       const variables = generateTemplateVariables(wizardState);
 
-      expect(variables.aioxVersion).toBeDefined();
-      expect(typeof variables.aioxVersion).toBe('string');
+      expect(variables.yardVersion).toBeDefined();
+      expect(typeof variables.yardVersion).toBe('string');
     });
   });
 
@@ -240,7 +240,7 @@ describe('IDE Config Generator', () => {
       expect(await fs.pathExists(configPath)).toBe(true);
 
       const content = await fs.readFile(configPath, 'utf8');
-      // Should contain AIOX rules content
+      // Should contain YARD rules content
       expect(content).toContain('YARD');
     });
 
@@ -259,7 +259,7 @@ describe('IDE Config Generator', () => {
       expect(await fs.pathExists(configPath)).toBe(true);
     });
 
-    it('should configure Gemini hooks and settings with active AIOX hooks', async () => {
+    it('should configure Gemini hooks and settings with active YARD hooks', async () => {
       const selectedIDEs = ['gemini'];
       const wizardState = { projectName: 'test', projectType: 'greenfield' };
 
@@ -280,10 +280,10 @@ describe('IDE Config Generator', () => {
       expect(settings.hooks).toBeDefined();
       expect(Array.isArray(settings.hooks.BeforeAgent)).toBe(true);
       const beforeAgentWrapper = settings.hooks.BeforeAgent.find(
-        (w) => Array.isArray(w.hooks) && w.hooks.some((h) => h.name === 'aiox-context-inject'),
+        (w) => Array.isArray(w.hooks) && w.hooks.some((h) => h.name === 'yard-context-inject'),
       );
       expect(beforeAgentWrapper).toBeDefined();
-      const hook = beforeAgentWrapper.hooks.find((h) => h.name === 'aiox-context-inject');
+      const hook = beforeAgentWrapper.hooks.find((h) => h.name === 'yard-context-inject');
       expect(hook.enabled).toBe(true);
       expect(hook.command).toContain('.gemini/hooks/before-agent.js');
     });

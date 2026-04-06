@@ -18,8 +18,8 @@ function createTempProject(boundary, existingSettings) {
   const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'gen-settings-'));
 
   // Create core-config.yaml with boundary section
-  const aioxCoreDir = path.join(tmpDir, '.yard-core');
-  fs.mkdirSync(aioxCoreDir, { recursive: true });
+  const yardCoreDir = path.join(tmpDir, '.yard-core');
+  fs.mkdirSync(yardCoreDir, { recursive: true });
 
   const yamlContent = [
     'boundary:',
@@ -65,7 +65,7 @@ describe('generate-settings-json', () => {
     test('reads boundary config from core-config.yaml', () => {
       const tmpDir = createTempProject({
         frameworkProtection: true,
-        protected: ['.yard-core/core/**', 'bin/aiox.js'],
+        protected: ['.yard-core/core/**', 'bin/yard.js'],
         exceptions: ['.yard-core/data/**'],
       });
 
@@ -74,7 +74,7 @@ describe('generate-settings-json', () => {
 
         expect(config.frameworkProtection).toBe(true);
         expect(config.protected).toContain('.yard-core/core/**');
-        expect(config.protected).toContain('bin/aiox.js');
+        expect(config.protected).toContain('bin/yard.js');
         expect(config.exceptions).toContain('.yard-core/data/**');
       } finally {
         cleanupTempProject(tmpDir);
@@ -118,7 +118,7 @@ describe('generate-settings-json', () => {
     test('generates deny rules covering all protected paths', () => {
       const tmpDir = createTempProject({
         frameworkProtection: true,
-        protected: ['.yard-core/core/**', '.yard-core/infrastructure/**', 'bin/aiox.js'],
+        protected: ['.yard-core/core/**', '.yard-core/infrastructure/**', 'bin/yard.js'],
         exceptions: ['.yard-core/data/**'],
       });
 
@@ -129,7 +129,7 @@ describe('generate-settings-json', () => {
         const boundary = readBoundaryConfig(tmpDir);
         const permissions = generatePermissions(boundary, tmpDir);
 
-        // Should have deny rules for core subdirs (events/**, utils/**, index.js) + infrastructure/** + bin/aiox.js
+        // Should have deny rules for core subdirs (events/**, utils/**, index.js) + infrastructure/** + bin/yard.js
         expect(permissions.deny.length).toBeGreaterThan(0);
 
         // Core expansion: events/**, utils/**, index.js → 6 deny rules (3 paths x 2 tools)
@@ -143,8 +143,8 @@ describe('generate-settings-json', () => {
         // Non-core paths stay as globs
         expect(permissions.deny).toContain('Edit(.yard-core/infrastructure/**)');
         expect(permissions.deny).toContain('Write(.yard-core/infrastructure/**)');
-        expect(permissions.deny).toContain('Edit(bin/aiox.js)');
-        expect(permissions.deny).toContain('Write(bin/aiox.js)');
+        expect(permissions.deny).toContain('Edit(bin/yard.js)');
+        expect(permissions.deny).toContain('Write(bin/yard.js)');
 
         // Allow rules from exceptions
         expect(permissions.allow).toContain('Edit(.yard-core/data/**)');
@@ -171,8 +171,8 @@ describe('generate-settings-json', () => {
         '.yard-core/development/workflows/',
         '.yard-core/infrastructure/',
         '.yard-core/constitution.md',
-        'bin/aiox.js',
-        'bin/aiox-init.js',
+        'bin/yard.js',
+        'bin/yard-init.js',
       ];
 
       for (const root of protectedRoots) {
@@ -206,7 +206,7 @@ describe('generate-settings-json', () => {
     test('running generator twice produces identical output', () => {
       const tmpDir = createTempProject({
         frameworkProtection: true,
-        protected: ['.yard-core/core/**', 'bin/aiox.js'],
+        protected: ['.yard-core/core/**', 'bin/yard.js'],
         exceptions: ['.yard-core/data/**'],
       });
 
@@ -253,7 +253,7 @@ describe('generate-settings-json', () => {
       const tmpDir = createTempProject(
         {
           frameworkProtection: true,
-          protected: ['bin/aiox.js'],
+          protected: ['bin/yard.js'],
           exceptions: [],
         },
         { language: 'pt', customSetting: true }
@@ -277,7 +277,7 @@ describe('generate-settings-json', () => {
       const tmpDir = createTempProject(
         {
           frameworkProtection: false,
-          protected: ['bin/aiox.js'],
+          protected: ['bin/yard.js'],
           exceptions: [],
         },
         { language: 'pt', permissions: { deny: ['old-rule'], allow: [] } }

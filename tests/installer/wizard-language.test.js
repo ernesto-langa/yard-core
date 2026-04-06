@@ -19,7 +19,7 @@ describe('ACT-12: Language delegated to Claude Code settings.json', () => {
   let tempDir;
 
   beforeEach(async () => {
-    tempDir = path.join(os.tmpdir(), `aiox-test-lang-${Date.now()}`);
+    tempDir = path.join(os.tmpdir(), `yard-test-lang-${Date.now()}`);
     await fse.ensureDir(tempDir);
     await fse.ensureDir(path.join(tempDir, '.yard-core'));
   });

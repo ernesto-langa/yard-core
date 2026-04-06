@@ -6,7 +6,7 @@ set -euo pipefail
 
 RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; NC='\033[0m'
 TEST_NAME="AC8: Performance"
-LOG_FILE="/tmp/aiox-test-perf-$(date +%Y%m%d-%H%M%S).log"
+LOG_FILE="/tmp/yard-test-perf-$(date +%Y%m%d-%H%M%S).log"
 
 log_info() { echo -e "${GREEN}[INFO]${NC} $1" | tee -a "$LOG_FILE"; }
 log_warning() { echo -e "${YELLOW}[WARNING]${NC} $1" | tee -a "$LOG_FILE"; }
@@ -23,15 +23,15 @@ test_full_installation_time() {
 
     START_TIME=$(date +%s)
 
-    log_info "Starting AIOX installation (this will take a few minutes)..."
+    log_info "Starting YARD installation (this will take a few minutes)..."
     log_warning "This test requires manual interaction during installation"
 
     # Note: Actual installation would happen here
     # For testing purposes, we'll simulate timing
-    log_info "Simulating installation... (in real test, run: npx @synkraai/aiox@latest init)"
+    log_info "Simulating installation... (in real test, run: npx @synkraai/yard@latest init)"
 
     # In actual test, measure real installation:
-    # if npx @synkraai/aiox@latest init; then
+    # if npx @synkraai/yard@latest init; then
     #     END_TIME=$(date +%s)
     #     DURATION=$((END_TIME - START_TIME))
     #     ...
@@ -44,13 +44,13 @@ test_full_installation_time() {
 test_mcp_health_check_time() {
     log_info "Test 2: Measuring health check performance..."
 
-    if ! command -v aiox &> /dev/null; then
-        log_warning "AIOX not installed, skipping performance test"
+    if ! command -v yard &> /dev/null; then
+        log_warning "YARD not installed, skipping performance test"
         return
     fi
 
     START_TIME=$(date +%s)
-    aiox health &> /dev/null || true
+    yard health &> /dev/null || true
     END_TIME=$(date +%s)
 
     DURATION=$((END_TIME - START_TIME))
@@ -66,19 +66,19 @@ test_mcp_health_check_time() {
 test_cli_response_time() {
     log_info "Test 3: Measuring CLI command response times..."
 
-    if ! command -v aiox &> /dev/null; then
-        log_warning "AIOX not installed, skipping CLI performance test"
+    if ! command -v yard &> /dev/null; then
+        log_warning "YARD not installed, skipping CLI performance test"
         return
     fi
 
     # Test --version speed
     START=$(date +%s%N 2>/dev/null || date +%s)
-    aiox --version &> /dev/null || true
+    yard --version &> /dev/null || true
     END=$(date +%s%N 2>/dev/null || date +%s)
 
     if command -v bc &> /dev/null && [[ "$START" != "$END" ]]; then
         DURATION=$(echo "scale=3; ($END - $START) / 1000000" | bc)
-        log_info "aiox --version: ${DURATION}ms"
+        log_info "yard --version: ${DURATION}ms"
 
         if (( $(echo "$DURATION < 1000" | bc -l) )); then
             pass_test "CLI command responds quickly (<1s)"
@@ -94,7 +94,7 @@ test_network_operations() {
     # Test npm registry connectivity
     START_TIME=$(date +%s)
 
-    if npm view @synkraai/aiox version &> /dev/null; then
+    if npm view @synkraai/yard version &> /dev/null; then
         END_TIME=$(date +%s)
         DURATION=$((END_TIME - START_TIME))
 
@@ -127,7 +127,7 @@ test_system_resources() {
 
     # Check if system meets minimum requirements
     if [[ $CPU_COUNT -ge 2 ]] && (( $(echo "$MEMORY_GB >= 4" | bc -l) )); then
-        pass_test "System resources adequate for AIOX"
+        pass_test "System resources adequate for YARD"
     else
         log_warning "System resources may be insufficient"
     fi

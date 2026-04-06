@@ -1,5 +1,5 @@
 #!/bin/bash
-# Master Test Runner for AIOX macOS Testing
+# Master Test Runner for YARD macOS Testing
 # Story 1.10b - macOS Testing & Validation
 # Executes all acceptance criteria tests
 
@@ -14,7 +14,7 @@ NC='\033[0m'
 
 # Test configuration
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-REPORT_FILE="/tmp/aiox-macos-test-report-$(date +%Y%m%d-%H%M%S).txt"
+REPORT_FILE="/tmp/yard-macos-test-report-$(date +%Y%m%d-%H%M%S).txt"
 TESTS_PASSED=0
 TESTS_FAILED=0
 TESTS_SKIPPED=0
@@ -58,7 +58,7 @@ log_warning() {
 
 # Print banner
 print_banner() {
-    log_header "AIOX macOS Testing Suite"
+    log_header "YARD macOS Testing Suite"
     log_info "Story: 1.10b - macOS Testing & Validation"
     log_info "Timestamp: $(date)"
     log_info "Architecture: $(uname -m)"

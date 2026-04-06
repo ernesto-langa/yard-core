@@ -6,7 +6,7 @@
  * @module infrastructure/scripts/validate-user-profile
  * @version 1.0.0
  * @created 2026-02-04 (Story 10.1 - Epic 10: User Profile System)
- * @see PRD AIOX v2.0 "Projeto Bob" - Seção 2
+ * @see PRD YARD v2.0 "Projeto Bob" - Seção 2
  */
 
 const fs = require('fs');

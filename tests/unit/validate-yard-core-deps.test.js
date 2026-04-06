@@ -79,7 +79,7 @@ describe('wizard NODE_PATH fix (INS-4.12)', () => {
     const wizardPath = path.join(PROJECT_ROOT, 'packages', 'installer', 'src', 'wizard', 'index.js');
     const content = fs.readFileSync(wizardPath, 'utf8');
     expect(content).toContain('NODE_PATH');
-    expect(content).toContain('aioxCoreNodeModules');
+    expect(content).toContain('yardCoreNodeModules');
   });
 
   test('wizard/index.js guards bootstrap on deps existence', () => {
@@ -93,7 +93,7 @@ describe('doctor npm-packages check (INS-4.12)', () => {
   test('doctor check validates .yard-core/node_modules/', () => {
     const checkPath = path.join(PROJECT_ROOT, '.yard-core', 'core', 'doctor', 'checks', 'npm-packages.js');
     const content = fs.readFileSync(checkPath, 'utf8');
-    expect(content).toContain('aioxCoreNodeModules');
+    expect(content).toContain('yardCoreNodeModules');
     expect(content).toContain('.yard-core');
     expect(content).toContain('INS-4.12');
   });

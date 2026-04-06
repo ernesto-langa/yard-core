@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AIOX Codebase Mapper
+ * YARD Codebase Mapper
  *
  * Story: 7.2 - Codebase Mapper
  * Epic: Epic 7 - Memory Layer
@@ -1146,7 +1146,7 @@ async function main() {
 
   if (args.includes('--help') || args.includes('-h')) {
     console.log(`
-Codebase Mapper - AIOX Memory Layer (Story 7.2)
+Codebase Mapper - YARD Memory Layer (Story 7.2)
 
 Usage:
   node codebase-mapper.js [command] [options]

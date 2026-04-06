@@ -179,7 +179,7 @@ dependencies:
     - competitor-analysis-tmpl.yaml
     - brainstorming-output-tmpl.yaml
   data:
-    - aiox-kb.md
+    - yard-kb.md
     - brainstorming-techniques.md
   tools:
     - google-workspace # Research documentation (Drive, Docs, Sheets)
@@ -270,4 +270,4 @@ Type `*help` to see all commands, or `*yolo` to skip confirmations.
 
 ---
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/analyst.md*
+*YARD Agent - Synced from .yard-core/development/agents/analyst.md*

@@ -4,7 +4,7 @@
  * Entity Registry Bootstrap Tests (Story INS-4.6)
  *
  * Validates that the installer calls populate-entity-registry.js during install,
- * handles failures gracefully, and that aiox doctor can verify the registry.
+ * handles failures gracefully, and that yard doctor can verify the registry.
  */
 
 const fs = require('fs');
@@ -39,12 +39,12 @@ describe('Entity Registry Bootstrap (Story INS-4.6)', () => {
     });
 
     test('bootstrap runs after .yard-core/ copy (injection order)', () => {
-      const aioxCoreIdx = wizardSource.indexOf('Yard core installed');
+      const yardCoreIdx = wizardSource.indexOf('Yard core installed');
       const bootstrapIdx = wizardSource.indexOf('Bootstrapping entity registry');
       const envConfigIdx = wizardSource.indexOf('Configuring environment');
 
       // Bootstrap must come after yard-core install
-      expect(bootstrapIdx).toBeGreaterThan(aioxCoreIdx);
+      expect(bootstrapIdx).toBeGreaterThan(yardCoreIdx);
       // Bootstrap must come before environment configuration
       expect(bootstrapIdx).toBeLessThan(envConfigIdx);
     });
@@ -54,7 +54,7 @@ describe('Entity Registry Bootstrap (Story INS-4.6)', () => {
       expect(wizardSource).toContain("answers.entityRegistryStatus = 'failed'");
       expect(wizardSource).toContain('Entity registry bootstrap failed');
       // Should warn, not throw
-      expect(wizardSource).toContain("run 'aiox doctor' post-install");
+      expect(wizardSource).toContain("run 'yard doctor' post-install");
     });
 
     test('bootstrap uses 30s timeout guard', () => {
@@ -74,7 +74,7 @@ describe('Entity Registry Bootstrap (Story INS-4.6)', () => {
   });
 
   describe('AC2: Sanity check (relative threshold)', () => {
-    test('aiox doctor entity-registry check exists', () => {
+    test('yard doctor entity-registry check exists', () => {
       expect(fs.existsSync(DOCTOR_CHECK)).toBe(true);
     });
 
@@ -176,7 +176,7 @@ describe('Entity Registry Bootstrap (Story INS-4.6)', () => {
       expect(ageMs).toBeLessThan(FIVE_MINUTES);
     });
 
-    test('aiox doctor entity-registry check passes on current registry', async () => {
+    test('yard doctor entity-registry check passes on current registry', async () => {
       const { run } = require(DOCTOR_CHECK);
       const projectRoot = path.join(__dirname, '..', '..', '..', '..');
       const result = await run({ projectRoot });

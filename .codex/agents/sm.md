@@ -284,4 +284,4 @@ Type `*help` to see all commands.
 
 ---
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/sm.md*
+*YARD Agent - Synced from .yard-core/development/agents/sm.md*

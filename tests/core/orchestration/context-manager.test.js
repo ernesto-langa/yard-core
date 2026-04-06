@@ -1139,43 +1139,43 @@ describe('ContextManager', () => {
   // _resolveConfidenceThreshold
   // ─────────────────────────────────────────────
   describe('_resolveConfidenceThreshold', () => {
-    const originalEnv = process.env.AIOX_DELIVERY_CONFIDENCE_THRESHOLD;
+    const originalEnv = process.env.YARD_DELIVERY_CONFIDENCE_THRESHOLD;
 
     afterEach(() => {
       if (originalEnv !== undefined) {
-        process.env.AIOX_DELIVERY_CONFIDENCE_THRESHOLD = originalEnv;
+        process.env.YARD_DELIVERY_CONFIDENCE_THRESHOLD = originalEnv;
       } else {
-        delete process.env.AIOX_DELIVERY_CONFIDENCE_THRESHOLD;
+        delete process.env.YARD_DELIVERY_CONFIDENCE_THRESHOLD;
       }
     });
 
     test('retorna 70 como default quando env não está definida', () => {
-      delete process.env.AIOX_DELIVERY_CONFIDENCE_THRESHOLD;
+      delete process.env.YARD_DELIVERY_CONFIDENCE_THRESHOLD;
 
       expect(manager._resolveConfidenceThreshold()).toBe(70);
     });
 
     test('retorna valor numérico da env quando é um número válido', () => {
-      process.env.AIOX_DELIVERY_CONFIDENCE_THRESHOLD = '85';
+      process.env.YARD_DELIVERY_CONFIDENCE_THRESHOLD = '85';
 
       expect(manager._resolveConfidenceThreshold()).toBe(85);
     });
 
     test('retorna 70 quando env contém valor não numérico', () => {
-      process.env.AIOX_DELIVERY_CONFIDENCE_THRESHOLD = 'invalid';
+      process.env.YARD_DELIVERY_CONFIDENCE_THRESHOLD = 'invalid';
 
       expect(manager._resolveConfidenceThreshold()).toBe(70);
     });
 
     test('retorna 0 quando env é string vazia (Number("") === 0)', () => {
-      process.env.AIOX_DELIVERY_CONFIDENCE_THRESHOLD = '';
+      process.env.YARD_DELIVERY_CONFIDENCE_THRESHOLD = '';
 
       // Number('') === 0, que é Number.isFinite, então retorna 0
       expect(manager._resolveConfidenceThreshold()).toBe(0);
     });
 
     test('aceita valores decimais', () => {
-      process.env.AIOX_DELIVERY_CONFIDENCE_THRESHOLD = '75.5';
+      process.env.YARD_DELIVERY_CONFIDENCE_THRESHOLD = '75.5';
 
       expect(manager._resolveConfidenceThreshold()).toBe(75.5);
     });

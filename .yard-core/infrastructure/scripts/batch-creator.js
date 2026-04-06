@@ -441,7 +441,7 @@ class BatchCreator {
         config: {
           taskId: taskName,
           taskTitle: `Step ${i} of ${answers.workflowName}`,
-          agentName: 'aiox-developer', // Default to meta-agent
+          agentName: 'yard-developer', // Default to meta-agent
         },
       });
     }
@@ -480,7 +480,7 @@ class BatchCreator {
           type: 'input',
           name: 'agentName',
           message: `Task ${i} agent:`,
-          default: 'aiox-developer',
+          default: 'yard-developer',
         },
       ]);
       
@@ -581,7 +581,7 @@ class BatchCreator {
             type: 'input',
             name: 'agentName',
             message: 'Agent name:',
-            default: 'aiox-developer',
+            default: 'yard-developer',
           },
         ]);
         return taskAnswers;

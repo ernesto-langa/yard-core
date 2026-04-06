@@ -28,11 +28,11 @@ describe('ide-sync commandValidate --ide filter', () => {
         '  targets:',
         '    claude-code:',
         '      enabled: true',
-        '      path: .claude/commands/AIOX/agents',
+        '      path: .claude/commands/YARD/agents',
         '      format: full-markdown-yaml',
         '    gemini:',
         '      enabled: true',
-        '      path: .gemini/rules/AIOX/agents',
+        '      path: .gemini/rules/YARD/agents',
         '      format: full-markdown-yaml',
         '  redirects: {}',
       ].join('\n'),
@@ -44,12 +44,12 @@ describe('ide-sync commandValidate --ide filter', () => {
       path.join(tmpRoot, '.yard-core', 'development', 'agents'),
     );
 
-    await fs.ensureDir(path.join(tmpRoot, '.gemini', 'rules', 'AIOX', 'agents'));
+    await fs.ensureDir(path.join(tmpRoot, '.gemini', 'rules', 'YARD', 'agents'));
     const agents = parseAllAgents(path.join(tmpRoot, '.yard-core', 'development', 'agents'));
     for (const agent of agents) {
       const content = claudeTransformer.transform(agent);
       await fs.writeFile(
-        path.join(tmpRoot, '.gemini', 'rules', 'AIOX', 'agents', agent.filename),
+        path.join(tmpRoot, '.gemini', 'rules', 'YARD', 'agents', agent.filename),
         content,
         'utf8',
       );

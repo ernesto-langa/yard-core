@@ -6,13 +6,13 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint src/",
-    "dev": "aiox-dev-server"
+    "dev": "yard-dev-server"
   },
-  "keywords": ["aiox", "aiox-squad"],
+  "keywords": ["yard", "yard-squad"],
   "author": "{{author}}",
   "license": "MIT",
   "devDependencies": {
-    "@aiox/testing": "^2.1.0",
+    "@yard/testing": "^2.1.0",
     "jest": "^29.0.0",
     "eslint": "^8.0.0"
   }

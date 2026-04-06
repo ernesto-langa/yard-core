@@ -6,7 +6,7 @@ set -euo pipefail
 
 RED='\033[0;31m'; GREEN='\033[0;32m'; NC='\033[0m'
 TEST_NAME="AC6: File Permissions"
-LOG_FILE="/tmp/aiox-test-perms-$(date +%Y%m%d-%H%M%S).log"
+LOG_FILE="/tmp/yard-test-perms-$(date +%Y%m%d-%H%M%S).log"
 
 log_info() { echo -e "${GREEN}[INFO]${NC} $1" | tee -a "$LOG_FILE"; }
 pass_test() { echo -e "${GREEN}[PASS]${NC} $1" | tee -a "$LOG_FILE"; }
@@ -15,9 +15,9 @@ fail_test() { echo -e "${RED}[FAIL]${NC} $1" | tee -a "$LOG_FILE"; exit 1; }
 test_script_permissions() {
     log_info "Test 1: Verifying script executability..."
 
-    # Find AIOX scripts
-    if [[ -d "$HOME/.aiox/bin" ]]; then
-        SCRIPTS=$(find "$HOME/.aiox/bin" -type f -name "*.sh" 2>/dev/null || true)
+    # Find YARD scripts
+    if [[ -d "$HOME/.yard/bin" ]]; then
+        SCRIPTS=$(find "$HOME/.yard/bin" -type f -name "*.sh" 2>/dev/null || true)
 
         for SCRIPT in $SCRIPTS; do
             if [[ -x "$SCRIPT" ]]; then
@@ -33,8 +33,8 @@ test_config_permissions() {
     log_info "Test 2: Checking config file permissions (644)..."
 
     CONFIG_FILES=(
-        "$HOME/.aiox/config.json"
-        "$HOME/.aiox/.aioxrc"
+        "$HOME/.yard/config.json"
+        "$HOME/.yard/.yardrc"
     )
 
     for FILE in "${CONFIG_FILES[@]}"; do
@@ -53,8 +53,8 @@ test_config_permissions() {
 test_directory_permissions() {
     log_info "Test 3: Checking directory permissions (755)..."
 
-    if [[ -d "$HOME/.aiox" ]]; then
-        DIR_PERMS=$(stat -f "%Lp" "$HOME/.aiox" 2>/dev/null || stat -c "%a" "$HOME/.aiox" 2>/dev/null)
+    if [[ -d "$HOME/.yard" ]]; then
+        DIR_PERMS=$(stat -f "%Lp" "$HOME/.yard" 2>/dev/null || stat -c "%a" "$HOME/.yard" 2>/dev/null)
 
         if [[ "$DIR_PERMS" == "755" ]] || [[ "$DIR_PERMS" == "700" ]]; then
             pass_test "Directory has correct permissions ($DIR_PERMS)"
@@ -65,16 +65,16 @@ test_directory_permissions() {
 }
 
 test_no_sudo_required() {
-    log_info "Test 4: Verifying no sudo required for AIOX operations..."
+    log_info "Test 4: Verifying no sudo required for YARD operations..."
 
-    # Check if current user owns .aiox directory
-    if [[ -d "$HOME/.aiox" ]]; then
-        OWNER=$(stat -f "%Su" "$HOME/.aiox" 2>/dev/null || stat -c "%U" "$HOME/.aiox" 2>/dev/null)
+    # Check if current user owns .yard directory
+    if [[ -d "$HOME/.yard" ]]; then
+        OWNER=$(stat -f "%Su" "$HOME/.yard" 2>/dev/null || stat -c "%U" "$HOME/.yard" 2>/dev/null)
 
         if [[ "$OWNER" == "$(whoami)" ]]; then
-            pass_test "User owns .aiox directory (no sudo needed)"
+            pass_test "User owns .yard directory (no sudo needed)"
         else
-            fail_test ".aiox owned by: $OWNER (expected: $(whoami))"
+            fail_test ".yard owned by: $OWNER (expected: $(whoami))"
         fi
     fi
 }

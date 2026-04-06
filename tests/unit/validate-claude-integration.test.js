@@ -27,7 +27,7 @@ describe('validate-claude-integration', () => {
   it('passes when required Claude files exist', () => {
     write(path.join(tmpRoot, '.claude', 'CLAUDE.md'), '# rules');
     write(path.join(tmpRoot, '.claude', 'hooks', 'hook.js'), '');
-    write(path.join(tmpRoot, '.claude', 'commands', 'AIOX', 'agents', 'dev.md'), '# dev');
+    write(path.join(tmpRoot, '.claude', 'commands', 'YARD', 'agents', 'dev.md'), '# dev');
     write(path.join(tmpRoot, '.yard-core', 'development', 'agents', 'dev.md'), '# dev');
 
     const result = validateClaudeIntegration({ projectRoot: tmpRoot });

@@ -44,7 +44,7 @@ describe('Environment Configuration Integration', () => {
   beforeEach(async () => {
     // Create unique temporary test directory with random suffix to avoid collisions
     testId = `${Date.now()}-${Math.random().toString(36).substring(2, 8)}`;
-    testDir = path.join(os.tmpdir(), `aiox-env-test-${testId}`);
+    testDir = path.join(os.tmpdir(), `yard-env-test-${testId}`);
     await fs.ensureDir(testDir);
   });
 
@@ -72,8 +72,8 @@ describe('Environment Configuration Integration', () => {
 
       const content = await fs.readFile(envPath, 'utf8');
       expect(content).toContain('NODE_ENV=development');
-      // Version-agnostic: check AIOX_VERSION exists with valid semver format
-      expect(content).toMatch(/AIOX_VERSION=\d+\.\d+\.\d+/);
+      // Version-agnostic: check YARD_VERSION exists with valid semver format
+      expect(content).toMatch(/YARD_VERSION=\d+\.\d+\.\d+/);
     });
 
     it('should create .env.example file', async () => {
@@ -315,15 +315,15 @@ describe('Environment Configuration Integration', () => {
     });
 
     it('should create .yard-core directory if missing', async () => {
-      const aioxcoreDir = path.join(testDir, '.yard-core');
-      expect(await fs.pathExists(aioxcoreDir)).toBe(false);
+      const yardcoreDir = path.join(testDir, '.yard-core');
+      expect(await fs.pathExists(yardcoreDir)).toBe(false);
 
       await configureEnvironment({
         targetDir: testDir,
         skipPrompts: true,
       });
 
-      expect(await fs.pathExists(aioxcoreDir)).toBe(true);
+      expect(await fs.pathExists(yardcoreDir)).toBe(true);
     });
   });
 });

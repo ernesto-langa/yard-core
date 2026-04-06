@@ -5,11 +5,11 @@ name: basic-squad
 version: 1.0.0
 description: A simple example squad demonstrating the minimum required structure
 
-author: AIOX Team <team@synkra.dev>
+author: YARD Team <team@synkra.dev>
 license: MIT
 slashPrefix: basic
 
-aiox:
+yard:
   minVersion: "2.1.0"
   type: squad
 

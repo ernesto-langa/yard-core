@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AIOX Approach Manager
+ * YARD Approach Manager
  *
  * Story: 5.3 - Current Approach Tracker
  * Epic: Epic 5 - Recovery & Learning System
@@ -709,7 +709,7 @@ async function main() {
 
   if (args.length < 1 || args.includes('--help') || args.includes('-h')) {
     console.log(`
-Approach Manager - AIOX Recovery System (Story 5.3)
+Approach Manager - YARD Recovery System (Story 5.3)
 
 Usage:
   node approach-manager.js <story-id> <command> [subtask-id] [options]

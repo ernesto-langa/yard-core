@@ -2,7 +2,7 @@
  * Integration Test Suite: Utility Scripts Integration - Part 2
  * 
  * Story: 3.5 - Utility Script Integration Part 2
- * Purpose: Validate integration of 22 utility scripts into AIOX framework
+ * Purpose: Validate integration of 22 utility scripts into YARD framework
  * 
  * Tests:
  * 1. Load all 22 utilities successfully (no errors)
@@ -58,7 +58,7 @@ const UTILITIES_TO_TEST = [
 
 // Agents to test
 const AGENTS_TO_TEST = [
-  'aiox-master',
+  'yard-master',
   'architect',
   'dev',
   'qa',

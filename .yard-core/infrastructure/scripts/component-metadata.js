@@ -23,7 +23,7 @@ class ComponentMetadata {
 
     // Initialize memory adapter if available
     this.memoryClient = MemoryAdapter ? new MemoryAdapter({
-      persistencePath: path.join(this.rootPath, 'aiox-memory-layer-mvp', 'data'),
+      persistencePath: path.join(this.rootPath, 'yard-memory-layer-mvp', 'data'),
       namespace: 'component-metadata',
     }) : null;
     

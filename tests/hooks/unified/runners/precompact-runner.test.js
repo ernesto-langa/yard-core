@@ -39,7 +39,7 @@ describe('PreCompact Hook Runner', () => {
       expect(duration).toBeLessThan(10);
     });
 
-    it('should gracefully no-op when aiox-pro not available', async () => {
+    it('should gracefully no-op when yard-pro not available', async () => {
       proDetector.isProAvailable.mockReturnValue(false);
 
       const context = {
@@ -50,7 +50,7 @@ describe('PreCompact Hook Runner', () => {
       await onPreCompact(context);
 
       expect(console.log).toHaveBeenCalledWith(
-        '[PreCompact] aiox-pro not available, skipping session digest',
+        '[PreCompact] yard-pro not available, skipping session digest',
       );
     });
 

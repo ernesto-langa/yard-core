@@ -5,13 +5,13 @@ const path = require('path');
  * Detects the type of project in the current directory
  * 
  * Detection Priority Order:
- * 1. EXISTING_AIOX - .yard-core/ directory exists
+ * 1. EXISTING_YARD - .yard-core/ directory exists
  * 2. GREENFIELD - directory is empty
  * 3. BROWNFIELD - package.json OR .git exists
  * 4. UNKNOWN - directory has files but no recognized markers
  * 
  * @param {string} targetDir - Directory to analyze (defaults to process.cwd())
- * @returns {string} 'GREENFIELD' | 'BROWNFIELD' | 'EXISTING_AIOX' | 'UNKNOWN'
+ * @returns {string} 'GREENFIELD' | 'BROWNFIELD' | 'EXISTING_YARD' | 'UNKNOWN'
  * @throws {Error} If directory cannot be accessed
  * 
  * @example
@@ -39,12 +39,12 @@ function detectProjectType(targetDir = process.cwd()) {
       throw new Error(`Directory does not exist: ${normalizedDir}`);
     }
 
-    // Check for AIOX installation markers (use path.join for security)
-    const hasAioxCore = fs.existsSync(path.join(normalizedDir, '.yard-core'));
+    // Check for YARD installation markers (use path.join for security)
+    const hasYardCore = fs.existsSync(path.join(normalizedDir, '.yard-core'));
     
-    // If AIOX already installed, return immediately (highest priority)
-    if (hasAioxCore) {
-      return 'EXISTING_AIOX';
+    // If YARD already installed, return immediately (highest priority)
+    if (hasYardCore) {
+      return 'EXISTING_YARD';
     }
 
     // Check directory contents

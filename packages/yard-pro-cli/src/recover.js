@@ -14,7 +14,7 @@
 
 const readline = require('readline');
 
-const RECOVERY_URL = 'https://aiox-license-server.vercel.app/reset-password';
+const RECOVERY_URL = 'https://yard-license-server.vercel.app/reset-password';
 
 const RECOVERY_MESSAGE =
   'Se este email estiver associado a uma licenca, voce recebera instrucoes de recuperacao.';

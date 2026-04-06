@@ -205,7 +205,7 @@ class DependencyImpactAnalyzer {
       this.categorizeDependency(dep, dependencies, filePath);
     });
 
-    // Extract AIOX-specific references
+    // Extract YARD-specific references
     const agentRefs = content.match(/agent[_-]?name\s*[:=]\s*['"](.*?)['"]/gi) || [];
     agentRefs.forEach(match => {
       const agentName = match.match(/['"](.*?)['"]/)[1];

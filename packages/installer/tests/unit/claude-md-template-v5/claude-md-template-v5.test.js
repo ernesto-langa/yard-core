@@ -5,7 +5,7 @@ const path = require('path');
 const { MarkdownMerger } = require('../../../src/merger/strategies/markdown-merger.js');
 const {
   parseMarkdownSections,
-  hasAioxMarkers,
+  hasYardMarkers,
 } = require('../../../src/merger/parsers/markdown-section-parser.js');
 
 const TEMPLATE_PATH = path.join(
@@ -20,39 +20,39 @@ describe('CLAUDE.md Template v5 (Story INS-4.4)', () => {
     templateContent = fs.readFileSync(TEMPLATE_PATH, 'utf8');
   });
 
-  describe('template has 4 new sections with AIOX-MANAGED markers', () => {
-    test('template file exists and has AIOX markers', () => {
+  describe('template has 4 new sections with YARD-MANAGED markers', () => {
+    test('template file exists and has YARD markers', () => {
       expect(templateContent).toBeTruthy();
-      expect(hasAioxMarkers(templateContent)).toBe(true);
+      expect(hasYardMarkers(templateContent)).toBe(true);
     });
 
     test('contains framework-boundary section', () => {
-      expect(templateContent).toContain('<!-- AIOX-MANAGED-START: framework-boundary -->');
-      expect(templateContent).toContain('<!-- AIOX-MANAGED-END: framework-boundary -->');
+      expect(templateContent).toContain('<!-- YARD-MANAGED-START: framework-boundary -->');
+      expect(templateContent).toContain('<!-- YARD-MANAGED-END: framework-boundary -->');
       expect(templateContent).toContain('## Framework vs Project Boundary');
     });
 
     test('contains rules-system section', () => {
-      expect(templateContent).toContain('<!-- AIOX-MANAGED-START: rules-system -->');
-      expect(templateContent).toContain('<!-- AIOX-MANAGED-END: rules-system -->');
+      expect(templateContent).toContain('<!-- YARD-MANAGED-START: rules-system -->');
+      expect(templateContent).toContain('<!-- YARD-MANAGED-END: rules-system -->');
       expect(templateContent).toContain('## Rules System');
     });
 
     test('contains code-intelligence section', () => {
-      expect(templateContent).toContain('<!-- AIOX-MANAGED-START: code-intelligence -->');
-      expect(templateContent).toContain('<!-- AIOX-MANAGED-END: code-intelligence -->');
+      expect(templateContent).toContain('<!-- YARD-MANAGED-START: code-intelligence -->');
+      expect(templateContent).toContain('<!-- YARD-MANAGED-END: code-intelligence -->');
       expect(templateContent).toContain('## Code Intelligence');
     });
 
     test('contains graph-dashboard section', () => {
-      expect(templateContent).toContain('<!-- AIOX-MANAGED-START: graph-dashboard -->');
-      expect(templateContent).toContain('<!-- AIOX-MANAGED-END: graph-dashboard -->');
+      expect(templateContent).toContain('<!-- YARD-MANAGED-START: graph-dashboard -->');
+      expect(templateContent).toContain('<!-- YARD-MANAGED-END: graph-dashboard -->');
       expect(templateContent).toContain('## Graph Dashboard');
     });
 
-    test('template has exactly 11 AIOX-MANAGED sections total', () => {
-      const startMatches = templateContent.match(/<!-- AIOX-MANAGED-START:/g);
-      const endMatches = templateContent.match(/<!-- AIOX-MANAGED-END:/g);
+    test('template has exactly 11 YARD-MANAGED sections total', () => {
+      const startMatches = templateContent.match(/<!-- YARD-MANAGED-START:/g);
+      const endMatches = templateContent.match(/<!-- YARD-MANAGED-END:/g);
       expect(startMatches.length).toBe(11);
       expect(endMatches.length).toBe(11);
     });
@@ -91,21 +91,21 @@ describe('CLAUDE.md Template v5 (Story INS-4.4)', () => {
     });
 
     test('graph-dashboard has CLI commands', () => {
-      expect(templateContent).toContain('aiox graph --deps');
+      expect(templateContent).toContain('yard graph --deps');
       expect(templateContent).toContain('--format=json');
       expect(templateContent).toContain('--format=html');
       expect(templateContent).toContain('--watch');
-      expect(templateContent).toContain('aiox graph --stats');
+      expect(templateContent).toContain('yard graph --stats');
     });
   });
 
   describe('existing sections preserved', () => {
-    test('original 5 AIOX-MANAGED sections still present', () => {
-      expect(templateContent).toContain('<!-- AIOX-MANAGED-START: core-framework -->');
-      expect(templateContent).toContain('<!-- AIOX-MANAGED-START: agent-system -->');
-      expect(templateContent).toContain('<!-- AIOX-MANAGED-START: framework-structure -->');
-      expect(templateContent).toContain('<!-- AIOX-MANAGED-START: aiox-patterns -->');
-      expect(templateContent).toContain('<!-- AIOX-MANAGED-START: common-commands -->');
+    test('original 5 YARD-MANAGED sections still present', () => {
+      expect(templateContent).toContain('<!-- YARD-MANAGED-START: core-framework -->');
+      expect(templateContent).toContain('<!-- YARD-MANAGED-START: agent-system -->');
+      expect(templateContent).toContain('<!-- YARD-MANAGED-START: framework-structure -->');
+      expect(templateContent).toContain('<!-- YARD-MANAGED-START: yard-patterns -->');
+      expect(templateContent).toContain('<!-- YARD-MANAGED-START: common-commands -->');
     });
 
     test('non-managed sections still present', () => {
@@ -126,10 +126,10 @@ describe('CLAUDE.md Template v5 (Story INS-4.4)', () => {
     test('upgrade adds 4 new sections to CLAUDE.md without them', async () => {
       const existingClaudeMd = `# YARD
 
-<!-- AIOX-MANAGED-START: core-framework -->
+<!-- YARD-MANAGED-START: core-framework -->
 ## Core Framework Understanding
 Old core content
-<!-- AIOX-MANAGED-END: core-framework -->
+<!-- YARD-MANAGED-END: core-framework -->
 
 ## My Custom Section
 User content that must be preserved`;
@@ -153,10 +153,10 @@ User content that must be preserved`;
     test('upgrade preserves custom PROJECT-CUSTOMIZED content', async () => {
       const existingClaudeMd = `# My Project Rules
 
-<!-- AIOX-MANAGED-START: core-framework -->
+<!-- YARD-MANAGED-START: core-framework -->
 ## Core Framework Understanding
 Core content
-<!-- AIOX-MANAGED-END: core-framework -->
+<!-- YARD-MANAGED-END: core-framework -->
 
 ## Padroes de Codigo
 My custom coding standards here
@@ -173,15 +173,15 @@ My custom testing rules`;
       expect(result.content).toContain('My custom testing rules');
 
       // Managed sections updated
-      expect(result.content).toContain('<!-- AIOX-MANAGED-START: framework-boundary -->');
+      expect(result.content).toContain('<!-- YARD-MANAGED-START: framework-boundary -->');
     });
   });
 
   describe('section order in template', () => {
     test('4 new sections come after framework-structure and before workflow-execution', () => {
-      const frameworkStructureEnd = templateContent.indexOf('<!-- AIOX-MANAGED-END: framework-structure -->');
-      const frameworkBoundaryStart = templateContent.indexOf('<!-- AIOX-MANAGED-START: framework-boundary -->');
-      const graphDashboardEnd = templateContent.indexOf('<!-- AIOX-MANAGED-END: graph-dashboard -->');
+      const frameworkStructureEnd = templateContent.indexOf('<!-- YARD-MANAGED-END: framework-structure -->');
+      const frameworkBoundaryStart = templateContent.indexOf('<!-- YARD-MANAGED-START: framework-boundary -->');
+      const graphDashboardEnd = templateContent.indexOf('<!-- YARD-MANAGED-END: graph-dashboard -->');
       const workflowExecution = templateContent.indexOf('## Workflow Execution');
 
       expect(frameworkStructureEnd).toBeLessThan(frameworkBoundaryStart);

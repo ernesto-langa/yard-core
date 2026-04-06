@@ -19,7 +19,7 @@ describe('InstallTransaction', () => {
 
   beforeEach(async () => {
     // Create temp directory for each test
-    tempDir = await fs.mkdtemp(path.join(os.tmpdir(), 'aiox-test-'));
+    tempDir = await fs.mkdtemp(path.join(os.tmpdir(), 'yard-test-'));
     testFile = path.join(tempDir, 'test.txt');
     testDir = path.join(tempDir, 'test-dir');
 

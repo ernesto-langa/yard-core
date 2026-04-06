@@ -1,5 +1,5 @@
 /**
- * CLI tests for `aiox config` subcommands
+ * CLI tests for `yard config` subcommands
  * Story PRO-4 — Config Hierarchy (Task 5.3)
  *
  * Tests the Commander.js config command in-process using Jest mocks
@@ -19,9 +19,9 @@ const FIXTURES_DIR = path.join(__dirname, 'fixtures');
  * Create a temp project with config fixtures.
  */
 function createTempProject(files = {}) {
-  const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-cli-test-'));
-  const aioxCoreDir = path.join(tmpDir, '.yard-core');
-  fs.mkdirSync(aioxCoreDir, { recursive: true });
+  const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-cli-test-'));
+  const yardCoreDir = path.join(tmpDir, '.yard-core');
+  fs.mkdirSync(yardCoreDir, { recursive: true });
 
   for (const [relativePath, content] of Object.entries(files)) {
     const fullPath = path.join(tmpDir, relativePath);
@@ -84,7 +84,7 @@ describe('config CLI commands', () => {
   });
 
   /**
-   * Run `aiox config <subArgs>` in-process via Commander.
+   * Run `yard config <subArgs>` in-process via Commander.
    * Returns captured stdout/stderr as strings and whether process.exit was called.
    */
   async function runConfigCmd(subArgs) {
@@ -94,7 +94,7 @@ describe('config CLI commands', () => {
 
     let exitCode = 0;
     try {
-      await program.parseAsync(['node', 'aiox', ...subArgs]);
+      await program.parseAsync(['node', 'yard', ...subArgs]);
     } catch (err) {
       if (err instanceof ProcessExitError) {
         exitCode = err.exitCode;
@@ -118,10 +118,10 @@ describe('config CLI commands', () => {
   }
 
   // -----------------------------------------------------------------------
-  // aiox config show
+  // yard config show
   // -----------------------------------------------------------------------
 
-  describe('aiox config show', () => {
+  describe('yard config show', () => {
     test('shows resolved config as YAML', async () => {
       const tmpDir = createTempProject({
         '.yard-core/framework-config.yaml': { fixture: 'framework-config.yaml' },
@@ -133,7 +133,7 @@ describe('config CLI commands', () => {
         const { exitCode, stdout } = await runConfigCmd(['config', 'show']);
         expect(exitCode).toBe(0);
         expect(stdout).toContain('metadata');
-        expect(stdout).toContain('AIOX-FullStack');
+        expect(stdout).toContain('YARD-FullStack');
       } finally {
         cleanupTempDir(tmpDir);
       }
@@ -173,10 +173,10 @@ describe('config CLI commands', () => {
   });
 
   // -----------------------------------------------------------------------
-  // aiox config validate
+  // yard config validate
   // -----------------------------------------------------------------------
 
-  describe('aiox config validate', () => {
+  describe('yard config validate', () => {
     test('validates existing config files', async () => {
       const tmpDir = createTempProject({
         '.yard-core/framework-config.yaml': { fixture: 'framework-config.yaml' },
@@ -210,10 +210,10 @@ describe('config CLI commands', () => {
   });
 
   // -----------------------------------------------------------------------
-  // aiox config diff
+  // yard config diff
   // -----------------------------------------------------------------------
 
-  describe('aiox config diff', () => {
+  describe('yard config diff', () => {
     test('shows diff between two levels', async () => {
       const tmpDir = createTempProject({
         '.yard-core/framework-config.yaml': { fixture: 'framework-config.yaml' },
@@ -232,10 +232,10 @@ describe('config CLI commands', () => {
   });
 
   // -----------------------------------------------------------------------
-  // aiox config migrate
+  // yard config migrate
   // -----------------------------------------------------------------------
 
-  describe('aiox config migrate', () => {
+  describe('yard config migrate', () => {
     const LEGACY_CONFIG = [
       'project:',
       '  name: "test-project"',
@@ -312,10 +312,10 @@ describe('config CLI commands', () => {
   });
 
   // -----------------------------------------------------------------------
-  // aiox config validate — error paths
+  // yard config validate — error paths
   // -----------------------------------------------------------------------
 
-  describe('aiox config validate — error paths', () => {
+  describe('yard config validate — error paths', () => {
     test('reports malformed YAML syntax error', async () => {
       const tmpDir = createTempProject({
         '.yard-core/framework-config.yaml': 'metadata:\n  name: "test\n  bad_indent: [unmatched',
@@ -334,10 +334,10 @@ describe('config CLI commands', () => {
   });
 
   // -----------------------------------------------------------------------
-  // aiox config init-local
+  // yard config init-local
   // -----------------------------------------------------------------------
 
-  describe('aiox config init-local', () => {
+  describe('yard config init-local', () => {
     test('creates local-config.yaml from template', async () => {
       const tmpDir = createTempProject({
         '.yard-core/local-config.yaml.template': 'ide:\n  selected:\n    - vscode\n',

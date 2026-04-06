@@ -212,7 +212,7 @@ project:
 
       const result = validateCoreConfigStructure(config);
       expect(result.valid).toBe(false);
-      expect(result.errors).toContain('Invalid project.type: INVALID_TYPE. Expected greenfield, brownfield, or existing_aiox');
+      expect(result.errors).toContain('Invalid project.type: INVALID_TYPE. Expected greenfield, brownfield, or existing_yard');
     });
 
     it('should validate IDE section if present', () => {

@@ -165,7 +165,7 @@ describe('generate-optimization-report.js', () => {
       }
     },
     comparison: {
-      aioxActual: {
+      yardActual: {
         overheadPercentOfTypicalSession: {
           'Story Development Cycle (SDC)': 13.9
         }

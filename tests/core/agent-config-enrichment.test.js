@@ -9,7 +9,7 @@
  * - Performance targets documented for all agents
  * - source-tree.md governance section contains all required files
  * - update-source-tree.md task file exists
- * - aiox-master has *update-source-tree command
+ * - yard-master has *update-source-tree command
  */
 
 const fs = require('fs');
@@ -59,10 +59,10 @@ describe('Story ACT-8: Agent Config Enrichment', () => {
 
     test('all expected agents have entries', () => {
       const expectedAgents = [
-        'aiox-master', 'dev', 'qa', 'devops', 'github-devops',
+        'yard-master', 'dev', 'qa', 'devops', 'github-devops',
         'architect', 'po', 'sm', 'data-engineer', 'db-sage',
         'pm', 'analyst', 'ux-design-expert', 'squad-creator',
-        'aiox-developer', 'aiox-orchestrator', 'default',
+        'yard-developer', 'yard-orchestrator', 'default',
       ];
 
       for (const agentId of expectedAgents) {
@@ -288,15 +288,15 @@ describe('Story ACT-8: Document Governance', () => {
     });
   });
 
-  describe('aiox-master Command', () => {
-    test('aiox-master.md contains *update-source-tree command', () => {
-      const content = readFile('.yard-core/development/agents/aiox-master.md');
+  describe('yard-master Command', () => {
+    test('yard-master.md contains *update-source-tree command', () => {
+      const content = readFile('.yard-core/development/agents/yard-master.md');
       expect(content).toContain('update-source-tree');
       expect(content).toContain('Validate data file governance');
     });
 
-    test('aiox-master dependencies include update-source-tree.md', () => {
-      const content = readFile('.yard-core/development/agents/aiox-master.md');
+    test('yard-master dependencies include update-source-tree.md', () => {
+      const content = readFile('.yard-core/development/agents/yard-master.md');
       expect(content).toContain('update-source-tree.md');
     });
   });

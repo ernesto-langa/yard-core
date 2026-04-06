@@ -26,7 +26,7 @@ describe('Config Generator', () => {
   let tempDir;
 
   beforeEach(() => {
-    tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-configgen-test-'));
+    tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-configgen-test-'));
   });
 
   afterEach(() => {

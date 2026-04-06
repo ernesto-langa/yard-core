@@ -14,7 +14,7 @@ NC='\033[0m' # No Color
 # Test metadata
 TEST_NAME="AC2: Apple Silicon Installation"
 TEST_SCRIPT="test-apple-silicon-installation.sh"
-LOG_FILE="/tmp/aiox-test-arm-$(date +%Y%m%d-%H%M%S).log"
+LOG_FILE="/tmp/yard-test-arm-$(date +%Y%m%d-%H%M%S).log"
 
 # Utility functions
 log_info() {
@@ -105,18 +105,18 @@ test_native_arm_binaries() {
 
 # Test 2: Clean installation
 test_clean_installation() {
-    log_info "Test 2: Clean AIOX installation on Apple Silicon..."
+    log_info "Test 2: Clean YARD installation on Apple Silicon..."
 
-    # Backup existing AIOX config if present
-    if [[ -d "$HOME/.aiox" ]]; then
-        log_warning "Existing .aiox directory found. Backing up..."
-        mv "$HOME/.aiox" "$HOME/.aiox.backup.$(date +%Y%m%d-%H%M%S)"
+    # Backup existing YARD config if present
+    if [[ -d "$HOME/.yard" ]]; then
+        log_warning "Existing .yard directory found. Backing up..."
+        mv "$HOME/.yard" "$HOME/.yard.backup.$(date +%Y%m%d-%H%M%S)"
     fi
 
     # Run installer
-    log_info "Running: npx @synkraai/aiox@latest init"
+    log_info "Running: npx @synkraai/yard@latest init"
 
-    if npx @synkraai/aiox@latest init; then
+    if npx @synkraai/yard@latest init; then
         pass_test "Installation completed without errors"
     else
         fail_test "Installation failed with exit code $?"
@@ -127,14 +127,14 @@ test_clean_installation() {
 test_mcp_health() {
     log_info "Test 3: Verifying MCP health checks on Apple Silicon..."
 
-    # Check if aiox command is available
-    if ! command -v aiox &> /dev/null; then
-        fail_test "aiox command not found in PATH"
+    # Check if yard command is available
+    if ! command -v yard &> /dev/null; then
+        fail_test "yard command not found in PATH"
     fi
 
     # Run health check
-    log_info "Running: aiox health"
-    HEALTH_OUTPUT=$(aiox health 2>&1)
+    log_info "Running: yard health"
+    HEALTH_OUTPUT=$(yard health 2>&1)
 
     echo "$HEALTH_OUTPUT" | tee -a "$LOG_FILE"
 
@@ -204,20 +204,20 @@ test_performance_metrics() {
 test_cli_commands() {
     log_info "Test 6: Testing CLI commands on Apple Silicon..."
 
-    # Test aiox --version
-    if aiox --version &> /dev/null; then
-        VERSION=$(aiox --version)
-        log_info "AIOX version: $VERSION"
-        pass_test "aiox --version works"
+    # Test yard --version
+    if yard --version &> /dev/null; then
+        VERSION=$(yard --version)
+        log_info "YARD version: $VERSION"
+        pass_test "yard --version works"
     else
-        fail_test "aiox --version failed"
+        fail_test "yard --version failed"
     fi
 
-    # Test aiox --help
-    if aiox --help &> /dev/null; then
-        pass_test "aiox --help works"
+    # Test yard --help
+    if yard --help &> /dev/null; then
+        pass_test "yard --help works"
     else
-        fail_test "aiox --help failed"
+        fail_test "yard --help failed"
     fi
 }
 

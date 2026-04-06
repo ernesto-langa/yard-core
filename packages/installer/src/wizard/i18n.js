@@ -67,7 +67,7 @@ const TRANSLATIONS = {
     continuing: 'Continuing installation...',
 
     // Pro Installation Wizard (pro-setup.js)
-    proWizardTitle: 'AIOX Pro Installation Wizard',
+    proWizardTitle: 'YARD Pro Installation Wizard',
     proWizardSubtitle: 'Premium Content & Features',
     proLicenseActivation: 'License Activation',
     proContentInstallation: 'Pro Content Installation',
@@ -96,7 +96,7 @@ const TRANSLATIONS = {
     proRunAgain: 'Run the installer again to retry.',
     proIncorrectPassword: 'Incorrect password. {remaining} attempt(s) remaining.',
     proMaxAttempts: 'Maximum login attempts reached.',
-    proForgotPassword: 'Forgot your password? Visit https://aiox-license-server.vercel.app/reset-password',
+    proForgotPassword: 'Forgot your password? Visit https://yard-license-server.vercel.app/reset-password',
     proContactSupportEmail: 'Or open an issue: https://github.com/ernesto-langa/yard-core/issues',
     proAuthFailed: 'Authentication failed: {message}',
     proCreateAccount: 'Create your Yard Pro account to get started.',
@@ -160,7 +160,7 @@ const TRANSLATIONS = {
     proFeaturesUnlocked: 'Features unlocked: {count}',
     proInstallComplete: 'Yard Pro installation complete!',
     proNeedHelp: 'Need help? Run: npx yard-pro recover',
-    proCISetEnv: 'CI mode: Set AIOX_PRO_EMAIL + AIOX_PRO_PASSWORD or AIOX_PRO_KEY environment variables.',
+    proCISetEnv: 'CI mode: Set YARD_PRO_EMAIL + YARD_PRO_PASSWORD or YARD_PRO_KEY environment variables.',
     proVerificationFailed: 'Verification failed: {message}',
     proPackageNotFound: 'Pro package not found after npm install. Check npm output.',
     proScaffolderNotFound: 'Pro scaffolder module not found.',
@@ -177,7 +177,7 @@ const TRANSLATIONS = {
     selectLanguage: 'Selecione o idioma:',
 
     // User Profile (Story 10.2 - Epic 10: User Profile System)
-    // PRD: AIOX v2.0 "Projeto Bob" - Seção 2.4 (exact copy)
+    // PRD: YARD v2.0 "Projeto Bob" - Seção 2.4 (exact copy)
     userProfileQuestion: 'Quando uma IA gera código para você, qual dessas opções te descreve melhor?',
     modoAssistido: 'Modo Assistido',
     modoAssistidoDesc: 'Não sei avaliar se o código está certo ou errado',
@@ -258,7 +258,7 @@ const TRANSLATIONS = {
     proRunAgain: 'Execute o instalador novamente para tentar.',
     proIncorrectPassword: 'Senha incorreta. {remaining} tentativa(s) restante(s).',
     proMaxAttempts: 'Número máximo de tentativas de login atingido.',
-    proForgotPassword: 'Esqueceu sua senha? Acesse https://aiox-license-server.vercel.app/reset-password',
+    proForgotPassword: 'Esqueceu sua senha? Acesse https://yard-license-server.vercel.app/reset-password',
     proContactSupportEmail: 'Ou abra uma issue: https://github.com/ernesto-langa/yard-core/issues',
     proAuthFailed: 'Falha na autenticação: {message}',
     proCreateAccount: 'Crie sua conta Yard Pro para começar.',
@@ -322,7 +322,7 @@ const TRANSLATIONS = {
     proFeaturesUnlocked: 'Recursos desbloqueados: {count}',
     proInstallComplete: 'Instalação do Yard Pro completa!',
     proNeedHelp: 'Precisa de ajuda? Execute: npx yard-pro recover',
-    proCISetEnv: 'Modo CI: Defina as variáveis AIOX_PRO_EMAIL + AIOX_PRO_PASSWORD ou AIOX_PRO_KEY.',
+    proCISetEnv: 'Modo CI: Defina as variáveis YARD_PRO_EMAIL + YARD_PRO_PASSWORD ou YARD_PRO_KEY.',
     proVerificationFailed: 'Verificação falhou: {message}',
     proPackageNotFound: 'Pacote Pro não encontrado após npm install. Verifique a saída do npm.',
     proScaffolderNotFound: 'Módulo scaffolder Pro não encontrado.',
@@ -415,7 +415,7 @@ const TRANSLATIONS = {
     proRunAgain: 'Ejecute el instalador nuevamente para reintentar.',
     proIncorrectPassword: 'Contraseña incorrecta. {remaining} intento(s) restante(s).',
     proMaxAttempts: 'Número máximo de intentos de inicio de sesión alcanzado.',
-    proForgotPassword: '¿Olvidó su contraseña? Visite https://aiox-license-server.vercel.app/reset-password',
+    proForgotPassword: '¿Olvidó su contraseña? Visite https://yard-license-server.vercel.app/reset-password',
     proContactSupportEmail: 'O abra un issue: https://github.com/ernesto-langa/yard-core/issues',
     proAuthFailed: 'Error de autenticación: {message}',
     proCreateAccount: 'Cree su cuenta Yard Pro para comenzar.',
@@ -479,7 +479,7 @@ const TRANSLATIONS = {
     proFeaturesUnlocked: 'Funciones desbloqueadas: {count}',
     proInstallComplete: '¡Instalación de Yard Pro completa!',
     proNeedHelp: '¿Necesita ayuda? Ejecute: npx yard-pro recover',
-    proCISetEnv: 'Modo CI: Configure las variables AIOX_PRO_EMAIL + AIOX_PRO_PASSWORD o AIOX_PRO_KEY.',
+    proCISetEnv: 'Modo CI: Configure las variables YARD_PRO_EMAIL + YARD_PRO_PASSWORD o YARD_PRO_KEY.',
     proVerificationFailed: 'Verificación fallida: {message}',
     proPackageNotFound: 'Paquete Pro no encontrado después de npm install. Verifique la salida de npm.',
     proScaffolderNotFound: 'Módulo scaffolder Pro no encontrado.',

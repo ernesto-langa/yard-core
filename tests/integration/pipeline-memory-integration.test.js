@@ -27,11 +27,11 @@ describe('UnifiedActivationPipeline Memory Integration (MIS-6)', () => {
   const testProjectRoot = path.join(__dirname, '..', 'fixtures', 'test-project-memory');
 
   // Store original env to restore after tests
-  const originalPipelineTimeout = process.env.AIOX_PIPELINE_TIMEOUT;
+  const originalPipelineTimeout = process.env.YARD_PIPELINE_TIMEOUT;
 
   beforeEach(() => {
     // Increase pipeline timeout so tests don't fail under heavy load (full suite)
-    process.env.AIOX_PIPELINE_TIMEOUT = '5000';
+    process.env.YARD_PIPELINE_TIMEOUT = '5000';
     pipeline = new UnifiedActivationPipeline(testProjectRoot);
     jest.clearAllMocks();
   });
@@ -39,9 +39,9 @@ describe('UnifiedActivationPipeline Memory Integration (MIS-6)', () => {
   afterEach(async () => {
     // Restore original pipeline timeout
     if (originalPipelineTimeout !== undefined) {
-      process.env.AIOX_PIPELINE_TIMEOUT = originalPipelineTimeout;
+      process.env.YARD_PIPELINE_TIMEOUT = originalPipelineTimeout;
     } else {
-      delete process.env.AIOX_PIPELINE_TIMEOUT;
+      delete process.env.YARD_PIPELINE_TIMEOUT;
     }
 
     // Cleanup test data

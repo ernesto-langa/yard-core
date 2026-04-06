@@ -23,7 +23,7 @@ describe('Documentation Generator', () => {
   let tempDir;
 
   beforeEach(() => {
-    tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-docgen-test-'));
+    tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-docgen-test-'));
   });
 
   afterEach(() => {
@@ -131,11 +131,11 @@ describe('Documentation Generator', () => {
 
     it('should handle multiple variables', () => {
       const template = '{{greeting}} {{name}}, welcome to {{place}}!';
-      const context = { greeting: 'Hello', name: 'User', place: 'AIOX' };
+      const context = { greeting: 'Hello', name: 'User', place: 'YARD' };
 
       const result = renderTemplate(template, context);
 
-      expect(result).toBe('Hello User, welcome to AIOX!');
+      expect(result).toBe('Hello User, welcome to YARD!');
     });
 
     it('should process if blocks with true condition', () => {

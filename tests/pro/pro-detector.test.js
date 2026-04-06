@@ -1,7 +1,7 @@
 /**
  * Unit tests for pro-detector.js
  *
- * @see Story PRO-5 - aiox-pro Repository Bootstrap (Task 3.2)
+ * @see Story PRO-5 - yard-pro Repository Bootstrap (Task 3.2)
  * @see ADR-PRO-001 - Repository Strategy
  */
 

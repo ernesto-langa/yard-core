@@ -75,7 +75,7 @@ async function backupFile(filePath) {
  * Prompt user for action when file exists
  * @param {string} filePath - Path to existing file
  * @param {Object} options - Options
- * @param {string} options.projectType - 'BROWNFIELD' | 'GREENFIELD' | 'EXISTING_AIOX'
+ * @param {string} options.projectType - 'BROWNFIELD' | 'GREENFIELD' | 'EXISTING_YARD'
  * @param {boolean} options.forceMerge - If true, auto-select merge without prompting
  * @param {boolean} options.noMerge - If true, don't offer merge option
  * @returns {Promise<string>} Action: 'merge', 'overwrite', 'skip', or 'backup'
@@ -83,7 +83,7 @@ async function backupFile(filePath) {
 async function promptFileExists(filePath, options = {}) {
   const { projectType, forceMerge, noMerge } = options;
   const canMerge = !noMerge && hasMergeStrategy(filePath);
-  const isBrownfield = projectType === 'BROWNFIELD' || projectType === 'EXISTING_AIOX';
+  const isBrownfield = projectType === 'BROWNFIELD' || projectType === 'EXISTING_YARD';
 
   // If force merge is set and merge is available, return merge directly
   if (forceMerge && canMerge) {
@@ -201,7 +201,7 @@ function generateTemplateVariables(wizardState) {
     projectName,
     projectType: wizardState.projectType || 'greenfield',
     timestamp,
-    aioxVersion: '2.1.0', // From package.json in real implementation
+    yardVersion: '2.1.0', // From package.json in real implementation
   };
 }
 
@@ -582,9 +582,9 @@ async function generateIDEConfigs(selectedIDEs, wizardState, options = {}) {
           spinner.start('Linking Gemini Yard extension...');
           const extensionResult = await linkGeminiExtension(projectRoot);
           if (extensionResult.status === 'linked') {
-            spinner.succeed('Gemini extension "aiox" linked and enabled');
+            spinner.succeed('Gemini extension "yard" linked and enabled');
           } else if (extensionResult.status === 'already-linked') {
-            spinner.succeed('Gemini extension "aiox" already linked');
+            spinner.succeed('Gemini extension "yard" already linked');
           } else {
             spinner.info(`Skipped Gemini extension linking (${extensionResult.reason})`);
           }
@@ -872,7 +872,7 @@ async function copyGeminiHooksFolder(projectRoot) {
 }
 
 /**
- * Create/merge .gemini/settings.json and register AIOX hooks as enabled.
+ * Create/merge .gemini/settings.json and register YARD hooks as enabled.
  * @param {string} projectRoot - Project root directory
  * @returns {Promise<string|null>} Path to settings file or null if skipped
  */
@@ -889,7 +889,7 @@ async function createGeminiSettings(projectRoot) {
       event: 'SessionStart',
       matcher: '*',
       hook: {
-        name: 'aiox-session-init',
+        name: 'yard-session-init',
         type: 'command',
         command: 'node ".gemini/hooks/session-start.js"',
         timeout: 5000,
@@ -900,7 +900,7 @@ async function createGeminiSettings(projectRoot) {
       event: 'BeforeAgent',
       matcher: '*',
       hook: {
-        name: 'aiox-context-inject',
+        name: 'yard-context-inject',
         type: 'command',
         command: 'node ".gemini/hooks/before-agent.js"',
         timeout: 3000,
@@ -911,7 +911,7 @@ async function createGeminiSettings(projectRoot) {
       event: 'BeforeTool',
       matcher: 'write_file|replace|shell|bash|execute',
       hook: {
-        name: 'aiox-security-check',
+        name: 'yard-security-check',
         type: 'command',
         command: 'node ".gemini/hooks/before-tool.js"',
         timeout: 2000,
@@ -922,7 +922,7 @@ async function createGeminiSettings(projectRoot) {
       event: 'AfterTool',
       matcher: '*',
       hook: {
-        name: 'aiox-audit-log',
+        name: 'yard-audit-log',
         type: 'command',
         command: 'node ".gemini/hooks/after-tool.js"',
         timeout: 2000,
@@ -933,7 +933,7 @@ async function createGeminiSettings(projectRoot) {
       event: 'SessionEnd',
       matcher: '*',
       hook: {
-        name: 'aiox-session-persist',
+        name: 'yard-session-persist',
         type: 'command',
         command: 'node ".gemini/hooks/session-end.js"',
         timeout: 5000,
@@ -982,7 +982,7 @@ async function createGeminiSettings(projectRoot) {
 }
 
 /**
- * Best-effort Gemini extension linking for AIOX project.
+ * Best-effort Gemini extension linking for YARD project.
  * Does not fail installation when auth/CLI is unavailable.
  * @param {string} projectRoot
  * @returns {Promise<{status: 'linked'|'already-linked'|'skipped', reason?: string}>}
@@ -1024,7 +1024,7 @@ async function linkGeminiExtension(projectRoot) {
 
   // When already installed, perform idempotent relink.
   if (output.includes('already installed')) {
-    const uninstall = spawnSync('gemini', ['extensions', 'uninstall', 'aiox'], {
+    const uninstall = spawnSync('gemini', ['extensions', 'uninstall', 'yard'], {
       cwd: projectRoot,
       encoding: 'utf8',
       timeout: 30000,
@@ -1123,7 +1123,7 @@ async function copyExtraCommandFiles(projectRoot, _sourceRoot) {
   ]);
 
   // Within YARD/, these sub-dirs are excluded (private or handled separately)
-  const AIOX_EXCLUDED = new Set([
+  const YARD_EXCLUDED = new Set([
     'YARD/agents',   // Already handled by copyAgentFiles()
     'YARD/stories',  // Project-specific story skills, not distributable
   ]);
@@ -1143,8 +1143,8 @@ async function copyExtraCommandFiles(projectRoot, _sourceRoot) {
         continue;
       }
 
-      // Within AIOX/, skip excluded sub-directories
-      if (AIOX_EXCLUDED.has(entryRelative) || [...AIOX_EXCLUDED].some(ex => entryRelative.startsWith(ex + '/'))) {
+      // Within YARD/, skip excluded sub-directories
+      if (YARD_EXCLUDED.has(entryRelative) || [...YARD_EXCLUDED].some(ex => entryRelative.startsWith(ex + '/'))) {
         continue;
       }
 

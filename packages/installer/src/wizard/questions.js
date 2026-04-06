@@ -1,7 +1,7 @@
 /**
  * Wizard Questions Definitions
  *
- * Modular question system for AIOX installation wizard
+ * Modular question system for YARD installation wizard
  * Questions from Stories 1.3-1.6 will be added here
  *
  * @module wizard/questions
@@ -28,7 +28,7 @@ function getLanguageQuestion() {
 /**
  * Get user profile question (Story 10.2 - Epic 10: User Profile System)
  * Asks user about their ability to detect AI-generated code errors
- * PRD: AIOX v2.0 "Projeto Bob" - Seção 2.4
+ * PRD: YARD v2.0 "Projeto Bob" - Seção 2.4
  *
  * @returns {Object} Inquirer question object
  */
@@ -161,7 +161,7 @@ function getMCPQuestions() {
         return true;
       },
     },
-    // Note: API keys are configured later via aiox-master or directly in .env
+    // Note: API keys are configured later via yard-master or directly in .env
   ];
 }
 
@@ -193,10 +193,10 @@ function getEnvironmentQuestions() {
  * - etl: ETL pipeline for knowledge base creation
  *
  * Note: This function is currently DISABLED. Squad selection is handled
- * directly in aiox-init.js using the squads/ directory.
+ * directly in yard-init.js using the squads/ directory.
  *
  * @returns {Object[]} Array of inquirer question objects
- * @deprecated Use squads/ directory directly in aiox-init.js
+ * @deprecated Use squads/ directory directly in yard-init.js
  */
 function getSquadQuestions() {
   return [
@@ -301,7 +301,7 @@ function buildQuestionSequence(_context = {}) {
   // TODO: Remove entirely in future version - each project has unique MCP needs
   // questions.push(...getMCPQuestions());
 
-  // Squad Selection - DISABLED: Handled directly in aiox-init.js
+  // Squad Selection - DISABLED: Handled directly in yard-init.js
   // TODO: Consider removing getSquadQuestions() entirely in future version
   // questions.push(...getSquadQuestions());
 

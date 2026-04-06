@@ -16,7 +16,7 @@ const {
   configureEnvironment,
 } = require('../../packages/installer/src/config/configure-environment');
 const { generateIDEConfigs } = require('../../packages/installer/src/wizard/ide-config-generator');
-const { installAioxCore, hasPackageJson } = require('../../packages/installer/src/installer/yard-core-installer');
+const { installYardCore, hasPackageJson } = require('../../packages/installer/src/installer/yard-core-installer');
 
 // Mock dependencies
 jest.mock('inquirer');
@@ -76,7 +76,7 @@ describe('Wizard Integration - Story 1.7', () => {
     });
 
     // Mock Yard core installer
-    installAioxCore.mockResolvedValue({
+    installYardCore.mockResolvedValue({
       success: true,
       installedFiles: ['agents/dev.md', 'tasks/create-story.yaml'],
       installedFolders: ['agents', 'tasks', 'workflows', 'templates'],
@@ -122,13 +122,13 @@ describe('Wizard Integration - Story 1.7', () => {
       await runWizard();
 
       // Verify Yard core was installed
-      expect(installAioxCore).toHaveBeenCalled();
+      expect(installYardCore).toHaveBeenCalled();
 
       // Verify order: Yard core before IDE configs
-      const aioxCoreCallOrder = installAioxCore.mock.invocationCallOrder[0];
+      const yardCoreCallOrder = installYardCore.mock.invocationCallOrder[0];
       const ideConfigCallOrder = generateIDEConfigs.mock.invocationCallOrder[0];
 
-      expect(aioxCoreCallOrder).toBeLessThan(ideConfigCallOrder);
+      expect(yardCoreCallOrder).toBeLessThan(ideConfigCallOrder);
     });
 
     it('should install dependencies after env configuration', async () => {
@@ -424,7 +424,7 @@ describe('Wizard Integration - Story 1.7', () => {
       expect(answers.envConfigured).toBeDefined(); // Story 1.6
       expect(answers.packageManager).toBeDefined(); // Story 1.7 (auto-detected)
       expect(answers.depsInstalled).toBeDefined(); // Story 1.7
-      expect(answers.aioxCoreInstalled).toBeDefined(); // Story 1.4 - Yard core
+      expect(answers.yardCoreInstalled).toBeDefined(); // Story 1.4 - Yard core
     });
 
     it('should handle environment config failure gracefully', async () => {
@@ -451,11 +451,11 @@ describe('Wizard Integration - Story 1.7', () => {
     });
 
     it('should handle Yard core installation failure gracefully', async () => {
-      installAioxCore.mockRejectedValue(new Error('Yard core installation failed'));
+      installYardCore.mockRejectedValue(new Error('Yard core installation failed'));
 
       const answers = await runWizard();
 
-      expect(answers.aioxCoreInstalled).toBe(false);
+      expect(answers.yardCoreInstalled).toBe(false);
       // Should still proceed to other steps
       expect(configureEnvironment).toHaveBeenCalled();
     });

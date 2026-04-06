@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AIOX Recovery Tracker
+ * YARD Recovery Tracker
  *
  * Story: 5.1 - Attempt Tracker
  * Epic: Epic 5 - Recovery System
@@ -744,7 +744,7 @@ async function main() {
 
   if (args.length < 1 || args.includes('--help') || args.includes('-h')) {
     console.log(`
-${chalk.bold('Recovery Tracker')} - AIOX Attempt Tracking System (Story 5.1)
+${chalk.bold('Recovery Tracker')} - YARD Attempt Tracking System (Story 5.1)
 
 ${chalk.cyan('Usage:')}
   node recovery-tracker.js <command> <story-id> <subtask-id> [options]

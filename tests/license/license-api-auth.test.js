@@ -224,7 +224,7 @@ describe('license-api auth methods', () => {
           const data = JSON.parse(body);
           expect(data.accessToken).toBe('valid-session');
           expect(data.machineId).toBeTruthy();
-          expect(data.aioxCoreVersion).toBeTruthy();
+          expect(data.yardCoreVersion).toBeTruthy();
 
           res.writeHead(200, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify(mockActivation));

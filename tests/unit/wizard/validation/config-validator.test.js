@@ -23,7 +23,7 @@ describeIntegration('Config Validator', () => {
       fs.existsSync.mockReturnValue(true);
       fs.readFileSync.mockImplementation((path) => {
         if (path === '.env') {
-          return 'NODE_ENV=development\nAPP_NAME=AIOX\nAPI_KEY=test123\n';
+          return 'NODE_ENV=development\nAPP_NAME=YARD\nAPI_KEY=test123\n';
         }
         if (path === '.gitignore') {
           return '.env\nnode_modules\n.env.local\n*.key\n*.pem\n.yard/install-log.txt\n';

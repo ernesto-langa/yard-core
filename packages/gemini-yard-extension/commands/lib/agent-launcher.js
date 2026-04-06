@@ -31,13 +31,13 @@ function listAvailableAgents(projectRoot = process.cwd()) {
 }
 
 function commandNameForAgent(agentId) {
-  const base = (agentId || '').replace(/^aiox-/, '').replace(/^yard-/, '');
+  const base = (agentId || '').replace(/^yard-/, '').replace(/^yard-/, '');
   return `/yard-${base}`;
 }
 
 function hasAgent(projectRoot, agentId) {
   const canonical = path.join(projectRoot, '.yard-core', 'development', 'agents', `${agentId}.md`);
-  const gemini = path.join(projectRoot, '.gemini', 'rules', 'AIOX', 'agents', `${agentId}.md`);
+  const gemini = path.join(projectRoot, '.gemini', 'rules', 'YARD', 'agents', `${agentId}.md`);
   return fs.existsSync(canonical) || fs.existsSync(gemini);
 }
 
@@ -63,7 +63,7 @@ function renderGreeting(projectRoot, agentId) {
 function buildActivationPrompt(agentId) {
   return [
     `Ative o agente ${agentId} usando .yard-core/development/agents/${agentId}.md`,
-    `(fallback: .gemini/rules/AIOX/agents/${agentId}.md),`,
+    `(fallback: .gemini/rules/YARD/agents/${agentId}.md),`,
     `renderize o greeting via node .yard-core/development/scripts/generate-greeting.js ${agentId}`,
     'e mantenha a persona ate *exit.',
   ].join(' ');
@@ -91,7 +91,7 @@ function runAgentLauncher(agentId, projectRoot = process.cwd()) {
   const activationPrompt = buildActivationPrompt(agentId);
   const greeting = renderGreeting(projectRoot, agentId);
 
-  console.log(`${info.icon} AIOX Agent Selected: ${agentId}`);
+  console.log(`${info.icon} YARD Agent Selected: ${agentId}`);
   console.log(`Role: ${info.role}`);
   console.log('');
   console.log('Activation Prompt (copy and send as your next message):');
@@ -108,11 +108,11 @@ function runAgentLauncher(agentId, projectRoot = process.cwd()) {
 function runAgentMenu(projectRoot = process.cwd()) {
   const agents = listAvailableAgents(projectRoot);
 
-  console.log('🤖 AIOX Quick Agent Menu (Gemini)');
+  console.log('🤖 YARD Quick Agent Menu (Gemini)');
   console.log('');
 
   if (agents.length === 0) {
-    console.log('No AIOX agents found. Run: npm run sync:ide:gemini');
+    console.log('No YARD agents found. Run: npm run sync:ide:gemini');
     return 1;
   }
 
@@ -121,7 +121,7 @@ function runAgentMenu(projectRoot = process.cwd()) {
     console.log(`${info.icon} ${commandNameForAgent(id)}  (${info.role})`);
   }
 
-  console.log('\nTip: run /aiox-<agent-id> to prepare activation prompt quickly.');
+  console.log('\nTip: run /yard-<agent-id> to prepare activation prompt quickly.');
   return 0;
 }
 

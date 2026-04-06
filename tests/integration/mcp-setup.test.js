@@ -54,7 +54,7 @@ describe('MCP Setup Integration', () => {
 
       expect(osDetector.detectOS).toBeDefined();
       expect(osDetector.isWindows).toBeDefined();
-      expect(osDetector.getGlobalAioxDir).toBeDefined();
+      expect(osDetector.getGlobalYardDir).toBeDefined();
       expect(osDetector.getGlobalMcpDir).toBeDefined();
     });
 
@@ -169,7 +169,7 @@ describe('MCP Setup Integration', () => {
 
   describe('Path Generation', () => {
     const {
-      getGlobalAioxDir,
+      getGlobalYardDir,
       getGlobalMcpDir,
       getGlobalConfigPath,
       getServersDir,
@@ -177,11 +177,11 @@ describe('MCP Setup Integration', () => {
       getCredentialsDir,
     } = require('../../.yard-core/core/mcp/os-detector');
 
-    it('should generate correct global AIOX directory path', () => {
-      const aioxDir = getGlobalAioxDir();
+    it('should generate correct global YARD directory path', () => {
+      const yardDir = getGlobalYardDir();
 
-      expect(aioxDir).toContain('.yard');
-      expect(path.isAbsolute(aioxDir)).toBe(true);
+      expect(yardDir).toContain('.yard');
+      expect(path.isAbsolute(yardDir)).toBe(true);
     });
 
     it('should generate correct MCP directory path', () => {

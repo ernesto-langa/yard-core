@@ -11,7 +11,7 @@ describe('WorkflowOrchestrator execution profile propagation', () => {
   let workflowPath;
 
   beforeEach(async () => {
-    tempDir = await fs.mkdtemp(path.join(os.tmpdir(), 'aiox-workflow-profile-'));
+    tempDir = await fs.mkdtemp(path.join(os.tmpdir(), 'yard-workflow-profile-'));
     workflowPath = path.join(tempDir, 'workflow.yaml');
 
     await fs.writeFile(

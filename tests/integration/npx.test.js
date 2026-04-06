@@ -35,10 +35,10 @@ describeIntegration('npx Execution', () => {
       expect(packageJson.files).toContain('bin/');
       expect(packageJson.files).toContain('index.js');
       // Note: .yard-core/ should be included if it exists
-      const hasAioxCore = packageJson.files.some(f => 
+      const hasYardCore = packageJson.files.some(f => 
         f === '.yard-core/' || f === 'yard-core/',
       );
-      expect(hasAioxCore).toBe(true);
+      expect(hasYardCore).toBe(true);
     });
 
     it('should have Node.js engine requirement >= 18', () => {
@@ -51,7 +51,7 @@ describeIntegration('npx Execution', () => {
   });
 
   describeIntegration('CLI Execution', () => {
-    it('should execute aiox command with --version', (done) => {
+    it('should execute yard command with --version', (done) => {
       const cliPath = path.join(__dirname, '../../bin/yard.js');
       const child = spawn('node', [cliPath, '--version']);
 
@@ -67,7 +67,7 @@ describeIntegration('npx Execution', () => {
       });
     }, timeout);
 
-    it('should execute aiox command with --help', (done) => {
+    it('should execute yard command with --help', (done) => {
       const cliPath = path.join(__dirname, '../../bin/yard.js');
       const child = spawn('node', [cliPath, '--help']);
 
@@ -84,7 +84,7 @@ describeIntegration('npx Execution', () => {
       });
     }, timeout);
 
-    it('should execute aiox info command', (done) => {
+    it('should execute yard info command', (done) => {
       const cliPath = path.join(__dirname, '../../bin/yard.js');
       const child = spawn('node', [cliPath, 'info']);
 
@@ -127,13 +127,13 @@ describeIntegration('npx Execution', () => {
       expect(indexContent).toContain('init'); // Exported in module.exports
     });
 
-    it('should maintain AIOX class export in source', () => {
+    it('should maintain YARD class export in source', () => {
       const indexPath = path.join(__dirname, '../../index.js');
       const indexContent = fs.readFileSync(indexPath, 'utf8');
 
-      // Verify AIOX class exists in exports
-      expect(indexContent).toContain('AIOX');
-      expect(indexContent).toContain('class AIOX');
+      // Verify YARD class exists in exports
+      expect(indexContent).toContain('YARD');
+      expect(indexContent).toContain('class YARD');
     });
 
     it('should export core modules in source', () => {

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * AIOX Asset Inventory Generator
- * Story 2.1: Creates comprehensive inventory of all AIOX assets
+ * YARD Asset Inventory Generator
+ * Story 2.1: Creates comprehensive inventory of all YARD assets
  *
  * Usage:
  *   node asset-inventory.js [--verbose] [--json] [--output path]
@@ -489,7 +489,7 @@ function formatConsoleOutput(report, verbose = false) {
 
   lines.push('');
   lines.push('═══════════════════════════════════════════════════════════');
-  lines.push('  AIOX Asset Inventory');
+  lines.push('  YARD Asset Inventory');
   lines.push(`  Generated: ${report.generated}`);
   lines.push('═══════════════════════════════════════════════════════════');
   lines.push('');
@@ -552,7 +552,7 @@ async function main() {
 
   if (args.includes('--help')) {
     console.log(`
-AIOX Asset Inventory Generator
+YARD Asset Inventory Generator
 
 Usage:
   node asset-inventory.js [options]

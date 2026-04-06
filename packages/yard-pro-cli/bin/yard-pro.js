@@ -49,32 +49,32 @@ function isProInstalled() {
   }
 }
 
-function findAioxCli() {
+function findYardCli() {
   // Check local node_modules first
-  const localBin = path.join(process.cwd(), 'node_modules', '.bin', 'aiox');
+  const localBin = path.join(process.cwd(), 'node_modules', '.bin', 'yard');
   if (fs.existsSync(localBin) || fs.existsSync(localBin + '.cmd')) {
     return 'npx yard';
   }
 
   // Check global
   try {
-    execSync('aiox --version', { stdio: 'pipe' });
-    return 'aiox';
+    execSync('yard --version', { stdio: 'pipe' });
+    return 'yard';
   } catch {
     return null;
   }
 }
 
-function delegateToAiox(subcommand) {
-  const aiox = findAioxCli();
-  if (!aiox) {
+function delegateToYard(subcommand) {
+  const yard = findYardCli();
+  if (!yard) {
     console.error('yard-core CLI not found.');
     console.error('Install it first: npm install yard-core');
     process.exit(1);
   }
 
   const spawnArgs = ['pro', subcommand, ...args.slice(1)];
-  const result = spawnSync(aiox, spawnArgs, { stdio: 'inherit' });
+  const result = spawnSync(yard, spawnArgs, { stdio: 'inherit' });
   process.exit(result.status ?? 0);
 }
 
@@ -223,7 +223,7 @@ switch (command) {
       console.error('Run first: npx yard-pro install\n');
       process.exit(1);
     }
-    delegateToAiox(command);
+    delegateToYard(command);
     break;
 
   default:

@@ -258,7 +258,7 @@ class BranchManager {
     const protectionFile = path.join(
       this.git.rootPath,
       '.git',
-      'aiox-branch-protection.json',
+      'yard-branch-protection.json',
     );
 
     try {

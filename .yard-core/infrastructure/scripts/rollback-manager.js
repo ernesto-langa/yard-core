@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AIOX Rollback Manager
+ * YARD Rollback Manager
  *
  * Story: 5.4 - Rollback Manager
  * Epic: Epic 5 - Recovery & Resilience
@@ -500,7 +500,7 @@ async function main() {
 
   if (args.length < 1 || args.includes('--help') || args.includes('-h')) {
     console.log(`
-Rollback Manager - AIOX Recovery System (Story 5.4)
+Rollback Manager - YARD Recovery System (Story 5.4)
 
 Usage:
   node rollback-manager.js <command> <story-id> [subtask-id] [options]

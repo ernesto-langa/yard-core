@@ -155,9 +155,9 @@ function validateCoreConfigStructure(config) {
       errors.push('Missing project.type');
     } else {
       // Accept both lowercase and uppercase project types
-      const validTypes = ['GREENFIELD', 'BROWNFIELD', 'EXISTING_AIOX', 'greenfield', 'brownfield', 'existing_aiox'];
+      const validTypes = ['GREENFIELD', 'BROWNFIELD', 'EXISTING_YARD', 'greenfield', 'brownfield', 'existing_yard'];
       if (!validTypes.includes(config.project.type)) {
-        errors.push(`Invalid project.type: ${config.project.type}. Expected greenfield, brownfield, or existing_aiox`);
+        errors.push(`Invalid project.type: ${config.project.type}. Expected greenfield, brownfield, or existing_yard`);
       }
     }
   }

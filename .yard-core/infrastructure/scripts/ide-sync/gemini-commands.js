@@ -3,7 +3,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 
-const FALLBACK_DESCRIPTION = 'Agente especializado AIOX';
+const FALLBACK_DESCRIPTION = 'Agente especializado YARD';
 const MAX_DESCRIPTION_CONTEXT = 120;
 
 const MENU_ORDER = [
@@ -22,8 +22,8 @@ const MENU_ORDER = [
 ];
 
 function commandSlugForAgent(agentId) {
-  if (agentId.startsWith('aiox-')) {
-    return agentId.replace(/^aiox-/, '');
+  if (agentId.startsWith('yard-')) {
+    return agentId.replace(/^yard-/, '');
   }
   if (agentId.startsWith('yard-')) {
     return agentId.replace(/^yard-/, '');
@@ -76,7 +76,7 @@ function buildAgentDescription(agent) {
   if (whenToUseSummary) {
     return whenToUseSummary;
   }
-  return `Ativar agente AIOX ${agent.id}`;
+  return `Ativar agente YARD ${agent.id}`;
 }
 
 function buildAgentCommandPrompt(agentId) {
@@ -113,7 +113,7 @@ function buildAgentCommandFile(agentId, description = FALLBACK_DESCRIPTION) {
 
 function buildMenuPrompt(commandFiles) {
   const lines = [
-    'Você está no launcher AIOX para Gemini.',
+    'Você está no launcher YARD para Gemini.',
     '',
     'Mostre a lista de agentes abaixo em formato numerado, explicando em 1 linha quando usar cada um:',
   ];
@@ -131,7 +131,7 @@ function buildMenuPrompt(commandFiles) {
 
 function buildMenuCommandFile(commandFiles) {
   const content = [
-    'description = "Menu rápido AIOX (lista agentes e orienta qual ativar)"',
+    'description = "Menu rápido YARD (lista agentes e orienta qual ativar)"',
     'prompt = """',
     buildMenuPrompt(commandFiles),
     '"""',

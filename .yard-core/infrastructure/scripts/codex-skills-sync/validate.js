@@ -102,7 +102,7 @@ function validateCodexSkills(options = {}) {
   const orphaned = [];
   if (resolved.strict) {
     const dirs = fs.readdirSync(resolved.skillsDir, { withFileTypes: true })
-      .filter(entry => entry.isDirectory() && entry.name.startsWith('aiox-'))
+      .filter(entry => entry.isDirectory() && entry.name.startsWith('yard-'))
       .map(entry => entry.name);
     for (const dir of dirs) {
       if (!expectedIds.has(dir)) {

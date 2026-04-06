@@ -63,7 +63,7 @@ async function configureEnvironment(options = {}) {
     const envPath = path.join(targetDir, '.env');
     const envExists = await fs.pathExists(envPath);
     let envAction = 'create'; // 'create', 'merge', 'overwrite', 'skip'
-    const isBrownfield = projectType === 'BROWNFIELD' || projectType === 'EXISTING_AIOX';
+    const isBrownfield = projectType === 'BROWNFIELD' || projectType === 'EXISTING_YARD';
     const canMerge = !noMerge && hasMergeStrategy(envPath);
 
     if (envExists) {
@@ -176,7 +176,7 @@ async function configureEnvironment(options = {}) {
       selectedIDEs,
       mcpServers,
       userProfile,
-      aioxVersion: '2.1.0',
+      yardVersion: '2.1.0',
     });
 
     // Validate YAML syntax
@@ -307,7 +307,7 @@ async function collectApiKeys() {
 }
 
 /**
- * Update .gitignore to include critical entries for AIOX projects
+ * Update .gitignore to include critical entries for YARD projects
  *
  * @param {string} targetDir - Target directory
  * @returns {Promise<void>}
@@ -327,7 +327,7 @@ async function updateGitignore(targetDir) {
     'Dependencies': ['node_modules/', 'node_modules'],
     'Build & Logs': ['dist/', 'build/', '*.log', 'logs/'],
     'IDE & OS': ['.DS_Store', 'Thumbs.db', '.idea/', '*.swp'],
-    'AIOX Local': ['.yard-core/local/', '.claude/settings.local.json', '.yard/install-log.txt'],
+    'YARD Local': ['.yard-core/local/', '.claude/settings.local.json', '.yard/install-log.txt'],
   };
 
   const lines = gitignoreContent.split('\n').map(line => line.trim());
@@ -354,7 +354,7 @@ async function updateGitignore(targetDir) {
     let newContent = gitignoreContent.trim();
 
     for (const { category, entries } of entriesToAdd) {
-      const section = `\n\n# ${category} (AIOX)\n${entries.join('\n')}`;
+      const section = `\n\n# ${category} (YARD)\n${entries.join('\n')}`;
       newContent += section;
     }
 

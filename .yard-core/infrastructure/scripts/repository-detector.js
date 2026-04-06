@@ -9,7 +9,7 @@ const path = require('path');
  * @property {string} repositoryUrl - Git remote URL
  * @property {string} mode - 'framework-development' or 'project-development'
  * @property {string} projectRoot - Current working directory
- * @property {string} frameworkLocation - Path to AIOX framework files
+ * @property {string} frameworkLocation - Path to YARD framework files
  * @property {string} packageName - Name from package.json
  * @property {string} packageVersion - Version from package.json
  */
@@ -38,7 +38,7 @@ function detectRepositoryContext() {
 
   // Detect if we're in yard-core repo itself
   const isFrameworkRepo =
-    packageJson.name === '@aiox/fullstack' ||
+    packageJson.name === '@yard/fullstack' ||
     packageJson.name === 'yard-core' ||
     remoteUrl.includes('yard-core');
 
@@ -55,7 +55,7 @@ function detectRepositoryContext() {
     mode: installConfig?.installation?.mode ||
           (isFrameworkRepo ? 'framework-development' : 'project-development'),
     projectRoot: cwd,
-    frameworkLocation: isFrameworkRepo ? cwd : path.join(cwd, 'node_modules/@aiox/fullstack'),
+    frameworkLocation: isFrameworkRepo ? cwd : path.join(cwd, 'node_modules/@yard/fullstack'),
     packageName: packageJson.name,
     packageVersion: packageJson.version,
   };

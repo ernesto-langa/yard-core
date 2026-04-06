@@ -153,7 +153,7 @@ describe('cli', () => {
       await run([]);
 
       const output = stdoutWriteSpy.mock.calls[0][0];
-      expect(output).toContain('AIOX Graph Dashboard');
+      expect(output).toContain('YARD Graph Dashboard');
       expect(output).toContain('Dependency Graph');
       expect(output).toContain('Provider Status');
       stdoutWriteSpy.mockRestore();

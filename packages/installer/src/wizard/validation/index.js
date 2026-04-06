@@ -1,5 +1,5 @@
 /**
- * AIOX Installation Validation Module
+ * YARD Installation Validation Module
  * Story 1.8: Installation Validation
  *
  * Validates installation and provides comprehensive reporting

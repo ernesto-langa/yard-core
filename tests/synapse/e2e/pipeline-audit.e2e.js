@@ -876,7 +876,7 @@ function generateReport(auditData, classifications) {
 
 ## Executive Summary
 
-This audit measures every stage of the AIOX activation pipeline (UAP + SYNAPSE + Session + Git Detection)
+This audit measures every stage of the YARD activation pipeline (UAP + SYNAPSE + Session + Git Detection)
 with sub-millisecond precision, classifying each feature as ESSENTIAL, USEFUL, COSMETIC, or OVERHEAD.
 
 `;

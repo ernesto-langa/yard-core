@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * AIOX Status Command for Gemini CLI Extension
+ * YARD Status Command for Gemini CLI Extension
  * Shows system status and provider information
  */
 
@@ -10,23 +10,23 @@ const path = require('path');
 async function main() {
   const projectDir = process.cwd();
 
-  console.log('🔷 AIOX Status\n');
+  console.log('🔷 YARD Status\n');
   console.log('━'.repeat(40));
 
-  // Check AIOX installation
-  const aioxCorePath = path.join(projectDir, '.yard-core');
-  if (fs.existsSync(aioxCorePath)) {
+  // Check YARD installation
+  const yardCorePath = path.join(projectDir, '.yard-core');
+  if (fs.existsSync(yardCorePath)) {
     console.log('✅ Yard core: Installed');
 
     // Count agents
-    const agentsPath = path.join(aioxCorePath, 'development', 'agents');
+    const agentsPath = path.join(yardCorePath, 'development', 'agents');
     if (fs.existsSync(agentsPath)) {
       const agents = fs.readdirSync(agentsPath).filter((f) => f.endsWith('.md'));
       console.log(`   Agents: ${agents.length}`);
     }
 
     // Count tasks
-    const tasksPath = path.join(aioxCorePath, 'development', 'tasks');
+    const tasksPath = path.join(yardCorePath, 'development', 'tasks');
     if (fs.existsSync(tasksPath)) {
       const tasks = fs.readdirSync(tasksPath).filter((f) => f.endsWith('.md'));
       console.log(`   Tasks: ${tasks.length}`);
@@ -56,7 +56,7 @@ async function main() {
   // Check config
   const configPath = path.join(process.cwd(), '.yard', 'ai-config.yaml');
   if (fs.existsSync(configPath)) {
-    console.log('\n⚙️  AI Config: .aiox-ai-config.yaml found');
+    console.log('\n⚙️  AI Config: .yard-ai-config.yaml found');
   }
 
   console.log('\n' + '━'.repeat(40));

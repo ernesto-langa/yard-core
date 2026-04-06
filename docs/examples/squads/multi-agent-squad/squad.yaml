@@ -5,11 +5,11 @@ name: multi-agent-squad
 version: 1.0.0
 description: Example squad with multiple collaborating agents
 
-author: AIOX Team <team@synkra.dev>
+author: YARD Team <team@synkra.dev>
 license: MIT
 slashPrefix: team
 
-aiox:
+yard:
   minVersion: "2.1.0"
   type: squad
 

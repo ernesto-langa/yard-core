@@ -81,7 +81,7 @@ describe('IDE Transformers', () => {
         ...sampleAgent,
         raw:
           sampleAgent.raw +
-          '\n---\n*AIOX Agent - Synced from .yard-core/development/agents/dev.md*',
+          '\n---\n*YARD Agent - Synced from .yard-core/development/agents/dev.md*',
       };
       const result = claudeCode.transform(agentWithFooter);
       const footerCount = (result.match(/Synced from/g) || []).length;

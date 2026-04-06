@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AIOX Installer Performance Benchmark
+ * YARD Installer Performance Benchmark
  * Story INS-2: Installer Performance Optimization
  *
  * Measures baseline performance metrics for the installer to track optimization progress.
@@ -34,7 +34,7 @@ process.argv.slice(2).forEach((arg, i, arr) => {
   if (arg === '--verbose' || arg === '-v') CONFIG.verbose = true;
   if (arg === '--help' || arg === '-h') {
     console.log(`
-AIOX Installer Performance Benchmark
+YARD Installer Performance Benchmark
 
 Usage: node performance-benchmark.js [options]
 
@@ -126,7 +126,7 @@ function log(msg) {
 /**
  * Get the .yard-core directory for benchmarking
  */
-function getAioxCoreDir() {
+function getYardCoreDir() {
   const projectRoot = path.resolve(__dirname, '../../../../');
   return path.join(projectRoot, '.yard-core');
 }
@@ -249,19 +249,19 @@ function collectFiles(dir, maxFiles = 1000) {
  * Run all benchmarks
  */
 async function runBenchmarks() {
-  const aioxCoreDir = getAioxCoreDir();
+  const yardCoreDir = getYardCoreDir();
 
-  if (!fs.existsSync(aioxCoreDir)) {
-    console.error(`Error: .yard-core directory not found at ${aioxCoreDir}`);
+  if (!fs.existsSync(yardCoreDir)) {
+    console.error(`Error: .yard-core directory not found at ${yardCoreDir}`);
     process.exit(1);
   }
 
   log(`Starting benchmark with ${CONFIG.runs} runs`);
-  log(`Using .yard-core at: ${aioxCoreDir}`);
+  log(`Using .yard-core at: ${yardCoreDir}`);
 
   // Collect files for benchmarking
   log('Collecting files...');
-  const allFiles = collectFiles(aioxCoreDir, CONFIG.testProjectSize);
+  const allFiles = collectFiles(yardCoreDir, CONFIG.testProjectSize);
   log(`Collected ${allFiles.length} files`);
 
   results.fileCount = allFiles.length;
@@ -271,7 +271,7 @@ async function runBenchmarks() {
     log(`\n--- Run ${run}/${CONFIG.runs} ---`);
 
     // Directory read benchmarks
-    const agentsDir = path.join(aioxCoreDir, 'development', 'agents');
+    const agentsDir = path.join(yardCoreDir, 'development', 'agents');
     if (fs.existsSync(agentsDir)) {
       log('Benchmarking directory read...');
       await benchmarkDirectoryRead(agentsDir);
@@ -290,7 +290,7 @@ async function runBenchmarks() {
     timers.totalInstallSimulation.begin();
 
     // Simulate full install: read dirs + hash files
-    const devDir = path.join(aioxCoreDir, 'development');
+    const devDir = path.join(yardCoreDir, 'development');
     if (fs.existsSync(devDir)) {
       const subdirs = fs.readdirSync(devDir, { withFileTypes: true });
       for (const subdir of subdirs) {
@@ -357,7 +357,7 @@ async function runBenchmarks() {
 
   // Print summary to stderr for visibility
   console.error('\n' + '='.repeat(60));
-  console.error('AIOX Installer Performance Baseline');
+  console.error('YARD Installer Performance Baseline');
   console.error('='.repeat(60));
   console.error(`Files analyzed: ${results.fileCount}`);
   console.error(`Runs: ${CONFIG.runs}`);

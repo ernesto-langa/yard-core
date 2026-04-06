@@ -2,7 +2,7 @@
  * Integration Test Suite: Utility Scripts Integration - Part 1
  * 
  * Story: 3.4 - Utility Script Integration Part 1
- * Purpose: Validate integration of 23 utility scripts into AIOX framework
+ * Purpose: Validate integration of 23 utility scripts into YARD framework
  * 
  * Tests:
  * 1. Load all 23 utilities successfully (no errors)

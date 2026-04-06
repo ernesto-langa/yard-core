@@ -5,11 +5,11 @@ name: squad-with-tools
 version: 1.0.0
 description: Example squad showing how to integrate custom tools
 
-author: AIOX Team <team@synkra.dev>
+author: YARD Team <team@synkra.dev>
 license: MIT
 slashPrefix: analyze
 
-aiox:
+yard:
   minVersion: "2.1.0"
   type: squad
 

@@ -89,8 +89,8 @@ function loadConfig(projectRoot) {
       },
     },
     redirects: {
-      'aiox-developer': 'yard-master',
-      'aiox-orchestrator': 'yard-master',
+      'yard-developer': 'yard-master',
+      'yard-orchestrator': 'yard-master',
       'db-sage': 'data-engineer',
       'github-devops': 'devops',
     },
@@ -467,7 +467,7 @@ function parseArgs() {
  */
 function showHelp() {
   console.log(`
-${colors.bright}IDE Sync${colors.reset} - Sync AIOX agents to IDE command files
+${colors.bright}IDE Sync${colors.reset} - Sync YARD agents to IDE command files
 
 ${colors.bright}Usage:${colors.reset}
   node ide-sync/index.js <command> [options]

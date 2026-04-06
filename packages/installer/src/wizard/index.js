@@ -1,5 +1,5 @@
 /**
- * AIOX Interactive Wizard - Main Entry Point
+ * YARD Interactive Wizard - Main Entry Point
  *
  * Story 1.2: Interactive Wizard Foundation
  * Provides core wizard functionality with visual feedback and navigation
@@ -31,7 +31,7 @@ const {
 } = require('../installer/dependency-installer');
 const { commandSync, commandValidate } = require('../../../../.yard-core/infrastructure/scripts/ide-sync/index');
 const {
-  installAioxCore,
+  installYardCore,
   hasPackageJson,
 } = require('../installer/yard-core-installer');
 const {
@@ -247,7 +247,7 @@ async function runWizard(options = {}) {
     // Setup graceful cancellation
     setupCancellationHandler();
 
-    // Show welcome message with AIOX branding
+    // Show welcome message with YARD branding
     if (!options.quiet) {
       showWelcome();
     }
@@ -331,33 +331,33 @@ async function runWizard(options = {}) {
 
     // Story 1.4: Install Yard core framework (agents, tasks, workflows, templates)
     console.log('\n📦 Installing Yard core framework...');
-    let aioxCoreResult = null;
+    let yardCoreResult = null;
     try {
-      aioxCoreResult = await installAioxCore({
+      yardCoreResult = await installYardCore({
         targetDir: process.cwd(),
         onProgress: (_status) => {
           // Silent progress - spinner handles feedback
         },
       });
 
-      if (aioxCoreResult.success) {
-        console.log(`✅ Yard core installed (${aioxCoreResult.installedFolders.length} folders)`);
+      if (yardCoreResult.success) {
+        console.log(`✅ Yard core installed (${yardCoreResult.installedFolders.length} folders)`);
         console.log(
-          `   - Agents: ${aioxCoreResult.installedFolders.includes('agents') ? '✓' : '⨉'}`,
+          `   - Agents: ${yardCoreResult.installedFolders.includes('agents') ? '✓' : '⨉'}`,
         );
-        console.log(`   - Tasks: ${aioxCoreResult.installedFolders.includes('tasks') ? '✓' : '⨉'}`);
+        console.log(`   - Tasks: ${yardCoreResult.installedFolders.includes('tasks') ? '✓' : '⨉'}`);
         console.log(
-          `   - Workflows: ${aioxCoreResult.installedFolders.includes('workflows') ? '✓' : '⨉'}`,
+          `   - Workflows: ${yardCoreResult.installedFolders.includes('workflows') ? '✓' : '⨉'}`,
         );
         console.log(
-          `   - Templates: ${aioxCoreResult.installedFolders.includes('templates') ? '✓' : '⨉'}`,
+          `   - Templates: ${yardCoreResult.installedFolders.includes('templates') ? '✓' : '⨉'}`,
         );
       }
-      answers.aioxCoreInstalled = true;
-      answers.aioxCoreResult = aioxCoreResult;
+      answers.yardCoreInstalled = true;
+      answers.yardCoreResult = yardCoreResult;
     } catch (error) {
       console.error('\n⚠️  Yard core installation failed:', error.message);
-      answers.aioxCoreInstalled = false;
+      answers.yardCoreInstalled = false;
     }
 
     // Install Tech Preset if selected
@@ -502,7 +502,7 @@ async function runWizard(options = {}) {
       answers.settingsGenerated = true;
       answers.settingsDenyCount = denyCount;
     } catch (error) {
-      console.warn(`⚠️  settings.json generation failed: ${error.message} — run 'aiox doctor --fix' post-install`);
+      console.warn(`⚠️  settings.json generation failed: ${error.message} — run 'yard doctor --fix' post-install`);
       answers.settingsGenerated = false;
     }
 
@@ -560,10 +560,10 @@ async function runWizard(options = {}) {
         console.log = _origLog;
       }
       if (answers.ideSyncValidation === 'drift') {
-        console.warn('⚠️  IDE sync validation: drift detected — run \'aiox doctor --fix\' post-install');
+        console.warn('⚠️  IDE sync validation: drift detected — run \'yard doctor --fix\' post-install');
       }
     } catch (syncError) {
-      console.warn(`⚠️  IDE sync failed: ${syncError.message} — run 'aiox doctor --fix' post-install`);
+      console.warn(`⚠️  IDE sync failed: ${syncError.message} — run 'yard doctor --fix' post-install`);
       answers.ideSyncStatus = 'failed';
       answers.ideSyncValidation = 'skipped';
     } finally {
@@ -579,15 +579,15 @@ async function runWizard(options = {}) {
       const registryScript = path.join(process.cwd(), '.yard-core', 'development', 'scripts', 'populate-entity-registry.js');
       if (fse.existsSync(registryScript)) {
         // INS-4.12 AC3: Guard — skip bootstrap if .yard-core deps are not installed
-        const aioxCoreNodeModules = path.join(process.cwd(), '.yard-core', 'node_modules');
-        if (!fse.existsSync(aioxCoreNodeModules)) {
+        const yardCoreNodeModules = path.join(process.cwd(), '.yard-core', 'node_modules');
+        if (!fse.existsSync(yardCoreNodeModules)) {
           console.warn('⚠️  .yard-core/node_modules/ not found — skipping entity registry bootstrap');
           console.warn('   Run: cd .yard-core && npm install --production');
           answers.entityRegistryStatus = 'skipped-no-deps';
         } else {
         // INS-4.12 AC2: Set NODE_PATH so spawned scripts resolve deps from .yard-core/node_modules/
           const parentNodeModules = path.join(process.cwd(), 'node_modules');
-          const nodePath = [aioxCoreNodeModules, parentNodeModules].join(path.delimiter);
+          const nodePath = [yardCoreNodeModules, parentNodeModules].join(path.delimiter);
           const startMs = Date.now();
           execSync(`node "${registryScript}"`, {
             cwd: process.cwd(),
@@ -617,7 +617,7 @@ async function runWizard(options = {}) {
         answers.entityRegistryStatus = 'skipped';
       }
     } catch (error) {
-      console.warn(`⚠️  Entity registry bootstrap failed: ${error.message} — run 'aiox doctor' post-install`);
+      console.warn(`⚠️  Entity registry bootstrap failed: ${error.message} — run 'yard doctor' post-install`);
       answers.entityRegistryStatus = 'failed';
     }
 
@@ -841,12 +841,12 @@ async function runWizard(options = {}) {
       try {
         const { runProWizard } = require('./pro-setup');
         const isCI = process.env.CI === 'true' || !process.stdout.isTTY;
-        const hasProKey = !!process.env.AIOX_PRO_KEY;
+        const hasProKey = !!process.env.YARD_PRO_KEY;
 
         const proOptions = { targetDir: process.cwd() };
 
         if (isCI && hasProKey) {
-          // CI mode: auto-run if AIOX_PRO_KEY is set
+          // CI mode: auto-run if YARD_PRO_KEY is set
           console.log('\n🔑 Pro license key detected, running Pro setup...');
           const proResult = await runProWizard({ ...proOptions, quiet: true });
           answers.proInstalled = proResult.success;

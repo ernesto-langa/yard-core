@@ -10,7 +10,7 @@ const {
 
 describe('validate-parity', () => {
   function createMockProjectRoot() {
-    const root = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-parity-'));
+    const root = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-parity-'));
     fs.mkdirSync(path.join(root, 'docs'), { recursive: true });
     fs.writeFileSync(
       path.join(root, 'docs', 'ide-integration.md'),
@@ -31,7 +31,7 @@ describe('validate-parity', () => {
 
   function buildMockContract() {
     return {
-      release: 'AIOX 4.0.4',
+      release: 'YARD 4.0.4',
       global_required_checks: ['paths'],
       ide_matrix: [
         { ide: 'claude-code', display_name: 'Claude Code', expected_status: 'Works', required_checks: ['claude-sync', 'claude-integration'] },
@@ -92,7 +92,7 @@ describe('validate-parity', () => {
   });
 
   it('fails when docs matrix claim diverges from contract', () => {
-    const projectRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-parity-mismatch-'));
+    const projectRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-parity-mismatch-'));
     fs.mkdirSync(path.join(projectRoot, 'docs'), { recursive: true });
     fs.writeFileSync(path.join(projectRoot, 'docs', 'ide-integration.md'), '| IDE/CLI | Overall Status |\n| --- | --- |\n| Codex CLI | Works |\n', 'utf8');
 
@@ -117,7 +117,7 @@ describe('validate-parity', () => {
   it('generates diff between contract versions', () => {
     const previous = buildMockContract();
     const current = buildMockContract();
-    current.release = 'AIOX 4.1.0';
+    current.release = 'YARD 4.1.0';
     current.global_required_checks = ['paths', 'codex-skills'];
     current.ide_matrix = current.ide_matrix.map((ide) => {
       if (ide.ide === 'codex') {
@@ -139,7 +139,7 @@ describe('validate-parity', () => {
     const projectRoot = createMockProjectRoot();
     const ok = { ok: true, errors: [], warnings: [] };
     const result = runParityValidation(
-      { projectRoot, diffPath: '.yard-core/infrastructure/contracts/compatibility/aiox-4.0.3.yaml' },
+      { projectRoot, diffPath: '.yard-core/infrastructure/contracts/compatibility/yard-4.0.3.yaml' },
       {
         runSyncValidate: () => ok,
         validateClaudeIntegration: () => ok,
@@ -148,9 +148,9 @@ describe('validate-parity', () => {
         validateCodexSkills: () => ok,
         validatePaths: () => ok,
         loadCompatibilityContract: (contractPath) => {
-          if (contractPath.endsWith('aiox-4.0.3.yaml')) {
+          if (contractPath.endsWith('yard-4.0.3.yaml')) {
             return {
-              release: 'AIOX 4.0.3',
+              release: 'YARD 4.0.3',
               global_required_checks: ['paths'],
               ide_matrix: [
                 { ide: 'codex', display_name: 'Codex CLI', expected_status: 'Experimental', required_checks: ['codex-sync'] },
@@ -164,8 +164,8 @@ describe('validate-parity', () => {
 
     expect(result.ok).toBe(true);
     expect(result.contractDiff).toBeDefined();
-    expect(result.contractDiff.from_release).toBe('AIOX 4.0.3');
-    expect(result.contractDiff.to_release).toBe('AIOX 4.0.4');
+    expect(result.contractDiff.from_release).toBe('YARD 4.0.3');
+    expect(result.contractDiff.to_release).toBe('YARD 4.0.4');
     expect(result.contractDiff.has_changes).toBe(true);
   });
 });

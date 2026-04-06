@@ -274,14 +274,14 @@ describe('FrameworkGovernor', () => {
     it('should register file via RegistryUpdater.onAgentTaskComplete', async () => {
       const result = await governor.postRegister(
         '.yard-core/development/tasks/test-task.md',
-        { type: 'task', purpose: 'Test task', agent: 'aiox-master' },
+        { type: 'task', purpose: 'Test task', agent: 'yard-master' },
       );
       expect(result.registered).toBeDefined();
       expect(result.filePath).toBe('.yard-core/development/tasks/test-task.md');
       expect(updater.onAgentTaskCompleteCalls.length).toBe(1);
 
       const call = updater.onAgentTaskCompleteCalls[0];
-      expect(call.task.agent).toBe('aiox-master');
+      expect(call.task.agent).toBe('yard-master');
       expect(call.artifacts).toContain('.yard-core/development/tasks/test-task.md');
     });
 
@@ -311,10 +311,10 @@ describe('FrameworkGovernor', () => {
       expect(result.error).toBeDefined();
     });
 
-    it('should default agent to aiox-master', async () => {
+    it('should default agent to yard-master', async () => {
       await governor.postRegister('file.md', {});
       const call = updater.onAgentTaskCompleteCalls[0];
-      expect(call.task.agent).toBe('aiox-master');
+      expect(call.task.agent).toBe('yard-master');
     });
   });
 

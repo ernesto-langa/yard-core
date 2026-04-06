@@ -31,15 +31,15 @@ const configLoader = require('../../tools/installer/lib/config-loader');
 
 describe('v2.1 Module Structure Tests', () => {
   describe('INS-01: Source Path Configuration', () => {
-    it('should point getAioxCorePath to .yard-core directory', () => {
-      const aioxCorePath = resourceLocator.getAioxCorePath();
-      expect(aioxCorePath).toContain('.yard-core');
-      expect(aioxCorePath).not.toMatch(/[^.]yard-core$/);
+    it('should point getYardCorePath to .yard-core directory', () => {
+      const yardCorePath = resourceLocator.getYardCorePath();
+      expect(yardCorePath).toContain('.yard-core');
+      expect(yardCorePath).not.toMatch(/[^.]yard-core$/);
     });
 
     it('should have .yard-core as source for config-loader', () => {
-      const aioxCorePath = configLoader.getAioxCorePath();
-      expect(aioxCorePath).toContain('.yard-core');
+      const yardCorePath = configLoader.getYardCorePath();
+      expect(yardCorePath).toContain('.yard-core');
     });
   });
 
@@ -99,25 +99,25 @@ describe('v2.1 Module Structure Tests', () => {
 
   describe('INS-05: Manifest Files Location', () => {
     it('should have manifests directory in .yard-core', async () => {
-      const manifestsPath = path.join(resourceLocator.getAioxCorePath(), 'manifests');
+      const manifestsPath = path.join(resourceLocator.getYardCorePath(), 'manifests');
       const exists = await fs.pathExists(manifestsPath);
       expect(exists).toBe(true);
     });
 
     it('should have agents.csv manifest', async () => {
-      const agentsCsvPath = path.join(resourceLocator.getAioxCorePath(), 'manifests', 'agents.csv');
+      const agentsCsvPath = path.join(resourceLocator.getYardCorePath(), 'manifests', 'agents.csv');
       const exists = await fs.pathExists(agentsCsvPath);
       expect(exists).toBe(true);
     });
 
     it('should have tasks.csv manifest', async () => {
-      const tasksCsvPath = path.join(resourceLocator.getAioxCorePath(), 'manifests', 'tasks.csv');
+      const tasksCsvPath = path.join(resourceLocator.getYardCorePath(), 'manifests', 'tasks.csv');
       const exists = await fs.pathExists(tasksCsvPath);
       expect(exists).toBe(true);
     });
 
     it('should have workers.csv manifest', async () => {
-      const workersCsvPath = path.join(resourceLocator.getAioxCorePath(), 'manifests', 'workers.csv');
+      const workersCsvPath = path.join(resourceLocator.getYardCorePath(), 'manifests', 'workers.csv');
       const exists = await fs.pathExists(workersCsvPath);
       expect(exists).toBe(true);
     });
@@ -125,37 +125,37 @@ describe('v2.1 Module Structure Tests', () => {
 
   describe('INS-06: Module Directory Structure Verification', () => {
     it('should have development module with agents subdirectory', async () => {
-      const developmentAgents = path.join(resourceLocator.getAioxCorePath(), 'development', 'agents');
+      const developmentAgents = path.join(resourceLocator.getYardCorePath(), 'development', 'agents');
       const exists = await fs.pathExists(developmentAgents);
       expect(exists).toBe(true);
     });
 
     it('should have development module with tasks subdirectory', async () => {
-      const developmentTasks = path.join(resourceLocator.getAioxCorePath(), 'development', 'tasks');
+      const developmentTasks = path.join(resourceLocator.getYardCorePath(), 'development', 'tasks');
       const exists = await fs.pathExists(developmentTasks);
       expect(exists).toBe(true);
     });
 
     it('should have product module with templates subdirectory', async () => {
-      const productTemplates = path.join(resourceLocator.getAioxCorePath(), 'product', 'templates');
+      const productTemplates = path.join(resourceLocator.getYardCorePath(), 'product', 'templates');
       const exists = await fs.pathExists(productTemplates);
       expect(exists).toBe(true);
     });
 
     it('should have product module with checklists subdirectory', async () => {
-      const productChecklists = path.join(resourceLocator.getAioxCorePath(), 'product', 'checklists');
+      const productChecklists = path.join(resourceLocator.getYardCorePath(), 'product', 'checklists');
       const exists = await fs.pathExists(productChecklists);
       expect(exists).toBe(true);
     });
 
     it('should have core module with utils subdirectory', async () => {
-      const coreUtils = path.join(resourceLocator.getAioxCorePath(), 'core', 'utils');
+      const coreUtils = path.join(resourceLocator.getYardCorePath(), 'core', 'utils');
       const exists = await fs.pathExists(coreUtils);
       expect(exists).toBe(true);
     });
 
     it('should have infrastructure module', async () => {
-      const infrastructure = path.join(resourceLocator.getAioxCorePath(), 'infrastructure');
+      const infrastructure = path.join(resourceLocator.getYardCorePath(), 'infrastructure');
       const exists = await fs.pathExists(infrastructure);
       expect(exists).toBe(true);
     });

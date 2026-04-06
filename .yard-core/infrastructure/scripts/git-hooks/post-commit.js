@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Git Post-Commit Hook - AIOX ProjectStatusLoader Cache Invalidation
+ * Git Post-Commit Hook - YARD ProjectStatusLoader Cache Invalidation
  *
  * Story ACT-3: Clears the project status cache after every commit
  * so that the next agent activation sees fresh data.
@@ -39,24 +39,24 @@ function findProjectRoot() {
 }
 
 /**
- * Clear all project-status cache files in the .aiox directory.
+ * Clear all project-status cache files in the .yard directory.
  * Handles both standard cache and worktree-specific cache files.
  */
 function clearProjectStatusCache() {
   const projectRoot = findProjectRoot();
-  const aioxDir = path.join(projectRoot, '.yard');
+  const yardDir = path.join(projectRoot, '.yard');
 
-  if (!fs.existsSync(aioxDir)) {
-    return; // No .aiox directory - nothing to clear
+  if (!fs.existsSync(yardDir)) {
+    return; // No .yard directory - nothing to clear
   }
 
   try {
-    const files = fs.readdirSync(aioxDir);
+    const files = fs.readdirSync(yardDir);
 
     for (const file of files) {
       // Match project-status.yaml and project-status-{hash}.yaml
       if (file.startsWith('project-status') && file.endsWith('.yaml')) {
-        const filePath = path.join(aioxDir, file);
+        const filePath = path.join(yardDir, file);
         try {
           fs.unlinkSync(filePath);
         } catch (err) {

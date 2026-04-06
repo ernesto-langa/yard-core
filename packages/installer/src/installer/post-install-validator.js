@@ -319,13 +319,13 @@ function validateManifestEntry(entry, index) {
 
 /**
  * Post-Installation Validator Class
- * Comprehensive validation of AIOX-Core installation with security hardening
+ * Comprehensive validation of YARD-Core installation with security hardening
  */
 class PostInstallValidator {
   /**
    * Create a new PostInstallValidator instance
    *
-   * @param {string} targetDir - Directory where AIOX was installed (project root)
+   * @param {string} targetDir - Directory where YARD was installed (project root)
    * @param {string} [sourceDir] - Source directory for repairs (optional)
    * @param {Object} [options] - Validation options
    * @param {boolean} [options.verifyHashes=true] - Whether to verify file hashes
@@ -337,8 +337,8 @@ class PostInstallValidator {
   constructor(targetDir, sourceDir = null, options = {}) {
     this.targetDir = path.resolve(targetDir);
     this.sourceDir = sourceDir ? path.resolve(sourceDir) : null;
-    this.aioxCoreTarget = path.join(this.targetDir, '.yard-core');
-    this.aioxCoreSource = this.sourceDir ? path.join(this.sourceDir, '.yard-core') : null;
+    this.yardCoreTarget = path.join(this.targetDir, '.yard-core');
+    this.yardCoreSource = this.sourceDir ? path.join(this.sourceDir, '.yard-core') : null;
 
     this.options = {
       verifyHashes: options.verifyHashes !== false,
@@ -373,7 +373,7 @@ class PostInstallValidator {
   _getRealTargetDir() {
     if (this._realTargetDirCache === null) {
       try {
-        this._realTargetDirCache = fs.realpathSync(this.aioxCoreTarget);
+        this._realTargetDirCache = fs.realpathSync(this.yardCoreTarget);
       } catch {
         // Will be handled by caller
         return null;
@@ -390,10 +390,10 @@ class PostInstallValidator {
    */
   async loadManifest() {
     // Determine manifest path
-    const sourceManifestPath = this.aioxCoreSource
-      ? path.join(this.aioxCoreSource, 'install-manifest.yaml')
+    const sourceManifestPath = this.yardCoreSource
+      ? path.join(this.yardCoreSource, 'install-manifest.yaml')
       : null;
-    const targetManifestPath = path.join(this.aioxCoreTarget, 'install-manifest.yaml');
+    const targetManifestPath = path.join(this.yardCoreTarget, 'install-manifest.yaml');
 
     let manifestPath = targetManifestPath;
 
@@ -601,7 +601,7 @@ class PostInstallValidator {
    */
   async validateFile(entry) {
     const relativePath = entry.path;
-    const absolutePath = path.join(this.aioxCoreTarget, relativePath);
+    const absolutePath = path.join(this.yardCoreTarget, relativePath);
     const category = categorizeFile(relativePath);
 
     const result = {
@@ -614,7 +614,7 @@ class PostInstallValidator {
     };
 
     // SECURITY [H1]: Validate path containment
-    if (!isPathContained(absolutePath, this.aioxCoreTarget)) {
+    if (!isPathContained(absolutePath, this.yardCoreTarget)) {
       this.log(`SECURITY: Path traversal blocked: ${relativePath}`);
       result.issue = {
         type: IssueType.INVALID_PATH,
@@ -642,7 +642,7 @@ class PostInstallValidator {
           details: `Expected at: ${absolutePath}`,
           category,
           remediation: this.sourceDir
-            ? "Run 'aiox validate --repair' to restore"
+            ? "Run 'yard validate --repair' to restore"
             : 'Re-run installation',
           relativePath,
         };
@@ -821,7 +821,7 @@ class PostInstallValidator {
             details: `Expected: ${entry.size} bytes, Got: ${actualSize} bytes`,
             category,
             remediation: this.sourceDir
-              ? "Run 'aiox validate --repair' to restore"
+              ? "Run 'yard validate --repair' to restore"
               : 'Re-run installation',
             relativePath,
           };
@@ -861,7 +861,7 @@ class PostInstallValidator {
             details: `Expected: ${entry.hash.substring(0, 24)}..., Got: ${actualHash.substring(0, 24)}...`,
             category,
             remediation: this.sourceDir
-              ? "Run 'aiox validate --repair' to restore"
+              ? "Run 'yard validate --repair' to restore"
               : 'Re-run installation',
             relativePath,
           };
@@ -961,7 +961,7 @@ class PostInstallValidator {
       }
     };
 
-    await scanDir(this.aioxCoreTarget, this.aioxCoreTarget);
+    await scanDir(this.yardCoreTarget, this.yardCoreTarget);
     return extraFiles;
   }
 
@@ -988,12 +988,12 @@ class PostInstallValidator {
     };
 
     // Check target directory
-    if (!fs.existsSync(this.aioxCoreTarget)) {
+    if (!fs.existsSync(this.yardCoreTarget)) {
       this.issues.push({
         type: IssueType.MISSING_FILE,
         severity: Severity.CRITICAL,
         message: 'Yard Core directory not found',
-        details: `Expected at: ${this.aioxCoreTarget}`,
+        details: `Expected at: ${this.yardCoreTarget}`,
         remediation: 'Run `npx yard-core install`',
         relativePath: null,
       });
@@ -1139,14 +1139,14 @@ class PostInstallValidator {
         recommendations.push('Consider re-running full installation.');
       } else {
         recommendations.push(
-          `${this.stats.missingFiles} file(s) missing. Run 'aiox validate --repair'.`,
+          `${this.stats.missingFiles} file(s) missing. Run 'yard validate --repair'.`,
         );
       }
     }
 
     if (this.stats.corruptedFiles > 0) {
       recommendations.push(
-        `${this.stats.corruptedFiles} file(s) corrupted. Run 'aiox validate --repair'.`,
+        `${this.stats.corruptedFiles} file(s) corrupted. Run 'yard validate --repair'.`,
       );
     }
 
@@ -1192,7 +1192,7 @@ class PostInstallValidator {
       };
     }
 
-    if (!this.sourceDir || !fs.existsSync(this.aioxCoreSource)) {
+    if (!this.sourceDir || !fs.existsSync(this.yardCoreSource)) {
       return {
         success: false,
         error: 'Source directory not available',
@@ -1232,19 +1232,19 @@ class PostInstallValidator {
         continue;
       }
 
-      const sourcePath = path.join(this.aioxCoreSource, relativePath);
-      const targetPath = path.join(this.aioxCoreTarget, relativePath);
+      const sourcePath = path.join(this.yardCoreSource, relativePath);
+      const targetPath = path.join(this.yardCoreTarget, relativePath);
 
       onProgress(i + 1, repairableIssues.length, relativePath);
 
       // SECURITY: Path containment for source
-      if (!isPathContained(sourcePath, this.aioxCoreSource)) {
+      if (!isPathContained(sourcePath, this.yardCoreSource)) {
         result.skipped.push({ path: relativePath, reason: 'Source path traversal blocked' });
         continue;
       }
 
       // SECURITY: Path containment for target
-      if (!isPathContained(targetPath, this.aioxCoreTarget)) {
+      if (!isPathContained(targetPath, this.yardCoreTarget)) {
         result.skipped.push({ path: relativePath, reason: 'Target path traversal blocked' });
         continue;
       }
@@ -1309,10 +1309,10 @@ class PostInstallValidator {
       try {
         const targetDir = path.dirname(targetPath);
 
-        // Walk each path component from aioxCoreTarget to targetDir
+        // Walk each path component from yardCoreTarget to targetDir
         // and verify none are symlinks
-        let currentPath = this.aioxCoreTarget;
-        const relativeParts = path.relative(this.aioxCoreTarget, targetDir).split(path.sep);
+        let currentPath = this.yardCoreTarget;
+        const relativeParts = path.relative(this.yardCoreTarget, targetDir).split(path.sep);
 
         for (const part of relativeParts) {
           if (!part || part === '.') continue;
@@ -1335,16 +1335,16 @@ class PostInstallValidator {
           }
         }
 
-        // Final realpath verification: ensure resolved target stays within resolved aioxCoreTarget
+        // Final realpath verification: ensure resolved target stays within resolved yardCoreTarget
         // This catches any symlinks that might have been missed or created during the check
         if (fs.existsSync(targetDir)) {
           const realTargetDir = fs.realpathSync(targetDir);
-          const realAioxCoreTarget = fs.realpathSync(this.aioxCoreTarget);
+          const realYardCoreTarget = fs.realpathSync(this.yardCoreTarget);
 
-          if (!isPathContained(realTargetDir, realAioxCoreTarget)) {
+          if (!isPathContained(realTargetDir, realYardCoreTarget)) {
             result.skipped.push({
               path: relativePath,
-              reason: `Realpath escapes target directory: ${realTargetDir} is outside ${realAioxCoreTarget}`,
+              reason: `Realpath escapes target directory: ${realTargetDir} is outside ${realYardCoreTarget}`,
             });
             continue;
           }

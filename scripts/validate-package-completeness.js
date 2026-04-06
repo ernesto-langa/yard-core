@@ -37,8 +37,8 @@ const REQUIRED_PATHS = [
   // Rules
   '.claude/rules/',
   // CLI binaries
-  'bin/aiox.js',
-  'bin/aiox-minimal.js',
+  'bin/yard.js',
+  'bin/yard-minimal.js',
   // Core framework
   '.yard-core/core-config.yaml',
   '.yard-core/constitution.md',
@@ -71,7 +71,7 @@ const REQUIRED_FILES_ENTRIES = [
 /**
  * Bin entries that must point to existing files.
  */
-const REQUIRED_BIN_ENTRIES = ['aiox', 'yard-core'];
+const REQUIRED_BIN_ENTRIES = ['yard', 'yard-core'];
 
 /**
  * Runtime dependencies that must be present.
@@ -276,7 +276,7 @@ function validateBinScripts() {
 
 function main() {
   log('='.repeat(60));
-  log('AIOX-Core Package Completeness Validation');
+  log('YARD-Core Package Completeness Validation');
   log('='.repeat(60));
 
   const pkg = loadPackageJson();

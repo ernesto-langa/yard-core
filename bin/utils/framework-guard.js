@@ -28,8 +28,8 @@ const FALLBACK_PROTECTED = [
   '.yard-core/development/workflows/**',
   '.yard-core/infrastructure/**',
   '.yard-core/constitution.md',
-  'bin/aiox.js',
-  'bin/aiox-init.js',
+  'bin/yard.js',
+  'bin/yard-init.js',
 ];
 
 const FALLBACK_EXCEPTIONS = [

@@ -21,7 +21,7 @@ const TROUBLESHOOTING_DATABASE = {
       '.env accidentally deleted',
     ],
     solutions: [
-      'Re-run wizard: npx @YardAI/aiox@latest init',
+      'Re-run wizard: npx @YardAI/yard@latest init',
       'Manually create .env from template: cp .env.example .env',
       'Check file permissions in project directory',
     ],
@@ -37,7 +37,7 @@ const TROUBLESHOOTING_DATABASE = {
       'File creation failed',
     ],
     solutions: [
-      'Re-run wizard: npx @YardAI/aiox@latest init',
+      'Re-run wizard: npx @YardAI/yard@latest init',
       'Check .yard-core directory exists',
       'Manually create from template',
     ],
@@ -251,7 +251,7 @@ async function offerTroubleshooting(errors) {
   // Offer support contact
   console.log('');
   console.log(chalk.bold('💬 Need Help?'));
-  console.log(chalk.dim('  - GitHub Issues: https://github.com/YardAI/aiox/issues'));
+  console.log(chalk.dim('  - GitHub Issues: https://github.com/YardAI/yard/issues'));
   console.log(chalk.dim('  - Documentation: https://docs.YardAI.com'));
   console.log('');
 }

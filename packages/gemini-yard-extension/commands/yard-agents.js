@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * AIOX Agents Command - List available agents
+ * YARD Agents Command - List available agents
  */
 
 const fs = require('fs');
@@ -23,7 +23,7 @@ async function main() {
   const projectDir = process.cwd();
   const agentsPath = path.join(projectDir, '.yard-core', 'development', 'agents');
 
-  console.log('🤖 AIOX Agents\n');
+  console.log('🤖 YARD Agents\n');
   console.log('━'.repeat(50));
 
   if (!fs.existsSync(agentsPath)) {
@@ -43,7 +43,7 @@ async function main() {
 
   console.log('\n' + '━'.repeat(50));
   console.log('Quick launch with: /yard-menu or /yard-<agent-id>');
-  console.log('Alternative: /aiox-agent <agent-id>');
+  console.log('Alternative: /yard-agent <agent-id>');
 }
 
 main().catch(console.error);

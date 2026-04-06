@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AIOX Agent Consistency Validator
+ * YARD Agent Consistency Validator
  *
  * Validates all agent definitions for consistency according to the
  * Agent Consistency Refactor PRD requirements:
@@ -346,7 +346,7 @@ function formatResults(results, showSuggestions = false) {
 
   lines.push('');
   lines.push('━'.repeat(60));
-  lines.push('  AIOX Agent Consistency Validation Report');
+  lines.push('  YARD Agent Consistency Validation Report');
   lines.push('━'.repeat(60));
   lines.push('');
 
@@ -485,7 +485,7 @@ async function main() {
 
   if (args.includes('--help') || args.includes('-h')) {
     console.log(`
-AIOX Agent Consistency Validator
+YARD Agent Consistency Validator
 
 Usage:
   node validate-agents.js                    Validate all agents

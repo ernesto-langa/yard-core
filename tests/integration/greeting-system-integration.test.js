@@ -204,7 +204,7 @@ describeIntegration('Unified Greeting System Integration', () => {
 // Run tests if called directly
 if (require.main === module) {
   console.log('Running Greeting System Integration Tests...\n');
-  console.log('This requires the full AIOX environment.\n');
+  console.log('This requires the full YARD environment.\n');
   
   const tests = [
     {

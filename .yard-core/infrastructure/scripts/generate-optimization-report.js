@@ -196,7 +196,7 @@ function compareBaseline(baseline, usageData, registry) {
   const workflowComparison = {};
   for (const [wfName, wfData] of Object.entries(baselineWorkflows)) {
     const baselineMedian = wfData.median?.totalTokens || 0;
-    const baselineOverheadPct = baseline.comparison?.aioxActual?.overheadPercentOfTypicalSession?.[wfName] || 0;
+    const baselineOverheadPct = baseline.comparison?.yardActual?.overheadPercentOfTypicalSession?.[wfName] || 0;
     const baselineOverheadTokens = Math.round(baselineMedian * baselineOverheadPct / 100);
 
     workflowComparison[wfName] = {

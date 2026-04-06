@@ -12,7 +12,7 @@ const os = require('os');
 const {
   detectInstallationMode,
   collectMarkers,
-  isAioxCoreRepository,
+  isYardCoreRepository,
   mapLegacyTypeToMode,
   validateModeSelection,
   getModeOptions,
@@ -25,7 +25,7 @@ describe('Mode Detector', () => {
 
   beforeEach(() => {
     // Create unique temp directory for each test
-    tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-test-'));
+    tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-test-'));
   });
 
   afterEach(() => {
@@ -100,7 +100,7 @@ describe('Mode Detector', () => {
       fs.writeFileSync(
         path.join(tempDir, 'package.json'),
         JSON.stringify({
-          name: '@aiox/core',
+          name: '@yard/core',
           workspaces: ['packages/*'],
         }),
       );
@@ -108,12 +108,12 @@ describe('Mode Detector', () => {
       const result = detectInstallationMode(tempDir);
 
       expect(result.mode).toBe(InstallationMode.FRAMEWORK_DEV);
-      expect(result.legacyType).toBe(LegacyProjectType.EXISTING_AIOX);
+      expect(result.legacyType).toBe(LegacyProjectType.EXISTING_YARD);
       expect(result.confidence).toBe(100);
-      expect(result.markers.isAioxCoreRepo).toBe(true);
+      expect(result.markers.isYardCoreRepo).toBe(true);
     });
 
-    it('should detect BROWNFIELD mode for user project with existing AIOX', () => {
+    it('should detect BROWNFIELD mode for user project with existing YARD', () => {
       // Create .yard-core directory
       fs.mkdirSync(path.join(tempDir, '.yard-core'));
 
@@ -126,7 +126,7 @@ describe('Mode Detector', () => {
       const result = detectInstallationMode(tempDir);
 
       expect(result.mode).toBe(InstallationMode.BROWNFIELD);
-      expect(result.legacyType).toBe(LegacyProjectType.EXISTING_AIOX);
+      expect(result.legacyType).toBe(LegacyProjectType.EXISTING_YARD);
       expect(result.confidence).toBe(95);
     });
 
@@ -187,14 +187,14 @@ describe('Mode Detector', () => {
     });
   });
 
-  describe('isAioxCoreRepository', () => {
-    it('should return true for @aiox/core package', () => {
+  describe('isYardCoreRepository', () => {
+    it('should return true for @yard/core package', () => {
       fs.writeFileSync(
         path.join(tempDir, 'package.json'),
-        JSON.stringify({ name: '@aiox/core' }),
+        JSON.stringify({ name: '@yard/core' }),
       );
 
-      expect(isAioxCoreRepository(tempDir)).toBe(true);
+      expect(isYardCoreRepository(tempDir)).toBe(true);
     });
 
     it('should return true for yard-core package', () => {
@@ -203,7 +203,7 @@ describe('Mode Detector', () => {
         JSON.stringify({ name: 'yard-core' }),
       );
 
-      expect(isAioxCoreRepository(tempDir)).toBe(true);
+      expect(isYardCoreRepository(tempDir)).toBe(true);
     });
 
     it('should return false for generic monorepo with workspaces pattern only', () => {
@@ -213,10 +213,10 @@ describe('Mode Detector', () => {
         JSON.stringify({ name: 'something', workspaces: ['packages/*'] }),
       );
 
-      expect(isAioxCoreRepository(tempDir)).toBe(false);
+      expect(isYardCoreRepository(tempDir)).toBe(false);
     });
 
-    it('should return true for workspaces pattern with aiox marker', () => {
+    it('should return true for workspaces pattern with yard marker', () => {
       // Workspaces + .yard-core/infrastructure marker = yard-core repo
       fs.writeFileSync(
         path.join(tempDir, 'package.json'),
@@ -224,7 +224,7 @@ describe('Mode Detector', () => {
       );
       fs.mkdirSync(path.join(tempDir, '.yard-core', 'infrastructure'), { recursive: true });
 
-      expect(isAioxCoreRepository(tempDir)).toBe(true);
+      expect(isYardCoreRepository(tempDir)).toBe(true);
     });
 
     it('should return false for regular package', () => {
@@ -233,36 +233,36 @@ describe('Mode Detector', () => {
         JSON.stringify({ name: 'my-app' }),
       );
 
-      expect(isAioxCoreRepository(tempDir)).toBe(false);
+      expect(isYardCoreRepository(tempDir)).toBe(false);
     });
 
     it('should return false when no package.json', () => {
-      expect(isAioxCoreRepository(tempDir)).toBe(false);
+      expect(isYardCoreRepository(tempDir)).toBe(false);
     });
 
     it('should return false for invalid JSON', () => {
       fs.writeFileSync(path.join(tempDir, 'package.json'), 'invalid json');
 
-      expect(isAioxCoreRepository(tempDir)).toBe(false);
+      expect(isYardCoreRepository(tempDir)).toBe(false);
     });
   });
 
   describe('mapLegacyTypeToMode', () => {
-    it('should map EXISTING_AIOX to BROWNFIELD by default (safer)', () => {
-      // Without context, EXISTING_AIOX defaults to BROWNFIELD (won't skip project setup)
-      expect(mapLegacyTypeToMode(LegacyProjectType.EXISTING_AIOX)).toBe(
+    it('should map EXISTING_YARD to BROWNFIELD by default (safer)', () => {
+      // Without context, EXISTING_YARD defaults to BROWNFIELD (won't skip project setup)
+      expect(mapLegacyTypeToMode(LegacyProjectType.EXISTING_YARD)).toBe(
         InstallationMode.BROWNFIELD,
       );
     });
 
-    it('should map EXISTING_AIOX to FRAMEWORK_DEV with isAioxCoreRepo context', () => {
-      expect(mapLegacyTypeToMode(LegacyProjectType.EXISTING_AIOX, { isAioxCoreRepo: true })).toBe(
+    it('should map EXISTING_YARD to FRAMEWORK_DEV with isYardCoreRepo context', () => {
+      expect(mapLegacyTypeToMode(LegacyProjectType.EXISTING_YARD, { isYardCoreRepo: true })).toBe(
         InstallationMode.FRAMEWORK_DEV,
       );
     });
 
-    it('should map EXISTING_AIOX to BROWNFIELD with non-yard-core context', () => {
-      expect(mapLegacyTypeToMode(LegacyProjectType.EXISTING_AIOX, { isAioxCoreRepo: false })).toBe(
+    it('should map EXISTING_YARD to BROWNFIELD with non-yard-core context', () => {
+      expect(mapLegacyTypeToMode(LegacyProjectType.EXISTING_YARD, { isYardCoreRepo: false })).toBe(
         InstallationMode.BROWNFIELD,
       );
     });
@@ -312,7 +312,7 @@ describe('Mode Detector', () => {
     it('should warn when selecting framework-dev for non-yard-core repo', () => {
       const detected = {
         mode: InstallationMode.BROWNFIELD,
-        markers: { isAioxCoreRepo: false },
+        markers: { isYardCoreRepo: false },
       };
 
       const result = validateModeSelection(InstallationMode.FRAMEWORK_DEV, detected);
@@ -405,7 +405,7 @@ describe('Mode Detector', () => {
 
   describe('LegacyProjectType enum', () => {
     it('should have all legacy types', () => {
-      expect(LegacyProjectType.EXISTING_AIOX).toBe('EXISTING_AIOX');
+      expect(LegacyProjectType.EXISTING_YARD).toBe('EXISTING_YARD');
       expect(LegacyProjectType.GREENFIELD).toBe('GREENFIELD');
       expect(LegacyProjectType.BROWNFIELD).toBe('BROWNFIELD');
       expect(LegacyProjectType.UNKNOWN).toBe('UNKNOWN');

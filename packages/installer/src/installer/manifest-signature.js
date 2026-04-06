@@ -39,7 +39,7 @@ const SignatureLimits = {
 const PINNED_PUBLIC_KEY = {
   // Key ID (8 bytes, base64 encoded) - opaque identifier, not UTF-8 text
   // This is compared as raw bytes against the signature's key ID
-  keyId: Buffer.from('AIOX0001').toString('base64'), // 'QUlPUzAwMDE='
+  keyId: Buffer.from('YARD0001').toString('base64'), // 'QUlPUzAwMDE='
   // Ed25519 public key (32 bytes, base64 encoded)
   // TODO: Replace with actual generated public key before production
   publicKey: 'REPLACE_WITH_ACTUAL_PUBLIC_KEY_BASE64_HERE',

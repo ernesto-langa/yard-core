@@ -1,12 +1,12 @@
 /**
- * Pro Detector - Conditional loading of AIOX Pro modules
+ * Pro Detector - Conditional loading of YARD Pro modules
  *
  * Detects whether the pro/ submodule is available and provides
  * safe module loading from the pro/ directory.
  *
  * @module bin/utils/pro-detector
  * @see ADR-PRO-001 - Repository Strategy
- * @see Story PRO-5 - aiox-pro Repository Bootstrap
+ * @see Story PRO-5 - yard-pro Repository Bootstrap
  */
 
 'use strict';
@@ -31,7 +31,7 @@ const PRO_DIR = path.join(PROJECT_ROOT, 'pro');
 const PRO_PACKAGE_PATH = path.join(PRO_DIR, 'package.json');
 
 /**
- * Check if the AIOX Pro submodule is available.
+ * Check if the YARD Pro submodule is available.
  *
  * Detection is based on the existence of pro/package.json.
  * An empty pro/ directory (uninitialized submodule) returns false.
@@ -71,7 +71,7 @@ function loadProModule(moduleName) {
 }
 
 /**
- * Get the version of the installed AIOX Pro package.
+ * Get the version of the installed YARD Pro package.
  *
  * @returns {string|null} The version string (e.g., '0.1.0') or null if not available
  */
@@ -89,7 +89,7 @@ function getProVersion() {
 }
 
 /**
- * Get metadata about the AIOX Pro installation.
+ * Get metadata about the YARD Pro installation.
  *
  * @returns {{ available: boolean, version: string|null, path: string }} Pro status info
  */

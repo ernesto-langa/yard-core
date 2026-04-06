@@ -1,11 +1,11 @@
-aiox:
+yard:
   type: squad
   minVersion: 2.1.0
 
 name: complete-squad
 version: 1.0.0
 description: A complete test squad with all directories for unit tests
-author: AIOX Test Suite
+author: YARD Test Suite
 license: MIT
 
 components:

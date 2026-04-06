@@ -154,7 +154,7 @@ describe('installer', () => {
   });
 
   describe('detectBrownfield', () => {
-    it('should detect greenfield (no existing AIOX)', () => {
+    it('should detect greenfield (no existing YARD)', () => {
       // Given
       fs.existsSync.mockReturnValue(false);
 

@@ -3,7 +3,7 @@
  * Gap Analysis Implementation
  *
  * Auto-detects CI/CD infrastructure in projects and provides
- * integration points for AIOX workflows.
+ * integration points for YARD workflows.
  */
 
 const fs = require('fs');
@@ -768,7 +768,7 @@ class PipelineAnalyzer {
 }
 
 /**
- * IntegrationSuggester - Suggests AIOX integration points
+ * IntegrationSuggester - Suggests YARD integration points
  */
 class IntegrationSuggester {
   /**
@@ -777,13 +777,13 @@ class IntegrationSuggester {
   suggest(analysis, provider) {
     const suggestions = [];
 
-    // Add AIOX build step
+    // Add YARD build step
     suggestions.push({
       type: 'add_step',
       priority: 'high',
-      title: 'Add AIOX Build Orchestration',
-      description: 'Integrate AIOX build orchestrator for intelligent parallel builds',
-      code: this.getAIOXBuildStep(provider),
+      title: 'Add YARD Build Orchestration',
+      description: 'Integrate YARD build orchestrator for intelligent parallel builds',
+      code: this.getYARDBuildStep(provider),
     });
 
     // Add test step if missing
@@ -792,7 +792,7 @@ class IntegrationSuggester {
         type: 'add_step',
         priority: 'medium',
         title: 'Add Test Discovery',
-        description: 'Use AIOX test discovery to automatically find and run tests',
+        description: 'Use YARD test discovery to automatically find and run tests',
         code: this.getTestStep(provider),
       });
     }
@@ -814,7 +814,7 @@ class IntegrationSuggester {
         type: 'add_step',
         priority: 'high',
         title: 'Add Security Scanning',
-        description: 'Add AIOX PR Review AI for security analysis',
+        description: 'Add YARD PR Review AI for security analysis',
         code: this.getSecurityStep(provider),
       });
     }
@@ -830,12 +830,12 @@ class IntegrationSuggester {
       });
     }
 
-    // Add AIOX status reporting
+    // Add YARD status reporting
     suggestions.push({
       type: 'add_step',
       priority: 'low',
-      title: 'Add AIOX Status Reporting',
-      description: 'Report build status to AIOX dashboard',
+      title: 'Add YARD Status Reporting',
+      description: 'Report build status to YARD dashboard',
       code: this.getStatusStep(provider),
     });
 
@@ -843,36 +843,36 @@ class IntegrationSuggester {
   }
 
   /**
-   * Get AIOX build step for provider
+   * Get YARD build step for provider
    */
-  getAIOXBuildStep(provider) {
+  getYARDBuildStep(provider) {
     const steps = {
-      'github-actions': `- name: AIOX Build Orchestration
+      'github-actions': `- name: YARD Build Orchestration
   run: npx yard-core build --parallel --smart-cache
   env:
-    AIOX_CI: true`,
+    YARD_CI: true`,
 
-      'gitlab-ci': `aiox_build:
+      'gitlab-ci': `yard_build:
   stage: build
   script:
     - npx yard-core build --parallel --smart-cache
   variables:
-    AIOX_CI: "true"`,
+    YARD_CI: "true"`,
 
-      jenkins: `stage('AIOX Build') {
+      jenkins: `stage('YARD Build') {
   steps {
     sh 'npx yard-core build --parallel --smart-cache'
   }
   environment {
-    AIOX_CI = 'true'
+    YARD_CI = 'true'
   }
 }`,
 
       circleci: `- run:
-    name: AIOX Build Orchestration
+    name: YARD Build Orchestration
     command: npx yard-core build --parallel --smart-cache
     environment:
-      AIOX_CI: true`,
+      YARD_CI: true`,
     };
 
     return steps[provider] || steps['github-actions'];
@@ -988,11 +988,11 @@ class IntegrationSuggester {
    */
   getStatusStep(provider) {
     const steps = {
-      'github-actions': `- name: Report to AIOX
+      'github-actions': `- name: Report to YARD
   if: always()
   run: npx yard-core status --report-ci
   env:
-    AIOX_BUILD_STATUS: \${{ job.status }}`,
+    YARD_BUILD_STATUS: \${{ job.status }}`,
 
       'gitlab-ci': `report_status:
   stage: .post
@@ -1007,7 +1007,7 @@ class IntegrationSuggester {
 }`,
 
       circleci: `- run:
-    name: Report to AIOX
+    name: Report to YARD
     command: npx yard-core status --report-ci
     when: always`,
     };

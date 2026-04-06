@@ -145,8 +145,8 @@ describe('watch-mode', () => {
       expect(consoleLogSpy).toHaveBeenCalledTimes(2); // initial + 1 tick
     });
 
-    it('should create .aiox directory if it does not exist', async () => {
-      // .aiox should be created by handleWatch
+    it('should create .yard directory if it does not exist', async () => {
+      // .yard should be created by handleWatch
       watchState = await handleWatch({ format: 'dot', interval: 5 });
 
       expect(fs.existsSync(testOutputDir)).toBe(true);

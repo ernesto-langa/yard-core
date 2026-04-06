@@ -7,7 +7,7 @@ const { MarkdownMerger } = require('../../../src/merger/strategies/markdown-merg
 const {
   parseMarkdownSections,
   slugify,
-  hasAioxMarkers,
+  hasYardMarkers,
 } = require('../../../src/merger/parsers/markdown-section-parser.js');
 
 describe('MarkdownMerger', () => {
@@ -18,16 +18,16 @@ describe('MarkdownMerger', () => {
   });
 
   describe('canMerge', () => {
-    it('should return true for content with AIOX markers', () => {
+    it('should return true for content with YARD markers', () => {
       const content = `# Title
-<!-- AIOX-MANAGED-START: section1 -->
+<!-- YARD-MANAGED-START: section1 -->
 Content
-<!-- AIOX-MANAGED-END: section1 -->`;
+<!-- YARD-MANAGED-END: section1 -->`;
 
       expect(merger.canMerge(content, '')).toBe(true);
     });
 
-    it('should return false for content without AIOX markers', () => {
+    it('should return false for content without YARD markers', () => {
       const content = `# Title
 Some content without markers`;
 
@@ -36,23 +36,23 @@ Some content without markers`;
   });
 
   describe('merge', () => {
-    it('should update AIOX-managed sections', async () => {
+    it('should update YARD-managed sections', async () => {
       const existing = `# My Rules
 
-<!-- AIOX-MANAGED-START: agent-system -->
+<!-- YARD-MANAGED-START: agent-system -->
 ## Old Agent System
 Old content
-<!-- AIOX-MANAGED-END: agent-system -->
+<!-- YARD-MANAGED-END: agent-system -->
 
 ## My Custom Section
 Custom content`;
 
       const newContent = `# Template
 
-<!-- AIOX-MANAGED-START: agent-system -->
+<!-- YARD-MANAGED-START: agent-system -->
 ## Agent System
 New updated content
-<!-- AIOX-MANAGED-END: agent-system -->`;
+<!-- YARD-MANAGED-END: agent-system -->`;
 
       const result = await merger.merge(existing, newContent);
 
@@ -66,9 +66,9 @@ New updated content
     it('should preserve user sections', async () => {
       const existing = `# Rules
 
-<!-- AIOX-MANAGED-START: core -->
+<!-- YARD-MANAGED-START: core -->
 Core content
-<!-- AIOX-MANAGED-END: core -->
+<!-- YARD-MANAGED-END: core -->
 
 ## My Custom Rules
 1. Rule one
@@ -76,9 +76,9 @@ Core content
 
       const newContent = `# Template
 
-<!-- AIOX-MANAGED-START: core -->
+<!-- YARD-MANAGED-START: core -->
 Updated core
-<!-- AIOX-MANAGED-END: core -->`;
+<!-- YARD-MANAGED-END: core -->`;
 
       const result = await merger.merge(existing, newContent);
 
@@ -88,31 +88,31 @@ Updated core
       expect(result.stats.preserved).toBeGreaterThan(0);
     });
 
-    it('should add new AIOX sections that do not exist', async () => {
+    it('should add new YARD sections that do not exist', async () => {
       const existing = `# Rules
 
-<!-- AIOX-MANAGED-START: core -->
+<!-- YARD-MANAGED-START: core -->
 Core content
-<!-- AIOX-MANAGED-END: core -->`;
+<!-- YARD-MANAGED-END: core -->`;
 
       const newContent = `# Template
 
-<!-- AIOX-MANAGED-START: core -->
+<!-- YARD-MANAGED-START: core -->
 Updated core
-<!-- AIOX-MANAGED-END: core -->
+<!-- YARD-MANAGED-END: core -->
 
-<!-- AIOX-MANAGED-START: new-section -->
+<!-- YARD-MANAGED-START: new-section -->
 New section content
-<!-- AIOX-MANAGED-END: new-section -->`;
+<!-- YARD-MANAGED-END: new-section -->`;
 
       const result = await merger.merge(existing, newContent);
 
-      expect(result.content).toContain('<!-- AIOX-MANAGED-START: new-section -->');
+      expect(result.content).toContain('<!-- YARD-MANAGED-START: new-section -->');
       expect(result.content).toContain('New section content');
       expect(result.stats.added).toBe(1);
     });
 
-    it('should handle files with no AIOX sections', async () => {
+    it('should handle files with no YARD sections', async () => {
       const existing = `# My Custom Rules
 
 ## Section 1
@@ -123,47 +123,47 @@ Content 2`;
 
       const newContent = `# Template
 
-<!-- AIOX-MANAGED-START: core -->
+<!-- YARD-MANAGED-START: core -->
 Core content
-<!-- AIOX-MANAGED-END: core -->`;
+<!-- YARD-MANAGED-END: core -->`;
 
       const result = await merger.merge(existing, newContent);
 
-      // Should preserve existing content and add AIOX section
+      // Should preserve existing content and add YARD section
       expect(result.content).toContain('## Section 1');
       expect(result.content).toContain('Content 1');
     });
   });
 
   describe('migrateLegacy', () => {
-    it('should append AIOX sections to legacy file', async () => {
+    it('should append YARD sections to legacy file', async () => {
       const existing = `# My Old Rules
 Custom content here`;
 
       const template = `# Template
 
-<!-- AIOX-MANAGED-START: core -->
+<!-- YARD-MANAGED-START: core -->
 Core content
-<!-- AIOX-MANAGED-END: core -->`;
+<!-- YARD-MANAGED-END: core -->`;
 
       // migrateLegacy expects a parsed template object, so use merge which handles that
       const result = await merger.merge(existing, template);
 
       expect(result.content).toContain('# My Old Rules');
       expect(result.content).toContain('Custom content here');
-      expect(result.content).toContain('<!-- AIOX-MANAGED-START: core -->');
+      expect(result.content).toContain('<!-- YARD-MANAGED-START: core -->');
       expect(result.isLegacyMigration).toBe(true);
     });
   });
 });
 
 describe('parseMarkdownSections', () => {
-  it('should identify AIOX-managed sections', () => {
+  it('should identify YARD-managed sections', () => {
     const content = `# Title
 
-<!-- AIOX-MANAGED-START: section1 -->
+<!-- YARD-MANAGED-START: section1 -->
 Managed content
-<!-- AIOX-MANAGED-END: section1 -->
+<!-- YARD-MANAGED-END: section1 -->
 
 ## User Section
 User content`;
@@ -179,9 +179,9 @@ User content`;
   it('should identify user sections', () => {
     const content = `# Title
 
-<!-- AIOX-MANAGED-START: managed -->
+<!-- YARD-MANAGED-START: managed -->
 Managed
-<!-- AIOX-MANAGED-END: managed -->
+<!-- YARD-MANAGED-END: managed -->
 
 ## User Section
 User content`;
@@ -193,7 +193,7 @@ User content`;
   });
 
   it('should handle nested content in managed sections', () => {
-    const content = `<!-- AIOX-MANAGED-START: test -->
+    const content = `<!-- YARD-MANAGED-START: test -->
 ## Heading
 - List item 1
 - List item 2
@@ -201,7 +201,7 @@ User content`;
 \`\`\`javascript
 const code = true;
 \`\`\`
-<!-- AIOX-MANAGED-END: test -->`;
+<!-- YARD-MANAGED-END: test -->`;
 
     const result = parseMarkdownSections(content);
 
@@ -238,24 +238,24 @@ describe('slugify', () => {
   });
 });
 
-describe('hasAioxMarkers', () => {
-  it('should return true for content with AIOX markers', () => {
-    const content = `<!-- AIOX-MANAGED-START: test -->
+describe('hasYardMarkers', () => {
+  it('should return true for content with YARD markers', () => {
+    const content = `<!-- YARD-MANAGED-START: test -->
 Content
-<!-- AIOX-MANAGED-END: test -->`;
+<!-- YARD-MANAGED-END: test -->`;
 
-    expect(hasAioxMarkers(content)).toBe(true);
+    expect(hasYardMarkers(content)).toBe(true);
   });
 
   it('should return false for content without markers', () => {
     const content = '# Just a heading\nSome content';
 
-    expect(hasAioxMarkers(content)).toBe(false);
+    expect(hasYardMarkers(content)).toBe(false);
   });
 
   it('should return false for incomplete markers', () => {
-    const content = '<!-- AIOX-MANAGED-START: test -->';
+    const content = '<!-- YARD-MANAGED-START: test -->';
 
-    expect(hasAioxMarkers(content)).toBe(false);
+    expect(hasYardMarkers(content)).toBe(false);
   });
 });

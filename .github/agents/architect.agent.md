@@ -42,4 +42,4 @@ Use `*` prefix for commands:
 **I collaborate with:**
 
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/architect.md*
+*YARD Agent - Synced from .yard-core/development/agents/architect.md*

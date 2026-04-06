@@ -21,7 +21,7 @@ describe('Smoke Tests - Search CLI', () => {
 
   /**
    * SEARCH-01: Basic Search
-   * `aiox workers search "validator"` returns results
+   * `yard workers search "validator"` returns results
    * Pass Criteria: Results array not empty
    */
   test('SEARCH-01: Basic search returns results', async () => {

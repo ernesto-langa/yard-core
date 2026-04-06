@@ -1,7 +1,7 @@
 /**
  * Visual Feedback Helpers
  *
- * Spinners, progress bars, and status indicators using AIOX Color System v4.0.4
+ * Spinners, progress bars, and status indicators using YARD Color System v4.0.4
  *
  * @module wizard/feedback
  */
@@ -12,7 +12,7 @@ const { colors, status, headings } = require('../utils/yard-colors');
 const { t } = require('./i18n');
 
 /**
- * Create and start a spinner with AIOX styling
+ * Create and start a spinner with YARD styling
  *
  * @param {string} text - Spinner text
  * @param {Object} options - Spinner options
@@ -73,7 +73,7 @@ function showTip(message) {
 }
 
 /**
- * Create progress bar with AIOX styling
+ * Create progress bar with YARD styling
  *
  * @param {number} total - Total steps
  * @param {Object} options - Progress bar options

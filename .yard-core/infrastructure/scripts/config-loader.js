@@ -8,7 +8,7 @@
  *        const loader = new AgentConfigLoader(agentId);
  *        const config = await loader.load(coreConfig);
  * 
- * AIOX Config Loader with Lazy Loading
+ * YARD Config Loader with Lazy Loading
  *
  * Intelligent configuration loader that only loads what each agent needs,
  * significantly reducing memory footprint and load times.

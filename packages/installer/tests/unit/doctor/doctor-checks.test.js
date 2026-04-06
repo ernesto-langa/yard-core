@@ -1,6 +1,6 @@
 /**
  * Unit Tests: Doctor Check Modules
- * Story INS-4.1: aiox doctor rewrite
+ * Story INS-4.1: yard doctor rewrite
  * Story INS-4.8: 3 new checks (skills-count, commands-count, hooks-claude-count)
  *
  * Tests all 15 check modules individually with mocked filesystem.
@@ -108,7 +108,7 @@ describe('settings-json check', () => {
         allow: [],
       },
     };
-    const coreConfig = 'boundary:\n  protected:\n    - .yard-core/core/**\n    - bin/aiox.js\n  exceptions:\n    - test';
+    const coreConfig = 'boundary:\n  protected:\n    - .yard-core/core/**\n    - bin/yard.js\n  exceptions:\n    - test';
     fs.readFileSync.mockImplementation((p) => {
       if (p.includes('settings.json')) return JSON.stringify(mockSettings);
       if (p.includes('core-config')) return coreConfig;
@@ -581,13 +581,13 @@ describe('health-check.yaml task (INS-4.8)', () => {
     expect(aliasMatch[1]).toContain('*hc');
   });
 
-  it('should reference aiox doctor --json in instructions', () => {
+  it('should reference yard doctor --json in instructions', () => {
     const realFs = jest.requireActual('fs');
     const yaml = realFs.readFileSync(
       path.join(__dirname, '..', '..', '..', '..', '..', '.yard-core', 'development', 'tasks', 'health-check.yaml'),
       'utf8',
     );
-    expect(yaml).toContain('aiox doctor --json');
+    expect(yaml).toContain('yard doctor --json');
     expect(yaml).toContain('npx yard-core doctor --json');
   });
 

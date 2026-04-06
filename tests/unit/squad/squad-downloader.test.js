@@ -138,7 +138,7 @@ describe('SquadDownloader', () => {
   describe('Constants', () => {
     it('should export REGISTRY_URL', () => {
       expect(REGISTRY_URL).toBeDefined();
-      expect(REGISTRY_URL).toContain('aiox-squads');
+      expect(REGISTRY_URL).toContain('yard-squads');
       expect(REGISTRY_URL).toContain('registry.json');
     });
 

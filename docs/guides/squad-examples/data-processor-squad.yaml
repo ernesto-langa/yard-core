@@ -5,10 +5,10 @@ name: data-processor
 version: 1.0.0
 description: Squad for data transformation and validation workflows
 
-author: AIOX Community
+author: YARD Community
 license: MIT
 
-aiox:
+yard:
   minVersion: "2.1.0"
   type: squad
 
@@ -32,7 +32,7 @@ dependencies:
     version: "^8.0.0"
 
 keywords:
-  - aiox
+  - yard
   - squad
   - data-processing
   - etl

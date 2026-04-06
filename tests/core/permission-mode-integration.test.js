@@ -32,9 +32,9 @@ describe('Permission Mode Integration (Story ACT-4)', () => {
 
   beforeEach(() => {
     tempDir = path.join(os.tmpdir(), `permission-test-${Date.now()}-${Math.random().toString(36).slice(2)}`);
-    const aioxDir = path.join(tempDir, '.yard');
-    fs.mkdirSync(aioxDir, { recursive: true });
-    configPath = path.join(aioxDir, 'config.yaml');
+    const yardDir = path.join(tempDir, '.yard');
+    fs.mkdirSync(yardDir, { recursive: true });
+    configPath = path.join(yardDir, 'config.yaml');
   });
 
   afterEach(() => {

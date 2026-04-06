@@ -3,4 +3,4 @@
 
 const { runAgentLauncher } = require('./lib/agent-launcher');
 
-process.exitCode = runAgentLauncher('aiox-master');
+process.exitCode = runAgentLauncher('yard-master');

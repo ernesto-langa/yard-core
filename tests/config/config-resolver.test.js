@@ -32,9 +32,9 @@ const FIXTURES_DIR = path.join(__dirname, 'fixtures');
  * Create a temporary project directory with specific config files.
  */
 function createTempProject(files = {}) {
-  const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-config-test-'));
-  const aioxCoreDir = path.join(tmpDir, '.yard-core');
-  fs.mkdirSync(aioxCoreDir, { recursive: true });
+  const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-config-test-'));
+  const yardCoreDir = path.join(tmpDir, '.yard-core');
+  fs.mkdirSync(yardCoreDir, { recursive: true });
 
   for (const [relativePath, content] of Object.entries(files)) {
     const fullPath = path.join(tmpDir, relativePath);
@@ -143,7 +143,7 @@ describe('config-resolver', () => {
       try {
         const config = getConfigAtLevel(tmpDir, 'L1');
         expect(config).toBeTruthy();
-        expect(config.metadata.framework_name).toBe('AIOX-FullStack');
+        expect(config.metadata.framework_name).toBe('YARD-FullStack');
       } finally {
         cleanupTempDir(tmpDir);
       }
@@ -223,40 +223,40 @@ describe('config-resolver', () => {
       const tmpDir = createTempProject({
         '.yard-core/core-config.yaml': { fixture: 'legacy-core-config.yaml' },
       });
-      const origEnv = process.env.AIOX_SUPPRESS_DEPRECATION;
+      const origEnv = process.env.YARD_SUPPRESS_DEPRECATION;
 
       try {
-        delete process.env.AIOX_SUPPRESS_DEPRECATION;
+        delete process.env.YARD_SUPPRESS_DEPRECATION;
 
         const result = loadLegacyConfig(tmpDir);
         expect(result.warnings.length).toBeGreaterThan(0);
         expect(result.warnings[0]).toContain('DEPRECATION');
       } finally {
         if (origEnv === undefined) {
-          delete process.env.AIOX_SUPPRESS_DEPRECATION;
+          delete process.env.YARD_SUPPRESS_DEPRECATION;
         } else {
-          process.env.AIOX_SUPPRESS_DEPRECATION = origEnv;
+          process.env.YARD_SUPPRESS_DEPRECATION = origEnv;
         }
         cleanupTempDir(tmpDir);
       }
     });
 
-    test('suppresses deprecation when AIOX_SUPPRESS_DEPRECATION=true', () => {
+    test('suppresses deprecation when YARD_SUPPRESS_DEPRECATION=true', () => {
       const tmpDir = createTempProject({
         '.yard-core/core-config.yaml': { fixture: 'legacy-core-config.yaml' },
       });
-      const origEnv = process.env.AIOX_SUPPRESS_DEPRECATION;
+      const origEnv = process.env.YARD_SUPPRESS_DEPRECATION;
 
       try {
-        process.env.AIOX_SUPPRESS_DEPRECATION = 'true';
+        process.env.YARD_SUPPRESS_DEPRECATION = 'true';
 
         const result = loadLegacyConfig(tmpDir);
         expect(result.warnings).toHaveLength(0);
       } finally {
         if (origEnv === undefined) {
-          delete process.env.AIOX_SUPPRESS_DEPRECATION;
+          delete process.env.YARD_SUPPRESS_DEPRECATION;
         } else {
-          process.env.AIOX_SUPPRESS_DEPRECATION = origEnv;
+          process.env.YARD_SUPPRESS_DEPRECATION = origEnv;
         }
         cleanupTempDir(tmpDir);
       }
@@ -283,7 +283,7 @@ describe('config-resolver', () => {
       try {
         const result = loadLayeredConfig(tmpDir);
         // L1 values present
-        expect(result.config.metadata.framework_name).toBe('AIOX-FullStack');
+        expect(result.config.metadata.framework_name).toBe('YARD-FullStack');
         // L2 overrides L1
         expect(result.config.performance_defaults.max_concurrent_operations).toBe(8);
         // L2 additions
@@ -307,7 +307,7 @@ describe('config-resolver', () => {
         // L4 additions
         expect(result.config.ide.selected).toEqual(['vscode', 'claude-code']);
         // L1 values preserved
-        expect(result.config.metadata.framework_name).toBe('AIOX-FullStack');
+        expect(result.config.metadata.framework_name).toBe('YARD-FullStack');
       } finally {
         cleanupTempDir(tmpDir);
       }
@@ -410,7 +410,7 @@ describe('config-resolver', () => {
       try {
         const result = resolveConfig(tmpDir, { skipCache: true });
         expect(result.legacy).toBe(false);
-        expect(result.config.metadata.framework_name).toBe('AIOX-FullStack');
+        expect(result.config.metadata.framework_name).toBe('YARD-FullStack');
       } finally {
         cleanupTempDir(tmpDir);
       }
@@ -534,7 +534,7 @@ describe('config-resolver', () => {
     beforeEach(() => {
       // Save original CONFIG_FILES.user and redirect to temp directory
       originalUserConfigPath = CONFIG_FILES.user;
-      tempUserDir = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-user-config-test-'));
+      tempUserDir = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-user-config-test-'));
       CONFIG_FILES.user = path.join(tempUserDir, 'user-config.yaml');
       globalConfigCache.clear();
     });
@@ -682,7 +682,7 @@ describe('config-resolver', () => {
 
     beforeEach(() => {
       originalUserConfigPath = CONFIG_FILES.user;
-      tempUserDir = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-user-write-test-'));
+      tempUserDir = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-user-write-test-'));
       CONFIG_FILES.user = path.join(tempUserDir, 'user-config.yaml');
       globalConfigCache.clear();
     });
@@ -754,7 +754,7 @@ describe('config-resolver', () => {
 
     beforeEach(() => {
       originalUserConfigPath = CONFIG_FILES.user;
-      tempUserDir = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-toggle-test-'));
+      tempUserDir = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-toggle-test-'));
       CONFIG_FILES.user = path.join(tempUserDir, 'user-config.yaml');
       globalConfigCache.clear();
     });
@@ -824,7 +824,7 @@ describe('config-resolver', () => {
 
     beforeEach(() => {
       originalUserConfigPath = CONFIG_FILES.user;
-      tempUserDir = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-l5-integration-test-'));
+      tempUserDir = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-l5-integration-test-'));
       CONFIG_FILES.user = path.join(tempUserDir, 'user-config.yaml');
       globalConfigCache.clear();
     });

@@ -576,7 +576,7 @@ describe('UAP Session Bridge — Edge Cases', () => {
     const agentIds = [
       'dev', 'qa', 'architect', 'pm', 'po', 'sm',
       'analyst', 'data-engineer', 'ux-design-expert', 'devops',
-      'aiox-master', 'content-creator',
+      'yard-master', 'content-creator',
     ];
 
     const sessionsDir = path.join(tmpDir, '.synapse', 'sessions');

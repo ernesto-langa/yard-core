@@ -1,5 +1,5 @@
 /**
- * AIOX Documentation Synchronizer
+ * YARD Documentation Synchronizer
  * 
  * Automatically synchronizes documentation with code changes,
  * ensuring documentation stays up-to-date with implementation.

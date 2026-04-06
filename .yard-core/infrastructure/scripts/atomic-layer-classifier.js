@@ -5,7 +5,7 @@
  * Story: 6.1.7.1 - Task Content Completion
  * Purpose: Resolve {TODO: Atom|Molecule|Organism} placeholders in all 114 task files
  * 
- * Classification based on AIOX atomic design hierarchy:
+ * Classification based on YARD atomic design hierarchy:
  * - Atom: Single-purpose, no dependencies
  * - Molecule: Combines atoms
  * - Organism: Complex workflows

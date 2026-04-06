@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AIOX Agent Migration Script (V2 → V3)
+ * YARD Agent Migration Script (V2 → V3)
  * Story 2.4: Migrates agents to V3 format with Auto-Claude capabilities
  *
  * Usage:
@@ -396,7 +396,7 @@ function formatListOutput(agents) {
 
   lines.push('');
   lines.push('═══════════════════════════════════════════════════════════');
-  lines.push('  AIOX Agents - Migration Status');
+  lines.push('  YARD Agents - Migration Status');
   lines.push('═══════════════════════════════════════════════════════════');
   lines.push('');
 
@@ -428,7 +428,7 @@ async function main() {
 
   if (args.length === 0 || args.includes('--help')) {
     console.log(`
-AIOX Agent Migration Script (V2 → V3)
+YARD Agent Migration Script (V2 → V3)
 
 Usage:
   node migrate-agent.js <agent-id> [options]

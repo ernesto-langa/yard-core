@@ -17,8 +17,8 @@ function getCodexHome() {
 
 function getDefaultOptions() {
   const projectRoot = process.cwd();
-  const envLocalDir = process.env.AIOX_CODEX_LOCAL_SKILLS_DIR;
-  const envGlobalDir = process.env.AIOX_CODEX_GLOBAL_SKILLS_DIR;
+  const envLocalDir = process.env.YARD_CODEX_LOCAL_SKILLS_DIR;
+  const envGlobalDir = process.env.YARD_CODEX_GLOBAL_SKILLS_DIR;
   return {
     projectRoot,
     sourceDir: path.join(projectRoot, '.yard-core', 'development', 'agents'),
@@ -39,14 +39,14 @@ function trimText(text, max = 220) {
 
 function getSkillId(agentId) {
   const id = String(agentId || '').trim();
-  if (id.startsWith('aiox-') || id.startsWith('yard-')) return id;
-  return `aiox-${id}`;
+  if (id.startsWith('yard-') || id.startsWith('yard-')) return id;
+  return `yard-${id}`;
 }
 
 function buildSkillContent(agentData) {
   const agent = agentData.agent || {};
   const name = agent.name || agentData.id;
-  const title = agent.title || 'AIOX Agent';
+  const title = agent.title || 'YARD Agent';
   const whenToUse = trimText(agent.whenToUse || `Use @${agentData.id} for specialized tasks.`);
 
   const allCommands = normalizeCommands(agentData.commands || []);
@@ -65,7 +65,7 @@ name: ${skillName}
 description: ${description}
 ---
 
-# AIOX ${title} Activator
+# YARD ${title} Activator
 
 ## When To Use
 ${whenToUse}

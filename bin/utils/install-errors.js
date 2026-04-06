@@ -2,7 +2,7 @@
  * Installation Error Messages - User-friendly error communication
  *
  * Provides classified error messages with recovery suggestions
- * for AIOX installer failures.
+ * for YARD installer failures.
  *
  * @module bin/utils/install-errors
  * @see Story 1.9 - Error Handling & Rollback
@@ -272,12 +272,12 @@ function formatSuccessMessage() {
   lines.push(chalk.green('✅  Installation Completed Successfully'));
   lines.push(chalk.green('═══════════════════════════════════════════════════════'));
   lines.push('');
-  lines.push(chalk.white('AIOX has been installed and configured.'));
+  lines.push(chalk.white('YARD has been installed and configured.'));
   lines.push('');
   lines.push(chalk.cyan.bold('Next Steps:'));
   lines.push(chalk.cyan('  1. Review installation log: .yard-install.log'));
-  lines.push(chalk.cyan('  2. Verify configuration: aiox config --check'));
-  lines.push(chalk.cyan('  3. Run validation: aiox validate'));
+  lines.push(chalk.cyan('  2. Verify configuration: yard config --check'));
+  lines.push(chalk.cyan('  3. Run validation: yard validate'));
   lines.push('');
   return lines.join('\n');
 }

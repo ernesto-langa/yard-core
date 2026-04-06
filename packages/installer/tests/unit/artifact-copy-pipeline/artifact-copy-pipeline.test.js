@@ -105,7 +105,7 @@ describe('artifact-copy-pipeline (Story INS-4.3)', () => {
   });
 
   describe('copyExtraCommandFiles', () => {
-    test('copies .md files recursively excluding AIOX/agents/ via real function', async () => {
+    test('copies .md files recursively excluding YARD/agents/ via real function', async () => {
       const sourceRoot = createTempDir();
       const targetRoot = createTempDir();
 
@@ -126,13 +126,13 @@ describe('artifact-copy-pipeline (Story INS-4.3)', () => {
         fs.mkdirSync(tasksDir, { recursive: true });
         fs.writeFileSync(path.join(tasksDir, 'add-rule.md'), '# Add Rule', 'utf8');
 
-        // Create AIOX/agents/dev.md (should be EXCLUDED)
-        const agentsDir = path.join(cmdDir, 'AIOX', 'agents');
+        // Create YARD/agents/dev.md (should be EXCLUDED)
+        const agentsDir = path.join(cmdDir, 'YARD', 'agents');
         fs.mkdirSync(agentsDir, { recursive: true });
         fs.writeFileSync(path.join(agentsDir, 'dev.md'), '# Dev Agent', 'utf8');
 
-        // Create AIOX/stories/story.md (should be EXCLUDED — project-specific)
-        const storiesDir = path.join(cmdDir, 'AIOX', 'stories');
+        // Create YARD/stories/story.md (should be EXCLUDED — project-specific)
+        const storiesDir = path.join(cmdDir, 'YARD', 'stories');
         fs.mkdirSync(storiesDir, { recursive: true });
         fs.writeFileSync(path.join(storiesDir, 'story.md'), '# Story', 'utf8');
 
@@ -153,11 +153,11 @@ describe('artifact-copy-pipeline (Story INS-4.3)', () => {
         expect(fs.existsSync(path.join(targetCmd, 'synapse', 'manager.md'))).toBe(true);
         expect(fs.existsSync(path.join(targetCmd, 'synapse', 'tasks', 'add-rule.md'))).toBe(true);
 
-        // Verify AIOX/agents/ was excluded (handled by copyAgentFiles)
-        expect(fs.existsSync(path.join(targetCmd, 'AIOX', 'agents', 'dev.md'))).toBe(false);
+        // Verify YARD/agents/ was excluded (handled by copyAgentFiles)
+        expect(fs.existsSync(path.join(targetCmd, 'YARD', 'agents', 'dev.md'))).toBe(false);
 
-        // Verify AIOX/stories/ was excluded (project-specific)
-        expect(fs.existsSync(path.join(targetCmd, 'AIOX', 'stories', 'story.md'))).toBe(false);
+        // Verify YARD/stories/ was excluded (project-specific)
+        expect(fs.existsSync(path.join(targetCmd, 'YARD', 'stories', 'story.md'))).toBe(false);
 
         // Verify squad directories not copied (private)
         expect(fs.existsSync(path.join(targetCmd, 'cohort-squad'))).toBe(false);

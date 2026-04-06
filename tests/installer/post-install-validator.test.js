@@ -33,7 +33,7 @@ describe('PostInstallValidator Security Tests', () => {
 
   beforeEach(async () => {
     // Create isolated test directory
-    testDir = path.join(os.tmpdir(), `aiox-validator-test-${Date.now()}`);
+    testDir = path.join(os.tmpdir(), `yard-validator-test-${Date.now()}`);
     targetDir = path.join(testDir, 'target');
     sourceDir = path.join(testDir, 'source');
 

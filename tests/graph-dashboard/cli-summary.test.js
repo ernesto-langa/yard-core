@@ -62,7 +62,7 @@ describe('cli-summary', () => {
       await handleSummary({});
       const output = stdoutWriteSpy.mock.calls[0][0];
 
-      expect(output).toContain('AIOX Graph Dashboard');
+      expect(output).toContain('YARD Graph Dashboard');
       expect(output).toContain('Dependency Graph');
       expect(output).toContain('Entity Statistics');
       expect(output).toContain('Provider Status');

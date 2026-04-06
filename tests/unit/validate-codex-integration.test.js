@@ -27,7 +27,7 @@ describe('validate-codex-integration', () => {
   it('passes when required Codex files exist', () => {
     write(path.join(tmpRoot, 'AGENTS.md'), '# rules');
     write(path.join(tmpRoot, '.codex', 'agents', 'dev.md'), '# dev');
-    write(path.join(tmpRoot, '.codex', 'skills', 'aiox-dev', 'SKILL.md'), '# skill');
+    write(path.join(tmpRoot, '.codex', 'skills', 'yard-dev', 'SKILL.md'), '# skill');
     write(path.join(tmpRoot, '.yard-core', 'development', 'agents', 'dev.md'), '# dev');
 
     const result = validateCodexIntegration({ projectRoot: tmpRoot });

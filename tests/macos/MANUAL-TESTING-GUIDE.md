@@ -2,7 +2,7 @@
 
 **Story 1.10b - macOS Testing & Validation**
 
-This guide provides step-by-step instructions for manually testing AIOX on macOS (Intel and Apple Silicon).
+This guide provides step-by-step instructions for manually testing YARD on macOS (Intel and Apple Silicon).
 
 ---
 
@@ -61,13 +61,13 @@ file $(which node)
 ### 1. Clean Environment Preparation
 
 ```bash
-# Backup existing AIOX installation (if any)
-if [ -d "$HOME/.aiox" ]; then
-    mv "$HOME/.aiox" "$HOME/.aiox.backup.$(date +%Y%m%d-%H%M%S)"
+# Backup existing YARD installation (if any)
+if [ -d "$HOME/.yard" ]; then
+    mv "$HOME/.yard" "$HOME/.yard.backup.$(date +%Y%m%d-%H%M%S)"
 fi
 
 # Verify backup
-ls -la "$HOME/.aiox.backup"*
+ls -la "$HOME/.yard.backup"*
 ```
 
 ### 2. Navigate to Test Directory
@@ -97,7 +97,7 @@ uname -m
 #### 2. Run Installer
 
 ```bash
-npx @synkraai/aiox@latest init
+npx @synkraai/yard@latest init
 ```
 
 **Follow the wizard prompts:**
@@ -109,15 +109,15 @@ npx @synkraai/aiox@latest init
 #### 3. Verify Installation
 
 ```bash
-# Check AIOX command availability
-which aiox
-# Expected: /usr/local/bin/aiox or similar
+# Check YARD command availability
+which yard
+# Expected: /usr/local/bin/yard or similar
 
 # Verify version
-aiox --version
+yard --version
 
 # Run health check
-aiox health
+yard health
 ```
 
 **Expected Health Check Output:**
@@ -140,7 +140,7 @@ file $(which node)
 
 - [ ] Installation completes without errors
 - [ ] All 4 MCPs show as healthy
-- [ ] `aiox` command works
+- [ ] `yard` command works
 - [ ] Running on correct architecture (x86_64)
 
 ---
@@ -167,7 +167,7 @@ sysctl -n machdep.cpu.brand_string
 #### 2. Run Installer
 
 ```bash
-npx @synkraai/aiox@latest init
+npx @synkraai/yard@latest init
 ```
 
 #### 3. Verify Native ARM Execution
@@ -195,7 +195,7 @@ If running under Rosetta:
 #### 5. Run Health Check
 
 ```bash
-aiox health
+yard health
 ```
 
 ### ✅ Pass Criteria
@@ -222,10 +222,10 @@ echo $SHELL
 # Expected: /bin/zsh
 
 # Check if .zshrc was updated
-cat ~/.zshrc | grep -i aiox
+cat ~/.zshrc | grep -i yard
 
 # Open new terminal window
-# Run: aiox --version
+# Run: yard --version
 # Should work without errors
 ```
 
@@ -236,11 +236,11 @@ cat ~/.zshrc | grep -i aiox
 bash
 
 # Check if profile was updated
-cat ~/.bashrc | grep -i aiox
+cat ~/.bashrc | grep -i yard
 # Or check ~/.bash_profile
 
-# Run AIOX command
-aiox --version
+# Run YARD command
+yard --version
 
 # Exit bash
 exit
@@ -251,7 +251,7 @@ exit
 ```bash
 # Close terminal completely
 # Open new terminal
-# Run: aiox --version
+# Run: yard --version
 # Should work immediately without sourcing profiles
 ```
 
@@ -274,17 +274,17 @@ exit
 #### 1. Verify Forward Slashes
 
 ```bash
-# Check AIOX installation path
-which aiox
-# Should use forward slashes: /usr/local/bin/aiox
-# NOT backslashes: \usr\local\bin\aiox
+# Check YARD installation path
+which yard
+# Should use forward slashes: /usr/local/bin/yard
+# NOT backslashes: \usr\local\bin\yard
 ```
 
 #### 2. Test Tilde Expansion
 
 ```bash
 # Navigate using ~
-cd ~/.aiox
+cd ~/.yard
 pwd
 # Should show full path.join(process.cwd(), ".yard")
 ```
@@ -292,8 +292,8 @@ pwd
 #### 3. Test Symlinks
 
 ```bash
-# Check if aiox command is a symlink
-ls -la $(which aiox)
+# Check if yard command is a symlink
+ls -la $(which yard)
 # Note if it points to another location
 ```
 
@@ -316,7 +316,7 @@ ls -la $(which aiox)
 #### 1. Check Generated Files
 
 ```bash
-# Check line endings of AIOX config
+# Check line endings of YARD config
 file ~/.yard/config.json
 # Should show: ASCII text (LF line endings)
 # NOT: ASCII text, with CRLF line endings
@@ -371,7 +371,7 @@ ls -l ~/.yard/config.json
 
 ```bash
 # Check ownership
-ls -ld ~/.aiox
+ls -ld ~/.yard
 # Should show your username as owner
 
 # Test npm without sudo
@@ -383,7 +383,7 @@ npm list -g --depth=0
 
 - [ ] Scripts are executable
 - [ ] Config files have correct permissions
-- [ ] User owns all AIOX files
+- [ ] User owns all YARD files
 - [ ] No sudo required
 
 ---
@@ -451,7 +451,7 @@ pnpm --version
 
 ```bash
 # Time the full installation
-time npx @synkraai/aiox@latest init
+time npx @synkraai/yard@latest init
 # Target: < 5 minutes (300 seconds)
 ```
 
@@ -464,7 +464,7 @@ time npx @synkraai/aiox@latest init
 
 ```bash
 # Time health check
-time aiox health
+time yard health
 # Target: < 10 seconds
 ```
 
@@ -472,9 +472,9 @@ time aiox health
 
 ```bash
 # Multiple runs for average
-time aiox --version
-time aiox --version
-time aiox --version
+time yard --version
+time yard --version
+time yard --version
 # Should be instant (< 1 second)
 ```
 
@@ -524,7 +524,7 @@ csrutil status
 During installation and normal use, verify:
 
 - [ ] No unexpected security prompts
-- [ ] No "unidentified developer" warnings for AIOX
+- [ ] No "unidentified developer" warnings for YARD
 - [ ] No permission requests beyond expected
 
 #### 3. Check Code Signing (if applicable)
@@ -555,28 +555,28 @@ codesign -v $(which node)
 
 ```bash
 # Create backup
-cp -r ~/.aiox ~/.aiox.backup
+cp -r ~/.yard ~/.yard.backup
 
 # Simulate corruption
 echo "corrupted" > ~/.yard/config.json
 
 # Try to recover
-mv ~/.aiox ~/.aiox.broken
-mv ~/.aiox.backup ~/.aiox
+mv ~/.yard ~/.yard.broken
+mv ~/.yard.backup ~/.yard
 
 # Verify recovery
-aiox health
+yard health
 ```
 
 #### 2. Test Partial Installation Recovery
 
 ```bash
 # Interrupt installation (Ctrl+C mid-install)
-npx @synkraai/aiox@latest init
+npx @synkraai/yard@latest init
 # Press Ctrl+C after a few seconds
 
 # Re-run installation
-npx @synkraai/aiox@latest init
+npx @synkraai/yard@latest init
 # Should detect partial state and resume/cleanup
 ```
 
@@ -585,7 +585,7 @@ npx @synkraai/aiox@latest init
 Intentionally trigger errors:
 
 - Missing Node.js: Uninstall Node temporarily
-- Permission denied: `chmod 000 ~/.aiox`
+- Permission denied: `chmod 000 ~/.yard`
 - Network timeout: Disconnect internet
 
 **Check that error messages are:**
@@ -621,24 +621,24 @@ node --version  # Should be 18+
 npm ping
 
 # Try with verbose logging
-npx @synkraai/aiox@latest init --verbose
+npx @synkraai/yard@latest init --verbose
 ```
 
 #### Command Not Found
 
-**Symptom:** `bash: aiox: command not found`
+**Symptom:** `bash: yard: command not found`
 
 **Solution:**
 
 ```bash
 # Check if installed
-ls -la ~/.aiox
+ls -la ~/.yard
 
 # Source shell profile
 source ~/.zshrc  # or ~/.bashrc
 
 # Check PATH
-echo $PATH | grep -o '/[^:]*aiox[^:]*'
+echo $PATH | grep -o '/[^:]*yard[^:]*'
 
 # Manually add to PATH if needed
 export PATH="$HOME/.yard/bin:$PATH"
@@ -655,7 +655,7 @@ export PATH="$HOME/.yard/bin:$PATH"
 chmod +x ~/.yard/bin/*.sh
 
 # Fix ownership
-sudo chown -R $(whoami) ~/.aiox
+sudo chown -R $(whoami) ~/.yard
 
 # Reset npm permissions
 npm config set prefix ~/.npm-global
@@ -664,16 +664,16 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 
 #### MCP Health Check Fails
 
-**Symptom:** `aiox health` shows unhealthy MCPs
+**Symptom:** `yard health` shows unhealthy MCPs
 
 **Solution:**
 
 ```bash
 # Reinstall specific MCP
-aiox mcp reinstall <mcp-name>
+yard mcp reinstall <mcp-name>
 
 # Check logs
-aiox logs
+yard logs
 
 # Verify network connectivity
 ping npmjs.com
@@ -697,7 +697,7 @@ When reporting test failures, include:
    ```
 
 2. **Test Logs:**
-   - All files from `/tmp/aiox-test-*.log`
+   - All files from `/tmp/yard-test-*.log`
    - Screenshot of error messages
 
 3. **Steps to Reproduce:**
@@ -740,11 +740,11 @@ cd tests/macos
 ### Clean Test Environment
 
 ```bash
-# Remove AIOX
-rm -rf ~/.aiox
+# Remove YARD
+rm -rf ~/.yard
 
 # Restore backup
-mv ~/.aiox.backup ~/.aiox
+mv ~/.yard.backup ~/.yard
 ```
 
 ---

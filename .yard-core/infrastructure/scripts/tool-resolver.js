@@ -4,7 +4,7 @@ const yaml = require('js-yaml');
 const fg = require('fast-glob');
 
 /**
- * ToolResolver - Resolves and loads AIOX tools from file system
+ * ToolResolver - Resolves and loads YARD tools from file system
  *
  * Features:
  * - Map-based caching for performance (<5ms cached lookups)

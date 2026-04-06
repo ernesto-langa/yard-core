@@ -6,16 +6,16 @@ setlocal
 
 :: Try multiple locations for the tracker script
 :: 1. Environment variable (if set during installation)
-if defined AIOX_HOME (
-    set "TRACKER_SCRIPT=%AIOX_HOME%\.aiox-core\infrastructure\scripts\llm-routing\usage-tracker\index.js"
+if defined YARD_HOME (
+    set "TRACKER_SCRIPT=%YARD_HOME%\.yard-core\infrastructure\scripts\llm-routing\usage-tracker\index.js"
     if exist "%TRACKER_SCRIPT%" goto :found
 )
 
 :: 2. Common installation locations
-set "TRACKER_SCRIPT=%USERPROFILE%\aiox-core\.aiox-core\infrastructure\scripts\llm-routing\usage-tracker\index.js"
+set "TRACKER_SCRIPT=%USERPROFILE%\yard-core\.yard-core\infrastructure\scripts\llm-routing\usage-tracker\index.js"
 if exist "%TRACKER_SCRIPT%" goto :found
 
-set "TRACKER_SCRIPT=%USERPROFILE%\Workspaces\AIOX\ernesto-langa\aiox-core\.aiox-core\infrastructure\scripts\llm-routing\usage-tracker\index.js"
+set "TRACKER_SCRIPT=%USERPROFILE%\Workspaces\YARD\ernesto-langa\yard-core\.yard-core\infrastructure\scripts\llm-routing\usage-tracker\index.js"
 if exist "%TRACKER_SCRIPT%" goto :found
 
 :: 3. Relative to this script (for development)
@@ -23,17 +23,17 @@ set "TRACKER_SCRIPT=%~dp0..\usage-tracker\index.js"
 if exist "%TRACKER_SCRIPT%" goto :found
 
 :: 4. Global npm package location
-set "TRACKER_SCRIPT=%APPDATA%\npm\node_modules\@aiox-fullstack\core\.aiox-core\infrastructure\scripts\llm-routing\usage-tracker\index.js"
+set "TRACKER_SCRIPT=%APPDATA%\npm\node_modules\@yard-fullstack\core\.yard-core\infrastructure\scripts\llm-routing\usage-tracker\index.js"
 if exist "%TRACKER_SCRIPT%" goto :found
 
 echo [91mERROR: Usage tracker not found![0m
 echo.
-echo Please ensure AIOX is installed correctly.
+echo Please ensure YARD is installed correctly.
 echo Expected locations:
-echo   - %%AIOX_HOME%%\.aiox-core\infrastructure\scripts\llm-routing\usage-tracker\
-echo   - %%USERPROFILE%%\aiox-core\.aiox-core\infrastructure\scripts\llm-routing\usage-tracker\
+echo   - %%YARD_HOME%%\.yard-core\infrastructure\scripts\llm-routing\usage-tracker\
+echo   - %%USERPROFILE%%\yard-core\.yard-core\infrastructure\scripts\llm-routing\usage-tracker\
 echo.
-echo Set AIOX_HOME environment variable: setx AIOX_HOME "C:\path\to\aiox-core"
+echo Set YARD_HOME environment variable: setx YARD_HOME "C:\path\to\yard-core"
 exit /b 1
 
 :found

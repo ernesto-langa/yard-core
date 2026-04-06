@@ -1,5 +1,5 @@
 /**
- * YAML Validator for AIOX Developer Meta-Agent
+ * YAML Validator for YARD Developer Meta-Agent
  * Ensures YAML files maintain proper structure and syntax
  */
 

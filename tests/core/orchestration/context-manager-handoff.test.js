@@ -11,7 +11,7 @@ describe('ContextManager structured handoff package', () => {
   let manager;
 
   beforeEach(async () => {
-    tempDir = await fs.mkdtemp(path.join(os.tmpdir(), 'aiox-handoff-'));
+    tempDir = await fs.mkdtemp(path.join(os.tmpdir(), 'yard-handoff-'));
     manager = new ContextManager('test-workflow', tempDir);
     await manager.initialize();
   });

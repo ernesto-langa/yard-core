@@ -2,7 +2,7 @@
  * Pro Installation Wizard with License Gate
  *
  * 3-step wizard: (1) License Gate, (2) Install/Scaffold, (3) Verify
- * Supports interactive mode, CI mode (AIOX_PRO_KEY/AIOX_PRO_EMAIL env vars), and lazy import.
+ * Supports interactive mode, CI mode (YARD_PRO_KEY/YARD_PRO_EMAIL env vars), and lazy import.
  *
  * License Gate supports two activation methods:
  * - Email + Password authentication (recommended, PRO-11)
@@ -34,7 +34,7 @@ try {
 /**
  * License server base URL (same source of truth as license-api.js CONFIG.BASE_URL).
  */
-const LICENSE_SERVER_URL = process.env.AIOX_LICENSE_API_URL || 'https://aiox-license-server.vercel.app';
+const LICENSE_SERVER_URL = process.env.YARD_LICENSE_API_URL || 'https://yard-license-server.vercel.app';
 
 /**
  * Inline License Client — lightweight HTTP client for pre-bootstrap license checks.
@@ -419,7 +419,7 @@ function loadProScaffolder() {
  * 1. Email + Password authentication (recommended, PRO-11)
  * 2. License key (legacy, PRO-6)
  *
- * In CI mode, reads from AIOX_PRO_EMAIL + AIOX_PRO_PASSWORD or AIOX_PRO_KEY env vars.
+ * In CI mode, reads from YARD_PRO_EMAIL + YARD_PRO_PASSWORD or YARD_PRO_KEY env vars.
  * In interactive mode, prompts user to choose method.
  *
  * @param {Object} [options={}] - Options
@@ -479,15 +479,15 @@ async function stepLicenseGate(options = {}) {
 /**
  * CI mode license gate — reads from env vars.
  *
- * Priority: AIOX_PRO_EMAIL + AIOX_PRO_PASSWORD > AIOX_PRO_KEY
+ * Priority: YARD_PRO_EMAIL + YARD_PRO_PASSWORD > YARD_PRO_KEY
  *
  * @param {Object} options - Options with possible pre-provided credentials
  * @returns {Promise<Object>} Result with { success, key, activationResult }
  */
 async function stepLicenseGateCI(options) {
-  const email = options.email || process.env.AIOX_PRO_EMAIL;
-  const password = options.password || process.env.AIOX_PRO_PASSWORD;
-  const key = options.key || process.env.AIOX_PRO_KEY;
+  const email = options.email || process.env.YARD_PRO_EMAIL;
+  const password = options.password || process.env.YARD_PRO_PASSWORD;
+  const key = options.key || process.env.YARD_PRO_KEY;
 
   // Prefer email auth over key
   if (email && password) {
@@ -658,10 +658,10 @@ async function loginWithRetry(client, email) {
         const remaining = MAX_RETRIES - attempt;
         if (remaining > 0) {
           spinner.fail(`Incorrect password. ${remaining} attempt${remaining > 1 ? 's' : ''} remaining.`);
-          showInfo('Forgot your password? Visit https://aiox-license-server.vercel.app/reset-password');
+          showInfo('Forgot your password? Visit https://yard-license-server.vercel.app/reset-password');
         } else {
           spinner.fail('Maximum login attempts reached.');
-          showInfo('Forgot your password? Visit https://aiox-license-server.vercel.app/reset-password');
+          showInfo('Forgot your password? Visit https://yard-license-server.vercel.app/reset-password');
           showInfo('Or open an issue: https://github.com/ernesto-langa/yard-core/issues');
           return { success: false, error: 'Maximum login attempts reached.' };
         }
@@ -994,18 +994,18 @@ async function activateProByAuth(client, sessionToken) {
       .substring(0, 32);
 
     // Read yard-core version
-    let aioxCoreVersion = 'unknown';
+    let yardCoreVersion = 'unknown';
     try {
       const path = require('path');
       const fs = require('fs');
       const pkgPath = path.join(__dirname, '..', '..', '..', '..', 'package.json');
       const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-      aioxCoreVersion = pkg.version || 'unknown';
+      yardCoreVersion = pkg.version || 'unknown';
     } catch {
       // Keep 'unknown'
     }
 
-    const activationResult = await client.activateByAuth(sessionToken, machineId, aioxCoreVersion);
+    const activationResult = await client.activateByAuth(sessionToken, machineId, yardCoreVersion);
 
     spinner.succeed(tf('proSubscriptionConfirmed', { key: maskLicenseKey(activationResult.key) }));
     return { success: true, key: activationResult.key, activationResult };
@@ -1136,18 +1136,18 @@ async function validateKeyWithApi(key) {
       .substring(0, 32);
 
     // Read yard-core version
-    let aioxCoreVersion = 'unknown';
+    let yardCoreVersion = 'unknown';
     try {
       const path = require('path');
       const fs = require('fs');
       const pkgPath = path.join(__dirname, '..', '..', '..', '..', 'package.json');
       const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-      aioxCoreVersion = pkg.version || 'unknown';
+      yardCoreVersion = pkg.version || 'unknown';
     } catch {
       // Keep 'unknown'
     }
 
-    const activationResult = await client.activate(key, machineId, aioxCoreVersion);
+    const activationResult = await client.activate(key, machineId, yardCoreVersion);
 
     return { success: true, data: activationResult };
   } catch (error) {
@@ -1361,9 +1361,9 @@ async function runProWizard(options = {}) {
 
   // Step 1: License Gate (uses InlineLicenseClient if @ernesto-langa/yard-pro not yet installed)
   const licenseResult = await stepLicenseGate({
-    key: options.key || process.env.AIOX_PRO_KEY,
-    email: options.email || process.env.AIOX_PRO_EMAIL,
-    password: options.password || process.env.AIOX_PRO_PASSWORD,
+    key: options.key || process.env.YARD_PRO_KEY,
+    email: options.email || process.env.YARD_PRO_EMAIL,
+    password: options.password || process.env.YARD_PRO_PASSWORD,
   });
 
   if (!licenseResult.success) {

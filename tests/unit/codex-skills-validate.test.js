@@ -14,7 +14,7 @@ describe('Codex Skills Validator', () => {
   let expectedAgentCount;
 
   beforeEach(() => {
-    tmpRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-codex-validate-'));
+    tmpRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-codex-validate-'));
     sourceDir = path.join(process.cwd(), '.yard-core', 'development', 'agents');
     skillsDir = path.join(tmpRoot, '.codex', 'skills');
     expectedAgentCount = fs.readdirSync(sourceDir).filter(name => name.endsWith('.md')).length;
@@ -41,7 +41,7 @@ describe('Codex Skills Validator', () => {
 
   it('fails when a generated skill is missing', () => {
     syncSkills({ sourceDir, localSkillsDir: skillsDir, dryRun: false });
-    fs.rmSync(path.join(skillsDir, 'aiox-architect', 'SKILL.md'), { force: true });
+    fs.rmSync(path.join(skillsDir, 'yard-architect', 'SKILL.md'), { force: true });
 
     const result = validateCodexSkills({
       projectRoot: tmpRoot,
@@ -56,7 +56,7 @@ describe('Codex Skills Validator', () => {
 
   it('fails when greeting command is removed from a skill', () => {
     syncSkills({ sourceDir, localSkillsDir: skillsDir, dryRun: false });
-    const target = path.join(skillsDir, 'aiox-dev', 'SKILL.md');
+    const target = path.join(skillsDir, 'yard-dev', 'SKILL.md');
     const original = fs.readFileSync(target, 'utf8');
     fs.writeFileSync(target, original.replace('generate-greeting.js dev', 'generate-greeting.js'), 'utf8');
 
@@ -71,9 +71,9 @@ describe('Codex Skills Validator', () => {
     expect(result.errors.some(error => error.includes('missing canonical greeting command'))).toBe(true);
   });
 
-  it('fails in strict mode when orphaned aiox-* skill dir exists', () => {
+  it('fails in strict mode when orphaned yard-* skill dir exists', () => {
     syncSkills({ sourceDir, localSkillsDir: skillsDir, dryRun: false });
-    const orphanPath = path.join(skillsDir, 'aiox-legacy');
+    const orphanPath = path.join(skillsDir, 'yard-legacy');
     fs.mkdirSync(orphanPath, { recursive: true });
     fs.writeFileSync(path.join(orphanPath, 'SKILL.md'), '# legacy', 'utf8');
 
@@ -85,6 +85,6 @@ describe('Codex Skills Validator', () => {
     });
 
     expect(result.ok).toBe(false);
-    expect(result.orphaned).toContain('aiox-legacy');
+    expect(result.orphaned).toContain('yard-legacy');
   });
 });

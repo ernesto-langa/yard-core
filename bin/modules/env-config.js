@@ -1,5 +1,5 @@
 /**
- * AIOX-FullStack Environment Configuration Module
+ * YARD-FullStack Environment Configuration Module
  * Story 1.6: Environment Configuration
  *
  * Creates .env and core-config.yaml files with user-provided API keys
@@ -200,7 +200,7 @@ async function generateEnvFile(projectPath, apiKeys, _wizardState) {
     // Replace placeholders
     const variables = {
       nodeEnv: 'development',
-      aioxVersion: '2.1.0',
+      yardVersion: '2.1.0',
       openaiKey: apiKeys.openaiKey || '',
       anthropicKey: apiKeys.anthropicKey || '',
       exaKey: apiKeys.exaKey || '',
@@ -292,11 +292,11 @@ async function ensureEnvInGitignore(projectPath) {
  */
 async function generateCoreConfigYAML(projectPath, wizardState) {
   try {
-    const aioxCoreDir = path.join(projectPath, '.yard-core');
-    const yamlPath = path.join(aioxCoreDir, 'core-config.yaml');
+    const yardCoreDir = path.join(projectPath, '.yard-core');
+    const yamlPath = path.join(yardCoreDir, 'core-config.yaml');
 
     // Ensure .yard-core directory exists
-    await fs.ensureDir(aioxCoreDir);
+    await fs.ensureDir(yardCoreDir);
 
     // Load template
     const templatePath = path.join(__dirname, '../../templates/env/core-config.yaml.template');
@@ -312,7 +312,7 @@ async function generateCoreConfigYAML(projectPath, wizardState) {
     const ideConfigFiles = selectedIDEs.map(ide => `    - "${getIDEConfigFile(ide)}"`).join('\n') || '    []';
 
     const variables = {
-      aioxVersion: '2.1.0',
+      yardVersion: '2.1.0',
       projectName,
       projectType,
       nodeEnv: 'development',

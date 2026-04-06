@@ -100,15 +100,15 @@ class EnvMerger extends BaseMerger {
       merged += '\n';
     }
 
-    // Add AIOX section if there are new vars or suggestions
+    // Add YARD section if there are new vars or suggestions
     if (newVars.length > 0 || suggestions.length > 0) {
       const date = new Date().toISOString().split('T')[0];
-      merged += `\n# === AIOX Variables (added ${date}) ===\n`;
+      merged += `\n# === YARD Variables (added ${date}) ===\n`;
 
       // Add new variables
       for (const { key, value, comment } of newVars) {
-        if (comment && !comment.includes('AIOX')) {
-          // Add original comment if it's not an AIOX header
+        if (comment && !comment.includes('YARD')) {
+          // Add original comment if it's not an YARD header
           merged += `${comment}\n`;
         }
         merged += `${key}=${value}\n`;
@@ -116,9 +116,9 @@ class EnvMerger extends BaseMerger {
 
       // Add suggestions for variables with different values
       if (suggestions.length > 0) {
-        merged += '\n# AIOX_NOTE: The following variables already exist with different values:\n';
+        merged += '\n# YARD_NOTE: The following variables already exist with different values:\n';
         for (const { key, suggestedValue } of suggestions) {
-          merged += `# AIOX_SUGGESTED: ${key}=${suggestedValue}\n`;
+          merged += `# YARD_SUGGESTED: ${key}=${suggestedValue}\n`;
         }
       }
     }

@@ -19,7 +19,7 @@ function transform(agentData) {
 
   const icon = agent.icon || '🤖';
   const name = agent.name || agentData.id;
-  const title = agent.title || 'AIOX Agent';
+  const title = agent.title || 'YARD Agent';
   const whenToUse = agent.whenToUse || 'Use this agent for specific tasks';
   const archetype = persona.archetype || '';
 
@@ -83,7 +83,7 @@ ${agentData.sections.collaboration}
   }
 
   content += `---
-*AIOX Agent - Synced from .yard-core/development/agents/${agentData.filename}*
+*YARD Agent - Synced from .yard-core/development/agents/${agentData.filename}*
 `;
 
   return content;

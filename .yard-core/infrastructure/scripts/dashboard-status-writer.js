@@ -1,7 +1,7 @@
 /**
  * Dashboard Status Writer
  *
- * Writes the current AIOX agent status to .yard/dashboard/status.json
+ * Writes the current YARD agent status to .yard/dashboard/status.json
  * This file is watched by the dashboard via SSE for real-time updates.
  *
  * Usage:
@@ -41,10 +41,10 @@ async function ensureStatusDir(projectRoot) {
 
 /**
  * Gets the current project root
- * Uses AIOX_PROJECT_ROOT env var or cwd
+ * Uses YARD_PROJECT_ROOT env var or cwd
  */
 function getProjectRoot() {
-  return process.env.AIOX_PROJECT_ROOT || process.cwd();
+  return process.env.YARD_PROJECT_ROOT || process.cwd();
 }
 
 /**

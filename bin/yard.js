@@ -25,15 +25,15 @@ async function runWizard(options = {}) {
 
   if (!fs.existsSync(wizardPath)) {
     // Fallback to legacy wizard if new wizard not found
-    const legacyScript = path.join(__dirname, 'aiox-init.js');
+    const legacyScript = path.join(__dirname, 'yard-init.js');
     if (fs.existsSync(legacyScript)) {
       if (!options.quiet) {
         console.log('⚠️  Using legacy wizard (src/wizard not found)');
       }
       // Legacy wizard doesn't support options, pass via env vars
-      process.env.AIOX_INSTALL_FORCE = options.force ? '1' : '';
-      process.env.AIOX_INSTALL_QUIET = options.quiet ? '1' : '';
-      process.env.AIOX_INSTALL_DRY_RUN = options.dryRun ? '1' : '';
+      process.env.YARD_INSTALL_FORCE = options.force ? '1' : '';
+      process.env.YARD_INSTALL_QUIET = options.quiet ? '1' : '';
+      process.env.YARD_INSTALL_DRY_RUN = options.dryRun ? '1' : '';
       require(legacyScript);
       return;
     }
@@ -304,9 +304,9 @@ async function runUpdate() {
       process.exit(1);
     }
 
-    const { AIOXUpdater, formatCheckResult, formatUpdateResult } = require(updaterPath);
+    const { YARDUpdater, formatCheckResult, formatUpdateResult } = require(updaterPath);
 
-    const updater = new AIOXUpdater(process.cwd(), {
+    const updater = new YARDUpdater(process.cwd(), {
       verbose: isVerbose,
       force: isForce,
     });
@@ -388,7 +388,7 @@ function cleanGitignore(gitignorePath) {
   let removedLines = 0;
 
   for (const line of lines) {
-    if (line.includes('# Yard') || line.includes('# Added by Yard') || line.includes('# AIOX') || line.includes('# Added by AIOX')) {
+    if (line.includes('# Yard') || line.includes('# Added by Yard') || line.includes('# YARD') || line.includes('# Added by YARD')) {
       inYardSection = true;
       removedLines++;
       continue;
@@ -489,7 +489,7 @@ Examples:
 `);
 }
 
-// Uninstall AIOX from project
+// Uninstall YARD from project
 async function runUninstall(options = {}) {
   const { force = false, keepData = false, dryRun = false, quiet = false } = options;
   const cwd = process.cwd();
@@ -566,7 +566,7 @@ async function runUninstall(options = {}) {
     const gitignorePath = path.join(cwd, '.gitignore');
     if (fs.existsSync(gitignorePath)) {
       const content = fs.readFileSync(gitignorePath, 'utf8');
-      if (content.includes('# Yard') || content.includes('# Added by Yard') || content.includes('# AIOX') || content.includes('# Added by AIOX')) {
+      if (content.includes('# Yard') || content.includes('# Added by Yard') || content.includes('# YARD') || content.includes('# Added by YARD')) {
         console.log('  • .gitignore Yard entries will be cleaned');
       }
     }
@@ -821,7 +821,7 @@ async function main() {
       break;
 
     case 'pro':
-      // AIOX Pro License Management - Story PRO-6
+      // YARD Pro License Management - Story PRO-6
       try {
         const { run } = require('../.yard-core/cli/index.js');
         await run(process.argv);
@@ -853,7 +853,7 @@ async function main() {
     }
 
     case 'uninstall': {
-      // Uninstall AIOX from project
+      // Uninstall YARD from project
       const uninstallArgs = args.slice(1);
       if (uninstallArgs.includes('--help') || uninstallArgs.includes('-h')) {
         showUninstallHelp();

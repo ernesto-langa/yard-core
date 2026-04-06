@@ -16,7 +16,7 @@ const {
   generateGitignore,
   mergeGitignore,
   generateGitignoreFile,
-  hasAioxIntegration,
+  hasYardIntegration,
   parseGitignore,
   GitignoreTemplates,
   TechStack,
@@ -26,7 +26,7 @@ describe('Gitignore Generator', () => {
   let tempDir;
 
   beforeEach(() => {
-    tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-gitignore-test-'));
+    tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-gitignore-test-'));
   });
 
   afterEach(() => {
@@ -36,8 +36,8 @@ describe('Gitignore Generator', () => {
   });
 
   describe('loadGitignoreTemplate', () => {
-    it('should load AIOX base template', () => {
-      const template = loadGitignoreTemplate(GitignoreTemplates.AIOX_BASE);
+    it('should load YARD base template', () => {
+      const template = loadGitignoreTemplate(GitignoreTemplates.YARD_BASE);
 
       expect(template).toContain('.yard-core/local/');
       expect(template).toContain('.env');
@@ -60,7 +60,7 @@ describe('Gitignore Generator', () => {
     it('should load brownfield merge template', () => {
       const template = loadGitignoreTemplate(GitignoreTemplates.BROWNFIELD_MERGE);
 
-      expect(template).toContain('AIOX Integration Section');
+      expect(template).toContain('YARD Integration Section');
     });
 
     it('should throw for non-existent template', () => {
@@ -116,30 +116,30 @@ describe('Gitignore Generator', () => {
   });
 
   describe('getTemplatesForStacks', () => {
-    it('should always include AIOX base', () => {
+    it('should always include YARD base', () => {
       const templates = getTemplatesForStacks([]);
 
-      expect(templates).toContain(GitignoreTemplates.AIOX_BASE);
+      expect(templates).toContain(GitignoreTemplates.YARD_BASE);
     });
 
     it('should include Node.js template', () => {
       const templates = getTemplatesForStacks([TechStack.NODE]);
 
-      expect(templates).toContain(GitignoreTemplates.AIOX_BASE);
+      expect(templates).toContain(GitignoreTemplates.YARD_BASE);
       expect(templates).toContain(GitignoreTemplates.NODE);
     });
 
     it('should include Python template', () => {
       const templates = getTemplatesForStacks([TechStack.PYTHON]);
 
-      expect(templates).toContain(GitignoreTemplates.AIOX_BASE);
+      expect(templates).toContain(GitignoreTemplates.YARD_BASE);
       expect(templates).toContain(GitignoreTemplates.PYTHON);
     });
 
     it('should include multiple templates for multi-stack', () => {
       const templates = getTemplatesForStacks([TechStack.NODE, TechStack.PYTHON]);
 
-      expect(templates).toContain(GitignoreTemplates.AIOX_BASE);
+      expect(templates).toContain(GitignoreTemplates.YARD_BASE);
       expect(templates).toContain(GitignoreTemplates.NODE);
       expect(templates).toContain(GitignoreTemplates.PYTHON);
     });
@@ -180,17 +180,17 @@ describe('Gitignore Generator', () => {
   });
 
   describe('mergeGitignore', () => {
-    it('should append AIOX section to existing content', () => {
+    it('should append YARD section to existing content', () => {
       const existing = '# My project\nnode_modules/\n';
       const merged = mergeGitignore(existing);
 
       expect(merged).toContain('# My project');
       expect(merged).toContain('node_modules/');
-      expect(merged).toContain('AIOX Integration Section');
+      expect(merged).toContain('YARD Integration Section');
     });
 
-    it('should skip if AIOX section already exists', () => {
-      const existing = '# AIOX Integration Section\n.yard-core/\n';
+    it('should skip if YARD section already exists', () => {
+      const existing = '# YARD Integration Section\n.yard-core/\n';
       const merged = mergeGitignore(existing);
 
       expect(merged).toBe(existing);
@@ -224,7 +224,7 @@ describe('Gitignore Generator', () => {
       expect(result.success).toBe(true);
       expect(result.mode).toBe('merged');
       expect(result.content).toContain('# Existing');
-      expect(result.content).toContain('AIOX Integration Section');
+      expect(result.content).toContain('YARD Integration Section');
     });
 
     it('should support dry run mode', () => {
@@ -245,30 +245,30 @@ describe('Gitignore Generator', () => {
     });
   });
 
-  describe('hasAioxIntegration', () => {
+  describe('hasYardIntegration', () => {
     it('should return false for empty directory', () => {
-      expect(hasAioxIntegration(tempDir)).toBe(false);
+      expect(hasYardIntegration(tempDir)).toBe(false);
     });
 
-    it('should return true if AIOX section exists', () => {
+    it('should return true if YARD section exists', () => {
       fs.writeFileSync(
         path.join(tempDir, '.gitignore'),
-        '# AIOX Integration Section\n.yard-core/\n',
+        '# YARD Integration Section\n.yard-core/\n',
       );
 
-      expect(hasAioxIntegration(tempDir)).toBe(true);
+      expect(hasYardIntegration(tempDir)).toBe(true);
     });
 
     it('should return true if .yard-core/ pattern exists', () => {
       fs.writeFileSync(path.join(tempDir, '.gitignore'), '.yard-core/local/\n');
 
-      expect(hasAioxIntegration(tempDir)).toBe(true);
+      expect(hasYardIntegration(tempDir)).toBe(true);
     });
 
     it('should return false for unrelated gitignore', () => {
       fs.writeFileSync(path.join(tempDir, '.gitignore'), 'node_modules/\n');
 
-      expect(hasAioxIntegration(tempDir)).toBe(false);
+      expect(hasYardIntegration(tempDir)).toBe(false);
     });
   });
 
@@ -288,30 +288,30 @@ describe('Gitignore Generator', () => {
       expect(parsed.comments).toHaveLength(2);
     });
 
-    it('should identify AIOX section', () => {
+    it('should identify YARD section', () => {
       const content = `# Header
 node_modules/
-# AIOX Integration Section
+# YARD Integration Section
 .yard-core/
-# End of AIOX Integration Section
+# End of YARD Integration Section
 `;
       const parsed = parseGitignore(content);
 
-      expect(parsed.aioxSection).toBeDefined();
-      expect(parsed.aioxSection.start).toBeGreaterThan(0);
+      expect(parsed.yardSection).toBeDefined();
+      expect(parsed.yardSection.start).toBeGreaterThan(0);
     });
 
-    it('should return null aioxSection when not present', () => {
+    it('should return null yardSection when not present', () => {
       const content = 'node_modules/\n';
       const parsed = parseGitignore(content);
 
-      expect(parsed.aioxSection).toBeNull();
+      expect(parsed.yardSection).toBeNull();
     });
   });
 
   describe('GitignoreTemplates enum', () => {
     it('should have all required templates', () => {
-      expect(GitignoreTemplates.AIOX_BASE).toBe('gitignore-aiox-base.tmpl');
+      expect(GitignoreTemplates.YARD_BASE).toBe('gitignore-yard-base.tmpl');
       expect(GitignoreTemplates.NODE).toBe('gitignore-node.tmpl');
       expect(GitignoreTemplates.PYTHON).toBe('gitignore-python.tmpl');
       expect(GitignoreTemplates.BROWNFIELD_MERGE).toBe('gitignore-brownfield-merge.tmpl');

@@ -9,7 +9,7 @@ const WorktreeManager = require('./worktree-manager');
  * ProjectStatusLoader - Dynamic project status for agent activation context
  *
  * Story 6.1.2.4: Captures git state, recent work, and current story/epic
- * for display in agent greetings across all 11 AIOX agents.
+ * for display in agent greetings across all 11 YARD agents.
  *
  * Story ACT-3: Reliability overhaul
  * - Event-driven cache invalidation via git state change detection
@@ -657,7 +657,7 @@ class ProjectStatusLoader {
     const lockAcquired = await this._acquireLock();
 
     try {
-      // Ensure .aiox directory exists
+      // Ensure .yard directory exists
       const cacheDir = path.dirname(this.cacheFile);
       await fs.mkdir(cacheDir, { recursive: true });
 

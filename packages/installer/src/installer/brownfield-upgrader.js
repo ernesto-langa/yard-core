@@ -1,6 +1,6 @@
 /**
  * Brownfield Upgrader
- * Handles incremental upgrades for existing AIOX-Core installations
+ * Handles incremental upgrades for existing YARD-Core installations
  *
  * @module src/installer/brownfield-upgrader
  * @story 6.18 - Dynamic Manifest & Brownfield Upgrade System
@@ -142,12 +142,12 @@ function generateUpgradeReport(sourceManifest, installedManifest, targetDir) {
   const sourceMap = buildFileMap(sourceManifest);
   const installedMap = buildFileMap(installedManifest);
 
-  const aioxCoreDir = path.join(targetDir, '.yard-core');
+  const yardCoreDir = path.join(targetDir, '.yard-core');
 
   // Check source files against installed
   for (const [filePath, sourceEntry] of sourceMap) {
     const installedEntry = installedMap.get(filePath);
-    const absolutePath = path.join(aioxCoreDir, filePath);
+    const absolutePath = path.join(yardCoreDir, filePath);
 
     if (!installedEntry) {
       // New file in source
@@ -215,17 +215,17 @@ async function applyUpgrade(report, sourceDir, targetDir, options = {}) {
     errors: [],
   };
 
-  const aioxCoreDir = path.join(targetDir, '.yard-core');
+  const yardCoreDir = path.join(targetDir, '.yard-core');
 
   // Ensure .yard-core directory exists
   if (!dryRun) {
-    fs.ensureDirSync(aioxCoreDir);
+    fs.ensureDirSync(yardCoreDir);
   }
 
   // Install new files
   for (const file of report.newFiles) {
     const sourcePath = path.join(sourceDir, file.path);
-    const targetPath = path.join(aioxCoreDir, file.path);
+    const targetPath = path.join(yardCoreDir, file.path);
 
     try {
       if (!dryRun) {
@@ -243,7 +243,7 @@ async function applyUpgrade(report, sourceDir, targetDir, options = {}) {
   if (includeModified) {
     for (const file of report.modifiedFiles) {
       const sourcePath = path.join(sourceDir, file.path);
-      const targetPath = path.join(aioxCoreDir, file.path);
+      const targetPath = path.join(yardCoreDir, file.path);
 
       try {
         if (!dryRun) {
@@ -265,7 +265,7 @@ async function applyUpgrade(report, sourceDir, targetDir, options = {}) {
       let backupPath;
       try {
         const sourcePath = path.join(sourceDir, file.path);
-        const targetPath = path.join(aioxCoreDir, file.path);
+        const targetPath = path.join(yardCoreDir, file.path);
 
         if (!dryRun && fs.existsSync(sourcePath) && fs.existsSync(targetPath)) {
           const sourceContent = fs.readFileSync(sourcePath, 'utf8');
@@ -310,7 +310,7 @@ async function applyUpgrade(report, sourceDir, targetDir, options = {}) {
         // Merge failed — restore backup if exists, skip file
         if (backupPath && fs.existsSync(backupPath)) {
           try {
-            const targetPath = path.join(aioxCoreDir, file.path);
+            const targetPath = path.join(yardCoreDir, file.path);
             fs.copyFileSync(backupPath, targetPath);
           } catch { /* restore failed — backup file still available */ }
         }

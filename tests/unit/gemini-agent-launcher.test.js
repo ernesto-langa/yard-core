@@ -37,7 +37,7 @@ describe('gemini agent launcher', () => {
   });
 
   it('detects agent presence in canonical or gemini mirrored folders', () => {
-    write(path.join(tmpRoot, '.gemini', 'rules', 'AIOX', 'agents', 'qa.md'), '# qa');
+    write(path.join(tmpRoot, '.gemini', 'rules', 'YARD', 'agents', 'qa.md'), '# qa');
     expect(hasAgent(tmpRoot, 'qa')).toBe(true);
     expect(hasAgent(tmpRoot, 'missing')).toBe(false);
   });

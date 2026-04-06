@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AIOX Plan Progress Tracker
+ * YARD Plan Progress Tracker
  *
  * Story: 4.6 - Execution Engine
  * Epic: Epic 4 - Execution Engine
@@ -162,7 +162,7 @@ class PlanTracker {
         'plan',
         CONFIG.implementationFile
       ),
-      // .aiox plans location
+      // .yard plans location
       path.join(process.cwd(), '.yard', 'plans', this.storyId, CONFIG.implementationFile),
       // Epic-based location (e.g., yard-core-ade/story-4.6)
       ...this._getEpicBasedPaths(),
@@ -737,7 +737,7 @@ async function main() {
 
   if (args.length < 1 || args.includes('--help') || args.includes('-h')) {
     console.log(`
-\u{1F4CA} Plan Progress Tracker - AIOX Execution Engine (Story 4.6)
+\u{1F4CA} Plan Progress Tracker - YARD Execution Engine (Story 4.6)
 
 Usage:
   node plan-tracker.js <story-id> [command] [options]

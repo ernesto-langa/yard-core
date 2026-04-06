@@ -7,7 +7,7 @@ const {
 } = require('../../../../.yard-core/infrastructure/scripts/documentation-integrity/mode-detector');
 
 /**
- * Interactive Wizard for AIOX Installation
+ * Interactive Wizard for YARD Installation
  *
  * Supports three installation modes:
  * - GREENFIELD: New project - generates all docs and config
@@ -32,7 +32,7 @@ async function runWizard(options = {}) {
 
   try {
     // Step 1: Welcome screen
-    console.log('🚀 Welcome to AIOX Installer\n');
+    console.log('🚀 Welcome to YARD Installer\n');
 
     // Step 2: Detect installation mode (Story 6.9)
     console.log('📊 Analyzing project directory...');
@@ -211,7 +211,7 @@ async function confirmProjectType(detectedType) {
   const typeDescriptions = {
     GREENFIELD: 'New project - Yard will create complete structure',
     BROWNFIELD: 'Existing project - Yard will integrate with current setup',
-    EXISTING_AIOX: 'Yard already installed - Would you like to update or reinstall?',
+    EXISTING_YARD: 'Yard already installed - Would you like to update or reinstall?',
     UNKNOWN: 'Unknown project type - Manual selection required',
   };
 

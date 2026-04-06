@@ -621,7 +621,7 @@ class DependencyAnalyzer {
           taskId: id,
           taskTitle,
           taskDescription: `Dependency task for ${id}`,
-          agentName: 'aiox-developer',
+          agentName: 'yard-developer',
         };
         
       case 'workflow':

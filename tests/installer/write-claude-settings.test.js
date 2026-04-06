@@ -23,7 +23,7 @@ describe('ACT-12: writeClaudeSettings and getExistingLanguage', () => {
   let tempDir;
 
   beforeEach(async () => {
-    tempDir = path.join(os.tmpdir(), `aiox-test-settings-${Date.now()}`);
+    tempDir = path.join(os.tmpdir(), `yard-test-settings-${Date.now()}`);
     await fse.ensureDir(tempDir);
   });
 

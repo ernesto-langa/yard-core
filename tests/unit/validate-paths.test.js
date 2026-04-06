@@ -16,7 +16,7 @@ describe('Path Validator', () => {
   }
 
   beforeEach(() => {
-    tmpRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-path-validate-'));
+    tmpRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-path-validate-'));
     skillsDir = path.join(tmpRoot, '.codex', 'skills');
   });
 
@@ -28,7 +28,7 @@ describe('Path Validator', () => {
     write(path.join(tmpRoot, 'AGENTS.md'), '# Agents\n');
     write(path.join(tmpRoot, '.yard-core', 'product', 'templates', 'ide-rules', 'codex-rules.md'), '# codex\n');
     write(
-      path.join(skillsDir, 'aiox-dev', 'SKILL.md'),
+      path.join(skillsDir, 'yard-dev', 'SKILL.md'),
       [
         '# Skill',
         'Load .yard-core/development/agents/dev.md',
@@ -53,7 +53,7 @@ describe('Path Validator', () => {
     write(path.join(tmpRoot, 'AGENTS.md'), 'Path /Users/alan/Code/yard-core');
     write(path.join(tmpRoot, '.yard-core', 'product', 'templates', 'ide-rules', 'codex-rules.md'), '# codex\n');
     write(
-      path.join(skillsDir, 'aiox-dev', 'SKILL.md'),
+      path.join(skillsDir, 'yard-dev', 'SKILL.md'),
       [
         '# Skill',
         'Load .yard-core/development/agents/dev.md',
@@ -77,7 +77,7 @@ describe('Path Validator', () => {
   it('fails when skill lacks canonical activation paths', () => {
     write(path.join(tmpRoot, 'AGENTS.md'), '# Agents\n');
     write(path.join(tmpRoot, '.yard-core', 'product', 'templates', 'ide-rules', 'codex-rules.md'), '# codex\n');
-    write(path.join(skillsDir, 'aiox-dev', 'SKILL.md'), '# Skill\nUse dev\n');
+    write(path.join(skillsDir, 'yard-dev', 'SKILL.md'), '# Skill\nUse dev\n');
 
     const result = validatePaths({
       projectRoot: tmpRoot,

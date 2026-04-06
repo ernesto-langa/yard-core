@@ -22,7 +22,7 @@ describe('classifyLayer', () => {
 
     test('classifies bin/ executables as L1', () => {
       expect(classifyLayer('bin/yard.js')).toBe('L1');
-      expect(classifyLayer('bin/aiox-init.js')).toBe('L1');
+      expect(classifyLayer('bin/yard-init.js')).toBe('L1');
     });
 
     test('classifies constitution.md as L1', () => {

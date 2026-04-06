@@ -21,7 +21,7 @@ describe('Full Migration Integration', () => {
   let testDir;
 
   beforeEach(async () => {
-    testDir = path.join(os.tmpdir(), `aiox-full-migration-test-${Date.now()}`);
+    testDir = path.join(os.tmpdir(), `yard-full-migration-test-${Date.now()}`);
     await fs.promises.mkdir(testDir, { recursive: true });
   });
 
@@ -35,71 +35,71 @@ describe('Full Migration Integration', () => {
    * Create a mock v2.0 project structure for testing
    */
   async function createMockV20Project(dir) {
-    const aioxCoreDir = path.join(dir, '.yard-core');
+    const yardCoreDir = path.join(dir, '.yard-core');
 
     // Create development directories
-    await fs.promises.mkdir(path.join(aioxCoreDir, 'agents'), { recursive: true });
-    await fs.promises.mkdir(path.join(aioxCoreDir, 'tasks'), { recursive: true });
-    await fs.promises.mkdir(path.join(aioxCoreDir, 'templates'), { recursive: true });
-    await fs.promises.mkdir(path.join(aioxCoreDir, 'checklists'), { recursive: true });
-    await fs.promises.mkdir(path.join(aioxCoreDir, 'scripts'), { recursive: true });
+    await fs.promises.mkdir(path.join(yardCoreDir, 'agents'), { recursive: true });
+    await fs.promises.mkdir(path.join(yardCoreDir, 'tasks'), { recursive: true });
+    await fs.promises.mkdir(path.join(yardCoreDir, 'templates'), { recursive: true });
+    await fs.promises.mkdir(path.join(yardCoreDir, 'checklists'), { recursive: true });
+    await fs.promises.mkdir(path.join(yardCoreDir, 'scripts'), { recursive: true });
 
     // Create core directories
-    await fs.promises.mkdir(path.join(aioxCoreDir, 'registry'), { recursive: true });
-    await fs.promises.mkdir(path.join(aioxCoreDir, 'utils'), { recursive: true });
-    await fs.promises.mkdir(path.join(aioxCoreDir, 'config'), { recursive: true });
+    await fs.promises.mkdir(path.join(yardCoreDir, 'registry'), { recursive: true });
+    await fs.promises.mkdir(path.join(yardCoreDir, 'utils'), { recursive: true });
+    await fs.promises.mkdir(path.join(yardCoreDir, 'config'), { recursive: true });
 
     // Create product directories
-    await fs.promises.mkdir(path.join(aioxCoreDir, 'cli', 'commands'), { recursive: true });
+    await fs.promises.mkdir(path.join(yardCoreDir, 'cli', 'commands'), { recursive: true });
 
     // Create infrastructure directories
-    await fs.promises.mkdir(path.join(aioxCoreDir, 'hooks'), { recursive: true });
+    await fs.promises.mkdir(path.join(yardCoreDir, 'hooks'), { recursive: true });
 
     // Create sample files
     await fs.promises.writeFile(
-      path.join(aioxCoreDir, 'agents', 'dev.md'),
+      path.join(yardCoreDir, 'agents', 'dev.md'),
       '# Dev Agent\nDeveloper persona',
     );
     await fs.promises.writeFile(
-      path.join(aioxCoreDir, 'agents', 'qa.md'),
+      path.join(yardCoreDir, 'agents', 'qa.md'),
       '# QA Agent\nQuality assurance',
     );
     await fs.promises.writeFile(
-      path.join(aioxCoreDir, 'tasks', 'build.md'),
+      path.join(yardCoreDir, 'tasks', 'build.md'),
       '# Build Task\nBuild workflow',
     );
     await fs.promises.writeFile(
-      path.join(aioxCoreDir, 'registry', 'index.js'),
+      path.join(yardCoreDir, 'registry', 'index.js'),
       'const fs = require(\'fs\');\nconst utils = require(\'../utils\');\nmodule.exports = {};',
     );
     await fs.promises.writeFile(
-      path.join(aioxCoreDir, 'utils', 'helpers.js'),
+      path.join(yardCoreDir, 'utils', 'helpers.js'),
       'module.exports = { helper: () => true };',
     );
     await fs.promises.writeFile(
-      path.join(aioxCoreDir, 'cli', 'index.js'),
+      path.join(yardCoreDir, 'cli', 'index.js'),
       'const registry = require(\'../registry\');\nconst { Command } = require(\'commander\');\nmodule.exports = {};',
     );
     await fs.promises.writeFile(
-      path.join(aioxCoreDir, 'cli', 'commands', 'run.js'),
+      path.join(yardCoreDir, 'cli', 'commands', 'run.js'),
       'module.exports = { run: () => {} };',
     );
     await fs.promises.writeFile(
-      path.join(aioxCoreDir, 'hooks', 'pre-commit.js'),
+      path.join(yardCoreDir, 'hooks', 'pre-commit.js'),
       'module.exports = { hook: () => {} };',
     );
     await fs.promises.writeFile(
-      path.join(aioxCoreDir, 'index.js'),
+      path.join(yardCoreDir, 'index.js'),
       'module.exports = require("./registry");',
     );
 
     // Create config file
     await fs.promises.writeFile(
-      path.join(dir, 'aiox.config.js'),
+      path.join(dir, 'yard.config.js'),
       'module.exports = { name: "test-project" };',
     );
 
-    return aioxCoreDir;
+    return yardCoreDir;
   }
 
   describe('MIG-01: Backup Created', () => {
@@ -177,8 +177,8 @@ describe('Full Migration Integration', () => {
 
       await executeMigration(plan, { cleanupOriginals: false });
 
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      const importResult = await verifyImports(aioxCoreDir);
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      const importResult = await verifyImports(yardCoreDir);
 
       // In a migrated structure, imports may need updating
       // This test verifies the import verification runs
@@ -194,8 +194,8 @@ describe('Full Migration Integration', () => {
 
       await executeMigration(plan, { cleanupOriginals: false });
 
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      const validation = await validateStructure(aioxCoreDir);
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      const validation = await validateStructure(yardCoreDir);
 
       expect(validation.modules.core.exists).toBe(true);
       expect(validation.modules.development.exists).toBe(true);
@@ -301,12 +301,12 @@ describe('Full Migration Integration', () => {
       expect(migrationResult.success).toBe(true);
 
       // Step 6: Update imports
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      const importResult = await updateAllImports(aioxCoreDir, plan);
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      const importResult = await updateAllImports(yardCoreDir, plan);
       expect(importResult.totalFiles).toBeGreaterThan(0);
 
       // Step 7: Validate structure
-      const structureValidation = await validateStructure(aioxCoreDir);
+      const structureValidation = await validateStructure(yardCoreDir);
       expect(structureValidation.modules.core.exists).toBe(true);
       expect(structureValidation.modules.development.exists).toBe(true);
       expect(structureValidation.modules.product.exists).toBe(true);

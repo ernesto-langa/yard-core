@@ -31,8 +31,8 @@ const {
 
 describe('Global Config Manager', () => {
   const mockHomeDir = '/mock/home';
-  const mockAioxDir = path.join(mockHomeDir, '.yard');
-  const mockMcpDir = path.join(mockAioxDir, 'mcp');
+  const mockYardDir = path.join(mockHomeDir, '.yard');
+  const mockMcpDir = path.join(mockYardDir, 'mcp');
   const mockConfigPath = path.join(mockMcpDir, 'global-config.json');
 
   beforeEach(() => {

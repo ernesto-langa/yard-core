@@ -126,10 +126,10 @@ describe('detectProjectType', () => {
   });
 
   // ============================================================================
-  // AC #4: .yard-core Exists → EXISTING_AIOX
+  // AC #4: .yard-core Exists → EXISTING_YARD
   // ============================================================================
-  describe('AC #4: EXISTING_AIOX detection', () => {
-    test('detects EXISTING_AIOX when .yard-core exists', () => {
+  describe('AC #4: EXISTING_YARD detection', () => {
+    test('detects EXISTING_YARD when .yard-core exists', () => {
       // Setup
       fs.existsSync.mockImplementation((checkPath) => {
         if (checkPath === path.resolve('/test/existing')) return true;
@@ -140,11 +140,11 @@ describe('detectProjectType', () => {
       
       const result = detectProjectType('/test/existing');
       
-      expect(result).toBe('EXISTING_AIOX');
+      expect(result).toBe('EXISTING_YARD');
     });
 
-    test('EXISTING_AIOX takes priority over BROWNFIELD markers', () => {
-      // Setup: All markers present, but EXISTING_AIOX should win
+    test('EXISTING_YARD takes priority over BROWNFIELD markers', () => {
+      // Setup: All markers present, but EXISTING_YARD should win
       fs.existsSync.mockImplementation((checkPath) => {
         if (checkPath === path.resolve('/test/priority-test')) return true;
         // All markers present
@@ -157,8 +157,8 @@ describe('detectProjectType', () => {
       
       const result = detectProjectType('/test/priority-test');
       
-      // EXISTING_AIOX has highest priority
-      expect(result).toBe('EXISTING_AIOX');
+      // EXISTING_YARD has highest priority
+      expect(result).toBe('EXISTING_YARD');
     });
   });
 
@@ -262,7 +262,7 @@ describe('detectProjectType', () => {
   // Priority Order Verification
   // ============================================================================
   describe('Detection Priority Order', () => {
-    test('priority: EXISTING_AIOX > GREENFIELD', () => {
+    test('priority: EXISTING_YARD > GREENFIELD', () => {
       // Even if directory appears empty, .yard-core presence should win
       fs.existsSync.mockImplementation((checkPath) => {
         if (checkPath === path.resolve('/test/priority1')) return true;
@@ -273,7 +273,7 @@ describe('detectProjectType', () => {
       
       const result = detectProjectType('/test/priority1');
       
-      expect(result).toBe('EXISTING_AIOX');
+      expect(result).toBe('EXISTING_YARD');
     });
 
     test('priority: GREENFIELD > BROWNFIELD when directory is empty', () => {

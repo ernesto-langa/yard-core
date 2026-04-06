@@ -51,7 +51,7 @@ describe('Wizard IDE Flow Integration', () => {
       const agentFolder = path.join(testDir, '.cursor', 'rules');
       expect(await fs.pathExists(agentFolder)).toBe(true);
 
-      // Verify content has AIOX branding
+      // Verify content has YARD branding
       const content = await fs.readFile(configPath, 'utf8');
       expect(content).toContain('YARD');
       expect(content).toContain('Development Rules');
@@ -286,7 +286,7 @@ describe('Wizard IDE Flow Integration', () => {
       const configPath = path.join(testDir, '.cursor', 'rules.md');
       const content = await fs.readFile(configPath, 'utf8');
 
-      // Template should be generated with AIOX content
+      // Template should be generated with YARD content
       expect(content).toContain('YARD');
       expect(content).toContain('Development Rules');
       expect(content).toContain('Story-Driven Development');

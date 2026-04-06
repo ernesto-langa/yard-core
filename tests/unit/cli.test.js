@@ -94,7 +94,7 @@ describe('CLI Entry Point', () => {
       child.on('close', (code) => {
         // Doctor may exit with 0 or 1 depending on system state
         const combined = output + errors;
-        expect(combined).toContain('AIOX Doctor');
+        expect(combined).toContain('YARD Doctor');
         done();
       });
     });

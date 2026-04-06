@@ -18,7 +18,7 @@ const {
   SquadPublisher,
   SquadPublisherError,
   PublisherErrorCodes,
-  AIOX_SQUADS_REPO,
+  YARD_SQUADS_REPO,
   SAFE_NAME_PATTERN,
   sanitizeForShell,
   isValidName,
@@ -74,8 +74,8 @@ describe('SquadPublisher', () => {
   });
 
   describe('Constants', () => {
-    it('should export AIOX_SQUADS_REPO', () => {
-      expect(AIOX_SQUADS_REPO).toBe('YardAI/aiox-squads');
+    it('should export YARD_SQUADS_REPO', () => {
+      expect(YARD_SQUADS_REPO).toBe('YardAI/yard-squads');
     });
 
     it('should export PublisherErrorCodes enum', () => {
@@ -169,7 +169,7 @@ describe('SquadPublisher', () => {
 
     it('should use default repo when not specified', () => {
       const defaultPublisher = new SquadPublisher();
-      expect(defaultPublisher.repo).toBe(AIOX_SQUADS_REPO);
+      expect(defaultPublisher.repo).toBe(YARD_SQUADS_REPO);
     });
 
     it('should use custom repo when specified', () => {
@@ -316,7 +316,7 @@ describe('SquadPublisher', () => {
 
       const result = await dryRunPublisher.publish(validSquadPath);
 
-      expect(result.preview.repo).toBe(AIOX_SQUADS_REPO);
+      expect(result.preview.repo).toBe(YARD_SQUADS_REPO);
       expect(result.preview.category).toBe('community');
       expect(result.preview.body).toBeDefined();
     });
@@ -433,7 +433,7 @@ describe('SquadPublisher', () => {
       const body = publisher.generatePRBody(manifest);
 
       expect(body).toContain('### Pre-submission Checklist');
-      expect(body).toContain('[x] Squad follows AIOX task-first architecture');
+      expect(body).toContain('[x] Squad follows YARD task-first architecture');
       expect(body).toContain('[ ] No sensitive data included');
     });
 
@@ -446,7 +446,7 @@ describe('SquadPublisher', () => {
       const body = publisher.generatePRBody(manifest);
 
       expect(body).toContain('*publish-squad');
-      expect(body).toContain('AIOX-FullStack');
+      expect(body).toContain('YARD-FullStack');
     });
   });
 

@@ -2,7 +2,7 @@
  * Brownfield Analyzer Module
  *
  * Analyzes existing projects to detect structure, standards, and tech stack.
- * Used for brownfield mode installation to adapt AIOX to existing projects.
+ * Used for brownfield mode installation to adapt YARD to existing projects.
  *
  * @module documentation-integrity/brownfield-analyzer
  * @version 1.0.0
@@ -327,7 +327,7 @@ function analyzeDirectoryStructure(targetDir, analysis) {
     const archDir = path.join(targetDir, 'docs', 'architecture');
     if (fs.existsSync(archDir)) {
       analysis.conflicts.push(
-        'docs/architecture/ already exists - AIOX docs may need different location',
+        'docs/architecture/ already exists - YARD docs may need different location',
       );
     }
   }
@@ -342,7 +342,7 @@ function generateRecommendations(analysis) {
   // Linting recommendations
   if (analysis.linting !== 'none') {
     analysis.recommendations.push(
-      `Preserve existing ${analysis.linting} configuration - AIOX will adapt`,
+      `Preserve existing ${analysis.linting} configuration - YARD will adapt`,
     );
   } else {
     analysis.recommendations.push('Consider adding ESLint/Flake8 for code quality');
@@ -351,22 +351,22 @@ function generateRecommendations(analysis) {
   // Formatting recommendations
   if (analysis.formatting !== 'none') {
     analysis.recommendations.push(
-      `Keep existing ${analysis.formatting} settings - AIOX coding-standards.md will document them`,
+      `Keep existing ${analysis.formatting} settings - YARD coding-standards.md will document them`,
     );
   }
 
   // Workflow recommendations
   if (analysis.hasExistingWorkflows) {
-    analysis.recommendations.push('Review existing CI/CD before adding AIOX workflows');
+    analysis.recommendations.push('Review existing CI/CD before adding YARD workflows');
     analysis.mergeStrategy = 'manual';
   } else {
-    analysis.recommendations.push('Use *setup-github to add AIOX standard workflows');
+    analysis.recommendations.push('Use *setup-github to add YARD standard workflows');
     analysis.mergeStrategy = 'parallel';
   }
 
   // TypeScript recommendations
   if (analysis.configs.tsconfig) {
-    analysis.recommendations.push('AIOX will use existing tsconfig.json settings');
+    analysis.recommendations.push('YARD will use existing tsconfig.json settings');
   }
 
   // Framework-specific
@@ -375,7 +375,7 @@ function generateRecommendations(analysis) {
   }
 
   if (analysis.frameworks.includes('NestJS')) {
-    analysis.recommendations.push('NestJS detected - AIOX will adapt to module structure');
+    analysis.recommendations.push('NestJS detected - YARD will adapt to module structure');
   }
 }
 

@@ -1,5 +1,5 @@
 /**
- * Story AIOX-DIFF-4.0.5: Onboarding smoke tests in clean environment.
+ * Story YARD-DIFF-4.0.5: Onboarding smoke tests in clean environment.
  *
  * Objective:
  * - Validate that "Comece Aqui" onboarding flow remains executable.
@@ -13,7 +13,7 @@ const os = require('os');
 const path = require('path');
 const { execFileSync } = require('child_process');
 
-describe('Onboarding smoke flow (AIOX-DIFF-4.0.5)', () => {
+describe('Onboarding smoke flow (YARD-DIFF-4.0.5)', () => {
   const repoRoot = path.resolve(__dirname, '..', '..');
   const cliBin = path.join(repoRoot, 'bin', 'yard.js');
   const greetingScript = path.join(
@@ -41,7 +41,7 @@ describe('Onboarding smoke flow (AIOX-DIFF-4.0.5)', () => {
   };
 
   beforeEach(async () => {
-    tempDir = await fs.mkdtemp(path.join(os.tmpdir(), 'aiox-onboarding-smoke-'));
+    tempDir = await fs.mkdtemp(path.join(os.tmpdir(), 'yard-onboarding-smoke-'));
   });
 
   afterEach(async () => {
@@ -74,7 +74,7 @@ describe('Onboarding smoke flow (AIOX-DIFF-4.0.5)', () => {
     expect(readme).toContain('npx yard-core install');
 
     expect(gettingStarted).toContain('10-Minute Quick Path');
-    expect(gettingStarted).toContain('Step 1: Install AIOX');
+    expect(gettingStarted).toContain('Step 1: Install YARD');
     expect(gettingStarted).toContain('Step 2: Pick your IDE activation path');
     expect(gettingStarted).toContain('Step 3: Validate first value');
     expect(gettingStarted).toContain('*help');

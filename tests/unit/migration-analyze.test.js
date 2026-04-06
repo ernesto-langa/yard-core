@@ -21,7 +21,7 @@ describe('Migration Analyze Module', () => {
   let testDir;
 
   beforeEach(async () => {
-    testDir = path.join(os.tmpdir(), `aiox-analyze-test-${Date.now()}`);
+    testDir = path.join(os.tmpdir(), `yard-analyze-test-${Date.now()}`);
     await fs.promises.mkdir(testDir, { recursive: true });
   });
 
@@ -49,9 +49,9 @@ describe('Migration Analyze Module', () => {
 
   describe('detectV2Structure', () => {
     it('should detect v2.0 flat structure', async () => {
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'agents'), { recursive: true });
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'tasks'), { recursive: true });
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      await fs.promises.mkdir(path.join(yardCoreDir, 'agents'), { recursive: true });
+      await fs.promises.mkdir(path.join(yardCoreDir, 'tasks'), { recursive: true });
 
       const result = await detectV2Structure(testDir);
 
@@ -61,11 +61,11 @@ describe('Migration Analyze Module', () => {
     });
 
     it('should detect v2.1 modular structure', async () => {
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'core'), { recursive: true });
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'development'), { recursive: true });
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'product'), { recursive: true });
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'infrastructure'), { recursive: true });
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      await fs.promises.mkdir(path.join(yardCoreDir, 'core'), { recursive: true });
+      await fs.promises.mkdir(path.join(yardCoreDir, 'development'), { recursive: true });
+      await fs.promises.mkdir(path.join(yardCoreDir, 'product'), { recursive: true });
+      await fs.promises.mkdir(path.join(yardCoreDir, 'infrastructure'), { recursive: true });
 
       const result = await detectV2Structure(testDir);
 
@@ -112,16 +112,16 @@ describe('Migration Analyze Module', () => {
   describe('analyzeMigrationPlan', () => {
     it('should generate migration plan for v2.0 project', async () => {
       // Create v2.0 structure
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'agents'), { recursive: true });
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'tasks'), { recursive: true });
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'registry'), { recursive: true });
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'cli'), { recursive: true });
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      await fs.promises.mkdir(path.join(yardCoreDir, 'agents'), { recursive: true });
+      await fs.promises.mkdir(path.join(yardCoreDir, 'tasks'), { recursive: true });
+      await fs.promises.mkdir(path.join(yardCoreDir, 'registry'), { recursive: true });
+      await fs.promises.mkdir(path.join(yardCoreDir, 'cli'), { recursive: true });
 
-      await fs.promises.writeFile(path.join(aioxCoreDir, 'agents', 'dev.md'), 'Agent');
-      await fs.promises.writeFile(path.join(aioxCoreDir, 'tasks', 'build.md'), 'Task');
-      await fs.promises.writeFile(path.join(aioxCoreDir, 'registry', 'index.js'), 'Registry');
-      await fs.promises.writeFile(path.join(aioxCoreDir, 'cli', 'index.js'), 'CLI');
+      await fs.promises.writeFile(path.join(yardCoreDir, 'agents', 'dev.md'), 'Agent');
+      await fs.promises.writeFile(path.join(yardCoreDir, 'tasks', 'build.md'), 'Task');
+      await fs.promises.writeFile(path.join(yardCoreDir, 'registry', 'index.js'), 'Registry');
+      await fs.promises.writeFile(path.join(yardCoreDir, 'cli', 'index.js'), 'CLI');
 
       const plan = await analyzeMigrationPlan(testDir);
 
@@ -136,11 +136,11 @@ describe('Migration Analyze Module', () => {
 
     it('should return canMigrate false for v2.1 project', async () => {
       // Create v2.1 structure
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'core'), { recursive: true });
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'development'), { recursive: true });
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'product'), { recursive: true });
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'infrastructure'), { recursive: true });
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      await fs.promises.mkdir(path.join(yardCoreDir, 'core'), { recursive: true });
+      await fs.promises.mkdir(path.join(yardCoreDir, 'development'), { recursive: true });
+      await fs.promises.mkdir(path.join(yardCoreDir, 'product'), { recursive: true });
+      await fs.promises.mkdir(path.join(yardCoreDir, 'infrastructure'), { recursive: true });
 
       const plan = await analyzeMigrationPlan(testDir);
 
@@ -149,11 +149,11 @@ describe('Migration Analyze Module', () => {
 
     it('should detect conflicts', async () => {
       // Create v2.0 structure with existing v2.1 dir
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'agents'), { recursive: true });
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'core'), { recursive: true }); // Conflict
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      await fs.promises.mkdir(path.join(yardCoreDir, 'agents'), { recursive: true });
+      await fs.promises.mkdir(path.join(yardCoreDir, 'core'), { recursive: true }); // Conflict
 
-      await fs.promises.writeFile(path.join(aioxCoreDir, 'agents', 'dev.md'), 'Agent');
+      await fs.promises.writeFile(path.join(yardCoreDir, 'agents', 'dev.md'), 'Agent');
 
       const plan = await analyzeMigrationPlan(testDir);
 
@@ -172,9 +172,9 @@ describe('Migration Analyze Module', () => {
 
   describe('formatMigrationPlan', () => {
     it('should format plan as table', async () => {
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'agents'), { recursive: true });
-      await fs.promises.writeFile(path.join(aioxCoreDir, 'agents', 'dev.md'), 'Agent');
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      await fs.promises.mkdir(path.join(yardCoreDir, 'agents'), { recursive: true });
+      await fs.promises.writeFile(path.join(yardCoreDir, 'agents', 'dev.md'), 'Agent');
 
       const plan = await analyzeMigrationPlan(testDir);
       const formatted = formatMigrationPlan(plan);
@@ -188,9 +188,9 @@ describe('Migration Analyze Module', () => {
 
   describe('analyzeImports', () => {
     it('should analyze importable files', async () => {
-      const aioxCoreDir = path.join(testDir, '.yard-core');
-      await fs.promises.mkdir(path.join(aioxCoreDir, 'cli'), { recursive: true });
-      await fs.promises.writeFile(path.join(aioxCoreDir, 'cli', 'index.js'), 'module.exports = {}');
+      const yardCoreDir = path.join(testDir, '.yard-core');
+      await fs.promises.mkdir(path.join(yardCoreDir, 'cli'), { recursive: true });
+      await fs.promises.writeFile(path.join(yardCoreDir, 'cli', 'index.js'), 'module.exports = {}');
 
       const plan = await analyzeMigrationPlan(testDir);
       const imports = analyzeImports(plan);

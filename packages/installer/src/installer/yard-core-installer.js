@@ -17,7 +17,7 @@ const { hashFile } = require('./file-hasher');
  * Get the path to the source .yard-core directory in the package
  * @returns {string} Absolute path to .yard-core source
  */
-function getAioxCoreSourcePath() {
+function getYardCoreSourcePath() {
   // Navigate from packages/installer/src/installer/ to project root/.yard-core
   return path.join(__dirname, '..', '..', '..', '..', '.yard-core');
 }
@@ -65,7 +65,7 @@ const ROOT_FILES_TO_COPY = [
   'index.esm.js',
   'core-config.yaml',   // Core framework configuration
   'package.json',       // Module package definition
-  'constitution.md',    // AIOX fundamental principles
+  'constitution.md',    // YARD fundamental principles
   'user-guide.md',
   'working-in-the-brownfield.md',
 ];
@@ -84,15 +84,15 @@ function replaceRootPlaceholder(content, rootPath = '.yard-core') {
  * Generate file hashes for installed files
  * Story 7.2: Version Tracking
  *
- * @param {string} targetAioxCore - Path to .yard-core directory
+ * @param {string} targetYardCore - Path to .yard-core directory
  * @param {string[]} installedFiles - List of installed files (relative to .yard-core)
  * @returns {Promise<Object>} Object mapping file paths to their sha256 hashes
  */
-async function generateFileHashes(targetAioxCore, installedFiles) {
+async function generateFileHashes(targetYardCore, installedFiles) {
   const fileHashes = {};
 
   for (const filePath of installedFiles) {
-    const absolutePath = path.join(targetAioxCore, filePath);
+    const absolutePath = path.join(targetYardCore, filePath);
 
     try {
       if (await fs.pathExists(absolutePath)) {
@@ -116,7 +116,7 @@ async function generateFileHashes(targetAioxCore, installedFiles) {
  * Story 7.2: Version Tracking - Enables update command to detect changes
  *
  * @param {Object} options - Options
- * @param {string} options.targetAioxCore - Path to .yard-core directory
+ * @param {string} options.targetYardCore - Path to .yard-core directory
  * @param {string} options.version - Package version
  * @param {string[]} options.installedFiles - List of installed files
  * @param {string} [options.mode='project-development'] - Installation mode
@@ -124,13 +124,13 @@ async function generateFileHashes(targetAioxCore, installedFiles) {
  */
 async function generateVersionJson(options) {
   const {
-    targetAioxCore,
+    targetYardCore,
     version,
     installedFiles,
     mode = 'project-development',
   } = options;
 
-  const fileHashes = await generateFileHashes(targetAioxCore, installedFiles);
+  const fileHashes = await generateFileHashes(targetYardCore, installedFiles);
 
   const versionJson = {
     version,
@@ -140,7 +140,7 @@ async function generateVersionJson(options) {
     customized: [],
   };
 
-  const versionJsonPath = path.join(targetAioxCore, 'version.json');
+  const versionJsonPath = path.join(targetYardCore, 'version.json');
   await fs.writeJson(versionJsonPath, versionJson, { spaces: 2 });
 
   return versionJson;
@@ -230,10 +230,10 @@ async function copyDirectoryWithRootReplacement(sourceDir, destDir, onProgress =
  * @returns {Promise<Object>} Installation result
  *
  * @example
- * const result = await installAioxCore({ targetDir: '/path/to/project' });
+ * const result = await installYardCore({ targetDir: '/path/to/project' });
  * console.log(result.installedFiles); // List of installed files
  */
-async function installAioxCore(options = {}) {
+async function installYardCore(options = {}) {
   const {
     targetDir = process.cwd(),
     onProgress = null,
@@ -249,8 +249,8 @@ async function installAioxCore(options = {}) {
   const spinner = ora('Installing Yard core framework...').start();
 
   try {
-    const sourceDir = getAioxCoreSourcePath();
-    const targetAioxCore = path.join(targetDir, '.yard-core');
+    const sourceDir = getYardCoreSourcePath();
+    const targetYardCore = path.join(targetDir, '.yard-core');
 
     // Check if source exists
     if (!await fs.pathExists(sourceDir)) {
@@ -258,12 +258,12 @@ async function installAioxCore(options = {}) {
     }
 
     // Create target .yard-core directory
-    await fs.ensureDir(targetAioxCore);
+    await fs.ensureDir(targetYardCore);
 
     // Copy each folder
     for (const folder of FOLDERS_TO_COPY) {
       const folderSource = path.join(sourceDir, folder);
-      const folderDest = path.join(targetAioxCore, folder);
+      const folderDest = path.join(targetYardCore, folder);
 
       if (await fs.pathExists(folderSource)) {
         spinner.text = `Copying ${folder}...`;
@@ -284,7 +284,7 @@ async function installAioxCore(options = {}) {
     // Copy root files
     for (const file of ROOT_FILES_TO_COPY) {
       const fileSource = path.join(sourceDir, file);
-      const fileDest = path.join(targetAioxCore, file);
+      const fileDest = path.join(targetYardCore, file);
 
       if (await fs.pathExists(fileSource)) {
         spinner.text = `Copying ${file}...`;
@@ -306,7 +306,7 @@ async function installAioxCore(options = {}) {
     };
 
     await fs.writeFile(
-      path.join(targetAioxCore, 'install-manifest.yaml'),
+      path.join(targetYardCore, 'install-manifest.yaml'),
       require('js-yaml').dump(manifest),
       'utf8',
     );
@@ -314,7 +314,7 @@ async function installAioxCore(options = {}) {
     // Story 7.2: Create version.json with file hashes for update tracking
     spinner.text = 'Generating version tracking info...';
     const versionInfo = await generateVersionJson({
-      targetAioxCore,
+      targetYardCore,
       version: packageVersion,
       installedFiles: result.installedFiles,
       mode: 'project-development',
@@ -325,19 +325,19 @@ async function installAioxCore(options = {}) {
     // The copied .yard-core/package.json has dependencies (js-yaml, execa, etc.)
     // that must be installed for the activation pipeline to work
     // INS-4.12: Track dep install success for bootstrap guard
-    const aioxCorePackageJson = path.join(targetAioxCore, 'package.json');
-    result.aioxCoreDepsInstalled = false;
-    if (await fs.pathExists(aioxCorePackageJson)) {
+    const yardCorePackageJson = path.join(targetYardCore, 'package.json');
+    result.yardCoreDepsInstalled = false;
+    if (await fs.pathExists(yardCorePackageJson)) {
       spinner.text = 'Installing .yard-core dependencies (js-yaml, fast-glob, etc.)...';
       try {
         const { exec } = require('child_process');
         const { promisify } = require('util');
         const execAsync = promisify(exec);
         await execAsync('npm install --production --ignore-scripts', {
-          cwd: targetAioxCore,
+          cwd: targetYardCore,
           timeout: 60000,
         });
-        result.aioxCoreDepsInstalled = true;
+        result.yardCoreDepsInstalled = true;
         spinner.succeed('Installed .yard-core dependencies');
         spinner.start('Finishing installation...');
       } catch (depError) {
@@ -370,7 +370,7 @@ async function hasPackageJson(targetDir = process.cwd()) {
 }
 
 /**
- * Create a basic package.json for AIOX projects
+ * Create a basic package.json for YARD projects
  * @param {Object} options - Options
  * @param {string} [options.targetDir=process.cwd()] - Target directory
  * @param {string} [options.projectName] - Project name
@@ -387,14 +387,14 @@ async function createBasicPackageJson(options = {}) {
   const packageJson = {
     name: sanitizePackageName(projectName),
     version: '0.1.0',
-    description: `AIOX-powered ${projectType} project`,
+    description: `YARD-powered ${projectType} project`,
     private: true,
     scripts: {
       start: 'echo "Configure your start script"',
       test: 'echo "Configure your test script"',
       lint: 'echo "Configure your lint script"',
     },
-    keywords: ['aiox', projectType],
+    keywords: ['yard', projectType],
     license: 'MIT',
   };
 
@@ -416,10 +416,10 @@ function sanitizePackageName(name) {
 }
 
 module.exports = {
-  installAioxCore,
+  installYardCore,
   hasPackageJson,
   createBasicPackageJson,
-  getAioxCoreSourcePath,
+  getYardCoreSourcePath,
   copyFileWithRootReplacement,
   copyDirectoryWithRootReplacement,
   generateVersionJson,

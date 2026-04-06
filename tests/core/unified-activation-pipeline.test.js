@@ -659,14 +659,14 @@ describe('UnifiedActivationPipeline', () => {
       expect(ids).toContain('data-engineer');
       expect(ids).toContain('ux-design-expert');
       expect(ids).toContain('devops');
-      expect(ids).toContain('aiox-master');
+      expect(ids).toContain('yard-master');
       expect(ids).toContain('squad-creator');
     });
 
     it('isValidAgentId() should return true for valid IDs', () => {
       expect(UnifiedActivationPipeline.isValidAgentId('dev')).toBe(true);
       expect(UnifiedActivationPipeline.isValidAgentId('qa')).toBe(true);
-      expect(UnifiedActivationPipeline.isValidAgentId('aiox-master')).toBe(true);
+      expect(UnifiedActivationPipeline.isValidAgentId('yard-master')).toBe(true);
     });
 
     it('isValidAgentId() should return false for invalid IDs', () => {
@@ -682,7 +682,7 @@ describe('UnifiedActivationPipeline', () => {
   describe('default icon mapping', () => {
     it('should return correct icons for known agents', () => {
       expect(pipeline._getDefaultIcon('dev')).toBe('\uD83D\uDCBB');
-      expect(pipeline._getDefaultIcon('aiox-master')).toBe('\uD83D\uDC51');
+      expect(pipeline._getDefaultIcon('yard-master')).toBe('\uD83D\uDC51');
     });
 
     it('should return default robot icon for unknown agents', () => {
@@ -1051,31 +1051,31 @@ describe('UnifiedActivationPipeline', () => {
     });
 
     it('should use env var over config value', () => {
-      const originalEnv = process.env.AIOX_PIPELINE_TIMEOUT;
-      process.env.AIOX_PIPELINE_TIMEOUT = '800';
+      const originalEnv = process.env.YARD_PIPELINE_TIMEOUT;
+      process.env.YARD_PIPELINE_TIMEOUT = '800';
       try {
         const timeout = pipeline._resolvePipelineTimeout({ pipeline: { timeout_ms: 300 } });
         expect(timeout).toBe(800);
       } finally {
         if (originalEnv !== undefined) {
-          process.env.AIOX_PIPELINE_TIMEOUT = originalEnv;
+          process.env.YARD_PIPELINE_TIMEOUT = originalEnv;
         } else {
-          delete process.env.AIOX_PIPELINE_TIMEOUT;
+          delete process.env.YARD_PIPELINE_TIMEOUT;
         }
       }
     });
 
     it('should ignore invalid env var values', () => {
-      const originalEnv = process.env.AIOX_PIPELINE_TIMEOUT;
-      process.env.AIOX_PIPELINE_TIMEOUT = 'not-a-number';
+      const originalEnv = process.env.YARD_PIPELINE_TIMEOUT;
+      process.env.YARD_PIPELINE_TIMEOUT = 'not-a-number';
       try {
         const timeout = pipeline._resolvePipelineTimeout({});
         expect(timeout).toBe(DEFAULT_PIPELINE_TIMEOUT_MS);
       } finally {
         if (originalEnv !== undefined) {
-          process.env.AIOX_PIPELINE_TIMEOUT = originalEnv;
+          process.env.YARD_PIPELINE_TIMEOUT = originalEnv;
         } else {
-          delete process.env.AIOX_PIPELINE_TIMEOUT;
+          delete process.env.YARD_PIPELINE_TIMEOUT;
         }
       }
     });

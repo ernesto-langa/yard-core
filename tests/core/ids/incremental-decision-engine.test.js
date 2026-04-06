@@ -754,7 +754,7 @@ describe('IncrementalDecisionEngine', () => {
 
   describe('CLI command integration', () => {
     const { execSync } = require('child_process');
-    const cliPath = path.resolve(__dirname, '..', '..', '..', 'bin', 'aiox-ids.js');
+    const cliPath = path.resolve(__dirname, '..', '..', '..', 'bin', 'yard-ids.js');
 
     it('shows help when called without arguments', () => {
       const output = execSync(`node "${cliPath}" --help`, { encoding: 'utf8' });

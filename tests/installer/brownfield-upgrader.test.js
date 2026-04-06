@@ -134,10 +134,10 @@ describe('brownfield-upgrader', () => {
     });
 
     it('should identify modified files', () => {
-      const aioxCoreDir = path.join(targetDir, '.yard-core');
-      fs.ensureDirSync(aioxCoreDir);
-      fs.writeFileSync(path.join(aioxCoreDir, 'changed.md'), 'original');
-      const originalHash = `sha256:${hashFile(path.join(aioxCoreDir, 'changed.md'))}`;
+      const yardCoreDir = path.join(targetDir, '.yard-core');
+      fs.ensureDirSync(yardCoreDir);
+      fs.writeFileSync(path.join(yardCoreDir, 'changed.md'), 'original');
+      const originalHash = `sha256:${hashFile(path.join(yardCoreDir, 'changed.md'))}`;
 
       const sourceManifest = {
         version: '2.1.0',
@@ -154,9 +154,9 @@ describe('brownfield-upgrader', () => {
     });
 
     it('should identify user-modified files', () => {
-      const aioxCoreDir = path.join(targetDir, '.yard-core');
-      fs.ensureDirSync(aioxCoreDir);
-      fs.writeFileSync(path.join(aioxCoreDir, 'user-changed.md'), 'user modified content');
+      const yardCoreDir = path.join(targetDir, '.yard-core');
+      fs.ensureDirSync(yardCoreDir);
+      fs.writeFileSync(path.join(yardCoreDir, 'user-changed.md'), 'user modified content');
 
       const sourceManifest = {
         version: '2.1.0',

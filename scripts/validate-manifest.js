@@ -56,21 +56,21 @@ function loadManifest() {
  * @returns {Map<string, Object>} - Map of relativePath -> file metadata
  */
 function getCurrentFiles() {
-  const aioxCoreDir = path.join(__dirname, '..', '.yard-core');
+  const yardCoreDir = path.join(__dirname, '..', '.yard-core');
   const filesMap = new Map();
 
   // Scan folders
   const allFiles = [];
   for (const folder of FOLDERS_TO_COPY) {
-    const folderPath = path.join(aioxCoreDir, folder);
+    const folderPath = path.join(yardCoreDir, folder);
     if (fs.existsSync(folderPath)) {
-      scanDirectory(folderPath, aioxCoreDir, allFiles);
+      scanDirectory(folderPath, yardCoreDir, allFiles);
     }
   }
 
   // Add root files
   for (const file of ROOT_FILES_TO_COPY) {
-    const filePath = path.join(aioxCoreDir, file);
+    const filePath = path.join(yardCoreDir, file);
     if (fs.existsSync(filePath)) {
       allFiles.push(filePath);
     }
@@ -78,7 +78,7 @@ function getCurrentFiles() {
 
   // Build map
   for (const fullPath of allFiles) {
-    const relativePath = path.relative(aioxCoreDir, fullPath).replace(/\\/g, '/');
+    const relativePath = path.relative(yardCoreDir, fullPath).replace(/\\/g, '/');
     try {
       const hash = hashFile(fullPath);
       filesMap.set(relativePath, {
@@ -170,7 +170,7 @@ function validateManifest() {
  */
 function printReport(result) {
   console.log('='.repeat(60));
-  console.log('AIOX-Core Manifest Validation Report');
+  console.log('YARD-Core Manifest Validation Report');
   console.log('='.repeat(60));
   console.log('');
 

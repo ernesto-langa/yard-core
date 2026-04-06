@@ -1,6 +1,6 @@
 /**
  * Git fsmonitor detection utility.
- * Shared between bin/aiox.js (runDoctor) and tests.
+ * Shared between bin/yard.js (runDoctor) and tests.
  * Story: NOG-13
  */
 

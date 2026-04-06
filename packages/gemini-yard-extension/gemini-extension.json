@@ -51,7 +51,7 @@
     },
     {
       "name": "yard-agent",
-      "description": "Prepare activation prompt for a specific Yard agent (/aiox-agent <id>)",
+      "description": "Prepare activation prompt for a specific Yard agent (/yard-agent <id>)",
       "script": "commands/yard-agent.js"
     },
     {
@@ -136,7 +136,7 @@
     "configPath": "hooks/hooks.json"
   },
   "keywords": [
-    "aiox",
+    "yard",
     "agents",
     "orchestration",
     "development",

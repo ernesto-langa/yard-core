@@ -1,4 +1,4 @@
-# AIOX Gemini CLI Extension
+# YARD Gemini CLI Extension
 
 Brings YARD-Framework multi-agent orchestration to Gemini CLI.
 
@@ -32,7 +32,7 @@ Each launcher returns a ready-to-send activation prompt plus greeting preview.
 - `/yard-agent <id>` - Generic launcher by agent id
 
 ### Hooks
-Automatic integration with AIOX memory and security:
+Automatic integration with YARD memory and security:
 - Session context loading
 - Gotchas and patterns injection
 - Security validation (blocks secrets)
@@ -46,7 +46,7 @@ Automatic integration with AIOX memory and security:
 
 ## Cross-CLI Compatibility
 
-AIOX skills work identically in both Claude Code and Gemini CLI. Same agents, same commands, same format.
+YARD skills work identically in both Claude Code and Gemini CLI. Same agents, same commands, same format.
 
 ## License
 

@@ -25,7 +25,7 @@ describe('validate-gemini-integration', () => {
   });
 
   it('passes when required Gemini files exist', () => {
-    write(path.join(tmpRoot, '.gemini', 'rules', 'AIOX', 'agents', 'dev.md'), '# dev');
+    write(path.join(tmpRoot, '.gemini', 'rules', 'YARD', 'agents', 'dev.md'), '# dev');
     write(path.join(tmpRoot, '.gemini', 'commands', 'yard-menu.toml'), 'description = "menu"');
     write(path.join(tmpRoot, '.gemini', 'commands', 'yard-dev.toml'), 'description = "dev"');
     write(path.join(tmpRoot, '.yard-core', 'development', 'agents', 'dev.md'), '# dev');

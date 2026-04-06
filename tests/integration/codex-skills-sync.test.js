@@ -14,7 +14,7 @@ describe('Codex Skills Sync', () => {
   let expectedAgentCount;
 
   beforeEach(() => {
-    tmpRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-codex-skills-'));
+    tmpRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-codex-skills-'));
     expectedAgentCount = fs.readdirSync(path.join(process.cwd(), '.yard-core', 'development', 'agents'))
       .filter(name => name.endsWith('.md')).length;
   });
@@ -23,7 +23,7 @@ describe('Codex Skills Sync', () => {
     fs.rmSync(tmpRoot, { recursive: true, force: true });
   });
 
-  it('generates one SKILL.md per AIOX agent in local .codex/skills', () => {
+  it('generates one SKILL.md per YARD agent in local .codex/skills', () => {
     const localSkillsDir = path.join(tmpRoot, '.codex', 'skills');
     const result = syncSkills({
       sourceDir: path.join(process.cwd(), '.yard-core', 'development', 'agents'),
@@ -32,11 +32,11 @@ describe('Codex Skills Sync', () => {
     });
 
     expect(result.generated).toBe(expectedAgentCount);
-    const expected = path.join(localSkillsDir, 'aiox-architect', 'SKILL.md');
+    const expected = path.join(localSkillsDir, 'yard-architect', 'SKILL.md');
     expect(fs.existsSync(expected)).toBe(true);
 
     const content = fs.readFileSync(expected, 'utf8');
-    expect(content).toContain('name: aiox-architect');
+    expect(content).toContain('name: yard-architect');
     expect(content).toContain('Activation Protocol');
     expect(content).toContain('.yard-core/development/agents/architect.md');
     expect(content).toContain('generate-greeting.js architect');
@@ -56,7 +56,7 @@ describe('Codex Skills Sync', () => {
 
     expect(result.generated).toBe(expectedAgentCount);
     expect(result.globalSkillsDir).toBe(globalSkillsDir);
-    expect(fs.existsSync(path.join(globalSkillsDir, 'aiox-dev', 'SKILL.md'))).toBe(true);
+    expect(fs.existsSync(path.join(globalSkillsDir, 'yard-dev', 'SKILL.md'))).toBe(true);
   });
 
   it('treats globalOnly as global output and skips local writes', () => {
@@ -73,8 +73,8 @@ describe('Codex Skills Sync', () => {
 
     expect(result.generated).toBe(expectedAgentCount);
     expect(result.globalSkillsDir).toBe(globalSkillsDir);
-    expect(fs.existsSync(path.join(localSkillsDir, 'aiox-dev', 'SKILL.md'))).toBe(false);
-    expect(fs.existsSync(path.join(globalSkillsDir, 'aiox-dev', 'SKILL.md'))).toBe(true);
+    expect(fs.existsSync(path.join(localSkillsDir, 'yard-dev', 'SKILL.md'))).toBe(false);
+    expect(fs.existsSync(path.join(globalSkillsDir, 'yard-dev', 'SKILL.md'))).toBe(true);
   });
 
   it('buildSkillContent emits valid frontmatter and starter commands', () => {
@@ -86,7 +86,7 @@ describe('Codex Skills Sync', () => {
     };
     const content = buildSkillContent(sample);
     expect(content.startsWith('---')).toBe(true);
-    expect(content).toContain('name: aiox-dev');
+    expect(content).toContain('name: yard-dev');
     expect(content).toContain('`*help` - Show commands');
   });
 });

@@ -35,7 +35,7 @@ function parseArgs(argv = process.argv.slice(2)) {
 function listSkillFiles(skillsDir) {
   if (!fs.existsSync(skillsDir)) return [];
   return fs.readdirSync(skillsDir, { withFileTypes: true })
-    .filter(entry => entry.isDirectory() && entry.name.startsWith('aiox-'))
+    .filter(entry => entry.isDirectory() && entry.name.startsWith('yard-'))
     .map(entry => path.join(skillsDir, entry.name, 'SKILL.md'))
     .filter(file => fs.existsSync(file));
 }

@@ -1,5 +1,5 @@
 /**
- * InstallTransaction - Transaction manager for AIOX installer
+ * InstallTransaction - Transaction manager for YARD installer
  *
  * Provides atomic installation operations with automatic rollback on failure.
  * Backs up files before modification and restores them if installation fails.
@@ -204,7 +204,7 @@ class InstallTransaction {
    *
    * @example
    * try {
-   *   await installAIOX();
+   *   await installYARD();
    * } catch (error) {
    *   await transaction.rollback();
    * }

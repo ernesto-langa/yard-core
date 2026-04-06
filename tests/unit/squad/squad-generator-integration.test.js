@@ -219,7 +219,7 @@ describe('SquadGenerator Integration Tests', () => {
       expect(manifest.version).toBe('1.0.0');
       expect(manifest.description).toBe('Manifest loading test');
       expect(manifest.author).toBe('Integration Test');
-      expect(manifest.aiox.type).toBe('squad');
+      expect(manifest.yard.type).toBe('squad');
     });
   });
 
@@ -240,7 +240,7 @@ describe('SquadGenerator Integration Tests', () => {
       const manifest = await loader.loadManifest(createResult.path);
 
       expect(manifest.name).toBe('e2e-test-squad');
-      expect(manifest.aiox.minVersion).toBeDefined();
+      expect(manifest.yard.minVersion).toBeDefined();
 
       // 3. Validate
       const validation = await validator.validate(createResult.path);

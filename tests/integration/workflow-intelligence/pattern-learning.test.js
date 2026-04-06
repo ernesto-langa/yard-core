@@ -317,10 +317,10 @@ describe('Pattern Learning Integration', () => {
 
     it('should handle disabled state gracefully', async () => {
       // Save original env
-      const originalEnv = process.env.AIOX_PATTERN_CAPTURE;
+      const originalEnv = process.env.YARD_PATTERN_CAPTURE;
 
       try {
-        process.env.AIOX_PATTERN_CAPTURE = 'false';
+        process.env.YARD_PATTERN_CAPTURE = 'false';
         captureHook.reset();
 
         const result = await captureHook.onTaskComplete('develop', {});
@@ -329,9 +329,9 @@ describe('Pattern Learning Integration', () => {
       } finally {
         // Restore env
         if (originalEnv !== undefined) {
-          process.env.AIOX_PATTERN_CAPTURE = originalEnv;
+          process.env.YARD_PATTERN_CAPTURE = originalEnv;
         } else {
-          delete process.env.AIOX_PATTERN_CAPTURE;
+          delete process.env.YARD_PATTERN_CAPTURE;
         }
         captureHook.reset();
       }

@@ -60,7 +60,7 @@ describe('Squad Analyze & Extend Integration', () => {
       version: '1.0.0',
       description: 'Integration test squad',
       author: 'test',
-      aiox: { minVersion: '2.1.0' },
+      yard: { minVersion: '2.1.0' },
       components: {
         agents: ['initial-agent.md'],
         tasks: [],

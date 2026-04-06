@@ -77,8 +77,8 @@ describe('IDE Sync Integration (Story INS-4.5)', () => {
       expect(wizardSource).toContain("answers.ideSyncStatus = 'failed'");
     });
 
-    test('failure message suggests aiox doctor --fix', () => {
-      expect(wizardSource).toContain("aiox doctor --fix");
+    test('failure message suggests yard doctor --fix', () => {
+      expect(wizardSource).toContain("yard doctor --fix");
     });
 
     test('install summary includes sync status on success', () => {

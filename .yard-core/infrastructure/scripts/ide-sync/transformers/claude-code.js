@@ -3,7 +3,7 @@
  * @story 6.19 - IDE Command Auto-Sync System
  *
  * Format: Full markdown file with embedded YAML block
- * Target: .claude/commands/AIOX/agents/*.md
+ * Target: .claude/commands/YARD/agents/*.md
  */
 
 /**
@@ -16,7 +16,7 @@ function transform(agentData) {
   // Claude Code uses the full original file
   if (agentData.raw) {
     // Add sync footer if not present
-    const syncFooter = `\n---\n*AIOX Agent - Synced from .yard-core/development/agents/${agentData.filename}*\n`;
+    const syncFooter = `\n---\n*YARD Agent - Synced from .yard-core/development/agents/${agentData.filename}*\n`;
 
     if (!agentData.raw.includes('Synced from .yard-core/development/agents/')) {
       return agentData.raw.trimEnd() + syncFooter;
@@ -39,7 +39,7 @@ function generateMinimalContent(agentData) {
 
   const icon = agent.icon || '🤖';
   const name = agent.name || agentData.id;
-  const title = agent.title || 'AIOX Agent';
+  const title = agent.title || 'YARD Agent';
   const whenToUse = agent.whenToUse || 'Use this agent for specific tasks';
 
   let content = `# ${agentData.id}
@@ -62,7 +62,7 @@ ${icon} **${name}** - ${title}
 
   content += `
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/${agentData.filename}*
+*YARD Agent - Synced from .yard-core/development/agents/${agentData.filename}*
 `;
 
   return content;

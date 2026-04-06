@@ -183,7 +183,7 @@ function updateClaudeConfig(trackingEnabled = true) {
       config = JSON.parse(fs.readFileSync(claudeConfigPath, 'utf8'));
     }
 
-    config.aioxLLMRouting = {
+    config.yardLLMRouting = {
       version: LLM_ROUTING_VERSION,
       installedAt: new Date().toISOString(),
       commands: ['claude-max', 'claude-free', 'deepseek-usage', 'deepseek-proxy'],
@@ -268,7 +268,7 @@ module.exports = {
 
 // Run if executed directly
 if (require.main === module) {
-  console.log('\n🚀 AIOX LLM Routing Installer\n');
+  console.log('\n🚀 YARD LLM Routing Installer\n');
 
   const result = installLLMRouting({
     projectRoot: process.cwd(),

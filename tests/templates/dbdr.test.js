@@ -368,7 +368,7 @@ describe('DBDR Template', () => {
    * DBDR-07: CLI command executes successfully
    * Priority: P0
    * AC: AC3.10.8 - Template registrado no TemplateEngine
-   * AC: AC3.10.9 - Geração via CLI: aiox generate dbdr
+   * AC: AC3.10.9 - Geração via CLI: yard generate dbdr
    */
   describe('DBDR-07: CLI command executes successfully', () => {
     it('should be included in supported types', () => {

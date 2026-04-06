@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AIOX QA Loop Orchestrator
+ * YARD QA Loop Orchestrator
  *
  * Story: 6.5 - QA Loop Orchestrator
  * Epic: Epic 6 - QA Evolution
@@ -147,7 +147,7 @@ class QALoopOrchestrator {
     const configPaths = [
       path.join(process.cwd(), '.yard', 'config.yaml'),
       path.join(process.cwd(), '.yard', 'config.yml'),
-      path.join(this.rootPath, 'aiox.config.js'),
+      path.join(this.rootPath, 'yard.config.js'),
     ];
 
     for (const configPath of configPaths) {
@@ -1037,7 +1037,7 @@ function checkAbandonedLoops(options = {}) {
 
 function printHelp() {
   console.log(`
-📊 QA Loop Orchestrator - AIOX QA Evolution (Story 6.5)
+📊 QA Loop Orchestrator - YARD QA Evolution (Story 6.5)
 
 Usage:
   node qa-loop-orchestrator.js <story-id> [command] [options]

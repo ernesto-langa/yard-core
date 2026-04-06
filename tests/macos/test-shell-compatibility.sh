@@ -14,7 +14,7 @@ NC='\033[0m' # No Color
 # Test metadata
 TEST_NAME="AC3: Shell Compatibility"
 TEST_SCRIPT="test-shell-compatibility.sh"
-LOG_FILE="/tmp/aiox-test-shell-$(date +%Y%m%d-%H%M%S).log"
+LOG_FILE="/tmp/yard-test-shell-$(date +%Y%m%d-%H%M%S).log"
 
 # Utility functions
 log_info() {
@@ -71,12 +71,12 @@ test_zsh_profile() {
     cp "$ZSHRC" "${ZSHRC}.backup.$(date +%Y%m%d-%H%M%S)"
     log_info "Backed up .zshrc"
 
-    # Check if AIOX path is in .zshrc
-    if grep -q "AIOX" "$ZSHRC" 2>/dev/null; then
-        log_info "AIOX configuration found in .zshrc"
-        pass_test "Zsh profile contains AIOX configuration"
+    # Check if YARD path is in .zshrc
+    if grep -q "YARD" "$ZSHRC" 2>/dev/null; then
+        log_info "YARD configuration found in .zshrc"
+        pass_test "Zsh profile contains YARD configuration"
     else
-        log_warning "AIOX configuration not found in .zshrc"
+        log_warning "YARD configuration not found in .zshrc"
         log_info "This may be expected if installation hasn't run yet"
     fi
 
@@ -102,9 +102,9 @@ test_bash_profile() {
             # Backup
             cp "$PROFILE" "${PROFILE}.backup.$(date +%Y%m%d-%H%M%S)"
 
-            # Check for AIOX configuration
-            if grep -q "AIOX" "$PROFILE" 2>/dev/null; then
-                log_info "AIOX configuration found in $PROFILE"
+            # Check for YARD configuration
+            if grep -q "YARD" "$PROFILE" 2>/dev/null; then
+                log_info "YARD configuration found in $PROFILE"
             fi
 
             # Test bash can source the profile
@@ -133,13 +133,13 @@ test_path_persistence() {
     BASH_PATH=$(bash -l -c 'echo $PATH')
     log_info "Bash PATH: $BASH_PATH"
 
-    # Check if aiox is in PATH
-    if command -v aiox &> /dev/null; then
-        AIOX_LOCATION=$(which aiox)
-        log_info "aiox command found at: $AIOX_LOCATION"
-        pass_test "aiox command is in PATH"
+    # Check if yard is in PATH
+    if command -v yard &> /dev/null; then
+        YARD_LOCATION=$(which yard)
+        log_info "yard command found at: $YARD_LOCATION"
+        pass_test "yard command is in PATH"
     else
-        log_warning "aiox command not found in PATH (may not be installed yet)"
+        log_warning "yard command not found in PATH (may not be installed yet)"
     fi
 }
 

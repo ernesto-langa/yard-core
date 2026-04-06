@@ -1,5 +1,5 @@
 /**
- * AIOX-FullStack MCP Installation Module
+ * YARD-FullStack MCP Installation Module
  * Story 1.5: MCP Installation (Project-Level)
  *
  * Installs 4 essential MCPs at project level:
@@ -160,12 +160,12 @@ async function installProjectMCPs(options = {}) {
     errors: [],
   };
 
-  // Create .aiox directory for logs
-  const aioxDir = path.join(projectPath, '.yard');
-  await fse.ensureDir(aioxDir);
+  // Create .yard directory for logs
+  const yardDir = path.join(projectPath, '.yard');
+  await fse.ensureDir(yardDir);
 
-  const logPath = path.join(aioxDir, 'install-log.txt');
-  const errorLogPath = path.join(aioxDir, 'install-errors.log');
+  const logPath = path.join(yardDir, 'install-log.txt');
+  const errorLogPath = path.join(yardDir, 'install-errors.log');
 
   // Initialize logs
   await appendLog(logPath, `[${new Date().toISOString()}] [INFO] Starting MCP installation...`);

@@ -15,7 +15,7 @@ const { maskEmail, openBrowser, promptEmail, recoverLicense, RECOVERY_URL, RECOV
 
 describe('Recovery Constants', () => {
   test('RECOVERY_URL is the correct portal URL', () => {
-    expect(RECOVERY_URL).toBe('https://aiox-license-server.vercel.app/reset-password');
+    expect(RECOVERY_URL).toBe('https://yard-license-server.vercel.app/reset-password');
   });
 
   test('RECOVERY_MESSAGE is the anti-enumeration message', () => {

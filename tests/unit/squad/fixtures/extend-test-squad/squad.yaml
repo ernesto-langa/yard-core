@@ -3,7 +3,7 @@ version: 1.0.0
 description: Test squad for extender tests
 author: test
 
-aiox:
+yard:
   minVersion: "2.1.0"
 
 components:

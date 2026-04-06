@@ -1,5 +1,5 @@
 {
-  "name": "@aiox/{{kebabCase serviceName}}",
+  "name": "@yard/{{kebabCase serviceName}}",
   "version": "1.0.0",
   "description": "{{description}}",
   "main": "dist/index.js",
@@ -41,13 +41,13 @@
     "prepublishOnly": "npm run clean && npm run build && npm test"
   },
   "keywords": [
-    "aiox",
+    "yard",
     "{{kebabCase serviceName}}",
     "service"{{#if isApiIntegration}},
     "api",
     "integration"{{/if}}
   ],
-  "author": "AIOX-FullStack",
+  "author": "YARD-FullStack",
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0"
@@ -73,13 +73,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aiox-fullstack/{{kebabCase serviceName}}.git"
+    "url": "https://github.com/yard-fullstack/{{kebabCase serviceName}}.git"
   },
   "bugs": {
-    "url": "https://github.com/aiox-fullstack/{{kebabCase serviceName}}/issues"
+    "url": "https://github.com/yard-fullstack/{{kebabCase serviceName}}/issues"
   },
-  "homepage": "https://github.com/aiox-fullstack/{{kebabCase serviceName}}#readme",
-  "aiox": {
+  "homepage": "https://github.com/yard-fullstack/{{kebabCase serviceName}}#readme",
+  "yard": {
     "storyId": "{{storyId}}",
     "type": "{{#if isApiIntegration}}api-integration{{else}}utility-service{{/if}}",
     "generatedAt": "{{generatedAt}}"

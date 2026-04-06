@@ -17,7 +17,7 @@ const FIXTURES_DIR = path.join(__dirname, '..', '..', 'fixtures', 'handoffs');
 const KNOWN_AGENTS = [
   '@sm', '@po', '@dev', '@qa', '@devops', '@pm',
   '@architect', '@analyst', '@data-engineer', '@ux-design-expert',
-  '@squad-creator', '@aiox-master',
+  '@squad-creator', '@yard-master',
 ];
 
 describe('Workflow Chains (Story WIS-16)', () => {
@@ -66,7 +66,7 @@ describe('Workflow Chains (Story WIS-16)', () => {
       }
     });
 
-    test('all agents in chains are known AIOX agents', () => {
+    test('all agents in chains are known YARD agents', () => {
       for (const workflow of chainsData.workflows) {
         for (const step of workflow.chain) {
           expect(KNOWN_AGENTS).toContain(step.agent);
@@ -315,7 +315,7 @@ describe('Workflow Chains (Story WIS-16)', () => {
     const agentFiles = [
       'dev.md', 'qa.md', 'devops.md', 'architect.md', 'pm.md', 'po.md',
       'sm.md', 'analyst.md', 'data-engineer.md', 'ux-design-expert.md',
-      'squad-creator.md', 'aiox-master.md',
+      'squad-creator.md', 'yard-master.md',
     ];
 
     test.each(agentFiles)('%s contains step 5.5 handoff suggestion', (file) => {

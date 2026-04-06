@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AIOX Pattern Extractor
+ * YARD Pattern Extractor
  * Story 7.3: Extracts and documents code patterns from the codebase
  *
  * Analyzes code via AST and regex to detect common patterns,
@@ -1419,7 +1419,7 @@ async function main() {
 
   if (args.includes('--help') || args.includes('-h')) {
     console.log(`
-AIOX Pattern Extractor
+YARD Pattern Extractor
 Extracts and documents code patterns from the codebase.
 
 Usage:

@@ -19,7 +19,7 @@ const RULES = [
     severity: 'error',
     pattern: /\bexpansion pack(s)?\b/gi,
     replacement: 'squad',
-    reason: 'Use AIOX-first taxonomy for domain agent sets.',
+    reason: 'Use YARD-first taxonomy for domain agent sets.',
   },
   {
     id: 'deprecated-permission-mode',

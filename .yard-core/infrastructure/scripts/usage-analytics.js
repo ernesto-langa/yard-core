@@ -22,7 +22,7 @@ class UsageAnalytics {
         /executeTask\(['"`]([^'"`]+)['"`]\)/g,
       ],
       agentReferences: [
-        /aiox-developer/g,
+        /yard-developer/g,
         /meta-agent/g,
         /@agent\s+([a-zA-Z-]+)/g,
       ],

@@ -106,7 +106,7 @@ function loadUsageData() {
   return {
     version: '1.0.0',
     schema: 'tool-usage-analytics',
-    description: 'Tool usage tracking data for AIOX token optimization (TOK-5)',
+    description: 'Tool usage tracking data for YARD token optimization (TOK-5)',
     sessions: []
   };
 }

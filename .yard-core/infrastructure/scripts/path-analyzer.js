@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AIOX Path Analyzer
+ * YARD Path Analyzer
  * Story 2.2: Analyzes dependencies between assets and detects broken references
  *
  * Usage:
@@ -338,7 +338,7 @@ function formatConsoleOutput(report, verbose = false) {
 
   lines.push('');
   lines.push('═══════════════════════════════════════════════════════════');
-  lines.push('  AIOX Path Analysis Report');
+  lines.push('  YARD Path Analysis Report');
   lines.push(`  Generated: ${report.generated}`);
   lines.push('═══════════════════════════════════════════════════════════');
   lines.push('');
@@ -399,7 +399,7 @@ async function main() {
 
   if (args.includes('--help')) {
     console.log(`
-AIOX Path Analyzer
+YARD Path Analyzer
 
 Usage:
   node path-analyzer.js [options]

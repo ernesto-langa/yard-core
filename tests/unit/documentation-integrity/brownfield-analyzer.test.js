@@ -23,7 +23,7 @@ describe('Brownfield Analyzer', () => {
   let tempDir;
 
   beforeEach(() => {
-    tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'aiox-brownfield-test-'));
+    tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'yard-brownfield-test-'));
   });
 
   afterEach(() => {
