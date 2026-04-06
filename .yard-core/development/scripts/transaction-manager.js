@@ -1,5 +1,5 @@
 /**
- * Transaction Manager for AIOX-FULLSTACK
+ * Transaction Manager for YARD-FULLSTACK
  * Manages component operations with rollback support
  * @module transaction-manager
  */

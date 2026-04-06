@@ -5,7 +5,7 @@
 # Runtime data
 .yard/
 .synapse/
-.aiox-core/
+.yard-core/
 
 # Tests
 tests/

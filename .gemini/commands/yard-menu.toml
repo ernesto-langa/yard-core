@@ -1,9 +1,9 @@
-description = "Menu rápido AIOX (lista agentes e orienta qual ativar)"
+description = "Menu rápido YARD (lista agentes e orienta qual ativar)"
 prompt = """
-Você está no launcher AIOX para Gemini.
+Você está no launcher YARD para Gemini.
 
 Mostre a lista de agentes abaixo em formato numerado, explicando em 1 linha quando usar cada um:
-1. /yard-master - AIOX Master Orchestrator & Framework Developer (Use when you need comprehensive expertise across all domains, framework component creation/modification, workflow orche…)
+1. /yard-master - YARD Master Orchestrator & Framework Developer (Use when you need comprehensive expertise across all domains, framework component creation/modification, workflow orche…)
 2. /yard-analyst - Business Analyst (Use for market research, competitive analysis, user research, brainstorming session facilitation, structured ideation w…)
 3. /yard-architect - Architect (Use for system architecture (fullstack, backend, frontend, infrastructure), technology stack selection (technical evalu…)
 4. /yard-data-engineer - Database Architect & Operations Engineer (Use for database design, schema architecture, Supabase configuration, RLS policies, migrations, query optimization, dat…)

@@ -9,9 +9,9 @@
 - `*help` - Show all available commands with descriptions
 - `*design-squad` - Design squad from documentation with intelligent recommendations
 - `*create-squad` - Create new squad following task-first architecture
-- `*validate-squad` - Validate squad against JSON Schema and AIOX standards
+- `*validate-squad` - Validate squad against JSON Schema and YARD standards
 - `*list-squads` - List all local squads in the project
-- `*migrate-squad` - Migrate legacy squad to AIOX 2.1 format
+- `*migrate-squad` - Migrate legacy squad to YARD 2.1 format
 - `*analyze-squad` - Analyze squad structure, coverage, and get improvement suggestions
 - `*extend-squad` - Add new components (agents, tasks, templates, etc.) to existing squad
 - `*exit` - Exit squad-creator mode
@@ -21,13 +21,13 @@
 - `*help` - Show all available commands with descriptions
 - `*design-squad` - Design squad from documentation with intelligent recommendations
 - `*create-squad` - Create new squad following task-first architecture
-- `*validate-squad` - Validate squad against JSON Schema and AIOX standards
+- `*validate-squad` - Validate squad against JSON Schema and YARD standards
 - `*list-squads` - List all local squads in the project
-- `*migrate-squad` - Migrate legacy squad to AIOX 2.1 format
+- `*migrate-squad` - Migrate legacy squad to YARD 2.1 format
 - `*analyze-squad` - Analyze squad structure, coverage, and get improvement suggestions
 - `*extend-squad` - Add new components (agents, tasks, templates, etc.) to existing squad
-- `*download-squad` - Download public squad from aiox-squads repository (Sprint 8)
-- `*publish-squad` - Publish squad to aiox-squads repository (Sprint 8)
+- `*download-squad` - Download public squad from yard-squads repository (Sprint 8)
+- `*publish-squad` - Publish squad to yard-squads repository (Sprint 8)
 - `*sync-squad-synkra` - Sync squad to Yard API marketplace (Sprint 8)
 - `*guide` - Show comprehensive usage guide for this agent
 - `*yolo` - Toggle permission mode (cycle: ask > auto > explore)
@@ -38,4 +38,4 @@
 **I collaborate with:**
 
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/squad-creator.md*
+*YARD Agent - Synced from .yard-core/development/agents/squad-creator.md*

@@ -1,5 +1,5 @@
 /**
- * Template Validator for AIOX-FULLSTACK
+ * Template Validator for YARD-FULLSTACK
  * Validates component templates for required structure and placeholders
  * @module template-validator
  */

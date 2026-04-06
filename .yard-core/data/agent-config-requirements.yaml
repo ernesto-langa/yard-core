@@ -1,5 +1,5 @@
 agents:
-  aiox-master:
+  yard-master:
     performance_target: "<50ms"
     config_sections: []
     files_loaded: []
@@ -75,11 +75,11 @@ agents:
     lazy_loading:
       agent_registry: true
       squad_manifest: true
-  aiox-developer:
+  yard-developer:
     performance_target: "<100ms"
     config_sections: []
     files_loaded: []
-  aiox-orchestrator:
+  yard-orchestrator:
     performance_target: "<100ms"
     config_sections: []
     files_loaded: []

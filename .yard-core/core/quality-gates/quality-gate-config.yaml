@@ -47,7 +47,7 @@ layer2:
   quinn:
     enabled: true
     autoReview: true
-    agentPath: ".claude/commands/AIOX/agents/qa.md"
+    agentPath: ".claude/commands/YARD/agents/qa.md"
     severity:
       block: ["CRITICAL"]
       warn: ["HIGH", "MEDIUM"]
@@ -68,14 +68,14 @@ layer3:
 
 # Report settings
 reports:
-  location: ".aiox/qa-reports"
+  location: ".yard/qa-reports"
   format: "json"  # json | yaml | markdown
   retention: 30   # days to keep reports
   includeMetrics: true
 
 # Status persistence
 status:
-  location: ".aiox/qa-status.json"
+  location: ".yard/qa-status.json"
   updateOnChange: true
 
 # Verbose output settings

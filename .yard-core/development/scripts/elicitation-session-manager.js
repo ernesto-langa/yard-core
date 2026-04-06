@@ -9,7 +9,7 @@ const path = require('path');
 const crypto = require('crypto');
 
 class ElicitationSessionManager {
-  constructor(sessionDir = '.aiox-sessions') {
+  constructor(sessionDir = '.yard-sessions') {
     this.sessionDir = path.resolve(process.cwd(), sessionDir);
     this.activeSession = null;
   }

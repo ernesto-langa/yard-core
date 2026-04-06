@@ -210,11 +210,11 @@ jobs:
           git config --local user.name "github-actions[bot]"
 
           # Check if metrics file exists and is not gitignored
-          if [ -f .aiox/data/quality-metrics.json ]; then
-            if git check-ignore -q .aiox/data/quality-metrics.json 2>/dev/null; then
+          if [ -f .yard/data/quality-metrics.json ]; then
+            if git check-ignore -q .yard/data/quality-metrics.json 2>/dev/null; then
               echo "ℹ️ Metrics file is gitignored - skipping commit"
             else
-              git add .aiox/data/quality-metrics.json
+              git add .yard/data/quality-metrics.json
             fi
           fi
 

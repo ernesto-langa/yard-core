@@ -410,7 +410,7 @@ class SquadAnalyzer {
       author: manifest.author || 'Unknown',
       license: manifest.license || 'MIT',
       description: manifest.description || '',
-      aioxMinVersion: manifest.aiox?.minVersion || '2.1.0',
+      yardMinVersion: manifest.yard?.minVersion || '2.1.0',
     };
   }
 
@@ -482,7 +482,7 @@ class SquadAnalyzer {
     lines.push(`  Version: ${overview.version}`);
     lines.push(`  Author: ${overview.author}`);
     lines.push(`  License: ${overview.license}`);
-    lines.push(`  AIOX Min Version: ${overview.aioxMinVersion}`);
+    lines.push(`  YARD Min Version: ${overview.yardMinVersion}`);
     if (overview.description) {
       lines.push(`  Description: ${overview.description}`);
     }
@@ -570,7 +570,7 @@ class SquadAnalyzer {
     lines.push(`| Version | ${overview.version} |`);
     lines.push(`| Author | ${overview.author} |`);
     lines.push(`| License | ${overview.license} |`);
-    lines.push(`| AIOX Min Version | ${overview.aioxMinVersion} |`);
+    lines.push(`| YARD Min Version | ${overview.yardMinVersion} |`);
     lines.push('');
 
     lines.push('## Components');

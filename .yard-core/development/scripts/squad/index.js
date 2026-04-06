@@ -8,7 +8,7 @@
  * @see {@link ./squad-validator.js} - Validate squad structure (SQS-3)
  * @see {@link ./squad-generator.js} - Generate new squads (SQS-4)
  * @see {@link ./squad-designer.js} - Design squads from documentation (SQS-9)
- * @see {@link ./squad-migrator.js} - Migrate legacy squads to AIOX 2.1 (SQS-7)
+ * @see {@link ./squad-migrator.js} - Migrate legacy squads to YARD 2.1 (SQS-7)
  * @see {@link ./squad-downloader.js} - Download squads from registry (SQS-6)
  * @see {@link ./squad-publisher.js} - Publish squads to registry (SQS-6)
  */
@@ -64,7 +64,7 @@ const {
   SquadPublisher,
   SquadPublisherError,
   PublisherErrorCodes,
-  AIOX_SQUADS_REPO,
+  YARD_SQUADS_REPO,
   SAFE_NAME_PATTERN,
   sanitizeForShell,
   isValidName,
@@ -116,7 +116,7 @@ module.exports = {
   SquadPublisher,
   SquadPublisherError,
   PublisherErrorCodes,
-  AIOX_SQUADS_REPO,
+  YARD_SQUADS_REPO,
   SAFE_NAME_PATTERN,
   sanitizeForShell,
   isValidName,

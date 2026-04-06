@@ -28,4 +28,4 @@ NOT for: Market research or competitive analysis → Use @analyst. Technical arc
 **I collaborate with:**
 
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/pm.md*
+*YARD Agent - Synced from .yard-core/development/agents/pm.md*

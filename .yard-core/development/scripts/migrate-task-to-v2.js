@@ -55,7 +55,7 @@ const sectionTemplates = {
 ---
 `,
 
-  taskDefinition: `## Task Definition (AIOX Task Format V1.0)
+  taskDefinition: `## Task Definition (YARD Task Format V1.0)
 
 \`\`\`yaml
 task: {TODO: task identifier}

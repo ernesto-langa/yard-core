@@ -1,7 +1,7 @@
 /**
  * Squad Publisher Utility
  *
- * Publishes squads to the aiox-squads GitHub repository via Pull Request.
+ * Publishes squads to the yard-squads GitHub repository via Pull Request.
  * Requires GitHub CLI (gh) authentication.
  *
  * @module squad-publisher
@@ -21,10 +21,10 @@ const path = require('path');
 const SAFE_NAME_PATTERN = /^[a-zA-Z0-9._-]+$/;
 
 /**
- * Repository for aiox-squads
+ * Repository for yard-squads
  * @constant {string}
  */
-const AIOX_SQUADS_REPO = 'YardAI/aiox-squads';
+const YARD_SQUADS_REPO = 'YardAI/yard-squads';
 
 /**
  * Error codes for SquadPublisherError
@@ -106,7 +106,7 @@ class SquadPublisherError extends Error {
 }
 
 /**
- * Squad Publisher class for publishing squads to aiox-squads repository
+ * Squad Publisher class for publishing squads to yard-squads repository
  */
 class SquadPublisher {
   /**
@@ -114,12 +114,12 @@ class SquadPublisher {
    * @param {Object} [options={}] - Configuration options
    * @param {boolean} [options.verbose=false] - Enable verbose logging
    * @param {boolean} [options.dryRun=false] - Simulate without creating PR
-   * @param {string} [options.repo] - Target repository (default: YardAI/aiox-squads)
+   * @param {string} [options.repo] - Target repository (default: YardAI/yard-squads)
    */
   constructor(options = {}) {
     this.verbose = options.verbose || false;
     this.dryRun = options.dryRun || false;
-    this.repo = options.repo || AIOX_SQUADS_REPO;
+    this.repo = options.repo || YARD_SQUADS_REPO;
   }
 
   /**
@@ -167,7 +167,7 @@ class SquadPublisher {
   }
 
   /**
-   * Publish squad to aiox-squads repository
+   * Publish squad to yard-squads repository
    *
    * @param {string} squadPath - Path to squad directory
    * @param {Object} [options={}] - Publish options
@@ -313,7 +313,7 @@ ${manifest.dependencies?.length > 0 ? manifest.dependencies.map((d) => `- ${d}`)
 
 ### Pre-submission Checklist
 
-- [x] Squad follows AIOX task-first architecture
+- [x] Squad follows YARD task-first architecture
 - [x] Documentation is complete (squad.yaml has all required fields)
 - [x] Squad validated locally with \`*validate-squad\`
 - [ ] No sensitive data included (API keys, credentials, etc.)
@@ -328,7 +328,7 @@ Tested locally with:
 \`\`\`
 
 ---
-*Submitted via \`*publish-squad\` from AIOX-FullStack*`;
+*Submitted via \`*publish-squad\` from YARD-FullStack*`;
   }
 
   /**
@@ -622,7 +622,7 @@ module.exports = {
   SquadPublisher,
   SquadPublisherError,
   PublisherErrorCodes,
-  AIOX_SQUADS_REPO,
+  YARD_SQUADS_REPO,
   SAFE_NAME_PATTERN,
   sanitizeForShell,
   isValidName,

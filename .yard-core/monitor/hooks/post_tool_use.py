@@ -34,7 +34,7 @@ def main():
                 if isinstance(value, str) and len(value) > 500:
                     data["tool_input"][key] = value[:500] + "..."
 
-    # Enrich with AIOX context
+    # Enrich with YARD context
     data = enrich_event(data)
 
     # Send to monitor server

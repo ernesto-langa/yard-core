@@ -18,7 +18,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const { DashboardEventType } = require('./types');
 
-const MONITOR_SERVER_URL = process.env.AIOX_MONITOR_URL || 'http://localhost:4001/events';
+const MONITOR_SERVER_URL = process.env.YARD_MONITOR_URL || 'http://localhost:4001/events';
 const EMIT_TIMEOUT_MS = 500;
 
 /**
@@ -98,8 +98,8 @@ class DashboardEmitter {
       type,
       timestamp: Date.now(),
       session_id: this.sessionId,
-      aiox_agent: this.currentAgent || undefined,
-      aiox_story_id: this.currentStoryId || undefined,
+      yard_agent: this.currentAgent || undefined,
+      yard_story_id: this.currentStoryId || undefined,
       data,
     };
 
@@ -323,8 +323,8 @@ class DashboardEmitter {
           data: {
             ...event.data,
             session_id: event.session_id,
-            aiox_agent: event.aiox_agent,
-            aiox_story_id: event.aiox_story_id,
+            yard_agent: event.yard_agent,
+            yard_story_id: event.yard_story_id,
           },
         }),
         signal: controller.signal,

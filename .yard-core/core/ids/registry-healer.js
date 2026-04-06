@@ -545,7 +545,7 @@ class RegistryHealer {
 
   /**
    * Emit warnings for issues that require manual intervention.
-   * Integrates with AIOX NotificationManager (console + file channels).
+   * Integrates with YARD NotificationManager (console + file channels).
    *
    * @param {Array} issues - Non-auto-healable issues
    * @returns {Array} Warning objects emitted
@@ -654,7 +654,7 @@ class RegistryHealer {
       default:
         return [
           'Review the issue details and apply appropriate fix',
-          'Run \'aiox ids:health --fix\' after resolving',
+          'Run \'yard ids:health --fix\' after resolving',
         ];
     }
   }

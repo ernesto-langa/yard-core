@@ -250,7 +250,7 @@ async function handleStats(_args) {
  */
 function handleHelp() {
   const usage = `
-Usage: aiox graph [command] [options]
+Usage: yard graph [command] [options]
 
 Commands:
   --deps          Show dependency tree as ASCII text
@@ -263,14 +263,14 @@ Options:
   --interval=N    Seconds between regeneration in watch mode (default: 5)
 
 Examples:
-  aiox graph --deps                        Show dependency tree
-  aiox graph --deps --format=json          Output as JSON
-  aiox graph --deps --format=html          Interactive HTML graph (opens browser)
-  aiox graph --deps --watch                Live DOT file for VS Code preview
-  aiox graph --deps --watch --format=html  Live HTML with auto-refresh
-  aiox graph --deps --watch --format=mermaid  Live Mermaid file
-  aiox graph --deps --watch --interval=10  Refresh every 10 seconds
-  aiox graph --stats                       Show entity stats and cache metrics
+  yard graph --deps                        Show dependency tree
+  yard graph --deps --format=json          Output as JSON
+  yard graph --deps --format=html          Interactive HTML graph (opens browser)
+  yard graph --deps --watch                Live DOT file for VS Code preview
+  yard graph --deps --watch --format=html  Live HTML with auto-refresh
+  yard graph --deps --watch --format=mermaid  Live Mermaid file
+  yard graph --deps --watch --interval=10  Refresh every 10 seconds
+  yard graph --stats                       Show entity stats and cache metrics
 `.trim();
 
   console.log(usage);
@@ -294,7 +294,7 @@ async function handleSummary(args) {
   const isTTY = !!process.stdout.isTTY;
   const sections = [];
 
-  sections.push('AIOX Graph Dashboard');
+  sections.push('YARD Graph Dashboard');
   sections.push(isTTY ? '\u2550'.repeat(35) : '='.repeat(35));
   sections.push('');
 

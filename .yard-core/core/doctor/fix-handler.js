@@ -115,7 +115,7 @@ const FIX_MAP = {
           if (!fs.existsSync(agentDir)) {
             fs.mkdirSync(agentDir, { recursive: true });
           }
-          fs.writeFileSync(memoryPath, `# ${agent} Agent Memory\n\n_Created by aiox doctor --fix_\n`);
+          fs.writeFileSync(memoryPath, `# ${agent} Agent Memory\n\n_Created by yard doctor --fix_\n`);
           created++;
         }
       }

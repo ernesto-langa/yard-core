@@ -1,5 +1,5 @@
 /**
- * Verification Tests for Active AIOX Memory Modules
+ * Verification Tests for Active YARD Memory Modules
  *
  * Tests active memory modules:
  * 1. Feedback Loop (gotchas-memory.js)
@@ -222,11 +222,11 @@ test('SemanticMergeEngine can get rules', () => {
   assertDefined(rules, 'Rules should be defined');
 });
 
-test('merge-rules.yaml exists in .aiox', () => {
+test('merge-rules.yaml exists in .yard', () => {
   const rulesPath = path.join(process.cwd(), '.yard', 'merge-rules.yaml');
   const exists = fs.existsSync(rulesPath);
 
-  assertTrue(exists, 'merge-rules.yaml should exist in .aiox');
+  assertTrue(exists, 'merge-rules.yaml should exist in .yard');
 });
 
 // ============================================================================

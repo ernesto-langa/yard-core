@@ -127,7 +127,7 @@ class GitHubProjectsAdapter extends PMAdapter {
       // Get issue status
       const issueData = await this._getIssue(issueNumber);
 
-      // Map GitHub issue state to AIOX status
+      // Map GitHub issue state to YARD status
       const statusMapping = {
         'open': 'InProgress',
         'closed': 'Done',
@@ -184,7 +184,7 @@ class GitHubProjectsAdapter extends PMAdapter {
   /**
    * Update story status in GitHub Projects
    *
-   * Maps AIOX status to GitHub issue state.
+   * Maps YARD status to GitHub issue state.
    *
    * @param {string} storyId - Story ID
    * @param {string} status - New status (Draft, InProgress, Review, Done)
@@ -203,7 +203,7 @@ class GitHubProjectsAdapter extends PMAdapter {
         };
       }
 
-      // Map AIOX status to GitHub state
+      // Map YARD status to GitHub state
       const stateMapping = {
         'Draft': 'open',
         'InProgress': 'open',

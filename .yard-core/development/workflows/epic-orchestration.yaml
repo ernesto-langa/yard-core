@@ -29,7 +29,7 @@ workflow:
   project_types:
     - greenfield
     - brownfield
-    - aiox-development
+    - yard-development
     - epic-execution
 
   metadata:
@@ -177,7 +177,7 @@ workflow:
   state:
     persistence:
       enabled: true
-      location: ".aiox/workflow-state/"
+      location: ".yard/workflow-state/"
       format: json
       file: "${config.epicId}-pipeline.json"
 

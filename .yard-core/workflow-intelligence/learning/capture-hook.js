@@ -28,7 +28,7 @@ let store = null;
  * @returns {boolean} True if enabled
  */
 function isEnabled() {
-  return process.env.AIOX_PATTERN_CAPTURE !== 'false';
+  return process.env.YARD_PATTERN_CAPTURE !== 'false';
 }
 
 /**
@@ -88,7 +88,7 @@ async function onTaskComplete(taskName, context = {}) {
     };
   } catch (error) {
     // Silent failure - capture is non-critical
-    if (process.env.AIOX_DEBUG === 'true') {
+    if (process.env.YARD_DEBUG === 'true') {
       console.debug('[PatternCapture] Hook failed:', error.message);
     }
     return {

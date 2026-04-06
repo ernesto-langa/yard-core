@@ -210,7 +210,7 @@ jobs:
         run: npm ci
 
       - name: Validate story checkboxes
-        run: node .yard-core/utils/aiox-validator.js stories
+        run: node .yard-core/utils/yard-validator.js stories
 
   manifest-validation:
     name: Install Manifest Validation
@@ -324,7 +324,7 @@ jobs:
     steps:
       - name: Check all jobs
         run: |
-          echo "=== AIOX CI Validation Summary ==="
+          echo "=== YARD CI Validation Summary ==="
           echo ""
           echo "📋 Change Detection:"
           echo "  Code changed: ${{ needs.changes.outputs.code }}"
@@ -448,7 +448,7 @@ jobs:
           time npm run typecheck || true
 
           echo -e "\nStory validation time:"
-          time node .yard-core/utils/aiox-validator.js stories || true
+          time node .yard-core/utils/yard-validator.js stories || true
         continue-on-error: true
 
   # SYNAPSE context engine benchmarks + E2E tests (Story SYN-12)
@@ -591,9 +591,9 @@ jobs:
       - name: Verify .yard-core dependencies installable
         run: |
           cd /tmp/brownfield-test
-          AIOX_CORE_DIR="node_modules/yard-core/.yard-core"
-          if [ -f "$AIOX_CORE_DIR/package.json" ]; then
-            cd "$AIOX_CORE_DIR"
+          YARD_CORE_DIR="node_modules/yard-core/.yard-core"
+          if [ -f "$YARD_CORE_DIR/package.json" ]; then
+            cd "$YARD_CORE_DIR"
             npm install --production --ignore-scripts
             echo "✅ .yard-core dependencies installed successfully"
           else
@@ -604,11 +604,11 @@ jobs:
       - name: Verify key modules resolvable
         run: |
           cd /tmp/brownfield-test
-          AIOX_NODE_MODULES="node_modules/yard-core/.yard-core/node_modules"
+          YARD_NODE_MODULES="node_modules/yard-core/.yard-core/node_modules"
           MISSING=0
 
           for pkg in fast-glob fs-extra js-yaml semver ajv tar chalk; do
-            if [ -d "$AIOX_NODE_MODULES/$pkg" ]; then
+            if [ -d "$YARD_NODE_MODULES/$pkg" ]; then
               echo "✅ $pkg found in .yard-core/node_modules/"
             else
               echo "❌ $pkg MISSING from .yard-core/node_modules/"
@@ -647,20 +647,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Verify wizard path in aiox.js
+      - name: Verify wizard path in yard.js
         run: |
           echo "=== Installer Smoke Test ==="
           echo ""
-          echo "Checking bin/aiox.js uses correct wizard path..."
+          echo "Checking bin/yard.js uses correct wizard path..."
 
           # The wizard path should point to packages/installer/src/wizard/index.js
-          if grep -q "packages.*installer.*src.*wizard" bin/aiox.js; then
-            echo "✅ bin/aiox.js uses correct wizard path (packages/installer/src/wizard)"
+          if grep -q "packages.*installer.*src.*wizard" bin/yard.js; then
+            echo "✅ bin/yard.js uses correct wizard path (packages/installer/src/wizard)"
           else
-            echo "❌ ERROR: bin/aiox.js does NOT reference packages/installer/src/wizard"
+            echo "❌ ERROR: bin/yard.js does NOT reference packages/installer/src/wizard"
             echo ""
-            echo "Current wizard references in bin/aiox.js:"
-            grep -n "wizard" bin/aiox.js || echo "No wizard references found"
+            echo "Current wizard references in bin/yard.js:"
+            grep -n "wizard" bin/yard.js || echo "No wizard references found"
             echo ""
             echo "This is a CRITICAL error - wrong installer will be used!"
             exit 1
@@ -680,17 +680,17 @@ jobs:
             exit 1
           fi
 
-      - name: Verify aiox-minimal.js uses router
+      - name: Verify yard-minimal.js uses router
         run: |
-          echo "Checking bin/aiox-minimal.js uses main router..."
+          echo "Checking bin/yard-minimal.js uses main router..."
 
-          if grep -q "aiox\.js" bin/aiox-minimal.js; then
-            echo "✅ bin/aiox-minimal.js forwards to aiox.js router"
+          if grep -q "yard\.js" bin/yard-minimal.js; then
+            echo "✅ bin/yard-minimal.js forwards to yard.js router"
           else
-            echo "⚠️  WARNING: bin/aiox-minimal.js may not use the main router"
+            echo "⚠️  WARNING: bin/yard-minimal.js may not use the main router"
             echo ""
             echo "Current content:"
-            cat bin/aiox-minimal.js
+            cat bin/yard-minimal.js
           fi
 
       - name: Verify package.json files field

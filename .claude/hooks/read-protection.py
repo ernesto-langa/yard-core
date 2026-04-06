@@ -29,8 +29,8 @@ PROTECTED_PATTERNS = [
     ".claude/settings*.json",
 
     # Definições de agentes
-    ".aiox-core/development/agents/*.md",
-    ".aiox-upstream/.aiox-core/development/agents/*.md",
+    ".yard-core/development/agents/*.md",
+    ".yard-upstream/.yard-core/development/agents/*.md",
 
     # Documentação crítica
     "docs/mmos/ARCHITECTURE_RULES.md",

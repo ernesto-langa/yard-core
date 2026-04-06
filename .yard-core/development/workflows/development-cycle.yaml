@@ -446,7 +446,7 @@ workflow:
   state:
     persistence:
       enabled: true
-      location: ".aiox/workflow-state/"
+      location: ".yard/workflow-state/"
       format: yaml
 
     tracked_fields:

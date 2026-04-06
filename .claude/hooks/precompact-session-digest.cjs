@@ -4,7 +4,7 @@
  *
  * Registered as PreCompact event — fires before context compaction.
  * Reads JSON from stdin (Claude Code hook protocol), delegates to
- * the unified hook runner in aiox-core.
+ * the unified hook runner in yard-core.
  *
  * Stdin format (PreCompact):
  * {
@@ -15,7 +15,7 @@
  *   "trigger": "auto" | "manual"
  * }
  *
- * @see .aiox-core/hooks/unified/runners/precompact-runner.js
+ * @see .yard-core/hooks/unified/runners/precompact-runner.js
  * @see Story MIS-3 - Session Digest (PreCompact Hook)
  * @see Story MIS-3.1 - Fix Session-Digest Hook Registration
  */
@@ -51,14 +51,14 @@ function readStdin() {
 
 /**
  * Resolve runner path — works in both framework-dev and installed projects.
- * Framework-dev: PROJECT_ROOT/.aiox-core/hooks/unified/runners/precompact-runner.js
- * Installed:     PROJECT_ROOT/node_modules/aiox-core/.aiox-core/hooks/unified/runners/precompact-runner.js
+ * Framework-dev: PROJECT_ROOT/.yard-core/hooks/unified/runners/precompact-runner.js
+ * Installed:     PROJECT_ROOT/node_modules/yard-core/.yard-core/hooks/unified/runners/precompact-runner.js
  */
 function resolveRunnerPath() {
   const fs = require('fs');
   const candidates = [
-    path.join(PROJECT_ROOT, '.aiox-core', 'hooks', 'unified', 'runners', 'precompact-runner.js'),
-    path.join(PROJECT_ROOT, 'node_modules', 'aiox-core', '.aiox-core', 'hooks', 'unified', 'runners', 'precompact-runner.js'),
+    path.join(PROJECT_ROOT, '.yard-core', 'hooks', 'unified', 'runners', 'precompact-runner.js'),
+    path.join(PROJECT_ROOT, 'node_modules', 'yard-core', '.yard-core', 'hooks', 'unified', 'runners', 'precompact-runner.js'),
   ];
   for (const candidate of candidates) {
     if (fs.existsSync(candidate)) return candidate;
@@ -88,7 +88,7 @@ async function main() {
   // Spawn a detached child process so the digest is fire-and-forget.
   // Using require() in-process keeps the event loop alive (setImmediate inside
   // the runner), causing the hook to block until the 9 s safety timeout.
-  // The child receives context via AIOX_HOOK_CONTEXT env var and calls
+  // The child receives context via YARD_HOOK_CONTEXT env var and calls
   // onPreCompact() exported by the runner module.
   try {
     const { spawn } = require('child_process');
@@ -99,14 +99,14 @@ async function main() {
       contextJson = '{}';
     }
     const inlineScript = [
-      `const ctx = JSON.parse(process.env.AIOX_HOOK_CONTEXT || '{}');`,
+      `const ctx = JSON.parse(process.env.YARD_HOOK_CONTEXT || '{}');`,
       `const { onPreCompact } = require(${JSON.stringify(runnerPath)});`,
       `onPreCompact(ctx).catch(() => {});`,
     ].join('\n');
     const child = spawn(process.execPath, ['-e', inlineScript], {
       detached: true,
       stdio: 'ignore',
-      env: { ...process.env, AIOX_HOOK_CONTEXT: contextJson },
+      env: { ...process.env, YARD_HOOK_CONTEXT: contextJson },
     });
     child.on('error', () => {});
     child.unref();

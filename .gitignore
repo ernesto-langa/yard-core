@@ -85,17 +85,17 @@ sync-*.sh                     # Agent sync scripts
 CLAUDE.md
 .claude/*
 !.claude/commands/
-!.claude/commands/AIOX/
-!.claude/commands/AIOX/agents/
+!.claude/commands/YARD/
+!.claude/commands/YARD/agents/
 !.claude/CLAUDE.md
 !.claude/rules/
 !.claude/settings.json
 .gemini
 !.gemini/
 !.gemini/rules/
-!.gemini/rules/AIOX/
-!.gemini/rules/AIOX/agents/
-!.gemini/rules/AIOX/agents/*.md
+!.gemini/rules/YARD/
+!.gemini/rules/YARD/agents/
+!.gemini/rules/YARD/agents/*.md
 
 # AI Session Artifacts (Story 6.1.2.6 - Decision Logging)
 # Auto-generated decision logs from yolo mode executions
@@ -103,18 +103,18 @@ CLAUDE.md
 *.decision-log.md
 
 # Project-specific
-# Note: .aiox-core is an old alias for .yard-core — ignored (use .yard-core/ instead)
-.aiox-core/
+# Note: .yard-core is an old alias for .yard-core — ignored (use .yard-core/ instead)
+.yard-core/
 .yard-core.backup*/               # Only ignore backup directories
 test-project-install/*
 sample-project/*
 
-# Expansion Projects (separate from core AIOX-FULLSTACK)
+# Expansion Projects (separate from core YARD-FULLSTACK)
 # These folders are from other projects and should NOT be in this repository
-.aiox/                        # AIOX expansion project files
-.aiox/project-status.yaml     # Project status cache (Story 6.1.2.4 - auto-generated)
+.yard/                        # YARD expansion project files
+.yard/project-status.yaml     # Project status cache (Story 6.1.2.4 - auto-generated)
 .cursor/                      # Cursor IDE project files
-aiox-memory-layer-mvp/        # Separate memory layer project
+yard-memory-layer-mvp/        # Separate memory layer project
 memory/                       # Memory squad
 performance/                  # Performance squad
 scripts/                      # Project-specific scripts (not part of core)
@@ -122,7 +122,7 @@ security/                     # Security squad
 telemetry/                    # Telemetry squad
 tests/                        # Test files for expansion projects
 
-# AIOX Development Artifacts (generated during workflow execution)
+# YARD Development Artifacts (generated during workflow execution)
 # These files are created by agents during development and should NOT be in version control
 # NOTE: docs/prd/ is TRACKED - it contains important product documentation
 qa/                           # Test artifacts and quality assurance files
@@ -137,20 +137,20 @@ coverage/
 *.lcov
 lcov-report/
 
-# AIOX temporary build/analysis files
-.aiox/reports/
-.aiox/temp-*.js
+# YARD temporary build/analysis files
+.yard/reports/
+.yard/temp-*.js
 
 # Build outputs (generated from source)
-aiox-core/index.d.ts
-aiox-core/index.esm.js
-aiox-core/*.map
+yard-core/index.d.ts
+yard-core/index.esm.js
+yard-core/*.map
 
 # Applications (separate deployments, NOT part of npm package)
 apps/
 
 # External projects (separate repositories)
-aiox-guide-app/
+yard-guide-app/
 examples/
 !docs/examples/
 supabase/
@@ -178,17 +178,17 @@ PRN
 # ============================================
 
 # Framework runtime artifacts
-.aiox-core/.session/
-.aiox-core/manifests/*.csv
-.aiox-core/core/registry/service-registry.json
+.yard-core/.session/
+.yard-core/manifests/*.csv
+.yard-core/core/registry/service-registry.json
 
 # Quality metrics (generated during testing)
-.aiox/data/quality-metrics.json
-.aiox-core/quality/metrics-*.json
-.aiox-core/data/quality-metrics.json
+.yard/data/quality-metrics.json
+.yard-core/quality/metrics-*.json
+.yard-core/data/quality-metrics.json
 
 # Session data
-.aiox-core/.session/current-session.json
+.yard-core/.session/current-session.json
 
 # ============================================
 # ARCHIVED DOCUMENTATION (Story 6.12)
@@ -220,11 +220,11 @@ test-sample-*.md
 .tsbuildinfo
 *.tsbuildinfo
 
-# Runtime AIOX artifacts (explicit rules without inline comments)
-.aiox/
-.aiox/project-status.yaml
-.aiox/notifications/
-.aiox/sessions/
+# Runtime YARD artifacts (explicit rules without inline comments)
+.yard/
+.yard/project-status.yaml
+.yard/notifications/
+.yard/sessions/
 
 # ESLint cache
 .eslintcache
@@ -271,49 +271,49 @@ npm-recovery-codes.txt
 # ============================================
 # PRO SUBMODULE (ADR-PRO-001 — git submodule, NOT ignored)
 # ============================================
-# pro/ is a git submodule pointing to YardAI/aiox-pro (private)
+# pro/ is a git submodule pointing to YardAI/yard-pro (private)
 # It is tracked by git via .gitmodules — do NOT add pro/ to gitignore
 # Pro submodule contents excluded from npm publish (not in package.json files array)
 
 # ============================================
 # LOCAL CONFIG (ADR-PRO-002 — machine-specific secrets, never committed)
 # ============================================
-.aiox-core/local-config.yaml
+.yard-core/local-config.yaml
 
 # ============================================
 # IDS REGISTRY (Story IDS-3 — Self-Updating Registry)
 # ============================================
-.aiox-core/data/registry-backups/
-.aiox-core/data/.entity-registry.lock
-.aiox-core/data/registry-update-log.jsonl
+.yard-core/data/registry-backups/
+.yard-core/data/.entity-registry.lock
+.yard-core/data/registry-update-log.jsonl
 
 # ============================================
-# .AIOX-CORE INTERNAL/GENERATED FILES
+# .YARD-CORE INTERNAL/GENERATED FILES
 # ============================================
 
 # Deprecated documentation (superseded by V2.1-COMPLETE)
-.aiox-core/docs/standards/AIOX-LIVRO-DE-OURO.md
-.aiox-core/docs/standards/AIOX-LIVRO-DE-OURO-V2.1.md
-.aiox-core/docs/standards/AIOX-LIVRO-DE-OURO-V2.1-SUMMARY.md
-.aiox-core/docs/standards/AIOX-FRAMEWORK-MASTER.md
-.aiox-core/docs/standards/V3-ARCHITECTURAL-DECISIONS.md
+.yard-core/docs/standards/YARD-LIVRO-DE-OURO.md
+.yard-core/docs/standards/YARD-LIVRO-DE-OURO-V2.1.md
+.yard-core/docs/standards/YARD-LIVRO-DE-OURO-V2.1-SUMMARY.md
+.yard-core/docs/standards/YARD-FRAMEWORK-MASTER.md
+.yard-core/docs/standards/V3-ARCHITECTURAL-DECISIONS.md
 
-# Duplicate docs (originals in .aiox-core/core/docs/)
-.aiox-core/docs/SHARD-TRANSLATION-GUIDE.md
-.aiox-core/docs/component-creation-guide.md
-.aiox-core/docs/template-syntax.md
-.aiox-core/docs/troubleshooting-guide.md
-.aiox-core/docs/session-update-pattern.md
+# Duplicate docs (originals in .yard-core/core/docs/)
+.yard-core/docs/SHARD-TRANSLATION-GUIDE.md
+.yard-core/docs/component-creation-guide.md
+.yard-core/docs/template-syntax.md
+.yard-core/docs/troubleshooting-guide.md
+.yard-core/docs/session-update-pattern.md
 
 # Generated runtime files
-.aiox-core/.session/
-.aiox-core/.session/current-session.json
+.yard-core/.session/
+.yard-core/.session/current-session.json
 
 # Generated manifests (created by framework)
-.aiox-core/manifests/*.csv
+.yard-core/manifests/*.csv
 
 # Internal audit results
-.aiox-core/infrastructure/tests/utilities-audit-results.json
+.yard-core/infrastructure/tests/utilities-audit-results.json
 
 # ============================================
 # TEMPORARY FILES
@@ -355,25 +355,25 @@ scripts/glue/
 .claude/agents/
 .claude/agent-memory/
 .claude/setup/
-docs/guides/aiox-workflows/
+docs/guides/yard-workflows/
 
 # Local Gemini project rules generated/managed per workspace
 .gemini/rules.md
 
-# Dependencies (AIOX)
+# Dependencies (YARD)
 node_modules
 
-# Build & Logs (AIOX)
+# Build & Logs (YARD)
 dist/
 build/
 
-# IDE & OS (AIOX)
+# IDE & OS (YARD)
 .idea/
 *.swp
 
-# AIOX Local (AIOX)
-.aiox-core/local/
+# YARD Local (YARD)
+.yard-core/local/
 .claude/settings.local.json
-.aiox/install-log.txt
+.yard/install-log.txt
 
 core-config.local.yaml

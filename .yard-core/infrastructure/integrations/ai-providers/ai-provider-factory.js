@@ -2,7 +2,7 @@
  * @fileoverview AI Provider Factory
  *
  * Central factory for creating and managing AI providers (Claude, Gemini).
- * Automatically selects the correct provider based on .aiox-ai-config.yaml.
+ * Automatically selects the correct provider based on .yard-ai-config.yaml.
  * Supports fallback between providers for reliability.
  *
  * @see Epic GEMINI-INT - Story 2: AI Provider Factory Pattern
@@ -62,7 +62,7 @@ function loadConfig(projectRoot = process.cwd()) {
     return cachedConfig;
   }
 
-  const configPath = path.join(projectRoot, '.aiox-ai-config.yaml');
+  const configPath = path.join(projectRoot, '.yard-ai-config.yaml');
 
   if (!fs.existsSync(configPath)) {
     console.log('ℹ️  No AI provider config found - using defaults');

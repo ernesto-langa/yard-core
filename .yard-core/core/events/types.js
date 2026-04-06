@@ -20,8 +20,8 @@
  * @property {DashboardEventType} type - Event type
  * @property {number} timestamp - Unix timestamp in milliseconds
  * @property {string} session_id - Claude Code session ID
- * @property {string} [aiox_agent] - AIOX agent ID (dev, architect, qa, etc.)
- * @property {string} [aiox_story_id] - Current story ID being worked on
+ * @property {string} [yard_agent] - YARD agent ID (dev, architect, qa, etc.)
+ * @property {string} [yard_story_id] - Current story ID being worked on
  * @property {Object} data - Event-specific data
  */
 

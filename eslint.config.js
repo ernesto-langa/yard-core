@@ -4,7 +4,7 @@ const tsPlugin = require('@typescript-eslint/eslint-plugin');
 const tsParser = require('@typescript-eslint/parser');
 
 /**
- * AIOX Framework ESLint Configuration
+ * YARD Framework ESLint Configuration
  * ESLint v9 flat config format
  * @type {import('eslint').Linter.Config[]}
  */
@@ -34,19 +34,19 @@ module.exports = [
       '**/index.esm.js',
       // Legacy and backup files
       '**/*.backup*.js',
-      '**/aiox-init-old.js',
-      '**/aiox-init-v4.js',
+      '**/yard-init-old.js',
+      '**/yard-init-v4.js',
       // Scripts that need cleanup (TODO: fix in Story 6.2)
       '.yard-core/quality/**',
       '.yard-core/scripts/**',
       // Development scripts with known ESLint errors (TODO: fix in future story)
       '.yard-core/development/scripts/**',
-      '.claude/commands/AIOX/scripts/**',
+      '.claude/commands/YARD/scripts/**',
       // CLI files with legacy issues (TODO: fix)
       '.yard-core/cli/**',
       '.yard-core/infrastructure/scripts/**',
       // Bin files with legacy issues
-      'bin/aiox-init*.js',
+      'bin/yard-init*.js',
       'bin/migrate-*.js',
       // Template files with placeholder syntax
       '.yard-core/product/templates/**',

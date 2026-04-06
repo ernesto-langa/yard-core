@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const inquirer = require('inquirer');
 
 /**
- * Approval workflow for AIOX-FULLSTACK framework
+ * Approval workflow for YARD-FULLSTACK framework
  * Manages approval process for high-impact modifications
  */
 class ApprovalWorkflow {

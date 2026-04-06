@@ -117,7 +117,7 @@ class ApiEndpointsCheck extends BaseCheck {
           method: 'HEAD',
           timeout: 5000,
           headers: {
-            'User-Agent': 'AIOX-HealthCheck/1.0',
+            'User-Agent': 'YARD-HealthCheck/1.0',
           },
         },
         (res) => {

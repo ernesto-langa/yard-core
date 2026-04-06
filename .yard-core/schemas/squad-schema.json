@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/ernesto-langa/yard-core/schemas/squad-schema.json",
-  "title": "AIOX Squad Manifest",
+  "title": "YARD Squad Manifest",
   "description": "Schema for squad.yaml manifest files (Task-First Architecture)",
   "type": "object",
   "required": ["name", "version"],
@@ -43,13 +43,13 @@
       "pattern": "^[a-z0-9-]+$",
       "description": "Prefix for slash commands (e.g., 'etl' for /etl-*)"
     },
-    "aiox": {
+    "yard": {
       "type": "object",
       "properties": {
         "minVersion": {
           "type": "string",
           "pattern": "^\\d+\\.\\d+\\.\\d+$",
-          "description": "Minimum AIOX version required"
+          "description": "Minimum YARD version required"
         },
         "type": {
           "type": "string",
@@ -66,9 +66,9 @@
           "type": "string",
           "description": "Node.js version requirement (e.g., >=18.0.0)"
         },
-        "aiox": {
+        "yard": {
           "type": "string",
-          "description": "AIOX version requirement (e.g., >=2.0.0)"
+          "description": "YARD version requirement (e.g., >=2.0.0)"
         }
       }
     },

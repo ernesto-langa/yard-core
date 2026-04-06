@@ -4,7 +4,7 @@
  * DETERMINISTIC: Assignment is based on keyword matching against story content.
  * No AI involvement in executor selection.
  *
- * PRD Reference: AIOX v2.0 "Projeto Bob" - Section 5 (Dynamic Executor Assignment)
+ * PRD Reference: YARD v2.0 "Projeto Bob" - Section 5 (Dynamic Executor Assignment)
  *
  * Responsibilities:
  * - Detect story type from content using keyword matching

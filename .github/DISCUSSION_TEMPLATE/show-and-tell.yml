@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         ## 🙌 Show and Tell
-        Built something cool with AIOX? Share it with the community!
+        Built something cool with YARD? Share it with the community!
 
         We love seeing what you've created. Your project might inspire others!
 
@@ -16,7 +16,7 @@ body:
     attributes:
       label: Project Name
       description: What's your project called?
-      placeholder: My Awesome AIOX Project
+      placeholder: My Awesome YARD Project
     validations:
       required: true
 
@@ -33,14 +33,14 @@ body:
       required: true
 
   - type: dropdown
-    id: aiox-components
+    id: yard-components
     attributes:
-      label: AIOX Components Used
-      description: Which parts of AIOX does your project use?
+      label: YARD Components Used
+      description: Which parts of YARD does your project use?
       multiple: true
       options:
         - yard-core (Core Framework)
-        - aiox-squads (AIOX Squads)
+        - yard-squads (YARD Squads)
         - ETL Squad
         - Creator Squad
         - Docker MCP Toolkit
@@ -99,4 +99,4 @@ body:
     attributes:
       value: |
         ---
-        **Thank you for sharing!** Your contribution helps grow the AIOX community. 🎉
+        **Thank you for sharing!** Your contribution helps grow the YARD community. 🎉

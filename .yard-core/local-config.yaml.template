@@ -1,11 +1,11 @@
 # ============================================
-# AIOX Local Configuration (Level 4) — TEMPLATE
+# YARD Local Configuration (Level 4) — TEMPLATE
 # ============================================
 # Machine-specific overrides and secrets.
 # Copy this file to local-config.yaml and customize:
-#   cp .aiox-core/local-config.yaml.template .aiox-core/local-config.yaml
+#   cp .yard-core/local-config.yaml.template .yard-core/local-config.yaml
 #
-# Or run: aiox config init-local
+# Or run: yard config init-local
 #
 # WARNING: This file contains machine-specific secrets.
 # DO NOT commit local-config.yaml to git.

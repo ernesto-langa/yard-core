@@ -27,12 +27,12 @@ async function run(context) {
   }
 
   // Check 2 (INS-4.12): .yard-core/node_modules/ completeness
-  const aioxCoreDir = path.join(context.projectRoot, '.yard-core');
-  const aioxCorePackageJson = path.join(aioxCoreDir, 'package.json');
-  const aioxCoreNodeModules = path.join(aioxCoreDir, 'node_modules');
+  const yardCoreDir = path.join(context.projectRoot, '.yard-core');
+  const yardCorePackageJson = path.join(yardCoreDir, 'package.json');
+  const yardCoreNodeModules = path.join(yardCoreDir, 'node_modules');
 
-  if (fs.existsSync(aioxCorePackageJson)) {
-    if (!fs.existsSync(aioxCoreNodeModules)) {
+  if (fs.existsSync(yardCorePackageJson)) {
+    if (!fs.existsSync(yardCoreNodeModules)) {
       return {
         check: name,
         status: 'FAIL',
@@ -43,12 +43,12 @@ async function run(context) {
 
     // Verify all declared deps are installed
     try {
-      const pkg = JSON.parse(fs.readFileSync(aioxCorePackageJson, 'utf8'));
+      const pkg = JSON.parse(fs.readFileSync(yardCorePackageJson, 'utf8'));
       const deps = Object.keys(pkg.dependencies || {});
       const missing = [];
 
       for (const dep of deps) {
-        const depPath = path.join(aioxCoreNodeModules, dep);
+        const depPath = path.join(yardCoreNodeModules, dep);
         if (!fs.existsSync(depPath)) {
           missing.push(dep);
         }
@@ -70,7 +70,7 @@ async function run(context) {
   return {
     check: name,
     status: 'PASS',
-    message: 'node_modules present' + (fs.existsSync(aioxCoreNodeModules) ? ', .yard-core deps complete' : ''),
+    message: 'node_modules present' + (fs.existsSync(yardCoreNodeModules) ? ', .yard-core deps complete' : ''),
     fixCommand: null,
   };
 }

@@ -53,7 +53,7 @@ class JSONReporter {
 
     // Build report object
     const report = {
-      $schema: 'https://aiox.synkra.ai/schemas/health-check-report.json',
+      $schema: 'https://yard.synkra.ai/schemas/health-check-report.json',
       version: '1.0.0',
       timestamp,
       mode: config?.mode || 'quick',

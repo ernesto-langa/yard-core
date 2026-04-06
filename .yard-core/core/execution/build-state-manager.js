@@ -1298,7 +1298,7 @@ async function main() {
 
   if (args.length === 0 || args.includes('--help') || args.includes('-h')) {
     console.log(`
-${chalk.bold('Build State Manager')} - AIOX Build Recovery System (Story 8.4)
+${chalk.bold('Build State Manager')} - YARD Build Recovery System (Story 8.4)
 
 ${chalk.cyan('Usage:')}
   build-state-manager <command> <story-id> [options]

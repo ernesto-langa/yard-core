@@ -102,12 +102,12 @@ function createConfigCommand() {
     .option('--dry-run', 'Preview changes without writing files')
     .action(async (options) => {
       const projectRoot = process.cwd();
-      const aioxDir = path.join(projectRoot, '.yard-core');
-      const legacyPath = path.join(aioxDir, 'core-config.yaml');
+      const yardDir = path.join(projectRoot, '.yard-core');
+      const legacyPath = path.join(yardDir, 'core-config.yaml');
 
       // Check if already layered
-      const frameworkPath = path.join(aioxDir, 'framework-config.yaml');
-      const projectConfigPath = path.join(aioxDir, 'project-config.yaml');
+      const frameworkPath = path.join(yardDir, 'framework-config.yaml');
+      const projectConfigPath = path.join(yardDir, 'project-config.yaml');
 
       if (fs.existsSync(frameworkPath) && fs.existsSync(projectConfigPath)) {
         console.log('Nothing to migrate. Config is already using layered structure.');
@@ -126,9 +126,9 @@ function createConfigCommand() {
         console.log('DRY RUN — Preview of migration:');
         console.log(`  Source: ${legacyPath}`);
         console.log('  Target files to create:');
-        console.log(`    → ${path.join(aioxDir, 'framework-config.yaml')}`);
-        console.log(`    → ${path.join(aioxDir, 'project-config.yaml')}`);
-        console.log(`    → ${path.join(aioxDir, 'local-config.yaml')}`);
+        console.log(`    → ${path.join(yardDir, 'framework-config.yaml')}`);
+        console.log(`    → ${path.join(yardDir, 'project-config.yaml')}`);
+        console.log(`    → ${path.join(yardDir, 'local-config.yaml')}`);
         console.log('  No files written (dry-run mode).');
         return;
       }
@@ -172,7 +172,7 @@ function createConfigCommand() {
       fs.writeFileSync(projectConfigPath, yaml.dump(projectData), 'utf8');
 
       // Local config (L4)
-      const localPath = path.join(aioxDir, 'local-config.yaml');
+      const localPath = path.join(yardDir, 'local-config.yaml');
       if (!fs.existsSync(localPath)) {
         fs.writeFileSync(localPath, '# Machine-specific configuration (gitignored)\nlocal: {}\n', 'utf8');
       }
@@ -240,9 +240,9 @@ function createConfigCommand() {
     .description('Generate machine-specific configuration file from template')
     .action(async () => {
       const projectRoot = process.cwd();
-      const aioxDir = path.join(projectRoot, '.yard-core');
-      const localPath = path.join(aioxDir, 'local-config.yaml');
-      const templatePath = path.join(aioxDir, 'local-config.yaml.template');
+      const yardDir = path.join(projectRoot, '.yard-core');
+      const localPath = path.join(yardDir, 'local-config.yaml');
+      const templatePath = path.join(yardDir, 'local-config.yaml.template');
 
       if (fs.existsSync(localPath)) {
         console.error(`local-config.yaml already exists at: ${localPath}`);
@@ -255,7 +255,7 @@ function createConfigCommand() {
         content = fs.readFileSync(templatePath, 'utf8');
       }
 
-      fs.mkdirSync(aioxDir, { recursive: true });
+      fs.mkdirSync(yardDir, { recursive: true });
       fs.writeFileSync(localPath, content, 'utf8');
       console.log(`Created: ${localPath}`);
 

@@ -1,5 +1,5 @@
 /**
- * AIOX Events Module
+ * YARD Events Module
  *
  * Exports for event types and dashboard emitter.
  *

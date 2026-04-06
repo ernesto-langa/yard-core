@@ -1,7 +1,7 @@
 /**
  * Squad Migrator Utility
  *
- * Migrates legacy squad formats to AIOX 2.1 standard.
+ * Migrates legacy squad formats to YARD 2.1 standard.
  * Handles manifest, structure, and task format migrations.
  *
  * Used by: squad-creator agent (*migrate-squad task)
@@ -228,32 +228,32 @@ class SquadMigrator {
       const content = await fs.readFile(manifestPath, 'utf-8');
       const manifest = yaml.load(content);
 
-      // Check for missing aiox.type
-      if (!manifest.aiox?.type) {
+      // Check for missing yard.type
+      if (!manifest.yard?.type) {
         analysis.needsMigration = true;
         analysis.issues.push({
-          type: 'MISSING_AIOX_TYPE',
-          message: 'Missing required field: aiox.type',
+          type: 'MISSING_YARD_TYPE',
+          message: 'Missing required field: yard.type',
           severity: 'error',
         });
         analysis.actions.push({
           type: 'ADD_FIELD',
-          path: 'aiox.type',
+          path: 'yard.type',
           value: 'squad',
         });
       }
 
-      // Check for missing aiox.minVersion
-      if (!manifest.aiox?.minVersion) {
+      // Check for missing yard.minVersion
+      if (!manifest.yard?.minVersion) {
         analysis.needsMigration = true;
         analysis.issues.push({
           type: 'MISSING_MIN_VERSION',
-          message: 'Missing required field: aiox.minVersion',
+          message: 'Missing required field: yard.minVersion',
           severity: 'error',
         });
         analysis.actions.push({
           type: 'ADD_FIELD',
-          path: 'aiox.minVersion',
+          path: 'yard.minVersion',
           value: '2.1.0',
         });
       }

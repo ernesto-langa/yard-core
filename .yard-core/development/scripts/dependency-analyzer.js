@@ -1,5 +1,5 @@
 /**
- * Dependency Analyzer for AIOX-FULLSTACK
+ * Dependency Analyzer for YARD-FULLSTACK
  * Analyzes and resolves dependencies between components
  * @module dependency-analyzer
  */
@@ -621,7 +621,7 @@ class DependencyAnalyzer {
           taskId: id,
           taskTitle,
           taskDescription: `Dependency task for ${id}`,
-          agentName: 'aiox-developer'
+          agentName: 'yard-developer'
         };
         
       case 'workflow':

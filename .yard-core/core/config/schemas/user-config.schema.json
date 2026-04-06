@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "user-config.schema.json",
-  "title": "AIOX User Configuration (L5)",
+  "title": "YARD User Configuration (L5)",
   "description": "Cross-project user preferences stored in ~/.yard/user-config.yaml",
   "type": "object",
   "required": ["user_profile"],

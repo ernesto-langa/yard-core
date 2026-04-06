@@ -283,9 +283,9 @@
       }
     },
     {
-      "id": "aiox-kb",
-      "name": "Aiox Kb",
-      "description": "AIOX-Method is a framework that combines AI agents with Agile development methodologies. The v4 system introduces a modular architecture with improved dependency management, bundle optimization, and s",
+      "id": "yard-kb",
+      "name": "Yard Kb",
+      "description": "YARD-Method is a framework that combines AI agents with Agile development methodologies. The v4 system introduces a modular architecture with improved dependency management, bundle optimization, and s",
       "category": "data",
       "subcategory": "knowledge",
       "inputs": [],
@@ -293,9 +293,9 @@
       "tags": [
         "data",
         "knowledge",
-        "aiox"
+        "yard"
       ],
-      "path": ".yard-core/core/data/aiox-kb.md",
+      "path": ".yard-core/core/data/yard-kb.md",
       "taskFormat": "TASK-FORMAT-V1",
       "executorTypes": [
         "Agent"
@@ -342,9 +342,9 @@
       }
     },
     {
-      "id": "aiox-validator",
-      "name": "Aiox Validator",
-      "description": "AIOX-FullStack Validation System",
+      "id": "yard-validator",
+      "name": "Yard Validator",
+      "description": "YARD-FullStack Validation System",
       "category": "script",
       "subcategory": "validation",
       "inputs": [],
@@ -352,10 +352,10 @@
       "tags": [
         "script",
         "validation",
-        "aiox",
+        "yard",
         "validator"
       ],
-      "path": ".yard-core/infrastructure/scripts/aiox-validator.js",
+      "path": ".yard-core/infrastructure/scripts/yard-validator.js",
       "taskFormat": "SCRIPT",
       "executorTypes": [
         "CLI",
@@ -375,7 +375,7 @@
     {
       "id": "approval-workflow",
       "name": "Approval Workflow",
-      "description": "Approval workflow for AIOX-FULLSTACK framework Manages approval process for high-impact modifications",
+      "description": "Approval workflow for YARD-FULLSTACK framework Manages approval process for high-impact modifications",
       "category": "script",
       "subcategory": "utility",
       "inputs": [],
@@ -469,7 +469,7 @@
     {
       "id": "batch-creator",
       "name": "Batch Creator",
-      "description": "Batch Component Creator for AIOX-FULLSTACK Creates multiple related components in a single operation",
+      "description": "Batch Component Creator for YARD-FULLSTACK Creates multiple related components in a single operation",
       "category": "script",
       "subcategory": "utility",
       "inputs": [],
@@ -625,7 +625,7 @@
     {
       "id": "commit-message-generator",
       "name": "Commit Message Generator",
-      "description": "Generates structured commit messages following conventional commit standards for AIOX framework modifications",
+      "description": "Generates structured commit messages following conventional commit standards for YARD framework modifications",
       "category": "script",
       "subcategory": "generation",
       "inputs": [],
@@ -657,7 +657,7 @@
     {
       "id": "component-generator",
       "name": "Component Generator",
-      "description": "Component Generator for AIOX-FULLSTACK Generates agents, tasks, and workflows using templates",
+      "description": "Component Generator for YARD-FULLSTACK Generates agents, tasks, and workflows using templates",
       "category": "script",
       "subcategory": "generation",
       "inputs": [],
@@ -689,7 +689,7 @@
     {
       "id": "component-metadata",
       "name": "Component Metadata",
-      "description": "Component Metadata Manager for AIOX-FULLSTACK Manages detailed metadata for all framework components",
+      "description": "Component Metadata Manager for YARD-FULLSTACK Manages detailed metadata for all framework components",
       "category": "script",
       "subcategory": "utility",
       "inputs": [],
@@ -721,7 +721,7 @@
     {
       "id": "component-search",
       "name": "Component Search",
-      "description": "Component search utility for AIOX-FULLSTACK framework Finds and searches components across the framework",
+      "description": "Component search utility for YARD-FULLSTACK framework Finds and searches components across the framework",
       "category": "script",
       "subcategory": "utility",
       "inputs": [],
@@ -846,7 +846,7 @@
     {
       "id": "coverage-analyzer",
       "name": "Coverage Analyzer",
-      "description": "Coverage analyzer for AIOX-FULLSTACK test generation Analyzes existing test coverage and identifies gaps",
+      "description": "Coverage analyzer for YARD-FULLSTACK test generation Analyzes existing test coverage and identifies gaps",
       "category": "script",
       "subcategory": "analysis",
       "inputs": [],
@@ -877,7 +877,7 @@
     {
       "id": "dependency-analyzer",
       "name": "Dependency Analyzer",
-      "description": "Dependency Analyzer for AIOX-FULLSTACK Analyzes and resolves dependencies between components",
+      "description": "Dependency Analyzer for YARD-FULLSTACK Analyzes and resolves dependencies between components",
       "category": "script",
       "subcategory": "analysis",
       "inputs": [],
@@ -908,7 +908,7 @@
     {
       "id": "dependency-impact-analyzer",
       "name": "Dependency Impact Analyzer",
-      "description": "Dependency impact analyzer for AIOX-FULLSTACK framework Analyzes how component modifications affect dependent components",
+      "description": "Dependency impact analyzer for YARD-FULLSTACK framework Analyzes how component modifications affect dependent components",
       "category": "script",
       "subcategory": "analysis",
       "inputs": [],
@@ -971,7 +971,7 @@
     {
       "id": "documentation-synchronizer",
       "name": "Documentation Synchronizer",
-      "description": "AIOX Documentation Synchronizer",
+      "description": "YARD Documentation Synchronizer",
       "category": "script",
       "subcategory": "utility",
       "inputs": [],
@@ -1002,7 +1002,7 @@
     {
       "id": "framework-analyzer",
       "name": "Framework Analyzer",
-      "description": "Framework structure analyzer for AIOX-FULLSTACK Discovers and catalogs all framework components",
+      "description": "Framework structure analyzer for YARD-FULLSTACK Discovers and catalogs all framework components",
       "category": "script",
       "subcategory": "analysis",
       "inputs": [],
@@ -1065,7 +1065,7 @@
     {
       "id": "git-wrapper",
       "name": "Git Wrapper",
-      "description": "GitWrapper - Centralized git operations for AIOX",
+      "description": "GitWrapper - Centralized git operations for YARD",
       "category": "script",
       "subcategory": "utility",
       "inputs": [],
@@ -1096,7 +1096,7 @@
     {
       "id": "improvement-engine",
       "name": "Improvement Engine",
-      "description": "Framework improvement suggestion engine for AIOX-FULLSTACK Generates actionable improvement recommendations based on analysis results",
+      "description": "Framework improvement suggestion engine for YARD-FULLSTACK Generates actionable improvement recommendations based on analysis results",
       "category": "script",
       "subcategory": "utility",
       "inputs": [],
@@ -1158,7 +1158,7 @@
     {
       "id": "modification-risk-assessment",
       "name": "Modification Risk Assessment",
-      "description": "Modification risk assessment for AIOX-FULLSTACK framework Evaluates modification risks across multiple dimensions",
+      "description": "Modification risk assessment for YARD-FULLSTACK framework Evaluates modification risks across multiple dimensions",
       "category": "script",
       "subcategory": "utility",
       "inputs": [],
@@ -1252,7 +1252,7 @@
     {
       "id": "performance-analyzer",
       "name": "Performance Analyzer",
-      "description": "Performance bottleneck analyzer for AIOX-FULLSTACK framework Identifies performance issues and optimization opportunities",
+      "description": "Performance bottleneck analyzer for YARD-FULLSTACK framework Identifies performance issues and optimization opportunities",
       "category": "script",
       "subcategory": "analysis",
       "inputs": [],
@@ -1316,7 +1316,7 @@
     {
       "id": "performance-optimizer",
       "name": "Performance Optimizer",
-      "description": "AIOX Performance Optimizer",
+      "description": "YARD Performance Optimizer",
       "category": "script",
       "subcategory": "utility",
       "inputs": [],
@@ -1347,7 +1347,7 @@
     {
       "id": "performance-tracker",
       "name": "Performance Tracker",
-      "description": "AIOX Performance Tracker",
+      "description": "YARD Performance Tracker",
       "category": "script",
       "subcategory": "utility",
       "inputs": [],
@@ -1570,7 +1570,7 @@
     {
       "id": "security-checker",
       "name": "Security Checker",
-      "description": "Security Checker for AIOX Developer Meta-Agent Validates generated code and configurations for security vulnerabilities",
+      "description": "Security Checker for YARD Developer Meta-Agent Validates generated code and configurations for security vulnerabilities",
       "category": "script",
       "subcategory": "validation",
       "inputs": [],
@@ -1634,7 +1634,7 @@
     {
       "id": "status-mapper",
       "name": "Status Mapper",
-      "description": "Status Mapper - Bidirectional status mapping between AIOX and ClickUp",
+      "description": "Status Mapper - Bidirectional status mapping between YARD and ClickUp",
       "category": "script",
       "subcategory": "utility",
       "inputs": [],
@@ -1665,7 +1665,7 @@
     {
       "id": "template-engine",
       "name": "Template Engine",
-      "description": "Template Engine for AIOX-FULLSTACK Handles variable substitution, conditionals, and loops for component generation",
+      "description": "Template Engine for YARD-FULLSTACK Handles variable substitution, conditionals, and loops for component generation",
       "category": "script",
       "subcategory": "utility",
       "inputs": [],
@@ -1696,7 +1696,7 @@
     {
       "id": "template-validator",
       "name": "Template Validator",
-      "description": "Template Validator for AIOX-FULLSTACK Validates component templates for required structure and placeholders",
+      "description": "Template Validator for YARD-FULLSTACK Validates component templates for required structure and placeholders",
       "category": "script",
       "subcategory": "validation",
       "inputs": [],
@@ -1727,7 +1727,7 @@
     {
       "id": "test-generator",
       "name": "Test Generator",
-      "description": "Test generator for AIOX-FULLSTACK automated test generation Orchestrates test file creation using the template system",
+      "description": "Test generator for YARD-FULLSTACK automated test generation Orchestrates test file creation using the template system",
       "category": "script",
       "subcategory": "generation",
       "inputs": [],
@@ -1759,7 +1759,7 @@
     {
       "id": "test-quality-assessment",
       "name": "Test Quality Assessment",
-      "description": "Test quality assessment for AIOX-FULLSTACK test generation Evaluates generated test quality and provides improvement recommendations",
+      "description": "Test quality assessment for YARD-FULLSTACK test generation Evaluates generated test quality and provides improvement recommendations",
       "category": "script",
       "subcategory": "testing",
       "inputs": [],
@@ -1854,7 +1854,7 @@
     {
       "id": "tool-resolver",
       "name": "Tool Resolver",
-      "description": "ToolResolver - Resolves and loads AIOX tools from file system",
+      "description": "ToolResolver - Resolves and loads YARD tools from file system",
       "category": "script",
       "subcategory": "utility",
       "inputs": [],
@@ -1885,7 +1885,7 @@
     {
       "id": "transaction-manager",
       "name": "Transaction Manager",
-      "description": "Transaction Manager for AIOX-FULLSTACK Manages component operations with rollback support",
+      "description": "Transaction Manager for YARD-FULLSTACK Manages component operations with rollback support",
       "category": "script",
       "subcategory": "management",
       "inputs": [],
@@ -1916,7 +1916,7 @@
     {
       "id": "usage-analytics",
       "name": "Usage Analytics",
-      "description": "Usage pattern analyzer for AIOX-FULLSTACK framework components Analyzes how components are used throughout the codebase",
+      "description": "Usage pattern analyzer for YARD-FULLSTACK framework components Analyzes how components are used throughout the codebase",
       "category": "script",
       "subcategory": "utility",
       "inputs": [],
@@ -1980,7 +1980,7 @@
     {
       "id": "visual-impact-generator",
       "name": "Visual Impact Generator",
-      "description": "Visual impact generator for AIOX-FULLSTACK framework Creates visual representations of impact analysis results",
+      "description": "Visual impact generator for YARD-FULLSTACK framework Creates visual representations of impact analysis results",
       "category": "script",
       "subcategory": "generation",
       "inputs": [],
@@ -2012,7 +2012,7 @@
     {
       "id": "yaml-validator",
       "name": "Yaml Validator",
-      "description": "YAML Validator for AIOX Developer Meta-Agent Ensures YAML files maintain proper structure and syntax",
+      "description": "YAML Validator for YARD Developer Meta-Agent Ensures YAML files maintain proper structure and syntax",
       "category": "script",
       "subcategory": "validation",
       "inputs": [],
@@ -2108,7 +2108,7 @@
     {
       "id": "analyze-framework",
       "name": "Analyze Framework",
-      "description": "Performs comprehensive analysis of the AIOX-FULLSTACK framework to identify improvement opportunities, performance bottlenecks, component redundancies, and usage patterns.",
+      "description": "Performs comprehensive analysis of the YARD-FULLSTACK framework to identify improvement opportunities, performance bottlenecks, component redundancies, and usage patterns.",
       "category": "task",
       "subcategory": "analysis",
       "inputs": [],
@@ -5054,7 +5054,7 @@
     {
       "id": "qa-nfr-assess",
       "name": "Qa Nfr Assess",
-      "description": "<!-- Powered by AIOX™ Core -->",
+      "description": "<!-- Powered by YARD™ Core -->",
       "category": "task",
       "subcategory": "general",
       "inputs": [],
@@ -5867,7 +5867,7 @@
     {
       "id": "antigravity-rules",
       "name": "Antigravity Rules",
-      "description": "You are working with AIOX-FULLSTACK, an AI-Orchestrated System for Full Stack Development.",
+      "description": "You are working with YARD-FULLSTACK, an AI-Orchestrated System for Full Stack Development.",
       "category": "template",
       "subcategory": "ide-rules",
       "inputs": [],
@@ -5897,7 +5897,7 @@
     {
       "id": "claude-rules",
       "name": "Claude Rules",
-      "description": "You are working with AIOX-FULLSTACK, an AI-Orchestrated System for Full Stack Development.",
+      "description": "You are working with YARD-FULLSTACK, an AI-Orchestrated System for Full Stack Development.",
       "category": "template",
       "subcategory": "ide-rules",
       "inputs": [],
@@ -5958,7 +5958,7 @@
     {
       "id": "copilot-rules",
       "name": "Copilot Rules",
-      "description": "You are working with AIOX-FULLSTACK, an AI-Orchestrated System for Full Stack Development.",
+      "description": "You are working with YARD-FULLSTACK, an AI-Orchestrated System for Full Stack Development.",
       "category": "template",
       "subcategory": "ide-rules",
       "inputs": [],
@@ -5988,7 +5988,7 @@
     {
       "id": "cursor-rules",
       "name": "Cursor Rules",
-      "description": "You are working with AIOX-FULLSTACK, an AI-Orchestrated System for Full Stack Development.",
+      "description": "You are working with YARD-FULLSTACK, an AI-Orchestrated System for Full Stack Development.",
       "category": "template",
       "subcategory": "ide-rules",
       "inputs": [],
@@ -6048,7 +6048,7 @@
     {
       "id": "gemini-rules",
       "name": "Gemini Rules",
-      "description": "You are working with AIOX-FULLSTACK, an AI-Orchestrated System for Full Stack Development.",
+      "description": "You are working with YARD-FULLSTACK, an AI-Orchestrated System for Full Stack Development.",
       "category": "template",
       "subcategory": "ide-rules",
       "inputs": [],

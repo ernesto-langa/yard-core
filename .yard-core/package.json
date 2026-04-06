@@ -47,22 +47,22 @@
     "validator": "^13.15.15"
   },
   "peerDependencies": {
-    "@aiox-fullstack/memory": "^4.31.0",
-    "@aiox-fullstack/security": "^4.31.0",
-    "@aiox-fullstack/performance": "^4.31.0",
-    "@aiox-fullstack/telemetry": "^4.31.0"
+    "@yard-fullstack/memory": "^4.31.0",
+    "@yard-fullstack/security": "^4.31.0",
+    "@yard-fullstack/performance": "^4.31.0",
+    "@yard-fullstack/telemetry": "^4.31.0"
   },
   "peerDependenciesMeta": {
-    "@aiox-fullstack/memory": {
+    "@yard-fullstack/memory": {
       "optional": true
     },
-    "@aiox-fullstack/security": {
+    "@yard-fullstack/security": {
       "optional": true
     },
-    "@aiox-fullstack/performance": {
+    "@yard-fullstack/performance": {
       "optional": true
     },
-    "@aiox-fullstack/telemetry": {
+    "@yard-fullstack/telemetry": {
       "optional": true
     }
   },

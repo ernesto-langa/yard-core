@@ -11,7 +11,7 @@ workflow:
 
   type: automation
   project_types:
-    - aiox-development
+    - yard-development
     - autonomous-development
     - parallel-development
 
@@ -87,7 +87,7 @@ workflow:
         description: Verify WorktreeManager available
         file_exists: .yard-core/infrastructure/scripts/worktree-manager.js
         blocking: true
-        error: "WorktreeManager not found. AIOX infrastructure incomplete."
+        error: "WorktreeManager not found. YARD infrastructure incomplete."
 
       - id: check_limit
         description: Check worktree limit not exceeded
@@ -295,8 +295,8 @@ workflow:
         console.log(`   cd ${worktreePath}\n`);
 
         // Set environment variable for shell integration
-        process.env.AIOX_WORKTREE = worktreePath;
-        process.env.AIOX_STORY = storyId;
+        process.env.YARD_WORKTREE = worktreePath;
+        process.env.YARD_STORY = storyId;
 
         return {
           worktreePath,

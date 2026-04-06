@@ -1,7 +1,7 @@
 /**
  * Service Registry Builder
  *
- * Scans AIOX modules and builds the service registry JSON file.
+ * Scans YARD modules and builds the service registry JSON file.
  * Extracts metadata from tasks, templates, scripts, checklists, and workflows.
  *
  * @module build-registry

@@ -263,7 +263,7 @@ metadata:
   story: "11.4"
   epic: "11 - Projeto Bob"
   created_date: "2026-02-05"
-  prd_reference: "PRD AIOX v2.0 - Seção 3.6 (Critérios de Subir à Superfície)"
+  prd_reference: "PRD YARD v2.0 - Seção 3.6 (Critérios de Subir à Superfície)"
   tags:
     - projeto-bob
     - surface-criteria

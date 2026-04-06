@@ -1,6 +1,6 @@
 ## Agent Contribution
 
-<!-- Thank you for contributing an agent to AIOX! Please fill out this template. -->
+<!-- Thank you for contributing an agent to YARD! Please fill out this template. -->
 
 ### Agent Information
 
@@ -23,7 +23,7 @@
 
 #### Required
 
-- [ ] Agent follows AIOX agent YAML structure
+- [ ] Agent follows YARD agent YAML structure
 - [ ] `persona_profile` is complete (archetype, communication, greeting_levels)
 - [ ] All commands have corresponding task dependencies
 - [ ] No hardcoded credentials or sensitive data

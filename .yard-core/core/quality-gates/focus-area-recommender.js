@@ -131,7 +131,7 @@ class FocusAreaRecommender {
       {
         pattern: /agent|workflow|task|orchestrat/i,
         category: 'yard-core',
-        highlight: 'AIOX framework changes',
+        highlight: 'YARD framework changes',
         risk: 'high',
       },
       {
@@ -294,7 +294,7 @@ class FocusAreaRecommender {
         'Is the memory footprint acceptable?',
       ],
       'yard-core': [
-        'Does this follow AIOX framework patterns?',
+        'Does this follow YARD framework patterns?',
         'Is backward compatibility maintained?',
         'Are agent/task contracts preserved?',
         'Is the change properly documented?',

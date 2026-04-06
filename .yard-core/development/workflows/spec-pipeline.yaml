@@ -11,7 +11,7 @@ workflow:
 
   type: pipeline
   project_types:
-    - aiox-development
+    - yard-development
     - autonomous-development
     - spec-generation
 

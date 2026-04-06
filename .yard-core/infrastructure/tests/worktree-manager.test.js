@@ -13,7 +13,7 @@ describe('WorktreeManager', () => {
 
   beforeEach(async () => {
     // Use OS temp directory to ensure complete isolation from source tree
-    testRoot = await fs.mkdtemp(path.join(os.tmpdir(), 'aiox-worktree-test-'));
+    testRoot = await fs.mkdtemp(path.join(os.tmpdir(), 'yard-worktree-test-'));
 
     // Initialize git repo for tests
     try {

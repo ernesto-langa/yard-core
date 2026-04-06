@@ -230,7 +230,7 @@ function createLink(projectRoot = process.cwd(), options = {}) {
   if (!fs.existsSync(globalPath)) {
     return {
       success: false,
-      error: 'Global MCP directory does not exist. Run "aiox mcp setup" first.',
+      error: 'Global MCP directory does not exist. Run "yard mcp setup" first.',
       linkPath,
       globalPath,
     };

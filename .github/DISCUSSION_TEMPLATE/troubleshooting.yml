@@ -17,7 +17,7 @@ body:
       label: Which repository is affected?
       options:
         - yard-core (Core Framework)
-        - aiox-squads (AIOX Squads)
+        - yard-squads (YARD Squads)
         - mcp-ecosystem (Docker MCP Toolkit)
         - Multiple / Not sure
     validations:
@@ -81,7 +81,7 @@ body:
       placeholder: |
         - OS: Windows 11 / macOS 14 / Ubuntu 22.04
         - Node.js: v20.x
-        - AIOX version: x.x.x
+        - YARD version: x.x.x
         - IDE: VS Code / Cursor / Other
     validations:
       required: true

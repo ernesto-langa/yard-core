@@ -28,7 +28,7 @@ const DEFAULT_VALIDATION_RULES = {
 };
 
 /**
- * Known AIOX task registry commands
+ * Known YARD task registry commands
  * @type {Set<string>}
  */
 const KNOWN_COMMANDS = new Set([
@@ -123,7 +123,7 @@ class PatternValidator {
       errors.push('Sequence must contain at least one key workflow command');
     }
 
-    // Rule 6: All commands should exist in AIOX task registry
+    // Rule 6: All commands should exist in YARD task registry
     const unknownCommands = pattern.sequence.filter((cmd) => !this._isKnownCommand(cmd));
     if (unknownCommands.length > 0) {
       warnings.push(`Unknown commands: ${unknownCommands.join(', ')}`);
@@ -219,7 +219,7 @@ class PatternValidator {
   }
 
   /**
-   * Check if a command is known in the AIOX task registry
+   * Check if a command is known in the YARD task registry
    * @param {string} command - Command to check
    * @returns {boolean} True if command is known
    * @private

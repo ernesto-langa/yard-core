@@ -84,10 +84,10 @@ function getHomeDir() {
 }
 
 /**
- * Get global AIOX directory path
+ * Get global YARD directory path
  * @returns {string} Path to ~/.yard/
  */
-function getGlobalAioxDir() {
+function getGlobalYardDir() {
   return path.join(getHomeDir(), '.yard');
 }
 
@@ -96,7 +96,7 @@ function getGlobalAioxDir() {
  * @returns {string} Path to ~/.yard/mcp/
  */
 function getGlobalMcpDir() {
-  return path.join(getGlobalAioxDir(), 'mcp');
+  return path.join(getGlobalYardDir(), 'mcp');
 }
 
 /**
@@ -128,7 +128,7 @@ function getCacheDir() {
  * @returns {string} Path to ~/.yard/credentials/
  */
 function getCredentialsDir() {
-  return path.join(getGlobalAioxDir(), 'credentials');
+  return path.join(getGlobalYardDir(), 'credentials');
 }
 
 /**
@@ -176,7 +176,7 @@ module.exports = {
   isLinux,
   isUnix,
   getHomeDir,
-  getGlobalAioxDir,
+  getGlobalYardDir,
   getGlobalMcpDir,
   getGlobalConfigPath,
   getServersDir,

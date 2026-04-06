@@ -1,7 +1,7 @@
 # ============================================
-# AIOX Framework Configuration (Level 1)
+# YARD Framework Configuration (Level 1)
 # ============================================
-# DO NOT EDIT — This file is part of the AIOX framework.
+# DO NOT EDIT — This file is part of the YARD framework.
 # Override values in project-config.yaml or local-config.yaml.
 #
 # Level: L1 (Framework)
@@ -121,7 +121,7 @@ ide_sync_system:
   targets:
     claude-code:
       enabled: true
-      path: ".claude/commands/AIOX/agents"
+      path: ".claude/commands/YARD/agents"
       format: "full-markdown-yaml"
     codex:
       enabled: true
@@ -129,7 +129,7 @@ ide_sync_system:
       format: "full-markdown-yaml"
     gemini:
       enabled: true
-      path: ".gemini/rules/AIOX/agents"
+      path: ".gemini/rules/YARD/agents"
       format: "full-markdown-yaml"
     github-copilot:
       enabled: true

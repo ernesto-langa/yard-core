@@ -341,16 +341,16 @@ async function verifyGap2() {
     'File not found',
   );
 
-  // 2.13 aiox-master has validate-workflow command
-  const masterMd = fs.readFileSync(path.join(ROOT, '.yard-core/development/agents/aiox-master.md'), 'utf-8');
+  // 2.13 yard-master has validate-workflow command
+  const masterMd = fs.readFileSync(path.join(ROOT, '.yard-core/development/agents/yard-master.md'), 'utf-8');
   assert(
     masterMd.includes('name: validate-workflow'),
-    '2.13a aiox-master has validate-workflow command',
-    'Command not found in aiox-master.md',
+    '2.13a yard-master has validate-workflow command',
+    'Command not found in yard-master.md',
   );
   assert(
     masterMd.includes('validate-workflow.md'),
-    '2.13b aiox-master has validate-workflow.md in dependencies',
+    '2.13b yard-master has validate-workflow.md in dependencies',
     'Dependency not found',
   );
 }
@@ -668,16 +668,16 @@ async function verifyGap3() {
       'File not found',
     );
 
-    // 3.22 aiox-master has run-workflow command
-    const masterMd = fs.readFileSync(path.join(ROOT, '.yard-core/development/agents/aiox-master.md'), 'utf-8');
+    // 3.22 yard-master has run-workflow command
+    const masterMd = fs.readFileSync(path.join(ROOT, '.yard-core/development/agents/yard-master.md'), 'utf-8');
     assert(
       masterMd.includes('name: run-workflow'),
-      '3.22a aiox-master has run-workflow command',
+      '3.22a yard-master has run-workflow command',
       'Command not found',
     );
     assert(
       masterMd.includes('run-workflow.md'),
-      '3.22b aiox-master has run-workflow.md in dependencies',
+      '3.22b yard-master has run-workflow.md in dependencies',
       'Dependency not found',
     );
 
@@ -979,7 +979,7 @@ async function verifyGap4() {
 
 async function main() {
   console.log('\n' + '='.repeat(60));
-  console.log('  AIOX Workflow Gaps — Verification Suite');
+  console.log('  YARD Workflow Gaps — Verification Suite');
   console.log('  Running from:', process.cwd());
   console.log('='.repeat(60));
 

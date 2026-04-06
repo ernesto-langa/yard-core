@@ -37,8 +37,8 @@ workflow:
       action: environment_bootstrap
       duration_estimate: "15-30 min"
       creates:
-        - .aiox/config.yaml
-        - .aiox/environment-report.json
+        - .yard/config.yaml
+        - .yard/environment-report.json
         - .gitignore
         - README.md
         - package.json
@@ -50,11 +50,11 @@ workflow:
         - Verifies/installs CLIs (git, gh, node, supabase, railway)
         - Authenticates services (GitHub, Supabase, Railway)
         - Creates Git repository locally and on GitHub
-        - Scaffolds AIOX project structure
+        - Scaffolds YARD project structure
         - Generates environment report
 
         SKIP CONDITIONS:
-        - Only skip if project already has .aiox/environment-report.json
+        - Only skip if project already has .yard/environment-report.json
         - Re-run if switching machines or team members join
 
     # ═══════════════════════════════════════════════════════════════════════════
@@ -266,7 +266,7 @@ workflow:
       notes: |
         All stories implemented and reviewed!
         Project development phase complete.
-        Reference: .yard-core/data/aiox-kb.md#IDE Development Workflow
+        Reference: .yard-core/data/yard-kb.md#IDE Development Workflow
 
   flow_diagram: |
     ```mermaid

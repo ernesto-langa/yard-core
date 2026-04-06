@@ -1,7 +1,7 @@
 /**
  * Doctor Check: IDE Sync
  *
- * Validates agents in .claude/commands/AIOX/agents/ match
+ * Validates agents in .claude/commands/YARD/agents/ match
  * .yard-core/development/agents/ (count and names).
  *
  * @module yard-core/doctor/checks/ide-sync
@@ -15,7 +15,7 @@ const name = 'ide-sync';
 
 async function run(context) {
   const agentsSourceDir = path.join(context.projectRoot, '.yard-core', 'development', 'agents');
-  const agentsIdeDir = path.join(context.projectRoot, '.claude', 'commands', 'AIOX', 'agents');
+  const agentsIdeDir = path.join(context.projectRoot, '.claude', 'commands', 'YARD', 'agents');
 
   if (!fs.existsSync(agentsSourceDir)) {
     return {
@@ -30,7 +30,7 @@ async function run(context) {
     return {
       check: name,
       status: 'WARN',
-      message: 'IDE agents directory not found (.claude/commands/AIOX/agents/)',
+      message: 'IDE agents directory not found (.claude/commands/YARD/agents/)',
       fixCommand: 'npx yard-core install --force',
     };
   }

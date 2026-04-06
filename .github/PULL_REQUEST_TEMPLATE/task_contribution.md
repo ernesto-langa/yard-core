@@ -1,6 +1,6 @@
 ## Task Contribution
 
-<!-- Thank you for contributing a task to AIOX! Please fill out this template. -->
+<!-- Thank you for contributing a task to YARD! Please fill out this template. -->
 
 ### Task Information
 
@@ -23,7 +23,7 @@
 
 #### Required
 
-- [ ] Task follows AIOX task format
+- [ ] Task follows YARD task format
 - [ ] Elicitation points are clear and actionable
 - [ ] Deliverables are well-defined
 - [ ] Error handling guidance included

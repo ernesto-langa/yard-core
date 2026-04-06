@@ -1,5 +1,5 @@
 /**
- * Apply Inline Greeting Logic to All 11 AIOX Agents
+ * Apply Inline Greeting Logic to All 11 YARD Agents
  * Story: 6.1.2.5-T1 - Option A Implementation
  * Date: 2025-11-16
  */
@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 
 const AGENTS_DIR = path.join(__dirname, '..', 'agents');
-const CLAUDE_AGENTS_DIR = path.join(__dirname, '..', '..', '.claude', 'commands', 'AIOX', 'agents');
+const CLAUDE_AGENTS_DIR = path.join(__dirname, '..', '..', '.claude', 'commands', 'YARD', 'agents');
 
 const AGENTS = [
   'dev.md',
@@ -20,7 +20,7 @@ const AGENTS = [
   'analyst.md',
   'data-engineer.md',
   'devops.md',
-  'aiox-master.md',
+  'yard-master.md',
   'ux-design-expert.md',
 ];
 
@@ -139,7 +139,7 @@ function main() {
   if (results.updated > 0) {
     console.log('\n✅ All agents updated successfully!');
     console.log('📋 Backups created with .backup-pre-inline extension');
-    console.log('🔄 Files synchronized to .claude/commands/AIOX/agents/');
+    console.log('🔄 Files synchronized to .claude/commands/YARD/agents/');
   }
 }
 

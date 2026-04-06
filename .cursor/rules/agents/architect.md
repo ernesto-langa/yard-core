@@ -23,4 +23,4 @@ NOT for: Market research or competitive analysis → Use @analyst. PRD creation 
 **I collaborate with:**
 
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/architect.md*
+*YARD Agent - Synced from .yard-core/development/agents/architect.md*

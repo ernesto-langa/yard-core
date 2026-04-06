@@ -13,7 +13,7 @@
 
 ## 📋 Description
 
-The AIOX installer fails immediately on Linux systems with a module not found error, preventing any installation or testing. The installer cannot locate the Yard Core module `utils/repository-detector`, blocking all Linux platform validation for Story 1.10c.
+The YARD installer fails immediately on Linux systems with a module not found error, preventing any installation or testing. The installer cannot locate the Yard Core module `utils/repository-detector`, blocking all Linux platform validation for Story 1.10c.
 
 **Impact:** This is a **CRITICAL BLOCKER** for Sprint 1 completion, as Story 1.10c cannot proceed without a working installer on Linux.
 
@@ -27,14 +27,14 @@ The AIOX installer fails immediately on Linux systems with a module not found er
 Error: Cannot find Yard Core module: utils/repository-detector
 Searched: ${PROJECT_ROOT}/.yard-core/utils/repository-detector
 Please ensure yard-core is installed correctly.
-    at loadAIOXCore (${PROJECT_ROOT}/bin/aiox-init.js:43:11)
+    at loadYARDCore (${PROJECT_ROOT}/bin/yard-init.js:43:11)
 ```
 
 ### Stack Trace Location
 
-- **File:** `bin/aiox-init.js`
+- **File:** `bin/yard-init.js`
 - **Line:** 43
-- **Function:** `loadAIOXCore`
+- **Function:** `loadYARDCore`
 
 ---
 
@@ -44,7 +44,7 @@ Please ensure yard-core is installed correctly.
 
 - Ubuntu 24.04 LTS (WSL) or native Linux
 - Node.js v18.20.8+
-- AIOX-Fullstack repository cloned
+- YARD-Fullstack repository cloned
 
 ### Steps to Reproduce
 
@@ -52,14 +52,14 @@ Please ensure yard-core is installed correctly.
 2. Create test directory:
 
    ```bash
-   mkdir -p /tmp/aiox-test-install
-   cd /tmp/aiox-test-install
+   mkdir -p /tmp/yard-test-install
+   cd /tmp/yard-test-install
    ```
 
 3. Execute installer:
 
    ```bash
-   node ${PROJECT_ROOT}/bin/aiox-init.js --help
+   node ${PROJECT_ROOT}/bin/yard-init.js --help
    ```
 
 4. **Observe:** Installation fails with module not found error
@@ -128,7 +128,7 @@ Please ensure yard-core is installed correctly.
 ### Investigation Needed
 
 - [ ] Verify `.yard-core/utils/repository-detector.js` exists in repo
-- [ ] Check `bin/aiox-init.js:43` for path construction logic
+- [ ] Check `bin/yard-init.js:43` for path construction logic
 - [ ] Review recent commits for module renames/moves
 - [ ] Test module loading on Windows vs Linux
 - [ ] Verify build process creates required directory structure
@@ -145,7 +145,7 @@ Please ensure yard-core is installed correctly.
    ls -la .yard-core/utils/repository-detector.js
    ```
 
-2. **Fix path resolution in `bin/aiox-init.js:43`:**
+2. **Fix path resolution in `bin/yard-init.js:43`:**
 
    ```javascript
    // Before (suspected):
@@ -170,7 +170,7 @@ Please ensure yard-core is installed correctly.
 
 4. **Test in WSL Ubuntu:**
    ```bash
-   wsl bash -c "cd /tmp/aiox-test-install && node /mnt/c/.../bin/aiox-init.js --help"
+   wsl bash -c "cd /tmp/yard-test-install && node /mnt/c/.../bin/yard-init.js --help"
    ```
 
 ### Long-Term (Prevention)
@@ -226,7 +226,7 @@ Please ensure yard-core is installed correctly.
 
 ### Code References
 
-- **Installer:** `bin/aiox-init.js:43` (error location)
+- **Installer:** `bin/yard-init.js:43` (error location)
 - **Missing Module:** `.yard-core/utils/repository-detector` (expected location)
 
 ### Related Stories

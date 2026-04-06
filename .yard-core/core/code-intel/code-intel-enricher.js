@@ -4,7 +4,7 @@
  * CodeIntelEnricher — Composite capabilities built on top of primitive capabilities.
  *
  * Each method composes multiple primitive capabilities from CodeIntelClient
- * to provide higher-level analysis functions used by AIOX tasks.
+ * to provide higher-level analysis functions used by YARD tasks.
  */
 class CodeIntelEnricher {
   /**

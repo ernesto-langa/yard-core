@@ -3,7 +3,7 @@
 ## 📋 Description
 A clear and concise description of what this PR does and why it's needed.
 
-## 🎯 AIOX Story Reference
+## 🎯 YARD Story Reference
 <!-- REQUIRED: Link to the story this PR implements -->
 **Story ID:** <!-- e.g., 3.3-3.4 -->
 **Story File:** <!-- e.g., docs/stories/v2.1/sprint-3/story-3.3-3.4-pr-automation.md -->

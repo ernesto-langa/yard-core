@@ -82,7 +82,7 @@ jobs:
           echo "npm install -g yard-core" >> CHANGELOG.md
           echo "" >> CHANGELOG.md
           echo "# Initialize in your project" >> CHANGELOG.md
-          echo "aiox init" >> CHANGELOG.md
+          echo "yard init" >> CHANGELOG.md
           echo "\`\`\`" >> CHANGELOG.md
 
       - name: Create Release

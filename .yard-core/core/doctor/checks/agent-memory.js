@@ -33,7 +33,7 @@ async function run(context) {
       check: name,
       status: 'FAIL',
       message: 'Agents directory not found',
-      fixCommand: 'aiox doctor --fix',
+      fixCommand: 'yard doctor --fix',
     };
   }
 
@@ -56,7 +56,7 @@ async function run(context) {
     check: name,
     status: 'WARN',
     message: `${present}/${EXPECTED_AGENTS.length} MEMORY.md files present (missing: ${missing.join(', ')})`,
-    fixCommand: 'aiox doctor --fix',
+    fixCommand: 'yard doctor --fix',
   };
 }
 

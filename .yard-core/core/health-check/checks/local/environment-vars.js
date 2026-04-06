@@ -24,9 +24,9 @@ const RECOMMENDED_VARS = [
 ];
 
 /**
- * AIOX-specific environment variables
+ * YARD-specific environment variables
  */
-const AIOX_VARS = ['AIOX_DEBUG', 'AIOX_LOG_LEVEL'];
+const YARD_VARS = ['YARD_DEBUG', 'YARD_LOG_LEVEL'];
 
 /**
  * Environment variables check
@@ -57,7 +57,7 @@ class EnvironmentVarsCheck extends BaseCheck {
   async execute(_context) {
     const missingRequired = [];
     const missingRecommended = [];
-    const aioxVars = [];
+    const yardVars = [];
     const setVars = [];
 
     // Check required vars
@@ -78,10 +78,10 @@ class EnvironmentVarsCheck extends BaseCheck {
       }
     }
 
-    // Check AIOX-specific vars (info only)
-    for (const varName of AIOX_VARS) {
+    // Check YARD-specific vars (info only)
+    for (const varName of YARD_VARS) {
       if (process.env[varName]) {
-        aioxVars.push({ name: varName, value: this.maskValue(process.env[varName]) });
+        yardVars.push({ name: varName, value: this.maskValue(process.env[varName]) });
       }
     }
 
@@ -105,7 +105,7 @@ class EnvironmentVarsCheck extends BaseCheck {
           details: {
             setVars,
             missingRecommended,
-            aioxVars,
+            yardVars,
           },
         },
       );
@@ -114,7 +114,7 @@ class EnvironmentVarsCheck extends BaseCheck {
     return this.pass('All required environment variables are set', {
       details: {
         setVars,
-        aioxVars,
+        yardVars,
         homeDir: process.env.HOME || process.env.USERPROFILE,
       },
     });

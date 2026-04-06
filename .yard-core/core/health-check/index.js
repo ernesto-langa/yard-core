@@ -1,13 +1,13 @@
 /**
  * Health Check System - Main Entry Point (HCS-2)
  *
- * Provides comprehensive health checking capabilities for AIOX projects.
+ * Provides comprehensive health checking capabilities for YARD projects.
  * Supports 5 domains: Project Coherence, Local Environment, Repository Health,
  * Deployment Environment, and Service Integration.
  *
  * NOTE (INS-4.8): This is a SEPARATE system from `core/doctor/` (INS-4.1).
- * The primary diagnostic interface is `aiox doctor` (bin/aiox.js → core/doctor/).
- * The agent-facing task `*health-check` now delegates to `aiox doctor --json`
+ * The primary diagnostic interface is `yard doctor` (bin/yard.js → core/doctor/).
+ * The agent-facing task `*health-check` now delegates to `yard doctor --json`
  * and no longer calls this module. This module is preserved for potential
  * programmatic use but is NOT the primary health check mechanism.
  *

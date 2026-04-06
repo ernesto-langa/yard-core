@@ -1,11 +1,11 @@
 /**
- * Skill Dispatcher - Dispatches to AIOX Skills instead of generic Task calls
+ * Skill Dispatcher - Dispatches to YARD Skills instead of generic Task calls
  *
  * Maps agent IDs to Skill invocations and prepares structured payloads.
  * Used by WorkflowOrchestrator to invoke specialized agents with full personas.
  *
  * Responsibilities:
- * - Map agent IDs to AIOX Skill names
+ * - Map agent IDs to YARD Skill names
  * - Build dispatch payloads with context
  * - Parse and normalize skill outputs
  *
@@ -19,7 +19,7 @@
 
 /**
  * @typedef {Object} DispatchPayload
- * @property {string} skill - Full skill name (e.g., 'AIOX:agents:architect')
+ * @property {string} skill - Full skill name (e.g., 'YARD:agents:architect')
  * @property {string} args - Arguments string for the skill
  * @property {Object} context - Execution context
  */
@@ -35,7 +35,7 @@
  */
 
 /**
- * Dispatches workflow phases to AIOX Skills
+ * Dispatches workflow phases to YARD Skills
  */
 /**
  * Primary agents (not aliases) - used by getAvailableAgents()
@@ -52,11 +52,11 @@ const PRIMARY_AGENTS = new Set([
   'analyst',
   'ux-design-expert',
   'devops',
-  'aiox-master',
+  'yard-master',
 ]);
 
 /**
- * Dispatches workflow phases to AIOX Skills
+ * Dispatches workflow phases to YARD Skills
  */
 class SkillDispatcher {
   /**
@@ -67,29 +67,29 @@ class SkillDispatcher {
 
     /**
      * Mapping from agent IDs to full Skill names
-     * These correspond to files in .claude/commands/AIOX/agents/
+     * These correspond to files in .claude/commands/YARD/agents/
      */
     this.skillMapping = {
       // Core development agents
-      architect: 'AIOX:agents:architect',
-      'data-engineer': 'AIOX:agents:data-engineer',
-      dev: 'AIOX:agents:dev',
-      qa: 'AIOX:agents:qa',
+      architect: 'YARD:agents:architect',
+      'data-engineer': 'YARD:agents:data-engineer',
+      dev: 'YARD:agents:dev',
+      qa: 'YARD:agents:qa',
 
       // Product agents
-      pm: 'AIOX:agents:pm',
-      po: 'AIOX:agents:po',
-      sm: 'AIOX:agents:sm',
-      analyst: 'AIOX:agents:analyst',
+      pm: 'YARD:agents:pm',
+      po: 'YARD:agents:po',
+      sm: 'YARD:agents:sm',
+      analyst: 'YARD:agents:analyst',
 
       // Specialized agents
-      'ux-design-expert': 'AIOX:agents:ux-design-expert',
-      'ux-expert': 'AIOX:agents:ux-design-expert', // Alias
-      devops: 'AIOX:agents:devops',
-      'github-devops': 'AIOX:agents:devops', // Alias
+      'ux-design-expert': 'YARD:agents:ux-design-expert',
+      'ux-expert': 'YARD:agents:ux-design-expert', // Alias
+      devops: 'YARD:agents:devops',
+      'github-devops': 'YARD:agents:devops', // Alias
 
       // Master agent
-      'aiox-master': 'AIOX:agents:aiox-master',
+      'yard-master': 'YARD:agents:yard-master',
     };
 
     /**
@@ -107,17 +107,17 @@ class SkillDispatcher {
       'ux-design-expert': { name: 'Brad', title: 'UX Design Expert' },
       'ux-expert': { name: 'Brad', title: 'UX Design Expert' },
       devops: { name: 'Gage', title: 'DevOps Engineer' },
-      'aiox-master': { name: 'Orion', title: 'Master Orchestrator' },
+      'yard-master': { name: 'Orion', title: 'Master Orchestrator' },
     };
   }
 
   /**
    * Get the full Skill name for an agent
    * @param {string} agentId - Agent identifier (e.g., 'architect')
-   * @returns {string} Full skill name (e.g., 'AIOX:agents:architect')
+   * @returns {string} Full skill name (e.g., 'YARD:agents:architect')
    */
   getSkillName(agentId) {
-    return this.skillMapping[agentId] || `AIOX:agents:${agentId}`;
+    return this.skillMapping[agentId] || `YARD:agents:${agentId}`;
   }
 
   /**
@@ -127,7 +127,7 @@ class SkillDispatcher {
    */
   getAgentPersona(agentId) {
     return (
-      this.agentPersonas[agentId] || { name: agentId, title: 'AIOX Agent' }
+      this.agentPersonas[agentId] || { name: agentId, title: 'YARD Agent' }
     );
   }
 
@@ -356,7 +356,7 @@ class SkillDispatcher {
    * @returns {boolean}
    */
   isValidAgent(agentId) {
-    return agentId in this.skillMapping || agentId.startsWith('AIOX:');
+    return agentId in this.skillMapping || agentId.startsWith('YARD:');
   }
 }
 

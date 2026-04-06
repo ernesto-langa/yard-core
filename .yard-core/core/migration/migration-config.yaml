@@ -1,4 +1,4 @@
-# AIOX Migration Configuration
+# YARD Migration Configuration
 # Story 2.14 - Migration Script v2.0 → v4.0.4
 
 version: "1.0.0"
@@ -17,9 +17,9 @@ backup:
   format: "YYYY-MM-DD"
   include:
     - ".yard-core/**"
-    - "aiox.config.js"
-    - "aiox.config.json"
-    - ".aiox/config.yaml"
+    - "yard.config.js"
+    - "yard.config.json"
+    - ".yard/config.yaml"
     - ".mcp.json"
   exclude:
     - "node_modules/**"

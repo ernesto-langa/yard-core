@@ -136,7 +136,7 @@ class FilenameValidator {
   }
 
   report() {
-    console.log('\n📋 AIOX Filename Validation Report\n');
+    console.log('\n📋 YARD Filename Validation Report\n');
     console.log('=' .repeat(60));
 
     if (this.errors.length === 0 && this.warnings.length === 0) {

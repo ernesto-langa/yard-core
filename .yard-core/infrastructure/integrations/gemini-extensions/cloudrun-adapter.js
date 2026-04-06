@@ -43,7 +43,7 @@ class CloudRunAdapter extends EventEmitter {
     if (!this.enabled) throw new Error('CloudRun extension not available');
 
     const deployConfig = {
-      service: options.service || 'aiox-app',
+      service: options.service || 'yard-app',
       project: options.project || this.project,
       region: options.region || this.region,
       source: options.source || '.',

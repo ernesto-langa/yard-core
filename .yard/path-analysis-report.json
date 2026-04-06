@@ -23,252 +23,252 @@
       "reference": "create-doc",
       "resolvedPath": ".yard-core/development/tasks/create-doc",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "script",
       "reference": "greeting-builder",
       "resolvedPath": ".yard-core/infrastructure/scripts/greeting-builder",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "data",
-      "reference": "aiox-kb",
-      "resolvedPath": ".yard-core/development/data/aiox-kb",
+      "reference": "yard-kb",
+      "resolvedPath": ".yard-core/development/data/yard-kb",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "agent-template.yaml",
       "resolvedPath": ".yard-core/development/tasks/agent-template.yaml",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "architecture-tmpl.yaml",
       "resolvedPath": ".yard-core/development/tasks/architecture-tmpl.yaml",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "brownfield-architecture-tmpl.yaml",
       "resolvedPath": ".yard-core/development/tasks/brownfield-architecture-tmpl.yaml",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "brownfield-prd-tmpl.yaml",
       "resolvedPath": ".yard-core/development/tasks/brownfield-prd-tmpl.yaml",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "competitor-analysis-tmpl.yaml",
       "resolvedPath": ".yard-core/development/tasks/competitor-analysis-tmpl.yaml",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "front-end-architecture-tmpl.yaml",
       "resolvedPath": ".yard-core/development/tasks/front-end-architecture-tmpl.yaml",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "front-end-spec-tmpl.yaml",
       "resolvedPath": ".yard-core/development/tasks/front-end-spec-tmpl.yaml",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "fullstack-architecture-tmpl.yaml",
       "resolvedPath": ".yard-core/development/tasks/fullstack-architecture-tmpl.yaml",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "market-research-tmpl.yaml",
       "resolvedPath": ".yard-core/development/tasks/market-research-tmpl.yaml",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "prd-tmpl.yaml",
       "resolvedPath": ".yard-core/development/tasks/prd-tmpl.yaml",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "project-brief-tmpl.yaml",
       "resolvedPath": ".yard-core/development/tasks/project-brief-tmpl.yaml",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "story-tmpl.yaml",
       "resolvedPath": ".yard-core/development/tasks/story-tmpl.yaml",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "task-template.md",
       "resolvedPath": ".yard-core/development/tasks/task-template.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "workflow-template.yaml",
       "resolvedPath": ".yard-core/development/tasks/workflow-template.yaml",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
-      "reference": "aiox-kb.md",
-      "resolvedPath": ".yard-core/development/tasks/aiox-kb.md",
+      "reference": "yard-kb.md",
+      "resolvedPath": ".yard-core/development/tasks/yard-kb.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "brainstorming-techniques.md",
       "resolvedPath": ".yard-core/development/tasks/brainstorming-techniques.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "elicitation-methods.md",
       "resolvedPath": ".yard-core/development/tasks/elicitation-methods.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "technical-preferences.md",
       "resolvedPath": ".yard-core/development/tasks/technical-preferences.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "security-checker.js",
       "resolvedPath": ".yard-core/development/tasks/security-checker.js",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "workflow-management.md",
       "resolvedPath": ".yard-core/development/tasks/workflow-management.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "yaml-validator.js",
       "resolvedPath": ".yard-core/development/tasks/yaml-validator.js",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "brownfield-fullstack.md",
       "resolvedPath": ".yard-core/development/tasks/brownfield-fullstack.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "brownfield-service.md",
       "resolvedPath": ".yard-core/development/tasks/brownfield-service.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "brownfield-ui.md",
       "resolvedPath": ".yard-core/development/tasks/brownfield-ui.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "greenfield-fullstack.md",
       "resolvedPath": ".yard-core/development/tasks/greenfield-fullstack.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "greenfield-service.md",
       "resolvedPath": ".yard-core/development/tasks/greenfield-service.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "greenfield-ui.md",
       "resolvedPath": ".yard-core/development/tasks/greenfield-ui.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "architect-checklist.md",
       "resolvedPath": ".yard-core/development/tasks/architect-checklist.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "change-checklist.md",
       "resolvedPath": ".yard-core/development/tasks/change-checklist.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "pm-checklist.md",
       "resolvedPath": ".yard-core/development/tasks/pm-checklist.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "po-master-checklist.md",
       "resolvedPath": ".yard-core/development/tasks/po-master-checklist.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "story-dod-checklist.md",
       "resolvedPath": ".yard-core/development/tasks/story-dod-checklist.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "dependency-item",
       "reference": "story-draft-checklist.md",
       "resolvedPath": ".yard-core/development/tasks/story-draft-checklist.md",
       "exists": false,
-      "sourceFile": ".yard-core/development/agents/aiox-master.md"
+      "sourceFile": ".yard-core/development/agents/yard-master.md"
     },
     {
       "type": "task",
@@ -314,8 +314,8 @@
     },
     {
       "type": "dependency-item",
-      "reference": "aiox-kb.md",
-      "resolvedPath": ".yard-core/development/tasks/aiox-kb.md",
+      "reference": "yard-kb.md",
+      "resolvedPath": ".yard-core/development/tasks/yard-kb.md",
       "exists": false,
       "sourceFile": ".yard-core/development/agents/analyst.md"
     },
@@ -1287,8 +1287,8 @@
     },
     {
       "type": "script",
-      "reference": "aiox-validator",
-      "resolvedPath": ".yard-core/infrastructure/scripts/aiox-validator",
+      "reference": "yard-validator",
+      "resolvedPath": ".yard-core/infrastructure/scripts/yard-validator",
       "exists": false,
       "sourceFile": ".yard-core/development/tasks/cleanup-utilities.md"
     },
@@ -1301,8 +1301,8 @@
     },
     {
       "type": "script",
-      "reference": "aiox-validator",
-      "resolvedPath": ".yard-core/infrastructure/scripts/aiox-validator",
+      "reference": "yard-validator",
+      "resolvedPath": ".yard-core/infrastructure/scripts/yard-validator",
       "exists": false,
       "sourceFile": ".yard-core/development/tasks/cleanup-utilities.md"
     },
@@ -1910,8 +1910,8 @@
     },
     {
       "type": "dependency-item",
-      "reference": "aiox-master-checklist.md",
-      "resolvedPath": ".yard-core/development/tasks/aiox-master-checklist.md",
+      "reference": "yard-master-checklist.md",
+      "resolvedPath": ".yard-core/development/tasks/yard-master-checklist.md",
       "exists": false,
       "sourceFile": ".yard-core/development/tasks/facilitate-brainstorming-session.md"
     },
@@ -3022,7 +3022,7 @@
         "reference": "create-doc",
         "resolvedPath": ".yard-core/development/tasks/create-doc",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3038,7 +3038,7 @@
         "reference": "agent-template.yaml",
         "resolvedPath": ".yard-core/development/tasks/agent-template.yaml",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3059,7 +3059,7 @@
         "reference": "architecture-tmpl.yaml",
         "resolvedPath": ".yard-core/development/tasks/architecture-tmpl.yaml",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3095,7 +3095,7 @@
         "reference": "brownfield-architecture-tmpl.yaml",
         "resolvedPath": ".yard-core/development/tasks/brownfield-architecture-tmpl.yaml",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3121,7 +3121,7 @@
         "reference": "brownfield-prd-tmpl.yaml",
         "resolvedPath": ".yard-core/development/tasks/brownfield-prd-tmpl.yaml",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3147,7 +3147,7 @@
         "reference": "competitor-analysis-tmpl.yaml",
         "resolvedPath": ".yard-core/development/tasks/competitor-analysis-tmpl.yaml",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3163,7 +3163,7 @@
         "reference": "front-end-architecture-tmpl.yaml",
         "resolvedPath": ".yard-core/development/tasks/front-end-architecture-tmpl.yaml",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3189,7 +3189,7 @@
         "reference": "front-end-spec-tmpl.yaml",
         "resolvedPath": ".yard-core/development/tasks/front-end-spec-tmpl.yaml",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3205,7 +3205,7 @@
         "reference": "fullstack-architecture-tmpl.yaml",
         "resolvedPath": ".yard-core/development/tasks/fullstack-architecture-tmpl.yaml",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3231,7 +3231,7 @@
         "reference": "market-research-tmpl.yaml",
         "resolvedPath": ".yard-core/development/tasks/market-research-tmpl.yaml",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3247,7 +3247,7 @@
         "reference": "prd-tmpl.yaml",
         "resolvedPath": ".yard-core/development/tasks/prd-tmpl.yaml",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3273,7 +3273,7 @@
         "reference": "project-brief-tmpl.yaml",
         "resolvedPath": ".yard-core/development/tasks/project-brief-tmpl.yaml",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3289,7 +3289,7 @@
         "reference": "story-tmpl.yaml",
         "resolvedPath": ".yard-core/development/tasks/story-tmpl.yaml",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3315,7 +3315,7 @@
         "reference": "task-template.md",
         "resolvedPath": ".yard-core/development/tasks/task-template.md",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3346,7 +3346,7 @@
         "reference": "workflow-template.yaml",
         "resolvedPath": ".yard-core/development/tasks/workflow-template.yaml",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3367,7 +3367,7 @@
         "reference": "security-checker.js",
         "resolvedPath": ".yard-core/development/tasks/security-checker.js",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3383,7 +3383,7 @@
         "reference": "yaml-validator.js",
         "resolvedPath": ".yard-core/development/tasks/yaml-validator.js",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3399,7 +3399,7 @@
         "reference": "architect-checklist.md",
         "resolvedPath": ".yard-core/development/tasks/architect-checklist.md",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3420,7 +3420,7 @@
         "reference": "change-checklist.md",
         "resolvedPath": ".yard-core/development/tasks/change-checklist.md",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3436,7 +3436,7 @@
         "reference": "pm-checklist.md",
         "resolvedPath": ".yard-core/development/tasks/pm-checklist.md",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3457,7 +3457,7 @@
         "reference": "po-master-checklist.md",
         "resolvedPath": ".yard-core/development/tasks/po-master-checklist.md",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3478,7 +3478,7 @@
         "reference": "story-dod-checklist.md",
         "resolvedPath": ".yard-core/development/tasks/story-dod-checklist.md",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -3499,7 +3499,7 @@
         "reference": "story-draft-checklist.md",
         "resolvedPath": ".yard-core/development/tasks/story-draft-checklist.md",
         "exists": false,
-        "sourceFile": ".yard-core/development/agents/aiox-master.md"
+        "sourceFile": ".yard-core/development/agents/yard-master.md"
       },
       "suggestions": [
         {
@@ -5502,15 +5502,15 @@
     {
       "broken": {
         "type": "script",
-        "reference": "aiox-validator",
-        "resolvedPath": ".yard-core/infrastructure/scripts/aiox-validator",
+        "reference": "yard-validator",
+        "resolvedPath": ".yard-core/infrastructure/scripts/yard-validator",
         "exists": false,
         "sourceFile": ".yard-core/development/tasks/cleanup-utilities.md"
       },
       "suggestions": [
         {
           "type": "similar-name",
-          "suggestedPath": ".yard-core/infrastructure/scripts/aiox-validator.js",
+          "suggestedPath": ".yard-core/infrastructure/scripts/yard-validator.js",
           "confidence": "medium"
         }
       ]
@@ -5539,15 +5539,15 @@
     {
       "broken": {
         "type": "script",
-        "reference": "aiox-validator",
-        "resolvedPath": ".yard-core/infrastructure/scripts/aiox-validator",
+        "reference": "yard-validator",
+        "resolvedPath": ".yard-core/infrastructure/scripts/yard-validator",
         "exists": false,
         "sourceFile": ".yard-core/development/tasks/cleanup-utilities.md"
       },
       "suggestions": [
         {
           "type": "similar-name",
-          "suggestedPath": ".yard-core/infrastructure/scripts/aiox-validator.js",
+          "suggestedPath": ".yard-core/infrastructure/scripts/yard-validator.js",
           "confidence": "medium"
         }
       ]
@@ -6493,15 +6493,15 @@
     {
       "broken": {
         "type": "dependency-item",
-        "reference": "aiox-master-checklist.md",
-        "resolvedPath": ".yard-core/development/tasks/aiox-master-checklist.md",
+        "reference": "yard-master-checklist.md",
+        "resolvedPath": ".yard-core/development/tasks/yard-master-checklist.md",
         "exists": false,
         "sourceFile": ".yard-core/development/tasks/facilitate-brainstorming-session.md"
       },
       "suggestions": [
         {
           "type": "partial-match",
-          "suggestedPath": ".yard-core/development/agents/aiox-master.md",
+          "suggestedPath": ".yard-core/development/agents/yard-master.md",
           "confidence": "low"
         }
       ]
@@ -8420,7 +8420,7 @@
     }
   ],
   "referenceGraph": {
-    ".yard-core/development/agents/aiox-master.md": [
+    ".yard-core/development/agents/yard-master.md": [
       ".yard-core/product/templates",
       ".yard-core/development/tasks/advanced-elicitation.md",
       ".yard-core/development/tasks/analyze-framework.md",

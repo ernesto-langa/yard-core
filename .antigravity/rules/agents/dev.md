@@ -71,4 +71,4 @@
 **I collaborate with:**
 
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/dev.md*
+*YARD Agent - Synced from .yard-core/development/agents/dev.md*

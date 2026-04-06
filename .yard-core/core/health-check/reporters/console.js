@@ -74,7 +74,7 @@ class ConsoleReporter {
 
     // Header
     lines.push('');
-    lines.push(this.formatHeader('AIOX Health Check Report'));
+    lines.push(this.formatHeader('YARD Health Check Report'));
     lines.push(this.formatDivider());
 
     // Overall summary

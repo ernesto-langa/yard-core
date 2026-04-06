@@ -1,7 +1,7 @@
 /**
  * Terminal Spawner - Node.js wrapper for pm.sh
  *
- * Provides async API for spawning AIOX agents in separate terminals
+ * Provides async API for spawning YARD agents in separate terminals
  * to maintain clean context isolation during orchestration.
  *
  * Story 11.2: Bob Terminal Spawning
@@ -224,7 +224,7 @@ async function createContextFile(context, outputDir = os.tmpdir()) {
     createdAt: new Date().toISOString(),
   };
 
-  const contextPath = path.join(outputDir, `aiox-context-${Date.now()}.json`);
+  const contextPath = path.join(outputDir, `yard-context-${Date.now()}.json`);
   await fs.writeFile(contextPath, JSON.stringify(validatedContext, null, 2));
 
   return contextPath;
@@ -351,9 +351,9 @@ async function spawnInline(agent, task, options = {}) {
     const child = spawn('bash', [scriptPath, ...args], {
       env: {
         ...process.env,
-        AIOX_DEBUG: opts.debug ? 'true' : 'false',
-        AIOX_OUTPUT_DIR: opts.outputDir,
-        AIOX_INLINE_MODE: 'true', // Signal to pm.sh that we're running inline
+        YARD_DEBUG: opts.debug ? 'true' : 'false',
+        YARD_OUTPUT_DIR: opts.outputDir,
+        YARD_INLINE_MODE: 'true', // Signal to pm.sh that we're running inline
       },
       stdio: ['ignore', 'pipe', 'pipe'],
     });
@@ -550,8 +550,8 @@ async function spawnAgent(agent, task, options = {}) {
       // Execute pm.sh
       const env = {
         ...process.env,
-        AIOX_DEBUG: opts.debug ? 'true' : 'false',
-        AIOX_OUTPUT_DIR: opts.outputDir,
+        YARD_DEBUG: opts.debug ? 'true' : 'false',
+        YARD_OUTPUT_DIR: opts.outputDir,
       };
 
       const result = execSync(`bash "${scriptPath}" ${args.join(' ')}`, {
@@ -662,11 +662,11 @@ async function cleanupOldFiles(outputDir = os.tmpdir(), maxAgeMs = 3600000) {
 
   try {
     const files = await fs.readdir(outputDir);
-    const aioxFiles = files.filter(
-      (f) => f.startsWith('aiox-output-') || f.startsWith('aiox-lock-') || f.startsWith('aiox-context-'),
+    const yardFiles = files.filter(
+      (f) => f.startsWith('yard-output-') || f.startsWith('yard-lock-') || f.startsWith('yard-context-'),
     );
 
-    for (const file of aioxFiles) {
+    for (const file of yardFiles) {
       const filePath = path.join(outputDir, file);
       try {
         const stats = await fs.stat(filePath);
@@ -842,7 +842,7 @@ function generateCompatibilityReport(testResults = []) {
 function formatCompatibilityReport(report) {
   const lines = [
     '═══════════════════════════════════════════════════════════════',
-    '                 AIOX Terminal Spawner Compatibility Report     ',
+    '                 YARD Terminal Spawner Compatibility Report     ',
     '═══════════════════════════════════════════════════════════════',
     '',
     `Generated: ${report.generatedAt}`,

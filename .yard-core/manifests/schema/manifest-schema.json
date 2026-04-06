@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "AIOX Manifest Schema",
-  "description": "Schema definitions for AIOX manifest CSV files",
+  "title": "YARD Manifest Schema",
+  "description": "Schema definitions for YARD manifest CSV files",
   "version": "1.0.0",
   "definitions": {
     "agents": {

@@ -25,6 +25,6 @@
 "area: cli":
   - '(yard-core info|yard-core update|yard-core doctor|bin/|\.yard-core.cli)'
 "area: pro":
-  - '(pro feature|license|aiox-pro|pro/|pro submodule)'
+  - '(pro feature|license|yard-pro|pro/|pro submodule)'
 "area: health-check":
   - '(health.?check|doctor|diagnostic)'

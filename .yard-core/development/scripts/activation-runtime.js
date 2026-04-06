@@ -3,7 +3,7 @@
 const { UnifiedActivationPipeline } = require('./unified-activation-pipeline');
 
 /**
- * Canonical activation runtime for AIOX agents.
+ * Canonical activation runtime for YARD agents.
  *
  * This wrapper centralizes agent activation calls so IDE-specific entry points
  * (Codex, Claude Code, scripts) can depend on one stable API.

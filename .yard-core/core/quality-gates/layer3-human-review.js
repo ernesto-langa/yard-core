@@ -195,7 +195,7 @@ class Layer3HumanReview extends BaseLayer {
       'docs/architecture/': '@architect',
       'docs/stories/': '@sm',
       'docs/prd/': '@po',
-      '.yard-core/agents/': '@aiox-master',
+      '.yard-core/agents/': '@yard-master',
       '.yard-core/core/': '@architect',
       'tests/': '@qa',
       'src/': '@dev',

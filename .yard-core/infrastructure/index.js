@@ -2,7 +2,7 @@
  * @fileoverview Infrastructure Module - Entry Point
  *
  * Centralizes tools, integrations, scripts, and PM adapters.
- * This is the base layer of the AIOX modular architecture.
+ * This is the base layer of the YARD modular architecture.
  *
  * Uses safe loading to handle optional dependencies gracefully.
  *
@@ -18,7 +18,7 @@ function safeRequire(modulePath) {
     return require(modulePath);
   } catch (error) {
     // Only log in debug mode to avoid noise
-    if (process.env.AIOX_DEBUG) {
+    if (process.env.YARD_DEBUG) {
       console.warn(`[infrastructure] Failed to load ${modulePath}: ${error.message}`);
     }
     return null;
@@ -49,7 +49,7 @@ const ComponentSearch = safeRequire('./scripts/component-search');
 const BatchCreator = safeRequire('./scripts/batch-creator');
 
 // Validation
-const AioxValidator = safeRequire('./scripts/aiox-validator');
+const YardValidator = safeRequire('./scripts/yard-validator');
 const TemplateValidator = safeRequire('./scripts/template-validator');
 const validateOutputPatternModule = safeRequire('./scripts/validate-output-pattern');
 const validateOutputPattern = validateOutputPatternModule ? validateOutputPatternModule.validateOutputPattern : null;
@@ -132,7 +132,7 @@ const moduleExports = {
   BatchCreator,
 
   // Validation
-  AioxValidator,
+  YardValidator,
   TemplateValidator,
   validateOutputPattern,
   SpotCheckValidator,

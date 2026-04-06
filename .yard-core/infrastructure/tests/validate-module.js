@@ -44,7 +44,7 @@ try {
     'Git Integration': ['GitWrapper', 'GitConfigDetector', 'BranchManager', 'CommitMessageGenerator'],
     'PM Integration': ['PMAdapter', 'getPMAdapter', 'isPMToolConfigured', 'clearPMAdapterCache', 'StatusMapper', 'ClickUpHelpers'],
     'Template & Generation': ['TemplateEngine', 'ComponentGenerator', 'ComponentMetadata', 'ComponentSearch', 'BatchCreator'],
-    'Validation': ['AioxValidator', 'TemplateValidator', 'validateOutputPattern', 'SpotCheckValidator'],
+    'Validation': ['YardValidator', 'TemplateValidator', 'validateOutputPattern', 'SpotCheckValidator'],
     'Analysis': ['DependencyAnalyzer', 'DependencyImpactAnalyzer', 'FrameworkAnalyzer', 'CapabilityAnalyzer', 'SecurityChecker', 'ModificationRiskAssessment'],
     'Testing': ['CoverageAnalyzer', 'TestGenerator', 'TestUtilities', 'TestUtilitiesFast', 'TestQualityAssessment', 'SandboxTester'],
     'Performance': ['PerformanceAnalyzer', 'PerformanceOptimizer', 'PerformanceTracker', 'PerformanceAndErrorResolver'],

@@ -31,4 +31,4 @@ NOT for: PRD creation or epic structure → Use @pm. Market research or competit
 **I collaborate with:**
 
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/sm.md*
+*YARD Agent - Synced from .yard-core/development/agents/sm.md*

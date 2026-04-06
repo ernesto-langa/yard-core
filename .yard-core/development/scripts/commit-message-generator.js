@@ -5,7 +5,7 @@ const ModificationValidator = require('./modification-validator');
 
 /**
  * Generates structured commit messages following conventional commit standards
- * for AIOX framework modifications
+ * for YARD framework modifications
  */
 class CommitMessageGenerator {
   constructor(options = {}) {
@@ -598,7 +598,7 @@ class CommitMessageGenerator {
       footer.push(`Reviewed-by: ${metadata.reviewedBy}`);
     }
     
-    footer.push('Generated-by: aiox-developer meta-agent');
+    footer.push('Generated-by: yard-developer meta-agent');
     
     if (footer.length > 0) {
       message += '\n\n' + footer.join('\n');
@@ -654,7 +654,7 @@ class CommitMessageGenerator {
       }
     }
     
-    message += '\n\nGenerated-by: aiox-developer meta-agent';
+    message += '\n\nGenerated-by: yard-developer meta-agent';
     
     return {
       message,

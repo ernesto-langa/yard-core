@@ -492,4 +492,4 @@ Type `*help` to see commands by phase, or `*status` to see workflow state.
 
 ---
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/ux-design-expert.md*
+*YARD Agent - Synced from .yard-core/development/agents/ux-design-expert.md*

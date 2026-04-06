@@ -26,7 +26,7 @@ async function run(context) {
       check: name,
       status: 'FAIL',
       message: 'CLAUDE.md not found',
-      fixCommand: 'aiox doctor --fix',
+      fixCommand: 'yard doctor --fix',
     };
   }
 
@@ -49,7 +49,7 @@ async function run(context) {
     check: name,
     status: 'WARN',
     message: `Missing sections: ${missingSections.join(', ')}`,
-    fixCommand: 'aiox doctor --fix',
+    fixCommand: 'yard doctor --fix',
   };
 }
 

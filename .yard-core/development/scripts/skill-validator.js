@@ -1,8 +1,8 @@
 /**
- * AIOX Skill Validator
+ * YARD Skill Validator
  * Story GEMINI-INT.5 - Skills Cross-CLI Compatibility
  *
- * Validates that AIOX agent skills work correctly in both
+ * Validates that YARD agent skills work correctly in both
  * Claude Code and Gemini CLI environments.
  */
 
@@ -162,7 +162,7 @@ class SkillValidator {
    * @param {Object} result - Result object to update
    */
   validateGeminiCompatibility(agentDef, result) {
-    // Gemini CLI uses .gemini/rules/AIOX/agents/ structure
+    // Gemini CLI uses .gemini/rules/YARD/agents/ structure
     // Check for any Gemini-specific requirements
 
     // Gemini requires activation-instructions
@@ -278,7 +278,7 @@ class SkillValidator {
    * @returns {string} Formatted report
    */
   generateReport(results) {
-    let report = '# AIOX Skills Cross-CLI Compatibility Report\n\n';
+    let report = '# YARD Skills Cross-CLI Compatibility Report\n\n';
 
     report += `**Overall Status:** ${results.compatible ? '✅ Compatible' : '❌ Issues Found'}\n\n`;
 

@@ -39,7 +39,7 @@ entities:
         - elicitation
         - advanced-elicitation
       usedBy:
-        - aiox-master
+        - yard-master
         - analyst
       dependencies: []
       externalDeps: []
@@ -87,7 +87,7 @@ entities:
       type: task
       purpose: >-
         Analyze an existing project to understand its structure, tech stack, coding standards, and CI/CD workflows
-        before AIOX integration. This task provides recommendations for safe integration and identifi
+        before YARD integration. This task provides recommendations for safe integration and identifi
       keywords:
         - analyze
         - brownfield
@@ -145,7 +145,7 @@ entities:
         - framework
         - 'task:'
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
         - framework-analyzer
         - usage-analytics
@@ -193,7 +193,7 @@ entities:
       layer: L2
       type: task
       purpose: >-
-        ** Analyze an existing AIOX project to understand its structure, services, patterns, and provide recommendations
+        ** Analyze an existing YARD project to understand its structure, services, patterns, and provide recommendations
         for implementing new features. This is Phase 1 of the Incremental Feature Workflow.
       keywords:
         - analyze
@@ -783,7 +783,7 @@ entities:
         - course
         - task
       usedBy:
-        - aiox-master
+        - yard-master
         - pm
         - po
         - sm
@@ -814,7 +814,7 @@ entities:
         - 'task:'
         - squad
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies: []
       externalDeps: []
       plannedDeps: []
@@ -870,7 +870,7 @@ entities:
         - task
         - creates
       usedBy:
-        - aiox-master
+        - yard-master
         - analyst
         - architect
         - data-engineer
@@ -904,7 +904,7 @@ entities:
         - dynamically
         - during
       usedBy:
-        - aiox-master
+        - yard-master
         - analyst
         - architect
         - data-engineer
@@ -938,7 +938,7 @@ entities:
         - story
         - task
       usedBy:
-        - aiox-master
+        - yard-master
         - sm
       dependencies:
         - po-master-checklist
@@ -1038,7 +1038,7 @@ entities:
         - validation
         - (follow-up
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
         - component-generator.js
       externalDeps: []
@@ -1067,7 +1067,7 @@ entities:
         - validation
         - (follow-up
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
         - component-generator.js
       externalDeps: []
@@ -1622,7 +1622,7 @@ entities:
         - validation
         - (follow-up
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
         - usage-tracker
         - component-search
@@ -1767,7 +1767,7 @@ entities:
         - dev
         - optimize
         - performance
-        - aiox
+        - yard
         - developer
         - task
       usedBy:
@@ -1798,7 +1798,7 @@ entities:
         - dev
         - suggest
         - refactoring
-        - aiox
+        - yard
         - developer
         - task
       usedBy:
@@ -1888,7 +1888,7 @@ entities:
         - validation
         - (follow-up
       usedBy:
-        - aiox-master
+        - yard-master
         - analyst
         - architect
       dependencies: []
@@ -1909,7 +1909,7 @@ entities:
       layer: L2
       type: task
       purpose: >-
-        Complete environment bootstrap for new AIOX projects. Verifies and installs all required CLIs, authenticates
+        Complete environment bootstrap for new YARD projects. Verifies and installs all required CLIs, authenticates
         services, initializes Git/GitHub repository, and validates the development environment befo
       keywords:
         - environment
@@ -1928,7 +1928,7 @@ entities:
         - devops
         - analyst
         - pm
-        - aiox-master
+        - yard-master
       externalDeps:
         - coderabbit
       plannedDeps:
@@ -1956,7 +1956,7 @@ entities:
         - executes
         - existing
       usedBy:
-        - aiox-master
+        - yard-master
         - architect
         - data-engineer
         - dev
@@ -2125,7 +2125,7 @@ entities:
       dependencies: []
       externalDeps: []
       plannedDeps:
-        - aiox-master-checklist
+        - yard-master-checklist
         - execute-task.js
       lifecycle: production
       adaptability:
@@ -2443,9 +2443,9 @@ entities:
         - 'task:'
         - commands
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
-        - aiox-master
+        - yard-master
         - dev
       externalDeps: []
       plannedDeps: []
@@ -2515,7 +2515,7 @@ entities:
         - self
         - improve-self
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
         - capability-analyzer
         - improvement-validator
@@ -2553,7 +2553,7 @@ entities:
         - maintains
         - documentation
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies: []
       externalDeps: []
       plannedDeps:
@@ -2623,7 +2623,7 @@ entities:
       layer: L2
       type: task
       purpose: >-
-        Provide a user-friendly interface to the AIOX knowledge base without overwhelming users with information
+        Provide a user-friendly interface to the YARD knowledge base without overwhelming users with information
         upfront.
       keywords:
         - kb
@@ -2634,7 +2634,7 @@ entities:
         - interactive
         - facilitation
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies: []
       externalDeps: []
       plannedDeps:
@@ -2780,7 +2780,7 @@ entities:
         - agent
         - task
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
         - change-checklist
       externalDeps: []
@@ -2807,7 +2807,7 @@ entities:
         - modify
         - task
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
         - change-checklist
       externalDeps: []
@@ -2834,7 +2834,7 @@ entities:
         - workflow
         - task
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
         - change-checklist
       externalDeps: []
@@ -3305,7 +3305,7 @@ entities:
       layer: L2
       type: task
       purpose: >-
-        To help users contribute to the AIOX open-source project (`yard-core`) by automating the PR creation process,
+        To help users contribute to the YARD open-source project (`yard-core`) by automating the PR creation process,
         ensuring contributions follow project standards, pass quality checks, and have proper form
       keywords:
         - pr
@@ -3345,7 +3345,7 @@ entities:
         - panorama
       usedBy: []
       dependencies:
-        - aiox-master
+        - yard-master
         - po
         - sm
       externalDeps: []
@@ -3365,11 +3365,11 @@ entities:
       keywords:
         - propose
         - modification
-        - aiox
+        - yard
         - developer
         - task
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
         - dependency-impact-analyzer
         - change-checklist
@@ -3767,7 +3767,7 @@ entities:
         - qa
         - review
         - proposal
-        - aiox
+        - yard
         - developer
         - task
       usedBy:
@@ -4119,11 +4119,11 @@ entities:
         - task
       usedBy:
         - run-workflow
-        - aiox-master
+        - yard-master
       dependencies:
         - workflow-state-manager.js
         - workflow-validator.js
-        - aiox-master
+        - yard-master
       externalDeps: []
       plannedDeps: []
       lifecycle: production
@@ -4145,10 +4145,10 @@ entities:
         - workflow
         - task
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
         - run-workflow-engine
-        - aiox-master
+        - yard-master
       externalDeps: []
       plannedDeps:
         - '-state.yaml'
@@ -4303,7 +4303,7 @@ entities:
       layer: L2
       type: task
       purpose: >-
-        Configure complete GitHub DevOps infrastructure for user projects created with AIOX. This task copies GitHub
+        Configure complete GitHub DevOps infrastructure for user projects created with YARD. This task copies GitHub
         Actions workflows, configures CodeRabbit, sets up branch protection, and manages secrets.
       keywords:
         - setup
@@ -4356,7 +4356,7 @@ entities:
       layer: L2
       type: task
       purpose: >-
-        Configure Docker MCP Toolkit as the primary MCP infrastructure for AIOX, using **HTTP transport** instead of
+        Configure Docker MCP Toolkit as the primary MCP infrastructure for YARD, using **HTTP transport** instead of
         stdio to avoid timeout issues during gateway initialization.
       keywords:
         - setup
@@ -4423,7 +4423,7 @@ entities:
         - processing
         - task
       usedBy:
-        - aiox-master
+        - yard-master
         - pm
         - po
       dependencies: []
@@ -4957,10 +4957,10 @@ entities:
         - intel
         - 'task:'
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
         - registry-syncer
-        - aiox-master
+        - yard-master
       externalDeps: []
       plannedDeps: []
       lifecycle: production
@@ -5083,7 +5083,7 @@ entities:
         - operation
         - built-in
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
         - backup-manager.js
       externalDeps: []
@@ -5096,16 +5096,16 @@ entities:
         extensionPoints: []
       checksum: sha256:2279f40afdf869257c039a9716d701c887c3c08520f012231f401d4156ac4ee7
       lastVerified: '2026-03-19T17:53:28.846Z'
-    update-aiox:
-      path: .yard-core/development/tasks/update-aiox.md
+    update-yard:
+      path: .yard-core/development/tasks/update-yard.md
       layer: L2
       type: task
       purpose: >-
-        Git-native sync of AIOX framework from upstream repository. Uses sparse clone + file comparison for safe review
+        Git-native sync of YARD framework from upstream repository. Uses sparse clone + file comparison for safe review
         before applying changes. All local customizations preserved automatically by backup/rest
       keywords:
         - update
-        - aiox
+        - yard
         - 'task:'
         - framework
       usedBy: []
@@ -5131,7 +5131,7 @@ entities:
         - update
         - manifest
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
         - change-checklist
       externalDeps: []
@@ -5159,7 +5159,7 @@ entities:
         - tree
         - task
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies: []
       externalDeps: []
       plannedDeps: []
@@ -5335,14 +5335,14 @@ entities:
       layer: L2
       type: task
       purpose: >-
-        To validate workflow YAML files against AIOX conventions, checking structure, agent references, artifact flow,
+        To validate workflow YAML files against YARD conventions, checking structure, agent references, artifact flow,
         and logical consistency. Supports validating a single workflow or all workflows in a give
       keywords:
         - validate
         - workflow
         - task
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies:
         - workflow-validator.js
       externalDeps: []
@@ -5434,7 +5434,7 @@ entities:
       purpose: '{One-line description}'
       keywords:
         - readme
-        - aiox
+        - yard
         - task
         - blocks
         - system
@@ -5455,7 +5455,7 @@ entities:
       layer: L2
       type: task
       purpose: >-
-        Standardized template for spawning AIOX agents with consistent structure. Ensures all agent invocations follow
+        Standardized template for spawning YARD agents with consistent structure. Ensures all agent invocations follow
         the same persona loading, context, mission, and output pattern.
       keywords:
         - agent
@@ -5479,7 +5479,7 @@ entities:
       layer: L2
       type: task
       purpose: >-
-        Load AIOX project context before task execution. Provides git state, gotchas filtered by category, technical
+        Load YARD project context before task execution. Provides git state, gotchas filtered by category, technical
         preferences, and core configuration.
       keywords:
         - context
@@ -5593,10 +5593,10 @@ entities:
         - agent
         - template
         - synkra
-        - aiox
+        - yard
       usedBy:
         - squad-creator-extend
-        - aiox-master
+        - yard-master
       dependencies: []
       externalDeps: []
       plannedDeps: []
@@ -5607,13 +5607,13 @@ entities:
         extensionPoints: []
       checksum: sha256:98676fcc493c0d5f09264dcc52fcc2cf1129f9a195824ecb4c2ec035c2515121
       lastVerified: '2026-03-19T17:53:28.863Z'
-    aiox-ai-config:
-      path: .yard-core/product/templates/aiox-ai-config.yaml
+    yard-ai-config:
+      path: .yard-core/product/templates/yard-ai-config.yaml
       layer: L2
       type: template
-      purpose: AIOX AI Provider Configuration
+      purpose: YARD AI Provider Configuration
       keywords:
-        - aiox
+        - yard
         - ai
         - config
         - provider
@@ -5638,7 +5638,7 @@ entities:
         - architecture
         - tmpl
       usedBy:
-        - aiox-master
+        - yard-master
         - architect
       dependencies: []
       externalDeps: []
@@ -5681,7 +5681,7 @@ entities:
         - architecture
         - tmpl
       usedBy:
-        - aiox-master
+        - yard-master
         - architect
       dependencies: []
       externalDeps: []
@@ -5703,7 +5703,7 @@ entities:
         - prd
         - tmpl
       usedBy:
-        - aiox-master
+        - yard-master
         - pm
       dependencies: []
       externalDeps: []
@@ -5790,7 +5790,7 @@ entities:
         - analysis
         - tmpl
       usedBy:
-        - aiox-master
+        - yard-master
         - analyst
       dependencies: []
       externalDeps: []
@@ -5886,7 +5886,7 @@ entities:
         - architecture
         - tmpl
       usedBy:
-        - aiox-master
+        - yard-master
         - architect
       dependencies: []
       externalDeps: []
@@ -5909,7 +5909,7 @@ entities:
         - spec
         - tmpl
       usedBy:
-        - aiox-master
+        - yard-master
         - ux-design-expert
       dependencies: []
       externalDeps: []
@@ -5931,7 +5931,7 @@ entities:
         - architecture
         - tmpl
       usedBy:
-        - aiox-master
+        - yard-master
         - architect
       dependencies: []
       externalDeps: []
@@ -6063,7 +6063,7 @@ entities:
         - research
         - tmpl
       usedBy:
-        - aiox-master
+        - yard-master
         - analyst
       dependencies: []
       externalDeps: []
@@ -6221,7 +6221,7 @@ entities:
         - file
         - structure
         - synkra
-        - aiox
+        - yard
       usedBy: []
       dependencies: []
       externalDeps: []
@@ -6243,7 +6243,7 @@ entities:
         - workflow
         - template
         - synkra
-        - aiox
+        - yard
         - agent
       usedBy: []
       dependencies: []
@@ -6265,7 +6265,7 @@ entities:
         - prd
         - tmpl
       usedBy:
-        - aiox-master
+        - yard-master
         - pm
       dependencies: []
       externalDeps: []
@@ -6287,7 +6287,7 @@ entities:
         - brief
         - tmpl
       usedBy:
-        - aiox-master
+        - yard-master
         - analyst
       dependencies: []
       externalDeps: []
@@ -6438,7 +6438,7 @@ entities:
         - story
         - tmpl
       usedBy:
-        - aiox-master
+        - yard-master
         - po
         - qa
         - sm
@@ -6491,7 +6491,7 @@ entities:
         - template
         - '{{task_title}}'
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies: []
       externalDeps: []
       plannedDeps: []
@@ -6535,7 +6535,7 @@ entities:
         - yamllint
         - disable
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies: []
       externalDeps: []
       plannedDeps: []
@@ -6555,7 +6555,7 @@ entities:
         - antigravity
         - rules
         - synkra
-        - aiox
+        - yard
         - development
       usedBy: []
       dependencies:
@@ -6584,7 +6584,7 @@ entities:
         - claude
         - rules
         - synkra
-        - aiox
+        - yard
         - development
       usedBy: []
       dependencies:
@@ -6598,7 +6598,7 @@ entities:
         - data-engineer
         - ux-design-expert
         - devops
-        - aiox-master
+        - yard-master
       externalDeps: []
       plannedDeps: []
       lifecycle: experimental
@@ -6618,7 +6618,7 @@ entities:
         - rules
         - agents.md
         - synkra
-        - aiox
+        - yard
         - (codex
         - cli)
       usedBy: []
@@ -6633,7 +6633,7 @@ entities:
         - devops
         - data-engineer
         - ux-design-expert
-        - aiox-master
+        - yard-master
       externalDeps: []
       plannedDeps: []
       lifecycle: experimental
@@ -6652,7 +6652,7 @@ entities:
         - copilot
         - rules
         - synkra
-        - aiox
+        - yard
         - agent
         - github
       usedBy: []
@@ -6675,7 +6675,7 @@ entities:
         - cursor
         - rules
         - synkra
-        - aiox
+        - yard
         - development
       usedBy: []
       dependencies:
@@ -6704,7 +6704,7 @@ entities:
         - gemini
         - rules
         - synkra
-        - aiox
+        - yard
       usedBy: []
       dependencies: []
       externalDeps: []
@@ -8989,7 +8989,7 @@ entities:
         - npm-install
         - shell-environment
         - agent-config
-        - aiox-directory
+        - yard-directory
         - dependencies
         - framework-config
         - package-json
@@ -12224,13 +12224,13 @@ entities:
         extensionPoints: []
       checksum: sha256:af0a4fbb75faa3b0f37aaaa618c099b65e5836d422d8d6b5d8b20f19b330f84c
       lastVerified: '2026-03-19T17:53:28.970Z'
-    aiox-directory:
-      path: .yard-core/core/health-check/checks/project/aiox-directory.js
+    yard-directory:
+      path: .yard-core/core/health-check/checks/project/yard-directory.js
       layer: L1
       type: module
       purpose: '''Verifies .yard/ directory structure'','
       keywords:
-        - aiox
+        - yard
         - directory
       usedBy: []
       dependencies:
@@ -12829,15 +12829,15 @@ entities:
       checksum: sha256:dd025894f8f0d3bd22a147dbc0debef8b83e96f3c59483653404b3cd5a01d5aa
       lastVerified: '2026-03-19T17:53:28.975Z'
   agents:
-    aiox-master:
-      path: .yard-core/development/agents/aiox-master.md
+    yard-master:
+      path: .yard-core/development/agents/yard-master.md
       layer: L2
       type: agent
       purpose: '''Show all available commands with descriptions'''
       keywords:
-        - aiox
+        - yard
         - master
-        - aiox-master
+        - yard-master
       usedBy:
         - environment-bootstrap
         - ids-governor
@@ -13239,7 +13239,7 @@ entities:
         - setup-github
         - setup-mcp-docker
         - triage-github-issues
-        - update-aiox
+        - update-yard
         - validate-next-story
         - story-tmpl
         - claude-rules
@@ -14314,13 +14314,13 @@ entities:
       lastVerified: '2026-03-19T17:53:29.103Z'
   tools: {}
   infra-scripts:
-    aiox-validator:
-      path: .yard-core/infrastructure/scripts/aiox-validator.js
+    yard-validator:
+      path: .yard-core/infrastructure/scripts/yard-validator.js
       layer: L2
       type: script
-      purpose: Entity at .yard-core/infrastructure/scripts/aiox-validator.js
+      purpose: Entity at .yard-core/infrastructure/scripts/yard-validator.js
       keywords:
-        - aiox
+        - yard
         - validator
       usedBy: []
       dependencies: []
@@ -14520,7 +14520,7 @@ entities:
       path: .yard-core/infrastructure/scripts/cicd-discovery.js
       layer: L2
       type: script
-      purpose: '''Integrate AIOX build orchestrator for intelligent parallel builds'','
+      purpose: '''Integrate YARD build orchestrator for intelligent parallel builds'','
       keywords:
         - cicd
         - discovery
@@ -15896,7 +15896,7 @@ entities:
         - validate
         - agents
       usedBy:
-        - aiox-master
+        - yard-master
       dependencies: []
       externalDeps: []
       plannedDeps: []
@@ -16134,7 +16134,7 @@ entities:
       purpose: ${description}
       keywords:
         - index
-        - aiox
+        - yard
         - ${title}
         - activator
       usedBy:
@@ -16283,7 +16283,7 @@ entities:
       path: .yard-core/infrastructure/scripts/documentation-integrity/mode-detector.js
       layer: L2
       type: script
-      purpose: '''For AIOX contributors working on the framework'','
+      purpose: '''For YARD contributors working on the framework'','
       keywords:
         - mode
         - detector
@@ -16507,7 +16507,7 @@ entities:
       purpose: '"What this tool does"'
       keywords:
         - readme
-        - aiox
+        - yard
         - tools
         - integrations
         - directory
@@ -16862,7 +16862,7 @@ entities:
         - solution
         - validation
       usedBy:
-        - aiox-master
+        - yard-master
         - architect
       dependencies: []
       externalDeps: []
@@ -16894,7 +16894,7 @@ entities:
         - propose-modification
         - qa-review-proposal
         - update-manifest
-        - aiox-master
+        - yard-master
         - pm
         - po
       dependencies: []
@@ -17047,7 +17047,7 @@ entities:
         - (pm)
         - requirements
       usedBy:
-        - aiox-master
+        - yard-master
         - pm
       dependencies: []
       externalDeps: []
@@ -17083,7 +17083,7 @@ entities:
         - qa-trace-requirements
         - sm-create-next-story
         - validate-next-story
-        - aiox-master
+        - yard-master
         - po
       dependencies: []
       externalDeps: []
@@ -17177,7 +17177,7 @@ entities:
         - done
         - (dod)
       usedBy:
-        - aiox-master
+        - yard-master
         - dev
       dependencies: []
       externalDeps: []
@@ -17199,7 +17199,7 @@ entities:
         - draft
         - checklist
       usedBy:
-        - aiox-master
+        - yard-master
         - sm
       dependencies:
         - dev

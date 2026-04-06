@@ -1,5 +1,5 @@
 /**
- * Interactive Elicitation Engine for AIOX-FULLSTACK
+ * Interactive Elicitation Engine for YARD-FULLSTACK
  * Handles progressive disclosure and contextual validation for component creation
  * @module elicitation-engine
  */
@@ -36,7 +36,7 @@ class ElicitationEngine {
     if (options.saveSession) {
       this.sessionFile = path.join(
         process.cwd(), 
-        '.aiox-sessions', 
+        '.yard-sessions', 
         `${componentType}-${Date.now()}.json`
       );
       await fs.ensureDir(path.dirname(this.sessionFile));

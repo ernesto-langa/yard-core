@@ -3,7 +3,7 @@
  *
  * Epic 12: Bob Full Integration — Completando o PRD v2.0
  *
- * Handles first execution behavior for existing projects without AIOX documentation.
+ * Handles first execution behavior for existing projects without YARD documentation.
  * Executes the brownfield-discovery.yaml workflow to analyze the codebase and
  * generate technical debt assessment.
  *
@@ -183,7 +183,7 @@ class BrownfieldHandler extends EventEmitter {
    * @returns {Promise<Object>} Handler result
    */
   async handle(context = {}) {
-    this._log('🔍 First execution detected — project has code but no AIOX docs');
+    this._log('🔍 First execution detected — project has code but no YARD docs');
 
     // Step 1: Check if user has already accepted (resuming)
     if (context.userAccepted === true) {

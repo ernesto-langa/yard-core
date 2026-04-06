@@ -26,9 +26,9 @@ class SubagentPromptBuilder {
    */
   constructor(projectRoot) {
     this.projectRoot = projectRoot;
-    this.aioxCoreRoot = path.join(projectRoot, '.yard-core');
+    this.yardCoreRoot = path.join(projectRoot, '.yard-core');
 
-    // Paths to AIOX components
+    // Paths to YARD components
     this.paths = {
       agents: path.join(process.cwd(), '.yard-core', 'development', 'agents'),
       tasks: path.join(process.cwd(), '.yard-core', 'development', 'tasks'),

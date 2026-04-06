@@ -176,7 +176,7 @@ class GitignoreCheck extends BaseCheck {
           const newContent =
             content +
             (content.endsWith('\n') ? '' : '\n') +
-            '# Added by AIOX Health Check\n' +
+            '# Added by YARD Health Check\n' +
             toAdd.join('\n') +
             '\n';
 

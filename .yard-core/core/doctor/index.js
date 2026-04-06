@@ -1,7 +1,7 @@
 /**
- * AIOX Doctor — Environment Health Check Orchestrator
+ * YARD Doctor — Environment Health Check Orchestrator
  *
- * Runs 12 modular checks against the AIOX environment and returns
+ * Runs 12 modular checks against the YARD environment and returns
  * structured results with optional --fix, --json, and --dry-run support.
  *
  * @module yard-core/doctor

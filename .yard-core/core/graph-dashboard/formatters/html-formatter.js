@@ -321,7 +321,7 @@ function formatAsHtml(graphData, options = {}) {
 <html>
 <head>
   <meta charset="utf-8">
-  <title>AIOX Graph Dashboard</title>
+  <title>YARD Graph Dashboard</title>
   ${metaRefresh}
   <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
   <style>
@@ -1134,7 +1134,7 @@ function formatAsHtml(graphData, options = {}) {
       function getTimestampFilename(ext) {
         var d = new Date();
         var pad = function(n) { return n < 10 ? '0' + n : '' + n; };
-        return 'aiox-graph-' + d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + '-' + pad(d.getHours()) + pad(d.getMinutes()) + '.' + ext;
+        return 'yard-graph-' + d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + '-' + pad(d.getHours()) + pad(d.getMinutes()) + '.' + ext;
       }
 
       document.getElementById('btn-export-png').addEventListener('click', function() {

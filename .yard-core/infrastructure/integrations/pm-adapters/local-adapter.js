@@ -1,10 +1,10 @@
 /**
  * @fileoverview Local PM Adapter (Standalone Mode)
  *
- * No-op adapter for standalone AIOX operation without external PM tool.
+ * No-op adapter for standalone YARD operation without external PM tool.
  * All story management happens via local YAML files and git.
  *
- * This adapter enables 100% AIOX functionality without requiring
+ * This adapter enables 100% YARD functionality without requiring
  * ClickUp, Jira, GitHub Projects, or any other PM tool.
  *
  * @see Story 3.20 - PM Tool-Agnostic Integration (TR-3.20.5)

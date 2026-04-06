@@ -4,7 +4,7 @@ const semver = require('semver');
 const chalk = require('chalk');
 
 /**
- * Framework version tracking utility for AIOX-FULLSTACK
+ * Framework version tracking utility for YARD-FULLSTACK
  * Manages framework versions, migration history, and compatibility tracking
  */
 class VersionTracker {
@@ -454,7 +454,7 @@ class VersionTracker {
         migration_required: false,
         breaking_changes: [],
         compatibility_notes: 'Initial version',
-        release_notes: 'AIOX-FULLSTACK framework v1.0.0',
+        release_notes: 'YARD-FULLSTACK framework v1.0.0',
         previous_version: null,
         status: 'active',
         components_modified: [],

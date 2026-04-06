@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "project-config.schema.json",
-  "title": "AIOX Project Configuration (L2)",
+  "title": "YARD Project Configuration (L2)",
   "description": "Team-shared project settings stored in .yard-core/project-config.yaml",
   "type": "object",
   "properties": {
@@ -11,7 +11,7 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["EXISTING_AIOX", "NEW_PROJECT", "BROWNFIELD"],
+          "enum": ["EXISTING_YARD", "NEW_PROJECT", "BROWNFIELD"],
           "description": "Project installation type"
         },
         "installed_at": {

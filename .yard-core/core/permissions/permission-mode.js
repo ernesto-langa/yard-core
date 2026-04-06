@@ -257,9 +257,9 @@ class PermissionMode {
     config.permissions = config.permissions || {};
     config.permissions.mode = mode;
 
-    // Ensure .aiox directory exists
-    const aioxDir = path.dirname(this.configPath);
-    await fs.mkdir(aioxDir, { recursive: true });
+    // Ensure .yard directory exists
+    const yardDir = path.dirname(this.configPath);
+    await fs.mkdir(yardDir, { recursive: true });
 
     // Write config
     const configYaml = yaml.dump(config, { indent: 2 });

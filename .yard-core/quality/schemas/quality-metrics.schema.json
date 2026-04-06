@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://aiox.dev/schemas/quality-metrics.schema.json",
+  "$id": "https://yard.dev/schemas/quality-metrics.schema.json",
   "title": "Quality Metrics",
   "description": "Schema for quality gate metrics data",
   "type": "object",

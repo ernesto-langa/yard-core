@@ -121,7 +121,7 @@ class ElicitationEngine {
     if (options.saveSession) {
       this.sessionFile = path.join(
         process.cwd(),
-        '.aiox-sessions',
+        '.yard-sessions',
         `${componentType}-${Date.now()}.json`,
       );
       await fs.ensureDir(path.dirname(this.sessionFile));

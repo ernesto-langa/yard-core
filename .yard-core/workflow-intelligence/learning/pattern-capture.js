@@ -44,7 +44,7 @@ class PatternCapture {
   constructor(options = {}) {
     this.minSequenceLength = options.minSequenceLength || DEFAULT_MIN_SEQUENCE_LENGTH;
     this.keyCommands = options.keyCommands || KEY_WORKFLOW_COMMANDS;
-    this.enabled = options.enabled !== false && process.env.AIOX_PATTERN_CAPTURE !== 'false';
+    this.enabled = options.enabled !== false && process.env.YARD_PATTERN_CAPTURE !== 'false';
     this.sessionBuffer = new Map(); // Track ongoing sessions
   }
 

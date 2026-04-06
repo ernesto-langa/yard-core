@@ -38,4 +38,4 @@ NOT for: PRD creation or product strategy → Use @pm. Technical architecture de
 **I collaborate with:**
 
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/analyst.md*
+*YARD Agent - Synced from .yard-core/development/agents/analyst.md*

@@ -25,7 +25,7 @@ compact_trigger: "context_limit_90%"
 - Axiom: "Hooks unified require runners/ directory to function"
 - Axiom: "CodeRabbit integration catches regressions early"
 - Axiom: "Fire-and-forget pattern uses setImmediate() for async non-blocking execution"
-- Axiom: "Open Core pattern: yard-core provides extension points, aiox-pro provides implementation"
+- Axiom: "Open Core pattern: yard-core provides extension points, yard-pro provides implementation"
 - Axiom: "Graceful degradation: system functions without pro, logs no-op messages"
 
 ## Context Snapshot

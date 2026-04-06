@@ -3,7 +3,7 @@
 /**
  * FrameworkGovernor — IDS Story IDS-7
  *
- * Facade class that integrates aiox-master with the IDS Entity Registry for
+ * Facade class that integrates yard-master with the IDS Entity Registry for
  * framework governance. Wraps DecisionEngine, RegistryLoader, and RegistryUpdater
  * to provide pre-check, impact analysis, post-registration, health, and stats.
  *
@@ -23,7 +23,7 @@
  *
  *   const result = await governor.preCheck('validate yaml schema', 'task');
  *
- * Story: IDS-7 (aiox-master IDS Governor Integration)
+ * Story: IDS-7 (yard-master IDS Governor Integration)
  */
 
 const path = require('path');
@@ -243,7 +243,7 @@ class FrameworkGovernor {
     return this._withTimeout(async () => {
       const task = {
         id: metadata.taskId || 'framework-governor-register',
-        agent: metadata.agent || 'aiox-master',
+        agent: metadata.agent || 'yard-master',
         type: metadata.type || 'create',
       };
 

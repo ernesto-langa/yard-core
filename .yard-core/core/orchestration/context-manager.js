@@ -447,7 +447,7 @@ class ContextManager {
    * @private
    */
   _resolveConfidenceThreshold() {
-    const raw = process.env.AIOX_DELIVERY_CONFIDENCE_THRESHOLD;
+    const raw = process.env.YARD_DELIVERY_CONFIDENCE_THRESHOLD;
     const parsed = Number(raw);
     return Number.isFinite(parsed) ? parsed : 70;
   }

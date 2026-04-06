@@ -3,8 +3,8 @@ bundle:
   icon: 👥
   description: Includes every core system agent.
 agents:
-  - aiox-orchestrator
-  - aiox-developer
+  - yard-orchestrator
+  - yard-developer
   - '*'
 workflows:
   - brownfield-fullstack.yaml

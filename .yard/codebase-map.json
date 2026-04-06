@@ -64,9 +64,9 @@
         "type": "directory",
         "purpose": "CLI/executable scripts",
         "files": [
-          "aiox-init.js",
-          "aiox-minimal.js",
-          "aiox.js"
+          "yard-init.js",
+          "yard-minimal.js",
+          "yard.js"
         ],
         "children": {
           "modules": {
@@ -93,7 +93,7 @@
             "type": "directory",
             "purpose": "Utility functions",
             "files": [
-              "aiox-doc-template.md"
+              "yard-doc-template.md"
             ]
           }
         }
@@ -109,7 +109,7 @@
           "GUIDING-PRINCIPLES.md",
           "README.md",
           "agent-reference-guide.md",
-          "aiox-nomenclature-specification.md",
+          "yard-nomenclature-specification.md",
           "core-architecture.md",
           "docker-mcp-setup.md",
           "getting-started.md",
@@ -151,7 +151,7 @@
               "AUTO-CLAUDE-ANALYSIS-COMPLETE.md",
               "AUTO-CLAUDE-DASHBOARD-ANALYSIS.md",
               "CLAUDE-MD-V3-CHANGES.md",
-              "HANDOFF-AIOX-DASHBOARD.md",
+              "HANDOFF-YARD-DASHBOARD.md",
               "agent-config-audit.md",
               "agent-responsibility-matrix.md",
               "agent-tool-integration-guide.md",
@@ -191,7 +191,7 @@
               "GUIDING-PRINCIPLES.md",
               "README.md",
               "agent-reference-guide.md",
-              "aiox-nomenclature-specification.md",
+              "yard-nomenclature-specification.md",
               "core-architecture.md",
               "getting-started.md",
               "git-workflow-guide.md",
@@ -326,8 +326,8 @@
           "prd": {
             "type": "directory",
             "files": [
-              "aiox-autonomous-development-engine.md",
-              "aiox-dashboard.md"
+              "yard-autonomous-development-engine.md",
+              "yard-dashboard.md"
             ]
           },
           "pt": {
@@ -340,7 +340,7 @@
               "GUIDING-PRINCIPLES.md",
               "README.md",
               "agent-reference-guide.md",
-              "aiox-nomenclature-specification.md",
+              "yard-nomenclature-specification.md",
               "core-architecture.md",
               "getting-started.md",
               "git-workflow-guide.md",
@@ -420,7 +420,7 @@
               "yard-core-ade": {
                 "type": "directory"
               },
-              "aiox-dashboard": {
+              "yard-dashboard": {
                 "type": "directory"
               }
             }
@@ -877,7 +877,7 @@
       ]
     },
     {
-      "name": "@aiox/installer",
+      "name": "@yard/installer",
       "type": "workspace",
       "directory": "packages/installer",
       "entrypoint": "src/index.js",

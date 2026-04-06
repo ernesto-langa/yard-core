@@ -1178,8 +1178,8 @@ class CustomRulesLoader {
         encoding: 'utf8',
         env: {
           ...process.env,
-          AIOX_MERGE_HOOK: hookName,
-          AIOX_MERGE_CONTEXT: JSON.stringify(context),
+          YARD_MERGE_HOOK: hookName,
+          YARD_MERGE_CONTEXT: JSON.stringify(context),
         },
       });
       return true;

@@ -92,7 +92,7 @@ const LOADER_TIERS = {
 
 /**
  * Default total pipeline timeout (ms).
- * Can be overridden via core-config.yaml pipeline.timeout_ms or AIOX_PIPELINE_TIMEOUT env var.
+ * Can be overridden via core-config.yaml pipeline.timeout_ms or YARD_PIPELINE_TIMEOUT env var.
  * @type {number}
  */
 const DEFAULT_PIPELINE_TIMEOUT_MS = 500;
@@ -104,7 +104,7 @@ const DEFAULT_PIPELINE_TIMEOUT_MS = 500;
 const ALL_AGENT_IDS = [
   'dev', 'qa', 'architect', 'pm', 'po', 'sm',
   'analyst', 'data-engineer', 'ux-design-expert',
-  'devops', 'aiox-master', 'squad-creator',
+  'devops', 'yard-master', 'squad-creator',
 ];
 
 /**
@@ -443,14 +443,14 @@ class UnifiedActivationPipeline {
 
   /**
    * ACT-11: Resolve pipeline timeout from config hierarchy.
-   * Priority: AIOX_PIPELINE_TIMEOUT env > core-config.yaml pipeline.timeout_ms > default
+   * Priority: YARD_PIPELINE_TIMEOUT env > core-config.yaml pipeline.timeout_ms > default
    * @private
    * @param {Object} coreConfig - Core config object
    * @returns {number} Pipeline timeout in ms
    */
   _resolvePipelineTimeout(coreConfig) {
     // Env var override (for CI/testing)
-    const envTimeout = process.env.AIOX_PIPELINE_TIMEOUT;
+    const envTimeout = process.env.YARD_PIPELINE_TIMEOUT;
     if (envTimeout) {
       const parsed = parseInt(envTimeout, 10);
       if (!isNaN(parsed) && parsed > 0) {
@@ -627,7 +627,7 @@ class UnifiedActivationPipeline {
       'data-engineer': '\uD83D\uDDC4\uFE0F',
       'ux-design-expert': '\uD83C\uDFA8',
       'devops': '\u2699\uFE0F',
-      'aiox-master': '\uD83D\uDC51',
+      'yard-master': '\uD83D\uDC51',
       'squad-creator': '\uD83D\uDC65',
     };
     return icons[agentId] || '\uD83E\uDD16';

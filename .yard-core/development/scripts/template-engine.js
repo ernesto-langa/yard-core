@@ -1,5 +1,5 @@
 /**
- * Template Engine for AIOX-FULLSTACK
+ * Template Engine for YARD-FULLSTACK
  * Handles variable substitution, conditionals, and loops for component generation
  * @module template-engine
  */

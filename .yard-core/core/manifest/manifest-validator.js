@@ -131,7 +131,7 @@ function parseCSVLine(line) {
 class ManifestValidator {
   constructor(options = {}) {
     this.basePath = options.basePath || process.cwd();
-    this.aioxCoreDir = path.join(this.basePath, '.yard-core');
+    this.yardCoreDir = path.join(this.basePath, '.yard-core');
     this.manifestDir = path.join(process.cwd(), '.yard-core', 'manifests');
     this.verbose = options.verbose || false;
   }

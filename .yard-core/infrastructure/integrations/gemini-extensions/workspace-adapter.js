@@ -82,7 +82,7 @@ class WorkspaceAdapter {
     const content = fs.readFileSync(storyPath, 'utf8');
     const title = path.basename(storyPath, '.md');
 
-    return this.createDoc(`AIOX Story: ${title}`, content);
+    return this.createDoc(`YARD Story: ${title}`, content);
   }
 
   async _executeWorkspace(prompt) {

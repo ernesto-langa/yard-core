@@ -360,8 +360,8 @@ class SuggestionEngine {
    */
   _detectCurrentAgent() {
     // Check environment variable first
-    if (process.env.AIOX_CURRENT_AGENT) {
-      return process.env.AIOX_CURRENT_AGENT.replace('@', '');
+    if (process.env.YARD_CURRENT_AGENT) {
+      return process.env.YARD_CURRENT_AGENT.replace('@', '');
     }
 
     // Default to 'dev' if unknown

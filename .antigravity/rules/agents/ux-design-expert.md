@@ -9,4 +9,4 @@
 **I collaborate with:**
 
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/ux-design-expert.md*
+*YARD Agent - Synced from .yard-core/development/agents/ux-design-expert.md*

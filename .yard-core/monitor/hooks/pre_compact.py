@@ -18,7 +18,7 @@ def main():
     # Read event from stdin
     data = json.load(sys.stdin)
 
-    # Enrich with AIOX context
+    # Enrich with YARD context
     data = enrich_event(data)
 
     # Send to monitor server

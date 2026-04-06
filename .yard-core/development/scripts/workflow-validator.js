@@ -1,7 +1,7 @@
 /**
  * Workflow Validator
  *
- * Validates workflow YAML files against AIOX workflow conventions:
+ * Validates workflow YAML files against YARD workflow conventions:
  * 1. YAML syntax
  * 2. Required fields (workflow.id, workflow.name, sequence)
  * 3. Phase sequence integrity

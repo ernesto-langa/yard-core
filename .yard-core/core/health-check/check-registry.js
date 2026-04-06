@@ -241,7 +241,7 @@ class CheckRegistry {
     } catch (error) {
       // Built-in checks may not be available yet during initial setup
       // This is expected and will be populated as checks are implemented
-      if (process.env.AIOX_DEBUG) {
+      if (process.env.YARD_DEBUG) {
         console.warn('Some built-in checks could not be loaded:', error.message);
       }
     }

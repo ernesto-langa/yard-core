@@ -4,7 +4,7 @@
  * Autonomous Build Loop - Story 8.1
  *
  * Executes builds autonomously in a loop: load spec → create plan → execute subtasks → verify → retry/complete.
- * Inspired by Auto-Claude's Coder Agent but with AIOX extensibility.
+ * Inspired by Auto-Claude's Coder Agent but with YARD extensibility.
  *
  * Features:
  * - AC1: Located in `.yard-core/core/execution/`
@@ -887,7 +887,7 @@ async function main() {
 
   if (args.length === 0 || args.includes('--help') || args.includes('-h')) {
     console.log(`
-${chalk.bold('Autonomous Build Loop')} - AIOX Coder Agent Loop (Story 8.1)
+${chalk.bold('Autonomous Build Loop')} - YARD Coder Agent Loop (Story 8.1)
 
 ${chalk.cyan('Usage:')}
   autonomous-build-loop <command> <story-id> [options]

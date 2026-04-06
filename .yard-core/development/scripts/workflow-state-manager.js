@@ -130,7 +130,7 @@ class WorkflowStateManager {
       }
     }
 
-    // Ensure .aiox directory exists
+    // Ensure .yard directory exists
     await this._ensureStateDir();
 
     // Save state

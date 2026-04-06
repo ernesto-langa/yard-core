@@ -1,5 +1,5 @@
 /**
- * Rollback Handler for AIOX-FULLSTACK
+ * Rollback Handler for YARD-FULLSTACK
  * Handles undo operations for component transactions
  * @module rollback-handler
  */

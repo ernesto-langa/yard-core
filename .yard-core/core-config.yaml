@@ -1,6 +1,6 @@
 markdownExploder: true
 project:
-  type: EXISTING_AIOX
+  type: EXISTING_YARD
   installedAt: '2025-01-14T00:00:00Z'
   version: 2.1.0
 user_profile: advanced
@@ -31,7 +31,7 @@ devLoadAlwaysFilesFallback:
   - docs/es/framework/source-tree.md
 devDebugLog: .ai/debug-log.md
 devStoryLocation: docs/stories
-slashPrefix: AIOX
+slashPrefix: YARD
 toolsLocation: .yard-core/tools
 scriptsLocation:
   core: .yard-core/core
@@ -159,7 +159,7 @@ projectStatus:
     recentWork: true
     currentEpic: true
     currentStory: true
-  statusFile: .aiox/project-status.yaml
+  statusFile: .yard/project-status.yaml
   maxModifiedFiles: 5
   maxRecentCommits: 2
 synapse:
@@ -376,8 +376,8 @@ boundary:
     - .yard-core/development/workflows/**
     - .yard-core/infrastructure/**
     - .yard-core/constitution.md
-    - bin/aiox.js
-    - bin/aiox-init.js
+    - bin/yard.js
+    - bin/yard-init.js
   # L3 paths — mutable exceptions (allowed even within .yard-core/)
   exceptions:
     - .yard-core/data/**

@@ -273,10 +273,10 @@
     "agents": [
       {
         "type": "agent",
-        "id": "aiox-master",
+        "id": "yard-master",
         "name": "Orion",
-        "title": "AIOX Master Orchestrator & Framework Developer",
-        "path": ".yard-core/development/agents/aiox-master.md",
+        "title": "YARD Master Orchestrator & Framework Developer",
+        "path": ".yard-core/development/agents/yard-master.md",
         "version": "v2",
         "dependencies": {
           "tasks": [
@@ -328,7 +328,7 @@
             "story-draft-checklist.md"
           ],
           "data": [
-            "aiox-kb.md",
+            "yard-kb.md",
             "brainstorming-techniques.md",
             "elicitation-methods.md",
             "technical-preferences.md"
@@ -362,7 +362,7 @@
           ],
           "checklists": [],
           "data": [
-            "aiox-kb.md",
+            "yard-kb.md",
             "brainstorming-techniques.md"
           ],
           "tools": [
@@ -3782,8 +3782,8 @@
     "scripts": [
       {
         "type": "script",
-        "id": "aiox-validator",
-        "path": ".yard-core/infrastructure/scripts/aiox-validator.js",
+        "id": "yard-validator",
+        "path": ".yard-core/infrastructure/scripts/yard-validator.js",
         "description": null,
         "hasExports": true,
         "isCli": false,

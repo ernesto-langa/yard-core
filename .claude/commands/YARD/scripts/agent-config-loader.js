@@ -580,7 +580,7 @@ if (require.main === module) {
 
         case 'preload':
           const agents = agentId ? [agentId] : [
-            'aiox-master', 'dev', 'qa', 'architect', 'po', 'pm', 'sm',
+            'yard-master', 'dev', 'qa', 'architect', 'po', 'pm', 'sm',
             'analyst', 'ux-expert', 'data-engineer', 'devops', 'db-sage', 'security',
           ];
 

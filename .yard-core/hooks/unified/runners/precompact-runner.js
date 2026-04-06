@@ -30,7 +30,7 @@ async function onPreCompact(context) {
     const available = proDetector.isProAvailable();
 
     if (!available) {
-      console.log('[PreCompact] aiox-pro not available, skipping session digest');
+      console.log('[PreCompact] yard-pro not available, skipping session digest');
       return;
     }
 

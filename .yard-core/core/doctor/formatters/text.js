@@ -18,7 +18,7 @@ function formatText(output, options = {}) {
   const { quiet = false } = options;
   const lines = [];
 
-  lines.push(`AIOX Doctor v${output.version} — Environment Health Check`);
+  lines.push(`YARD Doctor v${output.version} — Environment Health Check`);
   lines.push('');
 
   for (const result of output.checks) {

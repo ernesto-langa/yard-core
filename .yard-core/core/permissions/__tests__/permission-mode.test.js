@@ -16,7 +16,7 @@ describe('PermissionMode', () => {
 
   beforeEach(async () => {
     // Create temp directory for tests
-    tempDir = await fs.mkdtemp(path.join(os.tmpdir(), 'aiox-test-'));
+    tempDir = await fs.mkdtemp(path.join(os.tmpdir(), 'yard-test-'));
     await fs.mkdir(path.join(tempDir, '.yard'), { recursive: true });
     mode = new PermissionMode(tempDir);
   });

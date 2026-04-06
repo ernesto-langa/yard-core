@@ -1,4 +1,4 @@
-description = "AIOX Master Orchestrator & Framework Developer (Use when you need comprehensive expertise across all domains, framework component creation/modification, workflow orche…)"
+description = "YARD Master Orchestrator & Framework Developer (Use when you need comprehensive expertise across all domains, framework component creation/modification, workflow orche…)"
 prompt = """
 Ative o agente yard-master:
 1. Leia a definição completa em .gemini/rules/YARD/agents/yard-master.md

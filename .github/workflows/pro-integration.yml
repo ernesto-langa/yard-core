@@ -1,14 +1,14 @@
 # Pro Integration Tests
 #
-# Separate workflow for tests that require the aiox-pro submodule.
+# Separate workflow for tests that require the yard-pro submodule.
 # yard-core CI runs standalone (ADR-PRO-001). This workflow validates
 # the integration boundary between core and pro.
 #
-# Requires PRO_SUBMODULE_TOKEN secret (PAT with repo scope for YardAI/aiox-pro).
+# Requires PRO_SUBMODULE_TOKEN secret (PAT with repo scope for YardAI/yard-pro).
 #
 # Tests covered:
 #   - tests/pro/**          (integration tests in yard-core)
-#   - pro/**/__tests__/**   (unit tests inside aiox-pro submodule)
+#   - pro/**/__tests__/**   (unit tests inside yard-pro submodule)
 
 name: Pro Integration
 
@@ -118,8 +118,8 @@ jobs:
         if: steps.token-check.outputs.skip != 'true'
         continue-on-error: true
         run: |
-          echo "=== Running pro/**/__tests__/ (unit tests in aiox-pro) ==="
-          echo "Note: failures here are informational — fix in aiox-pro repo"
+          echo "=== Running pro/**/__tests__/ (unit tests in yard-pro) ==="
+          echo "Note: failures here are informational — fix in yard-pro repo"
           npx jest --roots pro/ --no-coverage --verbose
 
       - name: Summary

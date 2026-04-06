@@ -364,8 +364,8 @@ function loadLegacyConfig(projectRoot) {
 
   const suppressDeprecation = process.env.YARD_SUPPRESS_DEPRECATION === 'true'
     || process.env.YARD_SUPPRESS_DEPRECATION === '1'
-    || process.env.AIOX_SUPPRESS_DEPRECATION === 'true'
-    || process.env.AIOX_SUPPRESS_DEPRECATION === '1';
+    || process.env.YARD_SUPPRESS_DEPRECATION === 'true'
+    || process.env.YARD_SUPPRESS_DEPRECATION === '1';
 
   if (!suppressDeprecation) {
     warnings.push(

@@ -133,9 +133,9 @@ async function executeBackupDirRollback(projectRoot, backupDir, options = {}) {
  * Rollback simple config file migration
  */
 async function executeConfigFileRollback(projectRoot, options = {}) {
-  const aioxDir = path.join(projectRoot, '.yard-core');
-  const legacyPath = path.join(aioxDir, 'core-config.yaml');
-  const backupPath = path.join(aioxDir, 'core-config.yaml.backup');
+  const yardDir = path.join(projectRoot, '.yard-core');
+  const legacyPath = path.join(yardDir, 'core-config.yaml');
+  const backupPath = path.join(yardDir, 'core-config.yaml.backup');
 
   if (options.dryRun) {
     return {

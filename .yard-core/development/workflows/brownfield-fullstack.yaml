@@ -246,7 +246,7 @@ workflow:
         All stories implemented and reviewed!
         Project development phase complete.
 
-        Reference: .yard-core/data/aiox-kb.md#IDE Development Workflow
+        Reference: .yard-core/data/yard-kb.md#IDE Development Workflow
 
   flow_diagram: |
     ```mermaid

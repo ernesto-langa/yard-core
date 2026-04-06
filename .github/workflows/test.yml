@@ -9,7 +9,7 @@ on:
     paths-ignore:
       - 'docs/**'
       - '*.md'
-      - '.aiox/**'
+      - '.yard/**'
       - 'squads/**'
   workflow_dispatch:
 
@@ -127,20 +127,20 @@ jobs:
           # Test that CLI entry point works
           node -e "
             try {
-              // Test bin/aiox-init.js exists
+              // Test bin/yard-init.js exists
               const fs = require('fs');
-              if (fs.existsSync('./bin/aiox-init.js')) {
-                console.log('✅ aiox-init.js exists');
+              if (fs.existsSync('./bin/yard-init.js')) {
+                console.log('✅ yard-init.js exists');
               } else {
-                console.log('❌ aiox-init.js not found');
+                console.log('❌ yard-init.js not found');
                 process.exit(1);
               }
 
-              // Test bin/aiox.js exists
-              if (fs.existsSync('./bin/aiox.js')) {
-                console.log('✅ aiox.js exists');
+              // Test bin/yard.js exists
+              if (fs.existsSync('./bin/yard.js')) {
+                console.log('✅ yard.js exists');
               } else {
-                console.log('❌ aiox.js not found');
+                console.log('❌ yard.js not found');
                 process.exit(1);
               }
 

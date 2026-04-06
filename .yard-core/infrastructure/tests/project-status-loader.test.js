@@ -15,7 +15,7 @@ describe('ProjectStatusLoader', () => {
 
   beforeEach(async () => {
     // Use OS temp directory to ensure complete isolation from parent git repo
-    testRoot = await fs.mkdtemp(path.join(os.tmpdir(), 'aiox-test-'));
+    testRoot = await fs.mkdtemp(path.join(os.tmpdir(), 'yard-test-'));
     loader = new ProjectStatusLoader(testRoot);
     cacheFile = path.join(testRoot, '.yard', 'project-status.yaml');
   });

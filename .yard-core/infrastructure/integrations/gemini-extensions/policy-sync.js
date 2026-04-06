@@ -14,9 +14,9 @@ class PolicySync {
   }
 
   /**
-   * Get AIOX permission policies
+   * Get YARD permission policies
    */
-  async getAIOXPolicies() {
+  async getYARDPolicies() {
     const policiesPath = path.join(this.projectDir, '.yard', 'policies.json');
 
     if (fs.existsSync(policiesPath)) {
@@ -35,7 +35,7 @@ class PolicySync {
    * Export policies for Gemini CLI
    */
   async exportToGemini() {
-    const policies = await this.getAIOXPolicies();
+    const policies = await this.getYARDPolicies();
 
     // Guard against missing rules array
     const rules = Array.isArray(policies.rules) ? policies.rules : [];

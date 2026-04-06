@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "framework-config.schema.json",
-  "title": "AIOX Framework Configuration (L1)",
+  "title": "YARD Framework Configuration (L1)",
   "description": "Read-only framework defaults shipped with the npm package",
   "type": "object",
   "properties": {

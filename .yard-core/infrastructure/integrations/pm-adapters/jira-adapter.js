@@ -30,7 +30,7 @@ class JiraAdapter extends PMAdapter {
    * @param {string} config.base_url - Jira instance URL (e.g., https://company.atlassian.net)
    * @param {string} config.api_token - API token (usually "${JIRA_API_TOKEN}")
    * @param {string} config.email - Jira account email for authentication
-   * @param {string} config.project_key - Project key (e.g., "AIOX")
+   * @param {string} config.project_key - Project key (e.g., "YARD")
    */
   constructor(config) {
     super(config);
@@ -143,7 +143,7 @@ class JiraAdapter extends PMAdapter {
       // Get issue data
       const issue = await this._getIssue(issueKey);
 
-      // Map Jira status to AIOX status
+      // Map Jira status to YARD status
       const statusMapping = {
         'To Do': 'Draft',
         'In Progress': 'InProgress',
@@ -221,7 +221,7 @@ class JiraAdapter extends PMAdapter {
         };
       }
 
-      // Map AIOX status to Jira transition
+      // Map YARD status to Jira transition
       const transitionMapping = {
         'Draft': 'To Do',
         'InProgress': 'In Progress',
@@ -368,7 +368,7 @@ class JiraAdapter extends PMAdapter {
   /**
    * Get Jira issue
    * @private
-   * @param {string} issueKey - Issue key (e.g., "AIOX-123")
+   * @param {string} issueKey - Issue key (e.g., "YARD-123")
    * @returns {Promise<object>} Issue data
    */
   async _getIssue(issueKey) {

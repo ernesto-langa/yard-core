@@ -504,7 +504,7 @@ class SquadValidator {
           result.warnings.push({
             code: ValidationErrorCodes.AGENT_INVALID_FORMAT,
             file: agentFile,
-            message: 'Agent file may not follow AIOX agent definition format',
+            message: 'Agent file may not follow YARD agent definition format',
             suggestion:
               'Use agent: YAML frontmatter or markdown heading structure',
           });

@@ -1193,7 +1193,7 @@ ${agentName} não está disponível diretamente no Modo Assistido.
 Use \`@pm\` (Bob) para todas as interações. Bob vai orquestrar os outros agentes internamente para você.
 
 **Para interagir com Bob:**
-   - Digite \`@pm\` ou \`/AIOX:agents:pm\`
+   - Digite \`@pm\` ou \`/YARD:agents:pm\`
    - Use \`*help\` após ativar Bob para ver comandos disponíveis`;
   }
 

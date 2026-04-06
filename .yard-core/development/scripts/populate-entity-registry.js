@@ -132,7 +132,7 @@ const YAML_DEP_FIELDS = {
 
 const KNOWN_AGENTS = [
   'dev', 'qa', 'pm', 'po', 'sm', 'architect', 'devops',
-  'analyst', 'data-engineer', 'ux-design-expert', 'aiox-master'
+  'analyst', 'data-engineer', 'ux-design-expert', 'yard-master'
 ];
 
 // Pattern A: YAML dependency block items (- name.md)
@@ -521,7 +521,7 @@ function assignLifecycles(allEntities) {
 }
 
 function populate(options = {}) {
-  const verbose = options.verbose || process.argv.includes('--verbose') || process.env.AIOX_DEBUG === 'true';
+  const verbose = options.verbose || process.argv.includes('--verbose') || process.env.YARD_DEBUG === 'true';
 
   console.log('[IDS] Starting entity registry population...');
 

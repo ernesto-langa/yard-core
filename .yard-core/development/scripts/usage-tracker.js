@@ -3,7 +3,7 @@ const path = require('path');
 const chalk = require('chalk');
 
 /**
- * Usage tracker for AIOX-FULLSTACK framework components
+ * Usage tracker for YARD-FULLSTACK framework components
  * Tracks component usage patterns for deprecation warnings and impact analysis
  */
 class UsageTracker {
@@ -465,8 +465,8 @@ class UsageTracker {
     const configRefs = [];
     const configFiles = [
       'package.json',
-      '.aioxrc',
-      'aiox.config.js',
+      '.yardrc',
+      'yard.config.js',
       'manifest.yaml'
     ];
 

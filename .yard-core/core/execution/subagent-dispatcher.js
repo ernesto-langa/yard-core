@@ -591,7 +591,7 @@ class SubagentDispatcher extends EventEmitter {
    * @returns {string} - Formatted prompt
    */
   buildPrompt(agentId, task, context) {
-    let prompt = `You are ${agentId}, a specialized agent in the AIOX framework.\n\n`;
+    let prompt = `You are ${agentId}, a specialized agent in the YARD framework.\n\n`;
 
     prompt += '## Task\n';
     prompt += `**ID:** ${task.id}\n`;

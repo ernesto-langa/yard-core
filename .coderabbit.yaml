@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
-# AIOX CodeRabbit Configuration
+# YARD CodeRabbit Configuration
 # Story: COLLAB-1, 12.11
 # Created: 2025-12-30
 # Updated: 2026-02-05 (Story 12.11 - Bob CI/CD Pipeline)
@@ -51,7 +51,7 @@ reviews:
 
     - path: ".yard-core/development/agents/**"
       instructions: |
-        Verify agent follows AIOX agent YAML structure (persona_profile, commands, dependencies).
+        Verify agent follows YARD agent YAML structure (persona_profile, commands, dependencies).
         Check that persona_profile includes archetype, communication style, and greeting_levels.
         Validate all commands listed have corresponding task dependencies.
         Ensure agent has proper visibility metadata for commands.
@@ -59,7 +59,7 @@ reviews:
 
     - path: ".yard-core/development/tasks/**"
       instructions: |
-        Verify task follows AIOX task format with clear elicitation points.
+        Verify task follows YARD task format with clear elicitation points.
         Check that deliverables are well-defined.
         Validate any referenced dependencies exist in the codebase.
         Ensure task has proper error handling guidance.
@@ -72,7 +72,7 @@ reviews:
 
     - path: ".yard-core/product/templates/**"
       instructions: |
-        Ensure template follows AIOX template conventions.
+        Ensure template follows YARD template conventions.
         Check placeholder syntax is consistent.
         Validate template produces valid output.
 
@@ -88,7 +88,7 @@ reviews:
         Check for async/await best practices.
         Verify error handling is comprehensive.
         Look for potential security vulnerabilities.
-        Ensure code follows AIOX coding standards (ES2022, single quotes, 2-space indent).
+        Ensure code follows YARD coding standards (ES2022, single quotes, 2-space indent).
 
     - path: "**/*.ts"
       instructions: |

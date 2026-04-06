@@ -201,7 +201,7 @@ commands:
     description: 'Initial Docker MCP Toolkit configuration [Story 5.11]'
   - name: health-check
     visibility: [full, quick, key]
-    description: 'Run unified health diagnostic (aiox doctor --json + governance interpretation)'
+    description: 'Run unified health diagnostic (yard doctor --json + governance interpretation)'
   - name: sync-registry
     visibility: [full, quick, key]
     args: '[--full] [--heal]'
@@ -392,7 +392,7 @@ dependencies:
 
     enforcement_mechanism: |
       Git pre-push hook installed at .git/hooks/pre-push:
-      - Checks $AIOX_ACTIVE_AGENT environment variable
+      - Checks $YARD_ACTIVE_AGENT environment variable
       - Blocks push if agent != "github-devops"
       - Displays helpful message redirecting to @github-devops
       - Works in ANY repository using Yard
@@ -536,4 +536,4 @@ Type `*help` to see all commands.
 
 ---
 ---
-*AIOX Agent - Synced from .yard-core/development/agents/devops.md*
+*YARD Agent - Synced from .yard-core/development/agents/devops.md*

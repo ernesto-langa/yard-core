@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://synkra.dev/schemas/task-v3-schema.json",
-  "title": "AIOX Task V3 Schema",
-  "description": "Schema for AIOX task definitions with Auto-Claude execution capabilities",
+  "title": "YARD Task V3 Schema",
+  "description": "Schema for YARD task definitions with Auto-Claude execution capabilities",
   "type": "object",
   "required": ["task"],
   "properties": {
@@ -30,7 +30,7 @@
 
     "task": {
       "type": "object",
-      "description": "Core task definition (AIOX Task Format)",
+      "description": "Core task definition (YARD Task Format)",
       "required": ["name", "responsavel"],
       "properties": {
         "name": {

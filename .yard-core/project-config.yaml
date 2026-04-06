@@ -1,5 +1,5 @@
 # ============================================
-# AIOX Project Configuration (Level 2)
+# YARD Project Configuration (Level 2)
 # ============================================
 # Project-specific settings shared across the team.
 # This file is committed to git.
@@ -12,7 +12,7 @@
 
 # --- Project Metadata (Section 1 - project portion) ---
 project:
-  type: EXISTING_AIOX
+  type: EXISTING_YARD
   installed_at: "2025-01-14T00:00:00Z"
   version: "2.1.0"
 
@@ -29,7 +29,7 @@ documentation_paths:
   architecture_sharded_location: "docs/architecture"
   stories_dir: "docs/stories"
   dev_debug_log: ".ai/debug-log.md"
-  slash_prefix: "AIOX"
+  slash_prefix: "YARD"
   custom_technical_documents: null
   dev_load_always_files:
     - "docs/framework/coding-standards.md"
@@ -119,7 +119,7 @@ logging:
       recent_work: true
       current_epic: true
       current_story: true
-    status_file: ".aiox/project-status.yaml"
+    status_file: ".yard/project-status.yaml"
     max_modified_files: 5
     max_recent_commits: 2
   agent_identity:

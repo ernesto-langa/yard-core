@@ -92,7 +92,7 @@ class GeminiCliCheck extends BaseCheck {
       await fs.access(geminiDir);
       details.projectConfig = true;
 
-      // Check for rules.md (AIOX rules)
+      // Check for rules.md (YARD rules)
       try {
         await fs.access(path.join(geminiDir, 'rules.md'));
         details.hasProjectRules = true;
@@ -120,13 +120,13 @@ class GeminiCliCheck extends BaseCheck {
         // No settings.json or invalid JSON
       }
 
-      // Check for AIOX agents
+      // Check for YARD agents
       try {
-        const agentsDir = path.join(geminiDir, 'rules', 'AIOX', 'agents');
+        const agentsDir = path.join(geminiDir, 'rules', 'YARD', 'agents');
         const agentFiles = await fs.readdir(agentsDir);
-        details.aioxAgents = agentFiles.filter((f) => f.endsWith('.md')).length;
+        details.yardAgents = agentFiles.filter((f) => f.endsWith('.md')).length;
       } catch {
-        details.aioxAgents = 0;
+        details.yardAgents = 0;
       }
     } catch {
       // No project config
@@ -193,8 +193,8 @@ class GeminiCliCheck extends BaseCheck {
       warnings.push('Project .gemini/rules.md not found');
     }
 
-    if (details.projectConfig && details.aioxAgents === 0) {
-      warnings.push('No AIOX agents installed for Gemini CLI');
+    if (details.projectConfig && details.yardAgents === 0) {
+      warnings.push('No YARD agents installed for Gemini CLI');
     }
 
     if (!details.features.previewFeatures) {
@@ -228,7 +228,7 @@ class GeminiCliCheck extends BaseCheck {
     if (details.features.extensions.length > 0) {
       parts.push(`${details.features.extensions.length} extensions`);
     }
-    if (details.aioxAgents > 0) parts.push(`${details.aioxAgents} AIOX agents`);
+    if (details.yardAgents > 0) parts.push(`${details.yardAgents} YARD agents`);
 
     return this.pass(`Gemini CLI configured (${parts.join(', ')})`, {
       details,
